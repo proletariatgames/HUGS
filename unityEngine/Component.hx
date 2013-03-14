@@ -6,5 +6,5 @@ import cs.NativeArray;
 
   var tag:String;
 
-  function getComponent(type:String):unityEngine.Component;
+  function GetComponent(type:String):unityEngine.Component;
 }

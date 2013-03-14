@@ -4,6 +4,6 @@ package unityEngine;
 
   var name:String;
 
-  function getInstanceID():Int;
-  function toString():String;
+  function GetInstanceID():Int;
+  function ToString():String;
 }
