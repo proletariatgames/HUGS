@@ -2,7 +2,7 @@ package unityEngine;
 
 @:native("UnityEngine.NetworkViewID") @:final
 extern class NetworkViewID {
-  public static var unassigned(default,null) : NetworkViewID;
-  public var isMine(default,null) : Bool;
-  public var owner(default,null) : NetworkPlayer;
+  @:skipReflection public static var unassigned(default,never) : NetworkViewID;
+  @:skipReflection public var isMine(default,never) : Bool;
+  @:skipReflection public var owner(default,never) : NetworkPlayer;
 }

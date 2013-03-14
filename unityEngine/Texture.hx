@@ -8,7 +8,7 @@ extern class Texture extends Object {
   public var anisoLevel : Int;
   public var wrapMode : TextureWrapMode;
   public var mipMapBias : Float;
-  public var texelSize(default,null) : Vector2;
+  @:skipReflection public var texelSize(default,never) : Vector2;
 
   public function new() : Void;
 

@@ -7,7 +7,7 @@ extern class Material extends Object {
   public var mainTexture : Texture;
   public var mainTextureOffset : Vector2;
   public var mainTextureScale : Vector2;
-  public var passCount(default,null) : Int;
+  @:skipReflection public var passCount(default,never) : Int;
   public var renderQueue : Int;
 
   public function CopyPropertiesFromMaterial(mat:Material) : Void;

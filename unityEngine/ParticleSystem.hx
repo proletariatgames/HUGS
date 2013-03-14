@@ -17,15 +17,15 @@ extern class ParticleSystem_Particle {
 @:native("UnityEngine.ParticleSystem") @:final
 extern class ParticleSystem extends Component {
   public var startDelay : Float;
-  public var isPlaying(default,null) : Bool;
-  public var isStopped(default,null) : Bool;
-  public var isPaused(default,null) : Bool;
+  @:skipReflection public var isPlaying(default,never) : Bool;
+  @:skipReflection public var isStopped(default,never) : Bool;
+  @:skipReflection public var isPaused(default,never) : Bool;
   public var loop : Bool;
   public var playOnAwake : Bool;
   public var time : Float;
-  public var duration(default,null) : Float;
+  @:skipReflection public var duration(default,never) : Float;
   public var playbackSpeed : Float;
-  public var particleCount(default,null) : Int;
+  @:skipReflection public var particleCount(default,never) : Int;
   public var enableEmission : Bool;
   public var emissionRate : Float;
   public var startSpeed : Float;

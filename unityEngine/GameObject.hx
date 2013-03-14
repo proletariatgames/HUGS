@@ -3,28 +3,28 @@ package unityEngine;
 @:native("UnityEngine.GameObject") @:final
 extern class GameObject extends Object {
   public var isStatic : Bool;
-  public var transform(default,null) : Transform;
-  public var rigidbody(default,null) : Rigidbody;
-  public var camera(default,null) : Camera;
-  public var light(default,null) : Light;
-  public var animation(default,null) : Animation;
-  public var constantForce(default,null) : ConstantForce;
-  public var renderer(default,null) : Renderer;
-  public var audio(default,null) : AudioSource;
-  public var guiText(default,null) : GUIText;
-  public var networkView(default,null) : NetworkView;
-  public var guiElement(default,null) : GUIElement;
-  public var guiTexture(default,null) : GUITexture;
-  public var collider(default,null) : Collider;
-  public var hingeJoint(default,null) : HingeJoint;
-  public var particleEmitter(default,null) : ParticleEmitter;
-  public var particleSystem(default,null) : ParticleSystem;
+  @:skipReflection public var transform(default,never) : Transform;
+  @:skipReflection public var rigidbody(default,never) : Rigidbody;
+  @:skipReflection public var camera(default,never) : Camera;
+  @:skipReflection public var light(default,never) : Light;
+  @:skipReflection public var animation(default,never) : Animation;
+  @:skipReflection public var constantForce(default,never) : ConstantForce;
+  @:skipReflection public var renderer(default,never) : Renderer;
+  @:skipReflection public var audio(default,never) : AudioSource;
+  @:skipReflection public var guiText(default,never) : GUIText;
+  @:skipReflection public var networkView(default,never) : NetworkView;
+  @:skipReflection public var guiElement(default,never) : GUIElement;
+  @:skipReflection public var guiTexture(default,never) : GUITexture;
+  @:skipReflection public var collider(default,never) : Collider;
+  @:skipReflection public var hingeJoint(default,never) : HingeJoint;
+  @:skipReflection public var particleEmitter(default,never) : ParticleEmitter;
+  @:skipReflection public var particleSystem(default,never) : ParticleSystem;
   public var layer : Int;
   public var active : Bool;
-  public var activeSelf(default,null) : Bool;
-  public var activeInHierarchy(default,null) : Bool;
+  @:skipReflection public var activeSelf(default,never) : Bool;
+  @:skipReflection public var activeInHierarchy(default,never) : Bool;
   public var tag : String;
-  public var gameObject(default,null) : GameObject;
+  @:skipReflection public var gameObject(default,never) : GameObject;
 
   @:overload(function(componentType:cs.system.Type) : Component {})
   @:overload(function(className:String) : Component {})

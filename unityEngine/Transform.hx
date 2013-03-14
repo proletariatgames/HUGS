@@ -13,11 +13,11 @@ extern class Transform extends Component {
   public var localRotation : Quaternion;
   public var localScale : Vector3;
   public var parent : Transform;
-  public var worldToLocalMatrix(default,null) : Matrix4x4;
-  public var localToWorldMatrix(default,null) : Matrix4x4;
-  public var root(default,null) : Transform;
-  public var childCount(default,null) : Int;
-  public var lossyScale(default,null) : Vector3;
+  @:skipReflection public var worldToLocalMatrix(default,never) : Matrix4x4;
+  @:skipReflection public var localToWorldMatrix(default,never) : Matrix4x4;
+  @:skipReflection public var root(default,never) : Transform;
+  @:skipReflection public var childCount(default,never) : Int;
+  @:skipReflection public var lossyScale(default,never) : Vector3;
 
   public function DetachChildren() : Void;
 

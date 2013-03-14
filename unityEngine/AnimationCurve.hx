@@ -3,7 +3,7 @@ package unityEngine;
 @:native("UnityEngine.AnimationCurve") @:final
 extern class AnimationCurve {
   public var keys : cs.NativeArray<Keyframe>;
-  @:skipReflection public var length(default,null) : Int;
+  @:skipReflection public var length(default,never) : Int;
   public var preWrapMode : WrapMode;
   public var postWrapMode : WrapMode;
 

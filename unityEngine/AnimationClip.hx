@@ -3,7 +3,7 @@ package unityEngine;
 @:native("UnityEngine.AnimationClip") @:final
 extern class AnimationClip extends Motion {
   @:skipReflection public var length(default,never) : Float;
-  @:skipReflection public var frameRate(default,null) : Float;
+  @:skipReflection public var frameRate(default,never) : Float;
   public var wrapMode : WrapMode;
   public var localBounds : Bounds;
 

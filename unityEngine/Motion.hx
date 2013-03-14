@@ -2,13 +2,13 @@ package unityEngine;
 
 @:native("UnityEngine.Motion")
 extern class Motion extends Object {
-  public var averageDuration(default,null) : Float;
-  public var averageAngularSpeed(default,null) : Float;
-  public var averageSpeed(default,null) : Vector3;
-  public var apparentSpeed(default,null) : Float;
-  public var isLooping(default,null) : Bool;
-  public var isAnimatorMotion(default,null) : Bool;
-  public var isHumanMotion(default,null) : Bool;
+  @:skipReflection public var averageDuration(default,never) : Float;
+  @:skipReflection public var averageAngularSpeed(default,never) : Float;
+  @:skipReflection public var averageSpeed(default,never) : Vector3;
+  @:skipReflection public var apparentSpeed(default,never) : Float;
+  @:skipReflection public var isLooping(default,never) : Bool;
+  @:skipReflection public var isAnimatorMotion(default,never) : Bool;
+  @:skipReflection public var isHumanMotion(default,never) : Bool;
 
   public function new() : Void;
 

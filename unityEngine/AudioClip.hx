@@ -14,11 +14,11 @@ extern class AudioClip_PCMSetPositionCallback {
 
 @:native("UnityEngine.AudioClip") @:final
 extern class AudioClip extends Object {
-  public var length(default,null) : Float;
-  public var samples(default,null) : Int;
-  public var channels(default,null) : Int;
-  public var frequency(default,null) : Int;
-  public var isReadyToPlay(default,null) : Bool;
+  @:skipReflection public var length(default,never) : Float;
+  @:skipReflection public var samples(default,never) : Int;
+  @:skipReflection public var channels(default,never) : Int;
+  @:skipReflection public var frequency(default,never) : Int;
+  @:skipReflection public var isReadyToPlay(default,never) : Bool;
 
   public static function Create(name:String, lengthSamples:Int, channels:Int, frequency:Int, _3D:Bool, stream:Bool) : AudioClip;
 

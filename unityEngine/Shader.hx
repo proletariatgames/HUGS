@@ -2,10 +2,10 @@ package unityEngine;
 
 @:native("UnityEngine.Shader") @:final
 extern class Shader extends Object {
-  public var isSupported(default,null) : Bool;
+  @:skipReflection public var isSupported(default,never) : Bool;
   public var maximumLOD : Int;
   public static var globalMaximumLOD : Int;
-  public var renderQueue(default,null) : Int;
+  @:skipReflection public var renderQueue(default,never) : Int;
 
   public function new() : Void;
 

@@ -10,7 +10,7 @@ extern class AnimationEvent {
   public var functionName : String;
   public var time : Float;
   public var messageOptions : SendMessageOptions;
-  @:skipReflection public var animationState(default,null) : AnimationState;
+  @:skipReflection public var animationState(default,never) : AnimationState;
 
   public function new() : Void;
 }

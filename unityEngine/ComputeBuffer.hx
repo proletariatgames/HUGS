@@ -2,8 +2,8 @@ package unityEngine;
 
 @:native("UnityEngine.ComputeBuffer") @:final
 extern class ComputeBuffer {
-  public var count(default,null) : Int;
-  public var stride(default,null) : Int;
+  @:skipReflection public var count(default,never) : Int;
+  @:skipReflection public var stride(default,never) : Int;
 
   public static function CopyCount(src:ComputeBuffer, dst:ComputeBuffer, dstOffset:Int) : Void;
 

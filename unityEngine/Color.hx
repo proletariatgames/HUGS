@@ -6,20 +6,20 @@ extern class Color {
   public var g : Float;
   public var b : Float;
   public var a : Float;
-  public static var red(default,null) : Color;
-  public static var green(default,null) : Color;
-  public static var blue(default,null) : Color;
-  public static var white(default,null) : Color;
-  public static var black(default,null) : Color;
-  public static var yellow(default,null) : Color;
-  public static var cyan(default,null) : Color;
-  public static var magenta(default,null) : Color;
-  public static var gray(default,null) : Color;
-  public static var grey(default,null) : Color;
-  public static var clear(default,null) : Color;
-  public var grayscale(default,null) : Float;
-  public var linear(default,null) : Color;
-  public var gamma(default,null) : Color;
+  @:skipReflection public static var red(default,never) : Color;
+  @:skipReflection public static var green(default,never) : Color;
+  @:skipReflection public static var blue(default,never) : Color;
+  @:skipReflection public static var white(default,never) : Color;
+  @:skipReflection public static var black(default,never) : Color;
+  @:skipReflection public static var yellow(default,never) : Color;
+  @:skipReflection public static var cyan(default,never) : Color;
+  @:skipReflection public static var magenta(default,never) : Color;
+  @:skipReflection public static var gray(default,never) : Color;
+  @:skipReflection public static var grey(default,never) : Color;
+  @:skipReflection public static var clear(default,never) : Color;
+  @:skipReflection public var grayscale(default,never) : Float;
+  @:skipReflection public var linear(default,never) : Color;
+  @:skipReflection public var gamma(default,never) : Color;
 
   @:overload(function(r:Float, g:Float, b:Float, a:Float) : Void {})
   public function new(r:Float, g:Float, b:Float) : Void;

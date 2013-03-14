@@ -6,8 +6,8 @@ extern class NetworkView extends Behaviour {
   public var stateSynchronization : NetworkStateSynchronization;
   public var viewID : NetworkViewID;
   public var group : Int;
-  public var isMine(default,null) : Bool;
-  public var owner(default,null) : NetworkPlayer;
+  @:skipReflection public var isMine(default,never) : Bool;
+  @:skipReflection public var owner(default,never) : NetworkPlayer;
 
   public function new() : Void;
 

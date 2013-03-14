@@ -5,13 +5,13 @@ extern class Vector2 {
   public static var kEpsilon : Float;
   public var x : Float;
   public var y : Float;
-  public var normalized(default,null) : Vector2;
-  public var magnitude(default,null) : Float;
-  public var sqrMagnitude(default,null) : Float;
-  public static var zero(default,null) : Vector2;
-  public static var one(default,null) : Vector2;
-  public static var up(default,null) : Vector2;
-  public static var right(default,null) : Vector2;
+  @:skipReflection public var normalized(default,never) : Vector2;
+  @:skipReflection public var magnitude(default,never) : Float;
+  @:skipReflection public var sqrMagnitude(default,never) : Float;
+  @:skipReflection public static var zero(default,never) : Vector2;
+  @:skipReflection public static var one(default,never) : Vector2;
+  @:skipReflection public static var up(default,never) : Vector2;
+  @:skipReflection public static var right(default,never) : Vector2;
 
   public function new(x:Float, y:Float) : Void;
 

@@ -13,7 +13,7 @@ extern class Rigidbody extends Component {
   public var constraints : RigidbodyConstraints;
   public var collisionDetectionMode : CollisionDetectionMode;
   public var centerOfMass : Vector3;
-  public var worldCenterOfMass(default,null) : Vector3;
+  @:skipReflection public var worldCenterOfMass(default,never) : Vector3;
   public var inertiaTensorRotation : Quaternion;
   public var inertiaTensor : Vector3;
   public var detectCollisions : Bool;

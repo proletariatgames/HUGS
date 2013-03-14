@@ -4,15 +4,15 @@ package unityEngine;
 extern class RenderTexture extends Texture {
   public var depth : Int;
   public var isPowerOfTwo : Bool;
-  public var sRGB(default,null) : Bool;
+  @:skipReflection public var sRGB(default,never) : Bool;
   public var format : RenderTextureFormat;
   public var useMipMap : Bool;
   public var isCubemap : Bool;
   public var isVolume : Bool;
   public var volumeDepth : Int;
   public var enableRandomWrite : Bool;
-  public var colorBuffer(default,null) : RenderBuffer;
-  public var depthBuffer(default,null) : RenderBuffer;
+  @:skipReflection public var colorBuffer(default,never) : RenderBuffer;
+  @:skipReflection public var depthBuffer(default,never) : RenderBuffer;
   public static var active : RenderTexture;
   public static var enabled : Bool;
 
