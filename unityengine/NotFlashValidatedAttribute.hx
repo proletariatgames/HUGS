@@ -3,6 +3,6 @@ package unityengine;
 @:native("UnityEngine.NotFlashValidatedAttribute") @:final
 extern class NotFlashValidatedAttribute {
 
-	public function new() : Void;
+  public function new() : Void;
 }
 

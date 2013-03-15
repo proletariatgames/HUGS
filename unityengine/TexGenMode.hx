@@ -2,11 +2,11 @@ package unityengine;
 
 @:fakeEnum(Int) @:native("UnityEngine.TexGenMode")
 extern enum TexGenMode {
-	None;
-	SphereMap;
-	Object;
-	EyeLinear;
-	CubeReflect;
-	CubeNormal;
+None;
+SphereMap;
+Object;
+EyeLinear;
+CubeReflect;
+CubeNormal;
 }
 

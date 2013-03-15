@@ -2,23 +2,23 @@ package unityengine;
 
 @:native("UnityEngine.iPhoneSettings") @:final
 extern class iPhoneSettings {
-	public static var screenOrientation : iPhoneScreenOrientation;
-	public static var verticalOrientation : Bool;
-	public static var screenCanDarken : Bool;
-	@:skipReflection public static var uniqueIdentifier(default,never) : String;
-	@:skipReflection public static var name(default,never) : String;
-	@:skipReflection public static var model(default,never) : String;
-	@:skipReflection public static var systemName(default,never) : String;
-	@:skipReflection public static var systemVersion(default,never) : String;
-	@:skipReflection public static var internetReachability(default,never) : iPhoneNetworkReachability;
-	@:skipReflection public static var generation(default,never) : iPhoneGeneration;
-	@:skipReflection public static var locationServiceStatus(default,never) : LocationServiceStatus;
-	@:skipReflection public static var locationServiceEnabledByUser(default,never) : Bool;
+  public static var screenOrientation : iPhoneScreenOrientation;
+  public static var verticalOrientation : Bool;
+  public static var screenCanDarken : Bool;
+  @:skipReflection public static var uniqueIdentifier(default,never) : String;
+  @:skipReflection public static var name(default,never) : String;
+  @:skipReflection public static var model(default,never) : String;
+  @:skipReflection public static var systemName(default,never) : String;
+  @:skipReflection public static var systemVersion(default,never) : String;
+  @:skipReflection public static var internetReachability(default,never) : iPhoneNetworkReachability;
+  @:skipReflection public static var generation(default,never) : iPhoneGeneration;
+  @:skipReflection public static var locationServiceStatus(default,never) : LocationServiceStatus;
+  @:skipReflection public static var locationServiceEnabledByUser(default,never) : Bool;
 
-	public function new() : Void;
+  public function new() : Void;
 
-	public static function StartLocationServiceUpdates(desiredAccuracyInMeters:Float, updateDistanceInMeters:Float) : Void;
+  public static function StartLocationServiceUpdates(desiredAccuracyInMeters:Float, updateDistanceInMeters:Float) : Void;
 
-	public static function StopLocationServiceUpdates() : Void;
+  public static function StopLocationServiceUpdates() : Void;
 }
 

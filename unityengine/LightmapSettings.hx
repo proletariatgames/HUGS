@@ -2,11 +2,11 @@ package unityengine;
 
 @:native("UnityEngine.LightmapSettings") @:final
 extern class LightmapSettings {
-	public static var lightmaps : cs.NativeArray<LightmapData>;
-	public static var lightmapsMode : LightmapsMode;
-	public static var bakedColorSpace : ColorSpace;
-	public static var lightProbes : LightProbes;
+  public static var lightmaps : cs.NativeArray<LightmapData>;
+  public static var lightmapsMode : LightmapsMode;
+  public static var bakedColorSpace : ColorSpace;
+  public static var lightProbes : LightProbes;
 
-	public function new() : Void;
+  public function new() : Void;
 }
 

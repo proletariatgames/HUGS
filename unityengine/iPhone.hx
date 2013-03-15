@@ -2,12 +2,12 @@ package unityengine;
 
 @:native("UnityEngine.iPhone") @:final
 extern class iPhone {
-	@:skipReflection public static var generation(default,never) : iPhoneGeneration;
+  @:skipReflection public static var generation(default,never) : iPhoneGeneration;
 
-	public function new() : Void;
+  public function new() : Void;
 
-	public static function ResetNoBackupFlag(path:String) : Void;
+  public static function ResetNoBackupFlag(path:String) : Void;
 
-	public static function SetNoBackupFlag(path:String) : Void;
+  public static function SetNoBackupFlag(path:String) : Void;
 }
 

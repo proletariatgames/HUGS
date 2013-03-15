@@ -2,8 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.OcclusionPortal") @:final
 extern class OcclusionPortal extends Component {
-	public var open : Bool;
+  public var open : Bool;
 
-	public function new() : Void;
+  public function new() : Void;
 }
 

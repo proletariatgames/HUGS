@@ -2,8 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.ClothRenderer") @:final
 extern class ClothRenderer extends Renderer {
-	public var pauseWhenNotVisible : Bool;
+  public var pauseWhenNotVisible : Bool;
 
-	public function new() : Void;
+  public function new() : Void;
 }
 

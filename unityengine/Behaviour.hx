@@ -2,8 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.Behaviour")
 extern class Behaviour extends Component {
-	public var enabled : Bool;
+  public var enabled : Bool;
 
-	public function new() : Void;
+  public function new() : Void;
 }
 
