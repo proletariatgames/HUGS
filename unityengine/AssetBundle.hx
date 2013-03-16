@@ -8,7 +8,7 @@ extern class AssetBundle extends Object {
 
   public static function CreateFromFile(path:String) : AssetBundle;
 
-  public static function CreateFromMemory(binary:cs.NativeArray<cs.system.Byte>) : AssetBundleCreateRequest;
+  public static function CreateFromMemory(binary:cs.NativeArray<UInt>) : AssetBundleCreateRequest;
 
   public function new() : Void;
 

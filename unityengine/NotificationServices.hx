@@ -8,7 +8,7 @@ extern class NotificationServices {
   @:skipReflection public static var remoteNotificationCount(default,never) : Int;
   @:skipReflection public static var remoteNotifications(default,never) : cs.NativeArray<RemoteNotification>;
   @:skipReflection public static var enabledRemoteNotificationTypes(default,never) : RemoteNotificationType;
-  @:skipReflection public static var deviceToken(default,never) : cs.NativeArray<cs.system.Byte>;
+  @:skipReflection public static var deviceToken(default,never) : cs.NativeArray<UInt>;
   @:skipReflection public static var registrationError(default,never) : String;
 
   public static function CancelAllLocalNotifications() : Void;

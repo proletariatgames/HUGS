@@ -5,7 +5,7 @@ extern class WWW {
   @:skipReflection public var responseHeaders(default,never) : cs.system.collections.generic.Dictionary<String,String>;
   @:skipReflection public var text(default,never) : String;
   @:skipReflection public var data(default,never) : String;
-  @:skipReflection public var bytes(default,never) : cs.NativeArray<cs.system.Byte>;
+  @:skipReflection public var bytes(default,never) : cs.NativeArray<UInt>;
   @:skipReflection public var size(default,never) : Int;
   @:skipReflection public var error(default,never) : String;
   @:skipReflection public var texture(default,never) : Texture2D;
@@ -20,8 +20,8 @@ extern class WWW {
   @:skipReflection public var assetBundle(default,never) : AssetBundle;
   public var threadPriority : ThreadPriority;
 
-  @:overload(function(url:String, postData:cs.NativeArray<cs.system.Byte>, headers:cs.system.collections.Hashtable) : Void {})
-  @:overload(function(url:String, postData:cs.NativeArray<cs.system.Byte>) : Void {})
+  @:overload(function(url:String, postData:cs.NativeArray<UInt>, headers:cs.system.collections.Hashtable) : Void {})
+  @:overload(function(url:String, postData:cs.NativeArray<UInt>) : Void {})
   @:overload(function(url:String, form:WWWForm) : Void {})
   public function new(url:String) : Void;
 
@@ -37,7 +37,7 @@ extern class WWW {
 
   public static function GetURL(url:String) : String;
 
-  public function InitWWW(url:String, postData:cs.NativeArray<cs.system.Byte>, iHeaders:cs.NativeArray<String>) : Void;
+  public function InitWWW(url:String, postData:cs.NativeArray<UInt>, iHeaders:cs.NativeArray<String>) : Void;
 
   public static function LoadFromCacheOrDownload(url:String, version:Int) : WWW;
 

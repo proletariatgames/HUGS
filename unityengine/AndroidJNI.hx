@@ -73,7 +73,7 @@ extern class AndroidJNI {
 
   public static function FromBooleanArray(array:cs.Pointer<Int>) : cs.NativeArray<Bool>;
 
-  public static function FromByteArray(array:cs.Pointer<Int>) : cs.NativeArray<cs.system.Byte>;
+  public static function FromByteArray(array:cs.Pointer<Int>) : cs.NativeArray<UInt>;
 
   public static function FromCharArray(array:cs.Pointer<Int>) : cs.NativeArray<String>;
 
@@ -271,7 +271,7 @@ extern class AndroidJNI {
 
   public static function ToBooleanArray(array:cs.NativeArray<Bool>) : cs.Pointer<Int>;
 
-  public static function ToByteArray(array:cs.NativeArray<cs.system.Byte>) : cs.Pointer<Int>;
+  public static function ToByteArray(array:cs.NativeArray<UInt>) : cs.Pointer<Int>;
 
   public static function ToCharArray(array:cs.NativeArray<String>) : cs.Pointer<Int>;
 
