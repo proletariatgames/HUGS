@@ -18,6 +18,7 @@ extern class Transform extends Component {
   @:skipReflection public var root(default,never) : Transform;
   @:skipReflection public var childCount(default,never) : Int;
   @:skipReflection public var lossyScale(default,never) : Vector3;
+  public var hasChanged : Bool;
 
   public function DetachChildren() : Void;
 
@@ -29,7 +30,7 @@ extern class Transform extends Component {
 
   public function GetChildCount() : Int;
 
-  public function GetEnumerator() : cs.system.collections.IEnumerator;
+  public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
   @:overload(function(x:Float, y:Float, z:Float) : Vector3 {})
   public function InverseTransformDirection(direction:Vector3) : Vector3;

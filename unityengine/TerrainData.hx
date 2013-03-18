@@ -26,13 +26,13 @@ extern class TerrainData extends Object {
 
   public function new() : Void;
 
-  public function GetAlphamaps(x:Int, y:Int, width:Int, height:Int) : cs.NativeArray3<Float>;
+  public function GetAlphamaps(x:Int, y:Int, width:Int, height:Int) : cs.NativeArray3<dotnet.system.Single>;
 
   public function GetDetailLayer(xBase:Int, yBase:Int, width:Int, height:Int, layer:Int) : cs.NativeArray2<Int>;
 
   public function GetHeight(x:Int, y:Int) : Float;
 
-  public function GetHeights(xBase:Int, yBase:Int, width:Int, height:Int) : cs.NativeArray2<Float>;
+  public function GetHeights(xBase:Int, yBase:Int, width:Int, height:Int) : cs.NativeArray2<dotnet.system.Single>;
 
   public function GetInterpolatedHeight(x:Float, y:Float) : Float;
 
@@ -44,12 +44,12 @@ extern class TerrainData extends Object {
 
   public function RefreshPrototypes() : Void;
 
-  public function SetAlphamaps(x:Int, y:Int, map:cs.NativeArray3<Float>) : Void;
+  public function SetAlphamaps(x:Int, y:Int, map:cs.NativeArray3<dotnet.system.Single>) : Void;
 
   public function SetDetailLayer(xBase:Int, yBase:Int, layer:Int, details:cs.NativeArray2<Int>) : Void;
 
   public function SetDetailResolution(detailResolution:Int, resolutionPerPatch:Int) : Void;
 
-  public function SetHeights(xBase:Int, yBase:Int, heights:cs.NativeArray2<Float>) : Void;
+  public function SetHeights(xBase:Int, yBase:Int, heights:cs.NativeArray2<dotnet.system.Single>) : Void;
 }
 

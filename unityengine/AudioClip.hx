@@ -3,13 +3,13 @@ package unityengine;
 @:native("UnityEngine.AudioClip.PCMReaderCallback") @:final
 extern class AudioClip_PCMReaderCallback {
 
-  public function new(object:Dynamic, method:cs.Pointer<Int>) : Void;
+  public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
 }
 
 @:native("UnityEngine.AudioClip.PCMSetPositionCallback") @:final
 extern class AudioClip_PCMSetPositionCallback {
 
-  public function new(object:Dynamic, method:cs.Pointer<Int>) : Void;
+  public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
 }
 
 @:native("UnityEngine.AudioClip") @:final
@@ -24,8 +24,8 @@ extern class AudioClip extends Object {
 
   public function new() : Void;
 
-  public function GetData(data:cs.NativeArray<Float>, offsetSamples:Int) : Void;
+  public function GetData(data:cs.NativeArray<dotnet.system.Single>, offsetSamples:Int) : Void;
 
-  public function SetData(data:cs.NativeArray<Float>, offsetSamples:Int) : Void;
+  public function SetData(data:cs.NativeArray<dotnet.system.Single>, offsetSamples:Int) : Void;
 }
 

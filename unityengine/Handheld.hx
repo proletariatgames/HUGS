@@ -4,6 +4,8 @@ package unityengine;
 extern class Handheld {
   public static var use32BitDisplayBuffer : Bool;
 
+  public static function ClearShaderCache() : Void;
+
   public function new() : Void;
 
   public static function GetActivityIndicatorStyle() : Int;

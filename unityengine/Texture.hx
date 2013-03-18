@@ -14,7 +14,7 @@ extern class Texture extends Object {
 
   public function GetNativeTextureID() : Int;
 
-  public function GetNativeTexturePtr() : cs.Pointer<Int>;
+  public function GetNativeTexturePtr() : dotnet.system.IntPtr;
 
   public static function SetGlobalAnisotropicFilteringLimits(forcedMin:Int, globalMax:Int) : Void;
 }

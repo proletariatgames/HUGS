@@ -11,6 +11,7 @@ extern class AudioSource extends Behaviour {
   public var loop : Bool;
   public var ignoreListenerVolume : Bool;
   public var playOnAwake : Bool;
+  public var ignoreListenerPause : Bool;
   public var velocityUpdateMode : AudioVelocityUpdateMode;
   public var panLevel : Float;
   public var bypassEffects : Bool;
@@ -28,21 +29,29 @@ extern class AudioSource extends Behaviour {
 
   public function new() : Void;
 
-  @:overload(function(samples:cs.NativeArray<Float>, channel:Int) : Void {})
-  public function GetOutputData(numSamples:Int, channel:Int) : cs.NativeArray<Float>;
+  @:overload(function(samples:cs.NativeArray<dotnet.system.Single>, channel:Int) : Void {})
+  public function GetOutputData(numSamples:Int, channel:Int) : cs.NativeArray<dotnet.system.Single>;
 
-  @:overload(function(samples:cs.NativeArray<Float>, channel:Int, window:FFTWindow) : Void {})
-  public function GetSpectrumData(numSamples:Int, channel:Int, window:FFTWindow) : cs.NativeArray<Float>;
+  @:overload(function(samples:cs.NativeArray<dotnet.system.Single>, channel:Int, window:FFTWindow) : Void {})
+  public function GetSpectrumData(numSamples:Int, channel:Int, window:FFTWindow) : cs.NativeArray<dotnet.system.Single>;
 
   public function Pause() : Void;
 
-  @:overload(function(delay:cs.StdTypes.UInt64) : Void {})
+  @:overload(function(delay:dotnet.system.UInt64) : Void {})
   public function Play() : Void;
 
   public static function PlayClipAtPoint(clip:AudioClip, position:Vector3) : Void;
 
+  public function PlayDelayed(delay:Float) : Void;
+
   @:overload(function(clip:AudioClip, volumeScale:Float) : Void {})
   public function PlayOneShot(clip:AudioClip) : Void;
+
+  public function PlayScheduled(time:Float) : Void;
+
+  public function SetScheduledEndTime(time:Float) : Void;
+
+  public function SetScheduledStartTime(time:Float) : Void;
 
   public function Stop() : Void;
 }

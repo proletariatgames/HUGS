@@ -3,7 +3,7 @@ package unityengine;
 @:native("UnityEngine.Application.LogCallback") @:final
 extern class Application_LogCallback {
 
-  public function new(object:Dynamic, method:cs.Pointer<Int>) : Void;
+  public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
 }
 
 @:native("UnityEngine.Application") @:final
@@ -48,11 +48,13 @@ extern class Application {
 
   public static function DontDestroyOnLoad(mono:Object) : Void;
 
-  public static function ExternalCall(functionName:String, args:cs.NativeArray<Dynamic>) : Void;
+  public static function ExternalCall(functionName:String, args:cs.NativeArray<dotnet.system.Object>) : Void;
 
   public static function ExternalEval(script:String) : Void;
 
   public static function GetStreamProgressForLevel(levelIndex:Int) : Float;
+
+  public static function HasProLicense() : Bool;
 
   public static function HasUserAuthorization(mode:UserAuthorization) : Bool;
 

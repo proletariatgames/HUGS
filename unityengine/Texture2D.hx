@@ -15,7 +15,7 @@ extern class Texture2D extends Texture {
   @:overload(function(width:Int, height:Int, format:TextureFormat, mipmap:Bool) : Void {})
   public function new(width:Int, height:Int) : Void;
 
-  public function EncodeToPNG() : cs.NativeArray<UInt>;
+  public function EncodeToPNG() : cs.NativeArray<dotnet.system.Byte>;
 
   public function GetPixel(x:Int, y:Int) : Color;
 
@@ -29,7 +29,7 @@ extern class Texture2D extends Texture {
   @:overload(function(miplevel:Int) : cs.NativeArray<Color32> {})
   public function GetPixels32() : cs.NativeArray<Color32>;
 
-  public function LoadImage(data:cs.NativeArray<UInt>) : Bool;
+  public function LoadImage(data:cs.NativeArray<dotnet.system.Byte>) : Bool;
 
   @:overload(function(textures:cs.NativeArray<Texture2D>, padding:Int, maximumAtlasSize:Int, makeNoLongerReadable:Bool) : cs.NativeArray<Rect> {})
   @:overload(function(textures:cs.NativeArray<Texture2D>, padding:Int, maximumAtlasSize:Int) : cs.NativeArray<Rect> {})

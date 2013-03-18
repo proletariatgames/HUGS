@@ -2,14 +2,14 @@ package unityengine;
 
 @:fakeEnum(Int) @:native("UnityEngine.TextAnchor")
 extern enum TextAnchor {
-UpperLeft;
-UpperCenter;
-UpperRight;
-MiddleLeft;
-MiddleCenter;
-MiddleRight;
-LowerLeft;
-LowerCenter;
-LowerRight;
+  UpperLeft;
+  UpperCenter;
+  UpperRight;
+  MiddleLeft;
+  MiddleCenter;
+  MiddleRight;
+  LowerLeft;
+  LowerCenter;
+  LowerRight;
 }
 

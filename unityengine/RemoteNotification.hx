@@ -6,6 +6,6 @@ extern class RemoteNotification {
   @:skipReflection public var hasAction(default,never) : Bool;
   @:skipReflection public var applicationIconBadgeNumber(default,never) : Int;
   @:skipReflection public var soundName(default,never) : String;
-  @:skipReflection public var userInfo(default,never) : cs.system.collections.IDictionary;
+  @:skipReflection public var userInfo(default,never) : dotnet.system.collections.IDictionary;
 }
 

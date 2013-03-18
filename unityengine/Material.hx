@@ -9,6 +9,7 @@ extern class Material extends Object {
   public var mainTextureScale : Vector2;
   @:skipReflection public var passCount(default,never) : Int;
   public var renderQueue : Int;
+  public var shaderKeywords : cs.NativeArray<String>;
 
   public function CopyPropertiesFromMaterial(mat:Material) : Void;
 

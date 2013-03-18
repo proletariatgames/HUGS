@@ -21,8 +21,8 @@ extern class Input {
   @:skipReflection public static var deviceOrientation(default,never) : DeviceOrientation;
   public static var imeCompositionMode : IMECompositionMode;
   @:skipReflection public static var compositionString(default,never) : String;
-  public static var compositionCursorPos : Vector2;
   @:skipReflection public static var imeIsSelected(default,never) : Bool;
+  public static var compositionCursorPos : Vector2;
 
   public function new() : Void;
 

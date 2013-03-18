@@ -19,10 +19,10 @@ extern class MonoBehaviour extends Behaviour {
   public static function print(message:Dynamic) : Void;
 
   @:overload(function(methodName:String, value:Dynamic) : Coroutine {})
-  @:overload(function(routine:cs.system.collections.IEnumerator) : Coroutine {})
+  @:overload(function(routine:dotnet.system.collections.IEnumerator) : Coroutine {})
   public function StartCoroutine(methodName:String) : Coroutine;
 
-  public function StartCoroutine_Auto(routine:cs.system.collections.IEnumerator) : Coroutine;
+  public function StartCoroutine_Auto(routine:dotnet.system.collections.IEnumerator) : Coroutine;
 
   public function StopAllCoroutines() : Void;
 

@@ -14,6 +14,7 @@ extern class NavMeshAgent extends Behaviour {
   @:skipReflection public var currentOffMeshLinkData(default,never) : OffMeshLinkData;
   @:skipReflection public var nextOffMeshLinkData(default,never) : OffMeshLinkData;
   public var autoTraverseOffMeshLink : Bool;
+  public var autoBraking : Bool;
   public var autoRepath : Bool;
   @:skipReflection public var hasPath(default,never) : Bool;
   @:skipReflection public var pathPending(default,never) : Bool;
@@ -62,5 +63,7 @@ extern class NavMeshAgent extends Behaviour {
 
   @:overload(function(stopUpdates:Bool) : Void {})
   public function Stop() : Void;
+
+  public function Warp(newPosition:Vector3) : Bool;
 }
 

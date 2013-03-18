@@ -3,6 +3,7 @@ package unityengine;
 @:native("UnityEngine.ProceduralPropertyDescription") @:final
 extern class ProceduralPropertyDescription {
   public var name : String;
+  public var label : String;
   public var group : String;
   public var type : ProceduralPropertyType;
   public var hasRange : Bool;

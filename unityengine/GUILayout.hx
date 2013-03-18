@@ -47,7 +47,7 @@ extern class GUILayout {
 
   public static function MinWidth(minWidth:Float) : GUILayoutOption;
 
-  public static function PasswordField(password:String, maskChar:String, options:cs.NativeArray<GUILayoutOption>) : String;
+  public static function PasswordField(password:String, maskChar:dotnet.system.Char, options:cs.NativeArray<GUILayoutOption>) : String;
 
   public static function RepeatButton(image:Texture, options:cs.NativeArray<GUILayoutOption>) : Bool;
 

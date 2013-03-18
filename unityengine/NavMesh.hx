@@ -3,6 +3,8 @@ package unityengine;
 @:native("UnityEngine.NavMesh") @:final
 extern class NavMesh extends Object {
 
+  public static function AddOffMeshLinks() : Void;
+
   public static function CalculatePath(sourcePosition:Vector3, targetPosition:Vector3, passableMask:Int, path:NavMeshPath) : Bool;
 
   public function new() : Void;
@@ -14,6 +16,8 @@ extern class NavMesh extends Object {
   public static function GetNavMeshLayerFromName(layerName:String) : Int;
 
   public static function Raycast(sourcePosition:Vector3, targetPosition:Vector3, hit:NavMeshHit, passableMask:Int) : Bool;
+
+  public static function RestoreNavMesh() : Void;
 
   public static function SamplePosition(sourcePosition:Vector3, hit:NavMeshHit, maxDistance:Float, allowedMask:Int) : Bool;
 

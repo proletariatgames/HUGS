@@ -11,7 +11,7 @@ extern class Event {
   public var modifiers : EventModifiers;
   public var pressure : Float;
   public var clickCount : Int;
-  public var character : String;
+  public var character : dotnet.system.Char;
   public var commandName : String;
   public var keyCode : KeyCode;
   public var shift : Bool;

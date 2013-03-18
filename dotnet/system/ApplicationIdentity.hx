@@ -1,0 +1,12 @@
+package dotnet.system;
+
+@:native("System.ApplicationIdentity") @:final
+extern class ApplicationIdentity extends Object  implements dotnet.system.runtime.serialization.ISerializable {
+  @:skipReflection public var CodeBase(default,never) : String;
+  @:skipReflection public var FullName(default,never) : String;
+
+  public function new(applicationIdentityFullName:String) : Void;
+
+  function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
+}
+

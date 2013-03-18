@@ -18,6 +18,7 @@ extern class Camera extends Behaviour {
   public var depth : Float;
   public var aspect : Float;
   public var cullingMask : Int;
+  public var eventMask : Int;
   public var backgroundColor : Color;
   public var rect : Rect;
   public var pixelRect : Rect;
@@ -34,7 +35,7 @@ extern class Camera extends Behaviour {
   @:skipReflection public static var allCameras(default,never) : cs.NativeArray<Camera>;
   @:skipReflection public static var mainCamera(default,never) : Camera;
   public var useOcclusionCulling : Bool;
-  public var layerCullDistances : cs.NativeArray<Float>;
+  public var layerCullDistances : cs.NativeArray<dotnet.system.Single>;
   public var layerCullSpherical : Bool;
   public var depthTextureMode : DepthTextureMode;
 
@@ -74,6 +75,8 @@ extern class Camera extends Behaviour {
   public function ScreenToWorldPoint(position:Vector3) : Vector3;
 
   public function SetReplacementShader(shader:Shader, replacementTag:String) : Void;
+
+  public function SetTargetBuffers(colorBuffer:RenderBuffer, depthBuffer:RenderBuffer) : Void;
 
   public static function SetupCurrent(cur:Camera) : Void;
 

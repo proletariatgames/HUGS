@@ -2,8 +2,8 @@ package unityengine;
 
 @:fakeEnum(UInt) @:native("UnityEngine.TextEditor.DblClickSnapping")
 extern enum TextEditor_DblClickSnapping {
-WORDS;
-PARAGRAPHS;
+  WORDS;
+  PARAGRAPHS;
 }
 
 @:native("UnityEngine.TextEditor")
@@ -57,7 +57,7 @@ extern class TextEditor {
 
   public function HandleKeyEvent(e:Event) : Bool;
 
-  public function Insert(c:String) : Void;
+  public function Insert(c:dotnet.system.Char) : Void;
 
   public function IsOverSelection(cursorPosition:Vector2) : Bool;
 

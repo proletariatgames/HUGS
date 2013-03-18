@@ -22,6 +22,7 @@ extern class SystemInfo {
   @:skipReflection public static var supportsInstancing(default,never) : Bool;
   @:skipReflection public static var supportedRenderTargetCount(default,never) : Int;
   @:skipReflection public static var supportsVertexPrograms(default,never) : Bool;
+  @:skipReflection public static var npotSupport(default,never) : NPOTSupport;
   @:skipReflection public static var deviceUniqueIdentifier(default,never) : String;
   @:skipReflection public static var deviceName(default,never) : String;
   @:skipReflection public static var deviceModel(default,never) : String;
@@ -30,6 +31,7 @@ extern class SystemInfo {
   @:skipReflection public static var supportsLocationService(default,never) : Bool;
   @:skipReflection public static var supportsVibration(default,never) : Bool;
   @:skipReflection public static var deviceType(default,never) : DeviceType;
+  @:skipReflection public static var maxTextureSize(default,never) : Int;
 
   public function new() : Void;
 

@@ -12,10 +12,10 @@ extern class ComputeBuffer {
 
   public function Dispose() : Void;
 
-  public function GetData(data:cs.system.Array) : Void;
+  public function GetData(data:dotnet.system.Array) : Void;
 
   public function Release() : Void;
 
-  public function SetData(data:cs.system.Array) : Void;
+  public function SetData(data:dotnet.system.Array) : Void;
 }
 

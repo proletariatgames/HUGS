@@ -8,8 +8,8 @@ extern class AudioListener extends Behaviour {
 
   public function new() : Void;
 
-  public static function GetOutputData(numSamples:Int, channel:Int) : cs.NativeArray<Float>;
+  public static function GetOutputData(numSamples:Int, channel:Int) : cs.NativeArray<dotnet.system.Single>;
 
-  public static function GetSpectrumData(numSamples:Int, channel:Int, window:FFTWindow) : cs.NativeArray<Float>;
+  public static function GetSpectrumData(numSamples:Int, channel:Int, window:FFTWindow) : cs.NativeArray<dotnet.system.Single>;
 }
 

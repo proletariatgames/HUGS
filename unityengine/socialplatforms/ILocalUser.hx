@@ -1,6 +1,6 @@
 package unityengine.socialplatforms;
 
 @:native("UnityEngine.SocialPlatforms.ILocalUser")
-extern interface ILocalUser implements IUserProfile {
+extern interface ILocalUser extends IUserProfile {
 }
 

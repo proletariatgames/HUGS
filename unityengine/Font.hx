@@ -3,7 +3,7 @@ package unityengine;
 @:native("UnityEngine.Font.FontTextureRebuildCallback") @:final
 extern class Font_FontTextureRebuildCallback {
 
-  public function new(object:Dynamic, method:cs.Pointer<Int>) : Void;
+  public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
 }
 
 @:native("UnityEngine.Font") @:final
@@ -15,11 +15,11 @@ extern class Font extends Object {
 
   public function new() : Void;
 
-  @:overload(function(ch:String, info:CharacterInfo, size:Int, style:FontStyle) : Bool {})
-  @:overload(function(ch:String, info:CharacterInfo, size:Int) : Bool {})
-  public function GetCharacterInfo(ch:String, info:CharacterInfo) : Bool;
+  @:overload(function(ch:dotnet.system.Char, info:CharacterInfo, size:Int, style:FontStyle) : Bool {})
+  @:overload(function(ch:dotnet.system.Char, info:CharacterInfo, size:Int) : Bool {})
+  public function GetCharacterInfo(ch:dotnet.system.Char, info:CharacterInfo) : Bool;
 
-  public function HasCharacter(c:String) : Bool;
+  public function HasCharacter(c:dotnet.system.Char) : Bool;
 
   @:overload(function(characters:String, size:Int, style:FontStyle) : Void {})
   @:overload(function(characters:String, size:Int) : Void {})

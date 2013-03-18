@@ -23,8 +23,15 @@ extern class Animator extends Behaviour {
   @:skipReflection public var targetPosition(default,never) : Vector3;
   @:skipReflection public var targetRotation(default,never) : Quaternion;
   public var cullingMode : AnimatorCullingMode;
+  public var playbackTime : Float;
+  public var recorderStartTime : Float;
+  public var recorderStopTime : Float;
+  public var runtimeAnimatorController : RuntimeAnimatorController;
   public var avatar : Avatar;
   public var layersAffectMassCenter : Bool;
+  @:skipReflection public var leftFeetBottomHeight(default,never) : Float;
+  @:skipReflection public var rightFeetBottomHeight(default,never) : Float;
+  public var logWarnings : Bool;
 
   public function new() : Void;
 
@@ -118,6 +125,14 @@ extern class Animator extends Behaviour {
 
   @:overload(function(name:String, value:Vector3) : Void {})
   public function SetVector(id:Int, value:Vector3) : Void;
+
+  public function StartPlayback() : Void;
+
+  public function StartRecording(frameCount:Int) : Void;
+
+  public function StopPlayback() : Void;
+
+  public function StopRecording() : Void;
 
   public static function StringToHash(name:String) : Int;
 }

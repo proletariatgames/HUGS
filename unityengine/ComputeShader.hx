@@ -13,7 +13,7 @@ extern class ComputeShader extends Object {
 
   public function SetFloat(name:String, val:Float) : Void;
 
-  public function SetFloats(name:String, values:cs.NativeArray<Float>) : Void;
+  public function SetFloats(name:String, values:cs.NativeArray<dotnet.system.Single>) : Void;
 
   public function SetInt(name:String, val:Int) : Void;
 

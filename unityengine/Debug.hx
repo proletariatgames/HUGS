@@ -2,9 +2,12 @@ package unityengine;
 
 @:native("UnityEngine.Debug") @:final
 extern class Debug {
+  public static var developerConsoleVisible : Bool;
   @:skipReflection public static var isDebugBuild(default,never) : Bool;
 
   public static function Break() : Void;
+
+  public static function ClearDeveloperConsole() : Void;
 
   public function new() : Void;
 
@@ -18,7 +21,7 @@ extern class Debug {
 
   public static function LogError(message:Dynamic) : Void;
 
-  public static function LogException(exception:cs.system.Exception) : Void;
+  public static function LogException(exception:dotnet.system.Exception) : Void;
 
   public static function LogWarning(message:Dynamic) : Void;
 }

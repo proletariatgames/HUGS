@@ -6,10 +6,6 @@ extern class iPhoneKeyboard {
   public static var hideInput : Bool;
   public var active : Bool;
   @:skipReflection public var done(default,never) : Bool;
-  public static var autorotateToPortrait : Bool;
-  public static var autorotateToPortraitUpsideDown : Bool;
-  public static var autorotateToLandscapeLeft : Bool;
-  public static var autorotateToLandscapeRight : Bool;
   @:skipReflection public static var area(default,never) : Rect;
   @:skipReflection public static var visible(default,never) : Bool;
 

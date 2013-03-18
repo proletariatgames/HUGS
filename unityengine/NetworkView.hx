@@ -13,8 +13,8 @@ extern class NetworkView extends Behaviour {
 
   public static function Find(viewID:NetworkViewID) : NetworkView;
 
-  @:overload(function(name:String, target:NetworkPlayer, args:cs.NativeArray<Dynamic>) : Void {})
-  public function RPC(name:String, mode:RPCMode, args:cs.NativeArray<Dynamic>) : Void;
+  @:overload(function(name:String, target:NetworkPlayer, args:cs.NativeArray<dotnet.system.Object>) : Void {})
+  public function RPC(name:String, mode:RPCMode, args:cs.NativeArray<dotnet.system.Object>) : Void;
 
   public function SetScope(player:NetworkPlayer, relevancy:Bool) : Bool;
 }

@@ -1,0 +1,58 @@
+package dotnet.system.io;
+
+@:native("System.IO.Directory") @:final
+extern class Directory extends dotnet.system.Object {
+
+  public static function CreateDirectory(path:String) : DirectoryInfo;
+
+  public static function Delete(path:String) : Void;
+
+  public static function Exists(path:String) : Bool;
+
+  public static function GetAccessControl(path:String, includeSections:dotnet.system.security.accesscontrol.AccessControlSections) : dotnet.system.security.accesscontrol.DirectorySecurity;
+
+  public static function GetCreationTime(path:String) : dotnet.system.DateTime;
+
+  public static function GetCreationTimeUtc(path:String) : dotnet.system.DateTime;
+
+  public static function GetCurrentDirectory() : String;
+
+  public static function GetDirectories(path:String) : cs.NativeArray<String>;
+
+  public static function GetDirectoryRoot(path:String) : String;
+
+  public static function GetFiles(path:String) : cs.NativeArray<String>;
+
+  public static function GetFileSystemEntries(path:String) : cs.NativeArray<String>;
+
+  public static function GetLastAccessTime(path:String) : dotnet.system.DateTime;
+
+  public static function GetLastAccessTimeUtc(path:String) : dotnet.system.DateTime;
+
+  public static function GetLastWriteTime(path:String) : dotnet.system.DateTime;
+
+  public static function GetLastWriteTimeUtc(path:String) : dotnet.system.DateTime;
+
+  public static function GetLogicalDrives() : cs.NativeArray<String>;
+
+  public static function GetParent(path:String) : DirectoryInfo;
+
+  public static function Move(sourceDirName:String, destDirName:String) : Void;
+
+  public static function SetAccessControl(path:String, directorySecurity:dotnet.system.security.accesscontrol.DirectorySecurity) : Void;
+
+  public static function SetCreationTime(path:String, creationTime:dotnet.system.DateTime) : Void;
+
+  public static function SetCreationTimeUtc(path:String, creationTimeUtc:dotnet.system.DateTime) : Void;
+
+  public static function SetCurrentDirectory(path:String) : Void;
+
+  public static function SetLastAccessTime(path:String, lastAccessTime:dotnet.system.DateTime) : Void;
+
+  public static function SetLastAccessTimeUtc(path:String, lastAccessTimeUtc:dotnet.system.DateTime) : Void;
+
+  public static function SetLastWriteTime(path:String, lastWriteTime:dotnet.system.DateTime) : Void;
+
+  public static function SetLastWriteTimeUtc(path:String, lastWriteTimeUtc:dotnet.system.DateTime) : Void;
+}
+

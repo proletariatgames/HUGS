@@ -3,16 +3,16 @@ package unityengine;
 @:native("UnityEngine.Caching") @:final
 extern class Caching {
   @:skipReflection public static var index(default,never) : cs.NativeArray<CacheIndex>;
-  @:skipReflection public static var spaceFree(default,never) : cs.system.Int64;
-  public static var maximumAvailableDiskSpace : cs.system.Int64;
-  @:skipReflection public static var spaceOccupied(default,never) : cs.system.Int64;
+  @:skipReflection public static var spaceFree(default,never) : dotnet.system.Int64;
+  public static var maximumAvailableDiskSpace : dotnet.system.Int64;
+  @:skipReflection public static var spaceOccupied(default,never) : dotnet.system.Int64;
   @:skipReflection public static var spaceAvailable(default,never) : Int;
   @:skipReflection public static var spaceUsed(default,never) : Int;
   public static var expirationDelay : Int;
   public static var enabled : Bool;
   @:skipReflection public static var ready(default,never) : Bool;
 
-  public static function Authorize(name:String, domain:String, size:cs.system.Int64, signature:String) : Bool;
+  public static function Authorize(name:String, domain:String, size:dotnet.system.Int64, signature:String) : Bool;
 
   public static function CleanCache() : Bool;
 

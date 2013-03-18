@@ -30,7 +30,7 @@ extern class GUISkin extends ScriptableObject {
 
   public function FindStyle(styleName:String) : GUIStyle;
 
-  public function GetEnumerator() : cs.system.collections.IEnumerator;
+  public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
   public function GetStyle(styleName:String) : GUIStyle;
 }

@@ -9,12 +9,16 @@ extern class ProceduralMaterial extends Material {
   @:skipReflection public var loadingBehavior(default,never) : ProceduralLoadingBehavior;
   @:skipReflection public static var isSupported(default,never) : Bool;
   public static var substanceProcessorUsage : ProceduralProcessorUsage;
+  public var preset : String;
+  public var isReadable : Bool;
 
   public function CacheProceduralProperty(inputName:String, value:Bool) : Void;
 
   public function ClearCache() : Void;
 
   public function new() : Void;
+
+  public function GetGeneratedTexture(textureName:String) : ProceduralTexture;
 
   public function GetGeneratedTextures() : cs.NativeArray<Texture>;
 

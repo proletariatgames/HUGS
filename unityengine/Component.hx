@@ -39,12 +39,12 @@ extern class Component extends Object {
   public function GetComponentInChildren() : Dynamic;
 
   @:overload(function(type:cs.system.Type) : cs.NativeArray<Component> {})
-  public function GetComponents() : cs.NativeArray<Dynamic>;
+  public function GetComponents() : dotnet.system.Array;
 
   @:overload(function(t:cs.system.Type, includeInactive:Bool) : cs.NativeArray<Component> {})
   @:overload(function(t:cs.system.Type) : cs.NativeArray<Component> {})
-  @:overload(function(includeInactive:Bool) : cs.NativeArray<Dynamic> {})
-  public function GetComponentsInChildren() : cs.NativeArray<Dynamic>;
+  @:overload(function(includeInactive:Bool) : dotnet.system.Array {})
+  public function GetComponentsInChildren() : dotnet.system.Array;
 
   @:overload(function(methodName:String, value:Dynamic, options:SendMessageOptions) : Void {})
   @:overload(function(methodName:String, value:Dynamic) : Void {})

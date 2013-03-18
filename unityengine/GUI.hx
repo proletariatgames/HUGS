@@ -3,7 +3,7 @@ package unityengine;
 @:native("UnityEngine.GUI.WindowFunction") @:final
 extern class GUI_WindowFunction {
 
-  public function new(object:Dynamic, method:cs.Pointer<Int>) : Void;
+  public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
 }
 
 @:native("UnityEngine.GUI")
@@ -54,7 +54,7 @@ extern class GUI {
 
   public static function Label(position:Rect, text:String) : Void;
 
-  public static function PasswordField(position:Rect, password:String, maskChar:String) : String;
+  public static function PasswordField(position:Rect, password:String, maskChar:dotnet.system.Char) : String;
 
   public static function RepeatButton(position:Rect, text:String) : Bool;
 

@@ -59,12 +59,12 @@ extern class GameObject extends Object {
   public function GetComponentInChildren() : Dynamic;
 
   @:overload(function(type:cs.system.Type) : cs.NativeArray<Component> {})
-  public function GetComponents() : cs.NativeArray<Dynamic>;
+  public function GetComponents() : dotnet.system.Array;
 
   @:overload(function(type:cs.system.Type, includeInactive:Bool) : cs.NativeArray<Component> {})
   @:overload(function(type:cs.system.Type) : cs.NativeArray<Component> {})
-  @:overload(function(includeInactive:Bool) : cs.NativeArray<Dynamic> {})
-  public function GetComponentsInChildren() : cs.NativeArray<Dynamic>;
+  @:overload(function(includeInactive:Bool) : dotnet.system.Array {})
+  public function GetComponentsInChildren() : dotnet.system.Array;
 
   public function PlayAnimation(animation:AnimationClip) : Void;
 

@@ -34,7 +34,7 @@ extern class Animation extends Behaviour {
 
   public function GetClipCount() : Int;
 
-  public function GetEnumerator() : cs.system.collections.IEnumerator;
+  public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
   public function IsPlaying(name:String) : Bool;
 
