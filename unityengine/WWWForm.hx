@@ -2,7 +2,7 @@ package unityengine;
 
 @:native("UnityEngine.WWWForm") @:final
 extern class WWWForm {
-  @:skipReflection public var headers(default,never) : cs.system.collections.Hashtable;
+  @:skipReflection public var headers(default,never) : Map<String, String>;
   @:skipReflection public var data(default,never) : cs.NativeArray<UInt>;
 
   @:overload(function(fieldName:String, contents:cs.NativeArray<UInt>, fileName:String, mimeType:String) : Void {})
