@@ -14,8 +14,10 @@ extern class ConfigurationErrorsException extends ConfigurationException {
   @:overload(function(message:String) : Void {})
   public function new() : Void;
 
-  public static function GetFilename(reader:dotnet.system.xml.XmlReader) : String;
+  @:overload(function(reader:dotnet.system.xml.XmlReader) : String {})
+  public static function GetFilename(node:dotnet.system.xml.XmlNode) : String;
 
-  public static function GetLineNumber(reader:dotnet.system.xml.XmlReader) : Int;
+  @:overload(function(reader:dotnet.system.xml.XmlReader) : Int {})
+  public static function GetLineNumber(node:dotnet.system.xml.XmlNode) : Int;
 }
 

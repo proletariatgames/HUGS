@@ -11,6 +11,7 @@ extern class Mutex extends WaitHandle {
 
   public function GetAccessControl() : dotnet.system.security.accesscontrol.MutexSecurity;
 
+  @:overload(function(name:String, rights:dotnet.system.security.accesscontrol.MutexRights) : Mutex {})
   public static function OpenExisting(name:String) : Mutex;
 
   public function ReleaseMutex() : Void;

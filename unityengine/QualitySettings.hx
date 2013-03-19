@@ -23,12 +23,15 @@ extern class QualitySettings extends Object {
 
   public function new() : Void;
 
-  public static function DecreaseLevel(applyExpensiveChanges:Bool) : Void;
+  @:overload(function(applyExpensiveChanges:Bool) : Void {})
+  public static function DecreaseLevel() : Void;
 
   public static function GetQualityLevel() : Int;
 
-  public static function IncreaseLevel(applyExpensiveChanges:Bool) : Void;
+  @:overload(function(applyExpensiveChanges:Bool) : Void {})
+  public static function IncreaseLevel() : Void;
 
-  public static function SetQualityLevel(index:Int, applyExpensiveChanges:Bool) : Void;
+  @:overload(function(index:Int, applyExpensiveChanges:Bool) : Void {})
+  public static function SetQualityLevel(index:Int) : Void;
 }
 

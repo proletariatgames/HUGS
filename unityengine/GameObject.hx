@@ -86,4 +86,3 @@ extern class GameObject extends Object {
 
   public function StopAnimation() : Void;
 }
-

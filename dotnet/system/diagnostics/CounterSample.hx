@@ -12,6 +12,7 @@ extern class CounterSample extends dotnet.system.ValueType {
   @:skipReflection public var TimeStamp(default,never) : dotnet.system.Int64;
   @:skipReflection public var TimeStamp100nSec(default,never) : dotnet.system.Int64;
 
+  @:overload(function(counterSample:CounterSample, nextCounterSample:CounterSample) : Float {})
   public static function Calculate(counterSample:CounterSample) : Float;
 
   @:overload(function(rawValue:dotnet.system.Int64, baseValue:dotnet.system.Int64, counterFrequency:dotnet.system.Int64, systemFrequency:dotnet.system.Int64, timeStamp:dotnet.system.Int64, timeStamp100nSec:dotnet.system.Int64, counterType:PerformanceCounterType, counterTimeStamp:dotnet.system.Int64) : Void {})

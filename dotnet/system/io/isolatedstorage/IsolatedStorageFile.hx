@@ -25,7 +25,11 @@ extern class IsolatedStorageFile extends IsolatedStorage  implements dotnet.syst
 
   public static function GetMachineStoreForDomain() : IsolatedStorageFile;
 
-  public static function GetStore(scope:IsolatedStorageScope, domainEvidence:dotnet.system.security.policy.Evidence, domainEvidenceType:cs.system.Type, assemblyEvidence:dotnet.system.security.policy.Evidence, assemblyEvidenceType:cs.system.Type) : IsolatedStorageFile;
+  @:overload(function(scope:IsolatedStorageScope, domainEvidence:dotnet.system.security.policy.Evidence, domainEvidenceType:cs.system.Type, assemblyEvidence:dotnet.system.security.policy.Evidence, assemblyEvidenceType:cs.system.Type) : IsolatedStorageFile {})
+  @:overload(function(scope:IsolatedStorageScope, domainIdentity:Dynamic, assemblyIdentity:Dynamic) : IsolatedStorageFile {})
+  @:overload(function(scope:IsolatedStorageScope, domainEvidenceType:cs.system.Type, assemblyEvidenceType:cs.system.Type) : IsolatedStorageFile {})
+  @:overload(function(scope:IsolatedStorageScope, applicationIdentity:Dynamic) : IsolatedStorageFile {})
+  public static function GetStore(scope:IsolatedStorageScope, applicationEvidenceType:cs.system.Type) : IsolatedStorageFile;
 
   public static function GetUserStoreForApplication() : IsolatedStorageFile;
 

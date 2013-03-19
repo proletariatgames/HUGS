@@ -3,13 +3,16 @@ package dotnet.system.io;
 @:native("System.IO.Directory") @:final
 extern class Directory extends dotnet.system.Object {
 
+  @:overload(function(path:String, directorySecurity:dotnet.system.security.accesscontrol.DirectorySecurity) : DirectoryInfo {})
   public static function CreateDirectory(path:String) : DirectoryInfo;
 
+  @:overload(function(path:String, recursive:Bool) : Void {})
   public static function Delete(path:String) : Void;
 
   public static function Exists(path:String) : Bool;
 
-  public static function GetAccessControl(path:String, includeSections:dotnet.system.security.accesscontrol.AccessControlSections) : dotnet.system.security.accesscontrol.DirectorySecurity;
+  @:overload(function(path:String, includeSections:dotnet.system.security.accesscontrol.AccessControlSections) : dotnet.system.security.accesscontrol.DirectorySecurity {})
+  public static function GetAccessControl(path:String) : dotnet.system.security.accesscontrol.DirectorySecurity;
 
   public static function GetCreationTime(path:String) : dotnet.system.DateTime;
 
@@ -17,12 +20,17 @@ extern class Directory extends dotnet.system.Object {
 
   public static function GetCurrentDirectory() : String;
 
+  @:overload(function(path:String, searchPattern:String, searchOption:SearchOption) : cs.NativeArray<String> {})
+  @:overload(function(path:String, searchPattern:String) : cs.NativeArray<String> {})
   public static function GetDirectories(path:String) : cs.NativeArray<String>;
 
   public static function GetDirectoryRoot(path:String) : String;
 
+  @:overload(function(path:String, searchPattern:String, searchOption:SearchOption) : cs.NativeArray<String> {})
+  @:overload(function(path:String, searchPattern:String) : cs.NativeArray<String> {})
   public static function GetFiles(path:String) : cs.NativeArray<String>;
 
+  @:overload(function(path:String, searchPattern:String) : cs.NativeArray<String> {})
   public static function GetFileSystemEntries(path:String) : cs.NativeArray<String>;
 
   public static function GetLastAccessTime(path:String) : dotnet.system.DateTime;

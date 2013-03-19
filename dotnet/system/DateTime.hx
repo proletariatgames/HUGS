@@ -81,8 +81,12 @@ extern class DateTime extends ValueType  implements IComparable implements IConv
 
   public static function IsLeapYear(year:Int) : Bool;
 
+  @:overload(function(s:String, provider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTime {})
+  @:overload(function(s:String, provider:IFormatProvider) : DateTime {})
   public static function Parse(s:String) : DateTime;
 
+  @:overload(function(s:String, formats:cs.NativeArray<String>, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles) : DateTime {})
+  @:overload(function(s:String, format:String, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles) : DateTime {})
   public static function ParseExact(s:String, format:String, provider:IFormatProvider) : DateTime;
 
   public static function SpecifyKind(value:DateTime, kind:DateTimeKind) : DateTime;
@@ -140,8 +144,10 @@ extern class DateTime extends ValueType  implements IComparable implements IConv
 
   public function ToUniversalTime() : DateTime;
 
+  @:overload(function(s:String, provider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTime) : Bool {})
   public static function TryParse(s:String, result:DateTime) : Bool;
 
+  @:overload(function(s:String, formats:cs.NativeArray<String>, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles, result:DateTime) : Bool {})
   public static function TryParseExact(s:String, format:String, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles, result:DateTime) : Bool;
 }
 

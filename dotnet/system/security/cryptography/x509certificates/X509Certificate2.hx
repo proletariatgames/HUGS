@@ -32,7 +32,8 @@ extern class X509Certificate2 extends X509Certificate {
   @:overload(function(certificate:X509Certificate) : Void {})
   public function new() : Void;
 
-  public static function GetCertContentType(rawData:cs.NativeArray<dotnet.system.Byte>) : X509ContentType;
+  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>) : X509ContentType {})
+  public static function GetCertContentType(fileName:String) : X509ContentType;
 
   public function GetNameInfo(nameType:X509NameType, forIssuer:Bool) : String;
 

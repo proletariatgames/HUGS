@@ -12,6 +12,12 @@ extern class TouchScreenKeyboard {
 
   public function new(text:String, keyboardType:TouchScreenKeyboardType, autocorrection:Bool, multiline:Bool, secure:Bool, alert:Bool, textPlaceholder:String) : Void;
 
-  public static function Open(text:String, keyboardType:TouchScreenKeyboardType, autocorrection:Bool, multiline:Bool, secure:Bool, alert:Bool) : TouchScreenKeyboard;
+  @:overload(function(text:String, keyboardType:TouchScreenKeyboardType, autocorrection:Bool, multiline:Bool, secure:Bool, alert:Bool, textPlaceholder:String) : TouchScreenKeyboard {})
+  @:overload(function(text:String, keyboardType:TouchScreenKeyboardType, autocorrection:Bool, multiline:Bool, secure:Bool, alert:Bool) : TouchScreenKeyboard {})
+  @:overload(function(text:String, keyboardType:TouchScreenKeyboardType, autocorrection:Bool, multiline:Bool, secure:Bool) : TouchScreenKeyboard {})
+  @:overload(function(text:String, keyboardType:TouchScreenKeyboardType, autocorrection:Bool, multiline:Bool) : TouchScreenKeyboard {})
+  @:overload(function(text:String, keyboardType:TouchScreenKeyboardType, autocorrection:Bool) : TouchScreenKeyboard {})
+  @:overload(function(text:String, keyboardType:TouchScreenKeyboardType) : TouchScreenKeyboard {})
+  public static function Open(text:String) : TouchScreenKeyboard;
 }
 

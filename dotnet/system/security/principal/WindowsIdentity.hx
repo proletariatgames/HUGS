@@ -22,6 +22,8 @@ extern class WindowsIdentity extends dotnet.system.Object  implements dotnet.sys
 
   public static function GetAnonymous() : WindowsIdentity;
 
+  @:overload(function(ifImpersonating:Bool) : WindowsIdentity {})
+  @:overload(function(desiredAccess:TokenAccessLevels) : WindowsIdentity {})
   public static function GetCurrent() : WindowsIdentity;
 
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;

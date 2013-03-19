@@ -40,6 +40,7 @@ extern class AudioSource extends Behaviour {
   @:overload(function(delay:dotnet.system.UInt64) : Void {})
   public function Play() : Void;
 
+  @:overload(function(clip:AudioClip, position:Vector3, volume:Float) : Void {})
   public static function PlayClipAtPoint(clip:AudioClip, position:Vector3) : Void;
 
   public function PlayDelayed(delay:Float) : Void;

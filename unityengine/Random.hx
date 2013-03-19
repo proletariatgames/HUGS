@@ -12,8 +12,10 @@ extern class Random {
 
   public function new() : Void;
 
+  @:overload(function(min:Int, max:Int) : Int {})
   public static function RandomRange(min:Float, max:Float) : Float;
 
+  @:overload(function(min:Int, max:Int) : Int {})
   public static function Range(min:Float, max:Float) : Float;
 }
 

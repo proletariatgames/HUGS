@@ -24,7 +24,9 @@ extern class XmlSchema extends XmlSchemaObject {
 
   public function new() : Void;
 
-  public static function Read(reader:dotnet.system.io.TextReader, validationEventHandler:ValidationEventHandler) : XmlSchema;
+  @:overload(function(stream:dotnet.system.io.Stream, validationEventHandler:ValidationEventHandler) : XmlSchema {})
+  @:overload(function(reader:dotnet.system.io.TextReader, validationEventHandler:ValidationEventHandler) : XmlSchema {})
+  public static function Read(rdr:dotnet.system.xml.XmlReader, validationEventHandler:ValidationEventHandler) : XmlSchema;
 
   @:overload(function(writer:dotnet.system.xml.XmlWriter, namespaceManager:dotnet.system.xml.XmlNamespaceManager) : Void {})
   @:overload(function(writer:dotnet.system.io.TextWriter, namespaceManager:dotnet.system.xml.XmlNamespaceManager) : Void {})

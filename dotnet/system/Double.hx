@@ -22,6 +22,9 @@ extern class Double extends ValueType  implements IComparable implements IConver
 
   public static function IsPositiveInfinity(d:Float) : Bool;
 
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Float {})
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Float {})
+  @:overload(function(s:String, provider:IFormatProvider) : Float {})
   public static function Parse(s:String) : Float;
 
   function ToBoolean(provider:IFormatProvider) : Bool;
@@ -54,6 +57,7 @@ extern class Double extends ValueType  implements IComparable implements IConver
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
-  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Float) : Bool;
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Float) : Bool {})
+  public static function TryParse(s:String, result:Float) : Bool;
 }
 

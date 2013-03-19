@@ -63,8 +63,12 @@ extern class DateTimeOffset extends ValueType  implements IComparable implements
 
   function OnDeserialization(sender:Dynamic) : Void;
 
+  @:overload(function(input:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTimeOffset {})
+  @:overload(function(input:String, formatProvider:IFormatProvider) : DateTimeOffset {})
   public static function Parse(input:String) : DateTimeOffset;
 
+  @:overload(function(input:String, formats:cs.NativeArray<String>, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTimeOffset {})
+  @:overload(function(input:String, format:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTimeOffset {})
   public static function ParseExact(input:String, format:String, formatProvider:IFormatProvider) : DateTimeOffset;
 
   @:overload(function(value:TimeSpan) : DateTimeOffset {})
@@ -78,8 +82,10 @@ extern class DateTimeOffset extends ValueType  implements IComparable implements
 
   public function ToUniversalTime() : DateTimeOffset;
 
+  @:overload(function(input:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool {})
   public static function TryParse(input:String, result:DateTimeOffset) : Bool;
 
+  @:overload(function(input:String, formats:cs.NativeArray<String>, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool {})
   public static function TryParseExact(input:String, format:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool;
 }
 

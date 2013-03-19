@@ -4,6 +4,7 @@ package dotnet.system.security.cryptography;
 extern class HMAC extends KeyedHashAlgorithm {
   public var HashName : String;
 
+  @:overload(function(algorithmName:String) : HMAC {})
   public static function Create() : HMAC;
 }
 

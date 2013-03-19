@@ -21,6 +21,7 @@ extern class MethodBase extends MemberInfo  implements dotnet.system.runtime.int
 
   public static function GetCurrentMethod() : MethodBase;
 
+  @:overload(function(handle:dotnet.system.RuntimeMethodHandle, declaringType:dotnet.system.RuntimeTypeHandle) : MethodBase {})
   public static function GetMethodFromHandle(handle:dotnet.system.RuntimeMethodHandle) : MethodBase;
 
   public function GetMethodImplementationFlags() : MethodImplAttributes;

@@ -7,6 +7,7 @@ extern class GCHandle extends dotnet.system.ValueType {
 
   public function AddrOfPinnedObject() : dotnet.system.IntPtr;
 
+  @:overload(function(value:Dynamic, type:GCHandleType) : GCHandle {})
   public static function Alloc(value:Dynamic) : GCHandle;
 
   public function Free() : Void;

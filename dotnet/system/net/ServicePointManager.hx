@@ -16,6 +16,8 @@ extern class ServicePointManager extends dotnet.system.Object {
   public static var Expect100Continue : Bool;
   public static var UseNagleAlgorithm : Bool;
 
+  @:overload(function(uriString:String, proxy:IWebProxy) : ServicePoint {})
+  @:overload(function(address:dotnet.system.Uri, proxy:IWebProxy) : ServicePoint {})
   public static function FindServicePoint(address:dotnet.system.Uri) : ServicePoint;
 }
 

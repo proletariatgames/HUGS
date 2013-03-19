@@ -24,6 +24,8 @@ extern class CultureInfo extends dotnet.system.Object  implements dotnet.system.
 
   public function GetConsoleFallbackUICulture() : CultureInfo;
 
+  @:overload(function(name:String, altName:String) : CultureInfo {})
+  @:overload(function(name:String) : CultureInfo {})
   public static function GetCultureInfo(culture:Int) : CultureInfo;
 
   public static function GetCultureInfoByIetfLanguageTag(name:String) : CultureInfo;

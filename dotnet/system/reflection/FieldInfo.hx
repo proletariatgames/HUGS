@@ -18,6 +18,7 @@ extern class FieldInfo extends MemberInfo  implements dotnet.system.runtime.inte
   @:skipReflection public var IsSpecialName(default,never) : Bool;
   @:skipReflection public var IsNotSerialized(default,never) : Bool;
 
+  @:overload(function(handle:dotnet.system.RuntimeFieldHandle, declaringType:dotnet.system.RuntimeTypeHandle) : FieldInfo {})
   public static function GetFieldFromHandle(handle:dotnet.system.RuntimeFieldHandle) : FieldInfo;
 
   public function GetValue(obj:Dynamic) : Dynamic;

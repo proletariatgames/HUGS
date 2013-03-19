@@ -8,8 +8,10 @@ extern class StringInfo extends dotnet.system.Object {
   @:overload(function(value:String) : Void {})
   public function new() : Void;
 
+  @:overload(function(str:String, index:Int) : String {})
   public static function GetNextTextElement(str:String) : String;
 
+  @:overload(function(str:String, index:Int) : TextElementEnumerator {})
   public static function GetTextElementEnumerator(str:String) : TextElementEnumerator;
 
   public static function ParseCombiningCharacters(str:String) : cs.NativeArray<Int>;

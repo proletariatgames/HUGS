@@ -10,6 +10,9 @@ extern class UInt64 extends ValueType  implements IComparable implements IConver
 
   public function GetTypeCode() : TypeCode;
 
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : UInt64 {})
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : UInt64 {})
+  @:overload(function(s:String, provider:IFormatProvider) : UInt64 {})
   public static function Parse(s:String) : UInt64;
 
   function ToBoolean(provider:IFormatProvider) : Bool;
@@ -42,6 +45,7 @@ extern class UInt64 extends ValueType  implements IComparable implements IConver
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:UInt64) : Bool {})
   public static function TryParse(s:String, result:UInt64) : Bool;
 }
 

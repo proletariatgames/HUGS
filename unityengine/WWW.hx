@@ -27,6 +27,7 @@ extern class WWW {
 
   public function Dispose() : Void;
 
+  @:overload(function(s:String, e:dotnet.system.text.Encoding) : String {})
   public static function EscapeURL(s:String) : String;
 
   @:overload(function(threeD:Bool, stream:Bool, audioType:AudioType) : AudioClip {})
@@ -39,12 +40,14 @@ extern class WWW {
 
   public function InitWWW(url:String, postData:cs.NativeArray<dotnet.system.Byte>, iHeaders:cs.NativeArray<String>) : Void;
 
+  @:overload(function(url:String, version:Int, crc:UInt) : WWW {})
   public static function LoadFromCacheOrDownload(url:String, version:Int) : WWW;
 
   public function LoadImageIntoTexture(tex:Texture2D) : Void;
 
   public function LoadUnityWeb() : Void;
 
+  @:overload(function(s:String, e:dotnet.system.text.Encoding) : String {})
   public static function UnEscapeURL(s:String) : String;
 }
 

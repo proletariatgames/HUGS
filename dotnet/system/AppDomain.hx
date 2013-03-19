@@ -35,6 +35,11 @@ extern class AppDomain extends MarshalByRefObject  implements _AppDomain impleme
   @:overload(function(assemblyFile:String, typeName:String, hashValue:cs.NativeArray<Byte>, hashAlgorithm:dotnet.system.configuration.assemblies.AssemblyHashAlgorithm) : dotnet.system.runtime.remoting.ObjectHandle {})
   public function CreateComInstanceFrom(assemblyName:String, typeName:String) : dotnet.system.runtime.remoting.ObjectHandle;
 
+  @:overload(function(friendlyName:String, securityInfo:dotnet.system.security.policy.Evidence, appBasePath:String, appRelativeSearchPath:String, shadowCopyFiles:Bool, adInit:AppDomainInitializer, adInitArgs:cs.NativeArray<String>) : AppDomain {})
+  @:overload(function(friendlyName:String, securityInfo:dotnet.system.security.policy.Evidence, info:AppDomainSetup, grantSet:dotnet.system.security.PermissionSet, fullTrustAssemblies:cs.NativeArray<dotnet.system.security.policy.StrongName>) : AppDomain {})
+  @:overload(function(friendlyName:String, securityInfo:dotnet.system.security.policy.Evidence, appBasePath:String, appRelativeSearchPath:String, shadowCopyFiles:Bool) : AppDomain {})
+  @:overload(function(friendlyName:String, securityInfo:dotnet.system.security.policy.Evidence, info:AppDomainSetup) : AppDomain {})
+  @:overload(function(friendlyName:String, securityInfo:dotnet.system.security.policy.Evidence) : AppDomain {})
   public static function CreateDomain(friendlyName:String) : AppDomain;
 
   @:overload(function(assemblyName:String, typeName:String, ignoreCase:Bool, bindingAttr:dotnet.system.reflection.BindingFlags, binder:dotnet.system.reflection.Binder, args:cs.NativeArray<Object>, culture:dotnet.system.globalization.CultureInfo, activationAttributes:cs.NativeArray<Object>, securityAttributes:dotnet.system.security.policy.Evidence) : dotnet.system.runtime.remoting.ObjectHandle {})

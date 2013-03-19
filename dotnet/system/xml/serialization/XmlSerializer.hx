@@ -23,12 +23,16 @@ extern class XmlSerializer extends dotnet.system.Object {
   @:overload(function(textReader:dotnet.system.io.TextReader) : Dynamic {})
   public function Deserialize(stream:dotnet.system.io.Stream) : Dynamic;
 
+  @:overload(function(mappings:cs.NativeArray<XmlMapping>, type:cs.system.Type) : cs.NativeArray<XmlSerializer> {})
+  @:overload(function(mappings:cs.NativeArray<XmlMapping>, evidence:dotnet.system.security.policy.Evidence) : cs.NativeArray<XmlSerializer> {})
   public static function FromMappings(mappings:cs.NativeArray<XmlMapping>) : cs.NativeArray<XmlSerializer>;
 
   public static function FromTypes(mappings:cs.NativeArray<cs.system.Type>) : cs.NativeArray<XmlSerializer>;
 
+  @:overload(function(types:cs.NativeArray<cs.system.Type>, mappings:cs.NativeArray<XmlMapping>, parameters:dotnet.system.codedom.compiler.CompilerParameters) : dotnet.system.reflection.Assembly {})
   public static function GenerateSerializer(types:cs.NativeArray<cs.system.Type>, mappings:cs.NativeArray<XmlMapping>) : dotnet.system.reflection.Assembly;
 
+  @:overload(function(type:cs.system.Type, defaultNamespace:String) : String {})
   public static function GetXmlSerializerAssemblyName(type:cs.system.Type) : String;
 
   @:overload(function(xmlWriter:dotnet.system.xml.XmlWriter, o:Dynamic, namespaces:XmlSerializerNamespaces, encodingStyle:String, id:String) : Void {})

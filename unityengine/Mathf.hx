@@ -9,6 +9,7 @@ extern class Mathf {
   public static var Rad2Deg : Float;
   public static var Epsilon : Float;
 
+  @:overload(function(value:Int) : Int {})
   public static function Abs(f:Float) : Float;
 
   public static function Acos(f:Float) : Float;
@@ -25,6 +26,7 @@ extern class Mathf {
 
   public static function CeilToInt(f:Float) : Int;
 
+  @:overload(function(value:Int, min:Int, max:Int) : Int {})
   public static function Clamp(value:Float, min:Float, max:Float) : Float;
 
   public static function Clamp01(value:Float) : Float;
@@ -55,13 +57,20 @@ extern class Mathf {
 
   public static function LinearToGammaSpace(value:Float) : Float;
 
-  public static function Log(f:Float, p:Float) : Float;
+  @:overload(function(f:Float, p:Float) : Float {})
+  public static function Log(f:Float) : Float;
 
   public static function Log10(f:Float) : Float;
 
-  public static function Max(a:Float, b:Float) : Float;
+  @:overload(function(a:Int, b:Int) : Int {})
+  @:overload(function(a:Float, b:Float) : Float {})
+  @:overload(function(values:cs.NativeArray<Int>) : Int {})
+  public static function Max(values:cs.NativeArray<dotnet.system.Single>) : Float;
 
-  public static function Min(a:Float, b:Float) : Float;
+  @:overload(function(a:Int, b:Int) : Int {})
+  @:overload(function(a:Float, b:Float) : Float {})
+  @:overload(function(values:cs.NativeArray<Int>) : Int {})
+  public static function Min(values:cs.NativeArray<dotnet.system.Single>) : Float;
 
   public static function MoveTowards(current:Float, target:Float, maxDelta:Float) : Float;
 
@@ -85,9 +94,13 @@ extern class Mathf {
 
   public static function Sin(f:Float) : Float;
 
-  public static function SmoothDamp(current:Float, target:Float, currentVelocity:Float, smoothTime:Float, maxSpeed:Float) : Float;
+  @:overload(function(current:Float, target:Float, currentVelocity:Float, smoothTime:Float, maxSpeed:Float, deltaTime:Float) : Float {})
+  @:overload(function(current:Float, target:Float, currentVelocity:Float, smoothTime:Float, maxSpeed:Float) : Float {})
+  public static function SmoothDamp(current:Float, target:Float, currentVelocity:Float, smoothTime:Float) : Float;
 
-  public static function SmoothDampAngle(current:Float, target:Float, currentVelocity:Float, smoothTime:Float, maxSpeed:Float) : Float;
+  @:overload(function(current:Float, target:Float, currentVelocity:Float, smoothTime:Float, maxSpeed:Float, deltaTime:Float) : Float {})
+  @:overload(function(current:Float, target:Float, currentVelocity:Float, smoothTime:Float, maxSpeed:Float) : Float {})
+  public static function SmoothDampAngle(current:Float, target:Float, currentVelocity:Float, smoothTime:Float) : Float;
 
   public static function SmoothStep(from:Float, to:Float, t:Float) : Float;
 

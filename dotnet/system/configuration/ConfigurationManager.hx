@@ -7,7 +7,8 @@ extern class ConfigurationManager extends dotnet.system.Object {
 
   public static function GetSection(sectionName:String) : Dynamic;
 
-  public static function OpenExeConfiguration(userLevel:ConfigurationUserLevel) : Configuration;
+  @:overload(function(userLevel:ConfigurationUserLevel) : Configuration {})
+  public static function OpenExeConfiguration(exePath:String) : Configuration;
 
   public static function OpenMachineConfiguration() : Configuration;
 

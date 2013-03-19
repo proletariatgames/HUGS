@@ -5,6 +5,9 @@ extern class Math extends Object {
   public static var E : Float;
   public static var PI : Float;
 
+  @:overload(function(value:Int64) : Int64 {})
+  @:overload(function(value:Int) : Int {})
+  @:overload(function(value:Float) : Float {})
   public static function Abs(value:Decimal) : Decimal;
 
   public static function Acos(d:Float) : Float;
@@ -17,32 +20,56 @@ extern class Math extends Object {
 
   public static function BigMul(a:Int, b:Int) : Int64;
 
-  public static function Ceiling(d:Decimal) : Decimal;
+  @:overload(function(d:Decimal) : Decimal {})
+  public static function Ceiling(a:Float) : Float;
 
   public static function Cos(d:Float) : Float;
 
   public static function Cosh(value:Float) : Float;
 
+  @:overload(function(a:Int64, b:Int64, result:Int64) : Int64 {})
   public static function DivRem(a:Int, b:Int, result:Int) : Int;
 
   public static function Exp(d:Float) : Float;
 
-  public static function Floor(d:Float) : Float;
+  @:overload(function(d:Float) : Float {})
+  public static function Floor(d:Decimal) : Decimal;
 
   public static function IEEERemainder(x:Float, y:Float) : Float;
 
-  public static function Log(a:Float, newBase:Float) : Float;
+  @:overload(function(a:Float, newBase:Float) : Float {})
+  public static function Log(d:Float) : Float;
 
   public static function Log10(d:Float) : Float;
 
-  public static function Max(val1:UInt, val2:UInt) : UInt;
+  @:overload(function(val1:UInt64, val2:UInt64) : UInt64 {})
+  @:overload(function(val1:UInt, val2:UInt) : UInt {})
+  @:overload(function(val1:Int64, val2:Int64) : Int64 {})
+  @:overload(function(val1:Int, val2:Int) : Int {})
+  @:overload(function(val1:Float, val2:Float) : Float {})
+  public static function Max(val1:Decimal, val2:Decimal) : Decimal;
 
-  public static function Min(val1:UInt, val2:UInt) : UInt;
+  @:overload(function(val1:UInt64, val2:UInt64) : UInt64 {})
+  @:overload(function(val1:UInt, val2:UInt) : UInt {})
+  @:overload(function(val1:Int64, val2:Int64) : Int64 {})
+  @:overload(function(val1:Int, val2:Int) : Int {})
+  @:overload(function(val1:Float, val2:Float) : Float {})
+  public static function Min(val1:Decimal, val2:Decimal) : Decimal;
 
   public static function Pow(x:Float, y:Float) : Float;
 
-  public static function Round(d:Decimal) : Decimal;
+  @:overload(function(value:Float, digits:Int, mode:MidpointRounding) : Float {})
+  @:overload(function(d:Decimal, decimals:Int, mode:MidpointRounding) : Decimal {})
+  @:overload(function(value:Float, mode:MidpointRounding) : Float {})
+  @:overload(function(value:Float, digits:Int) : Float {})
+  @:overload(function(d:Decimal, mode:MidpointRounding) : Decimal {})
+  @:overload(function(d:Decimal, decimals:Int) : Decimal {})
+  @:overload(function(d:Decimal) : Decimal {})
+  public static function Round(a:Float) : Float;
 
+  @:overload(function(value:Int64) : Int {})
+  @:overload(function(value:Int) : Int {})
+  @:overload(function(value:Float) : Int {})
   public static function Sign(value:Decimal) : Int;
 
   public static function Sin(a:Float) : Float;
@@ -55,6 +82,7 @@ extern class Math extends Object {
 
   public static function Tanh(value:Float) : Float;
 
-  public static function Truncate(d:Float) : Float;
+  @:overload(function(d:Float) : Float {})
+  public static function Truncate(d:Decimal) : Decimal;
 }
 

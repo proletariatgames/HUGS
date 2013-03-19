@@ -7,7 +7,8 @@ extern class RemotingConfiguration extends dotnet.system.Object {
   public static var CustomErrorsMode : CustomErrorsModes;
   @:skipReflection public static var ProcessId(default,never) : String;
 
-  public static function Configure(filename:String, ensureSecurity:Bool) : Void;
+  @:overload(function(filename:String, ensureSecurity:Bool) : Void {})
+  public static function Configure(filename:String) : Void;
 
   public static function CustomErrorsEnabled(isLocalRequest:Bool) : Bool;
 
@@ -21,16 +22,22 @@ extern class RemotingConfiguration extends dotnet.system.Object {
 
   public static function IsActivationAllowed(svrType:cs.system.Type) : Bool;
 
+  @:overload(function(typeName:String, assemblyName:String) : ActivatedClientTypeEntry {})
   public static function IsRemotelyActivatedClientType(svrType:cs.system.Type) : ActivatedClientTypeEntry;
 
+  @:overload(function(typeName:String, assemblyName:String) : WellKnownClientTypeEntry {})
   public static function IsWellKnownClientType(svrType:cs.system.Type) : WellKnownClientTypeEntry;
 
+  @:overload(function(type:cs.system.Type, appUrl:String) : Void {})
   public static function RegisterActivatedClientType(entry:ActivatedClientTypeEntry) : Void;
 
+  @:overload(function(type:cs.system.Type) : Void {})
   public static function RegisterActivatedServiceType(entry:ActivatedServiceTypeEntry) : Void;
 
-  public static function RegisterWellKnownClientType(type:cs.system.Type, objectUrl:String) : Void;
+  @:overload(function(type:cs.system.Type, objectUrl:String) : Void {})
+  public static function RegisterWellKnownClientType(entry:WellKnownClientTypeEntry) : Void;
 
-  public static function RegisterWellKnownServiceType(type:cs.system.Type, objectUri:String, mode:WellKnownObjectMode) : Void;
+  @:overload(function(type:cs.system.Type, objectUri:String, mode:WellKnownObjectMode) : Void {})
+  public static function RegisterWellKnownServiceType(entry:WellKnownServiceTypeEntry) : Void;
 }
 

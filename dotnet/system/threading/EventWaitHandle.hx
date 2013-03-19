@@ -10,6 +10,7 @@ extern class EventWaitHandle extends WaitHandle {
 
   public function GetAccessControl() : dotnet.system.security.accesscontrol.EventWaitHandleSecurity;
 
+  @:overload(function(name:String, rights:dotnet.system.security.accesscontrol.EventWaitHandleRights) : EventWaitHandle {})
   public static function OpenExisting(name:String) : EventWaitHandle;
 
   public function Reset() : Bool;

@@ -5,6 +5,7 @@ extern class SymmetricAlgorithm extends dotnet.system.Object  implements dotnet.
 
   public function Clear() : Void;
 
+  @:overload(function(algName:String) : SymmetricAlgorithm {})
   public static function Create() : SymmetricAlgorithm;
 
 

@@ -3,6 +3,7 @@ package dotnet.system.security.cryptography;
 @:native("System.Security.Cryptography.CryptoConfig")
 extern class CryptoConfig extends dotnet.system.Object {
 
+  @:overload(function(name:String, args:cs.NativeArray<dotnet.system.Object>) : Dynamic {})
   public static function CreateFromName(name:String) : Dynamic;
 
   public function new() : Void;

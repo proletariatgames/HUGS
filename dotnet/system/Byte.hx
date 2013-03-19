@@ -10,7 +10,10 @@ extern class Byte extends ValueType  implements IComparable implements IConverti
 
   public function GetTypeCode() : TypeCode;
 
-  public static function Parse(s:String, provider:IFormatProvider) : UInt;
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : UInt {})
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : UInt {})
+  @:overload(function(s:String, provider:IFormatProvider) : UInt {})
+  public static function Parse(s:String) : UInt;
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
@@ -42,6 +45,7 @@ extern class Byte extends ValueType  implements IComparable implements IConverti
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:UInt) : Bool {})
   public static function TryParse(s:String, result:UInt) : Bool;
 }
 

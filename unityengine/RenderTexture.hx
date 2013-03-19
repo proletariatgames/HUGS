@@ -24,7 +24,10 @@ extern class RenderTexture extends Texture {
 
   public function DiscardContents() : Void;
 
-  public static function GetTemporary(width:Int, height:Int, depthBuffer:Int, format:RenderTextureFormat, readWrite:RenderTextureReadWrite) : RenderTexture;
+  @:overload(function(width:Int, height:Int, depthBuffer:Int, format:RenderTextureFormat, readWrite:RenderTextureReadWrite) : RenderTexture {})
+  @:overload(function(width:Int, height:Int, depthBuffer:Int, format:RenderTextureFormat) : RenderTexture {})
+  @:overload(function(width:Int, height:Int, depthBuffer:Int) : RenderTexture {})
+  public static function GetTemporary(width:Int, height:Int) : RenderTexture;
 
   public function GetTexelOffset() : Vector2;
 

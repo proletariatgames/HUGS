@@ -22,11 +22,13 @@ extern class IPAddress extends dotnet.system.Object {
 
   public function GetAddressBytes() : cs.NativeArray<dotnet.system.Byte>;
 
-  public static function HostToNetworkOrder(host:Int) : Int;
+  @:overload(function(host:Int) : Int {})
+  public static function HostToNetworkOrder(host:dotnet.system.Int64) : dotnet.system.Int64;
 
   public static function IsLoopback(addr:IPAddress) : Bool;
 
-  public static function NetworkToHostOrder(network:Int) : Int;
+  @:overload(function(network:Int) : Int {})
+  public static function NetworkToHostOrder(network:dotnet.system.Int64) : dotnet.system.Int64;
 
   public static function Parse(ipString:String) : IPAddress;
 

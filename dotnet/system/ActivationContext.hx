@@ -11,6 +11,7 @@ extern class ActivationContext extends Object  implements IDisposable implements
   @:skipReflection public var Form(default,never) : ActivationContext_ContextForm;
   @:skipReflection public var Identity(default,never) : ApplicationIdentity;
 
+  @:overload(function(identity:ApplicationIdentity, manifestPaths:cs.NativeArray<String>) : ActivationContext {})
   public static function CreatePartialActivationContext(identity:ApplicationIdentity) : ActivationContext;
 
   public function Dispose() : Void;

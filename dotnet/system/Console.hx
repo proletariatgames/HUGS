@@ -28,20 +28,26 @@ extern class Console extends Object {
   public static var WindowTop : Int;
   public static var WindowWidth : Int;
 
+  @:overload(function(frequency:Int, duration:Int) : Void {})
   public static function Beep() : Void;
 
   public static function Clear() : Void;
 
+  @:overload(function(sourceLeft:Int, sourceTop:Int, sourceWidth:Int, sourceHeight:Int, targetLeft:Int, targetTop:Int, sourceChar:Char, sourceForeColor:ConsoleColor, sourceBackColor:ConsoleColor) : Void {})
   public static function MoveBufferArea(sourceLeft:Int, sourceTop:Int, sourceWidth:Int, sourceHeight:Int, targetLeft:Int, targetTop:Int) : Void;
 
+  @:overload(function(bufferSize:Int) : dotnet.system.io.Stream {})
   public static function OpenStandardError() : dotnet.system.io.Stream;
 
+  @:overload(function(bufferSize:Int) : dotnet.system.io.Stream {})
   public static function OpenStandardInput() : dotnet.system.io.Stream;
 
+  @:overload(function(bufferSize:Int) : dotnet.system.io.Stream {})
   public static function OpenStandardOutput() : dotnet.system.io.Stream;
 
   public static function Read() : Int;
 
+  @:overload(function(intercept:Bool) : ConsoleKeyInfo {})
   public static function ReadKey() : ConsoleKeyInfo;
 
   public static function ReadLine() : String;
@@ -62,8 +68,41 @@ extern class Console extends Object {
 
   public static function SetWindowSize(width:Int, height:Int) : Void;
 
-  public static function Write(value:Bool) : Void;
+  @:overload(function(format:String, arg0:Dynamic, arg1:Dynamic, arg2:Dynamic, arg3:Dynamic) : Void {})
+  @:overload(function(format:String, arg0:Dynamic, arg1:Dynamic, arg2:Dynamic) : Void {})
+  @:overload(function(format:String, arg0:Dynamic, arg1:Dynamic) : Void {})
+  @:overload(function(buffer:cs.NativeArray<Char>, index:Int, count:Int) : Void {})
+  @:overload(function(format:String, arg0:Dynamic) : Void {})
+  @:overload(function(format:String, arg:cs.NativeArray<Object>) : Void {})
+  @:overload(function(value:UInt64) : Void {})
+  @:overload(function(value:UInt) : Void {})
+  @:overload(function(value:String) : Void {})
+  @:overload(function(value:Int64) : Void {})
+  @:overload(function(value:Int) : Void {})
+  @:overload(function(value:Float) : Void {})
+  @:overload(function(value:Dynamic) : Void {})
+  @:overload(function(value:Decimal) : Void {})
+  @:overload(function(value:Char) : Void {})
+  @:overload(function(value:Bool) : Void {})
+  public static function Write(buffer:cs.NativeArray<Char>) : Void;
 
+  @:overload(function(format:String, arg0:Dynamic, arg1:Dynamic, arg2:Dynamic, arg3:Dynamic) : Void {})
+  @:overload(function(format:String, arg0:Dynamic, arg1:Dynamic, arg2:Dynamic) : Void {})
+  @:overload(function(format:String, arg0:Dynamic, arg1:Dynamic) : Void {})
+  @:overload(function(buffer:cs.NativeArray<Char>, index:Int, count:Int) : Void {})
+  @:overload(function(format:String, arg0:Dynamic) : Void {})
+  @:overload(function(format:String, arg:cs.NativeArray<Object>) : Void {})
+  @:overload(function(value:UInt64) : Void {})
+  @:overload(function(value:UInt) : Void {})
+  @:overload(function(value:String) : Void {})
+  @:overload(function(value:Int64) : Void {})
+  @:overload(function(value:Int) : Void {})
+  @:overload(function(value:Float) : Void {})
+  @:overload(function(value:Dynamic) : Void {})
+  @:overload(function(value:Decimal) : Void {})
+  @:overload(function(value:Char) : Void {})
+  @:overload(function(value:Bool) : Void {})
+  @:overload(function(buffer:cs.NativeArray<Char>) : Void {})
   public static function WriteLine() : Void;
 }
 

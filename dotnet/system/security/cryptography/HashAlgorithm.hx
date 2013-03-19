@@ -13,6 +13,7 @@ extern class HashAlgorithm extends dotnet.system.Object  implements dotnet.syste
   @:overload(function(inputStream:dotnet.system.io.Stream) : cs.NativeArray<dotnet.system.Byte> {})
   public function ComputeHash(buffer:cs.NativeArray<dotnet.system.Byte>) : cs.NativeArray<dotnet.system.Byte>;
 
+  @:overload(function(hashName:String) : HashAlgorithm {})
   public static function Create() : HashAlgorithm;
 
 

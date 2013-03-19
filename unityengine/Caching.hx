@@ -12,6 +12,9 @@ extern class Caching {
   public static var enabled : Bool;
   @:skipReflection public static var ready(default,never) : Bool;
 
+  @:overload(function(name:String, domain:String, size:Int, expiration:Int, signature:String) : Bool {})
+  @:overload(function(name:String, domain:String, size:dotnet.system.Int64, expiration:Int, signature:String) : Bool {})
+  @:overload(function(name:String, domain:String, size:Int, signature:String) : Bool {})
   public static function Authorize(name:String, domain:String, size:dotnet.system.Int64, signature:String) : Bool;
 
   public static function CleanCache() : Bool;

@@ -20,6 +20,7 @@ extern class Screen {
 
   public function new() : Void;
 
-  public static function SetResolution(width:Int, height:Int, fullscreen:Bool, preferredRefreshRate:Int) : Void;
+  @:overload(function(width:Int, height:Int, fullscreen:Bool, preferredRefreshRate:Int) : Void {})
+  public static function SetResolution(width:Int, height:Int, fullscreen:Bool) : Void;
 }
 

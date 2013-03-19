@@ -78,7 +78,9 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
 
   public function MakeRelativeUri(uri:Uri) : Uri;
 
-  public static function TryCreate(uriString:String, uriKind:UriKind, result:Uri) : Bool;
+  @:overload(function(uriString:String, uriKind:UriKind, result:Uri) : Bool {})
+  @:overload(function(baseUri:Uri, relativeUri:Uri, result:Uri) : Bool {})
+  public static function TryCreate(baseUri:Uri, relativeUri:String, result:Uri) : Bool;
 
   public static function UnescapeDataString(stringToUnescape:String) : String;
 }

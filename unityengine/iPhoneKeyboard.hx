@@ -11,6 +11,12 @@ extern class iPhoneKeyboard {
 
   public function new(text:String, keyboardType:iPhoneKeyboardType, autocorrection:Bool, multiline:Bool, secure:Bool, alert:Bool, textPlaceholder:String) : Void;
 
-  public static function Open(text:String, keyboardType:iPhoneKeyboardType, autocorrection:Bool, multiline:Bool, secure:Bool, alert:Bool) : iPhoneKeyboard;
+  @:overload(function(text:String, keyboardType:iPhoneKeyboardType, autocorrection:Bool, multiline:Bool, secure:Bool, alert:Bool, textPlaceholder:String) : iPhoneKeyboard {})
+  @:overload(function(text:String, keyboardType:iPhoneKeyboardType, autocorrection:Bool, multiline:Bool, secure:Bool, alert:Bool) : iPhoneKeyboard {})
+  @:overload(function(text:String, keyboardType:iPhoneKeyboardType, autocorrection:Bool, multiline:Bool, secure:Bool) : iPhoneKeyboard {})
+  @:overload(function(text:String, keyboardType:iPhoneKeyboardType, autocorrection:Bool, multiline:Bool) : iPhoneKeyboard {})
+  @:overload(function(text:String, keyboardType:iPhoneKeyboardType, autocorrection:Bool) : iPhoneKeyboard {})
+  @:overload(function(text:String, keyboardType:iPhoneKeyboardType) : iPhoneKeyboard {})
+  public static function Open(text:String) : iPhoneKeyboard;
 }
 

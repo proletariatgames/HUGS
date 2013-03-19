@@ -32,6 +32,7 @@ extern class RuntimeHelpers extends dotnet.system.Object {
 
   public static function PrepareDelegate(d:dotnet.system.Delegate) : Void;
 
+  @:overload(function(method:dotnet.system.RuntimeMethodHandle, instantiation:cs.NativeArray<dotnet.system.RuntimeTypeHandle>) : Void {})
   public static function PrepareMethod(method:dotnet.system.RuntimeMethodHandle) : Void;
 
   public static function ProbeForSufficientStack() : Void;

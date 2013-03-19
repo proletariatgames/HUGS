@@ -4,6 +4,8 @@ package dotnet.system.net.mail;
 extern class LinkedResource extends AttachmentBase {
   public var ContentLink : dotnet.system.Uri;
 
+  @:overload(function(content:String, contentEncoding:dotnet.system.text.Encoding, mediaType:String) : LinkedResource {})
+  @:overload(function(content:String, contentType:dotnet.system.net.mime.ContentType) : LinkedResource {})
   public static function CreateLinkedResourceFromString(content:String) : LinkedResource;
 
   @:overload(function(fileName:String, mediaType:String) : Void {})

@@ -7,11 +7,14 @@ extern class Object {
 
   public function new() : Void;
 
-  public static function Destroy(obj:Object, t:Float) : Void;
+  @:overload(function(obj:Object, t:Float) : Void {})
+  public static function Destroy(obj:Object) : Void;
 
-  public static function DestroyImmediate(obj:Object, allowDestroyingAssets:Bool) : Void;
+  @:overload(function(obj:Object, allowDestroyingAssets:Bool) : Void {})
+  public static function DestroyImmediate(obj:Object) : Void;
 
-  public static function DestroyObject(obj:Object, t:Float) : Void;
+  @:overload(function(obj:Object, t:Float) : Void {})
+  public static function DestroyObject(obj:Object) : Void;
 
   public static function DontDestroyOnLoad(target:Object) : Void;
 
@@ -27,6 +30,7 @@ extern class Object {
 
   public function GetInstanceID() : Int;
 
-  public static function Instantiate(original:Object, position:Vector3, rotation:Quaternion) : Object;
+  @:overload(function(original:Object, position:Vector3, rotation:Quaternion) : Object {})
+  public static function Instantiate(original:Object) : Object;
 }
 

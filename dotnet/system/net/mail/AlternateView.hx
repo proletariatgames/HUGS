@@ -5,6 +5,8 @@ extern class AlternateView extends AttachmentBase {
   public var BaseUri : dotnet.system.Uri;
   @:skipReflection public var LinkedResources(default,never) : LinkedResourceCollection;
 
+  @:overload(function(content:String, encoding:dotnet.system.text.Encoding, mediaType:String) : AlternateView {})
+  @:overload(function(content:String, contentType:dotnet.system.net.mime.ContentType) : AlternateView {})
   public static function CreateAlternateViewFromString(content:String) : AlternateView;
 
   @:overload(function(fileName:String, mediaType:String) : Void {})

@@ -19,6 +19,7 @@ extern class Enum extends ValueType  implements IComparable implements IConverti
 
   public static function IsDefined(enumType:cs.system.Type, value:Dynamic) : Bool;
 
+  @:overload(function(enumType:cs.system.Type, value:String, ignoreCase:Bool) : Dynamic {})
   public static function Parse(enumType:cs.system.Type, value:String) : Dynamic;
 
   function ToBoolean(provider:IFormatProvider) : Bool;
@@ -39,7 +40,11 @@ extern class Enum extends ValueType  implements IComparable implements IConverti
 
   function ToInt64(provider:IFormatProvider) : Int64;
 
-  public static function ToObject(enumType:cs.system.Type, value:UInt) : Dynamic;
+  @:overload(function(enumType:cs.system.Type, value:UInt64) : Dynamic {})
+  @:overload(function(enumType:cs.system.Type, value:UInt) : Dynamic {})
+  @:overload(function(enumType:cs.system.Type, value:Int64) : Dynamic {})
+  @:overload(function(enumType:cs.system.Type, value:Int) : Dynamic {})
+  public static function ToObject(enumType:cs.system.Type, value:Dynamic) : Dynamic;
 
   function ToSByte(provider:IFormatProvider) : Int;
 

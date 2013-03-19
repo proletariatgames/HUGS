@@ -7,7 +7,8 @@ extern class WebRequest extends dotnet.system.MarshalByRefObject  implements dot
   public var ImpersonationLevel : dotnet.system.security.principal.TokenImpersonationLevel;
   public static var DefaultWebProxy : IWebProxy;
 
-  public static function Create(requestUriString:String) : WebRequest;
+  @:overload(function(requestUriString:String) : WebRequest {})
+  public static function Create(requestUri:dotnet.system.Uri) : WebRequest;
 
   public static function CreateDefault(requestUri:dotnet.system.Uri) : WebRequest;
 

@@ -59,6 +59,7 @@ extern class Vector3_Static {
 
   public static function Normalize(value:Vector3) : Vector3;
 
+  @:overload(function(normal:Vector3, tangent:Vector3, binormal:Vector3) : Void {})
   public static function OrthoNormalize(normal:Vector3, tangent:Vector3) : Void;
 
   public static function Project(vector:Vector3, onNormal:Vector3) : Vector3;
@@ -71,7 +72,9 @@ extern class Vector3_Static {
 
   public static function Slerp(from:Vector3, to:Vector3, t:Float) : Vector3;
 
-  public static function SmoothDamp(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Float, maxSpeed:Float) : Vector3;
+  @:overload(function(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Float, maxSpeed:Float, deltaTime:Float) : Vector3 {})
+  @:overload(function(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Float, maxSpeed:Float) : Vector3 {})
+  public static function SmoothDamp(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Float) : Vector3;
 
   public static function SqrMagnitude(a:Vector3) : Float;
 }

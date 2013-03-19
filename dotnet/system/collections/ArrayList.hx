@@ -26,6 +26,7 @@ extern class ArrayList extends dotnet.system.Object  implements dotnet.system.IC
   @:overload(function(c:ICollection) : Void {})
   public function new() : Void;
 
+  @:overload(function(list:IList) : IList {})
   public static function FixedSize(list:ArrayList) : ArrayList;
 
   @:overload(function(index:Int, count:Int) : IEnumerator {})
@@ -37,6 +38,7 @@ extern class ArrayList extends dotnet.system.Object  implements dotnet.system.IC
 
   public function Insert(index:Int, value:Dynamic) : Void;
 
+  @:overload(function(list:IList) : IList {})
   public static function ReadOnly(list:ArrayList) : ArrayList;
 
   public function Remove(obj:Dynamic) : Void;
@@ -45,6 +47,7 @@ extern class ArrayList extends dotnet.system.Object  implements dotnet.system.IC
 
   public static function Repeat(value:Dynamic, count:Int) : ArrayList;
 
+  @:overload(function(list:IList) : IList {})
   public static function Synchronized(list:ArrayList) : ArrayList;
 }
 

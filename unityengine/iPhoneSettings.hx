@@ -17,7 +17,9 @@ extern class iPhoneSettings {
 
   public function new() : Void;
 
-  public static function StartLocationServiceUpdates(desiredAccuracyInMeters:Float, updateDistanceInMeters:Float) : Void;
+  @:overload(function(desiredAccuracyInMeters:Float, updateDistanceInMeters:Float) : Void {})
+  @:overload(function(desiredAccuracyInMeters:Float) : Void {})
+  public static function StartLocationServiceUpdates() : Void;
 
   public static function StopLocationServiceUpdates() : Void;
 }

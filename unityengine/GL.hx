@@ -11,6 +11,7 @@ extern class GL {
 
   public static function Begin(mode:Int) : Void;
 
+  @:overload(function(clearDepth:Bool, clearColor:Bool, backgroundColor:Color, depth:Float) : Void {})
   public static function Clear(clearDepth:Bool, clearColor:Bool, backgroundColor:Color) : Void;
 
   public static function ClearWithSkybox(clearDepth:Bool, camera:Camera) : Void;
@@ -31,6 +32,7 @@ extern class GL {
 
   public static function LoadOrtho() : Void;
 
+  @:overload(function(left:Float, right:Float, bottom:Float, top:Float) : Void {})
   public static function LoadPixelMatrix() : Void;
 
   public static function LoadProjectionMatrix(mat:Matrix4x4) : Void;

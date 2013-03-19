@@ -12,6 +12,7 @@ extern class AuthenticationManager extends dotnet.system.Object {
 
   public static function Register(authenticationModule:IAuthenticationModule) : Void;
 
+  @:overload(function(authenticationScheme:String) : Void {})
   public static function Unregister(authenticationModule:IAuthenticationModule) : Void;
 }
 

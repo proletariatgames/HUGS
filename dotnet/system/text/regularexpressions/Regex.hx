@@ -45,18 +45,27 @@ extern class Regex extends dotnet.system.Object  implements dotnet.system.runtim
 @:native("System.Text.RegularExpressions.Regex") @:final
 extern class Regex_Static {
 
+  @:overload(function(regexes:cs.NativeArray<RegexCompilationInfo>, aname:dotnet.system.reflection.AssemblyName, attribs:cs.NativeArray<dotnet.system.reflection.emit.CustomAttributeBuilder>, resourceFile:String) : Void {})
+  @:overload(function(regexes:cs.NativeArray<RegexCompilationInfo>, aname:dotnet.system.reflection.AssemblyName, attribs:cs.NativeArray<dotnet.system.reflection.emit.CustomAttributeBuilder>) : Void {})
   public static function CompileToAssembly(regexes:cs.NativeArray<RegexCompilationInfo>, aname:dotnet.system.reflection.AssemblyName) : Void;
 
   public static function Escape(str:String) : String;
 
+  @:overload(function(input:String, pattern:String, options:RegexOptions) : Bool {})
   public static function IsMatch(input:String, pattern:String) : Bool;
 
+  @:overload(function(input:String, pattern:String, options:RegexOptions) : Match {})
   public static function Match(input:String, pattern:String) : Match;
 
+  @:overload(function(input:String, pattern:String, options:RegexOptions) : MatchCollection {})
   public static function Matches(input:String, pattern:String) : MatchCollection;
 
+  @:overload(function(input:String, pattern:String, replacement:String, options:RegexOptions) : String {})
+  @:overload(function(input:String, pattern:String, evaluator:MatchEvaluator, options:RegexOptions) : String {})
+  @:overload(function(input:String, pattern:String, replacement:String) : String {})
   public static function Replace(input:String, pattern:String, evaluator:MatchEvaluator) : String;
 
+  @:overload(function(input:String, pattern:String, options:RegexOptions) : cs.NativeArray<String> {})
   public static function Split(input:String, pattern:String) : cs.NativeArray<String>;
 
   public static function Unescape(str:String) : String;

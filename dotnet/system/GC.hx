@@ -6,10 +6,13 @@ extern class GC extends Object {
 
   public static function AddMemoryPressure(bytesAllocated:Int64) : Void;
 
+  @:overload(function(generation:Int, mode:GCCollectionMode) : Void {})
+  @:overload(function(generation:Int) : Void {})
   public static function Collect() : Void;
 
   public static function CollectionCount(generation:Int) : Int;
 
+  @:overload(function(wo:WeakReference) : Int {})
   public static function GetGeneration(obj:Dynamic) : Int;
 
   public static function GetTotalMemory(forceFullCollection:Bool) : Int64;

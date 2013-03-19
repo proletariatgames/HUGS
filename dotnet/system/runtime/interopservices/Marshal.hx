@@ -9,12 +9,28 @@ extern class Marshal extends dotnet.system.Object {
 
   public static function AllocCoTaskMem(cb:Int) : dotnet.system.IntPtr;
 
+  @:overload(function(cb:Int) : dotnet.system.IntPtr {})
   public static function AllocHGlobal(cb:dotnet.system.IntPtr) : dotnet.system.IntPtr;
 
   public static function BindToMoniker(monikerName:String) : Dynamic;
 
   public static function ChangeWrapperHandleStrength(otp:Dynamic, fIsWeak:Bool) : Void;
 
+  @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<Int>, startIndex:Int, length:Int) : Void {})
+  @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<Float>, startIndex:Int, length:Int) : Void {})
+  @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.Single>, startIndex:Int, length:Int) : Void {})
+  @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.IntPtr>, startIndex:Int, length:Int) : Void {})
+  @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.Int64>, startIndex:Int, length:Int) : Void {})
+  @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.Int16>, startIndex:Int, length:Int) : Void {})
+  @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.Char>, startIndex:Int, length:Int) : Void {})
+  @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.Byte>, startIndex:Int, length:Int) : Void {})
+  @:overload(function(source:cs.NativeArray<Int>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
+  @:overload(function(source:cs.NativeArray<Float>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
+  @:overload(function(source:cs.NativeArray<dotnet.system.Single>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
+  @:overload(function(source:cs.NativeArray<dotnet.system.IntPtr>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
+  @:overload(function(source:cs.NativeArray<dotnet.system.Int64>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
+  @:overload(function(source:cs.NativeArray<dotnet.system.Int16>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
+  @:overload(function(source:cs.NativeArray<dotnet.system.Char>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
   public static function Copy(source:cs.NativeArray<dotnet.system.Byte>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void;
 
   public static function CreateAggregatedObject(pOuter:dotnet.system.IntPtr, o:Dynamic) : dotnet.system.IntPtr;
@@ -51,6 +67,7 @@ extern class Marshal extends dotnet.system.Object {
 
   public static function GetExceptionCode() : Int;
 
+  @:overload(function(errorCode:Int, errorInfo:dotnet.system.IntPtr) : dotnet.system.Exception {})
   public static function GetExceptionForHR(errorCode:Int) : dotnet.system.Exception;
 
   public static function GetExceptionPointers() : dotnet.system.IntPtr;
@@ -95,14 +112,18 @@ extern class Marshal extends dotnet.system.Object {
 
   public static function GetTypeForITypeInfo(piTypeInfo:dotnet.system.IntPtr) : cs.system.Type;
 
+  @:overload(function(typeInfo:dotnet.system.runtime.interopservices.comtypes.ITypeInfo) : String {})
   public static function GetTypeInfoName(pTI:UCOMITypeInfo) : String;
 
+  @:overload(function(typelib:dotnet.system.runtime.interopservices.comtypes.ITypeLib) : dotnet.system.Guid {})
   public static function GetTypeLibGuid(pTLB:UCOMITypeLib) : dotnet.system.Guid;
 
   public static function GetTypeLibGuidForAssembly(asm:dotnet.system.reflection.Assembly) : dotnet.system.Guid;
 
+  @:overload(function(typelib:dotnet.system.runtime.interopservices.comtypes.ITypeLib) : Int {})
   public static function GetTypeLibLcid(pTLB:UCOMITypeLib) : Int;
 
+  @:overload(function(typelib:dotnet.system.runtime.interopservices.comtypes.ITypeLib) : String {})
   public static function GetTypeLibName(pTLB:UCOMITypeLib) : String;
 
   public static function GetTypeLibVersionForAssembly(inputAssembly:dotnet.system.reflection.Assembly, majorVersion:Int, minorVersion:Int) : Void;
@@ -123,26 +144,40 @@ extern class Marshal extends dotnet.system.Object {
 
   public static function PrelinkAll(c:cs.system.Type) : Void;
 
+  @:overload(function(ptr:dotnet.system.IntPtr, len:Int) : String {})
   public static function PtrToStringAnsi(ptr:dotnet.system.IntPtr) : String;
 
+  @:overload(function(ptr:dotnet.system.IntPtr, len:Int) : String {})
   public static function PtrToStringAuto(ptr:dotnet.system.IntPtr) : String;
 
   public static function PtrToStringBSTR(ptr:dotnet.system.IntPtr) : String;
 
+  @:overload(function(ptr:dotnet.system.IntPtr, len:Int) : String {})
   public static function PtrToStringUni(ptr:dotnet.system.IntPtr) : String;
 
+  @:overload(function(ptr:dotnet.system.IntPtr, structureType:cs.system.Type) : Dynamic {})
   public static function PtrToStructure(ptr:dotnet.system.IntPtr, structure:Dynamic) : Void;
 
   public static function QueryInterface(pUnk:dotnet.system.IntPtr, iid:dotnet.system.Guid, ppv:dotnet.system.IntPtr) : Int;
 
+  @:overload(function(ptr:Dynamic, ofs:Int) : UInt {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int) : UInt {})
   public static function ReadByte(ptr:dotnet.system.IntPtr) : UInt;
 
+  @:overload(function(ptr:Dynamic, ofs:Int) : Int {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int) : Int {})
   public static function ReadInt16(ptr:dotnet.system.IntPtr) : Int;
 
+  @:overload(function(ptr:Dynamic, ofs:Int) : Int {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int) : Int {})
   public static function ReadInt32(ptr:dotnet.system.IntPtr) : Int;
 
+  @:overload(function(ptr:Dynamic, ofs:Int) : dotnet.system.Int64 {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int) : dotnet.system.Int64 {})
   public static function ReadInt64(ptr:dotnet.system.IntPtr) : dotnet.system.Int64;
 
+  @:overload(function(ptr:Dynamic, ofs:Int) : dotnet.system.IntPtr {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int) : dotnet.system.IntPtr {})
   public static function ReadIntPtr(ptr:dotnet.system.IntPtr) : dotnet.system.IntPtr;
 
   public static function ReAllocCoTaskMem(pv:dotnet.system.IntPtr, cb:Int) : dotnet.system.IntPtr;
@@ -167,6 +202,7 @@ extern class Marshal extends dotnet.system.Object {
 
   public static function SetComObjectData(obj:Dynamic, key:Dynamic, data:Dynamic) : Bool;
 
+  @:overload(function(t:cs.system.Type) : Int {})
   public static function SizeOf(structure:Dynamic) : Int;
 
   public static function StringToBSTR(s:String) : dotnet.system.IntPtr;
@@ -185,18 +221,32 @@ extern class Marshal extends dotnet.system.Object {
 
   public static function StructureToPtr(structure:Dynamic, ptr:dotnet.system.IntPtr, fDeleteOld:Bool) : Void;
 
+  @:overload(function(errorCode:Int, errorInfo:dotnet.system.IntPtr) : Void {})
   public static function ThrowExceptionForHR(errorCode:Int) : Void;
 
   public static function UnsafeAddrOfPinnedArrayElement(arr:dotnet.system.Array, index:Int) : dotnet.system.IntPtr;
 
+  @:overload(function(ptr:Dynamic, ofs:Int, val:UInt) : Void {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:UInt) : Void {})
   public static function WriteByte(ptr:dotnet.system.IntPtr, val:UInt) : Void;
 
-  public static function WriteInt16(ptr:dotnet.system.IntPtr, val:Int) : Void;
+  @:overload(function(ptr:Dynamic, ofs:Int, val:Int) : Void {})
+  @:overload(function(ptr:Dynamic, ofs:Int, val:dotnet.system.Char) : Void {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:Int) : Void {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:dotnet.system.Char) : Void {})
+  @:overload(function(ptr:dotnet.system.IntPtr, val:Int) : Void {})
+  public static function WriteInt16(ptr:dotnet.system.IntPtr, val:dotnet.system.Char) : Void;
 
+  @:overload(function(ptr:Dynamic, ofs:Int, val:Int) : Void {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:Int) : Void {})
   public static function WriteInt32(ptr:dotnet.system.IntPtr, val:Int) : Void;
 
+  @:overload(function(ptr:Dynamic, ofs:Int, val:dotnet.system.Int64) : Void {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:dotnet.system.Int64) : Void {})
   public static function WriteInt64(ptr:dotnet.system.IntPtr, val:dotnet.system.Int64) : Void;
 
+  @:overload(function(ptr:Dynamic, ofs:Int, val:dotnet.system.IntPtr) : Void {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:dotnet.system.IntPtr) : Void {})
   public static function WriteIntPtr(ptr:dotnet.system.IntPtr, val:dotnet.system.IntPtr) : Void;
 
   public static function ZeroFreeBSTR(s:dotnet.system.IntPtr) : Void;

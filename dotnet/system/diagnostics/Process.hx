@@ -90,14 +90,21 @@ extern class Process_Static {
 
   public static function GetCurrentProcess() : Process;
 
+  @:overload(function(processId:Int, machineName:String) : Process {})
   public static function GetProcessById(processId:Int) : Process;
 
+  @:overload(function(machineName:String) : cs.NativeArray<Process> {})
   public static function GetProcesses() : cs.NativeArray<Process>;
 
+  @:overload(function(processName:String, machineName:String) : cs.NativeArray<Process> {})
   public static function GetProcessesByName(processName:String) : cs.NativeArray<Process>;
 
   public static function LeaveDebugMode() : Void;
 
-  public static function Start(startInfo:ProcessStartInfo) : Process;
+  @:overload(function(fileName:String, arguments:String, username:String, password:dotnet.system.security.SecureString, domain:String) : Process {})
+  @:overload(function(fileName:String, username:String, password:dotnet.system.security.SecureString, domain:String) : Process {})
+  @:overload(function(fileName:String, arguments:String) : Process {})
+  @:overload(function(startInfo:ProcessStartInfo) : Process {})
+  public static function Start(fileName:String) : Process;
 }
 

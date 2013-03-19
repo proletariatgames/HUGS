@@ -16,6 +16,7 @@ extern class ChannelServices extends dotnet.system.Object {
 
   public static function GetUrlsForObject(obj:dotnet.system.MarshalByRefObject) : cs.NativeArray<String>;
 
+  @:overload(function(chnl:IChannel, ensureSecurity:Bool) : Void {})
   public static function RegisterChannel(chnl:IChannel) : Void;
 
   public static function SyncDispatchMessage(msg:dotnet.system.runtime.remoting.messaging.IMessage) : dotnet.system.runtime.remoting.messaging.IMessage;

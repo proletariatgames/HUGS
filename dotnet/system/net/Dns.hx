@@ -7,7 +7,8 @@ extern class Dns extends dotnet.system.Object {
 
   public static function BeginGetHostByName(hostName:String, requestCallback:dotnet.system.AsyncCallback, stateObject:Dynamic) : dotnet.system.IAsyncResult;
 
-  public static function BeginGetHostEntry(hostNameOrAddress:String, requestCallback:dotnet.system.AsyncCallback, stateObject:Dynamic) : dotnet.system.IAsyncResult;
+  @:overload(function(hostNameOrAddress:String, requestCallback:dotnet.system.AsyncCallback, stateObject:Dynamic) : dotnet.system.IAsyncResult {})
+  public static function BeginGetHostEntry(address:IPAddress, requestCallback:dotnet.system.AsyncCallback, stateObject:Dynamic) : dotnet.system.IAsyncResult;
 
   public static function BeginResolve(hostName:String, requestCallback:dotnet.system.AsyncCallback, stateObject:Dynamic) : dotnet.system.IAsyncResult;
 
@@ -21,11 +22,13 @@ extern class Dns extends dotnet.system.Object {
 
   public static function GetHostAddresses(hostNameOrAddress:String) : cs.NativeArray<IPAddress>;
 
+  @:overload(function(address:String) : IPHostEntry {})
   public static function GetHostByAddress(address:IPAddress) : IPHostEntry;
 
   public static function GetHostByName(hostName:String) : IPHostEntry;
 
-  public static function GetHostEntry(hostNameOrAddress:String) : IPHostEntry;
+  @:overload(function(hostNameOrAddress:String) : IPHostEntry {})
+  public static function GetHostEntry(address:IPAddress) : IPHostEntry;
 
   public static function GetHostName() : String;
 

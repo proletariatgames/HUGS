@@ -66,18 +66,29 @@ extern class Assembly extends dotnet.system.Object  implements ICustomAttributeP
 
   public function IsDefined(attributeType:cs.system.Type, inherit:Bool) : Bool;
 
-  public static function Load(assemblyString:String) : Assembly;
+  @:overload(function(rawAssembly:cs.NativeArray<dotnet.system.Byte>, rawSymbolStore:cs.NativeArray<dotnet.system.Byte>, securityEvidence:dotnet.system.security.policy.Evidence) : Assembly {})
+  @:overload(function(rawAssembly:cs.NativeArray<dotnet.system.Byte>, rawSymbolStore:cs.NativeArray<dotnet.system.Byte>) : Assembly {})
+  @:overload(function(assemblyString:String, assemblySecurity:dotnet.system.security.policy.Evidence) : Assembly {})
+  @:overload(function(assemblyRef:AssemblyName, assemblySecurity:dotnet.system.security.policy.Evidence) : Assembly {})
+  @:overload(function(rawAssembly:cs.NativeArray<dotnet.system.Byte>) : Assembly {})
+  @:overload(function(assemblyString:String) : Assembly {})
+  public static function Load(assemblyRef:AssemblyName) : Assembly;
 
-  public static function LoadFile(path:String, securityEvidence:dotnet.system.security.policy.Evidence) : Assembly;
+  @:overload(function(path:String, securityEvidence:dotnet.system.security.policy.Evidence) : Assembly {})
+  public static function LoadFile(path:String) : Assembly;
 
+  @:overload(function(assemblyFile:String, securityEvidence:dotnet.system.security.policy.Evidence, hashValue:cs.NativeArray<dotnet.system.Byte>, hashAlgorithm:dotnet.system.configuration.assemblies.AssemblyHashAlgorithm) : Assembly {})
+  @:overload(function(assemblyFile:String, securityEvidence:dotnet.system.security.policy.Evidence) : Assembly {})
   public static function LoadFrom(assemblyFile:String) : Assembly;
 
   @:overload(function(moduleName:String, rawModule:cs.NativeArray<dotnet.system.Byte>, rawSymbolStore:cs.NativeArray<dotnet.system.Byte>) : Module {})
   public function LoadModule(moduleName:String, rawModule:cs.NativeArray<dotnet.system.Byte>) : Module;
 
+  @:overload(function(partialName:String, securityEvidence:dotnet.system.security.policy.Evidence) : Assembly {})
   public static function LoadWithPartialName(partialName:String) : Assembly;
 
-  public static function ReflectionOnlyLoad(rawAssembly:cs.NativeArray<dotnet.system.Byte>) : Assembly;
+  @:overload(function(rawAssembly:cs.NativeArray<dotnet.system.Byte>) : Assembly {})
+  public static function ReflectionOnlyLoad(assemblyString:String) : Assembly;
 
   public static function ReflectionOnlyLoadFrom(assemblyFile:String) : Assembly;
 }

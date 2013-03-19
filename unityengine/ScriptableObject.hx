@@ -3,7 +3,9 @@ package unityengine;
 @:native("UnityEngine.ScriptableObject")
 extern class ScriptableObject extends Object {
 
-  public static function CreateInstance(className:String) : ScriptableObject;
+  @:overload(function(type:cs.system.Type) : ScriptableObject {})
+  @:overload(function(className:String) : ScriptableObject {})
+  public static function CreateInstance() : Dynamic;
 
   public function new() : Void;
 

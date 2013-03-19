@@ -10,6 +10,7 @@ extern class Profiler {
 
   public static function AddFramesFromFile(file:String) : Void;
 
+  @:overload(function(name:String, targetObject:Object) : Void {})
   public static function BeginSample(name:String) : Void;
 
   public function new() : Void;

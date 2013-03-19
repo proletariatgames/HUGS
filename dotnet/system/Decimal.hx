@@ -76,11 +76,17 @@ extern class Decimal_Static {
 
   public static function Negate(d:Decimal) : Decimal;
 
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Decimal {})
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Decimal {})
+  @:overload(function(s:String, provider:IFormatProvider) : Decimal {})
   public static function Parse(s:String) : Decimal;
 
   public static function Remainder(d1:Decimal, d2:Decimal) : Decimal;
 
-  public static function Round(d:Decimal, decimals:Int) : Decimal;
+  @:overload(function(d:Decimal, decimals:Int, mode:MidpointRounding) : Decimal {})
+  @:overload(function(d:Decimal, mode:MidpointRounding) : Decimal {})
+  @:overload(function(d:Decimal, decimals:Int) : Decimal {})
+  public static function Round(d:Decimal) : Decimal;
 
   public static function Subtract(d1:Decimal, d2:Decimal) : Decimal;
 
@@ -108,6 +114,7 @@ extern class Decimal_Static {
 
   public static function Truncate(d:Decimal) : Decimal;
 
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Decimal) : Bool {})
   public static function TryParse(s:String, result:Decimal) : Bool;
 }
 

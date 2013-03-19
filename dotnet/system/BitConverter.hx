@@ -6,6 +6,12 @@ extern class BitConverter extends Object {
 
   public static function DoubleToInt64Bits(value:Float) : Int64;
 
+  @:overload(function(value:UInt64) : cs.NativeArray<Byte> {})
+  @:overload(function(value:UInt) : cs.NativeArray<Byte> {})
+  @:overload(function(value:Int64) : cs.NativeArray<Byte> {})
+  @:overload(function(value:Int) : cs.NativeArray<Byte> {})
+  @:overload(function(value:Float) : cs.NativeArray<Byte> {})
+  @:overload(function(value:Char) : cs.NativeArray<Byte> {})
   public static function GetBytes(value:Bool) : cs.NativeArray<Byte>;
 
   public static function Int64BitsToDouble(value:Int64) : Float;
@@ -24,6 +30,8 @@ extern class BitConverter extends Object {
 
   public static function ToSingle(value:cs.NativeArray<Byte>, startIndex:Int) : Float;
 
+  @:overload(function(value:cs.NativeArray<Byte>, startIndex:Int, length:Int) : String {})
+  @:overload(function(value:cs.NativeArray<Byte>, startIndex:Int) : String {})
   public static function ToString(value:cs.NativeArray<Byte>) : String;
 
   public static function ToUInt16(value:cs.NativeArray<Byte>, startIndex:Int) : UInt;

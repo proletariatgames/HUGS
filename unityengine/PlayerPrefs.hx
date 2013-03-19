@@ -9,11 +9,14 @@ extern class PlayerPrefs {
 
   public static function DeleteKey(key:String) : Void;
 
-  public static function GetFloat(key:String, defaultValue:Float) : Float;
+  @:overload(function(key:String, defaultValue:Float) : Float {})
+  public static function GetFloat(key:String) : Float;
 
-  public static function GetInt(key:String, defaultValue:Int) : Int;
+  @:overload(function(key:String, defaultValue:Int) : Int {})
+  public static function GetInt(key:String) : Int;
 
-  public static function GetString(key:String, defaultValue:String) : String;
+  @:overload(function(key:String, defaultValue:String) : String {})
+  public static function GetString(key:String) : String;
 
   public static function HasKey(key:String) : Bool;
 

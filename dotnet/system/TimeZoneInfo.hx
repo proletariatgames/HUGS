@@ -46,14 +46,21 @@ extern class TimeZoneInfo extends Object  implements dotnet.system.runtime.seria
 
   public static function ClearCachedData() : Void;
 
+  @:overload(function(dateTime:DateTime, sourceTimeZone:TimeZoneInfo, destinationTimeZone:TimeZoneInfo) : DateTime {})
+  @:overload(function(dateTimeOffset:DateTimeOffset, destinationTimeZone:TimeZoneInfo) : DateTimeOffset {})
   public static function ConvertTime(dateTime:DateTime, destinationTimeZone:TimeZoneInfo) : DateTime;
 
+  @:overload(function(dateTime:DateTime, sourceTimeZoneId:String, destinationTimeZoneId:String) : DateTime {})
+  @:overload(function(dateTimeOffset:DateTimeOffset, destinationTimeZoneId:String) : DateTimeOffset {})
   public static function ConvertTimeBySystemTimeZoneId(dateTime:DateTime, destinationTimeZoneId:String) : DateTime;
 
   public static function ConvertTimeFromUtc(dateTime:DateTime, destinationTimeZone:TimeZoneInfo) : DateTime;
 
+  @:overload(function(dateTime:DateTime, sourceTimeZone:TimeZoneInfo) : DateTime {})
   public static function ConvertTimeToUtc(dateTime:DateTime) : DateTime;
 
+  @:overload(function(id:String, baseUtcOffset:TimeSpan, displayName:String, standardDisplayName:String, daylightDisplayName:String, adjustmentRules:cs.NativeArray<TimeZoneInfo_AdjustmentRule>, disableDaylightSavingTime:Bool) : TimeZoneInfo {})
+  @:overload(function(id:String, baseUtcOffset:TimeSpan, displayName:String, standardDisplayName:String, daylightDisplayName:String, adjustmentRules:cs.NativeArray<TimeZoneInfo_AdjustmentRule>) : TimeZoneInfo {})
   public static function CreateCustomTimeZone(id:String, baseUtcOffset:TimeSpan, displayName:String, standardDisplayName:String) : TimeZoneInfo;
 
   public static function FindSystemTimeZoneById(id:String) : TimeZoneInfo;

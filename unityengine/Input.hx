@@ -40,11 +40,14 @@ extern class Input {
 
   public static function GetJoystickNames() : cs.NativeArray<String>;
 
-  public static function GetKey(name:String) : Bool;
+  @:overload(function(name:String) : Bool {})
+  public static function GetKey(key:KeyCode) : Bool;
 
-  public static function GetKeyDown(name:String) : Bool;
+  @:overload(function(name:String) : Bool {})
+  public static function GetKeyDown(key:KeyCode) : Bool;
 
-  public static function GetKeyUp(name:String) : Bool;
+  @:overload(function(name:String) : Bool {})
+  public static function GetKeyUp(key:KeyCode) : Bool;
 
   public static function GetMouseButton(button:Int) : Bool;
 

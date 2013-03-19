@@ -56,4 +56,3 @@ extern class Component extends Object {
   @:overload(function(methodName:String, options:SendMessageOptions) : Void {})
   public function SendMessageUpwards(methodName:String) : Void;
 }
-

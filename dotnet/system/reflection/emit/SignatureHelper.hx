@@ -15,10 +15,16 @@ extern class SignatureHelper extends dotnet.system.Object  implements dotnet.sys
 
   function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
 
-  public static function GetLocalVarSigHelper(mod:dotnet.system.reflection.Module) : SignatureHelper;
+  @:overload(function(mod:dotnet.system.reflection.Module) : SignatureHelper {})
+  public static function GetLocalVarSigHelper() : SignatureHelper;
 
+  @:overload(function(mod:dotnet.system.reflection.Module, unmanagedCallConv:dotnet.system.runtime.interopservices.CallingConvention, returnType:cs.system.Type) : SignatureHelper {})
+  @:overload(function(mod:dotnet.system.reflection.Module, returnType:cs.system.Type, parameterTypes:cs.NativeArray<cs.system.Type>) : SignatureHelper {})
+  @:overload(function(mod:dotnet.system.reflection.Module, callingConvention:dotnet.system.reflection.CallingConventions, returnType:cs.system.Type) : SignatureHelper {})
+  @:overload(function(unmanagedCallingConvention:dotnet.system.runtime.interopservices.CallingConvention, returnType:cs.system.Type) : SignatureHelper {})
   public static function GetMethodSigHelper(callingConvention:dotnet.system.reflection.CallingConventions, returnType:cs.system.Type) : SignatureHelper;
 
+  @:overload(function(mod:dotnet.system.reflection.Module, returnType:cs.system.Type, requiredReturnTypeCustomModifiers:cs.NativeArray<cs.system.Type>, optionalReturnTypeCustomModifiers:cs.NativeArray<cs.system.Type>, parameterTypes:cs.NativeArray<cs.system.Type>, requiredParameterTypeCustomModifiers:cs.NativeArray<cs.NativeArray<cs.system.Type>>, optionalParameterTypeCustomModifiers:cs.NativeArray<cs.NativeArray<cs.system.Type>>) : SignatureHelper {})
   public static function GetPropertySigHelper(mod:dotnet.system.reflection.Module, returnType:cs.system.Type, parameterTypes:cs.NativeArray<cs.system.Type>) : SignatureHelper;
 
   public function GetSignature() : cs.NativeArray<dotnet.system.Byte>;

@@ -48,11 +48,14 @@ extern class Quaternion_Static {
 
   public static function Dot(a:Quaternion, b:Quaternion) : Float;
 
-  public static function Euler(x:Float, y:Float, z:Float) : Quaternion;
+  @:overload(function(x:Float, y:Float, z:Float) : Quaternion {})
+  public static function Euler(euler:Vector3) : Quaternion;
 
-  public static function EulerAngles(x:Float, y:Float, z:Float) : Quaternion;
+  @:overload(function(x:Float, y:Float, z:Float) : Quaternion {})
+  public static function EulerAngles(euler:Vector3) : Quaternion;
 
-  public static function EulerRotation(x:Float, y:Float, z:Float) : Quaternion;
+  @:overload(function(x:Float, y:Float, z:Float) : Quaternion {})
+  public static function EulerRotation(euler:Vector3) : Quaternion;
 
   public static function FromToRotation(fromDirection:Vector3, toDirection:Vector3) : Quaternion;
 
@@ -60,7 +63,8 @@ extern class Quaternion_Static {
 
   public static function Lerp(from:Quaternion, to:Quaternion, t:Float) : Quaternion;
 
-  public static function LookRotation(forward:Vector3, upwards:Vector3) : Quaternion;
+  @:overload(function(forward:Vector3, upwards:Vector3) : Quaternion {})
+  public static function LookRotation(forward:Vector3) : Quaternion;
 
   public static function RotateTowards(from:Quaternion, to:Quaternion, maxDegreesDelta:Float) : Quaternion;
 

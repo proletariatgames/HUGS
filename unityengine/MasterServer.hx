@@ -13,7 +13,8 @@ extern class MasterServer {
 
   public static function PollHostList() : cs.NativeArray<HostData>;
 
-  public static function RegisterHost(gameTypeName:String, gameName:String, comment:String) : Void;
+  @:overload(function(gameTypeName:String, gameName:String, comment:String) : Void {})
+  public static function RegisterHost(gameTypeName:String, gameName:String) : Void;
 
   public static function RequestHostList(gameTypeName:String) : Void;
 

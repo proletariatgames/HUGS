@@ -9,6 +9,7 @@ extern class FormatterServices extends dotnet.system.Object {
 
   public static function GetSafeUninitializedObject(type:cs.system.Type) : Dynamic;
 
+  @:overload(function(type:cs.system.Type, context:StreamingContext) : cs.NativeArray<dotnet.system.reflection.MemberInfo> {})
   public static function GetSerializableMembers(type:cs.system.Type) : cs.NativeArray<dotnet.system.reflection.MemberInfo>;
 
   public static function GetTypeFromAssembly(assem:dotnet.system.reflection.Assembly, name:String) : cs.system.Type;

@@ -10,6 +10,7 @@ extern class Semaphore extends WaitHandle {
 
   public function GetAccessControl() : dotnet.system.security.accesscontrol.SemaphoreSecurity;
 
+  @:overload(function(name:String, rights:dotnet.system.security.accesscontrol.SemaphoreRights) : Semaphore {})
   public static function OpenExisting(name:String) : Semaphore;
 
   @:overload(function(releaseCount:Int) : Int {})

@@ -7,9 +7,15 @@ extern class iPhoneUtils {
 
   public function new() : Void;
 
-  public static function PlayMovie(path:String, bgColor:Color, controlMode:Int, scalingMode:Int) : Void;
+  @:overload(function(path:String, bgColor:Color, controlMode:iPhoneMovieControlMode, scalingMode:iPhoneMovieScalingMode) : Void {})
+  @:overload(function(path:String, bgColor:Color, controlMode:Int, scalingMode:Int) : Void {})
+  @:overload(function(path:String, bgColor:Color, controlMode:iPhoneMovieControlMode) : Void {})
+  public static function PlayMovie(path:String, bgColor:Color) : Void;
 
-  public static function PlayMovieURL(url:String, bgColor:Color, controlMode:Int, scalingMode:Int) : Void;
+  @:overload(function(url:String, bgColor:Color, controlMode:iPhoneMovieControlMode, scalingMode:iPhoneMovieScalingMode) : Void {})
+  @:overload(function(url:String, bgColor:Color, controlMode:Int, scalingMode:Int) : Void {})
+  @:overload(function(url:String, bgColor:Color, controlMode:iPhoneMovieControlMode) : Void {})
+  public static function PlayMovieURL(url:String, bgColor:Color) : Void;
 
   public static function Vibrate() : Void;
 }

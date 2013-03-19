@@ -27,16 +27,23 @@ extern class PerformanceCounterCategory extends dotnet.system.Object {
 @:native("System.Diagnostics.PerformanceCounterCategory") @:final
 extern class PerformanceCounterCategory_Static {
 
+  @:overload(function(counterName:String, categoryName:String, machineName:String) : Bool {})
   public static function CounterExists(counterName:String, categoryName:String) : Bool;
 
+  @:overload(function(categoryName:String, categoryHelp:String, categoryType:PerformanceCounterCategoryType, counterName:String, counterHelp:String) : PerformanceCounterCategory {})
+  @:overload(function(categoryName:String, categoryHelp:String, counterName:String, counterHelp:String) : PerformanceCounterCategory {})
+  @:overload(function(categoryName:String, categoryHelp:String, categoryType:PerformanceCounterCategoryType, counterData:CounterCreationDataCollection) : PerformanceCounterCategory {})
   public static function Create(categoryName:String, categoryHelp:String, counterData:CounterCreationDataCollection) : PerformanceCounterCategory;
 
   public static function Delete(categoryName:String) : Void;
 
+  @:overload(function(categoryName:String, machineName:String) : Bool {})
   public static function Exists(categoryName:String) : Bool;
 
+  @:overload(function(machineName:String) : cs.NativeArray<PerformanceCounterCategory> {})
   public static function GetCategories() : cs.NativeArray<PerformanceCounterCategory>;
 
+  @:overload(function(instanceName:String, categoryName:String, machineName:String) : Bool {})
   public static function InstanceExists(instanceName:String, categoryName:String) : Bool;
 }
 

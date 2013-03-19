@@ -10,7 +10,10 @@ extern class Int16 extends ValueType  implements IComparable implements IConvert
 
   public function GetTypeCode() : TypeCode;
 
-  public static function Parse(s:String, provider:IFormatProvider) : Int;
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Int {})
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Int {})
+  @:overload(function(s:String, provider:IFormatProvider) : Int {})
+  public static function Parse(s:String) : Int;
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
@@ -42,6 +45,7 @@ extern class Int16 extends ValueType  implements IComparable implements IConvert
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Int) : Bool {})
   public static function TryParse(s:String, result:Int) : Bool;
 }
 

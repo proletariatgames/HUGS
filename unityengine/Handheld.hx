@@ -10,9 +10,13 @@ extern class Handheld {
 
   public static function GetActivityIndicatorStyle() : Int;
 
-  public static function PlayFullScreenMovie(path:String, bgColor:Color, controlMode:FullScreenMovieControlMode, scalingMode:FullScreenMovieScalingMode) : Bool;
+  @:overload(function(path:String, bgColor:Color, controlMode:FullScreenMovieControlMode, scalingMode:FullScreenMovieScalingMode) : Bool {})
+  @:overload(function(path:String, bgColor:Color, controlMode:FullScreenMovieControlMode) : Bool {})
+  @:overload(function(path:String, bgColor:Color) : Bool {})
+  public static function PlayFullScreenMovie(path:String) : Bool;
 
-  public static function SetActivityIndicatorStyle(style:iOSActivityIndicatorStyle) : Void;
+  @:overload(function(style:iOSActivityIndicatorStyle) : Void {})
+  public static function SetActivityIndicatorStyle(style:AndroidActivityIndicatorStyle) : Void;
 
   public static function StartActivityIndicator() : Void;
 

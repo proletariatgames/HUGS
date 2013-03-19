@@ -5,6 +5,7 @@ extern class WebHeaderCollection extends dotnet.system.collections.specialized.N
 
   public function new() : Void;
 
+  @:overload(function(headerName:String, response:Bool) : Bool {})
   public static function IsRestricted(headerName:String) : Bool;
 
   public function ToByteArray() : cs.NativeArray<dotnet.system.Byte>;

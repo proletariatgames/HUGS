@@ -28,15 +28,24 @@ extern class Network {
 
   public static function CloseConnection(target:NetworkPlayer, sendDisconnectionNotification:Bool) : Void;
 
-  public static function Connect(IP:String, remotePort:Int) : NetworkConnectionError;
+  @:overload(function(IPs:cs.NativeArray<String>, remotePort:Int, password:String) : NetworkConnectionError {})
+  @:overload(function(IP:String, remotePort:Int, password:String) : NetworkConnectionError {})
+  @:overload(function(IPs:cs.NativeArray<String>, remotePort:Int) : NetworkConnectionError {})
+  @:overload(function(IP:String, remotePort:Int) : NetworkConnectionError {})
+  @:overload(function(hostData:HostData, password:String) : NetworkConnectionError {})
+  @:overload(function(GUID:String, password:String) : NetworkConnectionError {})
+  @:overload(function(hostData:HostData) : NetworkConnectionError {})
+  public static function Connect(GUID:String) : NetworkConnectionError;
 
   public function new() : Void;
 
-  public static function Destroy(viewID:NetworkViewID) : Void;
+  @:overload(function(viewID:NetworkViewID) : Void {})
+  public static function Destroy(gameObject:GameObject) : Void;
 
   public static function DestroyPlayerObjects(playerID:NetworkPlayer) : Void;
 
-  public static function Disconnect(timeout:Int) : Void;
+  @:overload(function(timeout:Int) : Void {})
+  public static function Disconnect() : Void;
 
   public static function GetAveragePing(player:NetworkPlayer) : Int;
 
@@ -46,10 +55,13 @@ extern class Network {
 
   public static function InitializeSecurity() : Void;
 
-  public static function InitializeServer(connections:Int, listenPort:Int, useNat:Bool) : NetworkConnectionError;
+  @:overload(function(connections:Int, listenPort:Int, useNat:Bool) : NetworkConnectionError {})
+  public static function InitializeServer(connections:Int, listenPort:Int) : NetworkConnectionError;
 
   public static function Instantiate(prefab:Object, position:Vector3, rotation:Quaternion, group:Int) : Object;
 
+  @:overload(function(playerID:NetworkPlayer, group:Int) : Void {})
+  @:overload(function(viewID:NetworkViewID) : Void {})
   public static function RemoveRPCs(playerID:NetworkPlayer) : Void;
 
   public static function RemoveRPCsInGroup(group:Int) : Void;
@@ -58,10 +70,13 @@ extern class Network {
 
   public static function SetReceivingEnabled(player:NetworkPlayer, group:Int, enabled:Bool) : Void;
 
+  @:overload(function(player:NetworkPlayer, group:Int, enabled:Bool) : Void {})
   public static function SetSendingEnabled(group:Int, enabled:Bool) : Void;
 
-  public static function TestConnection(forceTest:Bool) : ConnectionTesterStatus;
+  @:overload(function(forceTest:Bool) : ConnectionTesterStatus {})
+  public static function TestConnection() : ConnectionTesterStatus;
 
-  public static function TestConnectionNAT(forceTest:Bool) : ConnectionTesterStatus;
+  @:overload(function(forceTest:Bool) : ConnectionTesterStatus {})
+  public static function TestConnectionNAT() : ConnectionTesterStatus;
 }
 

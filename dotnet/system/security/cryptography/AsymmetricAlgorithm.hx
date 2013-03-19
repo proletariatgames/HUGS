@@ -5,6 +5,7 @@ extern class AsymmetricAlgorithm extends dotnet.system.Object  implements dotnet
 
   public function Clear() : Void;
 
+  @:overload(function(algName:String) : AsymmetricAlgorithm {})
   public static function Create() : AsymmetricAlgorithm;
 
 }

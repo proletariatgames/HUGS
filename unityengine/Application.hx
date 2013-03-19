@@ -38,9 +38,11 @@ extern class Application {
 
   public static function CancelQuit() : Void;
 
+  @:overload(function(levelName:String) : Bool {})
   public static function CanStreamedLevelBeLoaded(levelIndex:Int) : Bool;
 
-  public static function CaptureScreenshot(filename:String, superSize:Int) : Void;
+  @:overload(function(filename:String, superSize:Int) : Void {})
+  public static function CaptureScreenshot(filename:String) : Void;
 
   public static function CommitSuicide(mode:Int) : Void;
 
@@ -52,18 +54,23 @@ extern class Application {
 
   public static function ExternalEval(script:String) : Void;
 
+  @:overload(function(levelName:String) : Float {})
   public static function GetStreamProgressForLevel(levelIndex:Int) : Float;
 
   public static function HasProLicense() : Bool;
 
   public static function HasUserAuthorization(mode:UserAuthorization) : Bool;
 
+  @:overload(function(name:String) : Void {})
   public static function LoadLevel(index:Int) : Void;
 
+  @:overload(function(name:String) : Void {})
   public static function LoadLevelAdditive(index:Int) : Void;
 
+  @:overload(function(levelName:String) : AsyncOperation {})
   public static function LoadLevelAdditiveAsync(index:Int) : AsyncOperation;
 
+  @:overload(function(levelName:String) : AsyncOperation {})
   public static function LoadLevelAsync(index:Int) : AsyncOperation;
 
   public static function OpenURL(url:String) : Void;
