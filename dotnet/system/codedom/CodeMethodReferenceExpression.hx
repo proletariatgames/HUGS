@@ -4,7 +4,7 @@ package dotnet.system.codedom;
 extern class CodeMethodReferenceExpression extends CodeExpression {
   public var MethodName : String;
   public var TargetObject : CodeExpression;
-  @:skipReflection public var TypeArguments(default,never) : CodeTypeReferenceCollection;
+  public var TypeArguments(default,never) : CodeTypeReferenceCollection;
 
   @:overload(function(targetObject:CodeExpression, methodName:String, typeParameters:cs.NativeArray<CodeTypeReference>) : Void {})
   @:overload(function(targetObject:CodeExpression, methodName:String) : Void {})

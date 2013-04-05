@@ -2,7 +2,7 @@ package dotnet.system.xml.serialization;
 
 @:native("System.Xml.Serialization.XmlSerializerNamespaces")
 extern class XmlSerializerNamespaces extends dotnet.system.Object {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   public function Add(prefix:String, ns:String) : Void;
 

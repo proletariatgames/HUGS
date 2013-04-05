@@ -5,7 +5,7 @@ extern class DataObjectAttribute extends dotnet.system.Attribute {
   public static var DataObject : DataObjectAttribute;
   public static var Default : DataObjectAttribute;
   public static var NonDataObject : DataObjectAttribute;
-  @:skipReflection public var IsDataObject(default,never) : Bool;
+  public var IsDataObject(default,never) : Bool;
 
   @:overload(function(isDataObject:Bool) : Void {})
   public function new() : Void;

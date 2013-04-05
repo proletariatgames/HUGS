@@ -3,10 +3,10 @@ package dotnet.system.security.accesscontrol;
 @:native("System.Security.AccessControl.CommonSecurityDescriptor") @:final
 extern class CommonSecurityDescriptor extends GenericSecurityDescriptor {
   public var DiscretionaryAcl : DiscretionaryAcl;
-  @:skipReflection public var IsContainer(default,never) : Bool;
-  @:skipReflection public var IsDiscretionaryAclCanonical(default,never) : Bool;
-  @:skipReflection public var IsDS(default,never) : Bool;
-  @:skipReflection public var IsSystemAclCanonical(default,never) : Bool;
+  public var IsContainer(default,never) : Bool;
+  public var IsDiscretionaryAclCanonical(default,never) : Bool;
+  public var IsDS(default,never) : Bool;
+  public var IsSystemAclCanonical(default,never) : Bool;
   public var SystemAcl : SystemAcl;
 
   @:overload(function(isContainer:Bool, isDS:Bool, flags:ControlFlags, owner:dotnet.system.security.principal.SecurityIdentifier, group:dotnet.system.security.principal.SecurityIdentifier, systemAcl:SystemAcl, discretionaryAcl:DiscretionaryAcl) : Void {})

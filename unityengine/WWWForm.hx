@@ -2,8 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.WWWForm") @:final
 extern class WWWForm {
-  @:skipReflection public var headers(default,never) : dotnet.system.collections.Hashtable;
-  @:skipReflection public var data(default,never) : cs.NativeArray<dotnet.system.Byte>;
+  public var headers(default,never) : dotnet.system.collections.Hashtable;
+  public var data(default,never) : cs.NativeArray<dotnet.system.Byte>;
 
   @:overload(function(fieldName:String, contents:cs.NativeArray<dotnet.system.Byte>, fileName:String, mimeType:String) : Void {})
   @:overload(function(fieldName:String, contents:cs.NativeArray<dotnet.system.Byte>, fileName:String) : Void {})

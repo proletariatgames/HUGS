@@ -3,20 +3,20 @@ package dotnet.system.security.cryptography.x509certificates;
 @:native("System.Security.Cryptography.X509Certificates.X509Certificate2")
 extern class X509Certificate2 extends X509Certificate {
   public var Archived : Bool;
-  @:skipReflection public var Extensions(default,never) : X509ExtensionCollection;
+  public var Extensions(default,never) : X509ExtensionCollection;
   public var FriendlyName : String;
-  @:skipReflection public var HasPrivateKey(default,never) : Bool;
-  @:skipReflection public var IssuerName(default,never) : X500DistinguishedName;
-  @:skipReflection public var NotAfter(default,never) : dotnet.system.DateTime;
-  @:skipReflection public var NotBefore(default,never) : dotnet.system.DateTime;
+  public var HasPrivateKey(default,never) : Bool;
+  public var IssuerName(default,never) : X500DistinguishedName;
+  public var NotAfter(default,never) : dotnet.system.DateTime;
+  public var NotBefore(default,never) : dotnet.system.DateTime;
   public var PrivateKey : dotnet.system.security.cryptography.AsymmetricAlgorithm;
-  @:skipReflection public var PublicKey(default,never) : PublicKey;
-  @:skipReflection public var RawData(default,never) : cs.NativeArray<dotnet.system.Byte>;
-  @:skipReflection public var SerialNumber(default,never) : String;
-  @:skipReflection public var SignatureAlgorithm(default,never) : dotnet.system.security.cryptography.Oid;
-  @:skipReflection public var SubjectName(default,never) : X500DistinguishedName;
-  @:skipReflection public var Thumbprint(default,never) : String;
-  @:skipReflection public var Version(default,never) : Int;
+  public var PublicKey(default,never) : PublicKey;
+  public var RawData(default,never) : cs.NativeArray<dotnet.system.Byte>;
+  public var SerialNumber(default,never) : String;
+  public var SignatureAlgorithm(default,never) : dotnet.system.security.cryptography.Oid;
+  public var SubjectName(default,never) : X500DistinguishedName;
+  public var Thumbprint(default,never) : String;
+  public var Version(default,never) : Int;
 
   @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})
   @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})

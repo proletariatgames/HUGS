@@ -4,12 +4,12 @@ package dotnet.system.reflection;
 extern class Module extends dotnet.system.Object  implements ICustomAttributeProvider implements dotnet.system.runtime.interopservices._Module implements dotnet.system.runtime.serialization.ISerializable {
   public static var FilterTypeName : TypeFilter;
   public static var FilterTypeNameIgnoreCase : TypeFilter;
-  @:skipReflection public var ModuleHandle(default,never) : dotnet.system.ModuleHandle;
-  @:skipReflection public var Assembly(default,never) : Assembly;
-  @:skipReflection public var Name(default,never) : String;
-  @:skipReflection public var ScopeName(default,never) : String;
-  @:skipReflection public var MDStreamVersion(default,never) : Int;
-  @:skipReflection public var ModuleVersionId(default,never) : dotnet.system.Guid;
+  public var ModuleHandle(default,never) : dotnet.system.ModuleHandle;
+  public var Assembly(default,never) : Assembly;
+  public var Name(default,never) : String;
+  public var ScopeName(default,never) : String;
+  public var MDStreamVersion(default,never) : Int;
+  public var ModuleVersionId(default,never) : dotnet.system.Guid;
 
   @:overload(function(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
   public function GetCustomAttributes(inherit:Bool) : cs.NativeArray<dotnet.system.Object>;

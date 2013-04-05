@@ -2,7 +2,7 @@ package dotnet.system.collections.generic;
 
 @:native("System.Collections.Generic.HashSet.Enumerator") @:final
 extern class HashSet_Enumerator<T> extends dotnet.system.ValueType  implements dotnet.system.IDisposable implements dotnet.system.collections.IEnumerator {
-  @:skipReflection public var Current(default,never) : T;
+  public var Current(default,never) : T;
 
   public function Dispose() : Void;
 
@@ -13,8 +13,8 @@ extern class HashSet_Enumerator<T> extends dotnet.system.ValueType  implements d
 
 @:native("System.Collections.Generic.HashSet")
 extern class HashSet<T> extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var Comparer(default,never) : IEqualityComparer<T>;
+  public var Count(default,never) : Int;
+  public var Comparer(default,never) : IEqualityComparer<T>;
 
   public function Add(item:T) : Bool;
 

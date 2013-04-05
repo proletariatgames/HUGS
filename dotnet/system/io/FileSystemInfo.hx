@@ -2,7 +2,7 @@ package dotnet.system.io;
 
 @:native("System.IO.FileSystemInfo")
 extern class FileSystemInfo extends dotnet.system.MarshalByRefObject  implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var Extension(default,never) : String;
+  public var Extension(default,never) : String;
   public var Attributes : FileAttributes;
   public var CreationTime : dotnet.system.DateTime;
   public var CreationTimeUtc : dotnet.system.DateTime;

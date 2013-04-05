@@ -2,12 +2,12 @@ package dotnet.system.configuration;
 
 @:native("System.Configuration.ConfigurationSectionGroup")
 extern class ConfigurationSectionGroup extends dotnet.system.Object {
-  @:skipReflection public var IsDeclared(default,never) : Bool;
-  @:skipReflection public var IsDeclarationRequired(default,never) : Bool;
-  @:skipReflection public var Name(default,never) : String;
-  @:skipReflection public var SectionGroupName(default,never) : String;
-  @:skipReflection public var SectionGroups(default,never) : ConfigurationSectionGroupCollection;
-  @:skipReflection public var Sections(default,never) : ConfigurationSectionCollection;
+  public var IsDeclared(default,never) : Bool;
+  public var IsDeclarationRequired(default,never) : Bool;
+  public var Name(default,never) : String;
+  public var SectionGroupName(default,never) : String;
+  public var SectionGroups(default,never) : ConfigurationSectionGroupCollection;
+  public var Sections(default,never) : ConfigurationSectionCollection;
   public var Type : String;
 
   public function new() : Void;

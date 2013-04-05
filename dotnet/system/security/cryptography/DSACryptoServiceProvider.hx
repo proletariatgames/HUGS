@@ -3,9 +3,9 @@ package dotnet.system.security.cryptography;
 @:native("System.Security.Cryptography.DSACryptoServiceProvider") @:final
 extern class DSACryptoServiceProvider extends DSA  implements ICspAsymmetricAlgorithm {
   public var PersistKeyInCsp : Bool;
-  @:skipReflection public var PublicOnly(default,never) : Bool;
+  public var PublicOnly(default,never) : Bool;
   public static var UseMachineKeyStore : Bool;
-  @:skipReflection public var CspKeyContainerInfo(default,never) : CspKeyContainerInfo;
+  public var CspKeyContainerInfo(default,never) : CspKeyContainerInfo;
 
   @:overload(function(dwKeySize:Int, parameters:CspParameters) : Void {})
   @:overload(function(parameters:CspParameters) : Void {})

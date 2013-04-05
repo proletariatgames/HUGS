@@ -2,8 +2,8 @@ package dotnet.system.net;
 
 @:native("System.Net.CredentialCache")
 extern class CredentialCache extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable implements ICredentials implements ICredentialsByHost {
-  @:skipReflection public static var DefaultCredentials(default,never) : ICredentials;
-  @:skipReflection public static var DefaultNetworkCredentials(default,never) : NetworkCredential;
+  public static var DefaultCredentials(default,never) : ICredentials;
+  public static var DefaultNetworkCredentials(default,never) : NetworkCredential;
 
   @:overload(function(host:String, port:Int, authenticationType:String, credential:NetworkCredential) : Void {})
   public function Add(uriPrefix:dotnet.system.Uri, authType:String, cred:NetworkCredential) : Void;

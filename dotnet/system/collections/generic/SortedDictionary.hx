@@ -2,7 +2,7 @@ package dotnet.system.collections.generic;
 
 @:native("System.Collections.Generic.SortedDictionary.ValueCollection.Enumerator") @:final
 extern class SortedDictionary_ValueCollection_Enumerator<TKey,TValue> extends dotnet.system.ValueType  implements dotnet.system.collections.IEnumerator implements dotnet.system.IDisposable {
-  @:skipReflection public var Current(default,never) : TValue;
+  public var Current(default,never) : TValue;
 
   public function Dispose() : Void;
 
@@ -13,7 +13,7 @@ extern class SortedDictionary_ValueCollection_Enumerator<TKey,TValue> extends do
 
 @:native("System.Collections.Generic.SortedDictionary.ValueCollection") @:final
 extern class SortedDictionary_ValueCollection<TKey,TValue> extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   function Add(item:TValue) : Void;
 
@@ -32,7 +32,7 @@ extern class SortedDictionary_ValueCollection<TKey,TValue> extends dotnet.system
 
 @:native("System.Collections.Generic.SortedDictionary.KeyCollection.Enumerator") @:final
 extern class SortedDictionary_KeyCollection_Enumerator<TKey,TValue> extends dotnet.system.ValueType  implements dotnet.system.collections.IEnumerator implements dotnet.system.IDisposable {
-  @:skipReflection public var Current(default,never) : TKey;
+  public var Current(default,never) : TKey;
 
   public function Dispose() : Void;
 
@@ -43,7 +43,7 @@ extern class SortedDictionary_KeyCollection_Enumerator<TKey,TValue> extends dotn
 
 @:native("System.Collections.Generic.SortedDictionary.KeyCollection") @:final
 extern class SortedDictionary_KeyCollection<TKey,TValue> extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   function Add(item:TKey) : Void;
 
@@ -62,7 +62,7 @@ extern class SortedDictionary_KeyCollection<TKey,TValue> extends dotnet.system.O
 
 @:native("System.Collections.Generic.SortedDictionary.Enumerator") @:final
 extern class SortedDictionary_Enumerator<TKey,TValue> extends dotnet.system.ValueType  implements dotnet.system.collections.IEnumerator implements dotnet.system.IDisposable implements dotnet.system.collections.IDictionaryEnumerator {
-  @:skipReflection public var Current(default,never) : KeyValuePair<TKey,TValue>;
+  public var Current(default,never) : KeyValuePair<TKey,TValue>;
 
   public function Dispose() : Void;
 
@@ -73,10 +73,10 @@ extern class SortedDictionary_Enumerator<TKey,TValue> extends dotnet.system.Valu
 
 @:native("System.Collections.Generic.SortedDictionary")
 extern class SortedDictionary<TKey,TValue> extends dotnet.system.Object  implements dotnet.system.collections.IDictionary implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var Comparer(default,never) : IComparer<TKey>;
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var Keys(default,never) : SortedDictionary_KeyCollection<TKey,TValue>;
-  @:skipReflection public var Values(default,never) : SortedDictionary_ValueCollection<TKey,TValue>;
+  public var Comparer(default,never) : IComparer<TKey>;
+  public var Count(default,never) : Int;
+  public var Keys(default,never) : SortedDictionary_KeyCollection<TKey,TValue>;
+  public var Values(default,never) : SortedDictionary_ValueCollection<TKey,TValue>;
 
   public function Add(key:TKey, value:TValue) : Void;
 

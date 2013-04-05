@@ -3,7 +3,7 @@ package dotnet.system.codedom;
 @:native("System.CodeDom.CodeArrayCreateExpression")
 extern class CodeArrayCreateExpression extends CodeExpression {
   public var CreateType : CodeTypeReference;
-  @:skipReflection public var Initializers(default,never) : CodeExpressionCollection;
+  public var Initializers(default,never) : CodeExpressionCollection;
   public var SizeExpression : CodeExpression;
   public var Size : Int;
 

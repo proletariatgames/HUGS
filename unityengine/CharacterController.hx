@@ -2,9 +2,9 @@ package unityengine;
 
 @:native("UnityEngine.CharacterController") @:final
 extern class CharacterController extends Collider {
-  @:skipReflection public var isGrounded(default,never) : Bool;
-  @:skipReflection public var velocity(default,never) : Vector3;
-  @:skipReflection public var collisionFlags(default,never) : CollisionFlags;
+  public var isGrounded(default,never) : Bool;
+  public var velocity(default,never) : Vector3;
+  public var collisionFlags(default,never) : CollisionFlags;
   public var radius : Float;
   public var height : Float;
   public var center : Vector3;

@@ -2,10 +2,10 @@ package dotnet.system.componentmodel;
 
 @:native("System.ComponentModel.ListChangedEventArgs")
 extern class ListChangedEventArgs extends dotnet.system.EventArgs {
-  @:skipReflection public var ListChangedType(default,never) : ListChangedType;
-  @:skipReflection public var OldIndex(default,never) : Int;
-  @:skipReflection public var NewIndex(default,never) : Int;
-  @:skipReflection public var PropertyDescriptor(default,never) : PropertyDescriptor;
+  public var ListChangedType(default,never) : ListChangedType;
+  public var OldIndex(default,never) : Int;
+  public var NewIndex(default,never) : Int;
+  public var PropertyDescriptor(default,never) : PropertyDescriptor;
 
   @:overload(function(listChangedType:ListChangedType, newIndex:Int, propDesc:PropertyDescriptor) : Void {})
   @:overload(function(listChangedType:ListChangedType, newIndex:Int, oldIndex:Int) : Void {})

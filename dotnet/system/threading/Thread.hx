@@ -2,20 +2,20 @@ package dotnet.system.threading;
 
 @:native("System.Threading.Thread") @:final
 extern class Thread extends dotnet.system.runtime.constrainedexecution.CriticalFinalizerObject  implements dotnet.system.runtime.interopservices._Thread {
-  @:skipReflection public static var CurrentContext(default,never) : dotnet.system.runtime.remoting.contexts.Context;
+  public static var CurrentContext(default,never) : dotnet.system.runtime.remoting.contexts.Context;
   public static var CurrentPrincipal : dotnet.system.security.principal.IPrincipal;
-  @:skipReflection public static var CurrentThread(default,never) : Thread;
+  public static var CurrentThread(default,never) : Thread;
   public var ApartmentState : ApartmentState;
   public var CurrentCulture : dotnet.system.globalization.CultureInfo;
   public var CurrentUICulture : dotnet.system.globalization.CultureInfo;
-  @:skipReflection public var IsThreadPoolThread(default,never) : Bool;
-  @:skipReflection public var IsAlive(default,never) : Bool;
+  public var IsThreadPoolThread(default,never) : Bool;
+  public var IsAlive(default,never) : Bool;
   public var IsBackground : Bool;
   public var Name : String;
   public var Priority : ThreadPriority;
-  @:skipReflection public var ThreadState(default,never) : ThreadState;
-  @:skipReflection public var ExecutionContext(default,never) : ExecutionContext;
-  @:skipReflection public var ManagedThreadId(default,never) : Int;
+  public var ThreadState(default,never) : ThreadState;
+  public var ExecutionContext(default,never) : ExecutionContext;
+  public var ManagedThreadId(default,never) : Int;
 
   @:overload(function(stateInfo:Dynamic) : Void {})
   public function Abort() : Void;

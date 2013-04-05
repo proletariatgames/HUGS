@@ -3,7 +3,7 @@ package dotnet.system;
 @:native("System.UIntPtr") @:final
 extern class UIntPtr extends ValueType  implements dotnet.system.runtime.serialization.ISerializable {
   public static var Zero : UIntPtr;
-  @:skipReflection public static var Size(default,never) : Int;
+  public static var Size(default,never) : Int;
 
   @:overload(function(value:Void) : Void {})
   @:overload(function(value:UInt64) : Void {})

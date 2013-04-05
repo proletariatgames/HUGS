@@ -4,7 +4,7 @@ package dotnet.system.diagnostics;
 extern class ProcessStartInfo extends dotnet.system.Object {
   public var Arguments : String;
   public var CreateNoWindow : Bool;
-  @:skipReflection public var EnvironmentVariables(default,never) : dotnet.system.collections.specialized.StringDictionary;
+  public var EnvironmentVariables(default,never) : dotnet.system.collections.specialized.StringDictionary;
   public var ErrorDialog : Bool;
   public var ErrorDialogParentHandle : dotnet.system.IntPtr;
   public var FileName : String;
@@ -15,7 +15,7 @@ extern class ProcessStartInfo extends dotnet.system.Object {
   public var StandardOutputEncoding : dotnet.system.text.Encoding;
   public var UseShellExecute : Bool;
   public var Verb : String;
-  @:skipReflection public var Verbs(default,never) : cs.NativeArray<String>;
+  public var Verbs(default,never) : cs.NativeArray<String>;
   public var WindowStyle : ProcessWindowStyle;
   public var WorkingDirectory : String;
   public var LoadUserProfile : Bool;

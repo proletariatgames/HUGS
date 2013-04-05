@@ -2,7 +2,7 @@ package dotnet.system.reflection.emit;
 
 @:native("System.Reflection.Emit.PropertyBuilder") @:final
 extern class PropertyBuilder extends dotnet.system.reflection.PropertyInfo  implements dotnet.system.runtime.interopservices._PropertyBuilder {
-  @:skipReflection public var PropertyToken(default,never) : PropertyToken;
+  public var PropertyToken(default,never) : PropertyToken;
 
   public function AddOtherMethod(mdBuilder:MethodBuilder) : Void;
 

@@ -2,9 +2,9 @@ package dotnet.system.security;
 
 @:native("System.Security.PermissionSet")
 extern class PermissionSet extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.runtime.serialization.IDeserializationCallback implements ISecurityEncodable implements IStackWalk {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var IsSynchronized(default,never) : Bool;
-  @:skipReflection public var SyncRoot(default,never) : Dynamic;
+  public var Count(default,never) : Int;
+  public var IsSynchronized(default,never) : Bool;
+  public var SyncRoot(default,never) : Dynamic;
 
   public function AddPermission(perm:IPermission) : IPermission;
 

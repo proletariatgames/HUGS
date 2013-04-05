@@ -2,13 +2,13 @@ package dotnet.system.collections.specialized;
 
 @:native("System.Collections.Specialized.HybridDictionary")
 extern class HybridDictionary extends dotnet.system.Object  implements dotnet.system.collections.IDictionary implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var IsFixedSize(default,never) : Bool;
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
-  @:skipReflection public var IsSynchronized(default,never) : Bool;
-  @:skipReflection public var Keys(default,never) : dotnet.system.collections.ICollection;
-  @:skipReflection public var SyncRoot(default,never) : Dynamic;
-  @:skipReflection public var Values(default,never) : dotnet.system.collections.ICollection;
+  public var Count(default,never) : Int;
+  public var IsFixedSize(default,never) : Bool;
+  public var IsReadOnly(default,never) : Bool;
+  public var IsSynchronized(default,never) : Bool;
+  public var Keys(default,never) : dotnet.system.collections.ICollection;
+  public var SyncRoot(default,never) : Dynamic;
+  public var Values(default,never) : dotnet.system.collections.ICollection;
 
   public function Add(key:Dynamic, value:Dynamic) : Void;
 

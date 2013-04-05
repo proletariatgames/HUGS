@@ -2,7 +2,7 @@ package dotnet.system;
 
 @:native("System.GC") @:final
 extern class GC extends Object {
-  @:skipReflection public static var MaxGeneration(default,never) : Int;
+  public static var MaxGeneration(default,never) : Int;
 
   public static function AddMemoryPressure(bytesAllocated:Int64) : Void;
 

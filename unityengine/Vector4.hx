@@ -7,11 +7,11 @@ extern class Vector4 {
   public var y : Float;
   public var z : Float;
   public var w : Float;
-  @:skipReflection public var normalized(default,never) : Vector4;
-  @:skipReflection public var magnitude(default,never) : Float;
-  @:skipReflection public var sqrMagnitude(default,never) : Float;
-  @:skipReflection public static var zero(default,never) : Vector4;
-  @:skipReflection public static var one(default,never) : Vector4;
+  public var normalized(default,never) : Vector4;
+  public var magnitude(default,never) : Float;
+  public var sqrMagnitude(default,never) : Float;
+  public static var zero(default,never) : Vector4;
+  public static var one(default,never) : Vector4;
 
   @:overload(function(x:Float, y:Float, z:Float, w:Float) : Void {})
   @:overload(function(x:Float, y:Float, z:Float) : Void {})

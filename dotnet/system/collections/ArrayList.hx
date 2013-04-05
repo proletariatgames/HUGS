@@ -2,11 +2,11 @@ package dotnet.system.collections;
 
 @:native("System.Collections.ArrayList")
 extern class ArrayList extends dotnet.system.Object  implements dotnet.system.ICloneable implements ICollection implements IEnumerable implements IList {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var IsFixedSize(default,never) : Bool;
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
-  @:skipReflection public var IsSynchronized(default,never) : Bool;
-  @:skipReflection public var SyncRoot(default,never) : Dynamic;
+  public var Count(default,never) : Int;
+  public var IsFixedSize(default,never) : Bool;
+  public var IsReadOnly(default,never) : Bool;
+  public var IsSynchronized(default,never) : Bool;
+  public var SyncRoot(default,never) : Dynamic;
 
   public static function Adapter(list:IList) : ArrayList;
 

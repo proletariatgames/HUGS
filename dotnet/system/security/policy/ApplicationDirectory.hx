@@ -2,7 +2,7 @@ package dotnet.system.security.policy;
 
 @:native("System.Security.Policy.ApplicationDirectory") @:final
 extern class ApplicationDirectory extends dotnet.system.Object {
-  @:skipReflection public var Directory(default,never) : String;
+  public var Directory(default,never) : String;
 
   public function Copy() : Dynamic;
 

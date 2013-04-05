@@ -2,7 +2,7 @@ package dotnet.system.text;
 
 @:native("System.Text.StringBuilder") @:final
 extern class StringBuilder extends dotnet.system.Object  implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var MaxCapacity(default,never) : Int;
+  public var MaxCapacity(default,never) : Int;
   public var Capacity : Int;
   public var Length : Int;
 

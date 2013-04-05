@@ -2,7 +2,7 @@ package dotnet.system.runtime.interopservices;
 
 @:native("System.Runtime.InteropServices.RuntimeEnvironment")
 extern class RuntimeEnvironment extends dotnet.system.Object {
-  @:skipReflection public static var SystemConfigurationFile(default,never) : String;
+  public static var SystemConfigurationFile(default,never) : String;
 
   public function new() : Void;
 

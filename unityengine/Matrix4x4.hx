@@ -18,11 +18,11 @@ extern class Matrix4x4 {
   public var m13 : Float;
   public var m23 : Float;
   public var m33 : Float;
-  @:skipReflection public var inverse(default,never) : Matrix4x4;
-  @:skipReflection public var transpose(default,never) : Matrix4x4;
-  @:skipReflection public var isIdentity(default,never) : Bool;
-  @:skipReflection public static var zero(default,never) : Matrix4x4;
-  @:skipReflection public static var identity(default,never) : Matrix4x4;
+  public var inverse(default,never) : Matrix4x4;
+  public var transpose(default,never) : Matrix4x4;
+  public var isIdentity(default,never) : Bool;
+  public static var zero(default,never) : Matrix4x4;
+  public static var identity(default,never) : Matrix4x4;
 
   public function GetColumn(i:Int) : Vector4;
 

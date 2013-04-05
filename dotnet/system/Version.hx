@@ -2,12 +2,12 @@ package dotnet.system;
 
 @:native("System.Version") @:final
 extern class Version extends Object  implements ICloneable implements IComparable {
-  @:skipReflection public var Build(default,never) : Int;
-  @:skipReflection public var Major(default,never) : Int;
-  @:skipReflection public var Minor(default,never) : Int;
-  @:skipReflection public var Revision(default,never) : Int;
-  @:skipReflection public var MajorRevision(default,never) : Int;
-  @:skipReflection public var MinorRevision(default,never) : Int;
+  public var Build(default,never) : Int;
+  public var Major(default,never) : Int;
+  public var Minor(default,never) : Int;
+  public var Revision(default,never) : Int;
+  public var MajorRevision(default,never) : Int;
+  public var MinorRevision(default,never) : Int;
 
   public function Clone() : Dynamic;
 

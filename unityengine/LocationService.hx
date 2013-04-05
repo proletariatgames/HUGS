@@ -2,9 +2,9 @@ package unityengine;
 
 @:native("UnityEngine.LocationService") @:final
 extern class LocationService {
-  @:skipReflection public var isEnabledByUser(default,never) : Bool;
-  @:skipReflection public var status(default,never) : LocationServiceStatus;
-  @:skipReflection public var lastData(default,never) : LocationInfo;
+  public var isEnabledByUser(default,never) : Bool;
+  public var status(default,never) : LocationServiceStatus;
+  public var lastData(default,never) : LocationInfo;
 
   public function new() : Void;
 

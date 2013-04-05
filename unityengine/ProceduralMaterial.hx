@@ -4,10 +4,10 @@ package unityengine;
 extern class ProceduralMaterial extends Material {
   public var cacheSize : ProceduralCacheSize;
   public var animationUpdateRate : Int;
-  @:skipReflection public var isProcessing(default,never) : Bool;
+  public var isProcessing(default,never) : Bool;
   public var isLoadTimeGenerated : Bool;
-  @:skipReflection public var loadingBehavior(default,never) : ProceduralLoadingBehavior;
-  @:skipReflection public static var isSupported(default,never) : Bool;
+  public var loadingBehavior(default,never) : ProceduralLoadingBehavior;
+  public static var isSupported(default,never) : Bool;
   public static var substanceProcessorUsage : ProceduralProcessorUsage;
   public var preset : String;
   public var isReadable : Bool;

@@ -2,7 +2,7 @@ package dotnet.system.io;
 
 @:native("System.IO.FileStream")
 extern class FileStream extends Stream {
-  @:skipReflection public var Name(default,never) : String;
+  public var Name(default,never) : String;
 
   @:overload(function(path:String, mode:FileMode, rights:dotnet.system.security.accesscontrol.FileSystemRights, share:FileShare, bufferSize:Int, options:FileOptions, fileSecurity:dotnet.system.security.accesscontrol.FileSecurity) : Void {})
   @:overload(function(path:String, mode:FileMode, rights:dotnet.system.security.accesscontrol.FileSystemRights, share:FileShare, bufferSize:Int, options:FileOptions) : Void {})

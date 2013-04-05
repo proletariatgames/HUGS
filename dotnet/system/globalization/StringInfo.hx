@@ -2,7 +2,7 @@ package dotnet.system.globalization;
 
 @:native("System.Globalization.StringInfo")
 extern class StringInfo extends dotnet.system.Object {
-  @:skipReflection public var LengthInTextElements(default,never) : Int;
+  public var LengthInTextElements(default,never) : Int;
   public var String : String;
 
   @:overload(function(value:String) : Void {})

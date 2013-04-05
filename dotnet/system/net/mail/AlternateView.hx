@@ -3,7 +3,7 @@ package dotnet.system.net.mail;
 @:native("System.Net.Mail.AlternateView")
 extern class AlternateView extends AttachmentBase {
   public var BaseUri : dotnet.system.Uri;
-  @:skipReflection public var LinkedResources(default,never) : LinkedResourceCollection;
+  public var LinkedResources(default,never) : LinkedResourceCollection;
 
   @:overload(function(content:String, encoding:dotnet.system.text.Encoding, mediaType:String) : AlternateView {})
   @:overload(function(content:String, contentType:dotnet.system.net.mime.ContentType) : AlternateView {})

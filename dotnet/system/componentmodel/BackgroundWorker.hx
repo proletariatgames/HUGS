@@ -5,8 +5,8 @@ extern class BackgroundWorker extends Component {
   public var DoWork(default,null) : dotnet.system.NativeEvent<DoWorkEventArgs>;
   public var ProgressChanged(default,null) : dotnet.system.NativeEvent<ProgressChangedEventArgs>;
   public var RunWorkerCompleted(default,null) : dotnet.system.NativeEvent<RunWorkerCompletedEventArgs>;
-  @:skipReflection public var CancellationPending(default,never) : Bool;
-  @:skipReflection public var IsBusy(default,never) : Bool;
+  public var CancellationPending(default,never) : Bool;
+  public var IsBusy(default,never) : Bool;
   public var WorkerReportsProgress : Bool;
   public var WorkerSupportsCancellation : Bool;
 

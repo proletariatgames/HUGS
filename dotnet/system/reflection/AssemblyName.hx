@@ -5,10 +5,10 @@ extern class AssemblyName extends dotnet.system.Object  implements dotnet.system
   public var ProcessorArchitecture : ProcessorArchitecture;
   public var Name : String;
   public var CodeBase : String;
-  @:skipReflection public var EscapedCodeBase(default,never) : String;
+  public var EscapedCodeBase(default,never) : String;
   public var CultureInfo : dotnet.system.globalization.CultureInfo;
   public var Flags : AssemblyNameFlags;
-  @:skipReflection public var FullName(default,never) : String;
+  public var FullName(default,never) : String;
   public var HashAlgorithm : dotnet.system.configuration.assemblies.AssemblyHashAlgorithm;
   public var KeyPair : StrongNameKeyPair;
   public var Version : dotnet.system.Version;

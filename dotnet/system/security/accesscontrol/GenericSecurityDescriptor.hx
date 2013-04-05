@@ -2,8 +2,8 @@ package dotnet.system.security.accesscontrol;
 
 @:native("System.Security.AccessControl.GenericSecurityDescriptor")
 extern class GenericSecurityDescriptor extends dotnet.system.Object {
-  @:skipReflection public var BinaryLength(default,never) : Int;
-  @:skipReflection public static var Revision(default,never) : UInt;
+  public var BinaryLength(default,never) : Int;
+  public static var Revision(default,never) : UInt;
 
   public function GetBinaryForm(binaryForm:cs.NativeArray<dotnet.system.Byte>, offset:Int) : Void;
 

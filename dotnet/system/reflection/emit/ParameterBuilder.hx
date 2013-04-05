@@ -2,9 +2,9 @@ package dotnet.system.reflection.emit;
 
 @:native("System.Reflection.Emit.ParameterBuilder")
 extern class ParameterBuilder extends dotnet.system.Object  implements dotnet.system.runtime.interopservices._ParameterBuilder {
-  @:skipReflection public var IsIn(default,never) : Bool;
-  @:skipReflection public var IsOut(default,never) : Bool;
-  @:skipReflection public var IsOptional(default,never) : Bool;
+  public var IsIn(default,never) : Bool;
+  public var IsOut(default,never) : Bool;
+  public var IsOptional(default,never) : Bool;
 
   function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
 

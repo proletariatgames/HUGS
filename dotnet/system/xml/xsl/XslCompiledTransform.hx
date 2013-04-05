@@ -2,8 +2,8 @@ package dotnet.system.xml.xsl;
 
 @:native("System.Xml.Xsl.XslCompiledTransform") @:final
 extern class XslCompiledTransform extends dotnet.system.Object {
-  @:skipReflection public var OutputSettings(default,never) : dotnet.system.xml.XmlWriterSettings;
-  @:skipReflection public var TemporaryFiles(default,never) : dotnet.system.codedom.compiler.TempFileCollection;
+  public var OutputSettings(default,never) : dotnet.system.xml.XmlWriterSettings;
+  public var TemporaryFiles(default,never) : dotnet.system.codedom.compiler.TempFileCollection;
 
   @:overload(function(enableDebug:Bool) : Void {})
   public function new() : Void;

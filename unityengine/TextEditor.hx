@@ -20,8 +20,8 @@ extern class TextEditor {
   public var scrollOffset : Vector2;
   public var graphicalCursorPos : Vector2;
   public var graphicalSelectCursorPos : Vector2;
-  @:skipReflection public var hasSelection(default,never) : Bool;
-  @:skipReflection public var SelectedText(default,never) : String;
+  public var hasSelection(default,never) : Bool;
+  public var SelectedText(default,never) : String;
 
   public function Backspace() : Bool;
 

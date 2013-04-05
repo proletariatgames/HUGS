@@ -4,7 +4,7 @@ package dotnet.system.codedom.compiler;
 extern class IndentedTextWriter extends dotnet.system.io.TextWriter {
   public static var DefaultTabString : String;
   public var Indent : Int;
-  @:skipReflection public var InnerWriter(default,never) : dotnet.system.io.TextWriter;
+  public var InnerWriter(default,never) : dotnet.system.io.TextWriter;
 
   @:overload(function(writer:dotnet.system.io.TextWriter, tabString:String) : Void {})
   public function new(writer:dotnet.system.io.TextWriter) : Void;

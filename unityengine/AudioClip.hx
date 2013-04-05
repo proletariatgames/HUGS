@@ -14,11 +14,11 @@ extern class AudioClip_PCMSetPositionCallback {
 
 @:native("UnityEngine.AudioClip") @:final
 extern class AudioClip extends Object {
-  @:skipReflection public var length(default,never) : Float;
-  @:skipReflection public var samples(default,never) : Int;
-  @:skipReflection public var channels(default,never) : Int;
-  @:skipReflection public var frequency(default,never) : Int;
-  @:skipReflection public var isReadyToPlay(default,never) : Bool;
+  public var length(default,never) : Float;
+  public var samples(default,never) : Int;
+  public var channels(default,never) : Int;
+  public var frequency(default,never) : Int;
+  public var isReadyToPlay(default,never) : Bool;
 
   @:overload(function(name:String, lengthSamples:Int, channels:Int, frequency:Int, _3D:Bool, stream:Bool, pcmreadercallback:AudioClip_PCMReaderCallback, pcmsetpositioncallback:AudioClip_PCMSetPositionCallback) : AudioClip {})
   @:overload(function(name:String, lengthSamples:Int, channels:Int, frequency:Int, _3D:Bool, stream:Bool, pcmreadercallback:AudioClip_PCMReaderCallback) : AudioClip {})

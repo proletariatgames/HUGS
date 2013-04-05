@@ -10,7 +10,7 @@ extern class InteractiveCloth extends Cloth {
   public var tearFactor : Float;
   public var attachmentTearFactor : Float;
   public var attachmentResponse : Float;
-  @:skipReflection public var isTeared(default,never) : Bool;
+  public var isTeared(default,never) : Bool;
 
   @:overload(function(force:Vector3, position:Vector3, radius:Float, mode:ForceMode) : Void {})
   public function AddForceAtPosition(force:Vector3, position:Vector3, radius:Float) : Void;

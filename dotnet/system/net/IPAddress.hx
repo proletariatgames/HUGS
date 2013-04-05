@@ -10,11 +10,11 @@ extern class IPAddress extends dotnet.system.Object {
   public static var IPv6Loopback : IPAddress;
   public static var IPv6None : IPAddress;
   public var Address : dotnet.system.Int64;
-  @:skipReflection public var IsIPv6LinkLocal(default,never) : Bool;
-  @:skipReflection public var IsIPv6SiteLocal(default,never) : Bool;
-  @:skipReflection public var IsIPv6Multicast(default,never) : Bool;
+  public var IsIPv6LinkLocal(default,never) : Bool;
+  public var IsIPv6SiteLocal(default,never) : Bool;
+  public var IsIPv6Multicast(default,never) : Bool;
   public var ScopeId : dotnet.system.Int64;
-  @:skipReflection public var AddressFamily(default,never) : dotnet.system.net.sockets.AddressFamily;
+  public var AddressFamily(default,never) : dotnet.system.net.sockets.AddressFamily;
 
   @:overload(function(address:cs.NativeArray<dotnet.system.Byte>, scopeId:dotnet.system.Int64) : Void {})
   @:overload(function(address:cs.NativeArray<dotnet.system.Byte>) : Void {})

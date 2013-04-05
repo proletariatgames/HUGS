@@ -2,23 +2,23 @@ package dotnet.system.componentmodel;
 
 @:native("System.ComponentModel.MaskedTextProvider")
 extern class MaskedTextProvider extends dotnet.system.Object  implements dotnet.system.ICloneable {
-  @:skipReflection public var AllowPromptAsInput(default,never) : Bool;
-  @:skipReflection public var AsciiOnly(default,never) : Bool;
-  @:skipReflection public var AssignedEditPositionCount(default,never) : Int;
-  @:skipReflection public var AvailableEditPositionCount(default,never) : Int;
-  @:skipReflection public var Culture(default,never) : dotnet.system.globalization.CultureInfo;
-  @:skipReflection public static var DefaultPasswordChar(default,never) : dotnet.system.Char;
-  @:skipReflection public var EditPositionCount(default,never) : Int;
-  @:skipReflection public var EditPositions(default,never) : dotnet.system.collections.IEnumerator;
+  public var AllowPromptAsInput(default,never) : Bool;
+  public var AsciiOnly(default,never) : Bool;
+  public var AssignedEditPositionCount(default,never) : Int;
+  public var AvailableEditPositionCount(default,never) : Int;
+  public var Culture(default,never) : dotnet.system.globalization.CultureInfo;
+  public static var DefaultPasswordChar(default,never) : dotnet.system.Char;
+  public var EditPositionCount(default,never) : Int;
+  public var EditPositions(default,never) : dotnet.system.collections.IEnumerator;
   public var IncludeLiterals : Bool;
   public var IncludePrompt : Bool;
-  @:skipReflection public static var InvalidIndex(default,never) : Int;
+  public static var InvalidIndex(default,never) : Int;
   public var IsPassword : Bool;
-  @:skipReflection public var LastAssignedPosition(default,never) : Int;
-  @:skipReflection public var Length(default,never) : Int;
-  @:skipReflection public var Mask(default,never) : String;
-  @:skipReflection public var MaskCompleted(default,never) : Bool;
-  @:skipReflection public var MaskFull(default,never) : Bool;
+  public var LastAssignedPosition(default,never) : Int;
+  public var Length(default,never) : Int;
+  public var Mask(default,never) : String;
+  public var MaskCompleted(default,never) : Bool;
+  public var MaskFull(default,never) : Bool;
   public var PasswordChar : dotnet.system.Char;
   public var PromptChar : dotnet.system.Char;
   public var ResetOnPrompt : Bool;

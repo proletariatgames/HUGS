@@ -3,7 +3,7 @@ package dotnet.system;
 @:native("System.ModuleHandle") @:final
 extern class ModuleHandle extends ValueType {
   public static var EmptyHandle : ModuleHandle;
-  @:skipReflection public var MDStreamVersion(default,never) : Int;
+  public var MDStreamVersion(default,never) : Int;
 
   public function GetRuntimeFieldHandleFromMetadataToken(fieldToken:Int) : RuntimeFieldHandle;
 

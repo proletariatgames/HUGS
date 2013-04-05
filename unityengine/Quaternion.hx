@@ -7,7 +7,7 @@ extern class Quaternion {
   public var y : Float;
   public var z : Float;
   public var w : Float;
-  @:skipReflection public static var identity(default,never) : Quaternion;
+  public static var identity(default,never) : Quaternion;
   public var eulerAngles : Vector3;
 
   public function new(x:Float, y:Float, z:Float, w:Float) : Void;

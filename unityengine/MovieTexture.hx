@@ -2,11 +2,11 @@ package unityengine;
 
 @:native("UnityEngine.MovieTexture") @:final
 extern class MovieTexture extends Texture {
-  @:skipReflection public var audioClip(default,never) : AudioClip;
+  public var audioClip(default,never) : AudioClip;
   public var loop : Bool;
-  @:skipReflection public var isPlaying(default,never) : Bool;
-  @:skipReflection public var isReadyToPlay(default,never) : Bool;
-  @:skipReflection public var duration(default,never) : Float;
+  public var isPlaying(default,never) : Bool;
+  public var isReadyToPlay(default,never) : Bool;
+  public var duration(default,never) : Float;
 
   public function new() : Void;
 

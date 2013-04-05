@@ -7,10 +7,10 @@ extern class Rect {
   public var center : Vector2;
   public var width : Float;
   public var height : Float;
-  @:skipReflection public var left(default,never) : Float;
-  @:skipReflection public var right(default,never) : Float;
-  @:skipReflection public var top(default,never) : Float;
-  @:skipReflection public var bottom(default,never) : Float;
+  public var left(default,never) : Float;
+  public var right(default,never) : Float;
+  public var top(default,never) : Float;
+  public var bottom(default,never) : Float;
   public var xMin : Float;
   public var yMin : Float;
   public var xMax : Float;

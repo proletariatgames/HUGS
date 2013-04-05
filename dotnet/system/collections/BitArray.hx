@@ -2,11 +2,11 @@ package dotnet.system.collections;
 
 @:native("System.Collections.BitArray") @:final
 extern class BitArray extends dotnet.system.Object  implements dotnet.system.ICloneable implements ICollection implements IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
-  @:skipReflection public var IsSynchronized(default,never) : Bool;
+  public var Count(default,never) : Int;
+  public var IsReadOnly(default,never) : Bool;
+  public var IsSynchronized(default,never) : Bool;
   public var Length : Int;
-  @:skipReflection public var SyncRoot(default,never) : Dynamic;
+  public var SyncRoot(default,never) : Dynamic;
 
   public function And(value:BitArray) : BitArray;
 

@@ -2,8 +2,8 @@ package dotnet.system.componentmodel;
 
 @:native("System.ComponentModel.DesignerAttribute") @:final
 extern class DesignerAttribute extends dotnet.system.Attribute {
-  @:skipReflection public var DesignerBaseTypeName(default,never) : String;
-  @:skipReflection public var DesignerTypeName(default,never) : String;
+  public var DesignerBaseTypeName(default,never) : String;
+  public var DesignerTypeName(default,never) : String;
 
   @:overload(function(designerTypeName:String, designerBaseTypeName:String) : Void {})
   @:overload(function(designerTypeName:String, designerBaseType:cs.system.Type) : Void {})

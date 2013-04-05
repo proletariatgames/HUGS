@@ -2,7 +2,7 @@ package dotnet.system.diagnostics;
 
 @:native("System.Diagnostics.TraceListenerCollection")
 extern class TraceListenerCollection extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IList implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   public function Add(listener:TraceListener) : Int;
 

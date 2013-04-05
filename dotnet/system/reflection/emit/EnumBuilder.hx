@@ -2,8 +2,8 @@ package dotnet.system.reflection.emit;
 
 @:native("System.Reflection.Emit.EnumBuilder") @:final
 extern class EnumBuilder extends cs.system.Type  implements dotnet.system.runtime.interopservices._EnumBuilder {
-  @:skipReflection public var TypeToken(default,never) : TypeToken;
-  @:skipReflection public var UnderlyingField(default,never) : FieldBuilder;
+  public var TypeToken(default,never) : TypeToken;
+  public var UnderlyingField(default,never) : FieldBuilder;
 
   public function CreateType() : cs.system.Type;
 

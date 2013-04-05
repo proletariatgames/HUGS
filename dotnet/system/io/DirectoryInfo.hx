@@ -2,8 +2,8 @@ package dotnet.system.io;
 
 @:native("System.IO.DirectoryInfo") @:final
 extern class DirectoryInfo extends FileSystemInfo {
-  @:skipReflection public var Parent(default,never) : DirectoryInfo;
-  @:skipReflection public var Root(default,never) : DirectoryInfo;
+  public var Parent(default,never) : DirectoryInfo;
+  public var Root(default,never) : DirectoryInfo;
 
   @:overload(function(directorySecurity:dotnet.system.security.accesscontrol.DirectorySecurity) : Void {})
   public function Create() : Void;

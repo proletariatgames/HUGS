@@ -2,13 +2,13 @@ package dotnet.system.security.principal;
 
 @:native("System.Security.Principal.WindowsIdentity")
 extern class WindowsIdentity extends dotnet.system.Object  implements dotnet.system.IDisposable implements dotnet.system.runtime.serialization.IDeserializationCallback implements dotnet.system.runtime.serialization.ISerializable implements IIdentity {
-  @:skipReflection public var AuthenticationType(default,never) : String;
-  @:skipReflection public var IsAuthenticated(default,never) : Bool;
-  @:skipReflection public var Name(default,never) : String;
-  @:skipReflection public var Groups(default,never) : IdentityReferenceCollection;
-  @:skipReflection public var ImpersonationLevel(default,never) : TokenImpersonationLevel;
-  @:skipReflection public var Owner(default,never) : SecurityIdentifier;
-  @:skipReflection public var User(default,never) : SecurityIdentifier;
+  public var AuthenticationType(default,never) : String;
+  public var IsAuthenticated(default,never) : Bool;
+  public var Name(default,never) : String;
+  public var Groups(default,never) : IdentityReferenceCollection;
+  public var ImpersonationLevel(default,never) : TokenImpersonationLevel;
+  public var Owner(default,never) : SecurityIdentifier;
+  public var User(default,never) : SecurityIdentifier;
 
   @:overload(function(userToken:dotnet.system.IntPtr, type:String, acctType:WindowsAccountType, isAuthenticated:Bool) : Void {})
   @:overload(function(userToken:dotnet.system.IntPtr, type:String, acctType:WindowsAccountType) : Void {})

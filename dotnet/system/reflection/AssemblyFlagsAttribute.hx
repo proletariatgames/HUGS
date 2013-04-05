@@ -2,8 +2,8 @@ package dotnet.system.reflection;
 
 @:native("System.Reflection.AssemblyFlagsAttribute") @:final
 extern class AssemblyFlagsAttribute extends dotnet.system.Attribute {
-  @:skipReflection public var Flags(default,never) : UInt;
-  @:skipReflection public var AssemblyFlags(default,never) : Int;
+  public var Flags(default,never) : UInt;
+  public var AssemblyFlags(default,never) : Int;
 
   @:overload(function(flags:UInt) : Void {})
   @:overload(function(assemblyFlags:Int) : Void {})

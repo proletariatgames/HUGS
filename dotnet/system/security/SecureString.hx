@@ -2,7 +2,7 @@ package dotnet.system.security;
 
 @:native("System.Security.SecureString") @:final
 extern class SecureString extends dotnet.system.runtime.constrainedexecution.CriticalFinalizerObject  implements dotnet.system.IDisposable {
-  @:skipReflection public var Length(default,never) : Int;
+  public var Length(default,never) : Int;
 
   public function AppendChar(c:dotnet.system.Char) : Void;
 

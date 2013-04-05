@@ -2,15 +2,15 @@ package dotnet.system.xml;
 
 @:native("System.Xml.XmlTextReader")
 extern class XmlTextReader extends XmlReader  implements IXmlLineInfo implements IXmlNamespaceResolver {
-  @:skipReflection public var Encoding(default,never) : dotnet.system.text.Encoding;
+  public var Encoding(default,never) : dotnet.system.text.Encoding;
   public var EntityHandling : EntityHandling;
-  @:skipReflection public var LineNumber(default,never) : Int;
-  @:skipReflection public var LinePosition(default,never) : Int;
+  public var LineNumber(default,never) : Int;
+  public var LinePosition(default,never) : Int;
   public var Namespaces : Bool;
   public var Normalization : Bool;
   public var ProhibitDtd : Bool;
   public var WhitespaceHandling : WhitespaceHandling;
-  @:skipReflection public var XmlResolver(never,default) : XmlResolver;
+  public var XmlResolver(never,default) : XmlResolver;
 
   @:overload(function(xmlFragment:String, fragType:XmlNodeType, context:XmlParserContext) : Void {})
   @:overload(function(xmlFragment:dotnet.system.io.Stream, fragType:XmlNodeType, context:XmlParserContext) : Void {})

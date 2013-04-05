@@ -2,13 +2,13 @@ package dotnet.system.collections;
 
 @:native("System.Collections.SortedList")
 extern class SortedList extends dotnet.system.Object  implements dotnet.system.ICloneable implements ICollection implements IDictionary implements IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var IsSynchronized(default,never) : Bool;
-  @:skipReflection public var SyncRoot(default,never) : Dynamic;
-  @:skipReflection public var IsFixedSize(default,never) : Bool;
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
-  @:skipReflection public var Keys(default,never) : ICollection;
-  @:skipReflection public var Values(default,never) : ICollection;
+  public var Count(default,never) : Int;
+  public var IsSynchronized(default,never) : Bool;
+  public var SyncRoot(default,never) : Dynamic;
+  public var IsFixedSize(default,never) : Bool;
+  public var IsReadOnly(default,never) : Bool;
+  public var Keys(default,never) : ICollection;
+  public var Values(default,never) : ICollection;
 
   public function Add(key:Dynamic, value:Dynamic) : Void;
 

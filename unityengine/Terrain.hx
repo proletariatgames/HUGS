@@ -2,7 +2,7 @@ package unityengine;
 
 @:native("UnityEngine.Terrain") @:final
 extern class Terrain extends MonoBehaviour {
-  @:skipReflection public static var activeTerrain(default,never) : Terrain;
+  public static var activeTerrain(default,never) : Terrain;
   public var terrainData : TerrainData;
   public var treeDistance : Float;
   public var treeBillboardDistance : Float;

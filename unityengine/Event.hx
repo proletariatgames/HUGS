@@ -2,7 +2,7 @@ package unityengine;
 
 @:native("UnityEngine.Event") @:final
 extern class Event {
-  @:skipReflection public var rawType(default,never) : EventType;
+  public var rawType(default,never) : EventType;
   public var type : EventType;
   public var mousePosition : Vector2;
   public var delta : Vector2;
@@ -20,10 +20,10 @@ extern class Event {
   public var command : Bool;
   public var capsLock : Bool;
   public var numeric : Bool;
-  @:skipReflection public var functionKey(default,never) : Bool;
+  public var functionKey(default,never) : Bool;
   public static var current : Event;
-  @:skipReflection public var isKey(default,never) : Bool;
-  @:skipReflection public var isMouse(default,never) : Bool;
+  public var isKey(default,never) : Bool;
+  public var isMouse(default,never) : Bool;
 
   @:overload(function(other:Event) : Void {})
   public function new() : Void;

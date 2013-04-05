@@ -8,7 +8,7 @@ extern class FtpWebRequest extends WebRequest {
   public var KeepAlive : Bool;
   public var ReadWriteTimeout : Int;
   public var RenameTo : String;
-  @:skipReflection public var ServicePoint(default,never) : ServicePoint;
+  public var ServicePoint(default,never) : ServicePoint;
   public var UsePassive : Bool;
   public var UseBinary : Bool;
 }

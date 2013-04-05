@@ -2,7 +2,7 @@ package dotnet.system;
 
 @:native("System.RuntimeTypeHandle") @:final
 extern class RuntimeTypeHandle extends ValueType  implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var Value(default,never) : IntPtr;
+  public var Value(default,never) : IntPtr;
 
   public function GetModuleHandle() : ModuleHandle;
 

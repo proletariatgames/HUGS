@@ -5,7 +5,7 @@ extern class XmlSchemaValidator extends dotnet.system.Object {
   public var ValidationEventHandler(default,null) : dotnet.system.NativeEvent<ValidationEventArgs>;
   public var ValidationEventSender : Dynamic;
   public var LineInfoProvider : dotnet.system.xml.IXmlLineInfo;
-  @:skipReflection public var XmlResolver(never,default) : dotnet.system.xml.XmlResolver;
+  public var XmlResolver(never,default) : dotnet.system.xml.XmlResolver;
   public var SourceUri : dotnet.system.Uri;
 
   public function AddSchema(schema:XmlSchema) : Void;

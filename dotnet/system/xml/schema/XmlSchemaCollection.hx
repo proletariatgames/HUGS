@@ -3,8 +3,8 @@ package dotnet.system.xml.schema;
 @:native("System.Xml.Schema.XmlSchemaCollection") @:final
 extern class XmlSchemaCollection extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable implements dotnet.system.collections.ICollection {
   public var ValidationEventHandler(default,null) : dotnet.system.NativeEvent<ValidationEventArgs>;
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var NameTable(default,never) : dotnet.system.xml.XmlNameTable;
+  public var Count(default,never) : Int;
+  public var NameTable(default,never) : dotnet.system.xml.XmlNameTable;
 
   @:overload(function(ns:String, reader:dotnet.system.xml.XmlReader, resolver:dotnet.system.xml.XmlResolver) : XmlSchema {})
   @:overload(function(schema:XmlSchema, resolver:dotnet.system.xml.XmlResolver) : XmlSchema {})

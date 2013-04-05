@@ -3,14 +3,14 @@ package dotnet.system.xml.schema;
 @:native("System.Xml.Schema.XmlSchemaSet")
 extern class XmlSchemaSet extends dotnet.system.Object {
   public var ValidationEventHandler(default,null) : dotnet.system.NativeEvent<ValidationEventArgs>;
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var GlobalAttributes(default,never) : XmlSchemaObjectTable;
-  @:skipReflection public var GlobalElements(default,never) : XmlSchemaObjectTable;
-  @:skipReflection public var GlobalTypes(default,never) : XmlSchemaObjectTable;
-  @:skipReflection public var IsCompiled(default,never) : Bool;
-  @:skipReflection public var NameTable(default,never) : dotnet.system.xml.XmlNameTable;
+  public var Count(default,never) : Int;
+  public var GlobalAttributes(default,never) : XmlSchemaObjectTable;
+  public var GlobalElements(default,never) : XmlSchemaObjectTable;
+  public var GlobalTypes(default,never) : XmlSchemaObjectTable;
+  public var IsCompiled(default,never) : Bool;
+  public var NameTable(default,never) : dotnet.system.xml.XmlNameTable;
   public var CompilationSettings : XmlSchemaCompilationSettings;
-  @:skipReflection var XmlResolver(never,default) : dotnet.system.xml.XmlResolver;
+  var XmlResolver(never,default) : dotnet.system.xml.XmlResolver;
 
   @:overload(function(targetNamespace:String, url:String) : XmlSchema {})
   @:overload(function(targetNamespace:String, reader:dotnet.system.xml.XmlReader) : XmlSchema {})

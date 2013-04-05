@@ -2,7 +2,7 @@ package dotnet.system.net.mail;
 
 @:native("System.Net.Mail.Attachment")
 extern class Attachment extends AttachmentBase {
-  @:skipReflection public var ContentDisposition(default,never) : dotnet.system.net.mime.ContentDisposition;
+  public var ContentDisposition(default,never) : dotnet.system.net.mime.ContentDisposition;
   public var Name : String;
   public var NameEncoding : dotnet.system.text.Encoding;
 

@@ -2,7 +2,7 @@ package dotnet.system.security.policy;
 
 @:native("System.Security.Policy.Zone") @:final
 extern class Zone extends dotnet.system.Object  implements IIdentityPermissionFactory {
-  @:skipReflection public var SecurityZone(default,never) : dotnet.system.security.SecurityZone;
+  public var SecurityZone(default,never) : dotnet.system.security.SecurityZone;
 
   public function Copy() : Dynamic;
 

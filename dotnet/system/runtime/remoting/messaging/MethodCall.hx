@@ -2,17 +2,17 @@ package dotnet.system.runtime.remoting.messaging;
 
 @:native("System.Runtime.Remoting.Messaging.MethodCall")
 extern class MethodCall extends dotnet.system.Object  implements IMessage implements IMethodCallMessage implements IMethodMessage implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var ArgCount(default,never) : Int;
-  @:skipReflection public var Args(default,never) : cs.NativeArray<dotnet.system.Object>;
-  @:skipReflection public var HasVarArgs(default,never) : Bool;
-  @:skipReflection public var InArgCount(default,never) : Int;
-  @:skipReflection public var InArgs(default,never) : cs.NativeArray<dotnet.system.Object>;
-  @:skipReflection public var LogicalCallContext(default,never) : LogicalCallContext;
-  @:skipReflection public var MethodBase(default,never) : dotnet.system.reflection.MethodBase;
-  @:skipReflection public var MethodName(default,never) : String;
-  @:skipReflection public var MethodSignature(default,never) : Dynamic;
-  @:skipReflection public var Properties(default,never) : dotnet.system.collections.IDictionary;
-  @:skipReflection public var TypeName(default,never) : String;
+  public var ArgCount(default,never) : Int;
+  public var Args(default,never) : cs.NativeArray<dotnet.system.Object>;
+  public var HasVarArgs(default,never) : Bool;
+  public var InArgCount(default,never) : Int;
+  public var InArgs(default,never) : cs.NativeArray<dotnet.system.Object>;
+  public var LogicalCallContext(default,never) : LogicalCallContext;
+  public var MethodBase(default,never) : dotnet.system.reflection.MethodBase;
+  public var MethodName(default,never) : String;
+  public var MethodSignature(default,never) : Dynamic;
+  public var Properties(default,never) : dotnet.system.collections.IDictionary;
+  public var TypeName(default,never) : String;
   public var Uri : String;
 
   @:overload(function(msg:IMessage) : Void {})

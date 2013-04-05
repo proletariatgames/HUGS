@@ -2,7 +2,7 @@ package dotnet.system.configuration;
 
 @:native("System.Configuration.NameValueConfigurationCollection") @:final
 extern class NameValueConfigurationCollection extends ConfigurationElementCollection {
-  @:skipReflection public var AllKeys(default,never) : cs.NativeArray<String>;
+  public var AllKeys(default,never) : cs.NativeArray<String>;
 
   public function Add(nameValue:NameValueConfigurationElement) : Void;
 

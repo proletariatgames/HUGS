@@ -2,7 +2,7 @@ package dotnet.system.diagnostics;
 
 @:native("System.Diagnostics.DebuggerTypeProxyAttribute") @:final
 extern class DebuggerTypeProxyAttribute extends dotnet.system.Attribute {
-  @:skipReflection public var ProxyTypeName(default,never) : String;
+  public var ProxyTypeName(default,never) : String;
   public var Target : cs.system.Type;
   public var TargetTypeName : String;
 

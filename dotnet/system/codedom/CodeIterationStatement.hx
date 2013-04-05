@@ -4,7 +4,7 @@ package dotnet.system.codedom;
 extern class CodeIterationStatement extends CodeStatement {
   public var IncrementStatement : CodeStatement;
   public var InitStatement : CodeStatement;
-  @:skipReflection public var Statements(default,never) : CodeStatementCollection;
+  public var Statements(default,never) : CodeStatementCollection;
   public var TestExpression : CodeExpression;
 
   @:overload(function(initStatement:CodeStatement, testExpression:CodeExpression, incrementStatement:CodeStatement, statements:cs.NativeArray<CodeStatement>) : Void {})

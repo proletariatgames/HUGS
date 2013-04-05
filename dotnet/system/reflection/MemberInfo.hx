@@ -2,10 +2,10 @@ package dotnet.system.reflection;
 
 @:native("System.Reflection.MemberInfo")
 extern class MemberInfo extends dotnet.system.Object  implements ICustomAttributeProvider implements dotnet.system.runtime.interopservices._MemberInfo {
-  @:skipReflection public var DeclaringType(default,never) : cs.system.Type;
-  @:skipReflection public var MemberType(default,never) : MemberTypes;
-  @:skipReflection public var Name(default,never) : String;
-  @:skipReflection public var ReflectedType(default,never) : cs.system.Type;
+  public var DeclaringType(default,never) : cs.system.Type;
+  public var MemberType(default,never) : MemberTypes;
+  public var Name(default,never) : String;
+  public var ReflectedType(default,never) : cs.system.Type;
 
   @:overload(function(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
   public function GetCustomAttributes(inherit:Bool) : cs.NativeArray<dotnet.system.Object>;

@@ -13,7 +13,7 @@ extern class Cookie extends dotnet.system.Object {
   public var Path : String;
   public var Port : String;
   public var Secure : Bool;
-  @:skipReflection public var TimeStamp(default,never) : dotnet.system.DateTime;
+  public var TimeStamp(default,never) : dotnet.system.DateTime;
   public var Value : String;
   public var Version : Int;
 

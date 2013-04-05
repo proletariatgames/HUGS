@@ -3,7 +3,7 @@ package dotnet.system.net;
 @:native("System.Net.HttpWebRequest")
 extern class HttpWebRequest extends WebRequest  implements dotnet.system.runtime.serialization.ISerializable {
   public var Accept : String;
-  @:skipReflection public var Address(default,never) : dotnet.system.Uri;
+  public var Address(default,never) : dotnet.system.Uri;
   public var AllowAutoRedirect : Bool;
   public var AllowWriteStreamBuffering : Bool;
   public var AutomaticDecompression : DecompressionMethods;
@@ -13,7 +13,7 @@ extern class HttpWebRequest extends WebRequest  implements dotnet.system.runtime
   public var CookieContainer : CookieContainer;
   public static var DefaultMaximumErrorResponseLength : Int;
   public var Expect : String;
-  @:skipReflection public var HaveResponse(default,never) : Bool;
+  public var HaveResponse(default,never) : Bool;
   public var IfModifiedSince : dotnet.system.DateTime;
   public var KeepAlive : Bool;
   public var MaximumAutomaticRedirections : Int;
@@ -25,7 +25,7 @@ extern class HttpWebRequest extends WebRequest  implements dotnet.system.runtime
   public var ProtocolVersion : dotnet.system.Version;
   public var Referer : String;
   public var SendChunked : Bool;
-  @:skipReflection public var ServicePoint(default,never) : ServicePoint;
+  public var ServicePoint(default,never) : ServicePoint;
   public var TransferEncoding : String;
   public var UserAgent : String;
   public var UnsafeAuthenticatedConnectionSharing : Bool;

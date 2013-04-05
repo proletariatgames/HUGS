@@ -2,7 +2,7 @@ package dotnet.system.runtime.interopservices;
 
 @:native("System.Runtime.InteropServices.ErrorWrapper") @:final
 extern class ErrorWrapper extends dotnet.system.Object {
-  @:skipReflection public var ErrorCode(default,never) : Int;
+  public var ErrorCode(default,never) : Int;
 
   @:overload(function(errorCode:Int) : Void {})
   @:overload(function(errorCode:Dynamic) : Void {})

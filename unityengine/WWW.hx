@@ -2,22 +2,22 @@ package unityengine;
 
 @:native("UnityEngine.WWW") @:final
 extern class WWW {
-  @:skipReflection public var responseHeaders(default,never) : dotnet.system.collections.generic.Dictionary<String,String>;
-  @:skipReflection public var text(default,never) : String;
-  @:skipReflection public var data(default,never) : String;
-  @:skipReflection public var bytes(default,never) : cs.NativeArray<dotnet.system.Byte>;
-  @:skipReflection public var size(default,never) : Int;
-  @:skipReflection public var error(default,never) : String;
-  @:skipReflection public var texture(default,never) : Texture2D;
-  @:skipReflection public var textureNonReadable(default,never) : Texture2D;
-  @:skipReflection public var audioClip(default,never) : AudioClip;
-  @:skipReflection public var movie(default,never) : MovieTexture;
-  @:skipReflection public var isDone(default,never) : Bool;
-  @:skipReflection public var progress(default,never) : Float;
-  @:skipReflection public var uploadProgress(default,never) : Float;
-  @:skipReflection public var oggVorbis(default,never) : AudioClip;
-  @:skipReflection public var url(default,never) : String;
-  @:skipReflection public var assetBundle(default,never) : AssetBundle;
+  public var responseHeaders(default,never) : dotnet.system.collections.generic.Dictionary<String,String>;
+  public var text(default,never) : String;
+  public var data(default,never) : String;
+  public var bytes(default,never) : cs.NativeArray<dotnet.system.Byte>;
+  public var size(default,never) : Int;
+  public var error(default,never) : String;
+  public var texture(default,never) : Texture2D;
+  public var textureNonReadable(default,never) : Texture2D;
+  public var audioClip(default,never) : AudioClip;
+  public var movie(default,never) : MovieTexture;
+  public var isDone(default,never) : Bool;
+  public var progress(default,never) : Float;
+  public var uploadProgress(default,never) : Float;
+  public var oggVorbis(default,never) : AudioClip;
+  public var url(default,never) : String;
+  public var assetBundle(default,never) : AssetBundle;
   public var threadPriority : ThreadPriority;
 
   @:overload(function(url:String, postData:cs.NativeArray<dotnet.system.Byte>, headers:dotnet.system.collections.Hashtable) : Void {})

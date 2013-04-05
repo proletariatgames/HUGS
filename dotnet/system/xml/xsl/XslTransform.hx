@@ -2,7 +2,7 @@ package dotnet.system.xml.xsl;
 
 @:native("System.Xml.Xsl.XslTransform") @:final
 extern class XslTransform extends dotnet.system.Object {
-  @:skipReflection public var XmlResolver(never,default) : dotnet.system.xml.XmlResolver;
+  public var XmlResolver(never,default) : dotnet.system.xml.XmlResolver;
 
   public function new() : Void;
 

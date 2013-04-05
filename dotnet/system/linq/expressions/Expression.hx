@@ -2,8 +2,8 @@ package dotnet.system.linq.expressions;
 
 @:native("System.Linq.Expressions.Expression")
 extern class Expression extends dotnet.system.Object {
-  @:skipReflection public var NodeType(default,never) : ExpressionType;
-  @:skipReflection public var Type(default,never) : cs.system.Type;
+  public var NodeType(default,never) : ExpressionType;
+  public var Type(default,never) : cs.system.Type;
 
   @:overload(function(left:Expression, right:Expression, method:dotnet.system.reflection.MethodInfo) : BinaryExpression {})
   public static function Add(left:Expression, right:Expression) : BinaryExpression;

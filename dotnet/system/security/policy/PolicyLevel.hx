@@ -2,12 +2,12 @@ package dotnet.system.security.policy;
 
 @:native("System.Security.Policy.PolicyLevel") @:final
 extern class PolicyLevel extends dotnet.system.Object {
-  @:skipReflection public var FullTrustAssemblies(default,never) : dotnet.system.collections.IList;
-  @:skipReflection public var Label(default,never) : String;
-  @:skipReflection public var NamedPermissionSets(default,never) : dotnet.system.collections.IList;
+  public var FullTrustAssemblies(default,never) : dotnet.system.collections.IList;
+  public var Label(default,never) : String;
+  public var NamedPermissionSets(default,never) : dotnet.system.collections.IList;
   public var RootCodeGroup : CodeGroup;
-  @:skipReflection public var StoreLocation(default,never) : String;
-  @:skipReflection public var Type(default,never) : dotnet.system.security.PolicyLevelType;
+  public var StoreLocation(default,never) : String;
+  public var Type(default,never) : dotnet.system.security.PolicyLevelType;
 
   @:overload(function(snMC:StrongNameMembershipCondition) : Void {})
   public function AddFullTrustAssembly(sn:StrongName) : Void;

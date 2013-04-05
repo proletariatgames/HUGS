@@ -2,11 +2,11 @@ package dotnet.system.security.policy;
 
 @:native("System.Security.Policy.Evidence") @:final
 extern class Evidence extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
-  @:skipReflection public var IsSynchronized(default,never) : Bool;
+  public var Count(default,never) : Int;
+  public var IsReadOnly(default,never) : Bool;
+  public var IsSynchronized(default,never) : Bool;
   public var Locked : Bool;
-  @:skipReflection public var SyncRoot(default,never) : Dynamic;
+  public var SyncRoot(default,never) : Dynamic;
 
   public function AddAssembly(id:Dynamic) : Void;
 

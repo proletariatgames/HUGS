@@ -2,12 +2,12 @@ package dotnet.system.reflection;
 
 @:native("System.Reflection.ParameterInfo")
 extern class ParameterInfo extends dotnet.system.Object  implements ICustomAttributeProvider implements dotnet.system.runtime.interopservices._ParameterInfo {
-  @:skipReflection public var IsIn(default,never) : Bool;
-  @:skipReflection public var IsLcid(default,never) : Bool;
-  @:skipReflection public var IsOptional(default,never) : Bool;
-  @:skipReflection public var IsOut(default,never) : Bool;
-  @:skipReflection public var IsRetval(default,never) : Bool;
-  @:skipReflection public var MetadataToken(default,never) : Int;
+  public var IsIn(default,never) : Bool;
+  public var IsLcid(default,never) : Bool;
+  public var IsOptional(default,never) : Bool;
+  public var IsOut(default,never) : Bool;
+  public var IsRetval(default,never) : Bool;
+  public var MetadataToken(default,never) : Int;
 
   @:overload(function(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
   public function GetCustomAttributes(inherit:Bool) : cs.NativeArray<dotnet.system.Object>;

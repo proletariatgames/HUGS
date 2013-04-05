@@ -2,9 +2,9 @@ package unityengine;
 
 @:native("UnityEngine.AudioSettings") @:final
 extern class AudioSettings {
-  @:skipReflection public static var driverCaps(default,never) : AudioSpeakerMode;
+  public static var driverCaps(default,never) : AudioSpeakerMode;
   public static var speakerMode : AudioSpeakerMode;
-  @:skipReflection public static var dspTime(default,never) : Float;
+  public static var dspTime(default,never) : Float;
   public static var outputSampleRate : Int;
 
   public function new() : Void;

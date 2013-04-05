@@ -2,13 +2,13 @@ package dotnet.system;
 
 @:native("System.Array")
 extern class Array extends Object  implements ICloneable implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.collections.IList {
-  @:skipReflection public var Length(default,never) : Int;
-  @:skipReflection public var LongLength(default,never) : Int64;
-  @:skipReflection public var Rank(default,never) : Int;
-  @:skipReflection public var IsSynchronized(default,never) : Bool;
-  @:skipReflection public var SyncRoot(default,never) : Dynamic;
-  @:skipReflection public var IsFixedSize(default,never) : Bool;
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
+  public var Length(default,never) : Int;
+  public var LongLength(default,never) : Int64;
+  public var Rank(default,never) : Int;
+  public var IsSynchronized(default,never) : Bool;
+  public var SyncRoot(default,never) : Dynamic;
+  public var IsFixedSize(default,never) : Bool;
+  public var IsReadOnly(default,never) : Bool;
 
   function Add(value:Dynamic) : Int;
 

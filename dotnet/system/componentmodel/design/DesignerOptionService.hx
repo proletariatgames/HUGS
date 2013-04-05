@@ -8,10 +8,10 @@ extern class DesignerOptionService_DesignerOptionCollection_WrappedPropertyDescr
 
 @:native("System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection") @:final
 extern class DesignerOptionService_DesignerOptionCollection extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IList implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Name(default,never) : String;
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var Parent(default,never) : DesignerOptionService_DesignerOptionCollection;
-  @:skipReflection public var Properties(default,never) : dotnet.system.componentmodel.PropertyDescriptorCollection;
+  public var Name(default,never) : String;
+  public var Count(default,never) : Int;
+  public var Parent(default,never) : DesignerOptionService_DesignerOptionCollection;
+  public var Properties(default,never) : dotnet.system.componentmodel.PropertyDescriptorCollection;
 
   function Add(item:Dynamic) : Int;
 
@@ -36,7 +36,7 @@ extern class DesignerOptionService_DesignerOptionCollection extends dotnet.syste
 
 @:native("System.ComponentModel.Design.DesignerOptionService")
 extern class DesignerOptionService extends dotnet.system.Object  implements IDesignerOptionService {
-  @:skipReflection public var Options(default,never) : DesignerOptionService_DesignerOptionCollection;
+  public var Options(default,never) : DesignerOptionService_DesignerOptionCollection;
 
   function GetOptionValue(pageName:String, valueName:String) : Dynamic;
 

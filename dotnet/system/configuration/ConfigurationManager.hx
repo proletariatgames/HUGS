@@ -2,8 +2,8 @@ package dotnet.system.configuration;
 
 @:native("System.Configuration.ConfigurationManager") @:final
 extern class ConfigurationManager extends dotnet.system.Object {
-  @:skipReflection public static var AppSettings(default,never) : dotnet.system.collections.specialized.NameValueCollection;
-  @:skipReflection public static var ConnectionStrings(default,never) : ConnectionStringSettingsCollection;
+  public static var AppSettings(default,never) : dotnet.system.collections.specialized.NameValueCollection;
+  public static var ConnectionStrings(default,never) : ConnectionStringSettingsCollection;
 
   public static function GetSection(sectionName:String) : Dynamic;
 

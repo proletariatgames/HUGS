@@ -2,10 +2,10 @@ package dotnet.system.runtime.remoting;
 
 @:native("System.Runtime.Remoting.RemotingConfiguration") @:final
 extern class RemotingConfiguration extends dotnet.system.Object {
-  @:skipReflection public static var ApplicationId(default,never) : String;
+  public static var ApplicationId(default,never) : String;
   public static var ApplicationName : String;
   public static var CustomErrorsMode : CustomErrorsModes;
-  @:skipReflection public static var ProcessId(default,never) : String;
+  public static var ProcessId(default,never) : String;
 
   @:overload(function(filename:String, ensureSecurity:Bool) : Void {})
   public static function Configure(filename:String) : Void;

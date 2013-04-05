@@ -8,9 +8,9 @@ extern class XmlDocument extends XmlNode {
   public var NodeInserting(default,null) : dotnet.system.NativeEvent<XmlNodeChangedEventArgs>;
   public var NodeRemoved(default,null) : dotnet.system.NativeEvent<XmlNodeChangedEventArgs>;
   public var NodeRemoving(default,null) : dotnet.system.NativeEvent<XmlNodeChangedEventArgs>;
-  @:skipReflection public var DocumentElement(default,never) : XmlElement;
-  @:skipReflection public var Implementation(default,never) : XmlImplementation;
-  @:skipReflection public var NameTable(default,never) : XmlNameTable;
+  public var DocumentElement(default,never) : XmlElement;
+  public var Implementation(default,never) : XmlImplementation;
+  public var NameTable(default,never) : XmlNameTable;
   public var PreserveWhitespace : Bool;
   public var Schemas : dotnet.system.xml.schema.XmlSchemaSet;
 

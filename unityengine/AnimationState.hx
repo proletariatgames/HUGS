@@ -9,9 +9,9 @@ extern class AnimationState extends TrackedReference {
   public var normalizedTime : Float;
   public var speed : Float;
   public var normalizedSpeed : Float;
-  @:skipReflection public var length(default,never) : Float;
+  public var length(default,never) : Float;
   public var layer : Int;
-  @:skipReflection public var clip(default,never) : AnimationClip;
+  public var clip(default,never) : AnimationClip;
   public var name : String;
   public var blendMode : AnimationBlendMode;
 

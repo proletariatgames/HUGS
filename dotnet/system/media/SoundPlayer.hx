@@ -5,7 +5,7 @@ extern class SoundPlayer extends dotnet.system.componentmodel.Component  impleme
   public var LoadCompleted(default,null) : dotnet.system.NativeEvent<dotnet.system.componentmodel.AsyncCompletedEventArgs>;
   public var SoundLocationChanged(default,null) : dotnet.system.NativeEvent<dotnet.system.EventArgs>;
   public var StreamChanged(default,null) : dotnet.system.NativeEvent<dotnet.system.EventArgs>;
-  @:skipReflection public var IsLoadCompleted(default,never) : Bool;
+  public var IsLoadCompleted(default,never) : Bool;
   public var LoadTimeout : Int;
   public var SoundLocation : String;
   public var Stream : dotnet.system.io.Stream;

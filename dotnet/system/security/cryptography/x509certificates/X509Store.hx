@@ -2,10 +2,10 @@ package dotnet.system.security.cryptography.x509certificates;
 
 @:native("System.Security.Cryptography.X509Certificates.X509Store") @:final
 extern class X509Store extends dotnet.system.Object {
-  @:skipReflection public var Certificates(default,never) : X509Certificate2Collection;
-  @:skipReflection public var Location(default,never) : StoreLocation;
-  @:skipReflection public var Name(default,never) : String;
-  @:skipReflection public var StoreHandle(default,never) : dotnet.system.IntPtr;
+  public var Certificates(default,never) : X509Certificate2Collection;
+  public var Location(default,never) : StoreLocation;
+  public var Name(default,never) : String;
+  public var StoreHandle(default,never) : dotnet.system.IntPtr;
 
   public function Add(certificate:X509Certificate2) : Void;
 

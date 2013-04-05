@@ -2,7 +2,7 @@ package dotnet.system.componentmodel;
 
 @:native("System.ComponentModel.TypeConverter.StandardValuesCollection")
 extern class TypeConverter_StandardValuesCollection extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 

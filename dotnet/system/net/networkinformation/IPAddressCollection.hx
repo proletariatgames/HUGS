@@ -2,8 +2,8 @@ package dotnet.system.net.networkinformation;
 
 @:native("System.Net.NetworkInformation.IPAddressCollection")
 extern class IPAddressCollection extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
+  public var Count(default,never) : Int;
+  public var IsReadOnly(default,never) : Bool;
 
   public function Add(address:dotnet.system.net.IPAddress) : Void;
 

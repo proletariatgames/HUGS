@@ -2,7 +2,7 @@ package dotnet.system.security.policy;
 
 @:native("System.Security.Policy.Site") @:final
 extern class Site extends dotnet.system.Object  implements IIdentityPermissionFactory {
-  @:skipReflection public var Name(default,never) : String;
+  public var Name(default,never) : String;
 
   public function Copy() : Dynamic;
 

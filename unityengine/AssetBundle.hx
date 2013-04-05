@@ -2,7 +2,7 @@ package unityengine;
 
 @:native("UnityEngine.AssetBundle") @:final
 extern class AssetBundle extends Object {
-  @:skipReflection public var mainAsset(default,never) : Object;
+  public var mainAsset(default,never) : Object;
 
   public function Contains(name:String) : Bool;
 

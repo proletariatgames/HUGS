@@ -2,7 +2,7 @@ package dotnet.system.runtime.interopservices;
 
 @:native("System.Runtime.InteropServices.CriticalHandle")
 extern class CriticalHandle extends dotnet.system.runtime.constrainedexecution.CriticalFinalizerObject  implements dotnet.system.IDisposable {
-  @:skipReflection public var IsClosed(default,never) : Bool;
+  public var IsClosed(default,never) : Bool;
 
   public function Close() : Void;
 

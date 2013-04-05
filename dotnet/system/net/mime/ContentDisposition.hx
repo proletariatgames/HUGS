@@ -7,7 +7,7 @@ extern class ContentDisposition extends dotnet.system.Object {
   public var FileName : String;
   public var Inline : Bool;
   public var ModificationDate : dotnet.system.DateTime;
-  @:skipReflection public var Parameters(default,never) : dotnet.system.collections.specialized.StringDictionary;
+  public var Parameters(default,never) : dotnet.system.collections.specialized.StringDictionary;
   public var ReadDate : dotnet.system.DateTime;
   public var Size : dotnet.system.Int64;
 

@@ -2,31 +2,31 @@ package dotnet.system.net.sockets;
 
 @:native("System.Net.Sockets.Socket")
 extern class Socket extends dotnet.system.Object  implements dotnet.system.IDisposable {
-  @:skipReflection public var Available(default,never) : Int;
+  public var Available(default,never) : Int;
   public var DontFragment : Bool;
   public var EnableBroadcast : Bool;
   public var ExclusiveAddressUse : Bool;
-  @:skipReflection public var IsBound(default,never) : Bool;
+  public var IsBound(default,never) : Bool;
   public var LingerState : LingerOption;
   public var MulticastLoopback : Bool;
   public var UseOnlyOverlappedIO : Bool;
-  @:skipReflection public var Handle(default,never) : dotnet.system.IntPtr;
-  @:skipReflection public var LocalEndPoint(default,never) : dotnet.system.net.EndPoint;
-  @:skipReflection public var SocketType(default,never) : SocketType;
+  public var Handle(default,never) : dotnet.system.IntPtr;
+  public var LocalEndPoint(default,never) : dotnet.system.net.EndPoint;
+  public var SocketType(default,never) : SocketType;
   public var SendTimeout : Int;
   public var ReceiveTimeout : Int;
-  @:skipReflection public static var SupportsIPv4(default,never) : Bool;
-  @:skipReflection public static var SupportsIPv6(default,never) : Bool;
-  @:skipReflection public static var OSSupportsIPv6(default,never) : Bool;
-  @:skipReflection public var AddressFamily(default,never) : AddressFamily;
+  public static var SupportsIPv4(default,never) : Bool;
+  public static var SupportsIPv6(default,never) : Bool;
+  public static var OSSupportsIPv6(default,never) : Bool;
+  public var AddressFamily(default,never) : AddressFamily;
   public var Blocking : Bool;
-  @:skipReflection public var Connected(default,never) : Bool;
-  @:skipReflection public var ProtocolType(default,never) : ProtocolType;
+  public var Connected(default,never) : Bool;
+  public var ProtocolType(default,never) : ProtocolType;
   public var NoDelay : Bool;
   public var ReceiveBufferSize : Int;
   public var SendBufferSize : Int;
   public var Ttl : Int;
-  @:skipReflection public var RemoteEndPoint(default,never) : dotnet.system.net.EndPoint;
+  public var RemoteEndPoint(default,never) : dotnet.system.net.EndPoint;
 
   public function Accept() : Socket;
 

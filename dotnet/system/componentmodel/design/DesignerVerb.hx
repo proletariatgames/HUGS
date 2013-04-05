@@ -2,7 +2,7 @@ package dotnet.system.componentmodel.design;
 
 @:native("System.ComponentModel.Design.DesignerVerb")
 extern class DesignerVerb extends MenuCommand {
-  @:skipReflection public var Text(default,never) : String;
+  public var Text(default,never) : String;
   public var Description : String;
 
   @:overload(function(text:String, handler:dotnet.system.EventHandler, startCommandID:CommandID) : Void {})

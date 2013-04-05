@@ -3,9 +3,9 @@ package dotnet.system.reflection.emit;
 @:native("System.Reflection.Emit.TypeBuilder") @:final
 extern class TypeBuilder extends cs.system.Type  implements dotnet.system.runtime.interopservices._TypeBuilder {
   public static var UnspecifiedTypeSize : Int;
-  @:skipReflection public var PackingSize(default,never) : PackingSize;
-  @:skipReflection public var Size(default,never) : Int;
-  @:skipReflection public var TypeToken(default,never) : TypeToken;
+  public var PackingSize(default,never) : PackingSize;
+  public var Size(default,never) : Int;
+  public var TypeToken(default,never) : TypeToken;
 
   public function AddDeclarativeSecurity(action:dotnet.system.security.permissions.SecurityAction, pset:dotnet.system.security.PermissionSet) : Void;
 

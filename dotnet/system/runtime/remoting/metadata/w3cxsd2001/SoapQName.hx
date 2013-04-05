@@ -5,7 +5,7 @@ extern class SoapQName extends dotnet.system.Object  implements ISoapXsd {
   public var Key : String;
   public var Name : String;
   public var Namespace : String;
-  @:skipReflection public static var XsdType(default,never) : String;
+  public static var XsdType(default,never) : String;
 
   @:overload(function(key:String, name:String, namespaceValue:String) : Void {})
   @:overload(function(key:String, name:String) : Void {})

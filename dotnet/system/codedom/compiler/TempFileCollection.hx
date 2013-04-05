@@ -2,10 +2,10 @@ package dotnet.system.codedom.compiler;
 
 @:native("System.CodeDom.Compiler.TempFileCollection")
 extern class TempFileCollection extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.IDisposable {
-  @:skipReflection public var BasePath(default,never) : String;
-  @:skipReflection public var Count(default,never) : Int;
+  public var BasePath(default,never) : String;
+  public var Count(default,never) : Int;
   public var KeepFiles : Bool;
-  @:skipReflection public var TempDir(default,never) : String;
+  public var TempDir(default,never) : String;
 
   @:overload(function(fileExtension:String, keepFile:Bool) : String {})
   public function AddExtension(fileExtension:String) : String;

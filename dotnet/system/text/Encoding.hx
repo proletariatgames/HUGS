@@ -2,16 +2,16 @@ package dotnet.system.text;
 
 @:native("System.Text.Encoding")
 extern class Encoding extends dotnet.system.Object  implements dotnet.system.ICloneable {
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
+  public var IsReadOnly(default,never) : Bool;
   public var DecoderFallback : DecoderFallback;
   public var EncoderFallback : EncoderFallback;
-  @:skipReflection public static var ASCII(default,never) : Encoding;
-  @:skipReflection public static var BigEndianUnicode(default,never) : Encoding;
-  @:skipReflection public static var Default(default,never) : Encoding;
-  @:skipReflection public static var UTF7(default,never) : Encoding;
-  @:skipReflection public static var UTF8(default,never) : Encoding;
-  @:skipReflection public static var Unicode(default,never) : Encoding;
-  @:skipReflection public static var UTF32(default,never) : Encoding;
+  public static var ASCII(default,never) : Encoding;
+  public static var BigEndianUnicode(default,never) : Encoding;
+  public static var Default(default,never) : Encoding;
+  public static var UTF7(default,never) : Encoding;
+  public static var UTF8(default,never) : Encoding;
+  public static var Unicode(default,never) : Encoding;
+  public static var UTF32(default,never) : Encoding;
 
   public function Clone() : Dynamic;
 

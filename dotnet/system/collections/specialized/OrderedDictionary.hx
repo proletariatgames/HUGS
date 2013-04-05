@@ -2,10 +2,10 @@ package dotnet.system.collections.specialized;
 
 @:native("System.Collections.Specialized.OrderedDictionary")
 extern class OrderedDictionary extends dotnet.system.Object  implements dotnet.system.collections.IDictionary implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback implements IOrderedDictionary {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
-  @:skipReflection public var Keys(default,never) : dotnet.system.collections.ICollection;
-  @:skipReflection public var Values(default,never) : dotnet.system.collections.ICollection;
+  public var Count(default,never) : Int;
+  public var IsReadOnly(default,never) : Bool;
+  public var Keys(default,never) : dotnet.system.collections.ICollection;
+  public var Values(default,never) : dotnet.system.collections.ICollection;
 
   public function Add(key:Dynamic, value:Dynamic) : Void;
 

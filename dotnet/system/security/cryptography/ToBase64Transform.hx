@@ -2,10 +2,10 @@ package dotnet.system.security.cryptography;
 
 @:native("System.Security.Cryptography.ToBase64Transform")
 extern class ToBase64Transform extends dotnet.system.Object  implements dotnet.system.IDisposable implements ICryptoTransform {
-  @:skipReflection public var CanTransformMultipleBlocks(default,never) : Bool;
-  @:skipReflection public var CanReuseTransform(default,never) : Bool;
-  @:skipReflection public var InputBlockSize(default,never) : Int;
-  @:skipReflection public var OutputBlockSize(default,never) : Int;
+  public var CanTransformMultipleBlocks(default,never) : Bool;
+  public var CanReuseTransform(default,never) : Bool;
+  public var InputBlockSize(default,never) : Int;
+  public var OutputBlockSize(default,never) : Int;
 
   public function Clear() : Void;
 

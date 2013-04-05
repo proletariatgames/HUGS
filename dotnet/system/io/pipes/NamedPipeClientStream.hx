@@ -2,7 +2,7 @@ package dotnet.system.io.pipes;
 
 @:native("System.IO.Pipes.NamedPipeClientStream") @:final
 extern class NamedPipeClientStream extends PipeStream {
-  @:skipReflection public var NumberOfServerInstances(default,never) : Int;
+  public var NumberOfServerInstances(default,never) : Int;
 
   @:overload(function(timeout:Int) : Void {})
   public function Connect() : Void;

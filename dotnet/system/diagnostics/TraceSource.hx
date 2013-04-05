@@ -2,9 +2,9 @@ package dotnet.system.diagnostics;
 
 @:native("System.Diagnostics.TraceSource")
 extern class TraceSource extends dotnet.system.Object {
-  @:skipReflection public var Attributes(default,never) : dotnet.system.collections.specialized.StringDictionary;
-  @:skipReflection public var Listeners(default,never) : TraceListenerCollection;
-  @:skipReflection public var Name(default,never) : String;
+  public var Attributes(default,never) : dotnet.system.collections.specialized.StringDictionary;
+  public var Listeners(default,never) : TraceListenerCollection;
+  public var Name(default,never) : String;
   public var Switch : SourceSwitch;
 
   public function Close() : Void;

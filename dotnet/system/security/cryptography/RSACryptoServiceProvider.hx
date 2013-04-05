@@ -4,8 +4,8 @@ package dotnet.system.security.cryptography;
 extern class RSACryptoServiceProvider extends RSA  implements ICspAsymmetricAlgorithm {
   public static var UseMachineKeyStore : Bool;
   public var PersistKeyInCsp : Bool;
-  @:skipReflection public var PublicOnly(default,never) : Bool;
-  @:skipReflection public var CspKeyContainerInfo(default,never) : CspKeyContainerInfo;
+  public var PublicOnly(default,never) : Bool;
+  public var CspKeyContainerInfo(default,never) : CspKeyContainerInfo;
 
   @:overload(function(dwKeySize:Int, parameters:CspParameters) : Void {})
   @:overload(function(parameters:CspParameters) : Void {})

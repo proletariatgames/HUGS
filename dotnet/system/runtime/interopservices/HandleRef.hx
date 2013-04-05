@@ -2,8 +2,8 @@ package dotnet.system.runtime.interopservices;
 
 @:native("System.Runtime.InteropServices.HandleRef") @:final
 extern class HandleRef extends dotnet.system.ValueType {
-  @:skipReflection public var Handle(default,never) : dotnet.system.IntPtr;
-  @:skipReflection public var Wrapper(default,never) : Dynamic;
+  public var Handle(default,never) : dotnet.system.IntPtr;
+  public var Wrapper(default,never) : Dynamic;
 
   public function new(wrapper:Dynamic, handle:dotnet.system.IntPtr) : Void;
 

@@ -10,17 +10,17 @@ extern class TimeSpan extends ValueType  implements IComparable {
   public static var MaxValue : TimeSpan;
   public static var MinValue : TimeSpan;
   public static var Zero : TimeSpan;
-  @:skipReflection public var Days(default,never) : Int;
-  @:skipReflection public var Hours(default,never) : Int;
-  @:skipReflection public var Milliseconds(default,never) : Int;
-  @:skipReflection public var Minutes(default,never) : Int;
-  @:skipReflection public var Seconds(default,never) : Int;
-  @:skipReflection public var Ticks(default,never) : Int64;
-  @:skipReflection public var TotalDays(default,never) : Float;
-  @:skipReflection public var TotalHours(default,never) : Float;
-  @:skipReflection public var TotalMilliseconds(default,never) : Float;
-  @:skipReflection public var TotalMinutes(default,never) : Float;
-  @:skipReflection public var TotalSeconds(default,never) : Float;
+  public var Days(default,never) : Int;
+  public var Hours(default,never) : Int;
+  public var Milliseconds(default,never) : Int;
+  public var Minutes(default,never) : Int;
+  public var Seconds(default,never) : Int;
+  public var Ticks(default,never) : Int64;
+  public var TotalDays(default,never) : Float;
+  public var TotalHours(default,never) : Float;
+  public var TotalMilliseconds(default,never) : Float;
+  public var TotalMinutes(default,never) : Float;
+  public var TotalSeconds(default,never) : Float;
 
   public function Add(ts:TimeSpan) : TimeSpan;
 

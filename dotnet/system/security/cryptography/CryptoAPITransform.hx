@@ -2,11 +2,11 @@ package dotnet.system.security.cryptography;
 
 @:native("System.Security.Cryptography.CryptoAPITransform") @:final
 extern class CryptoAPITransform extends dotnet.system.Object  implements dotnet.system.IDisposable implements ICryptoTransform {
-  @:skipReflection public var CanReuseTransform(default,never) : Bool;
-  @:skipReflection public var CanTransformMultipleBlocks(default,never) : Bool;
-  @:skipReflection public var InputBlockSize(default,never) : Int;
-  @:skipReflection public var KeyHandle(default,never) : dotnet.system.IntPtr;
-  @:skipReflection public var OutputBlockSize(default,never) : Int;
+  public var CanReuseTransform(default,never) : Bool;
+  public var CanTransformMultipleBlocks(default,never) : Bool;
+  public var InputBlockSize(default,never) : Int;
+  public var KeyHandle(default,never) : dotnet.system.IntPtr;
+  public var OutputBlockSize(default,never) : Int;
 
   public function Clear() : Void;
 

@@ -2,7 +2,7 @@ package dotnet.system.collections;
 
 @:native("System.Collections.DictionaryBase")
 extern class DictionaryBase extends dotnet.system.Object  implements ICollection implements IDictionary implements IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   function Add(key:Dynamic, value:Dynamic) : Void;
 

@@ -3,8 +3,8 @@ package dotnet.system.text.regularexpressions;
 @:native("System.Text.RegularExpressions.Regex")
 extern class Regex extends dotnet.system.Object  implements dotnet.system.runtime.serialization.ISerializable {
   public static var CacheSize : Int;
-  @:skipReflection public var Options(default,never) : RegexOptions;
-  @:skipReflection public var RightToLeft(default,never) : Bool;
+  public var Options(default,never) : RegexOptions;
+  public var RightToLeft(default,never) : Bool;
 
   @:overload(function(pattern:String, options:RegexOptions) : Void {})
   public function new(pattern:String) : Void;

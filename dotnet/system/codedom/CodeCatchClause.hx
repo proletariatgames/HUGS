@@ -4,7 +4,7 @@ package dotnet.system.codedom;
 extern class CodeCatchClause extends dotnet.system.Object {
   public var CatchExceptionType : CodeTypeReference;
   public var LocalName : String;
-  @:skipReflection public var Statements(default,never) : CodeStatementCollection;
+  public var Statements(default,never) : CodeStatementCollection;
 
   @:overload(function(localName:String, catchExceptionType:CodeTypeReference, statements:cs.NativeArray<CodeStatement>) : Void {})
   @:overload(function(localName:String, catchExceptionType:CodeTypeReference) : Void {})

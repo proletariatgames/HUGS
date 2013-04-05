@@ -3,8 +3,8 @@ package dotnet.system.reflection.emit;
 @:native("System.Reflection.Emit.ConstructorBuilder") @:final
 extern class ConstructorBuilder extends dotnet.system.reflection.ConstructorInfo  implements dotnet.system.runtime.interopservices._ConstructorBuilder {
   public var InitLocals : Bool;
-  @:skipReflection public var ReturnType(default,never) : cs.system.Type;
-  @:skipReflection public var Signature(default,never) : String;
+  public var ReturnType(default,never) : cs.system.Type;
+  public var Signature(default,never) : String;
 
   public function AddDeclarativeSecurity(action:dotnet.system.security.permissions.SecurityAction, pset:dotnet.system.security.PermissionSet) : Void;
 

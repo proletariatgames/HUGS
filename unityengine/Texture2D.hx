@@ -2,8 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.Texture2D") @:final
 extern class Texture2D extends Texture {
-  @:skipReflection public var mipmapCount(default,never) : Int;
-  @:skipReflection public var format(default,never) : TextureFormat;
+  public var mipmapCount(default,never) : Int;
+  public var format(default,never) : TextureFormat;
 
   @:overload(function(updateMipmaps:Bool, makeNoLongerReadable:Bool) : Void {})
   @:overload(function(updateMipmaps:Bool) : Void {})

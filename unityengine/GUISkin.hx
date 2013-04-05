@@ -24,7 +24,7 @@ extern class GUISkin extends ScriptableObject {
   public var verticalScrollbarDownButton : GUIStyle;
   public var scrollView : GUIStyle;
   public var customStyles : cs.NativeArray<GUIStyle>;
-  @:skipReflection public var settings(default,never) : GUISettings;
+  public var settings(default,never) : GUISettings;
 
   public function new() : Void;
 

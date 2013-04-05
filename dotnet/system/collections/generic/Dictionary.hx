@@ -2,7 +2,7 @@ package dotnet.system.collections.generic;
 
 @:native("System.Collections.Generic.Dictionary.Enumerator") @:final
 extern class Dictionary_Enumerator<TKey,TValue> extends dotnet.system.ValueType  implements dotnet.system.IDisposable implements dotnet.system.collections.IDictionaryEnumerator implements dotnet.system.collections.IEnumerator {
-  @:skipReflection public var Current(default,never) : KeyValuePair<TKey,TValue>;
+  public var Current(default,never) : KeyValuePair<TKey,TValue>;
 
   public function Dispose() : Void;
 
@@ -13,7 +13,7 @@ extern class Dictionary_Enumerator<TKey,TValue> extends dotnet.system.ValueType 
 
 @:native("System.Collections.Generic.Dictionary.KeyCollection.Enumerator") @:final
 extern class Dictionary_KeyCollection_Enumerator<TKey,TValue> extends dotnet.system.ValueType  implements dotnet.system.IDisposable implements dotnet.system.collections.IEnumerator {
-  @:skipReflection public var Current(default,never) : TKey;
+  public var Current(default,never) : TKey;
 
   public function Dispose() : Void;
 
@@ -24,7 +24,7 @@ extern class Dictionary_KeyCollection_Enumerator<TKey,TValue> extends dotnet.sys
 
 @:native("System.Collections.Generic.Dictionary.KeyCollection") @:final
 extern class Dictionary_KeyCollection<TKey,TValue> extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   function Add(item:TKey) : Void;
 
@@ -43,7 +43,7 @@ extern class Dictionary_KeyCollection<TKey,TValue> extends dotnet.system.Object 
 
 @:native("System.Collections.Generic.Dictionary.ValueCollection.Enumerator") @:final
 extern class Dictionary_ValueCollection_Enumerator<TKey,TValue> extends dotnet.system.ValueType  implements dotnet.system.IDisposable implements dotnet.system.collections.IEnumerator {
-  @:skipReflection public var Current(default,never) : TValue;
+  public var Current(default,never) : TValue;
 
   public function Dispose() : Void;
 
@@ -54,7 +54,7 @@ extern class Dictionary_ValueCollection_Enumerator<TKey,TValue> extends dotnet.s
 
 @:native("System.Collections.Generic.Dictionary.ValueCollection") @:final
 extern class Dictionary_ValueCollection<TKey,TValue> extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   function Add(item:TValue) : Void;
 
@@ -73,10 +73,10 @@ extern class Dictionary_ValueCollection<TKey,TValue> extends dotnet.system.Objec
 
 @:native("System.Collections.Generic.Dictionary")
 extern class Dictionary<TKey,TValue> extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IDictionary implements dotnet.system.collections.IEnumerable implements dotnet.system.runtime.serialization.IDeserializationCallback implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var Comparer(default,never) : IEqualityComparer<TKey>;
-  @:skipReflection public var Keys(default,never) : Dictionary_KeyCollection<TKey,TValue>;
-  @:skipReflection public var Values(default,never) : Dictionary_ValueCollection<TKey,TValue>;
+  public var Count(default,never) : Int;
+  public var Comparer(default,never) : IEqualityComparer<TKey>;
+  public var Keys(default,never) : Dictionary_KeyCollection<TKey,TValue>;
+  public var Values(default,never) : Dictionary_ValueCollection<TKey,TValue>;
 
   public function Add(key:TKey, value:TValue) : Void;
 

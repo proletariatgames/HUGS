@@ -2,7 +2,7 @@ package unityengine;
 
 @:native("UnityEngine.Cubemap") @:final
 extern class Cubemap extends Texture {
-  @:skipReflection public var format(default,never) : TextureFormat;
+  public var format(default,never) : TextureFormat;
 
   @:overload(function(updateMipmaps:Bool, makeNoLongerReadable:Bool) : Void {})
   @:overload(function(updateMipmaps:Bool) : Void {})

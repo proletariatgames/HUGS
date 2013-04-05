@@ -4,8 +4,8 @@ package dotnet.system.security.principal;
 extern class SecurityIdentifier extends IdentityReference {
   public static var MaxBinaryLength : Int;
   public static var MinBinaryLength : Int;
-  @:skipReflection public var AccountDomainSid(default,never) : SecurityIdentifier;
-  @:skipReflection public var BinaryLength(default,never) : Int;
+  public var AccountDomainSid(default,never) : SecurityIdentifier;
+  public var BinaryLength(default,never) : Int;
 
   public function CompareTo(sid:SecurityIdentifier) : Int;
 

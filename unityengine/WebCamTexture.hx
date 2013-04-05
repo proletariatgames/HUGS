@@ -2,14 +2,14 @@ package unityengine;
 
 @:native("UnityEngine.WebCamTexture") @:final
 extern class WebCamTexture extends Texture {
-  @:skipReflection public var isPlaying(default,never) : Bool;
+  public var isPlaying(default,never) : Bool;
   public var deviceName : String;
   public var requestedFPS : Float;
   public var requestedWidth : Int;
   public var requestedHeight : Int;
-  @:skipReflection public static var devices(default,never) : cs.NativeArray<WebCamDevice>;
-  @:skipReflection public var videoRotationAngle(default,never) : Int;
-  @:skipReflection public var didUpdateThisFrame(default,never) : Bool;
+  public static var devices(default,never) : cs.NativeArray<WebCamDevice>;
+  public var videoRotationAngle(default,never) : Int;
+  public var didUpdateThisFrame(default,never) : Bool;
 
   @:overload(function(deviceName:String, requestedWidth:Int, requestedHeight:Int, requestedFPS:Int) : Void {})
   @:overload(function(requestedWidth:Int, requestedHeight:Int, requestedFPS:Int) : Void {})

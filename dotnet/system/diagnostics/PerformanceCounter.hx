@@ -4,9 +4,9 @@ package dotnet.system.diagnostics;
 extern class PerformanceCounter extends dotnet.system.componentmodel.Component  implements dotnet.system.componentmodel.ISupportInitialize {
   public static var DefaultFileMappingSize : Int;
   public var CategoryName : String;
-  @:skipReflection public var CounterHelp(default,never) : String;
+  public var CounterHelp(default,never) : String;
   public var CounterName : String;
-  @:skipReflection public var CounterType(default,never) : PerformanceCounterType;
+  public var CounterType(default,never) : PerformanceCounterType;
   public var InstanceLifetime : PerformanceCounterInstanceLifetime;
   public var InstanceName : String;
   public var MachineName : String;

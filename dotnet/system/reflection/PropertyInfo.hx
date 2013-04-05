@@ -2,11 +2,11 @@ package dotnet.system.reflection;
 
 @:native("System.Reflection.PropertyInfo")
 extern class PropertyInfo extends MemberInfo  implements dotnet.system.runtime.interopservices._PropertyInfo {
-  @:skipReflection public var Attributes(default,never) : PropertyAttributes;
-  @:skipReflection public var CanRead(default,never) : Bool;
-  @:skipReflection public var CanWrite(default,never) : Bool;
-  @:skipReflection public var IsSpecialName(default,never) : Bool;
-  @:skipReflection public var PropertyType(default,never) : cs.system.Type;
+  public var Attributes(default,never) : PropertyAttributes;
+  public var CanRead(default,never) : Bool;
+  public var CanWrite(default,never) : Bool;
+  public var IsSpecialName(default,never) : Bool;
+  public var PropertyType(default,never) : cs.system.Type;
 
   @:overload(function(nonPublic:Bool) : cs.NativeArray<MethodInfo> {})
   public function GetAccessors() : cs.NativeArray<MethodInfo>;

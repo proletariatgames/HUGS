@@ -2,7 +2,7 @@ package dotnet.system.componentmodel;
 
 @:native("System.ComponentModel.TypeDescriptor") @:final
 extern class TypeDescriptor extends dotnet.system.Object {
-  @:skipReflection public static var ComObjectType(default,never) : cs.system.Type;
+  public static var ComObjectType(default,never) : cs.system.Type;
   public static var ComNativeDescriptorHandler : IComNativeDescriptorHandler;
 
   @:overload(function(type:cs.system.Type, attributes:cs.NativeArray<dotnet.system.Attribute>) : TypeDescriptionProvider {})

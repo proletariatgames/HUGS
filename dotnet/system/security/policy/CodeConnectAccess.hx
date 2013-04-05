@@ -6,8 +6,8 @@ extern class CodeConnectAccess extends dotnet.system.Object {
   public static var DefaultPort : Int;
   public static var OriginPort : Int;
   public static var OriginScheme : String;
-  @:skipReflection public var Port(default,never) : Int;
-  @:skipReflection public var Scheme(default,never) : String;
+  public var Port(default,never) : Int;
+  public var Scheme(default,never) : String;
 
   public static function CreateAnySchemeAccess(allowPort:Int) : CodeConnectAccess;
 

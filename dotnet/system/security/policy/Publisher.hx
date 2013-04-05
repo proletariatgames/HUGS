@@ -2,7 +2,7 @@ package dotnet.system.security.policy;
 
 @:native("System.Security.Policy.Publisher") @:final
 extern class Publisher extends dotnet.system.Object  implements IIdentityPermissionFactory {
-  @:skipReflection public var Certificate(default,never) : dotnet.system.security.cryptography.x509certificates.X509Certificate;
+  public var Certificate(default,never) : dotnet.system.security.cryptography.x509certificates.X509Certificate;
 
   public function Copy() : Dynamic;
 

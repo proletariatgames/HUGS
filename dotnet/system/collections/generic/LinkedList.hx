@@ -2,7 +2,7 @@ package dotnet.system.collections.generic;
 
 @:native("System.Collections.Generic.LinkedList.Enumerator") @:final
 extern class LinkedList_Enumerator<T> extends dotnet.system.ValueType  implements dotnet.system.collections.IEnumerator implements dotnet.system.IDisposable implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback {
-  @:skipReflection public var Current(default,never) : T;
+  public var Current(default,never) : T;
 
   public function Dispose() : Void;
 
@@ -17,9 +17,9 @@ extern class LinkedList_Enumerator<T> extends dotnet.system.ValueType  implement
 
 @:native("System.Collections.Generic.LinkedList")
 extern class LinkedList<T> extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var First(default,never) : LinkedListNode<T>;
-  @:skipReflection public var Last(default,never) : LinkedListNode<T>;
+  public var Count(default,never) : Int;
+  public var First(default,never) : LinkedListNode<T>;
+  public var Last(default,never) : LinkedListNode<T>;
 
   function Add(value:T) : Void;
 

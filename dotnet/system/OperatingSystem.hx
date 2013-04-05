@@ -2,10 +2,10 @@ package dotnet.system;
 
 @:native("System.OperatingSystem") @:final
 extern class OperatingSystem extends Object  implements ICloneable implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var Platform(default,never) : PlatformID;
-  @:skipReflection public var Version(default,never) : Version;
-  @:skipReflection public var ServicePack(default,never) : String;
-  @:skipReflection public var VersionString(default,never) : String;
+  public var Platform(default,never) : PlatformID;
+  public var Version(default,never) : Version;
+  public var ServicePack(default,never) : String;
+  public var VersionString(default,never) : String;
 
   public function Clone() : Dynamic;
 

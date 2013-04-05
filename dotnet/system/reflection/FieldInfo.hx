@@ -2,21 +2,21 @@ package dotnet.system.reflection;
 
 @:native("System.Reflection.FieldInfo")
 extern class FieldInfo extends MemberInfo  implements dotnet.system.runtime.interopservices._FieldInfo {
-  @:skipReflection public var Attributes(default,never) : FieldAttributes;
-  @:skipReflection public var FieldHandle(default,never) : dotnet.system.RuntimeFieldHandle;
-  @:skipReflection public var FieldType(default,never) : cs.system.Type;
-  @:skipReflection public var IsLiteral(default,never) : Bool;
-  @:skipReflection public var IsStatic(default,never) : Bool;
-  @:skipReflection public var IsInitOnly(default,never) : Bool;
-  @:skipReflection public var IsPublic(default,never) : Bool;
-  @:skipReflection public var IsPrivate(default,never) : Bool;
-  @:skipReflection public var IsFamily(default,never) : Bool;
-  @:skipReflection public var IsAssembly(default,never) : Bool;
-  @:skipReflection public var IsFamilyAndAssembly(default,never) : Bool;
-  @:skipReflection public var IsFamilyOrAssembly(default,never) : Bool;
-  @:skipReflection public var IsPinvokeImpl(default,never) : Bool;
-  @:skipReflection public var IsSpecialName(default,never) : Bool;
-  @:skipReflection public var IsNotSerialized(default,never) : Bool;
+  public var Attributes(default,never) : FieldAttributes;
+  public var FieldHandle(default,never) : dotnet.system.RuntimeFieldHandle;
+  public var FieldType(default,never) : cs.system.Type;
+  public var IsLiteral(default,never) : Bool;
+  public var IsStatic(default,never) : Bool;
+  public var IsInitOnly(default,never) : Bool;
+  public var IsPublic(default,never) : Bool;
+  public var IsPrivate(default,never) : Bool;
+  public var IsFamily(default,never) : Bool;
+  public var IsAssembly(default,never) : Bool;
+  public var IsFamilyAndAssembly(default,never) : Bool;
+  public var IsFamilyOrAssembly(default,never) : Bool;
+  public var IsPinvokeImpl(default,never) : Bool;
+  public var IsSpecialName(default,never) : Bool;
+  public var IsNotSerialized(default,never) : Bool;
 
   @:overload(function(handle:dotnet.system.RuntimeFieldHandle, declaringType:dotnet.system.RuntimeTypeHandle) : FieldInfo {})
   public static function GetFieldFromHandle(handle:dotnet.system.RuntimeFieldHandle) : FieldInfo;

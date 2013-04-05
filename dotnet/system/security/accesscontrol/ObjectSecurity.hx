@@ -2,10 +2,10 @@ package dotnet.system.security.accesscontrol;
 
 @:native("System.Security.AccessControl.ObjectSecurity")
 extern class ObjectSecurity extends dotnet.system.Object {
-  @:skipReflection public var AreAccessRulesCanonical(default,never) : Bool;
-  @:skipReflection public var AreAccessRulesProtected(default,never) : Bool;
-  @:skipReflection public var AreAuditRulesCanonical(default,never) : Bool;
-  @:skipReflection public var AreAuditRulesProtected(default,never) : Bool;
+  public var AreAccessRulesCanonical(default,never) : Bool;
+  public var AreAccessRulesProtected(default,never) : Bool;
+  public var AreAuditRulesCanonical(default,never) : Bool;
+  public var AreAuditRulesProtected(default,never) : Bool;
 
   public function GetGroup(targetType:cs.system.Type) : dotnet.system.security.principal.IdentityReference;
 

@@ -19,10 +19,10 @@ extern class WebClient extends dotnet.system.componentmodel.Component {
   public var Credentials : ICredentials;
   public var Headers : WebHeaderCollection;
   public var QueryString : dotnet.system.collections.specialized.NameValueCollection;
-  @:skipReflection public var ResponseHeaders(default,never) : WebHeaderCollection;
+  public var ResponseHeaders(default,never) : WebHeaderCollection;
   public var Encoding : dotnet.system.text.Encoding;
   public var Proxy : IWebProxy;
-  @:skipReflection public var IsBusy(default,never) : Bool;
+  public var IsBusy(default,never) : Bool;
 
   public function CancelAsync() : Void;
 

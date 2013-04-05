@@ -10,19 +10,19 @@ extern class AppDomain extends MarshalByRefObject  implements _AppDomain impleme
   public var TypeResolve(default,null) : dotnet.system.NativeEvent<ResolveEventArgs>;
   public var UnhandledException(default,null) : dotnet.system.NativeEvent<UnhandledExceptionEventArgs>;
   public var ReflectionOnlyAssemblyResolve(default,null) : dotnet.system.NativeEvent<ResolveEventArgs>;
-  @:skipReflection public var SetupInformation(default,never) : AppDomainSetup;
-  @:skipReflection public var ApplicationTrust(default,never) : dotnet.system.security.policy.ApplicationTrust;
-  @:skipReflection public var BaseDirectory(default,never) : String;
-  @:skipReflection public var RelativeSearchPath(default,never) : String;
-  @:skipReflection public var DynamicDirectory(default,never) : String;
-  @:skipReflection public var ShadowCopyFiles(default,never) : Bool;
-  @:skipReflection public var FriendlyName(default,never) : String;
-  @:skipReflection public var Evidence(default,never) : dotnet.system.security.policy.Evidence;
-  @:skipReflection public static var CurrentDomain(default,never) : AppDomain;
-  @:skipReflection public var DomainManager(default,never) : AppDomainManager;
-  @:skipReflection public var ActivationContext(default,never) : ActivationContext;
-  @:skipReflection public var ApplicationIdentity(default,never) : ApplicationIdentity;
-  @:skipReflection public var Id(default,never) : Int;
+  public var SetupInformation(default,never) : AppDomainSetup;
+  public var ApplicationTrust(default,never) : dotnet.system.security.policy.ApplicationTrust;
+  public var BaseDirectory(default,never) : String;
+  public var RelativeSearchPath(default,never) : String;
+  public var DynamicDirectory(default,never) : String;
+  public var ShadowCopyFiles(default,never) : Bool;
+  public var FriendlyName(default,never) : String;
+  public var Evidence(default,never) : dotnet.system.security.policy.Evidence;
+  public static var CurrentDomain(default,never) : AppDomain;
+  public var DomainManager(default,never) : AppDomainManager;
+  public var ActivationContext(default,never) : ActivationContext;
+  public var ApplicationIdentity(default,never) : ApplicationIdentity;
+  public var Id(default,never) : Int;
 
   public function AppendPrivatePath(path:String) : Void;
 

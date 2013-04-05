@@ -12,8 +12,8 @@ extern class WheelCollider extends Collider {
   public var motorTorque : Float;
   public var brakeTorque : Float;
   public var steerAngle : Float;
-  @:skipReflection public var isGrounded(default,never) : Bool;
-  @:skipReflection public var rpm(default,never) : Float;
+  public var isGrounded(default,never) : Bool;
+  public var rpm(default,never) : Float;
 
   public function new() : Void;
 

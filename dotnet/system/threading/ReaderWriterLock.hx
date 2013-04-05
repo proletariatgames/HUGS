@@ -2,9 +2,9 @@ package dotnet.system.threading;
 
 @:native("System.Threading.ReaderWriterLock") @:final
 extern class ReaderWriterLock extends dotnet.system.runtime.constrainedexecution.CriticalFinalizerObject {
-  @:skipReflection public var IsReaderLockHeld(default,never) : Bool;
-  @:skipReflection public var IsWriterLockHeld(default,never) : Bool;
-  @:skipReflection public var WriterSeqNum(default,never) : Int;
+  public var IsReaderLockHeld(default,never) : Bool;
+  public var IsWriterLockHeld(default,never) : Bool;
+  public var WriterSeqNum(default,never) : Int;
 
   @:overload(function(timeout:dotnet.system.TimeSpan) : Void {})
   public function AcquireReaderLock(millisecondsTimeout:Int) : Void;

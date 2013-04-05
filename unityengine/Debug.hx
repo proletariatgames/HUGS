@@ -3,7 +3,7 @@ package unityengine;
 @:native("UnityEngine.Debug") @:final
 extern class Debug {
   public static var developerConsoleVisible : Bool;
-  @:skipReflection public static var isDebugBuild(default,never) : Bool;
+  public static var isDebugBuild(default,never) : Bool;
 
   public static function Break() : Void;
 

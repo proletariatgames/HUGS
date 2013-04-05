@@ -2,7 +2,7 @@ package dotnet.system.runtime.remoting.channels;
 
 @:native("System.Runtime.Remoting.Channels.ChannelServices") @:final
 extern class ChannelServices extends dotnet.system.Object {
-  @:skipReflection public static var RegisteredChannels(default,never) : cs.NativeArray<IChannel>;
+  public static var RegisteredChannels(default,never) : cs.NativeArray<IChannel>;
 
   public static function AsyncDispatchMessage(msg:dotnet.system.runtime.remoting.messaging.IMessage, replySink:dotnet.system.runtime.remoting.messaging.IMessageSink) : dotnet.system.runtime.remoting.messaging.IMessageCtrl;
 

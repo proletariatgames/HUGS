@@ -18,7 +18,7 @@ extern class XmlReaderSettings extends dotnet.system.Object {
   public var Schemas : dotnet.system.xml.schema.XmlSchemaSet;
   public var ValidationFlags : dotnet.system.xml.schema.XmlSchemaValidationFlags;
   public var ValidationType : ValidationType;
-  @:skipReflection var XmlResolver(never,default) : XmlResolver;
+  var XmlResolver(never,default) : XmlResolver;
 
   public function Clone() : XmlReaderSettings;
 

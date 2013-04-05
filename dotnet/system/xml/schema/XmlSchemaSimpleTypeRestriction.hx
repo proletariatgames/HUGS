@@ -4,7 +4,7 @@ package dotnet.system.xml.schema;
 extern class XmlSchemaSimpleTypeRestriction extends XmlSchemaSimpleTypeContent {
   public var BaseTypeName : dotnet.system.xml.XmlQualifiedName;
   public var BaseType : XmlSchemaSimpleType;
-  @:skipReflection public var Facets(default,never) : XmlSchemaObjectCollection;
+  public var Facets(default,never) : XmlSchemaObjectCollection;
 
   public function new() : Void;
 }

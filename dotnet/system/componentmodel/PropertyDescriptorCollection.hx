@@ -3,7 +3,7 @@ package dotnet.system.componentmodel;
 @:native("System.ComponentModel.PropertyDescriptorCollection")
 extern class PropertyDescriptorCollection extends dotnet.system.Object  implements dotnet.system.collections.IDictionary implements dotnet.system.collections.ICollection implements dotnet.system.collections.IList implements dotnet.system.collections.IEnumerable {
   public static var Empty : PropertyDescriptorCollection;
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   public function Add(value:PropertyDescriptor) : Int;
 

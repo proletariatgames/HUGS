@@ -2,23 +2,23 @@ package unityengine;
 
 @:native("UnityEngine.Component")
 extern class Component extends Object {
-  @:skipReflection public var transform(default,never) : Transform;
-  @:skipReflection public var rigidbody(default,never) : Rigidbody;
-  @:skipReflection public var camera(default,never) : Camera;
-  @:skipReflection public var light(default,never) : Light;
-  @:skipReflection public var animation(default,never) : Animation;
-  @:skipReflection public var constantForce(default,never) : ConstantForce;
-  @:skipReflection public var renderer(default,never) : Renderer;
-  @:skipReflection public var audio(default,never) : AudioSource;
-  @:skipReflection public var guiText(default,never) : GUIText;
-  @:skipReflection public var networkView(default,never) : NetworkView;
-  @:skipReflection public var guiElement(default,never) : GUIElement;
-  @:skipReflection public var guiTexture(default,never) : GUITexture;
-  @:skipReflection public var collider(default,never) : Collider;
-  @:skipReflection public var hingeJoint(default,never) : HingeJoint;
-  @:skipReflection public var particleEmitter(default,never) : ParticleEmitter;
-  @:skipReflection public var particleSystem(default,never) : ParticleSystem;
-  @:skipReflection public var gameObject(default,never) : GameObject;
+  public var transform(default,never) : Transform;
+  public var rigidbody(default,never) : Rigidbody;
+  public var camera(default,never) : Camera;
+  public var light(default,never) : Light;
+  public var animation(default,never) : Animation;
+  public var constantForce(default,never) : ConstantForce;
+  public var renderer(default,never) : Renderer;
+  public var audio(default,never) : AudioSource;
+  public var guiText(default,never) : GUIText;
+  public var networkView(default,never) : NetworkView;
+  public var guiElement(default,never) : GUIElement;
+  public var guiTexture(default,never) : GUITexture;
+  public var collider(default,never) : Collider;
+  public var hingeJoint(default,never) : HingeJoint;
+  public var particleEmitter(default,never) : ParticleEmitter;
+  public var particleSystem(default,never) : ParticleSystem;
+  public var gameObject(default,never) : GameObject;
   public var active : Bool;
   public var tag : String;
 
@@ -56,3 +56,4 @@ extern class Component extends Object {
   @:overload(function(methodName:String, options:SendMessageOptions) : Void {})
   public function SendMessageUpwards(methodName:String) : Void;
 }
+

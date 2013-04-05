@@ -2,26 +2,26 @@ package unityengine;
 
 @:native("UnityEngine.Animator") @:final
 extern class Animator extends Behaviour {
-  @:skipReflection public var isHuman(default,never) : Bool;
-  @:skipReflection public var humanScale(default,never) : Float;
-  @:skipReflection public var deltaPosition(default,never) : Vector3;
-  @:skipReflection public var deltaRotation(default,never) : Quaternion;
+  public var isHuman(default,never) : Bool;
+  public var humanScale(default,never) : Float;
+  public var deltaPosition(default,never) : Vector3;
+  public var deltaRotation(default,never) : Quaternion;
   public var rootPosition : Vector3;
   public var rootRotation : Quaternion;
   public var applyRootMotion : Bool;
   public var animatePhysics : Bool;
-  @:skipReflection public var gravityWeight(default,never) : Float;
+  public var gravityWeight(default,never) : Float;
   public var bodyPosition : Vector3;
   public var bodyRotation : Quaternion;
   public var stabilizeFeet : Bool;
-  @:skipReflection public var layerCount(default,never) : Int;
+  public var layerCount(default,never) : Int;
   public var feetPivotActive : Float;
-  @:skipReflection public var pivotWeight(default,never) : Float;
-  @:skipReflection public var pivotPosition(default,never) : Vector3;
-  @:skipReflection public var isMatchingTarget(default,never) : Bool;
+  public var pivotWeight(default,never) : Float;
+  public var pivotPosition(default,never) : Vector3;
+  public var isMatchingTarget(default,never) : Bool;
   public var speed : Float;
-  @:skipReflection public var targetPosition(default,never) : Vector3;
-  @:skipReflection public var targetRotation(default,never) : Quaternion;
+  public var targetPosition(default,never) : Vector3;
+  public var targetRotation(default,never) : Quaternion;
   public var cullingMode : AnimatorCullingMode;
   public var playbackTime : Float;
   public var recorderStartTime : Float;
@@ -29,8 +29,8 @@ extern class Animator extends Behaviour {
   public var runtimeAnimatorController : RuntimeAnimatorController;
   public var avatar : Avatar;
   public var layersAffectMassCenter : Bool;
-  @:skipReflection public var leftFeetBottomHeight(default,never) : Float;
-  @:skipReflection public var rightFeetBottomHeight(default,never) : Float;
+  public var leftFeetBottomHeight(default,never) : Float;
+  public var rightFeetBottomHeight(default,never) : Float;
   public var logWarnings : Bool;
 
   public function new() : Void;

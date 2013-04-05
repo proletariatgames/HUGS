@@ -2,12 +2,12 @@ package unityengine;
 
 @:native("UnityEngine.Graphics") @:final
 extern class Graphics {
-  @:skipReflection public static var activeColorBuffer(default,never) : RenderBuffer;
-  @:skipReflection public static var activeDepthBuffer(default,never) : RenderBuffer;
-  @:skipReflection public static var deviceName(default,never) : String;
-  @:skipReflection public static var deviceVendor(default,never) : String;
-  @:skipReflection public static var deviceVersion(default,never) : String;
-  @:skipReflection public static var supportsVertexProgram(default,never) : Bool;
+  public static var activeColorBuffer(default,never) : RenderBuffer;
+  public static var activeDepthBuffer(default,never) : RenderBuffer;
+  public static var deviceName(default,never) : String;
+  public static var deviceVendor(default,never) : String;
+  public static var deviceVersion(default,never) : String;
+  public static var supportsVertexProgram(default,never) : Bool;
 
   @:overload(function(source:Texture, dest:RenderTexture, mat:Material, pass:Int) : Void {})
   @:overload(function(source:Texture, mat:Material, pass:Int) : Void {})

@@ -2,8 +2,8 @@ package dotnet.system.componentmodel;
 
 @:native("System.ComponentModel.AsyncOperation") @:final
 extern class AsyncOperation extends dotnet.system.Object {
-  @:skipReflection public var SynchronizationContext(default,never) : dotnet.system.threading.SynchronizationContext;
-  @:skipReflection public var UserSuppliedState(default,never) : Dynamic;
+  public var SynchronizationContext(default,never) : dotnet.system.threading.SynchronizationContext;
+  public var UserSuppliedState(default,never) : Dynamic;
 
   public function OperationCompleted() : Void;
 

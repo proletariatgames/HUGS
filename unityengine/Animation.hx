@@ -5,7 +5,7 @@ extern class Animation extends Behaviour {
   public var clip : AnimationClip;
   public var playAutomatically : Bool;
   public var wrapMode : WrapMode;
-  @:skipReflection public var isPlaying(default,never) : Bool;
+  public var isPlaying(default,never) : Bool;
   public var animatePhysics : Bool;
   public var animateOnlyIfVisible : Bool;
   public var cullingType : AnimationCullingType;

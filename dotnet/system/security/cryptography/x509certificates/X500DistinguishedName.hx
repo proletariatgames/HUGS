@@ -2,7 +2,7 @@ package dotnet.system.security.cryptography.x509certificates;
 
 @:native("System.Security.Cryptography.X509Certificates.X500DistinguishedName") @:final
 extern class X500DistinguishedName extends dotnet.system.security.cryptography.AsnEncodedData {
-  @:skipReflection public var Name(default,never) : String;
+  public var Name(default,never) : String;
 
   @:overload(function(distinguishedName:String, flag:X500DistinguishedNameFlags) : Void {})
   @:overload(function(encodedDistinguishedName:dotnet.system.security.cryptography.AsnEncodedData) : Void {})

@@ -9,9 +9,9 @@ extern class NumberFormatInfo extends dotnet.system.Object  implements dotnet.sy
   public var CurrencyNegativePattern : Int;
   public var CurrencyPositivePattern : Int;
   public var CurrencySymbol : String;
-  @:skipReflection public static var CurrentInfo(default,never) : NumberFormatInfo;
-  @:skipReflection public static var InvariantInfo(default,never) : NumberFormatInfo;
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
+  public static var CurrentInfo(default,never) : NumberFormatInfo;
+  public static var InvariantInfo(default,never) : NumberFormatInfo;
+  public var IsReadOnly(default,never) : Bool;
   public var NaNSymbol : String;
   public var NativeDigits : cs.NativeArray<String>;
   public var DigitSubstitution : DigitShapes;

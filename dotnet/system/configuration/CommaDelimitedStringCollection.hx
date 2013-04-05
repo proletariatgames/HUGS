@@ -2,7 +2,7 @@ package dotnet.system.configuration;
 
 @:native("System.Configuration.CommaDelimitedStringCollection") @:final
 extern class CommaDelimitedStringCollection extends dotnet.system.collections.specialized.StringCollection {
-  @:skipReflection public var IsModified(default,never) : Bool;
+  public var IsModified(default,never) : Bool;
 
   public function Clone() : CommaDelimitedStringCollection;
 

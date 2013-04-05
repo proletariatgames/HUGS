@@ -2,7 +2,7 @@ package dotnet.system.collections.specialized;
 
 @:native("System.Collections.Specialized.NameObjectCollectionBase.KeysCollection")
 extern class NameObjectCollectionBase_KeysCollection extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   function CopyTo(array:dotnet.system.Array, arrayIndex:Int) : Void;
 
@@ -11,7 +11,7 @@ extern class NameObjectCollectionBase_KeysCollection extends dotnet.system.Objec
 
 @:native("System.Collections.Specialized.NameObjectCollectionBase")
 extern class NameObjectCollectionBase extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 

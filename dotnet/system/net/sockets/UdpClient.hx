@@ -3,7 +3,7 @@ package dotnet.system.net.sockets;
 @:native("System.Net.Sockets.UdpClient")
 extern class UdpClient extends dotnet.system.Object  implements dotnet.system.IDisposable {
   public var Client : Socket;
-  @:skipReflection public var Available(default,never) : Int;
+  public var Available(default,never) : Int;
   public var DontFragment : Bool;
   public var EnableBroadcast : Bool;
   public var ExclusiveAddressUse : Bool;

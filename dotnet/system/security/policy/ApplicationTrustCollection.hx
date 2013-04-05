@@ -2,9 +2,9 @@ package dotnet.system.security.policy;
 
 @:native("System.Security.Policy.ApplicationTrustCollection") @:final
 extern class ApplicationTrustCollection extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var IsSynchronized(default,never) : Bool;
-  @:skipReflection public var SyncRoot(default,never) : Dynamic;
+  public var Count(default,never) : Int;
+  public var IsSynchronized(default,never) : Bool;
+  public var SyncRoot(default,never) : Dynamic;
 
   public function Add(trust:ApplicationTrust) : Int;
 

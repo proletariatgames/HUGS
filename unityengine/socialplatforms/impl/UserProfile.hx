@@ -2,11 +2,11 @@ package unityengine.socialplatforms.impl;
 
 @:native("UnityEngine.SocialPlatforms.Impl.UserProfile")
 extern class UserProfile implements dotnet.unityengine.socialplatforms.IUserProfile {
-  @:skipReflection public var userName(default,never) : String;
-  @:skipReflection public var id(default,never) : String;
-  @:skipReflection public var isFriend(default,never) : Bool;
-  @:skipReflection public var state(default,never) : dotnet.unityengine.socialplatforms.UserState;
-  @:skipReflection public var image(default,never) : unityengine.Texture2D;
+  public var userName(default,never) : String;
+  public var id(default,never) : String;
+  public var isFriend(default,never) : Bool;
+  public var state(default,never) : dotnet.unityengine.socialplatforms.UserState;
+  public var image(default,never) : unityengine.Texture2D;
 
   @:overload(function(name:String, id:String, friend:Bool, state:dotnet.unityengine.socialplatforms.UserState, image:unityengine.Texture2D) : Void {})
   @:overload(function(name:String, id:String, friend:Bool) : Void {})

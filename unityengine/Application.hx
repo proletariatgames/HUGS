@@ -8,33 +8,33 @@ extern class Application_LogCallback {
 
 @:native("UnityEngine.Application") @:final
 extern class Application {
-  @:skipReflection public static var loadedLevel(default,never) : Int;
-  @:skipReflection public static var loadedLevelName(default,never) : String;
-  @:skipReflection public static var isLoadingLevel(default,never) : Bool;
-  @:skipReflection public static var levelCount(default,never) : Int;
-  @:skipReflection public static var streamedBytes(default,never) : Int;
-  @:skipReflection public static var isPlaying(default,never) : Bool;
-  @:skipReflection public static var isEditor(default,never) : Bool;
-  @:skipReflection public static var isWebPlayer(default,never) : Bool;
-  @:skipReflection public static var platform(default,never) : RuntimePlatform;
+  public static var loadedLevel(default,never) : Int;
+  public static var loadedLevelName(default,never) : String;
+  public static var isLoadingLevel(default,never) : Bool;
+  public static var levelCount(default,never) : Int;
+  public static var streamedBytes(default,never) : Int;
+  public static var isPlaying(default,never) : Bool;
+  public static var isEditor(default,never) : Bool;
+  public static var isWebPlayer(default,never) : Bool;
+  public static var platform(default,never) : RuntimePlatform;
   public static var runInBackground : Bool;
-  @:skipReflection public static var isPlayer(default,never) : Bool;
-  @:skipReflection public static var dataPath(default,never) : String;
-  @:skipReflection public static var streamingAssetsPath(default,never) : String;
-  @:skipReflection public static var persistentDataPath(default,never) : String;
-  @:skipReflection public static var temporaryCachePath(default,never) : String;
-  @:skipReflection public static var srcValue(default,never) : String;
-  @:skipReflection public static var absoluteURL(default,never) : String;
-  @:skipReflection public static var absoluteUrl(default,never) : String;
-  @:skipReflection public static var unityVersion(default,never) : String;
-  @:skipReflection public static var webSecurityEnabled(default,never) : Bool;
-  @:skipReflection public static var webSecurityHostUrl(default,never) : String;
+  public static var isPlayer(default,never) : Bool;
+  public static var dataPath(default,never) : String;
+  public static var streamingAssetsPath(default,never) : String;
+  public static var persistentDataPath(default,never) : String;
+  public static var temporaryCachePath(default,never) : String;
+  public static var srcValue(default,never) : String;
+  public static var absoluteURL(default,never) : String;
+  public static var absoluteUrl(default,never) : String;
+  public static var unityVersion(default,never) : String;
+  public static var webSecurityEnabled(default,never) : Bool;
+  public static var webSecurityHostUrl(default,never) : String;
   public static var targetFrameRate : Int;
-  @:skipReflection public static var systemLanguage(default,never) : SystemLanguage;
+  public static var systemLanguage(default,never) : SystemLanguage;
   public static var backgroundLoadingPriority : ThreadPriority;
-  @:skipReflection public static var internetReachability(default,never) : NetworkReachability;
-  @:skipReflection public static var genuine(default,never) : Bool;
-  @:skipReflection public static var genuineCheckAvailable(default,never) : Bool;
+  public static var internetReachability(default,never) : NetworkReachability;
+  public static var genuine(default,never) : Bool;
+  public static var genuineCheckAvailable(default,never) : Bool;
 
   public static function CancelQuit() : Void;
 

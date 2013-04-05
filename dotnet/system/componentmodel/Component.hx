@@ -4,7 +4,7 @@ package dotnet.system.componentmodel;
 extern class Component extends dotnet.system.MarshalByRefObject  implements dotnet.system.IDisposable implements IComponent {
   public var Disposed(default,null) : dotnet.system.NativeEvent<dotnet.system.EventArgs>;
   public var Site : ISite;
-  @:skipReflection public var Container(default,never) : IContainer;
+  public var Container(default,never) : IContainer;
 
   public function new() : Void;
 

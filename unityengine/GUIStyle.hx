@@ -29,9 +29,9 @@ extern class GUIStyle {
   public var fontSize : Int;
   public var fontStyle : FontStyle;
   public var richText : Bool;
-  @:skipReflection public var lineHeight(default,never) : Float;
-  @:skipReflection public static var none(default,never) : GUIStyle;
-  @:skipReflection public var isHeightDependantOnWidth(default,never) : Bool;
+  public var lineHeight(default,never) : Float;
+  public static var none(default,never) : GUIStyle;
+  public var isHeightDependantOnWidth(default,never) : Bool;
 
   public function CalcHeight(content:GUIContent, width:Float) : Float;
 

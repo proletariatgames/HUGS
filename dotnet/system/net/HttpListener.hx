@@ -5,9 +5,9 @@ extern class HttpListener extends dotnet.system.Object  implements dotnet.system
   public var AuthenticationSchemes : AuthenticationSchemes;
   public var AuthenticationSchemeSelectorDelegate : AuthenticationSchemeSelector;
   public var IgnoreWriteExceptions : Bool;
-  @:skipReflection public var IsListening(default,never) : Bool;
-  @:skipReflection public static var IsSupported(default,never) : Bool;
-  @:skipReflection public var Prefixes(default,never) : HttpListenerPrefixCollection;
+  public var IsListening(default,never) : Bool;
+  public static var IsSupported(default,never) : Bool;
+  public var Prefixes(default,never) : HttpListenerPrefixCollection;
   public var Realm : String;
   public var UnsafeConnectionNtlmAuthentication : Bool;
 

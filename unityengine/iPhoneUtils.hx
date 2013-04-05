@@ -2,8 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.iPhoneUtils") @:final
 extern class iPhoneUtils {
-  @:skipReflection public static var isApplicationGenuine(default,never) : Bool;
-  @:skipReflection public static var isApplicationGenuineAvailable(default,never) : Bool;
+  public static var isApplicationGenuine(default,never) : Bool;
+  public static var isApplicationGenuineAvailable(default,never) : Bool;
 
   public function new() : Void;
 

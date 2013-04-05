@@ -2,14 +2,14 @@ package unityengine;
 
 @:native("UnityEngine.Screen") @:final
 extern class Screen {
-  @:skipReflection public static var resolutions(default,never) : cs.NativeArray<Resolution>;
-  @:skipReflection public static var GetResolution(default,never) : cs.NativeArray<Resolution>;
-  @:skipReflection public static var currentResolution(default,never) : Resolution;
+  public static var resolutions(default,never) : cs.NativeArray<Resolution>;
+  public static var GetResolution(default,never) : cs.NativeArray<Resolution>;
+  public static var currentResolution(default,never) : Resolution;
   public static var showCursor : Bool;
   public static var lockCursor : Bool;
-  @:skipReflection public static var width(default,never) : Int;
-  @:skipReflection public static var height(default,never) : Int;
-  @:skipReflection public static var dpi(default,never) : Float;
+  public static var width(default,never) : Int;
+  public static var height(default,never) : Int;
+  public static var dpi(default,never) : Float;
   public static var fullScreen : Bool;
   public static var autorotateToPortrait : Bool;
   public static var autorotateToPortraitUpsideDown : Bool;

@@ -11,9 +11,9 @@ extern enum DebuggableAttribute_DebuggingModes {
 
 @:native("System.Diagnostics.DebuggableAttribute") @:final
 extern class DebuggableAttribute extends dotnet.system.Attribute {
-  @:skipReflection public var DebuggingFlags(default,never) : DebuggableAttribute_DebuggingModes;
-  @:skipReflection public var IsJITTrackingEnabled(default,never) : Bool;
-  @:skipReflection public var IsJITOptimizerDisabled(default,never) : Bool;
+  public var DebuggingFlags(default,never) : DebuggableAttribute_DebuggingModes;
+  public var IsJITTrackingEnabled(default,never) : Bool;
+  public var IsJITOptimizerDisabled(default,never) : Bool;
 
   @:overload(function(isJITTrackingEnabled:Bool, isJITOptimizerDisabled:Bool) : Void {})
   public function new(modes:DebuggableAttribute_DebuggingModes) : Void;

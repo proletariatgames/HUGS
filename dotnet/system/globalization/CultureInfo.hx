@@ -2,14 +2,14 @@ package dotnet.system.globalization;
 
 @:native("System.Globalization.CultureInfo")
 extern class CultureInfo extends dotnet.system.Object  implements dotnet.system.ICloneable implements dotnet.system.IFormatProvider {
-  @:skipReflection public static var InvariantCulture(default,never) : CultureInfo;
-  @:skipReflection public static var CurrentCulture(default,never) : CultureInfo;
-  @:skipReflection public static var CurrentUICulture(default,never) : CultureInfo;
-  @:skipReflection public var CultureTypes(default,never) : CultureTypes;
-  @:skipReflection public var IetfLanguageTag(default,never) : String;
-  @:skipReflection public var UseUserOverride(default,never) : Bool;
-  @:skipReflection public static var InstalledUICulture(default,never) : CultureInfo;
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
+  public static var InvariantCulture(default,never) : CultureInfo;
+  public static var CurrentCulture(default,never) : CultureInfo;
+  public static var CurrentUICulture(default,never) : CultureInfo;
+  public var CultureTypes(default,never) : CultureTypes;
+  public var IetfLanguageTag(default,never) : String;
+  public var UseUserOverride(default,never) : Bool;
+  public static var InstalledUICulture(default,never) : CultureInfo;
+  public var IsReadOnly(default,never) : Bool;
 
   public function ClearCachedData() : Void;
 

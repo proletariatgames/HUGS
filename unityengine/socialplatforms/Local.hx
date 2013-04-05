@@ -2,7 +2,7 @@ package unityengine.socialplatforms;
 
 @:native("UnityEngine.SocialPlatforms.Local")
 extern class Local implements ISocialPlatform {
-  @:skipReflection public var localUser(default,never) : ILocalUser;
+  public var localUser(default,never) : ILocalUser;
 
   function Authenticate(user:ILocalUser, _callback:dotnet.system.Action<Bool>) : Void;
 

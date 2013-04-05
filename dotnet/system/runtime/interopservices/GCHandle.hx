@@ -2,7 +2,7 @@ package dotnet.system.runtime.interopservices;
 
 @:native("System.Runtime.InteropServices.GCHandle") @:final
 extern class GCHandle extends dotnet.system.ValueType {
-  @:skipReflection public var IsAllocated(default,never) : Bool;
+  public var IsAllocated(default,never) : Bool;
   public var Target : Dynamic;
 
   public function AddrOfPinnedObject() : dotnet.system.IntPtr;

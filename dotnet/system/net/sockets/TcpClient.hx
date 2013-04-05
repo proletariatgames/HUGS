@@ -3,8 +3,8 @@ package dotnet.system.net.sockets;
 @:native("System.Net.Sockets.TcpClient")
 extern class TcpClient extends dotnet.system.Object  implements dotnet.system.IDisposable {
   public var Client : Socket;
-  @:skipReflection public var Available(default,never) : Int;
-  @:skipReflection public var Connected(default,never) : Bool;
+  public var Available(default,never) : Int;
+  public var Connected(default,never) : Bool;
   public var ExclusiveAddressUse : Bool;
   public var LingerState : LingerOption;
   public var NoDelay : Bool;

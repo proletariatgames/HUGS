@@ -3,7 +3,7 @@ package unityengine;
 @:native("UnityEngine.Social") @:final
 extern class Social {
   public static var Active : dotnet.unityengine.socialplatforms.ISocialPlatform;
-  @:skipReflection public static var localUser(default,never) : dotnet.unityengine.socialplatforms.ILocalUser;
+  public static var localUser(default,never) : dotnet.unityengine.socialplatforms.ILocalUser;
 
   public static function CreateAchievement() : dotnet.unityengine.socialplatforms.IAchievement;
 

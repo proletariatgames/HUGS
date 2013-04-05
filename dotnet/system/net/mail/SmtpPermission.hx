@@ -2,7 +2,7 @@ package dotnet.system.net.mail;
 
 @:native("System.Net.Mail.SmtpPermission") @:final
 extern class SmtpPermission extends dotnet.system.security.CodeAccessPermission  implements dotnet.system.security.permissions.IUnrestrictedPermission {
-  @:skipReflection public var Access(default,never) : SmtpAccess;
+  public var Access(default,never) : SmtpAccess;
 
   public function AddPermission(access:SmtpAccess) : Void;
 

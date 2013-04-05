@@ -11,7 +11,7 @@ extern class MarshalAsAttribute extends dotnet.system.Attribute {
   public var SizeParamIndex : Int;
   public var SafeArrayUserDefinedSubType : cs.system.Type;
   public var IidParameterIndex : Int;
-  @:skipReflection public var Value(default,never) : UnmanagedType;
+  public var Value(default,never) : UnmanagedType;
 
   @:overload(function(unmanagedType:UnmanagedType) : Void {})
   public function new(unmanagedType:Int) : Void;

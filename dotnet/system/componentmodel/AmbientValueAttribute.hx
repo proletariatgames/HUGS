@@ -2,7 +2,7 @@ package dotnet.system.componentmodel;
 
 @:native("System.ComponentModel.AmbientValueAttribute") @:final
 extern class AmbientValueAttribute extends dotnet.system.Attribute {
-  @:skipReflection public var Value(default,never) : Dynamic;
+  public var Value(default,never) : Dynamic;
 
   @:overload(function(type:cs.system.Type, value:String) : Void {})
   @:overload(function(value:UInt) : Void {})

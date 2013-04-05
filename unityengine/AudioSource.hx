@@ -7,7 +7,7 @@ extern class AudioSource extends Behaviour {
   public var time : Float;
   public var timeSamples : Int;
   public var clip : AudioClip;
-  @:skipReflection public var isPlaying(default,never) : Bool;
+  public var isPlaying(default,never) : Bool;
   public var loop : Bool;
   public var ignoreListenerVolume : Bool;
   public var playOnAwake : Bool;

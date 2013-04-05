@@ -2,16 +2,16 @@ package dotnet.system.configuration;
 
 @:native("System.Configuration.Configuration") @:final
 extern class Configuration extends dotnet.system.Object {
-  @:skipReflection public var AppSettings(default,never) : AppSettingsSection;
-  @:skipReflection public var ConnectionStrings(default,never) : ConnectionStringsSection;
-  @:skipReflection public var FilePath(default,never) : String;
-  @:skipReflection public var HasFile(default,never) : Bool;
-  @:skipReflection public var EvaluationContext(default,never) : ContextInformation;
-  @:skipReflection public var Locations(default,never) : ConfigurationLocationCollection;
+  public var AppSettings(default,never) : AppSettingsSection;
+  public var ConnectionStrings(default,never) : ConnectionStringsSection;
+  public var FilePath(default,never) : String;
+  public var HasFile(default,never) : Bool;
+  public var EvaluationContext(default,never) : ContextInformation;
+  public var Locations(default,never) : ConfigurationLocationCollection;
   public var NamespaceDeclared : Bool;
-  @:skipReflection public var RootSectionGroup(default,never) : ConfigurationSectionGroup;
-  @:skipReflection public var SectionGroups(default,never) : ConfigurationSectionGroupCollection;
-  @:skipReflection public var Sections(default,never) : ConfigurationSectionCollection;
+  public var RootSectionGroup(default,never) : ConfigurationSectionGroup;
+  public var SectionGroups(default,never) : ConfigurationSectionGroupCollection;
+  public var Sections(default,never) : ConfigurationSectionCollection;
 
   public function GetSection(path:String) : ConfigurationSection;
 

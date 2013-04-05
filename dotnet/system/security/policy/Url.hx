@@ -2,7 +2,7 @@ package dotnet.system.security.policy;
 
 @:native("System.Security.Policy.Url") @:final
 extern class Url extends dotnet.system.Object  implements IIdentityPermissionFactory {
-  @:skipReflection public var Value(default,never) : String;
+  public var Value(default,never) : String;
 
   public function Copy() : Dynamic;
 

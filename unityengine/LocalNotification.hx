@@ -12,7 +12,7 @@ extern class LocalNotification {
   public var alertLaunchImage : String;
   public var applicationIconBadgeNumber : Int;
   public var soundName : String;
-  @:skipReflection public static var defaultSoundName(default,never) : String;
+  public static var defaultSoundName(default,never) : String;
   public var userInfo : dotnet.system.collections.IDictionary;
 
   public function new() : Void;

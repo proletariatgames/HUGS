@@ -2,10 +2,10 @@ package dotnet.system.diagnostics;
 
 @:native("System.Diagnostics.PerformanceCounterCategory") @:final
 extern class PerformanceCounterCategory extends dotnet.system.Object {
-  @:skipReflection public var CategoryHelp(default,never) : String;
+  public var CategoryHelp(default,never) : String;
   public var CategoryName : String;
   public var MachineName : String;
-  @:skipReflection public var CategoryType(default,never) : PerformanceCounterCategoryType;
+  public var CategoryType(default,never) : PerformanceCounterCategoryType;
 
   public function CounterExists(counterName:String) : Bool;
 

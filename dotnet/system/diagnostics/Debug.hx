@@ -5,7 +5,7 @@ extern class Debug extends dotnet.system.Object {
   public static var AutoFlush : Bool;
   public static var IndentLevel : Int;
   public static var IndentSize : Int;
-  @:skipReflection public static var Listeners(default,never) : TraceListenerCollection;
+  public static var Listeners(default,never) : TraceListenerCollection;
 
   @:overload(function(condition:Bool, message:String, detailMessage:String) : Void {})
   @:overload(function(condition:Bool, message:String) : Void {})

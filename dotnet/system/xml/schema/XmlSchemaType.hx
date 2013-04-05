@@ -4,13 +4,13 @@ package dotnet.system.xml.schema;
 extern class XmlSchemaType extends XmlSchemaAnnotated {
   public var Name : String;
   public var Final : XmlSchemaDerivationMethod;
-  @:skipReflection public var QualifiedName(default,never) : dotnet.system.xml.XmlQualifiedName;
-  @:skipReflection public var FinalResolved(default,never) : XmlSchemaDerivationMethod;
-  @:skipReflection public var BaseSchemaType(default,never) : Dynamic;
-  @:skipReflection public var BaseXmlSchemaType(default,never) : XmlSchemaType;
-  @:skipReflection public var DerivedBy(default,never) : XmlSchemaDerivationMethod;
-  @:skipReflection public var Datatype(default,never) : XmlSchemaDatatype;
-  @:skipReflection public var TypeCode(default,never) : XmlTypeCode;
+  public var QualifiedName(default,never) : dotnet.system.xml.XmlQualifiedName;
+  public var FinalResolved(default,never) : XmlSchemaDerivationMethod;
+  public var BaseSchemaType(default,never) : Dynamic;
+  public var BaseXmlSchemaType(default,never) : XmlSchemaType;
+  public var DerivedBy(default,never) : XmlSchemaDerivationMethod;
+  public var Datatype(default,never) : XmlSchemaDatatype;
+  public var TypeCode(default,never) : XmlTypeCode;
 
   public function new() : Void;
 

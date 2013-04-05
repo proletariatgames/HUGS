@@ -2,7 +2,7 @@ package dotnet.system.collections.objectmodel;
 
 @:native("System.Collections.ObjectModel.Collection")
 extern class Collection<T> extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.collections.IList {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   public function Add(item:T) : Void;
 

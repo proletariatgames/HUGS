@@ -3,9 +3,9 @@ package dotnet.system.io;
 @:native("System.IO.FileInfo") @:final
 extern class FileInfo extends FileSystemInfo {
   public var IsReadOnly : Bool;
-  @:skipReflection public var Length(default,never) : dotnet.system.Int64;
-  @:skipReflection public var DirectoryName(default,never) : String;
-  @:skipReflection public var Directory(default,never) : DirectoryInfo;
+  public var Length(default,never) : dotnet.system.Int64;
+  public var DirectoryName(default,never) : String;
+  public var Directory(default,never) : DirectoryInfo;
 
   public function AppendText() : StreamWriter;
 

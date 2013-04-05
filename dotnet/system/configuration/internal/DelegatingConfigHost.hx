@@ -2,11 +2,11 @@ package dotnet.system.configuration.internal;
 
 @:native("System.Configuration.Internal.DelegatingConfigHost")
 extern class DelegatingConfigHost extends dotnet.system.Object  implements IInternalConfigHost {
-  @:skipReflection public var IsRemote(default,never) : Bool;
-  @:skipReflection public var SupportsChangeNotifications(default,never) : Bool;
-  @:skipReflection public var SupportsLocation(default,never) : Bool;
-  @:skipReflection public var SupportsPath(default,never) : Bool;
-  @:skipReflection public var SupportsRefresh(default,never) : Bool;
+  public var IsRemote(default,never) : Bool;
+  public var SupportsChangeNotifications(default,never) : Bool;
+  public var SupportsLocation(default,never) : Bool;
+  public var SupportsPath(default,never) : Bool;
+  public var SupportsRefresh(default,never) : Bool;
 
   public function CreateConfigurationContext(configPath:String, locationSubPath:String) : Dynamic;
 

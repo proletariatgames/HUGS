@@ -10,17 +10,17 @@ extern class XmlSchema extends XmlSchemaObject {
   public var ElementFormDefault : XmlSchemaForm;
   public var TargetNamespace : String;
   public var Version : String;
-  @:skipReflection public var Includes(default,never) : XmlSchemaObjectCollection;
-  @:skipReflection public var Items(default,never) : XmlSchemaObjectCollection;
-  @:skipReflection public var IsCompiled(default,never) : Bool;
-  @:skipReflection public var Attributes(default,never) : XmlSchemaObjectTable;
-  @:skipReflection public var AttributeGroups(default,never) : XmlSchemaObjectTable;
-  @:skipReflection public var SchemaTypes(default,never) : XmlSchemaObjectTable;
-  @:skipReflection public var Elements(default,never) : XmlSchemaObjectTable;
+  public var Includes(default,never) : XmlSchemaObjectCollection;
+  public var Items(default,never) : XmlSchemaObjectCollection;
+  public var IsCompiled(default,never) : Bool;
+  public var Attributes(default,never) : XmlSchemaObjectTable;
+  public var AttributeGroups(default,never) : XmlSchemaObjectTable;
+  public var SchemaTypes(default,never) : XmlSchemaObjectTable;
+  public var Elements(default,never) : XmlSchemaObjectTable;
   public var Id : String;
   public var UnhandledAttributes : cs.NativeArray<dotnet.system.xml.XmlAttribute>;
-  @:skipReflection public var Groups(default,never) : XmlSchemaObjectTable;
-  @:skipReflection public var Notations(default,never) : XmlSchemaObjectTable;
+  public var Groups(default,never) : XmlSchemaObjectTable;
+  public var Notations(default,never) : XmlSchemaObjectTable;
 
   public function new() : Void;
 

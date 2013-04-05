@@ -2,9 +2,9 @@ package dotnet.microsoft.win32;
 
 @:native("Microsoft.Win32.RegistryKey") @:final
 extern class RegistryKey extends dotnet.system.MarshalByRefObject  implements dotnet.system.IDisposable {
-  @:skipReflection public var Name(default,never) : String;
-  @:skipReflection public var SubKeyCount(default,never) : Int;
-  @:skipReflection public var ValueCount(default,never) : Int;
+  public var Name(default,never) : String;
+  public var SubKeyCount(default,never) : Int;
+  public var ValueCount(default,never) : Int;
 
   public function Close() : Void;
 

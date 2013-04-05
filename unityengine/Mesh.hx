@@ -2,7 +2,7 @@ package unityengine;
 
 @:native("UnityEngine.Mesh") @:final
 extern class Mesh extends Object {
-  @:skipReflection public var isReadable(default,never) : Bool;
+  public var isReadable(default,never) : Bool;
   public var vertices : cs.NativeArray<Vector3>;
   public var normals : cs.NativeArray<Vector3>;
   public var tangents : cs.NativeArray<Vector4>;
@@ -13,7 +13,7 @@ extern class Mesh extends Object {
   public var colors : cs.NativeArray<Color>;
   public var colors32 : cs.NativeArray<Color32>;
   public var triangles : cs.NativeArray<Int>;
-  @:skipReflection public var vertexCount(default,never) : Int;
+  public var vertexCount(default,never) : Int;
   public var subMeshCount : Int;
   public var boneWeights : cs.NativeArray<BoneWeight>;
   public var bindposes : cs.NativeArray<Matrix4x4>;

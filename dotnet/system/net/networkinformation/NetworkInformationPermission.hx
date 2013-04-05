@@ -2,7 +2,7 @@ package dotnet.system.net.networkinformation;
 
 @:native("System.Net.NetworkInformation.NetworkInformationPermission") @:final
 extern class NetworkInformationPermission extends dotnet.system.security.CodeAccessPermission  implements dotnet.system.security.permissions.IUnrestrictedPermission {
-  @:skipReflection public var Access(default,never) : NetworkInformationAccess;
+  public var Access(default,never) : NetworkInformationAccess;
 
   public function AddPermission(access:NetworkInformationAccess) : Void;
 

@@ -2,8 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.Texture3D") @:final
 extern class Texture3D extends Texture {
-  @:skipReflection public var depth(default,never) : Int;
-  @:skipReflection public var format(default,never) : TextureFormat;
+  public var depth(default,never) : Int;
+  public var format(default,never) : TextureFormat;
 
   @:overload(function(updateMipmaps:Bool) : Void {})
   public function Apply() : Void;

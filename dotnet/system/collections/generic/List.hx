@@ -2,7 +2,7 @@ package dotnet.system.collections.generic;
 
 @:native("System.Collections.Generic.List.Enumerator") @:final
 extern class List_Enumerator<T> extends dotnet.system.ValueType  implements dotnet.system.IDisposable implements dotnet.system.collections.IEnumerator {
-  @:skipReflection public var Current(default,never) : T;
+  public var Current(default,never) : T;
 
   public function Dispose() : Void;
 
@@ -14,7 +14,7 @@ extern class List_Enumerator<T> extends dotnet.system.ValueType  implements dotn
 @:native("System.Collections.Generic.List")
 extern class List<T> extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.collections.IList {
   public var Capacity : Int;
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   public function Add(item:T) : Void;
 

@@ -6,8 +6,8 @@ extern class RectOffset {
   public var right : Int;
   public var top : Int;
   public var bottom : Int;
-  @:skipReflection public var horizontal(default,never) : Int;
-  @:skipReflection public var vertical(default,never) : Int;
+  public var horizontal(default,never) : Int;
+  public var vertical(default,never) : Int;
 
   public function Add(rect:Rect) : Rect;
 

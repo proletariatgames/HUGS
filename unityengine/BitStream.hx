@@ -2,8 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.BitStream") @:final
 extern class BitStream {
-  @:skipReflection public var isReading(default,never) : Bool;
-  @:skipReflection public var isWriting(default,never) : Bool;
+  public var isReading(default,never) : Bool;
+  public var isWriting(default,never) : Bool;
 
   public function new() : Void;
 

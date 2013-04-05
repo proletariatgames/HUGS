@@ -3,8 +3,8 @@ package dotnet.system.componentmodel;
 @:native("System.ComponentModel.ComplexBindingPropertiesAttribute") @:final
 extern class ComplexBindingPropertiesAttribute extends dotnet.system.Attribute {
   public static var Default : ComplexBindingPropertiesAttribute;
-  @:skipReflection public var DataMember(default,never) : String;
-  @:skipReflection public var DataSource(default,never) : String;
+  public var DataMember(default,never) : String;
+  public var DataSource(default,never) : String;
 
   @:overload(function(dataSource:String, dataMember:String) : Void {})
   @:overload(function(dataSource:String) : Void {})

@@ -3,15 +3,15 @@ package dotnet.system.reflection;
 @:native("System.Reflection.Assembly")
 extern class Assembly extends dotnet.system.Object  implements ICustomAttributeProvider implements dotnet.system.runtime.interopservices._Assembly implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.security.IEvidenceFactory {
   public var ModuleResolve(default,null) : dotnet.system.NativeEvent<dotnet.system.ResolveEventArgs>;
-  @:skipReflection public var CodeBase(default,never) : String;
-  @:skipReflection public var EscapedCodeBase(default,never) : String;
-  @:skipReflection public var FullName(default,never) : String;
-  @:skipReflection public var EntryPoint(default,never) : MethodInfo;
-  @:skipReflection public var Evidence(default,never) : dotnet.system.security.policy.Evidence;
-  @:skipReflection public var Location(default,never) : String;
-  @:skipReflection public var HostContext(default,never) : dotnet.system.Int64;
-  @:skipReflection public var ManifestModule(default,never) : Module;
-  @:skipReflection public var GlobalAssemblyCache(default,never) : Bool;
+  public var CodeBase(default,never) : String;
+  public var EscapedCodeBase(default,never) : String;
+  public var FullName(default,never) : String;
+  public var EntryPoint(default,never) : MethodInfo;
+  public var Evidence(default,never) : dotnet.system.security.policy.Evidence;
+  public var Location(default,never) : String;
+  public var HostContext(default,never) : dotnet.system.Int64;
+  public var ManifestModule(default,never) : Module;
+  public var GlobalAssemblyCache(default,never) : Bool;
 
   @:overload(function(typeName:String, ignoreCase:Bool, bindingAttr:BindingFlags, binder:Binder, args:cs.NativeArray<dotnet.system.Object>, culture:dotnet.system.globalization.CultureInfo, activationAttributes:cs.NativeArray<dotnet.system.Object>) : Dynamic {})
   @:overload(function(typeName:String, ignoreCase:Bool) : Dynamic {})

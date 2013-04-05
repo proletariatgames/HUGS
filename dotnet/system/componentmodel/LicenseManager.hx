@@ -3,7 +3,7 @@ package dotnet.system.componentmodel;
 @:native("System.ComponentModel.LicenseManager") @:final
 extern class LicenseManager extends dotnet.system.Object {
   public static var CurrentContext : LicenseContext;
-  @:skipReflection public static var UsageMode(default,never) : LicenseUsageMode;
+  public static var UsageMode(default,never) : LicenseUsageMode;
 
   @:overload(function(type:cs.system.Type, creationContext:LicenseContext, args:cs.NativeArray<dotnet.system.Object>) : Dynamic {})
   public static function CreateWithContext(type:cs.system.Type, creationContext:LicenseContext) : Dynamic;

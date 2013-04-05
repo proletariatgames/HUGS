@@ -8,7 +8,7 @@ extern class HttpListenerResponse extends dotnet.system.Object  implements dotne
   public var Cookies : CookieCollection;
   public var Headers : WebHeaderCollection;
   public var KeepAlive : Bool;
-  @:skipReflection public var OutputStream(default,never) : dotnet.system.io.Stream;
+  public var OutputStream(default,never) : dotnet.system.io.Stream;
   public var ProtocolVersion : dotnet.system.Version;
   public var RedirectLocation : String;
   public var SendChunked : Bool;

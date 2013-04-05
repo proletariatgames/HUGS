@@ -4,7 +4,7 @@ package dotnet.system.runtime.remoting.metadata.w3cxsd2001;
 extern class SoapYear extends dotnet.system.Object  implements ISoapXsd {
   public var Sign : Int;
   public var Value : dotnet.system.DateTime;
-  @:skipReflection public static var XsdType(default,never) : String;
+  public static var XsdType(default,never) : String;
 
   @:overload(function(value:dotnet.system.DateTime, sign:Int) : Void {})
   @:overload(function(value:dotnet.system.DateTime) : Void {})

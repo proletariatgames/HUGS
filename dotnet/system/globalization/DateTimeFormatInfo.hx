@@ -2,7 +2,7 @@ package dotnet.system.globalization;
 
 @:native("System.Globalization.DateTimeFormatInfo") @:final
 extern class DateTimeFormatInfo extends dotnet.system.Object  implements dotnet.system.ICloneable implements dotnet.system.IFormatProvider {
-  @:skipReflection public var IsReadOnly(default,never) : Bool;
+  public var IsReadOnly(default,never) : Bool;
   public var AbbreviatedDayNames : cs.NativeArray<String>;
   public var AbbreviatedMonthNames : cs.NativeArray<String>;
   public var DayNames : cs.NativeArray<String>;
@@ -18,17 +18,17 @@ extern class DateTimeFormatInfo extends dotnet.system.Object  implements dotnet.
   public var MonthDayPattern : String;
   public var YearMonthPattern : String;
   public var FullDateTimePattern : String;
-  @:skipReflection public static var CurrentInfo(default,never) : DateTimeFormatInfo;
-  @:skipReflection public static var InvariantInfo(default,never) : DateTimeFormatInfo;
+  public static var CurrentInfo(default,never) : DateTimeFormatInfo;
+  public static var InvariantInfo(default,never) : DateTimeFormatInfo;
   public var FirstDayOfWeek : dotnet.system.DayOfWeek;
   public var Calendar : Calendar;
   public var CalendarWeekRule : CalendarWeekRule;
-  @:skipReflection public var RFC1123Pattern(default,never) : String;
-  @:skipReflection public var SortableDateTimePattern(default,never) : String;
-  @:skipReflection public var UniversalSortableDateTimePattern(default,never) : String;
+  public var RFC1123Pattern(default,never) : String;
+  public var SortableDateTimePattern(default,never) : String;
+  public var UniversalSortableDateTimePattern(default,never) : String;
   public var AbbreviatedMonthGenitiveNames : cs.NativeArray<String>;
   public var MonthGenitiveNames : cs.NativeArray<String>;
-  @:skipReflection public var NativeCalendarName(default,never) : String;
+  public var NativeCalendarName(default,never) : String;
   public var ShortestDayNames : cs.NativeArray<String>;
 
   public function Clone() : Dynamic;

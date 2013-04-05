@@ -2,7 +2,7 @@ package dotnet.system.xml.xpath;
 
 @:native("System.Xml.XPath.XPathNavigator")
 extern class XPathNavigator extends XPathItem  implements dotnet.system.ICloneable implements dotnet.system.xml.IXmlNamespaceResolver implements IXPathNavigable {
-  @:skipReflection public static var NavigatorComparer(default,never) : dotnet.system.collections.IEqualityComparer;
+  public static var NavigatorComparer(default,never) : dotnet.system.collections.IEqualityComparer;
 
   public function Clone() : XPathNavigator;
 

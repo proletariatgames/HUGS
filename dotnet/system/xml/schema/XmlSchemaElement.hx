@@ -14,12 +14,12 @@ extern class XmlSchemaElement extends XmlSchemaParticle {
   public var SubstitutionGroup : dotnet.system.xml.XmlQualifiedName;
   public var SchemaTypeName : dotnet.system.xml.XmlQualifiedName;
   public var SchemaType : XmlSchemaType;
-  @:skipReflection public var Constraints(default,never) : XmlSchemaObjectCollection;
-  @:skipReflection public var QualifiedName(default,never) : dotnet.system.xml.XmlQualifiedName;
-  @:skipReflection public var ElementType(default,never) : Dynamic;
-  @:skipReflection public var ElementSchemaType(default,never) : XmlSchemaType;
-  @:skipReflection public var BlockResolved(default,never) : XmlSchemaDerivationMethod;
-  @:skipReflection public var FinalResolved(default,never) : XmlSchemaDerivationMethod;
+  public var Constraints(default,never) : XmlSchemaObjectCollection;
+  public var QualifiedName(default,never) : dotnet.system.xml.XmlQualifiedName;
+  public var ElementType(default,never) : Dynamic;
+  public var ElementSchemaType(default,never) : XmlSchemaType;
+  public var BlockResolved(default,never) : XmlSchemaDerivationMethod;
+  public var FinalResolved(default,never) : XmlSchemaDerivationMethod;
 
   public function new() : Void;
 }

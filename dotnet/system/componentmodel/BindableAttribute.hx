@@ -5,8 +5,8 @@ extern class BindableAttribute extends dotnet.system.Attribute {
   public static var No : BindableAttribute;
   public static var Yes : BindableAttribute;
   public static var Default : BindableAttribute;
-  @:skipReflection public var Direction(default,never) : BindingDirection;
-  @:skipReflection public var Bindable(default,never) : Bool;
+  public var Direction(default,never) : BindingDirection;
+  public var Bindable(default,never) : Bool;
 
   @:overload(function(flags:BindableSupport, direction:BindingDirection) : Void {})
   @:overload(function(bindable:Bool, direction:BindingDirection) : Void {})

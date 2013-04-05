@@ -4,7 +4,7 @@ package unityengine;
 extern class LODGroup extends Component {
   public var localReferencePoint : Vector3;
   public var size : Float;
-  @:skipReflection public var lodCount(default,never) : Int;
+  public var lodCount(default,never) : Int;
   public var enabled : Bool;
 
   public function new() : Void;

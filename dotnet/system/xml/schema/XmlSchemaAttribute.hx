@@ -10,9 +10,9 @@ extern class XmlSchemaAttribute extends XmlSchemaAnnotated {
   public var SchemaTypeName : dotnet.system.xml.XmlQualifiedName;
   public var SchemaType : XmlSchemaSimpleType;
   public var Use : XmlSchemaUse;
-  @:skipReflection public var QualifiedName(default,never) : dotnet.system.xml.XmlQualifiedName;
-  @:skipReflection public var AttributeType(default,never) : Dynamic;
-  @:skipReflection public var AttributeSchemaType(default,never) : XmlSchemaSimpleType;
+  public var QualifiedName(default,never) : dotnet.system.xml.XmlQualifiedName;
+  public var AttributeType(default,never) : Dynamic;
+  public var AttributeSchemaType(default,never) : XmlSchemaSimpleType;
 
   public function new() : Void;
 }

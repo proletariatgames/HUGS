@@ -7,7 +7,7 @@ extern class Material extends Object {
   public var mainTexture : Texture;
   public var mainTextureOffset : Vector2;
   public var mainTextureScale : Vector2;
-  @:skipReflection public var passCount(default,never) : Int;
+  public var passCount(default,never) : Int;
   public var renderQueue : Int;
   public var shaderKeywords : cs.NativeArray<String>;
 

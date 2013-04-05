@@ -4,22 +4,22 @@ package dotnet.system;
 extern class DateTime extends ValueType  implements IComparable implements IConvertible implements IFormattable implements dotnet.system.runtime.serialization.ISerializable {
   public static var MaxValue : DateTime;
   public static var MinValue : DateTime;
-  @:skipReflection public var Date(default,never) : DateTime;
-  @:skipReflection public var Month(default,never) : Int;
-  @:skipReflection public var Day(default,never) : Int;
-  @:skipReflection public var DayOfWeek(default,never) : DayOfWeek;
-  @:skipReflection public var DayOfYear(default,never) : Int;
-  @:skipReflection public var TimeOfDay(default,never) : TimeSpan;
-  @:skipReflection public var Hour(default,never) : Int;
-  @:skipReflection public var Minute(default,never) : Int;
-  @:skipReflection public var Second(default,never) : Int;
-  @:skipReflection public var Millisecond(default,never) : Int;
-  @:skipReflection public static var Now(default,never) : DateTime;
-  @:skipReflection public var Ticks(default,never) : Int64;
-  @:skipReflection public static var Today(default,never) : DateTime;
-  @:skipReflection public static var UtcNow(default,never) : DateTime;
-  @:skipReflection public var Year(default,never) : Int;
-  @:skipReflection public var Kind(default,never) : DateTimeKind;
+  public var Date(default,never) : DateTime;
+  public var Month(default,never) : Int;
+  public var Day(default,never) : Int;
+  public var DayOfWeek(default,never) : DayOfWeek;
+  public var DayOfYear(default,never) : Int;
+  public var TimeOfDay(default,never) : TimeSpan;
+  public var Hour(default,never) : Int;
+  public var Minute(default,never) : Int;
+  public var Second(default,never) : Int;
+  public var Millisecond(default,never) : Int;
+  public static var Now(default,never) : DateTime;
+  public var Ticks(default,never) : Int64;
+  public static var Today(default,never) : DateTime;
+  public static var UtcNow(default,never) : DateTime;
+  public var Year(default,never) : Int;
+  public var Kind(default,never) : DateTimeKind;
 
   public function Add(value:TimeSpan) : DateTime;
 

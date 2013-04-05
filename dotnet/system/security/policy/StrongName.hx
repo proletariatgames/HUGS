@@ -2,9 +2,9 @@ package dotnet.system.security.policy;
 
 @:native("System.Security.Policy.StrongName") @:final
 extern class StrongName extends dotnet.system.Object  implements IIdentityPermissionFactory {
-  @:skipReflection public var Name(default,never) : String;
-  @:skipReflection public var PublicKey(default,never) : dotnet.system.security.permissions.StrongNamePublicKeyBlob;
-  @:skipReflection public var Version(default,never) : dotnet.system.Version;
+  public var Name(default,never) : String;
+  public var PublicKey(default,never) : dotnet.system.security.permissions.StrongNamePublicKeyBlob;
+  public var Version(default,never) : dotnet.system.Version;
 
   public function Copy() : Dynamic;
 

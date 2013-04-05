@@ -2,10 +2,10 @@ package dotnet.system.runtime.remoting;
 
 @:native("System.Runtime.Remoting.SoapServices")
 extern class SoapServices extends dotnet.system.Object {
-  @:skipReflection public static var XmlNsForClrType(default,never) : String;
-  @:skipReflection public static var XmlNsForClrTypeWithAssembly(default,never) : String;
-  @:skipReflection public static var XmlNsForClrTypeWithNs(default,never) : String;
-  @:skipReflection public static var XmlNsForClrTypeWithNsAndAssembly(default,never) : String;
+  public static var XmlNsForClrType(default,never) : String;
+  public static var XmlNsForClrTypeWithAssembly(default,never) : String;
+  public static var XmlNsForClrTypeWithNs(default,never) : String;
+  public static var XmlNsForClrTypeWithNsAndAssembly(default,never) : String;
 
   public static function CodeXmlNamespaceForClrTypeNamespace(typeNamespace:String, assemblyName:String) : String;
 

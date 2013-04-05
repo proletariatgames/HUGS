@@ -4,7 +4,7 @@ package dotnet.system.runtime.serialization;
 extern class SerializationInfo extends dotnet.system.Object {
   public var AssemblyName : String;
   public var FullTypeName : String;
-  @:skipReflection public var MemberCount(default,never) : Int;
+  public var MemberCount(default,never) : Int;
 
   @:overload(function(name:String, value:Dynamic, type:cs.system.Type) : Void {})
   @:overload(function(name:String, value:UInt) : Void {})

@@ -6,7 +6,7 @@ extern class DesignerCategoryAttribute extends dotnet.system.Attribute {
   public static var Form : DesignerCategoryAttribute;
   public static var Generic : DesignerCategoryAttribute;
   public static var Default : DesignerCategoryAttribute;
-  @:skipReflection public var Category(default,never) : String;
+  public var Category(default,never) : String;
 
   @:overload(function(category:String) : Void {})
   public function new() : Void;

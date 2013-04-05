@@ -2,11 +2,11 @@ package dotnet.system.collections.generic;
 
 @:native("System.Collections.Generic.SortedList")
 extern class SortedList<TKey,TValue> extends dotnet.system.Object  implements dotnet.system.collections.IDictionary implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
   public var Capacity : Int;
-  @:skipReflection public var Keys(default,never) : IList<TKey>;
-  @:skipReflection public var Values(default,never) : IList<TValue>;
-  @:skipReflection public var Comparer(default,never) : IComparer<TKey>;
+  public var Keys(default,never) : IList<TKey>;
+  public var Values(default,never) : IList<TValue>;
+  public var Comparer(default,never) : IComparer<TKey>;
 
   public function Add(key:TKey, value:TValue) : Void;
 

@@ -10,7 +10,7 @@ extern class DllImportAttribute extends dotnet.system.Attribute {
   public var SetLastError : Bool;
   public var BestFitMapping : Bool;
   public var ThrowOnUnmappableChar : Bool;
-  @:skipReflection public var Value(default,never) : String;
+  public var Value(default,never) : String;
 
   public function new(dllName:String) : Void;
 }

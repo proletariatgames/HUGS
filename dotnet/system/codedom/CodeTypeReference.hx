@@ -6,7 +6,7 @@ extern class CodeTypeReference extends CodeObject {
   public var ArrayRank : Int;
   public var BaseType : String;
   public var Options : CodeTypeReferenceOptions;
-  @:skipReflection public var TypeArguments(default,never) : CodeTypeReferenceCollection;
+  public var TypeArguments(default,never) : CodeTypeReferenceCollection;
 
   @:overload(function(typeName:String, typeArguments:cs.NativeArray<CodeTypeReference>) : Void {})
   @:overload(function(typeName:String, referenceOptions:CodeTypeReferenceOptions) : Void {})

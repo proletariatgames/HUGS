@@ -5,9 +5,9 @@ extern class GenericAcl extends dotnet.system.Object  implements dotnet.system.c
   public static var AclRevision : UInt;
   public static var AclRevisionDS : UInt;
   public static var MaxBinaryLength : Int;
-  @:skipReflection public var Count(default,never) : Int;
-  @:skipReflection public var IsSynchronized(default,never) : Bool;
-  @:skipReflection public var SyncRoot(default,never) : Dynamic;
+  public var Count(default,never) : Int;
+  public var IsSynchronized(default,never) : Bool;
+  public var SyncRoot(default,never) : Dynamic;
 
   public function CopyTo(array:cs.NativeArray<GenericAce>, index:Int) : Void;
 

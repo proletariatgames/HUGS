@@ -2,7 +2,7 @@ package dotnet.system.xml.serialization;
 
 @:native("System.Xml.Serialization.XmlSchemas")
 extern class XmlSchemas extends dotnet.system.collections.CollectionBase  implements dotnet.system.collections.IEnumerable {
-  @:skipReflection public var IsCompiled(default,never) : Bool;
+  public var IsCompiled(default,never) : Bool;
 
   public function AddReference(schema:dotnet.system.xml.schema.XmlSchema) : Void;
 

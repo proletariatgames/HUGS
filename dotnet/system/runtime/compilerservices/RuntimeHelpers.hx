@@ -14,7 +14,7 @@ extern class RuntimeHelpers_CleanupCode extends dotnet.system.MulticastDelegate 
 
 @:native("System.Runtime.CompilerServices.RuntimeHelpers") @:final
 extern class RuntimeHelpers extends dotnet.system.Object {
-  @:skipReflection public static var OffsetToStringData(default,never) : Int;
+  public static var OffsetToStringData(default,never) : Int;
 
   public static function Equals(o1:Dynamic, o2:Dynamic) : Bool;
 

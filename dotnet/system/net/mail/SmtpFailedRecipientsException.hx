@@ -2,7 +2,7 @@ package dotnet.system.net.mail;
 
 @:native("System.Net.Mail.SmtpFailedRecipientsException")
 extern class SmtpFailedRecipientsException extends SmtpFailedRecipientException  implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var InnerExceptions(default,never) : cs.NativeArray<SmtpFailedRecipientException>;
+  public var InnerExceptions(default,never) : cs.NativeArray<SmtpFailedRecipientException>;
 
   @:overload(function(message:String, innerExceptions:cs.NativeArray<SmtpFailedRecipientException>) : Void {})
   @:overload(function(message:String, innerException:dotnet.system.Exception) : Void {})

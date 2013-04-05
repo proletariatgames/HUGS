@@ -5,7 +5,7 @@ extern class CookieContainer extends dotnet.system.Object {
   public static var DefaultCookieLengthLimit : Int;
   public static var DefaultCookieLimit : Int;
   public static var DefaultPerDomainCookieLimit : Int;
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
   public var Capacity : Int;
   public var MaxCookieSize : Int;
   public var PerDomainCapacity : Int;

@@ -3,7 +3,7 @@ package dotnet.system.net;
 @:native("System.Net.WebProxy")
 extern class WebProxy extends dotnet.system.Object  implements dotnet.system.runtime.serialization.ISerializable implements IWebProxy {
   public var Address : dotnet.system.Uri;
-  @:skipReflection public var BypassArrayList(default,never) : dotnet.system.collections.ArrayList;
+  public var BypassArrayList(default,never) : dotnet.system.collections.ArrayList;
   public var BypassList : cs.NativeArray<String>;
   public var BypassProxyOnLocal : Bool;
   public var Credentials : ICredentials;

@@ -2,7 +2,7 @@ package dotnet.system.reflection.emit;
 
 @:native("System.Reflection.Emit.DynamicILInfo")
 extern class DynamicILInfo extends dotnet.system.Object {
-  @:skipReflection public var DynamicMethod(default,never) : DynamicMethod;
+  public var DynamicMethod(default,never) : DynamicMethod;
 
   @:overload(function(method:dotnet.system.RuntimeMethodHandle, contextType:dotnet.system.RuntimeTypeHandle) : Int {})
   @:overload(function(type:dotnet.system.RuntimeTypeHandle) : Int {})

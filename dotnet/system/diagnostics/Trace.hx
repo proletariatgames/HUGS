@@ -5,8 +5,8 @@ extern class Trace extends dotnet.system.Object {
   public static var AutoFlush : Bool;
   public static var IndentLevel : Int;
   public static var IndentSize : Int;
-  @:skipReflection public static var Listeners(default,never) : TraceListenerCollection;
-  @:skipReflection public static var CorrelationManager(default,never) : CorrelationManager;
+  public static var Listeners(default,never) : TraceListenerCollection;
+  public static var CorrelationManager(default,never) : CorrelationManager;
   public static var UseGlobalLock : Bool;
 
   @:overload(function(condition:Bool, message:String, detailMessage:String) : Void {})

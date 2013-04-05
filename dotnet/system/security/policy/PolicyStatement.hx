@@ -4,7 +4,7 @@ package dotnet.system.security.policy;
 extern class PolicyStatement extends dotnet.system.Object  implements dotnet.system.security.ISecurityEncodable implements dotnet.system.security.ISecurityPolicyEncodable {
   public var PermissionSet : dotnet.system.security.PermissionSet;
   public var Attributes : PolicyStatementAttribute;
-  @:skipReflection public var AttributeString(default,never) : String;
+  public var AttributeString(default,never) : String;
 
   public function Copy() : PolicyStatement;
 

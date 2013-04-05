@@ -2,25 +2,25 @@ package unityengine;
 
 @:native("UnityEngine.TerrainData") @:final
 extern class TerrainData extends Object {
-  @:skipReflection public var heightmapWidth(default,never) : Int;
-  @:skipReflection public var heightmapHeight(default,never) : Int;
+  public var heightmapWidth(default,never) : Int;
+  public var heightmapHeight(default,never) : Int;
   public var heightmapResolution : Int;
-  @:skipReflection public var heightmapScale(default,never) : Vector3;
+  public var heightmapScale(default,never) : Vector3;
   public var size : Vector3;
   public var wavingGrassStrength : Float;
   public var wavingGrassAmount : Float;
   public var wavingGrassSpeed : Float;
   public var wavingGrassTint : Color;
-  @:skipReflection public var detailWidth(default,never) : Int;
-  @:skipReflection public var detailHeight(default,never) : Int;
-  @:skipReflection public var detailResolution(default,never) : Int;
+  public var detailWidth(default,never) : Int;
+  public var detailHeight(default,never) : Int;
+  public var detailResolution(default,never) : Int;
   public var detailPrototypes : cs.NativeArray<DetailPrototype>;
   public var treeInstances : cs.NativeArray<TreeInstance>;
   public var treePrototypes : cs.NativeArray<TreePrototype>;
-  @:skipReflection public var alphamapLayers(default,never) : Int;
+  public var alphamapLayers(default,never) : Int;
   public var alphamapResolution : Int;
-  @:skipReflection public var alphamapWidth(default,never) : Int;
-  @:skipReflection public var alphamapHeight(default,never) : Int;
+  public var alphamapWidth(default,never) : Int;
+  public var alphamapHeight(default,never) : Int;
   public var baseMapResolution : Int;
   public var splatPrototypes : cs.NativeArray<SplatPrototype>;
 

@@ -2,17 +2,17 @@ package dotnet.system.threading;
 
 @:native("System.Threading.ReaderWriterLockSlim")
 extern class ReaderWriterLockSlim extends dotnet.system.Object  implements dotnet.system.IDisposable {
-  @:skipReflection public var IsReadLockHeld(default,never) : Bool;
-  @:skipReflection public var IsWriteLockHeld(default,never) : Bool;
-  @:skipReflection public var IsUpgradeableReadLockHeld(default,never) : Bool;
-  @:skipReflection public var CurrentReadCount(default,never) : Int;
-  @:skipReflection public var RecursiveReadCount(default,never) : Int;
-  @:skipReflection public var RecursiveUpgradeCount(default,never) : Int;
-  @:skipReflection public var RecursiveWriteCount(default,never) : Int;
-  @:skipReflection public var WaitingReadCount(default,never) : Int;
-  @:skipReflection public var WaitingUpgradeCount(default,never) : Int;
-  @:skipReflection public var WaitingWriteCount(default,never) : Int;
-  @:skipReflection public var RecursionPolicy(default,never) : LockRecursionPolicy;
+  public var IsReadLockHeld(default,never) : Bool;
+  public var IsWriteLockHeld(default,never) : Bool;
+  public var IsUpgradeableReadLockHeld(default,never) : Bool;
+  public var CurrentReadCount(default,never) : Int;
+  public var RecursiveReadCount(default,never) : Int;
+  public var RecursiveUpgradeCount(default,never) : Int;
+  public var RecursiveWriteCount(default,never) : Int;
+  public var WaitingReadCount(default,never) : Int;
+  public var WaitingUpgradeCount(default,never) : Int;
+  public var WaitingWriteCount(default,never) : Int;
+  public var RecursionPolicy(default,never) : LockRecursionPolicy;
 
   @:overload(function(recursionPolicy:LockRecursionPolicy) : Void {})
   public function new() : Void;

@@ -2,14 +2,14 @@ package unityengine;
 
 @:native("UnityEngine.NotificationServices") @:final
 extern class NotificationServices {
-  @:skipReflection public static var localNotificationCount(default,never) : Int;
-  @:skipReflection public static var localNotifications(default,never) : cs.NativeArray<LocalNotification>;
-  @:skipReflection public static var scheduledLocalNotifications(default,never) : cs.NativeArray<LocalNotification>;
-  @:skipReflection public static var remoteNotificationCount(default,never) : Int;
-  @:skipReflection public static var remoteNotifications(default,never) : cs.NativeArray<RemoteNotification>;
-  @:skipReflection public static var enabledRemoteNotificationTypes(default,never) : RemoteNotificationType;
-  @:skipReflection public static var deviceToken(default,never) : cs.NativeArray<dotnet.system.Byte>;
-  @:skipReflection public static var registrationError(default,never) : String;
+  public static var localNotificationCount(default,never) : Int;
+  public static var localNotifications(default,never) : cs.NativeArray<LocalNotification>;
+  public static var scheduledLocalNotifications(default,never) : cs.NativeArray<LocalNotification>;
+  public static var remoteNotificationCount(default,never) : Int;
+  public static var remoteNotifications(default,never) : cs.NativeArray<RemoteNotification>;
+  public static var enabledRemoteNotificationTypes(default,never) : RemoteNotificationType;
+  public static var deviceToken(default,never) : cs.NativeArray<dotnet.system.Byte>;
+  public static var registrationError(default,never) : String;
 
   public static function CancelAllLocalNotifications() : Void;
 

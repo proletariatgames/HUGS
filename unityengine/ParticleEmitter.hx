@@ -18,7 +18,7 @@ extern class ParticleEmitter extends Component {
   public var angularVelocity : Float;
   public var rndAngularVelocity : Float;
   public var particles : cs.NativeArray<Particle>;
-  @:skipReflection public var particleCount(default,never) : Int;
+  public var particleCount(default,never) : Int;
   public var enabled : Bool;
 
   public function ClearParticles() : Void;

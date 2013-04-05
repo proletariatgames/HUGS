@@ -2,7 +2,7 @@ package unityengine;
 
 @:native("UnityEngine.Microphone") @:final
 extern class Microphone {
-  @:skipReflection public static var devices(default,never) : cs.NativeArray<String>;
+  public static var devices(default,never) : cs.NativeArray<String>;
 
   public function new() : Void;
 

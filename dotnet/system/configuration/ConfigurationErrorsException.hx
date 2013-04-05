@@ -2,7 +2,7 @@ package dotnet.system.configuration;
 
 @:native("System.Configuration.ConfigurationErrorsException")
 extern class ConfigurationErrorsException extends ConfigurationException {
-  @:skipReflection public var Errors(default,never) : dotnet.system.collections.ICollection;
+  public var Errors(default,never) : dotnet.system.collections.ICollection;
 
   @:overload(function(message:String, inner:dotnet.system.Exception, filename:String, line:Int) : Void {})
   @:overload(function(message:String, inner:dotnet.system.Exception, reader:dotnet.system.xml.XmlReader) : Void {})

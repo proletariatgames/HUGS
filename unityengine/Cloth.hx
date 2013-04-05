@@ -11,8 +11,8 @@ extern class Cloth extends Component {
   public var useGravity : Bool;
   public var selfCollision : Bool;
   public var enabled : Bool;
-  @:skipReflection public var vertices(default,never) : cs.NativeArray<Vector3>;
-  @:skipReflection public var normals(default,never) : cs.NativeArray<Vector3>;
+  public var vertices(default,never) : cs.NativeArray<Vector3>;
+  public var normals(default,never) : cs.NativeArray<Vector3>;
 
   public function new() : Void;
 }

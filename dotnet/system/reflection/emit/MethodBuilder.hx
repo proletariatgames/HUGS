@@ -3,7 +3,7 @@ package dotnet.system.reflection.emit;
 @:native("System.Reflection.Emit.MethodBuilder") @:final
 extern class MethodBuilder extends dotnet.system.reflection.MethodInfo  implements dotnet.system.runtime.interopservices._MethodBuilder {
   public var InitLocals : Bool;
-  @:skipReflection public var Signature(default,never) : String;
+  public var Signature(default,never) : String;
 
   public function AddDeclarativeSecurity(action:dotnet.system.security.permissions.SecurityAction, pset:dotnet.system.security.PermissionSet) : Void;
 

@@ -6,18 +6,18 @@ extern class Vector3 {
   public var x : Float;
   public var y : Float;
   public var z : Float;
-  @:skipReflection public var normalized(default,never) : Vector3;
-  @:skipReflection public var magnitude(default,never) : Float;
-  @:skipReflection public var sqrMagnitude(default,never) : Float;
-  @:skipReflection public static var zero(default,never) : Vector3;
-  @:skipReflection public static var one(default,never) : Vector3;
-  @:skipReflection public static var forward(default,never) : Vector3;
-  @:skipReflection public static var back(default,never) : Vector3;
-  @:skipReflection public static var up(default,never) : Vector3;
-  @:skipReflection public static var down(default,never) : Vector3;
-  @:skipReflection public static var left(default,never) : Vector3;
-  @:skipReflection public static var right(default,never) : Vector3;
-  @:skipReflection public static var fwd(default,never) : Vector3;
+  public var normalized(default,never) : Vector3;
+  public var magnitude(default,never) : Float;
+  public var sqrMagnitude(default,never) : Float;
+  public static var zero(default,never) : Vector3;
+  public static var one(default,never) : Vector3;
+  public static var forward(default,never) : Vector3;
+  public static var back(default,never) : Vector3;
+  public static var up(default,never) : Vector3;
+  public static var down(default,never) : Vector3;
+  public static var left(default,never) : Vector3;
+  public static var right(default,never) : Vector3;
+  public static var fwd(default,never) : Vector3;
 
   @:overload(function(x:Float, y:Float, z:Float) : Void {})
   public function new(x:Float, y:Float) : Void;

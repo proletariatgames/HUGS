@@ -2,8 +2,8 @@ package dotnet.system.net;
 
 @:native("System.Net.WebException")
 extern class WebException extends dotnet.system.InvalidOperationException  implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var Response(default,never) : WebResponse;
-  @:skipReflection public var Status(default,never) : WebExceptionStatus;
+  public var Response(default,never) : WebResponse;
+  public var Status(default,never) : WebExceptionStatus;
 
   @:overload(function(message:String, innerException:dotnet.system.Exception, status:WebExceptionStatus, response:WebResponse) : Void {})
   @:overload(function(message:String, status:WebExceptionStatus) : Void {})

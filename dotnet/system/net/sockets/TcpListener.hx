@@ -2,8 +2,8 @@ package dotnet.system.net.sockets;
 
 @:native("System.Net.Sockets.TcpListener")
 extern class TcpListener extends dotnet.system.Object {
-  @:skipReflection public var LocalEndpoint(default,never) : dotnet.system.net.EndPoint;
-  @:skipReflection public var Server(default,never) : Socket;
+  public var LocalEndpoint(default,never) : dotnet.system.net.EndPoint;
+  public var Server(default,never) : Socket;
   public var ExclusiveAddressUse : Bool;
 
   public function AcceptSocket() : Socket;

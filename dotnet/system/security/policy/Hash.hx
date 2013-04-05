@@ -2,8 +2,8 @@ package dotnet.system.security.policy;
 
 @:native("System.Security.Policy.Hash") @:final
 extern class Hash extends dotnet.system.Object  implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var MD5(default,never) : cs.NativeArray<dotnet.system.Byte>;
-  @:skipReflection public var SHA1(default,never) : cs.NativeArray<dotnet.system.Byte>;
+  public var MD5(default,never) : cs.NativeArray<dotnet.system.Byte>;
+  public var SHA1(default,never) : cs.NativeArray<dotnet.system.Byte>;
 
   public static function CreateMD5(md5:cs.NativeArray<dotnet.system.Byte>) : Hash;
 

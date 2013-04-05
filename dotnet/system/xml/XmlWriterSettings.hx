@@ -12,7 +12,7 @@ extern class XmlWriterSettings extends dotnet.system.Object {
   public var NewLineOnAttributes : Bool;
   public var NewLineHandling : NewLineHandling;
   public var OmitXmlDeclaration : Bool;
-  @:skipReflection public var OutputMethod(default,never) : XmlOutputMethod;
+  public var OutputMethod(default,never) : XmlOutputMethod;
 
   public function Clone() : XmlWriterSettings;
 

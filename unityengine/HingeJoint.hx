@@ -8,8 +8,8 @@ extern class HingeJoint extends Joint {
   public var useMotor : Bool;
   public var useLimits : Bool;
   public var useSpring : Bool;
-  @:skipReflection public var velocity(default,never) : Float;
-  @:skipReflection public var angle(default,never) : Float;
+  public var velocity(default,never) : Float;
+  public var angle(default,never) : Float;
 
   public function new() : Void;
 }

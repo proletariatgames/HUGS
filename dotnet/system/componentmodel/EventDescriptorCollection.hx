@@ -3,7 +3,7 @@ package dotnet.system.componentmodel;
 @:native("System.ComponentModel.EventDescriptorCollection")
 extern class EventDescriptorCollection extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IList implements dotnet.system.collections.IEnumerable {
   public static var Empty : EventDescriptorCollection;
-  @:skipReflection public var Count(default,never) : Int;
+  public var Count(default,never) : Int;
 
   public function Add(value:EventDescriptor) : Int;
 

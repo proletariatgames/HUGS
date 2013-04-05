@@ -9,7 +9,7 @@ extern class UriBuilder extends Object {
   public var Port : Int;
   public var Query : String;
   public var Scheme : String;
-  @:skipReflection public var Uri(default,never) : Uri;
+  public var Uri(default,never) : Uri;
   public var UserName : String;
 
   @:overload(function(scheme:String, host:String, port:Int, pathValue:String, extraValue:String) : Void {})

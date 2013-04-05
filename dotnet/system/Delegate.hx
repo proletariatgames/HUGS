@@ -2,8 +2,8 @@ package dotnet.system;
 
 @:native("System.Delegate")
 extern class Delegate extends Object  implements ICloneable implements dotnet.system.runtime.serialization.ISerializable {
-  @:skipReflection public var Method(default,never) : dotnet.system.reflection.MethodInfo;
-  @:skipReflection public var Target(default,never) : Dynamic;
+  public var Method(default,never) : dotnet.system.reflection.MethodInfo;
+  public var Target(default,never) : Dynamic;
 
   public function Clone() : Dynamic;
 
