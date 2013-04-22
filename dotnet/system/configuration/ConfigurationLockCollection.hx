@@ -15,6 +15,7 @@ extern class ConfigurationLockCollection extends dotnet.system.Object  implement
 
   public function Contains(name:String) : Bool;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<String>, index:Int) : Void;
 
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;

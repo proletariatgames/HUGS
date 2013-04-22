@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Font.FontTextureRebuildCallback") @:final
-extern class Font_FontTextureRebuildCallback {
+extern class Font_FontTextureRebuildCallback extends dotnet.system.MulticastDelegate {
 
   public function BeginInvoke(_callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
 

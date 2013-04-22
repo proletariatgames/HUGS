@@ -7,7 +7,7 @@ extern enum TextEditor_DblClickSnapping {
 }
 
 @:native("UnityEngine.TextEditor")
-extern class TextEditor {
+extern class TextEditor extends dotnet.system.Object {
   public var pos : Int;
   public var selectPos : Int;
   public var controlID : Int;

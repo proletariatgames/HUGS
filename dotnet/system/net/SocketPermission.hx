@@ -8,21 +8,27 @@ extern class SocketPermission extends dotnet.system.security.CodeAccessPermissio
 
   public function AddPermission(access:NetworkAccess, transport:TransportType, hostName:String, portNumber:Int) : Void;
 
+  @:overload(function() : dotnet.system.security.IPermission {})
   public override function Copy() : dotnet.system.security.IPermission;
 
-  @:overload(function(access:NetworkAccess, transport:TransportType, hostName:String, portNumber:Int) : Void {})
-  public function new(state:dotnet.system.security.permissions.PermissionState) : Void;
+  @:overload(function(state:dotnet.system.security.permissions.PermissionState) : Void {})
+  public function new(access:NetworkAccess, transport:TransportType, hostName:String, portNumber:Int) : Void;
 
-  public override function FromXml(securityElement:dotnet.system.security.SecurityElement) : Void;
+  @:overload(function(securityElement:dotnet.system.security.SecurityElement) : Void {})
+  public override function FromXml(elem:dotnet.system.security.SecurityElement) : Void;
 
+  @:overload(function(target:dotnet.system.security.IPermission) : dotnet.system.security.IPermission {})
   public override function Intersect(target:dotnet.system.security.IPermission) : dotnet.system.security.IPermission;
 
+  @:overload(function(target:dotnet.system.security.IPermission) : Bool {})
   public override function IsSubsetOf(target:dotnet.system.security.IPermission) : Bool;
 
-  public override function IsUnrestricted() : Bool;
+  public function IsUnrestricted() : Bool;
 
+  @:overload(function() : dotnet.system.security.SecurityElement {})
   public override function ToXml() : dotnet.system.security.SecurityElement;
 
-  public override function Union(target:dotnet.system.security.IPermission) : dotnet.system.security.IPermission;
+  @:overload(function(target:dotnet.system.security.IPermission) : dotnet.system.security.IPermission {})
+  public override function Union(other:dotnet.system.security.IPermission) : dotnet.system.security.IPermission;
 }
 

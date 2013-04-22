@@ -9,16 +9,16 @@ extern class BinaryFormatter extends dotnet.system.Object  implements dotnet.sys
   public var TypeFormat : dotnet.system.runtime.serialization.formatters.FormatterTypeStyle;
   public var FilterLevel : dotnet.system.runtime.serialization.formatters.TypeFilterLevel;
 
-  @:overload(function(selector:dotnet.system.runtime.serialization.ISurrogateSelector, context:dotnet.system.runtime.serialization.StreamingContext) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(selector:dotnet.system.runtime.serialization.ISurrogateSelector, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
-  @:overload(function(serializationStream:dotnet.system.io.Stream, handler:dotnet.system.runtime.remoting.messaging.HeaderHandler) : Dynamic {})
-  public function Deserialize(serializationStream:dotnet.system.io.Stream) : Dynamic;
+  @:overload(function(serializationStream:dotnet.system.io.Stream) : Dynamic {})
+  public function Deserialize(serializationStream:dotnet.system.io.Stream, handler:dotnet.system.runtime.remoting.messaging.HeaderHandler) : Dynamic;
 
   public function DeserializeMethodResponse(serializationStream:dotnet.system.io.Stream, handler:dotnet.system.runtime.remoting.messaging.HeaderHandler, methodCallMessage:dotnet.system.runtime.remoting.messaging.IMethodCallMessage) : Dynamic;
 
-  @:overload(function(serializationStream:dotnet.system.io.Stream, graph:Dynamic, headers:cs.NativeArray<dotnet.system.runtime.remoting.messaging.Header>) : Void {})
-  public function Serialize(serializationStream:dotnet.system.io.Stream, graph:Dynamic) : Void;
+  @:overload(function(serializationStream:dotnet.system.io.Stream, graph:Dynamic) : Void {})
+  public function Serialize(serializationStream:dotnet.system.io.Stream, graph:Dynamic, headers:cs.NativeArray<dotnet.system.runtime.remoting.messaging.Header>) : Void;
 
   public function UnsafeDeserialize(serializationStream:dotnet.system.io.Stream, handler:dotnet.system.runtime.remoting.messaging.HeaderHandler) : Dynamic;
 

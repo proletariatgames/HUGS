@@ -7,7 +7,7 @@ extern class XsltSettings extends dotnet.system.Object {
   public var EnableDocumentFunction : Bool;
   public var EnableScript : Bool;
 
-  @:overload(function(enableDocumentFunction:Bool, enableScript:Bool) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(enableDocumentFunction:Bool, enableScript:Bool) : Void;
 }
 

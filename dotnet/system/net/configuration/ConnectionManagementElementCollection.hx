@@ -7,16 +7,12 @@ extern class ConnectionManagementElementCollection extends dotnet.system.configu
 
   public function Clear() : Void;
 
-  override function CreateNewElement() : dotnet.system.configuration.ConfigurationElement;
-
   public function new() : Void;
-
-  override function GetElementKey(element:dotnet.system.configuration.ConfigurationElement) : Dynamic;
 
   public function IndexOf(element:ConnectionManagementElement) : Int;
 
-  @:overload(function(name:String) : Void {})
-  public function Remove(element:ConnectionManagementElement) : Void;
+  @:overload(function(element:ConnectionManagementElement) : Void {})
+  public function Remove(name:String) : Void;
 
   public function RemoveAt(index:Int) : Void;
 }

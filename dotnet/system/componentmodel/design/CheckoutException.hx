@@ -4,9 +4,9 @@ package dotnet.system.componentmodel.design;
 extern class CheckoutException extends dotnet.system.runtime.interopservices.ExternalException {
   public static var Canceled : CheckoutException;
 
-  @:overload(function(message:String, innerException:dotnet.system.Exception) : Void {})
-  @:overload(function(message:String, errorCode:Int) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(message:String) : Void {})
-  public function new() : Void;
+  @:overload(function(message:String, errorCode:Int) : Void {})
+  public function new(message:String, innerException:dotnet.system.Exception) : Void;
 }
 

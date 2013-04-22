@@ -34,18 +34,19 @@ extern class CultureInfo extends dotnet.system.Object  implements dotnet.system.
 
   public static function CreateSpecificCulture(name:String) : CultureInfo;
 
-  @:overload(function(name:String, useUserOverride:Bool) : Void {})
+  @:overload(function(culture:Int) : Void {})
   @:overload(function(culture:Int, useUserOverride:Bool) : Void {})
   @:overload(function(name:String) : Void {})
-  public function new(culture:Int) : Void;
+  public function new(name:String, useUserOverride:Bool) : Void;
 
-  public override function Equals(value:Dynamic) : Bool;
+  @:overload(function(value:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
   public function GetConsoleFallbackUICulture() : CultureInfo;
 
-  @:overload(function(name:String, altName:String) : CultureInfo {})
+  @:overload(function(culture:Int) : CultureInfo {})
   @:overload(function(name:String) : CultureInfo {})
-  public static function GetCultureInfo(culture:Int) : CultureInfo;
+  public static function GetCultureInfo(name:String, altName:String) : CultureInfo;
 
   public static function GetCultureInfoByIetfLanguageTag(name:String) : CultureInfo;
 
@@ -53,10 +54,12 @@ extern class CultureInfo extends dotnet.system.Object  implements dotnet.system.
 
   public function GetFormat(formatType:cs.system.Type) : Dynamic;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public static function ReadOnly(ci:CultureInfo) : CultureInfo;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

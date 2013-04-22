@@ -22,8 +22,8 @@ extern class Dns extends dotnet.system.Object {
 
   public static function GetHostAddresses(hostNameOrAddress:String) : cs.NativeArray<IPAddress>;
 
-  @:overload(function(address:String) : IPHostEntry {})
-  public static function GetHostByAddress(address:IPAddress) : IPHostEntry;
+  @:overload(function(address:IPAddress) : IPHostEntry {})
+  public static function GetHostByAddress(address:String) : IPHostEntry;
 
   public static function GetHostByName(hostName:String) : IPHostEntry;
 

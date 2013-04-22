@@ -7,7 +7,5 @@ extern class SoapAttribute extends dotnet.system.Attribute {
   public var XmlNamespace : String;
 
   public function new() : Void;
-
-  function SetReflectionObject(reflectionObject:Dynamic) : Void;
 }
 

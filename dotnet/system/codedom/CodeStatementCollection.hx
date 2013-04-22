@@ -4,23 +4,30 @@ package dotnet.system.codedom;
 extern class CodeStatementCollection extends dotnet.system.collections.CollectionBase {
 
   @:overload(function(value:CodeStatement) : Int {})
-  public function Add(value:CodeExpression) : Int;
+  @:overload(function(value:CodeExpression) : Int {})
+  @:overload(function(value:Dynamic) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
   @:overload(function(value:cs.NativeArray<CodeStatement>) : Void {})
   public function AddRange(value:CodeStatementCollection) : Void;
 
-  public function Contains(value:CodeStatement) : Bool;
+  @:overload(function(value:CodeStatement) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<CodeStatement>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<CodeStatement>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
+  @:overload(function() : Void {})
   @:overload(function(value:cs.NativeArray<CodeStatement>) : Void {})
-  @:overload(function(value:CodeStatementCollection) : Void {})
-  public function new() : Void;
+  public function new(value:CodeStatementCollection) : Void;
 
-  public function IndexOf(value:CodeStatement) : Int;
+  @:overload(function(value:CodeStatement) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, value:CodeStatement) : Void;
+  @:overload(function(index:Int, value:CodeStatement) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  public function Remove(value:CodeStatement) : Void;
+  @:overload(function(value:CodeStatement) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

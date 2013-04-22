@@ -15,8 +15,8 @@ extern class SecurityElement extends dotnet.system.Object {
 
   public function Copy() : SecurityElement;
 
-  @:overload(function(tag:String, text:String) : Void {})
-  public function new(tag:String) : Void;
+  @:overload(function(tag:String) : Void {})
+  public function new(tag:String, text:String) : Void;
 
   public function Equal(other:SecurityElement) : Bool;
 
@@ -36,6 +36,7 @@ extern class SecurityElement extends dotnet.system.Object {
 
   public function SearchForTextOfTag(tag:String) : String;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

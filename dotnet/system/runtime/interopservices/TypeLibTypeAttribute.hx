@@ -4,7 +4,7 @@ package dotnet.system.runtime.interopservices;
 extern class TypeLibTypeAttribute extends dotnet.system.Attribute {
   public var Value(default,never) : TypeLibTypeFlags;
 
-  @:overload(function(flags:TypeLibTypeFlags) : Void {})
-  public function new(flags:Int) : Void;
+  @:overload(function(flags:Int) : Void {})
+  public function new(flags:TypeLibTypeFlags) : Void;
 }
 

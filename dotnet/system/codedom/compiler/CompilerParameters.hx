@@ -18,9 +18,9 @@ extern class CompilerParameters extends dotnet.system.Object {
   public var EmbeddedResources(default,never) : dotnet.system.collections.specialized.StringCollection;
   public var LinkedResources(default,never) : dotnet.system.collections.specialized.StringCollection;
 
-  @:overload(function(assemblyNames:cs.NativeArray<String>, output:String, includeDebugInfo:Bool) : Void {})
-  @:overload(function(assemblyNames:cs.NativeArray<String>, output:String) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(assemblyNames:cs.NativeArray<String>) : Void {})
-  public function new() : Void;
+  @:overload(function(assemblyNames:cs.NativeArray<String>, output:String) : Void {})
+  public function new(assemblyNames:cs.NativeArray<String>, output:String, includeDebugInfo:Bool) : Void;
 }
 

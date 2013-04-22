@@ -5,8 +5,8 @@ extern class WebRequestModuleElement extends dotnet.system.configuration.Configu
   public var Prefix : String;
   public var Type : cs.system.Type;
 
+  @:overload(function() : Void {})
   @:overload(function(prefix:String, type:String) : Void {})
-  @:overload(function(prefix:String, type:cs.system.Type) : Void {})
-  public function new() : Void;
+  public function new(prefix:String, type:cs.system.Type) : Void;
 }
 

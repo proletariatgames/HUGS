@@ -12,7 +12,7 @@ extern class Registry extends dotnet.system.Object {
 
   public static function GetValue(keyName:String, valueName:String, defaultValue:Dynamic) : Dynamic;
 
-  @:overload(function(keyName:String, valueName:String, value:Dynamic, valueKind:RegistryValueKind) : Void {})
-  public static function SetValue(keyName:String, valueName:String, value:Dynamic) : Void;
+  @:overload(function(keyName:String, valueName:String, value:Dynamic) : Void {})
+  public static function SetValue(keyName:String, valueName:String, value:Dynamic, valueKind:RegistryValueKind) : Void;
 }
 

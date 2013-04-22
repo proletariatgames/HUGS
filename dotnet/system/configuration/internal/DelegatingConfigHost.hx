@@ -56,11 +56,11 @@ extern class DelegatingConfigHost extends dotnet.system.Object  implements IInte
 
   public function IsTrustedConfigPath(configPath:String) : Bool;
 
-  @:overload(function(streamName:String, assertPermissions:Bool) : dotnet.system.io.Stream {})
-  public function OpenStreamForRead(streamName:String) : dotnet.system.io.Stream;
+  @:overload(function(streamName:String) : dotnet.system.io.Stream {})
+  public function OpenStreamForRead(streamName:String, assertPermissions:Bool) : dotnet.system.io.Stream;
 
-  @:overload(function(streamName:String, templateStreamName:String, writeContext:Dynamic, assertPermissions:Bool) : dotnet.system.io.Stream {})
-  public function OpenStreamForWrite(streamName:String, templateStreamName:String, writeContext:Dynamic) : dotnet.system.io.Stream;
+  @:overload(function(streamName:String, templateStreamName:String, writeContext:Dynamic) : dotnet.system.io.Stream {})
+  public function OpenStreamForWrite(streamName:String, templateStreamName:String, writeContext:Dynamic, assertPermissions:Bool) : dotnet.system.io.Stream;
 
   public function PrefetchAll(configPath:String, streamName:String) : Bool;
 
@@ -74,7 +74,7 @@ extern class DelegatingConfigHost extends dotnet.system.Object  implements IInte
 
   public function VerifyDefinitionAllowed(configPath:String, allowDefinition:dotnet.system.configuration.ConfigurationAllowDefinition, allowExeDefinition:dotnet.system.configuration.ConfigurationAllowExeDefinition, errorInfo:IConfigErrorInfo) : Void;
 
-  @:overload(function(streamName:String, success:Bool, writeContext:Dynamic, assertPermissions:Bool) : Void {})
-  public function WriteCompleted(streamName:String, success:Bool, writeContext:Dynamic) : Void;
+  @:overload(function(streamName:String, success:Bool, writeContext:Dynamic) : Void {})
+  public function WriteCompleted(streamName:String, success:Bool, writeContext:Dynamic, assertPermissions:Bool) : Void;
 }
 

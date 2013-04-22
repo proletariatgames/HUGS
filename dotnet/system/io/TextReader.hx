@@ -6,12 +6,13 @@ extern class TextReader extends dotnet.system.MarshalByRefObject  implements dot
 
   public function Close() : Void;
 
-  public function Dispose() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function Peek() : Int;
 
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Int {})
-  public function Read() : Int;
+  @:overload(function() : Int {})
+  public function Read(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Int;
 
   public function ReadBlock(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Int;
 

@@ -24,14 +24,9 @@ extern class ObjectSecurity extends dotnet.system.Object {
 
   public static function IsSddlConversionSupported() : Bool;
 
-  function ModifyAccess(modification:AccessControlModification, rule:AccessRule, modified:Bool) : Bool;
-
   public function ModifyAccessRule(modification:AccessControlModification, rule:AccessRule, modified:Bool) : Bool;
 
-  function ModifyAudit(modification:AccessControlModification, rule:AuditRule, modified:Bool) : Bool;
-
   public function ModifyAuditRule(modification:AccessControlModification, rule:AuditRule, modified:Bool) : Bool;
-
 
   public function PurgeAccessRules(identity:dotnet.system.security.principal.IdentityReference) : Void;
 
@@ -45,10 +40,10 @@ extern class ObjectSecurity extends dotnet.system.Object {
 
   public function SetOwner(identity:dotnet.system.security.principal.IdentityReference) : Void;
 
-  @:overload(function(binaryForm:cs.NativeArray<dotnet.system.Byte>, includeSections:AccessControlSections) : Void {})
-  public function SetSecurityDescriptorBinaryForm(binaryForm:cs.NativeArray<dotnet.system.Byte>) : Void;
+  @:overload(function(binaryForm:cs.NativeArray<dotnet.system.Byte>) : Void {})
+  public function SetSecurityDescriptorBinaryForm(binaryForm:cs.NativeArray<dotnet.system.Byte>, includeSections:AccessControlSections) : Void;
 
-  @:overload(function(sddlForm:String, includeSections:AccessControlSections) : Void {})
-  public function SetSecurityDescriptorSddlForm(sddlForm:String) : Void;
+  @:overload(function(sddlForm:String) : Void {})
+  public function SetSecurityDescriptorSddlForm(sddlForm:String, includeSections:AccessControlSections) : Void;
 }
 

@@ -7,7 +7,8 @@ extern class ProcessThreadCollection extends dotnet.system.collections.ReadOnlyC
 
   public function Contains(thread:ProcessThread) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<ProcessThread>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<ProcessThread>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
   public function new(processThreads:cs.NativeArray<ProcessThread>) : Void;
 

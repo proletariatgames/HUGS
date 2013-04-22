@@ -5,8 +5,10 @@ extern class RuntimeTypeHandle extends ValueType  implements dotnet.system.runti
   public var Value(default,never) : IntPtr;
 
   @:overload(function(obj:Dynamic) : Bool {})
-  public function Equals(handle:RuntimeTypeHandle) : Bool;
+  @:overload(function(handle:RuntimeTypeHandle) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetModuleHandle() : ModuleHandle;

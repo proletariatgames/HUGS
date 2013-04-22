@@ -15,11 +15,11 @@ extern class XmlSchemaType extends XmlSchemaAnnotated {
 
   public function new() : Void;
 
-  @:overload(function(type:XmlTypeCode) : XmlSchemaComplexType {})
-  public static function GetBuiltInComplexType(qualifiedName:dotnet.system.xml.XmlQualifiedName) : XmlSchemaComplexType;
+  @:overload(function(qualifiedName:dotnet.system.xml.XmlQualifiedName) : XmlSchemaComplexType {})
+  public static function GetBuiltInComplexType(type:XmlTypeCode) : XmlSchemaComplexType;
 
-  @:overload(function(type:XmlTypeCode) : XmlSchemaSimpleType {})
-  public static function GetBuiltInSimpleType(qualifiedName:dotnet.system.xml.XmlQualifiedName) : XmlSchemaSimpleType;
+  @:overload(function(qualifiedName:dotnet.system.xml.XmlQualifiedName) : XmlSchemaSimpleType {})
+  public static function GetBuiltInSimpleType(type:XmlTypeCode) : XmlSchemaSimpleType;
 
   public static function IsDerivedFrom(derivedType:XmlSchemaType, baseType:XmlSchemaType, except:XmlSchemaDerivationMethod) : Bool;
 }

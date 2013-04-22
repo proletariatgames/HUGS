@@ -8,10 +8,12 @@ extern class X509ExtensionCollection extends dotnet.system.Object  implements do
 
   public function Add(extension:X509Extension) : Int;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<X509Extension>, index:Int) : Void;
 
   public function new() : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : X509ExtensionEnumerator;
 }
 

@@ -2,8 +2,6 @@ package dotnet.system.collections.generic;
 
 @:native("System.Collections.Generic.ICollection")
 extern interface ICollection<T> extends dotnet.system.collections.IEnumerable {
-  var Count(default,never) : Int;
-  var IsReadOnly(default,never) : Bool;
 
   function Add(item:T) : Void;
 

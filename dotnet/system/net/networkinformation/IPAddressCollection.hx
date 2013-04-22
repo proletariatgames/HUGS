@@ -13,6 +13,7 @@ extern class IPAddressCollection extends dotnet.system.Object  implements dotnet
 
   public function CopyTo(array:cs.NativeArray<dotnet.system.net.IPAddress>, offset:Int) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.generic.IEnumerator<dotnet.system.net.IPAddress>;
 
   public function Remove(address:dotnet.system.net.IPAddress) : Bool;

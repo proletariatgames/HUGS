@@ -9,9 +9,10 @@ extern class CompilerError extends dotnet.system.Object {
   public var IsWarning : Bool;
   public var FileName : String;
 
-  @:overload(function(fileName:String, line:Int, column:Int, errorNumber:String, errorText:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(fileName:String, line:Int, column:Int, errorNumber:String, errorText:String) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

@@ -6,6 +6,7 @@ extern class LocalVariableInfo extends dotnet.system.Object {
   public var LocalIndex(default,never) : Int;
   public var LocalType(default,never) : cs.system.Type;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

@@ -4,7 +4,6 @@ package dotnet.system.configuration;
 extern class CallbackValidatorAttribute extends ConfigurationValidatorAttribute {
   public var CallbackMethodName : String;
   public var Type : cs.system.Type;
-  public override var ValidatorInstance(default,never) : ConfigurationValidatorBase;
 
   public function new() : Void;
 }

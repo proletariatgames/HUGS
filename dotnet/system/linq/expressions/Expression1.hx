@@ -3,6 +3,7 @@ package dotnet.system.linq.expressions;
 @:native("System.Linq.Expressions.Expression") @:final
 extern class Expression1<TDelegate> extends LambdaExpression {
 
-  public function Compile() : TDelegate;
+  @:overload(function() : TDelegate {})
+  public override function Compile() : dotnet.system.Delegate;
 }
 

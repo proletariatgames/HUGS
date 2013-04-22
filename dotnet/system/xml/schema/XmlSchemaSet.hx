@@ -19,13 +19,13 @@ extern class XmlSchemaSet extends dotnet.system.Object {
 
   public function Compile() : Void;
 
-  @:overload(function(targetNamespace:XmlSchema) : Bool {})
-  public function Contains(targetNamespace:String) : Bool;
+  @:overload(function(targetNamespace:String) : Bool {})
+  public function Contains(targetNamespace:XmlSchema) : Bool;
 
   public function CopyTo(array:cs.NativeArray<XmlSchema>, index:Int) : Void;
 
-  @:overload(function(nameTable:dotnet.system.xml.XmlNameTable) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(nameTable:dotnet.system.xml.XmlNameTable) : Void;
 
   public function Remove(schema:XmlSchema) : XmlSchema;
 
@@ -33,7 +33,7 @@ extern class XmlSchemaSet extends dotnet.system.Object {
 
   public function Reprocess(schema:XmlSchema) : XmlSchema;
 
-  @:overload(function(targetNamespace:String) : dotnet.system.collections.ICollection {})
-  public function Schemas() : dotnet.system.collections.ICollection;
+  @:overload(function() : dotnet.system.collections.ICollection {})
+  public function Schemas(targetNamespace:String) : dotnet.system.collections.ICollection;
 }
 

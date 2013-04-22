@@ -3,18 +3,24 @@ package dotnet.system.xml.serialization;
 @:native("System.Xml.Serialization.XmlArrayItemAttributes")
 extern class XmlArrayItemAttributes extends dotnet.system.collections.CollectionBase {
 
-  public function Add(attribute:XmlArrayItemAttribute) : Int;
+  @:overload(function(attribute:XmlArrayItemAttribute) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
-  public function Contains(attribute:XmlArrayItemAttribute) : Bool;
+  @:overload(function(attribute:XmlArrayItemAttribute) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<XmlArrayItemAttribute>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<XmlArrayItemAttribute>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
   public function new() : Void;
 
-  public function IndexOf(attribute:XmlArrayItemAttribute) : Int;
+  @:overload(function(attribute:XmlArrayItemAttribute) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, attribute:XmlArrayItemAttribute) : Void;
+  @:overload(function(index:Int, attribute:XmlArrayItemAttribute) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  public function Remove(attribute:XmlArrayItemAttribute) : Void;
+  @:overload(function(attribute:XmlArrayItemAttribute) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

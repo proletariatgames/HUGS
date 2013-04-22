@@ -13,7 +13,7 @@ extern class MarshalAsAttribute extends dotnet.system.Attribute {
   public var IidParameterIndex : Int;
   public var Value(default,never) : UnmanagedType;
 
-  @:overload(function(unmanagedType:UnmanagedType) : Void {})
-  public function new(unmanagedType:Int) : Void;
+  @:overload(function(unmanagedType:Int) : Void {})
+  public function new(unmanagedType:UnmanagedType) : Void;
 }
 

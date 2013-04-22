@@ -3,8 +3,8 @@ package dotnet.system.runtime.serialization;
 @:native("System.Runtime.Serialization.IFormatterConverter")
 extern interface IFormatterConverter {
 
-  @:overload(function(value:Dynamic, typeCode:dotnet.system.TypeCode) : Dynamic {})
-  function Convert(value:Dynamic, type:cs.system.Type) : Dynamic;
+  @:overload(function(value:Dynamic, type:cs.system.Type) : Dynamic {})
+  function Convert(value:Dynamic, typeCode:dotnet.system.TypeCode) : Dynamic;
 
   function ToBoolean(value:Dynamic) : Bool;
 

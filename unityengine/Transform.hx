@@ -32,42 +32,42 @@ extern class Transform extends Component {
 
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
-  @:overload(function(x:Float, y:Float, z:Float) : Vector3 {})
-  public function InverseTransformDirection(direction:Vector3) : Vector3;
+  @:overload(function(direction:Vector3) : Vector3 {})
+  public function InverseTransformDirection(x:Float, y:Float, z:Float) : Vector3;
 
-  @:overload(function(x:Float, y:Float, z:Float) : Vector3 {})
-  public function InverseTransformPoint(position:Vector3) : Vector3;
+  @:overload(function(position:Vector3) : Vector3 {})
+  public function InverseTransformPoint(x:Float, y:Float, z:Float) : Vector3;
 
   public function IsChildOf(parent:Transform) : Bool;
 
-  @:overload(function(worldPosition:Vector3, worldUp:Vector3) : Void {})
+  @:overload(function(target:Transform) : Void {})
   @:overload(function(target:Transform, worldUp:Vector3) : Void {})
-  @:overload(function(worldPosition:Vector3) : Void {})
-  public function LookAt(target:Transform) : Void;
+  @:overload(function(worldPosition:Vector3, worldUp:Vector3) : Void {})
+  public function LookAt(worldPosition:Vector3) : Void;
 
-  @:overload(function(xAngle:Float, yAngle:Float, zAngle:Float, relativeTo:Space) : Void {})
-  @:overload(function(xAngle:Float, yAngle:Float, zAngle:Float) : Void {})
-  @:overload(function(axis:Vector3, angle:Float, relativeTo:Space) : Void {})
+  @:overload(function(eulerAngles:Vector3) : Void {})
   @:overload(function(eulerAngles:Vector3, relativeTo:Space) : Void {})
+  @:overload(function(xAngle:Float, yAngle:Float, zAngle:Float) : Void {})
+  @:overload(function(xAngle:Float, yAngle:Float, zAngle:Float, relativeTo:Space) : Void {})
   @:overload(function(axis:Vector3, angle:Float) : Void {})
-  public function Rotate(eulerAngles:Vector3) : Void;
+  public function Rotate(axis:Vector3, angle:Float, relativeTo:Space) : Void;
 
   @:overload(function(point:Vector3, axis:Vector3, angle:Float) : Void {})
   public function RotateAround(axis:Vector3, angle:Float) : Void;
 
   public function RotateAroundLocal(axis:Vector3, angle:Float) : Void;
 
-  @:overload(function(x:Float, y:Float, z:Float) : Vector3 {})
-  public function TransformDirection(direction:Vector3) : Vector3;
+  @:overload(function(direction:Vector3) : Vector3 {})
+  public function TransformDirection(x:Float, y:Float, z:Float) : Vector3;
 
-  @:overload(function(x:Float, y:Float, z:Float) : Vector3 {})
-  public function TransformPoint(position:Vector3) : Vector3;
+  @:overload(function(position:Vector3) : Vector3 {})
+  public function TransformPoint(x:Float, y:Float, z:Float) : Vector3;
 
-  @:overload(function(x:Float, y:Float, z:Float, relativeTo:Transform) : Void {})
-  @:overload(function(x:Float, y:Float, z:Float, relativeTo:Space) : Void {})
-  @:overload(function(x:Float, y:Float, z:Float) : Void {})
-  @:overload(function(translation:Vector3, relativeTo:Transform) : Void {})
+  @:overload(function(translation:Vector3) : Void {})
   @:overload(function(translation:Vector3, relativeTo:Space) : Void {})
-  public function Translate(translation:Vector3) : Void;
+  @:overload(function(x:Float, y:Float, z:Float) : Void {})
+  @:overload(function(x:Float, y:Float, z:Float, relativeTo:Space) : Void {})
+  @:overload(function(translation:Vector3, relativeTo:Transform) : Void {})
+  public function Translate(x:Float, y:Float, z:Float, relativeTo:Transform) : Void;
 }
 

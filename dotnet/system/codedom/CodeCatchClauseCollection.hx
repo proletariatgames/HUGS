@@ -3,23 +3,29 @@ package dotnet.system.codedom;
 @:native("System.CodeDom.CodeCatchClauseCollection")
 extern class CodeCatchClauseCollection extends dotnet.system.collections.CollectionBase {
 
-  public function Add(value:CodeCatchClause) : Int;
+  @:overload(function(value:CodeCatchClause) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
   @:overload(function(value:cs.NativeArray<CodeCatchClause>) : Void {})
   public function AddRange(value:CodeCatchClauseCollection) : Void;
 
-  public function Contains(value:CodeCatchClause) : Bool;
+  @:overload(function(value:CodeCatchClause) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<CodeCatchClause>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<CodeCatchClause>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
+  @:overload(function() : Void {})
   @:overload(function(value:cs.NativeArray<CodeCatchClause>) : Void {})
-  @:overload(function(value:CodeCatchClauseCollection) : Void {})
-  public function new() : Void;
+  public function new(value:CodeCatchClauseCollection) : Void;
 
-  public function IndexOf(value:CodeCatchClause) : Int;
+  @:overload(function(value:CodeCatchClause) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, value:CodeCatchClause) : Void;
+  @:overload(function(index:Int, value:CodeCatchClause) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  public function Remove(value:CodeCatchClause) : Void;
+  @:overload(function(value:CodeCatchClause) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

@@ -13,7 +13,7 @@ extern class PhysicMaterial extends Object {
   public var bounceCombine : PhysicMaterialCombine;
   public var frictionDirection : Vector3;
 
-  @:overload(function(name:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(name:String) : Void;
 }
 

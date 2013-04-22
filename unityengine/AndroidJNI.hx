@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.AndroidJNI") @:final
-extern class AndroidJNI {
+extern class AndroidJNI extends dotnet.system.Object {
 
   public static function AllocObject(clazz:dotnet.system.IntPtr) : dotnet.system.IntPtr;
 

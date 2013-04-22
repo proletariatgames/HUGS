@@ -15,9 +15,9 @@ extern class SecurityManager extends dotnet.system.Object {
 
   public static function PolicyHierarchy() : dotnet.system.collections.IEnumerator;
 
-  @:overload(function(evidence:dotnet.system.security.policy.Evidence, reqdPset:PermissionSet, optPset:PermissionSet, denyPset:PermissionSet, denied:PermissionSet) : PermissionSet {})
+  @:overload(function(evidence:dotnet.system.security.policy.Evidence) : PermissionSet {})
   @:overload(function(evidences:cs.NativeArray<dotnet.system.security.policy.Evidence>) : PermissionSet {})
-  public static function ResolvePolicy(evidence:dotnet.system.security.policy.Evidence) : PermissionSet;
+  public static function ResolvePolicy(evidence:dotnet.system.security.policy.Evidence, reqdPset:PermissionSet, optPset:PermissionSet, denyPset:PermissionSet, denied:PermissionSet) : PermissionSet;
 
   public static function ResolvePolicyGroups(evidence:dotnet.system.security.policy.Evidence) : dotnet.system.collections.IEnumerator;
 

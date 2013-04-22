@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.MatchTargetWeightMask") @:final
-extern class MatchTargetWeightMask {
+extern class MatchTargetWeightMask extends dotnet.system.ValueType {
   public var positionXYZWeight : Vector3;
   public var rotationWeight : Float;
 

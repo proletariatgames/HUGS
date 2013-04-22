@@ -24,16 +24,16 @@ extern class Component extends Object {
 
   @:overload(function(methodName:String, parameter:Dynamic, options:SendMessageOptions) : Void {})
   @:overload(function(methodName:String, parameter:Dynamic) : Void {})
-  @:overload(function(methodName:String, options:SendMessageOptions) : Void {})
-  public function BroadcastMessage(methodName:String) : Void;
+  @:overload(function(methodName:String) : Void {})
+  public function BroadcastMessage(methodName:String, options:SendMessageOptions) : Void;
 
   public function CompareTag(tag:String) : Bool;
 
   public function new() : Void;
 
-  @:overload(function(type:String) : Component {})
   @:overload(function(type:cs.system.Type) : Component {})
-  public function GetComponent() : Dynamic;
+  @:overload(function() : Dynamic {})
+  public function GetComponent(type:String) : Component;
 
   @:overload(function(t:cs.system.Type) : Component {})
   public function GetComponentInChildren() : Dynamic;
@@ -41,19 +41,19 @@ extern class Component extends Object {
   @:overload(function(type:cs.system.Type) : cs.NativeArray<Component> {})
   public function GetComponents() : dotnet.system.Array;
 
-  @:overload(function(t:cs.system.Type, includeInactive:Bool) : cs.NativeArray<Component> {})
   @:overload(function(t:cs.system.Type) : cs.NativeArray<Component> {})
+  @:overload(function(t:cs.system.Type, includeInactive:Bool) : cs.NativeArray<Component> {})
   @:overload(function(includeInactive:Bool) : dotnet.system.Array {})
   public function GetComponentsInChildren() : dotnet.system.Array;
 
   @:overload(function(methodName:String, value:Dynamic, options:SendMessageOptions) : Void {})
   @:overload(function(methodName:String, value:Dynamic) : Void {})
-  @:overload(function(methodName:String, options:SendMessageOptions) : Void {})
-  public function SendMessage(methodName:String) : Void;
+  @:overload(function(methodName:String) : Void {})
+  public function SendMessage(methodName:String, options:SendMessageOptions) : Void;
 
   @:overload(function(methodName:String, value:Dynamic, options:SendMessageOptions) : Void {})
   @:overload(function(methodName:String, value:Dynamic) : Void {})
-  @:overload(function(methodName:String, options:SendMessageOptions) : Void {})
-  public function SendMessageUpwards(methodName:String) : Void;
+  @:overload(function(methodName:String) : Void {})
+  public function SendMessageUpwards(methodName:String, options:SendMessageOptions) : Void;
 }
 

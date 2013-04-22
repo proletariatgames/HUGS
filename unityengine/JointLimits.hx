@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.JointLimits") @:final
-extern class JointLimits {
+extern class JointLimits extends dotnet.system.ValueType {
   public var min : Float;
   public var minBounce : Float;
   public var max : Float;

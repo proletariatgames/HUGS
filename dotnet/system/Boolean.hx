@@ -5,12 +5,14 @@ extern class Boolean extends ValueType  implements IComparable implements IConve
   public static var FalseString : String;
   public static var TrueString : String;
 
-  @:overload(function(value:Bool) : Int {})
-  public function CompareTo(obj:Dynamic) : Int;
+  @:overload(function(obj:Dynamic) : Int {})
+  public function CompareTo(value:Bool) : Int;
 
   @:overload(function(obj:Dynamic) : Bool {})
-  public override function Equals(obj:Bool) : Bool;
+  @:overload(function(obj:Bool) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetTypeCode() : TypeCode;
@@ -39,6 +41,7 @@ extern class Boolean extends ValueType  implements IComparable implements IConve
 
   function ToSingle(provider:IFormatProvider) : Float;
 
+  @:overload(function() : String {})
   @:overload(function(provider:IFormatProvider) : String {})
   public override function ToString() : String;
 

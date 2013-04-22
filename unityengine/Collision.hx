@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Collision")
-extern class Collision {
+extern class Collision extends dotnet.system.Object {
   public var relativeVelocity(default,never) : Vector3;
   public var rigidbody(default,never) : Rigidbody;
   public var collider(default,never) : Collider;

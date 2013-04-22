@@ -16,6 +16,7 @@ extern class PermissionRequestEvidence extends dotnet.system.Object {
 
   function OutputToBuffer(buffer:cs.NativeArray<dotnet.system.Char>, position:Int, verbose:Bool) : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

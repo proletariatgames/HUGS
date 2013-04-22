@@ -6,20 +6,10 @@ extern class SettingValueElement extends ConfigurationElement {
 
   public function new() : Void;
 
-  override function DeserializeElement(reader:dotnet.system.xml.XmlReader, serializeCollectionKey:Bool) : Void;
+  @:overload(function(settingValue:Dynamic) : Bool {})
+  public override function Equals(compareTo:Dynamic) : Bool;
 
-  public override function Equals(settingValue:Dynamic) : Bool;
-
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
-
-  override function IsModified() : Bool;
-
-  override function Reset(parentElement:ConfigurationElement) : Void;
-
-  override function ResetModified() : Void;
-
-  override function SerializeToXmlElement(writer:dotnet.system.xml.XmlWriter, elementName:String) : Bool;
-
-  override function Unmerge(sourceElement:ConfigurationElement, parentElement:ConfigurationElement, saveMode:ConfigurationSaveMode) : Void;
 }
 

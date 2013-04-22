@@ -9,8 +9,10 @@ extern class Char extends ValueType  implements IComparable implements IConverti
   public function CompareTo(value:Char) : Int;
 
   @:overload(function(obj:Dynamic) : Bool {})
-  public override function Equals(obj:Char) : Bool;
+  @:overload(function(obj:Char) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetTypeCode() : TypeCode;
@@ -37,6 +39,7 @@ extern class Char extends ValueType  implements IComparable implements IConverti
 
   function ToSingle(provider:IFormatProvider) : Float;
 
+  @:overload(function() : String {})
   @:overload(function(provider:IFormatProvider) : String {})
   public override function ToString() : String;
 
@@ -55,71 +58,71 @@ extern class Char_Static {
 
   public static function ConvertFromUtf32(utf32:Int) : String;
 
-  @:overload(function(s:String, index:Int) : Int {})
-  public static function ConvertToUtf32(highSurrogate:Char, lowSurrogate:Char) : Int;
+  @:overload(function(highSurrogate:Char, lowSurrogate:Char) : Int {})
+  public static function ConvertToUtf32(s:String, index:Int) : Int;
 
-  @:overload(function(s:String, index:Int) : Float {})
-  public static function GetNumericValue(c:Char) : Float;
+  @:overload(function(c:Char) : Float {})
+  public static function GetNumericValue(s:String, index:Int) : Float;
 
-  @:overload(function(s:String, index:Int) : dotnet.system.globalization.UnicodeCategory {})
-  public static function GetUnicodeCategory(c:Char) : dotnet.system.globalization.UnicodeCategory;
+  @:overload(function(c:Char) : dotnet.system.globalization.UnicodeCategory {})
+  public static function GetUnicodeCategory(s:String, index:Int) : dotnet.system.globalization.UnicodeCategory;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsControl(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsControl(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsDigit(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsDigit(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsHighSurrogate(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsHighSurrogate(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsLetter(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsLetter(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsLetterOrDigit(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsLetterOrDigit(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsLower(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsLower(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsLowSurrogate(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsLowSurrogate(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsNumber(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsNumber(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsPunctuation(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsPunctuation(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsSeparator(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsSeparator(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsSurrogate(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsSurrogate(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsSurrogatePair(highSurrogate:Char, lowSurrogate:Char) : Bool;
+  @:overload(function(highSurrogate:Char, lowSurrogate:Char) : Bool {})
+  public static function IsSurrogatePair(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsSymbol(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsSymbol(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsUpper(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsUpper(s:String, index:Int) : Bool;
 
-  @:overload(function(s:String, index:Int) : Bool {})
-  public static function IsWhiteSpace(c:Char) : Bool;
+  @:overload(function(c:Char) : Bool {})
+  public static function IsWhiteSpace(s:String, index:Int) : Bool;
 
   public static function Parse(s:String) : Char;
 
-  @:overload(function(c:Char, culture:dotnet.system.globalization.CultureInfo) : Char {})
-  public static function ToLower(c:Char) : Char;
+  @:overload(function(c:Char) : Char {})
+  public static function ToLower(c:Char, culture:dotnet.system.globalization.CultureInfo) : Char;
 
   public static function ToLowerInvariant(c:Char) : Char;
 
   public static function ToString(c:Char) : String;
 
-  @:overload(function(c:Char, culture:dotnet.system.globalization.CultureInfo) : Char {})
-  public static function ToUpper(c:Char) : Char;
+  @:overload(function(c:Char) : Char {})
+  public static function ToUpper(c:Char, culture:dotnet.system.globalization.CultureInfo) : Char;
 
   public static function ToUpperInvariant(c:Char) : Char;
 

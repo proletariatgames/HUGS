@@ -3,22 +3,31 @@ package dotnet.system.xml.serialization.advanced;
 @:native("System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection")
 extern class SchemaImporterExtensionCollection extends dotnet.system.collections.CollectionBase {
 
+  @:overload(function(extension:SchemaImporterExtension) : Int {})
   @:overload(function(key:String, type:cs.system.Type) : Int {})
-  public function Add(extension:SchemaImporterExtension) : Int;
+  @:overload(function(value:Dynamic) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
+  @:overload(function() : Void {})
   public override function Clear() : Void;
 
-  public function Contains(extension:SchemaImporterExtension) : Bool;
+  @:overload(function(extension:SchemaImporterExtension) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<SchemaImporterExtension>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<SchemaImporterExtension>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
   public function new() : Void;
 
-  public function IndexOf(extension:SchemaImporterExtension) : Int;
+  @:overload(function(extension:SchemaImporterExtension) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, extension:SchemaImporterExtension) : Void;
+  @:overload(function(index:Int, extension:SchemaImporterExtension) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
+  @:overload(function(extension:SchemaImporterExtension) : Void {})
   @:overload(function(name:String) : Void {})
-  public function Remove(extension:SchemaImporterExtension) : Void;
+  @:overload(function(value:Dynamic) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

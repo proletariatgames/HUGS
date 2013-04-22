@@ -10,9 +10,9 @@ extern class XmlArrayItemAttribute extends dotnet.system.Attribute {
   public var Type : cs.system.Type;
   public var NestingLevel : Int;
 
-  @:overload(function(elementName:String, type:cs.system.Type) : Void {})
-  @:overload(function(type:cs.system.Type) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(elementName:String) : Void {})
-  public function new() : Void;
+  @:overload(function(type:cs.system.Type) : Void {})
+  public function new(elementName:String, type:cs.system.Type) : Void;
 }
 

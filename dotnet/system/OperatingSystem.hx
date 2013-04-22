@@ -13,6 +13,7 @@ extern class OperatingSystem extends Object  implements ICloneable implements do
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

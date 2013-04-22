@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Screen") @:final
-extern class Screen {
+extern class Screen extends dotnet.system.Object {
   public static var resolutions(default,never) : cs.NativeArray<Resolution>;
   public static var GetResolution(default,never) : cs.NativeArray<Resolution>;
   public static var currentResolution(default,never) : Resolution;

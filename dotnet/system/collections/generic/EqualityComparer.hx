@@ -4,8 +4,14 @@ package dotnet.system.collections.generic;
 extern class EqualityComparer<T> extends dotnet.system.Object  implements dotnet.system.collections.IEqualityComparer {
   public static var Default(default,never) : EqualityComparer<T>;
 
-  public override function Equals(x:T, y:T) : Bool;
+  @:overload(function(x:Dynamic, y:Dynamic) : Bool {})
+  @:overload(function(x:T, y:T) : Bool {})
+  @:overload(function(obj:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
-  public override function GetHashCode(obj:T) : Int;
+  @:overload(function(obj:Dynamic) : Int {})
+  @:overload(function(obj:T) : Int {})
+  @:overload(function() : Int {})
+  public override function GetHashCode() : Int;
 }
 

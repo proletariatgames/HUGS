@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Handheld") @:final
-extern class Handheld {
+extern class Handheld extends dotnet.system.Object {
   public static var use32BitDisplayBuffer : Bool;
 
   public static function ClearShaderCache() : Void;

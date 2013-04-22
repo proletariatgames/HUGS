@@ -2,7 +2,6 @@ package unityengine.socialplatforms;
 
 @:native("UnityEngine.SocialPlatforms.ISocialPlatform")
 extern interface ISocialPlatform {
-  var localUser(default,never) : ILocalUser;
 
   function Authenticate(user:ILocalUser, _callback:dotnet.system.Action<Bool>) : Void;
 

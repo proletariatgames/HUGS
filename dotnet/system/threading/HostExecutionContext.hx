@@ -5,7 +5,7 @@ extern class HostExecutionContext extends dotnet.system.Object {
 
   public function CreateCopy() : HostExecutionContext;
 
-  @:overload(function(state:Dynamic) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(state:Dynamic) : Void;
 }
 

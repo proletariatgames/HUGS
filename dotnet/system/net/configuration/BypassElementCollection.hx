@@ -7,16 +7,12 @@ extern class BypassElementCollection extends dotnet.system.configuration.Configu
 
   public function Clear() : Void;
 
-  override function CreateNewElement() : dotnet.system.configuration.ConfigurationElement;
-
   public function new() : Void;
-
-  override function GetElementKey(element:dotnet.system.configuration.ConfigurationElement) : Dynamic;
 
   public function IndexOf(element:BypassElement) : Int;
 
-  @:overload(function(name:String) : Void {})
-  public function Remove(element:BypassElement) : Void;
+  @:overload(function(element:BypassElement) : Void {})
+  public function Remove(name:String) : Void;
 
   public function RemoveAt(index:Int) : Void;
 }

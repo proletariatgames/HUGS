@@ -34,26 +34,24 @@ extern class SerialPort extends dotnet.system.componentmodel.Component {
 
   public function Close() : Void;
 
-  @:overload(function(portName:String, baudRate:Int, parity:Parity, dataBits:Int, stopBits:StopBits) : Void {})
-  @:overload(function(portName:String, baudRate:Int, parity:Parity, dataBits:Int) : Void {})
-  @:overload(function(portName:String, baudRate:Int, parity:Parity) : Void {})
-  @:overload(function(portName:String, baudRate:Int) : Void {})
-  @:overload(function(portName:String) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(container:dotnet.system.componentmodel.IContainer) : Void {})
-  public function new() : Void;
+  @:overload(function(portName:String) : Void {})
+  @:overload(function(portName:String, baudRate:Int) : Void {})
+  @:overload(function(portName:String, baudRate:Int, parity:Parity) : Void {})
+  @:overload(function(portName:String, baudRate:Int, parity:Parity, dataBits:Int) : Void {})
+  public function new(portName:String, baudRate:Int, parity:Parity, dataBits:Int, stopBits:StopBits) : Void;
 
   public function DiscardInBuffer() : Void;
 
   public function DiscardOutBuffer() : Void;
 
-  override function Dispose(disposing:Bool) : Void;
-
   public static function GetPortNames() : cs.NativeArray<String>;
 
   public function Open() : Void;
 
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Char>, offset:Int, count:Int) : Int {})
-  public function Read(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int;
+  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int {})
+  public function Read(buffer:cs.NativeArray<dotnet.system.Char>, offset:Int, count:Int) : Int;
 
   public function ReadByte() : Int;
 
@@ -65,9 +63,9 @@ extern class SerialPort extends dotnet.system.componentmodel.Component {
 
   public function ReadTo(value:String) : String;
 
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Char>, offset:Int, count:Int) : Void {})
+  @:overload(function(str:String) : Void {})
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Void {})
-  public function Write(str:String) : Void;
+  public function Write(buffer:cs.NativeArray<dotnet.system.Char>, offset:Int, count:Int) : Void;
 
   public function WriteLine(str:String) : Void;
 }

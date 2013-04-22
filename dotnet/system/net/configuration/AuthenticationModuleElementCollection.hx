@@ -7,16 +7,12 @@ extern class AuthenticationModuleElementCollection extends dotnet.system.configu
 
   public function Clear() : Void;
 
-  override function CreateNewElement() : dotnet.system.configuration.ConfigurationElement;
-
   public function new() : Void;
-
-  override function GetElementKey(element:dotnet.system.configuration.ConfigurationElement) : Dynamic;
 
   public function IndexOf(element:AuthenticationModuleElement) : Int;
 
-  @:overload(function(name:String) : Void {})
-  public function Remove(element:AuthenticationModuleElement) : Void;
+  @:overload(function(element:AuthenticationModuleElement) : Void {})
+  public function Remove(name:String) : Void;
 
   public function RemoveAt(index:Int) : Void;
 }

@@ -23,8 +23,8 @@ extern class HttpListenerResponse extends dotnet.system.Object  implements dotne
 
   public function AppendHeader(name:String, value:String) : Void;
 
-  @:overload(function(responseEntity:cs.NativeArray<dotnet.system.Byte>, willBlock:Bool) : Void {})
-  public function Close() : Void;
+  @:overload(function() : Void {})
+  public function Close(responseEntity:cs.NativeArray<dotnet.system.Byte>, willBlock:Bool) : Void;
 
   public function CopyFrom(templateResponse:HttpListenerResponse) : Void;
 

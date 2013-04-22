@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Time") @:final
-extern class Time {
+extern class Time extends dotnet.system.Object {
   public static var time(default,never) : Float;
   public static var timeSinceLevelLoad(default,never) : Float;
   public static var deltaTime(default,never) : Float;

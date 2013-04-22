@@ -6,9 +6,9 @@ extern class XmlSerializerNamespaces extends dotnet.system.Object {
 
   public function Add(prefix:String, ns:String) : Void;
 
-  @:overload(function(namespaces:XmlSerializerNamespaces) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(namespaces:cs.NativeArray<dotnet.system.xml.XmlQualifiedName>) : Void {})
-  public function new() : Void;
+  public function new(namespaces:XmlSerializerNamespaces) : Void;
 
   public function ToArray() : cs.NativeArray<dotnet.system.xml.XmlQualifiedName>;
 }

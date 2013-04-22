@@ -2,8 +2,6 @@ package dotnet.system.io.isolatedstorage;
 
 @:native("System.IO.IsolatedStorage.IsolatedStorageFile") @:final
 extern class IsolatedStorageFile extends IsolatedStorage  implements dotnet.system.IDisposable {
-  public override var CurrentSize(default,never) : dotnet.system.UInt64;
-  public override var MaximumSize(default,never) : dotnet.system.UInt64;
 
   public function Close() : Void;
 
@@ -15,14 +13,11 @@ extern class IsolatedStorageFile extends IsolatedStorage  implements dotnet.syst
 
   public function Dispose() : Void;
 
-  override function Finalize() : Void;
-
   public function GetDirectoryNames(searchPattern:String) : cs.NativeArray<String>;
 
   public function GetFileNames(searchPattern:String) : cs.NativeArray<String>;
 
-  override function GetPermission(ps:dotnet.system.security.PermissionSet) : dotnet.system.security.permissions.IsolatedStoragePermission;
-
+  @:overload(function() : Void {})
   public override function Remove() : Void;
 }
 

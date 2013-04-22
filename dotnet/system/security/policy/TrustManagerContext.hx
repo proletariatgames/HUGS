@@ -9,7 +9,7 @@ extern class TrustManagerContext extends dotnet.system.Object {
   public var PreviousApplicationIdentity : dotnet.system.ApplicationIdentity;
   public var UIContext : TrustManagerUIContext;
 
-  @:overload(function(uiContext:TrustManagerUIContext) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(uiContext:TrustManagerUIContext) : Void;
 }
 

@@ -6,17 +6,14 @@ extern class Timer extends dotnet.system.componentmodel.Component  implements do
   public var AutoReset : Bool;
   public var Enabled : Bool;
   public var Interval : Float;
-  public override var Site : dotnet.system.componentmodel.ISite;
   public var SynchronizingObject : dotnet.system.componentmodel.ISynchronizeInvoke;
 
   public function BeginInit() : Void;
 
   public function Close() : Void;
 
-  @:overload(function(interval:Float) : Void {})
-  public function new() : Void;
-
-  override function Dispose(disposing:Bool) : Void;
+  @:overload(function() : Void {})
+  public function new(interval:Float) : Void;
 
   public function EndInit() : Void;
 

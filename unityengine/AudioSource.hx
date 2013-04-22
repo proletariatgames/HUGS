@@ -29,19 +29,19 @@ extern class AudioSource extends Behaviour {
 
   public function new() : Void;
 
-  @:overload(function(samples:cs.NativeArray<dotnet.system.Single>, channel:Int) : Void {})
-  public function GetOutputData(numSamples:Int, channel:Int) : cs.NativeArray<dotnet.system.Single>;
+  @:overload(function(numSamples:Int, channel:Int) : cs.NativeArray<dotnet.system.Single> {})
+  public function GetOutputData(samples:cs.NativeArray<dotnet.system.Single>, channel:Int) : Void;
 
-  @:overload(function(samples:cs.NativeArray<dotnet.system.Single>, channel:Int, window:FFTWindow) : Void {})
-  public function GetSpectrumData(numSamples:Int, channel:Int, window:FFTWindow) : cs.NativeArray<dotnet.system.Single>;
+  @:overload(function(numSamples:Int, channel:Int, window:FFTWindow) : cs.NativeArray<dotnet.system.Single> {})
+  public function GetSpectrumData(samples:cs.NativeArray<dotnet.system.Single>, channel:Int, window:FFTWindow) : Void;
 
   public function Pause() : Void;
 
   @:overload(function(delay:dotnet.system.UInt64) : Void {})
   public function Play() : Void;
 
-  @:overload(function(clip:AudioClip, position:Vector3, volume:Float) : Void {})
-  public static function PlayClipAtPoint(clip:AudioClip, position:Vector3) : Void;
+  @:overload(function(clip:AudioClip, position:Vector3) : Void {})
+  public static function PlayClipAtPoint(clip:AudioClip, position:Vector3, volume:Float) : Void;
 
   public function PlayDelayed(delay:Float) : Void;
 

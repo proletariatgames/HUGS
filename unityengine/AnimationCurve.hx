@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.AnimationCurve") @:final
-extern class AnimationCurve {
+extern class AnimationCurve extends dotnet.system.Object {
   public var keys : cs.NativeArray<Keyframe>;
   public var length(default,never) : Int;
   public var preWrapMode : WrapMode;
@@ -16,8 +16,6 @@ extern class AnimationCurve {
   public static function EaseInOut(timeStart:Float, valueStart:Float, timeEnd:Float, valueEnd:Float) : AnimationCurve;
 
   public function Evaluate(time:Float) : Float;
-
-  override function Finalize() : Void;
 
   public static function Linear(timeStart:Float, valueStart:Float, timeEnd:Float, valueEnd:Float) : AnimationCurve;
 

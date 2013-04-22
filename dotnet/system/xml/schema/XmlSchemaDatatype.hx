@@ -7,13 +7,11 @@ extern class XmlSchemaDatatype extends dotnet.system.Object {
   public var TokenizedType(default,never) : dotnet.system.xml.XmlTokenizedType;
   public var ValueType(default,never) : cs.system.Type;
 
-  @:overload(function(value:Dynamic, targetType:cs.system.Type, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : Dynamic {})
-  public function ChangeType(value:Dynamic, targetType:cs.system.Type) : Dynamic;
+  @:overload(function(value:Dynamic, targetType:cs.system.Type) : Dynamic {})
+  public function ChangeType(value:Dynamic, targetType:cs.system.Type, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : Dynamic;
 
   public function IsDerivedFrom(datatype:XmlSchemaDatatype) : Bool;
 
   public function ParseValue(s:String, nameTable:dotnet.system.xml.XmlNameTable, nsmgr:dotnet.system.xml.IXmlNamespaceResolver) : Dynamic;
-
-  function ParseValueType(s:String, nameTable:dotnet.system.xml.XmlNameTable, nsmgr:dotnet.system.xml.IXmlNamespaceResolver) : dotnet.system.ValueType;
 }
 

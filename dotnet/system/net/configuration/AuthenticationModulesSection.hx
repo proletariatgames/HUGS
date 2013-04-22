@@ -5,9 +5,5 @@ extern class AuthenticationModulesSection extends dotnet.system.configuration.Co
   public var AuthenticationModules(default,never) : AuthenticationModuleElementCollection;
 
   public function new() : Void;
-
-  override function InitializeDefault() : Void;
-
-  override function PostDeserialize() : Void;
 }
 

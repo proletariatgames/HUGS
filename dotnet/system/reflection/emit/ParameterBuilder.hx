@@ -21,8 +21,8 @@ extern class ParameterBuilder extends dotnet.system.Object  implements dotnet.sy
 
   public function SetConstant(defaultValue:Dynamic) : Void;
 
-  @:overload(function(con:dotnet.system.reflection.ConstructorInfo, binaryAttribute:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  public function SetCustomAttribute(customBuilder:CustomAttributeBuilder) : Void;
+  @:overload(function(customBuilder:CustomAttributeBuilder) : Void {})
+  public function SetCustomAttribute(con:dotnet.system.reflection.ConstructorInfo, binaryAttribute:cs.NativeArray<dotnet.system.Byte>) : Void;
 
   public function SetMarshal(unmanagedMarshal:UnmanagedMarshal) : Void;
 }

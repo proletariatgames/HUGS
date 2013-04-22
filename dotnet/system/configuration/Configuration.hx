@@ -17,12 +17,12 @@ extern class Configuration extends dotnet.system.Object {
 
   public function GetSectionGroup(path:String) : ConfigurationSectionGroup;
 
-  @:overload(function(mode:ConfigurationSaveMode, forceUpdateAll:Bool) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(mode:ConfigurationSaveMode) : Void {})
-  public function Save() : Void;
+  public function Save(mode:ConfigurationSaveMode, forceUpdateAll:Bool) : Void;
 
-  @:overload(function(filename:String, mode:ConfigurationSaveMode, forceUpdateAll:Bool) : Void {})
+  @:overload(function(filename:String) : Void {})
   @:overload(function(filename:String, mode:ConfigurationSaveMode) : Void {})
-  public function SaveAs(filename:String) : Void;
+  public function SaveAs(filename:String, mode:ConfigurationSaveMode, forceUpdateAll:Bool) : Void;
 }
 

@@ -12,16 +12,19 @@ extern class Decimal extends ValueType  implements IComparable implements IConve
   public function CompareTo(value:Decimal) : Int;
 
   @:overload(function(lo:Int, mid:Int, hi:Int, isNegative:Bool, scale:UInt) : Void {})
-  @:overload(function(value:UInt64) : Void {})
+  @:overload(function(value:Int) : Void {})
   @:overload(function(value:UInt) : Void {})
   @:overload(function(value:Int64) : Void {})
-  @:overload(function(value:Int) : Void {})
+  @:overload(function(value:UInt64) : Void {})
   @:overload(function(value:Float) : Void {})
   public function new(bits:cs.NativeArray<Int>) : Void;
 
   @:overload(function(value:Dynamic) : Bool {})
-  public override function Equals(value:Decimal) : Bool;
+  @:overload(function(value:Decimal) : Bool {})
+  @:overload(function(obj:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetTypeCode() : TypeCode;
@@ -49,8 +52,9 @@ extern class Decimal extends ValueType  implements IComparable implements IConve
   function ToSingle(provider:IFormatProvider) : Float;
 
   @:overload(function(format:String, provider:IFormatProvider) : String {})
-  @:overload(function(provider:IFormatProvider) : String {})
+  @:overload(function() : String {})
   @:overload(function(format:String) : String {})
+  @:overload(function(provider:IFormatProvider) : String {})
   public override function ToString() : String;
 
   function ToType(targetType:cs.system.Type, provider:IFormatProvider) : Dynamic;
@@ -86,17 +90,17 @@ extern class Decimal_Static {
 
   public static function Negate(d:Decimal) : Decimal;
 
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Decimal {})
+  @:overload(function(s:String) : Decimal {})
   @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Decimal {})
   @:overload(function(s:String, provider:IFormatProvider) : Decimal {})
-  public static function Parse(s:String) : Decimal;
+  public static function Parse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Decimal;
 
   public static function Remainder(d1:Decimal, d2:Decimal) : Decimal;
 
-  @:overload(function(d:Decimal, decimals:Int, mode:MidpointRounding) : Decimal {})
-  @:overload(function(d:Decimal, mode:MidpointRounding) : Decimal {})
   @:overload(function(d:Decimal, decimals:Int) : Decimal {})
-  public static function Round(d:Decimal) : Decimal;
+  @:overload(function(d:Decimal, decimals:Int, mode:MidpointRounding) : Decimal {})
+  @:overload(function(d:Decimal) : Decimal {})
+  public static function Round(d:Decimal, mode:MidpointRounding) : Decimal;
 
   public static function Subtract(d1:Decimal, d2:Decimal) : Decimal;
 
@@ -124,7 +128,7 @@ extern class Decimal_Static {
 
   public static function Truncate(d:Decimal) : Decimal;
 
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Decimal) : Bool {})
-  public static function TryParse(s:String, result:Decimal) : Bool;
+  @:overload(function(s:String, result:Decimal) : Bool {})
+  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Decimal) : Bool;
 }
 

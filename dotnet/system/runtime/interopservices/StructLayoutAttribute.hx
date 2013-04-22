@@ -7,7 +7,7 @@ extern class StructLayoutAttribute extends dotnet.system.Attribute {
   public var Size : Int;
   public var Value(default,never) : LayoutKind;
 
-  @:overload(function(layoutKind:LayoutKind) : Void {})
-  public function new(layoutKind:Int) : Void;
+  @:overload(function(layoutKind:Int) : Void {})
+  public function new(layoutKind:LayoutKind) : Void;
 }
 

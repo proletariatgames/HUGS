@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.iPhoneSettings") @:final
-extern class iPhoneSettings {
+extern class iPhoneSettings extends dotnet.system.Object {
   public static var screenOrientation : iPhoneScreenOrientation;
   public static var verticalOrientation : Bool;
   public static var screenCanDarken : Bool;

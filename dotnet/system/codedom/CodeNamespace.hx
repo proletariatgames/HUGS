@@ -10,7 +10,7 @@ extern class CodeNamespace extends CodeObject {
   public var Name : String;
   public var Types(default,never) : CodeTypeDeclarationCollection;
 
-  @:overload(function(name:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(name:String) : Void;
 }
 

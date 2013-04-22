@@ -5,8 +5,8 @@ extern class TypeLibConverter extends dotnet.system.Object  implements ITypeLibC
 
   public function ConvertAssemblyToTypeLib(assembly:dotnet.system.reflection.Assembly, strTypeLibName:String, flags:TypeLibExporterFlags, notifySink:ITypeLibExporterNotifySink) : Dynamic;
 
-  @:overload(function(typeLib:Dynamic, asmFileName:String, flags:TypeLibImporterFlags, notifySink:ITypeLibImporterNotifySink, publicKey:cs.NativeArray<dotnet.system.Byte>, keyPair:dotnet.system.reflection.StrongNameKeyPair, asmNamespace:String, asmVersion:dotnet.system.Version) : dotnet.system.reflection.emit.AssemblyBuilder {})
-  public function ConvertTypeLibToAssembly(typeLib:Dynamic, asmFileName:String, flags:Int, notifySink:ITypeLibImporterNotifySink, publicKey:cs.NativeArray<dotnet.system.Byte>, keyPair:dotnet.system.reflection.StrongNameKeyPair, unsafeInterfaces:Bool) : dotnet.system.reflection.emit.AssemblyBuilder;
+  @:overload(function(typeLib:Dynamic, asmFileName:String, flags:Int, notifySink:ITypeLibImporterNotifySink, publicKey:cs.NativeArray<dotnet.system.Byte>, keyPair:dotnet.system.reflection.StrongNameKeyPair, unsafeInterfaces:Bool) : dotnet.system.reflection.emit.AssemblyBuilder {})
+  public function ConvertTypeLibToAssembly(typeLib:Dynamic, asmFileName:String, flags:TypeLibImporterFlags, notifySink:ITypeLibImporterNotifySink, publicKey:cs.NativeArray<dotnet.system.Byte>, keyPair:dotnet.system.reflection.StrongNameKeyPair, asmNamespace:String, asmVersion:dotnet.system.Version) : dotnet.system.reflection.emit.AssemblyBuilder;
 
   public function new() : Void;
 

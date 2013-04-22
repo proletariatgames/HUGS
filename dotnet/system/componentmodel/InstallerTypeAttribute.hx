@@ -7,8 +7,10 @@ extern class InstallerTypeAttribute extends dotnet.system.Attribute {
   @:overload(function(typeName:String) : Void {})
   public function new(installerType:cs.system.Type) : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

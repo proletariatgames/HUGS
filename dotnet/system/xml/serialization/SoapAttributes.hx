@@ -9,7 +9,7 @@ extern class SoapAttributes extends dotnet.system.Object {
   public var SoapIgnore : Bool;
   public var SoapType : SoapTypeAttribute;
 
-  @:overload(function(provider:dotnet.system.reflection.ICustomAttributeProvider) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(provider:dotnet.system.reflection.ICustomAttributeProvider) : Void;
 }
 

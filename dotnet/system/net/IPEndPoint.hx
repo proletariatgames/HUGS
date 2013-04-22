@@ -5,20 +5,24 @@ extern class IPEndPoint extends EndPoint {
   public static var MaxPort : Int;
   public static var MinPort : Int;
   public var Address : IPAddress;
-  public override var AddressFamily(default,never) : dotnet.system.net.sockets.AddressFamily;
   public var Port : Int;
 
-  public override function Create(socketAddress:SocketAddress) : EndPoint;
+  @:overload(function(socketAddress:SocketAddress) : EndPoint {})
+  public override function Create(address:SocketAddress) : EndPoint;
 
-  @:overload(function(iaddr:dotnet.system.Int64, port:Int) : Void {})
-  public function new(address:IPAddress, port:Int) : Void;
+  @:overload(function(address:IPAddress, port:Int) : Void {})
+  public function new(iaddr:dotnet.system.Int64, port:Int) : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : SocketAddress {})
   public override function Serialize() : SocketAddress;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

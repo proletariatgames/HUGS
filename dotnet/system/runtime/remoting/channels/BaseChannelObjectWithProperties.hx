@@ -19,6 +19,7 @@ extern class BaseChannelObjectWithProperties extends dotnet.system.Object  imple
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IDictionaryEnumerator;
 
   public function Remove(key:Dynamic) : Void;

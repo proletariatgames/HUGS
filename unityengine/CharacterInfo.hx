@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.CharacterInfo") @:final
-extern class CharacterInfo {
+extern class CharacterInfo extends dotnet.system.ValueType {
   public var index : Int;
   public var uv : Rect;
   public var vert : Rect;

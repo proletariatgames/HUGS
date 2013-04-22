@@ -14,12 +14,12 @@ extern class GenericAce extends dotnet.system.Object {
 
   public static function CreateFromBinaryForm(binaryForm:cs.NativeArray<dotnet.system.Byte>, offset:Int) : GenericAce;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
   public function GetBinaryForm(binaryForm:cs.NativeArray<dotnet.system.Byte>, offset:Int) : Void;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
-
-  function GetSddlForm() : String;
 }
 

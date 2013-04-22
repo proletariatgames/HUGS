@@ -8,7 +8,5 @@ extern class AsyncOperation extends YieldInstruction {
   public var allowSceneActivation : Bool;
 
   public function new() : Void;
-
-  override function Finalize() : Void;
 }
 

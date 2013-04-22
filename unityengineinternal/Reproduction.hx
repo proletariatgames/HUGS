@@ -1,7 +1,7 @@
 package unityengineinternal;
 
 @:native("UnityEngineInternal.Reproduction") @:final
-extern class Reproduction {
+extern class Reproduction extends dotnet.system.Object {
 
   public static function CaptureScreenshot() : Void;
 

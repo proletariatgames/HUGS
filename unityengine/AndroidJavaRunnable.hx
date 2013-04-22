@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.AndroidJavaRunnable") @:final
-extern class AndroidJavaRunnable {
+extern class AndroidJavaRunnable extends dotnet.system.MulticastDelegate {
 
   public function BeginInvoke(_callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
 

@@ -9,11 +9,12 @@ extern class MemberInfo extends dotnet.system.Object  implements ICustomAttribut
   public var Module(default,never) : Module;
   public var MetadataToken(default,never) : Int;
 
-  @:overload(function(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
-  public function GetCustomAttributes(inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
+  @:overload(function(inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
+  public function GetCustomAttributes(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
 
   function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
 
+  @:overload(function() : cs.system.Type {})
   override function GetType() : cs.system.Type;
 
   function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:dotnet.system.IntPtr) : Void;

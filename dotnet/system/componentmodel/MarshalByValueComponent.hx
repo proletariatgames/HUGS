@@ -9,12 +9,12 @@ extern class MarshalByValueComponent extends dotnet.system.Object  implements do
 
   public function new() : Void;
 
-  public function Dispose() : Void;
-
-  override function Finalize() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function GetService(service:cs.system.Type) : Dynamic;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

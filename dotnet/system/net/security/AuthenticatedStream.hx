@@ -8,7 +8,5 @@ extern class AuthenticatedStream extends dotnet.system.io.Stream {
   public var IsServer(default,never) : Bool;
   public var IsSigned(default,never) : Bool;
   public var LeaveInnerStreamOpen(default,never) : Bool;
-
-  override function Dispose(disposing:Bool) : Void;
 }
 

@@ -5,8 +5,8 @@ extern class AttributeCollection extends dotnet.system.Object  implements dotnet
   public static var Empty : AttributeCollection;
   public var Count(default,never) : Int;
 
-  @:overload(function(attributes:cs.NativeArray<dotnet.system.Attribute>) : Bool {})
-  public function Contains(attr:dotnet.system.Attribute) : Bool;
+  @:overload(function(attr:dotnet.system.Attribute) : Bool {})
+  public function Contains(attributes:cs.NativeArray<dotnet.system.Attribute>) : Bool;
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
@@ -14,9 +14,10 @@ extern class AttributeCollection extends dotnet.system.Object  implements dotnet
 
   public static function FromExisting(existing:AttributeCollection, newAttributes:cs.NativeArray<dotnet.system.Attribute>) : AttributeCollection;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
-  @:overload(function(attributes:cs.NativeArray<dotnet.system.Attribute>) : Bool {})
-  public function Matches(attr:dotnet.system.Attribute) : Bool;
+  @:overload(function(attr:dotnet.system.Attribute) : Bool {})
+  public function Matches(attributes:cs.NativeArray<dotnet.system.Attribute>) : Bool;
 }
 

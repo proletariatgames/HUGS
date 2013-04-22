@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.ADBannerView") @:final
-extern class ADBannerView {
+extern class ADBannerView extends dotnet.system.Object {
   public var requiredSizeIdentifiers : cs.NativeArray<ADSizeIdentifier>;
   public var currentSizeIdentifier : ADSizeIdentifier;
   public var autoSize : Bool;
@@ -15,8 +15,6 @@ extern class ADBannerView {
   public function CancelAction() : Void;
 
   public function new() : Void;
-
-  override function Finalize() : Void;
 
   public static function GetSizeFromSizeIdentifier(identifier:ADSizeIdentifier) : Vector2;
 

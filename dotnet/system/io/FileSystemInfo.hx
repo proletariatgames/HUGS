@@ -18,8 +18,6 @@ extern class FileSystemInfo extends dotnet.system.MarshalByRefObject  implements
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
-  function InternalRefresh() : Void;
-
   public function Refresh() : Void;
 }
 

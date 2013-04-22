@@ -14,20 +14,18 @@ extern class TcpListener extends dotnet.system.Object {
 
   public function BeginAcceptTcpClient(_callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
 
-  @:overload(function(listen_ip:dotnet.system.net.IPAddress, port:Int) : Void {})
   @:overload(function(port:Int) : Void {})
-  public function new(local_end_point:dotnet.system.net.IPEndPoint) : Void;
+  @:overload(function(local_end_point:dotnet.system.net.IPEndPoint) : Void {})
+  public function new(listen_ip:dotnet.system.net.IPAddress, port:Int) : Void;
 
   public function EndAcceptSocket(asyncResult:dotnet.system.IAsyncResult) : Socket;
 
   public function EndAcceptTcpClient(asyncResult:dotnet.system.IAsyncResult) : TcpClient;
 
-  override function Finalize() : Void;
-
   public function Pending() : Bool;
 
-  @:overload(function(backlog:Int) : Void {})
-  public function Start() : Void;
+  @:overload(function() : Void {})
+  public function Start(backlog:Int) : Void;
 
   public function Stop() : Void;
 }

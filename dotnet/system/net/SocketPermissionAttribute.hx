@@ -7,6 +7,7 @@ extern class SocketPermissionAttribute extends dotnet.system.security.permission
   public var Port : String;
   public var Transport : String;
 
+  @:overload(function() : dotnet.system.security.IPermission {})
   public override function CreatePermission() : dotnet.system.security.IPermission;
 
   public function new(action:dotnet.system.security.permissions.SecurityAction) : Void;

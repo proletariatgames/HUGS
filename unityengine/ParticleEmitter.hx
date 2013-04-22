@@ -25,10 +25,10 @@ extern class ParticleEmitter extends Component {
 
   public function new() : Void;
 
-  @:overload(function(pos:Vector3, velocity:Vector3, size:Float, energy:Float, color:Color, rotation:Float, angularVelocity:Float) : Void {})
-  @:overload(function(pos:Vector3, velocity:Vector3, size:Float, energy:Float, color:Color) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(count:Int) : Void {})
-  public function Emit() : Void;
+  @:overload(function(pos:Vector3, velocity:Vector3, size:Float, energy:Float, color:Color) : Void {})
+  public function Emit(pos:Vector3, velocity:Vector3, size:Float, energy:Float, color:Color, rotation:Float, angularVelocity:Float) : Void;
 
   public function Simulate(deltaTime:Float) : Void;
 }

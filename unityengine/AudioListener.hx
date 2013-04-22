@@ -8,10 +8,10 @@ extern class AudioListener extends Behaviour {
 
   public function new() : Void;
 
-  @:overload(function(samples:cs.NativeArray<dotnet.system.Single>, channel:Int) : Void {})
-  public static function GetOutputData(numSamples:Int, channel:Int) : cs.NativeArray<dotnet.system.Single>;
+  @:overload(function(numSamples:Int, channel:Int) : cs.NativeArray<dotnet.system.Single> {})
+  public static function GetOutputData(samples:cs.NativeArray<dotnet.system.Single>, channel:Int) : Void;
 
-  @:overload(function(samples:cs.NativeArray<dotnet.system.Single>, channel:Int, window:FFTWindow) : Void {})
-  public static function GetSpectrumData(numSamples:Int, channel:Int, window:FFTWindow) : cs.NativeArray<dotnet.system.Single>;
+  @:overload(function(numSamples:Int, channel:Int, window:FFTWindow) : cs.NativeArray<dotnet.system.Single> {})
+  public static function GetSpectrumData(samples:cs.NativeArray<dotnet.system.Single>, channel:Int, window:FFTWindow) : Void;
 }
 

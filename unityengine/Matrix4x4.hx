@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Matrix4x4") @:final
-extern class Matrix4x4 {
+extern class Matrix4x4 extends dotnet.system.ValueType {
   public var m00 : Float;
   public var m10 : Float;
   public var m20 : Float;
@@ -24,10 +24,12 @@ extern class Matrix4x4 {
   public static var zero(default,never) : Matrix4x4;
   public static var identity(default,never) : Matrix4x4;
 
-  public override function Equals(other:Dynamic) : Bool;
+  @:overload(function(other:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
   public function GetColumn(i:Int) : Vector4;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetRow(i:Int) : Vector4;
@@ -52,6 +54,7 @@ extern class Matrix4x4 {
 
   public function SetTRS(pos:Vector3, q:Quaternion, s:Vector3) : Void;
 
+  @:overload(function() : String {})
   @:overload(function(format:String) : String {})
   public override function ToString() : String;
 

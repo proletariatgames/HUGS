@@ -5,6 +5,7 @@ extern class ObjectHandle extends dotnet.system.MarshalByRefObject  implements I
 
   public function new(o:Dynamic) : Void;
 
+  @:overload(function() : Dynamic {})
   public override function InitializeLifetimeService() : Dynamic;
 
   public function Unwrap() : Dynamic;

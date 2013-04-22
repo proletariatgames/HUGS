@@ -4,7 +4,7 @@ package dotnet.system.diagnostics;
 extern class EntryWrittenEventArgs extends dotnet.system.EventArgs {
   public var Entry(default,never) : EventLogEntry;
 
-  @:overload(function(entry:EventLogEntry) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(entry:EventLogEntry) : Void;
 }
 

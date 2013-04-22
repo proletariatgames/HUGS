@@ -35,14 +35,14 @@ extern class SoapServices extends dotnet.system.Object {
 
   public static function IsSoapActionValidForMethodBase(soapAction:String, mb:dotnet.system.reflection.MethodBase) : Bool;
 
-  @:overload(function(type:cs.system.Type) : Void {})
-  public static function PreLoad(assembly:dotnet.system.reflection.Assembly) : Void;
+  @:overload(function(assembly:dotnet.system.reflection.Assembly) : Void {})
+  public static function PreLoad(type:cs.system.Type) : Void;
 
   public static function RegisterInteropXmlElement(xmlElement:String, xmlNamespace:String, type:cs.system.Type) : Void;
 
   public static function RegisterInteropXmlType(xmlType:String, xmlTypeNamespace:String, type:cs.system.Type) : Void;
 
-  @:overload(function(mb:dotnet.system.reflection.MethodBase, soapAction:String) : Void {})
-  public static function RegisterSoapActionForMethodBase(mb:dotnet.system.reflection.MethodBase) : Void;
+  @:overload(function(mb:dotnet.system.reflection.MethodBase) : Void {})
+  public static function RegisterSoapActionForMethodBase(mb:dotnet.system.reflection.MethodBase, soapAction:String) : Void;
 }
 

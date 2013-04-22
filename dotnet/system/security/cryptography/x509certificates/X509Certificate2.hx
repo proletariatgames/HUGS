@@ -18,34 +18,37 @@ extern class X509Certificate2 extends X509Certificate {
   public var Thumbprint(default,never) : String;
   public var Version(default,never) : Int;
 
-  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})
-  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})
-  @:overload(function(fileName:String, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})
-  @:overload(function(fileName:String, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})
+  @:overload(function() : Void {})
+  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>) : Void {})
   @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:String) : Void {})
   @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:dotnet.system.security.SecureString) : Void {})
+  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})
+  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})
+  @:overload(function(fileName:String) : Void {})
   @:overload(function(fileName:String, password:String) : Void {})
   @:overload(function(fileName:String, password:dotnet.system.security.SecureString) : Void {})
-  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>) : Void {})
+  @:overload(function(fileName:String, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})
+  @:overload(function(fileName:String, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})
   @:overload(function(handle:dotnet.system.IntPtr) : Void {})
-  @:overload(function(fileName:String) : Void {})
-  @:overload(function(certificate:X509Certificate) : Void {})
-  public function new() : Void;
+  public function new(certificate:X509Certificate) : Void;
 
   @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>) : X509ContentType {})
   public static function GetCertContentType(fileName:String) : X509ContentType;
 
   public function GetNameInfo(nameType:X509NameType, forIssuer:Bool) : String;
 
+  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>) : Void {})
   @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})
   @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})
+  @:overload(function(fileName:String) : Void {})
   @:overload(function(fileName:String, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})
   @:overload(function(fileName:String, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})
-  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  public override function Import(fileName:String) : Void;
+  public override function Import(rawData:cs.NativeArray<dotnet.system.Byte>) : Void;
 
+  @:overload(function() : Void {})
   public override function Reset() : Void;
 
+  @:overload(function() : String {})
   @:overload(function(verbose:Bool) : String {})
   public override function ToString() : String;
 

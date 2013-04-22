@@ -15,8 +15,10 @@ extern class CodeConnectAccess extends dotnet.system.Object {
 
   public function new(allowScheme:String, allowPort:Int) : Void;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

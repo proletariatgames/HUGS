@@ -14,8 +14,6 @@ extern class Context extends dotnet.system.Object {
 
   public function DoCallBack(deleg:CrossContextDelegate) : Void;
 
-  override function Finalize() : Void;
-
   public static function FreeNamedDataSlot(name:String) : Void;
 
   public function Freeze() : Void;
@@ -32,6 +30,7 @@ extern class Context extends dotnet.system.Object {
 
   public function SetProperty(prop:IContextProperty) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 
   public static function UnregisterDynamicProperty(name:String, obj:dotnet.system.ContextBoundObject, ctx:Context) : Bool;

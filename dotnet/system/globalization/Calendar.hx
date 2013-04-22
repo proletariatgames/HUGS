@@ -34,18 +34,18 @@ extern class Calendar extends dotnet.system.Object  implements dotnet.system.ICl
 
   public function GetDayOfYear(time:dotnet.system.DateTime) : Int;
 
-  @:overload(function(year:Int, month:Int, era:Int) : Int {})
-  public function GetDaysInMonth(year:Int, month:Int) : Int;
+  @:overload(function(year:Int, month:Int) : Int {})
+  public function GetDaysInMonth(year:Int, month:Int, era:Int) : Int;
 
-  @:overload(function(year:Int, era:Int) : Int {})
-  public function GetDaysInYear(year:Int) : Int;
+  @:overload(function(year:Int) : Int {})
+  public function GetDaysInYear(year:Int, era:Int) : Int;
 
   public function GetEra(time:dotnet.system.DateTime) : Int;
 
   public function GetHour(time:dotnet.system.DateTime) : Int;
 
-  @:overload(function(year:Int, era:Int) : Int {})
-  public function GetLeapMonth(year:Int) : Int;
+  @:overload(function(year:Int) : Int {})
+  public function GetLeapMonth(year:Int, era:Int) : Int;
 
   public function GetMilliseconds(time:dotnet.system.DateTime) : Float;
 
@@ -53,8 +53,8 @@ extern class Calendar extends dotnet.system.Object  implements dotnet.system.ICl
 
   public function GetMonth(time:dotnet.system.DateTime) : Int;
 
-  @:overload(function(year:Int, era:Int) : Int {})
-  public function GetMonthsInYear(year:Int) : Int;
+  @:overload(function(year:Int) : Int {})
+  public function GetMonthsInYear(year:Int, era:Int) : Int;
 
   public function GetSecond(time:dotnet.system.DateTime) : Int;
 
@@ -62,21 +62,19 @@ extern class Calendar extends dotnet.system.Object  implements dotnet.system.ICl
 
   public function GetYear(time:dotnet.system.DateTime) : Int;
 
-  @:overload(function(year:Int, month:Int, day:Int, era:Int) : Bool {})
-  public function IsLeapDay(year:Int, month:Int, day:Int) : Bool;
+  @:overload(function(year:Int, month:Int, day:Int) : Bool {})
+  public function IsLeapDay(year:Int, month:Int, day:Int, era:Int) : Bool;
 
-  @:overload(function(year:Int, month:Int, era:Int) : Bool {})
-  public function IsLeapMonth(year:Int, month:Int) : Bool;
+  @:overload(function(year:Int, month:Int) : Bool {})
+  public function IsLeapMonth(year:Int, month:Int, era:Int) : Bool;
 
-  @:overload(function(year:Int, era:Int) : Bool {})
-  public function IsLeapYear(year:Int) : Bool;
-
-  function M_CheckYE(year:Int, era:Int) : Void;
+  @:overload(function(year:Int) : Bool {})
+  public function IsLeapYear(year:Int, era:Int) : Bool;
 
   public static function ReadOnly(calendar:Calendar) : Calendar;
 
-  @:overload(function(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, millisecond:Int, era:Int) : dotnet.system.DateTime {})
-  public function ToDateTime(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, millisecond:Int) : dotnet.system.DateTime;
+  @:overload(function(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, millisecond:Int) : dotnet.system.DateTime {})
+  public function ToDateTime(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, millisecond:Int, era:Int) : dotnet.system.DateTime;
 
   public function ToFourDigitYear(year:Int) : Int;
 }

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.WheelHit") @:final
-extern class WheelHit {
+extern class WheelHit extends dotnet.system.ValueType {
   public var collider : Collider;
   public var point : Vector3;
   public var normal : Vector3;

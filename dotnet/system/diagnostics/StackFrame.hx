@@ -4,12 +4,12 @@ package dotnet.system.diagnostics;
 extern class StackFrame extends dotnet.system.Object {
   public static var OFFSET_UNKNOWN : Int;
 
-  @:overload(function(fileName:String, lineNumber:Int, colNumber:Int) : Void {})
+  @:overload(function() : Void {})
+  @:overload(function(fNeedFileInfo:Bool) : Void {})
+  @:overload(function(skipFrames:Int) : Void {})
   @:overload(function(skipFrames:Int, fNeedFileInfo:Bool) : Void {})
   @:overload(function(fileName:String, lineNumber:Int) : Void {})
-  @:overload(function(skipFrames:Int) : Void {})
-  @:overload(function(fNeedFileInfo:Bool) : Void {})
-  public function new() : Void;
+  public function new(fileName:String, lineNumber:Int, colNumber:Int) : Void;
 
   public function GetFileColumnNumber() : Int;
 
@@ -23,6 +23,7 @@ extern class StackFrame extends dotnet.system.Object {
 
   public function GetNativeOffset() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

@@ -15,8 +15,8 @@ extern class MethodCall extends dotnet.system.Object  implements IMessage implem
   public var TypeName(default,never) : String;
   public var Uri : String;
 
-  @:overload(function(msg:IMessage) : Void {})
-  public function new(h1:cs.NativeArray<Header>) : Void;
+  @:overload(function(h1:cs.NativeArray<Header>) : Void {})
+  public function new(msg:IMessage) : Void;
 
   public function GetArg(argNum:Int) : Dynamic;
 
@@ -31,10 +31,6 @@ extern class MethodCall extends dotnet.system.Object  implements IMessage implem
   public function HeaderHandler(h:cs.NativeArray<Header>) : Dynamic;
 
   public function Init() : Void;
-
-  function InitDictionary() : Void;
-
-  function InitMethodProperty(key:String, value:Dynamic) : Void;
 
   public function ResolveMethod() : Void;
 

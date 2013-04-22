@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.GL") @:final
-extern class GL {
+extern class GL extends dotnet.system.Object {
   public static var TRIANGLES : Int;
   public static var TRIANGLE_STRIP : Int;
   public static var QUADS : Int;
@@ -11,8 +11,8 @@ extern class GL {
 
   public static function Begin(mode:Int) : Void;
 
-  @:overload(function(clearDepth:Bool, clearColor:Bool, backgroundColor:Color, depth:Float) : Void {})
-  public static function Clear(clearDepth:Bool, clearColor:Bool, backgroundColor:Color) : Void;
+  @:overload(function(clearDepth:Bool, clearColor:Bool, backgroundColor:Color) : Void {})
+  public static function Clear(clearDepth:Bool, clearColor:Bool, backgroundColor:Color, depth:Float) : Void;
 
   public static function ClearWithSkybox(clearDepth:Bool, camera:Camera) : Void;
 
@@ -32,8 +32,8 @@ extern class GL {
 
   public static function LoadOrtho() : Void;
 
-  @:overload(function(left:Float, right:Float, bottom:Float, top:Float) : Void {})
-  public static function LoadPixelMatrix() : Void;
+  @:overload(function() : Void {})
+  public static function LoadPixelMatrix(left:Float, right:Float, bottom:Float, top:Float) : Void;
 
   public static function LoadProjectionMatrix(mat:Matrix4x4) : Void;
 

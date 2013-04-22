@@ -34,6 +34,8 @@ extern class WebRequest extends dotnet.system.MarshalByRefObject  implements dot
 
   public function EndGetResponse(asyncResult:dotnet.system.IAsyncResult) : WebResponse;
 
+  @:overload(function(serializationInfo:dotnet.system.runtime.serialization.SerializationInfo, streamingContext:dotnet.system.runtime.serialization.StreamingContext) : Void {})
+  function GetObjectData(serializationInfo:dotnet.system.runtime.serialization.SerializationInfo, streamingContext:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   public function GetRequestStream() : dotnet.system.io.Stream;
 

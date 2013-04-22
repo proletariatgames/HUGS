@@ -14,9 +14,9 @@ extern class Stack extends dotnet.system.Object  implements dotnet.system.IClone
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  @:overload(function(initialCapacity:Int) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(col:ICollection) : Void {})
-  public function new() : Void;
+  public function new(initialCapacity:Int) : Void;
 
   public function GetEnumerator() : IEnumerator;
 

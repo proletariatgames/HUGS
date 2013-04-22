@@ -4,11 +4,13 @@ package dotnet.system.componentmodel;
 extern class EditorBrowsableAttribute extends dotnet.system.Attribute {
   public var State(default,never) : EditorBrowsableState;
 
-  @:overload(function(state:EditorBrowsableState) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(state:EditorBrowsableState) : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

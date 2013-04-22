@@ -13,7 +13,7 @@ extern class XmlSchemaInference extends dotnet.system.Object {
 
   public function new() : Void;
 
-  @:overload(function(xmlReader:dotnet.system.xml.XmlReader, schemas:XmlSchemaSet) : XmlSchemaSet {})
-  public function InferSchema(xmlReader:dotnet.system.xml.XmlReader) : XmlSchemaSet;
+  @:overload(function(xmlReader:dotnet.system.xml.XmlReader) : XmlSchemaSet {})
+  public function InferSchema(xmlReader:dotnet.system.xml.XmlReader, schemas:XmlSchemaSet) : XmlSchemaSet;
 }
 

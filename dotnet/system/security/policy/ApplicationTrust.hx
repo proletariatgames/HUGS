@@ -8,8 +8,8 @@ extern class ApplicationTrust extends dotnet.system.Object  implements dotnet.sy
   public var IsApplicationTrustedToRun : Bool;
   public var Persist : Bool;
 
-  @:overload(function(applicationIdentity:dotnet.system.ApplicationIdentity) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(applicationIdentity:dotnet.system.ApplicationIdentity) : Void;
 
   public function FromXml(element:dotnet.system.security.SecurityElement) : Void;
 

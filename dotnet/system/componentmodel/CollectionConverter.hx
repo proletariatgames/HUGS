@@ -3,12 +3,15 @@ package dotnet.system.componentmodel;
 @:native("System.ComponentModel.CollectionConverter")
 extern class CollectionConverter extends TypeConverter {
 
-  public override function ConvertTo(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic, destinationType:cs.system.Type) : Dynamic;
+  @:overload(function(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic, destinationType:cs.system.Type) : Dynamic {})
+  public override function ConvertTo(value:Dynamic, destinationType:cs.system.Type) : Dynamic;
 
   public function new() : Void;
 
-  public override function GetProperties(context:ITypeDescriptorContext, value:Dynamic, attributes:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection;
+  @:overload(function(context:ITypeDescriptorContext, value:Dynamic, attributes:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection {})
+  public override function GetProperties(value:Dynamic) : PropertyDescriptorCollection;
 
-  public override function GetPropertiesSupported(context:ITypeDescriptorContext) : Bool;
+  @:overload(function(context:ITypeDescriptorContext) : Bool {})
+  public override function GetPropertiesSupported() : Bool;
 }
 

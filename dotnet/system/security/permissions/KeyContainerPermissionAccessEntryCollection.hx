@@ -10,8 +10,10 @@ extern class KeyContainerPermissionAccessEntryCollection extends dotnet.system.O
 
   public function Clear() : Void;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<KeyContainerPermissionAccessEntry>, index:Int) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : KeyContainerPermissionAccessEntryEnumerator;
 
   public function IndexOf(accessEntry:KeyContainerPermissionAccessEntry) : Int;

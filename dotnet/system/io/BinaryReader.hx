@@ -6,17 +6,17 @@ extern class BinaryReader extends dotnet.system.Object  implements dotnet.system
 
   public function Close() : Void;
 
-  @:overload(function(input:Stream, encoding:dotnet.system.text.Encoding) : Void {})
-  public function new(input:Stream) : Void;
+  @:overload(function(input:Stream) : Void {})
+  public function new(input:Stream, encoding:dotnet.system.text.Encoding) : Void;
 
-
-  function FillBuffer(numBytes:Int) : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function PeekChar() : Int;
 
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Int {})
+  @:overload(function() : Int {})
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, index:Int, count:Int) : Int {})
-  public function Read() : Int;
+  public function Read(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Int;
 
   public function ReadBoolean() : Bool;
 

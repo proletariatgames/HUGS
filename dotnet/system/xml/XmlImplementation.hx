@@ -5,8 +5,8 @@ extern class XmlImplementation extends dotnet.system.Object {
 
   public function CreateDocument() : XmlDocument;
 
-  @:overload(function(nameTable:XmlNameTable) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(nameTable:XmlNameTable) : Void;
 
   public function HasFeature(strFeature:String, strVersion:String) : Bool;
 }

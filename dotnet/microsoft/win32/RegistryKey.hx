@@ -8,32 +8,30 @@ extern class RegistryKey extends dotnet.system.MarshalByRefObject  implements do
 
   public function Close() : Void;
 
-  @:overload(function(subkey:String, permissionCheck:RegistryKeyPermissionCheck, registrySecurity:dotnet.system.security.accesscontrol.RegistrySecurity) : RegistryKey {})
+  @:overload(function(subkey:String) : RegistryKey {})
   @:overload(function(subkey:String, permissionCheck:RegistryKeyPermissionCheck) : RegistryKey {})
-  public function CreateSubKey(subkey:String) : RegistryKey;
+  public function CreateSubKey(subkey:String, permissionCheck:RegistryKeyPermissionCheck, registrySecurity:dotnet.system.security.accesscontrol.RegistrySecurity) : RegistryKey;
 
-  @:overload(function(subkey:String, throwOnMissingSubKey:Bool) : Void {})
-  public function DeleteSubKey(subkey:String) : Void;
+  @:overload(function(subkey:String) : Void {})
+  public function DeleteSubKey(subkey:String, throwOnMissingSubKey:Bool) : Void;
 
   public function DeleteSubKeyTree(subkey:String) : Void;
 
-  @:overload(function(name:String, throwOnMissingValue:Bool) : Void {})
-  public function DeleteValue(name:String) : Void;
+  @:overload(function(name:String) : Void {})
+  public function DeleteValue(name:String, throwOnMissingValue:Bool) : Void;
 
   function Dispose() : Void;
 
-  override function Finalize() : Void;
-
   public function Flush() : Void;
 
-  @:overload(function(includeSections:dotnet.system.security.accesscontrol.AccessControlSections) : dotnet.system.security.accesscontrol.RegistrySecurity {})
-  public function GetAccessControl() : dotnet.system.security.accesscontrol.RegistrySecurity;
+  @:overload(function() : dotnet.system.security.accesscontrol.RegistrySecurity {})
+  public function GetAccessControl(includeSections:dotnet.system.security.accesscontrol.AccessControlSections) : dotnet.system.security.accesscontrol.RegistrySecurity;
 
   public function GetSubKeyNames() : cs.NativeArray<String>;
 
-  @:overload(function(name:String, defaultValue:Dynamic, options:RegistryValueOptions) : Dynamic {})
+  @:overload(function(name:String) : Dynamic {})
   @:overload(function(name:String, defaultValue:Dynamic) : Dynamic {})
-  public function GetValue(name:String) : Dynamic;
+  public function GetValue(name:String, defaultValue:Dynamic, options:RegistryValueOptions) : Dynamic;
 
   public function GetValueKind(name:String) : RegistryValueKind;
 
@@ -41,16 +39,17 @@ extern class RegistryKey extends dotnet.system.MarshalByRefObject  implements do
 
   public static function OpenRemoteBaseKey(hKey:RegistryHive, machineName:String) : RegistryKey;
 
-  @:overload(function(name:String, permissionCheck:RegistryKeyPermissionCheck, rights:dotnet.system.security.accesscontrol.RegistryRights) : RegistryKey {})
+  @:overload(function(name:String) : RegistryKey {})
   @:overload(function(name:String, writable:Bool) : RegistryKey {})
   @:overload(function(name:String, permissionCheck:RegistryKeyPermissionCheck) : RegistryKey {})
-  public function OpenSubKey(name:String) : RegistryKey;
+  public function OpenSubKey(name:String, permissionCheck:RegistryKeyPermissionCheck, rights:dotnet.system.security.accesscontrol.RegistryRights) : RegistryKey;
 
   public function SetAccessControl(registrySecurity:dotnet.system.security.accesscontrol.RegistrySecurity) : Void;
 
-  @:overload(function(name:String, value:Dynamic, valueKind:RegistryValueKind) : Void {})
-  public function SetValue(name:String, value:Dynamic) : Void;
+  @:overload(function(name:String, value:Dynamic) : Void {})
+  public function SetValue(name:String, value:Dynamic, valueKind:RegistryValueKind) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

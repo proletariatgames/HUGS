@@ -3,27 +3,25 @@ package dotnet.system.diagnostics;
 @:native("System.Diagnostics.EventLogPermissionEntryCollection")
 extern class EventLogPermissionEntryCollection extends dotnet.system.collections.CollectionBase {
 
-  public function Add(value:EventLogPermissionEntry) : Int;
+  @:overload(function(value:EventLogPermissionEntry) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
-  @:overload(function(value:EventLogPermissionEntryCollection) : Void {})
-  public function AddRange(value:cs.NativeArray<EventLogPermissionEntry>) : Void;
+  @:overload(function(value:cs.NativeArray<EventLogPermissionEntry>) : Void {})
+  public function AddRange(value:EventLogPermissionEntryCollection) : Void;
 
-  public function Contains(value:EventLogPermissionEntry) : Bool;
+  @:overload(function(value:EventLogPermissionEntry) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<EventLogPermissionEntry>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<EventLogPermissionEntry>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  public function IndexOf(value:EventLogPermissionEntry) : Int;
+  @:overload(function(value:EventLogPermissionEntry) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, value:EventLogPermissionEntry) : Void;
+  @:overload(function(index:Int, value:EventLogPermissionEntry) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  override function OnClear() : Void;
-
-  override function OnInsert(index:Int, value:Dynamic) : Void;
-
-  override function OnRemove(index:Int, value:Dynamic) : Void;
-
-  override function OnSet(index:Int, oldValue:Dynamic, newValue:Dynamic) : Void;
-
-  public function Remove(value:EventLogPermissionEntry) : Void;
+  @:overload(function(value:EventLogPermissionEntry) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

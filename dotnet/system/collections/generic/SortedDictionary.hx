@@ -21,10 +21,13 @@ extern class SortedDictionary_ValueCollection<TKey,TValue> extends dotnet.system
 
   function Contains(item:TValue) : Bool;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<TValue>, arrayIndex:Int) : Void;
 
   public function new(dic:SortedDictionary<TKey,TValue>) : Void;
 
+  @:overload(function() : IEnumerator<TValue> {})
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : SortedDictionary_ValueCollection_Enumerator<TKey,TValue>;
 
   function Remove(item:TValue) : Bool;
@@ -51,10 +54,13 @@ extern class SortedDictionary_KeyCollection<TKey,TValue> extends dotnet.system.O
 
   function Contains(item:TKey) : Bool;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<TKey>, arrayIndex:Int) : Void;
 
   public function new(dic:SortedDictionary<TKey,TValue>) : Void;
 
+  @:overload(function() : IEnumerator<TKey> {})
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : SortedDictionary_KeyCollection_Enumerator<TKey,TValue>;
 
   function Remove(item:TKey) : Bool;
@@ -78,26 +84,36 @@ extern class SortedDictionary<TKey,TValue> extends dotnet.system.Object  impleme
   public var Keys(default,never) : SortedDictionary_KeyCollection<TKey,TValue>;
   public var Values(default,never) : SortedDictionary_ValueCollection<TKey,TValue>;
 
+  @:overload(function(item:KeyValuePair<TKey,TValue>) : Void {})
+  @:overload(function(key:Dynamic, value:Dynamic) : Void {})
   public function Add(key:TKey, value:TValue) : Void;
 
   public function Clear() : Void;
 
+  @:overload(function(item:KeyValuePair<TKey,TValue>) : Bool {})
+  function Contains(key:Dynamic) : Bool;
 
   public function ContainsKey(key:TKey) : Bool;
 
   public function ContainsValue(value:TValue) : Bool;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<KeyValuePair<TKey,TValue>>, arrayIndex:Int) : Void;
 
-  @:overload(function(dic:IDictionary<TKey,TValue>, comparer:IComparer<TKey>) : Void {})
-  @:overload(function(dic:IDictionary<TKey,TValue>) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(comparer:IComparer<TKey>) : Void {})
-  public function new() : Void;
+  @:overload(function(dic:IDictionary<TKey,TValue>) : Void {})
+  public function new(dic:IDictionary<TKey,TValue>, comparer:IComparer<TKey>) : Void;
 
+  @:overload(function() : dotnet.system.collections.IDictionaryEnumerator {})
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
+  @:overload(function() : IEnumerator<KeyValuePair<TKey,TValue>> {})
   public function GetEnumerator() : SortedDictionary_Enumerator<TKey,TValue>;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
+  @:overload(function(item:KeyValuePair<TKey,TValue>) : Bool {})
+  @:overload(function(key:Dynamic) : Void {})
   public function Remove(key:TKey) : Bool;
 
   public function TryGetValue(key:TKey, value:TValue) : Bool;

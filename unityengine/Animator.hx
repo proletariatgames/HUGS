@@ -92,10 +92,10 @@ extern class Animator extends Behaviour {
   @:overload(function(name:String, value:Bool) : Void {})
   public function SetBool(id:Int, value:Bool) : Void;
 
-  @:overload(function(name:String, value:Float, dampTime:Float, deltaTime:Float) : Void {})
-  @:overload(function(id:Int, value:Float, dampTime:Float, deltaTime:Float) : Void {})
   @:overload(function(name:String, value:Float) : Void {})
-  public function SetFloat(id:Int, value:Float) : Void;
+  @:overload(function(name:String, value:Float, dampTime:Float, deltaTime:Float) : Void {})
+  @:overload(function(id:Int, value:Float) : Void {})
+  public function SetFloat(id:Int, value:Float, dampTime:Float, deltaTime:Float) : Void;
 
   public function SetIKPosition(goal:AvatarIKGoal, goalPosition:Vector3) : Void;
 

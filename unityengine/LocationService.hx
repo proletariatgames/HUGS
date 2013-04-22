@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.LocationService") @:final
-extern class LocationService {
+extern class LocationService extends dotnet.system.Object {
   public var isEnabledByUser(default,never) : Bool;
   public var status(default,never) : LocationServiceStatus;
   public var lastData(default,never) : LocationInfo;

@@ -2,9 +2,6 @@ package dotnet.system.diagnostics.symbolstore;
 
 @:native("System.Diagnostics.SymbolStore.ISymbolMethod")
 extern interface ISymbolMethod {
-  var RootScope(default,never) : ISymbolScope;
-  var SequencePointCount(default,never) : Int;
-  var Token(default,never) : SymbolToken;
 
   function GetNamespace() : ISymbolNamespace;
 

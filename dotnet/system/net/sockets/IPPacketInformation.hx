@@ -5,8 +5,10 @@ extern class IPPacketInformation extends dotnet.system.ValueType {
   public var Address(default,never) : dotnet.system.net.IPAddress;
   public var Interface(default,never) : Int;
 
-  public override function Equals(comparand:Dynamic) : Bool;
+  @:overload(function(comparand:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

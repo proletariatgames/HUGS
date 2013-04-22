@@ -5,8 +5,8 @@ extern class MethodImplAttribute extends dotnet.system.Attribute {
   public var MethodCodeType : MethodCodeType;
   public var Value(default,never) : MethodImplOptions;
 
+  @:overload(function() : Void {})
   @:overload(function(value:Int) : Void {})
-  @:overload(function(methodImplOptions:MethodImplOptions) : Void {})
-  public function new() : Void;
+  public function new(methodImplOptions:MethodImplOptions) : Void;
 }
 

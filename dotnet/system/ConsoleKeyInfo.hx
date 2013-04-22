@@ -9,8 +9,11 @@ extern class ConsoleKeyInfo extends ValueType {
   public function new(keyChar:Char, key:ConsoleKey, shift:Bool, alt:Bool, control:Bool) : Void;
 
   @:overload(function(value:Dynamic) : Bool {})
-  public function Equals(obj:ConsoleKeyInfo) : Bool;
+  @:overload(function(obj:ConsoleKeyInfo) : Bool {})
+  @:overload(function(obj:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

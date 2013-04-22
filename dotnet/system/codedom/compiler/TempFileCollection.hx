@@ -7,22 +7,24 @@ extern class TempFileCollection extends dotnet.system.Object  implements dotnet.
   public var KeepFiles : Bool;
   public var TempDir(default,never) : String;
 
-  @:overload(function(fileExtension:String, keepFile:Bool) : String {})
-  public function AddExtension(fileExtension:String) : String;
+  @:overload(function(fileExtension:String) : String {})
+  public function AddExtension(fileExtension:String, keepFile:Bool) : String;
 
   public function AddFile(fileName:String, keepFile:Bool) : Void;
 
+  @:overload(function(array:dotnet.system.Array, start:Int) : Void {})
   public function CopyTo(fileNames:cs.NativeArray<String>, start:Int) : Void;
 
-  @:overload(function(tempDir:String, keepFiles:Bool) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(tempDir:String) : Void {})
-  public function new() : Void;
+  public function new(tempDir:String, keepFiles:Bool) : Void;
 
   public function Delete() : Void;
 
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
-  override function Finalize() : Void;
-
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 }
 

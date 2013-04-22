@@ -26,22 +26,22 @@ extern class GameObject extends Object {
   public var tag : String;
   public var gameObject(default,never) : GameObject;
 
-  @:overload(function(componentType:cs.system.Type) : Component {})
   @:overload(function(className:String) : Component {})
+  @:overload(function(componentType:cs.system.Type) : Component {})
   public function AddComponent() : Dynamic;
 
   @:overload(function(methodName:String, parameter:Dynamic, options:SendMessageOptions) : Void {})
   @:overload(function(methodName:String, parameter:Dynamic) : Void {})
-  @:overload(function(methodName:String, options:SendMessageOptions) : Void {})
-  public function BroadcastMessage(methodName:String) : Void;
+  @:overload(function(methodName:String) : Void {})
+  public function BroadcastMessage(methodName:String, options:SendMessageOptions) : Void;
 
   public function CompareTag(tag:String) : Bool;
 
   public static function CreatePrimitive(type:PrimitiveType) : GameObject;
 
-  @:overload(function(name:String, components:cs.NativeArray<cs.system.Type>) : Void {})
   @:overload(function(name:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(name:String, components:cs.NativeArray<cs.system.Type>) : Void;
 
   public static function Find(name:String) : GameObject;
 
@@ -51,9 +51,9 @@ extern class GameObject extends Object {
 
   public static function FindWithTag(tag:String) : GameObject;
 
-  @:overload(function(type:String) : Component {})
   @:overload(function(type:cs.system.Type) : Component {})
-  public function GetComponent() : Dynamic;
+  @:overload(function() : Dynamic {})
+  public function GetComponent(type:String) : Component;
 
   @:overload(function(type:cs.system.Type) : Component {})
   public function GetComponentInChildren() : Dynamic;
@@ -61,8 +61,8 @@ extern class GameObject extends Object {
   @:overload(function(type:cs.system.Type) : cs.NativeArray<Component> {})
   public function GetComponents() : dotnet.system.Array;
 
-  @:overload(function(type:cs.system.Type, includeInactive:Bool) : cs.NativeArray<Component> {})
   @:overload(function(type:cs.system.Type) : cs.NativeArray<Component> {})
+  @:overload(function(type:cs.system.Type, includeInactive:Bool) : cs.NativeArray<Component> {})
   @:overload(function(includeInactive:Bool) : dotnet.system.Array {})
   public function GetComponentsInChildren() : dotnet.system.Array;
 
@@ -72,13 +72,13 @@ extern class GameObject extends Object {
 
   @:overload(function(methodName:String, value:Dynamic, options:SendMessageOptions) : Void {})
   @:overload(function(methodName:String, value:Dynamic) : Void {})
-  @:overload(function(methodName:String, options:SendMessageOptions) : Void {})
-  public function SendMessage(methodName:String) : Void;
+  @:overload(function(methodName:String) : Void {})
+  public function SendMessage(methodName:String, options:SendMessageOptions) : Void;
 
   @:overload(function(methodName:String, value:Dynamic, options:SendMessageOptions) : Void {})
   @:overload(function(methodName:String, value:Dynamic) : Void {})
-  @:overload(function(methodName:String, options:SendMessageOptions) : Void {})
-  public function SendMessageUpwards(methodName:String) : Void;
+  @:overload(function(methodName:String) : Void {})
+  public function SendMessageUpwards(methodName:String, options:SendMessageOptions) : Void;
 
   public function SetActive(value:Bool) : Void;
 

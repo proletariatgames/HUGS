@@ -5,8 +5,8 @@ extern class CodeAttributeArgument extends dotnet.system.Object {
   public var Name : String;
   public var Value : CodeExpression;
 
-  @:overload(function(name:String, value:CodeExpression) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(value:CodeExpression) : Void {})
-  public function new() : Void;
+  public function new(name:String, value:CodeExpression) : Void;
 }
 

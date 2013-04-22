@@ -9,6 +9,7 @@ extern class ApplicationIdentity extends Object  implements dotnet.system.runtim
 
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.WWW") @:final
-extern class WWW {
+extern class WWW extends dotnet.system.Object {
   public var responseHeaders(default,never) : dotnet.system.collections.generic.Dictionary<String,String>;
   public var text(default,never) : String;
   public var data(default,never) : String;
@@ -20,21 +20,19 @@ extern class WWW {
   public var assetBundle(default,never) : AssetBundle;
   public var threadPriority : ThreadPriority;
 
-  @:overload(function(url:String, postData:cs.NativeArray<dotnet.system.Byte>, headers:dotnet.system.collections.Hashtable) : Void {})
-  @:overload(function(url:String, postData:cs.NativeArray<dotnet.system.Byte>) : Void {})
+  @:overload(function(url:String) : Void {})
   @:overload(function(url:String, form:WWWForm) : Void {})
-  public function new(url:String) : Void;
+  @:overload(function(url:String, postData:cs.NativeArray<dotnet.system.Byte>) : Void {})
+  public function new(url:String, postData:cs.NativeArray<dotnet.system.Byte>, headers:dotnet.system.collections.Hashtable) : Void;
 
   public function Dispose() : Void;
 
-  @:overload(function(s:String, e:dotnet.system.text.Encoding) : String {})
-  public static function EscapeURL(s:String) : String;
+  @:overload(function(s:String) : String {})
+  public static function EscapeURL(s:String, e:dotnet.system.text.Encoding) : String;
 
-  override function Finalize() : Void;
-
-  @:overload(function(threeD:Bool, stream:Bool, audioType:AudioType) : AudioClip {})
+  @:overload(function(threeD:Bool) : AudioClip {})
   @:overload(function(threeD:Bool, stream:Bool) : AudioClip {})
-  public function GetAudioClip(threeD:Bool) : AudioClip;
+  public function GetAudioClip(threeD:Bool, stream:Bool, audioType:AudioType) : AudioClip;
 
   public static function GetTextureFromURL(url:String) : Texture2D;
 
@@ -42,14 +40,14 @@ extern class WWW {
 
   public function InitWWW(url:String, postData:cs.NativeArray<dotnet.system.Byte>, iHeaders:cs.NativeArray<String>) : Void;
 
-  @:overload(function(url:String, version:Int, crc:UInt) : WWW {})
-  public static function LoadFromCacheOrDownload(url:String, version:Int) : WWW;
+  @:overload(function(url:String, version:Int) : WWW {})
+  public static function LoadFromCacheOrDownload(url:String, version:Int, crc:UInt) : WWW;
 
   public function LoadImageIntoTexture(tex:Texture2D) : Void;
 
   public function LoadUnityWeb() : Void;
 
-  @:overload(function(s:String, e:dotnet.system.text.Encoding) : String {})
-  public static function UnEscapeURL(s:String) : String;
+  @:overload(function(s:String) : String {})
+  public static function UnEscapeURL(s:String, e:dotnet.system.text.Encoding) : String;
 }
 

@@ -2,7 +2,6 @@ package dotnet.system.componentmodel.design;
 
 @:native("System.ComponentModel.Design.IMenuCommandService")
 extern interface IMenuCommandService {
-  var Verbs(default,never) : DesignerVerbCollection;
 
   function AddCommand(command:MenuCommand) : Void;
 

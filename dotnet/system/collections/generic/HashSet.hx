@@ -16,25 +16,28 @@ extern class HashSet<T> extends dotnet.system.Object  implements dotnet.system.c
   public var Count(default,never) : Int;
   public var Comparer(default,never) : IEqualityComparer<T>;
 
+  @:overload(function(item:T) : Void {})
   public function Add(item:T) : Bool;
 
   public function Clear() : Void;
 
   public function Contains(item:T) : Bool;
 
-  @:overload(function(array:cs.NativeArray<T>, arrayIndex:Int, count:Int) : Void {})
+  @:overload(function(array:cs.NativeArray<T>) : Void {})
   @:overload(function(array:cs.NativeArray<T>, arrayIndex:Int) : Void {})
-  public function CopyTo(array:cs.NativeArray<T>) : Void;
+  public function CopyTo(array:cs.NativeArray<T>, arrayIndex:Int, count:Int) : Void;
 
   public static function CreateSetComparer<T>() : IEqualityComparer<HashSet<T>>;
 
-  @:overload(function(collection:IEnumerable<T>, comparer:IEqualityComparer<T>) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(comparer:IEqualityComparer<T>) : Void {})
   @:overload(function(collection:IEnumerable<T>) : Void {})
-  public function new() : Void;
+  public function new(collection:IEnumerable<T>, comparer:IEqualityComparer<T>) : Void;
 
   public function ExceptWith(other:IEnumerable<T>) : Void;
 
+  @:overload(function() : IEnumerator<T> {})
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : HashSet_Enumerator<T>;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;

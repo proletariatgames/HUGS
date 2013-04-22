@@ -13,8 +13,6 @@ extern class CodeMemberMethod extends CodeTypeMember {
   public var ReturnTypeCustomAttributes(default,never) : CodeAttributeDeclarationCollection;
   public var TypeParameters(default,never) : CodeTypeParameterCollection;
 
-  override function Accept(visitor:ICodeDomVisitor) : Void;
-
   public function new() : Void;
 }
 

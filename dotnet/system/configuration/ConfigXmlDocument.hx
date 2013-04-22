@@ -5,23 +5,31 @@ extern class ConfigXmlDocument extends dotnet.system.xml.XmlDocument  implements
   public var Filename(default,never) : String;
   public var LineNumber(default,never) : Int;
 
-  public override function CreateAttribute(prefix:String, localName:String, namespaceUri:String) : dotnet.system.xml.XmlAttribute;
+  @:overload(function(prefix:String, localName:String, namespaceUri:String) : dotnet.system.xml.XmlAttribute {})
+  public override function CreateAttribute(name:String) : dotnet.system.xml.XmlAttribute;
 
+  @:overload(function(data:String) : dotnet.system.xml.XmlCDataSection {})
   public override function CreateCDataSection(data:String) : dotnet.system.xml.XmlCDataSection;
 
-  public override function CreateComment(comment:String) : dotnet.system.xml.XmlComment;
+  @:overload(function(comment:String) : dotnet.system.xml.XmlComment {})
+  public override function CreateComment(data:String) : dotnet.system.xml.XmlComment;
 
-  public override function CreateElement(prefix:String, localName:String, namespaceUri:String) : dotnet.system.xml.XmlElement;
+  @:overload(function(prefix:String, localName:String, namespaceUri:String) : dotnet.system.xml.XmlElement {})
+  public override function CreateElement(name:String) : dotnet.system.xml.XmlElement;
 
-  public override function CreateSignificantWhitespace(data:String) : dotnet.system.xml.XmlSignificantWhitespace;
+  @:overload(function(data:String) : dotnet.system.xml.XmlSignificantWhitespace {})
+  public override function CreateSignificantWhitespace(text:String) : dotnet.system.xml.XmlSignificantWhitespace;
 
+  @:overload(function(text:String) : dotnet.system.xml.XmlText {})
   public override function CreateTextNode(text:String) : dotnet.system.xml.XmlText;
 
-  public override function CreateWhitespace(data:String) : dotnet.system.xml.XmlWhitespace;
+  @:overload(function(data:String) : dotnet.system.xml.XmlWhitespace {})
+  public override function CreateWhitespace(text:String) : dotnet.system.xml.XmlWhitespace;
 
   public function new() : Void;
 
-  public override function Load(filename:String) : Void;
+  @:overload(function(filename:String) : Void {})
+  public override function Load(inStream:dotnet.system.io.Stream) : Void;
 
   public function LoadSingleElement(filename:String, sourceReader:dotnet.system.xml.XmlTextReader) : Void;
 }

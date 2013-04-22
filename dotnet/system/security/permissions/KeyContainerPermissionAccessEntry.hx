@@ -9,12 +9,14 @@ extern class KeyContainerPermissionAccessEntry extends dotnet.system.Object {
   public var ProviderName : String;
   public var ProviderType : Int;
 
-  @:overload(function(keyStore:String, providerName:String, providerType:Int, keyContainerName:String, keySpec:Int, flags:KeyContainerPermissionFlags) : Void {})
   @:overload(function(parameters:dotnet.system.security.cryptography.CspParameters, flags:KeyContainerPermissionFlags) : Void {})
-  public function new(keyContainerName:String, flags:KeyContainerPermissionFlags) : Void;
+  @:overload(function(keyContainerName:String, flags:KeyContainerPermissionFlags) : Void {})
+  public function new(keyStore:String, providerName:String, providerType:Int, keyContainerName:String, keySpec:Int, flags:KeyContainerPermissionFlags) : Void;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

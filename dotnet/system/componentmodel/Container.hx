@@ -4,21 +4,15 @@ package dotnet.system.componentmodel;
 extern class Container extends dotnet.system.Object  implements dotnet.system.IDisposable implements IContainer {
   public var Components(default,never) : ComponentCollection;
 
-  @:overload(function(component:IComponent, name:String) : Void {})
-  public function Add(component:IComponent) : Void;
-
-  function CreateSite(component:IComponent, name:String) : ISite;
+  @:overload(function(component:IComponent) : Void {})
+  public function Add(component:IComponent, name:String) : Void;
 
   public function new() : Void;
 
-  public function Dispose() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
-  override function Finalize() : Void;
-
-  function GetService(service:cs.system.Type) : Dynamic;
-
-  public function Remove(component:IComponent) : Void;
-
-  function ValidateName(component:IComponent, name:String) : Void;
+  @:overload(function(component:IComponent) : Void {})
+  function Remove(component:IComponent, unsite:Bool) : Void;
 }
 

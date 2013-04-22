@@ -8,11 +8,7 @@ extern class NameValueConfigurationCollection extends ConfigurationElementCollec
 
   public function Clear() : Void;
 
-  override function CreateNewElement() : ConfigurationElement;
-
   public function new() : Void;
-
-  override function GetElementKey(element:ConfigurationElement) : Dynamic;
 
   @:overload(function(nameValue:NameValueConfigurationElement) : Void {})
   public function Remove(name:String) : Void;

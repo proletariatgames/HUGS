@@ -7,7 +7,7 @@ extern class XmlTypeAttribute extends dotnet.system.Attribute {
   public var Namespace : String;
   public var TypeName : String;
 
-  @:overload(function(typeName:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(typeName:String) : Void;
 }
 

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.ContactPoint") @:final
-extern class ContactPoint {
+extern class ContactPoint extends dotnet.system.ValueType {
   public var point(default,never) : Vector3;
   public var normal(default,never) : Vector3;
   public var thisCollider(default,never) : Collider;

@@ -9,19 +9,21 @@ extern class WebProxy extends dotnet.system.Object  implements dotnet.system.run
   public var Credentials : ICredentials;
   public var UseDefaultCredentials : Bool;
 
-  @:overload(function(address:String, bypassOnLocal:Bool, bypassList:cs.NativeArray<String>, credentials:ICredentials) : Void {})
-  @:overload(function(address:dotnet.system.Uri, bypassOnLocal:Bool, bypassList:cs.NativeArray<String>, credentials:ICredentials) : Void {})
-  @:overload(function(address:String, bypassOnLocal:Bool, bypassList:cs.NativeArray<String>) : Void {})
-  @:overload(function(address:dotnet.system.Uri, bypassOnLocal:Bool, bypassList:cs.NativeArray<String>) : Void {})
-  @:overload(function(host:String, port:Int) : Void {})
-  @:overload(function(address:String, bypassOnLocal:Bool) : Void {})
-  @:overload(function(address:dotnet.system.Uri, bypassOnLocal:Bool) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(address:String) : Void {})
   @:overload(function(address:dotnet.system.Uri) : Void {})
-  public function new() : Void;
+  @:overload(function(address:String, bypassOnLocal:Bool) : Void {})
+  @:overload(function(host:String, port:Int) : Void {})
+  @:overload(function(address:dotnet.system.Uri, bypassOnLocal:Bool) : Void {})
+  @:overload(function(address:String, bypassOnLocal:Bool, bypassList:cs.NativeArray<String>) : Void {})
+  @:overload(function(address:dotnet.system.Uri, bypassOnLocal:Bool, bypassList:cs.NativeArray<String>) : Void {})
+  @:overload(function(address:String, bypassOnLocal:Bool, bypassList:cs.NativeArray<String>, credentials:ICredentials) : Void {})
+  public function new(address:dotnet.system.Uri, bypassOnLocal:Bool, bypassList:cs.NativeArray<String>, credentials:ICredentials) : Void;
 
   public static function GetDefaultProxy() : WebProxy;
 
+  @:overload(function(serializationInfo:dotnet.system.runtime.serialization.SerializationInfo, streamingContext:dotnet.system.runtime.serialization.StreamingContext) : Void {})
+  function GetObjectData(serializationInfo:dotnet.system.runtime.serialization.SerializationInfo, streamingContext:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   public function GetProxy(destination:dotnet.system.Uri) : dotnet.system.Uri;
 

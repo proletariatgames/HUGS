@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Input") @:final
-extern class Input {
+extern class Input extends dotnet.system.Object {
   public static var compensateSensors : Bool;
   public static var isGyroAvailable(default,never) : Bool;
   public static var gyro(default,never) : Gyroscope;

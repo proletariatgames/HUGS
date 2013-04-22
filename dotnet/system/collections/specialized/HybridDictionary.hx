@@ -18,11 +18,12 @@ extern class HybridDictionary extends dotnet.system.Object  implements dotnet.sy
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  @:overload(function(initialSize:Int, caseInsensitive:Bool) : Void {})
-  @:overload(function(initialSize:Int) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(caseInsensitive:Bool) : Void {})
-  public function new() : Void;
+  @:overload(function(initialSize:Int) : Void {})
+  public function new(initialSize:Int, caseInsensitive:Bool) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IDictionaryEnumerator;
 
   public function Remove(key:Dynamic) : Void;

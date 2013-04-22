@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.GUIStyle") @:final
-extern class GUIStyle {
+extern class GUIStyle extends dotnet.system.Object {
   public var name : String;
   public var normal : GUIStyleState;
   public var hover : GUIStyleState;
@@ -41,26 +41,25 @@ extern class GUIStyle {
 
   public function CalcSize(content:GUIContent) : Vector2;
 
-  @:overload(function(other:GUIStyle) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(other:GUIStyle) : Void;
 
+  @:overload(function(position:Rect, isHover:Bool, isActive:Bool, on:Bool, hasKeyboardFocus:Bool) : Void {})
   @:overload(function(position:Rect, text:String, isHover:Bool, isActive:Bool, on:Bool, hasKeyboardFocus:Bool) : Void {})
   @:overload(function(position:Rect, image:Texture, isHover:Bool, isActive:Bool, on:Bool, hasKeyboardFocus:Bool) : Void {})
   @:overload(function(position:Rect, content:GUIContent, isHover:Bool, isActive:Bool, on:Bool, hasKeyboardFocus:Bool) : Void {})
-  @:overload(function(position:Rect, isHover:Bool, isActive:Bool, on:Bool, hasKeyboardFocus:Bool) : Void {})
-  @:overload(function(position:Rect, content:GUIContent, controlID:Int, on:Bool) : Void {})
-  public function Draw(position:Rect, content:GUIContent, controlID:Int) : Void;
+  @:overload(function(position:Rect, content:GUIContent, controlID:Int) : Void {})
+  public function Draw(position:Rect, content:GUIContent, controlID:Int, on:Bool) : Void;
 
   public function DrawCursor(position:Rect, content:GUIContent, controlID:Int, Character:Int) : Void;
 
   public function DrawWithTextSelection(position:Rect, content:GUIContent, controlID:Int, firstSelectedCharacter:Int, lastSelectedCharacter:Int) : Void;
 
-  override function Finalize() : Void;
-
   public function GetCursorPixelPosition(position:Rect, content:GUIContent, cursorStringIndex:Int) : Vector2;
 
   public function GetCursorStringIndex(position:Rect, content:GUIContent, cursorPixelPosition:Vector2) : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

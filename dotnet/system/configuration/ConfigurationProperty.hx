@@ -12,10 +12,10 @@ extern class ConfigurationProperty extends dotnet.system.Object {
   public var Type(default,never) : cs.system.Type;
   public var Validator(default,never) : ConfigurationValidatorBase;
 
-  @:overload(function(name:String, type:cs.system.Type, default_value:Dynamic, converter:dotnet.system.componentmodel.TypeConverter, validation:ConfigurationValidatorBase, flags:ConfigurationPropertyOptions, description:String) : Void {})
-  @:overload(function(name:String, type:cs.system.Type, default_value:Dynamic, converter:dotnet.system.componentmodel.TypeConverter, validation:ConfigurationValidatorBase, flags:ConfigurationPropertyOptions) : Void {})
-  @:overload(function(name:String, type:cs.system.Type, default_value:Dynamic, flags:ConfigurationPropertyOptions) : Void {})
+  @:overload(function(name:String, type:cs.system.Type) : Void {})
   @:overload(function(name:String, type:cs.system.Type, default_value:Dynamic) : Void {})
-  public function new(name:String, type:cs.system.Type) : Void;
+  @:overload(function(name:String, type:cs.system.Type, default_value:Dynamic, flags:ConfigurationPropertyOptions) : Void {})
+  @:overload(function(name:String, type:cs.system.Type, default_value:Dynamic, converter:dotnet.system.componentmodel.TypeConverter, validation:ConfigurationValidatorBase, flags:ConfigurationPropertyOptions) : Void {})
+  public function new(name:String, type:cs.system.Type, default_value:Dynamic, converter:dotnet.system.componentmodel.TypeConverter, validation:ConfigurationValidatorBase, flags:ConfigurationPropertyOptions, description:String) : Void;
 }
 

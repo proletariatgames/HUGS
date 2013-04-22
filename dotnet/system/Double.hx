@@ -9,12 +9,14 @@ extern class Double extends ValueType  implements IComparable implements IConver
   public static var NegativeInfinity : Float;
   public static var PositiveInfinity : Float;
 
-  @:overload(function(value:Float) : Int {})
-  public function CompareTo(value:Dynamic) : Int;
+  @:overload(function(value:Dynamic) : Int {})
+  public function CompareTo(value:Float) : Int;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   @:overload(function(obj:Float) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetTypeCode() : TypeCode;
@@ -27,10 +29,10 @@ extern class Double extends ValueType  implements IComparable implements IConver
 
   public static function IsPositiveInfinity(d:Float) : Bool;
 
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Float {})
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Float {})
+  @:overload(function(s:String) : Float {})
   @:overload(function(s:String, provider:IFormatProvider) : Float {})
-  public static function Parse(s:String) : Float;
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Float {})
+  public static function Parse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Float;
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
@@ -54,9 +56,10 @@ extern class Double extends ValueType  implements IComparable implements IConver
 
   function ToSingle(provider:IFormatProvider) : Float;
 
-  @:overload(function(format:String, provider:IFormatProvider) : String {})
+  @:overload(function() : String {})
   @:overload(function(provider:IFormatProvider) : String {})
   @:overload(function(format:String) : String {})
+  @:overload(function(format:String, provider:IFormatProvider) : String {})
   public override function ToString() : String;
 
   function ToType(targetType:cs.system.Type, provider:IFormatProvider) : Dynamic;

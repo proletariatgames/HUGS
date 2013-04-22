@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Vector3") @:final
-extern class Vector3 {
+extern class Vector3 extends dotnet.system.ValueType {
   public static var kEpsilon : Float;
   public var x : Float;
   public var y : Float;
@@ -22,8 +22,10 @@ extern class Vector3 {
   @:overload(function(x:Float, y:Float, z:Float) : Void {})
   public function new(x:Float, y:Float) : Void;
 
-  public override function Equals(other:Dynamic) : Bool;
+  @:overload(function(other:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function Normalize() : Void;
@@ -32,6 +34,7 @@ extern class Vector3 {
 
   public function Set(new_x:Float, new_y:Float, new_z:Float) : Void;
 
+  @:overload(function() : String {})
   @:overload(function(format:String) : String {})
   public override function ToString() : String;
 }
@@ -66,8 +69,8 @@ extern class Vector3_Static {
 
   public static function Normalize(value:Vector3) : Vector3;
 
-  @:overload(function(normal:Vector3, tangent:Vector3, binormal:Vector3) : Void {})
-  public static function OrthoNormalize(normal:Vector3, tangent:Vector3) : Void;
+  @:overload(function(normal:Vector3, tangent:Vector3) : Void {})
+  public static function OrthoNormalize(normal:Vector3, tangent:Vector3, binormal:Vector3) : Void;
 
   public static function Project(vector:Vector3, onNormal:Vector3) : Vector3;
 
@@ -79,9 +82,9 @@ extern class Vector3_Static {
 
   public static function Slerp(from:Vector3, to:Vector3, t:Float) : Vector3;
 
-  @:overload(function(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Float, maxSpeed:Float, deltaTime:Float) : Vector3 {})
   @:overload(function(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Float, maxSpeed:Float) : Vector3 {})
-  public static function SmoothDamp(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Float) : Vector3;
+  @:overload(function(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Float) : Vector3 {})
+  public static function SmoothDamp(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Float, maxSpeed:Float, deltaTime:Float) : Vector3;
 
   public static function SqrMagnitude(a:Vector3) : Float;
 }

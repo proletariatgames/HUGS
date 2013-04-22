@@ -13,14 +13,15 @@ extern class IdentityReferenceCollection extends dotnet.system.Object  implement
 
   public function CopyTo(array:cs.NativeArray<IdentityReference>, offset:Int) : Void;
 
-  @:overload(function(capacity:Int) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(capacity:Int) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.generic.IEnumerator<IdentityReference>;
 
   public function Remove(identity:IdentityReference) : Bool;
 
-  @:overload(function(targetType:cs.system.Type, forceSuccess:Bool) : IdentityReferenceCollection {})
-  public function Translate(targetType:cs.system.Type) : IdentityReferenceCollection;
+  @:overload(function(targetType:cs.system.Type) : IdentityReferenceCollection {})
+  public function Translate(targetType:cs.system.Type, forceSuccess:Bool) : IdentityReferenceCollection;
 }
 

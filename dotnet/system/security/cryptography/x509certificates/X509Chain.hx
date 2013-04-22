@@ -11,9 +11,9 @@ extern class X509Chain extends dotnet.system.Object {
 
   public static function Create() : X509Chain;
 
+  @:overload(function() : Void {})
   @:overload(function(useMachineContext:Bool) : Void {})
-  @:overload(function(chainContext:dotnet.system.IntPtr) : Void {})
-  public function new() : Void;
+  public function new(chainContext:dotnet.system.IntPtr) : Void;
 
   public function Reset() : Void;
 }

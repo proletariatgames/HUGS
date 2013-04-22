@@ -8,7 +8,5 @@ extern class XmlSchemaRedefine extends XmlSchemaExternal {
   public var Groups(default,never) : XmlSchemaObjectTable;
 
   public function new() : Void;
-
-  override function SetParent(parent:XmlSchemaObject) : Void;
 }
 

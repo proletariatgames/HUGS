@@ -5,7 +5,6 @@ extern class RootDesignerSerializerAttribute extends dotnet.system.Attribute {
   public var Reloadable(default,never) : Bool;
   public var SerializerBaseTypeName(default,never) : String;
   public var SerializerTypeName(default,never) : String;
-  public override var TypeId(default,never) : Dynamic;
 
   @:overload(function(serializerTypeName:String, baseSerializerTypeName:String, reloadable:Bool) : Void {})
   @:overload(function(serializerTypeName:String, baseSerializerType:cs.system.Type, reloadable:Bool) : Void {})

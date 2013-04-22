@@ -11,9 +11,9 @@ extern class Texture2D extends Texture {
 
   public function Compress(highQuality:Bool) : Void;
 
-  @:overload(function(width:Int, height:Int, format:TextureFormat, mipmap:Bool, linear:Bool) : Void {})
+  @:overload(function(width:Int, height:Int) : Void {})
   @:overload(function(width:Int, height:Int, format:TextureFormat, mipmap:Bool) : Void {})
-  public function new(width:Int, height:Int) : Void;
+  public function new(width:Int, height:Int, format:TextureFormat, mipmap:Bool, linear:Bool) : Void;
 
   public function EncodeToPNG() : cs.NativeArray<dotnet.system.Byte>;
 
@@ -21,10 +21,10 @@ extern class Texture2D extends Texture {
 
   public function GetPixelBilinear(u:Float, v:Float) : Color;
 
-  @:overload(function(x:Int, y:Int, blockWidth:Int, blockHeight:Int, miplevel:Int) : cs.NativeArray<Color> {})
-  @:overload(function(x:Int, y:Int, blockWidth:Int, blockHeight:Int) : cs.NativeArray<Color> {})
+  @:overload(function() : cs.NativeArray<Color> {})
   @:overload(function(miplevel:Int) : cs.NativeArray<Color> {})
-  public function GetPixels() : cs.NativeArray<Color>;
+  @:overload(function(x:Int, y:Int, blockWidth:Int, blockHeight:Int, miplevel:Int) : cs.NativeArray<Color> {})
+  public function GetPixels(x:Int, y:Int, blockWidth:Int, blockHeight:Int) : cs.NativeArray<Color>;
 
   @:overload(function(miplevel:Int) : cs.NativeArray<Color32> {})
   public function GetPixels32() : cs.NativeArray<Color32>;
@@ -43,10 +43,10 @@ extern class Texture2D extends Texture {
 
   public function SetPixel(x:Int, y:Int, color:Color) : Void;
 
-  @:overload(function(x:Int, y:Int, blockWidth:Int, blockHeight:Int, colors:cs.NativeArray<Color>, miplevel:Int) : Void {})
-  @:overload(function(x:Int, y:Int, blockWidth:Int, blockHeight:Int, colors:cs.NativeArray<Color>) : Void {})
+  @:overload(function(colors:cs.NativeArray<Color>) : Void {})
   @:overload(function(colors:cs.NativeArray<Color>, miplevel:Int) : Void {})
-  public function SetPixels(colors:cs.NativeArray<Color>) : Void;
+  @:overload(function(x:Int, y:Int, blockWidth:Int, blockHeight:Int, colors:cs.NativeArray<Color>, miplevel:Int) : Void {})
+  public function SetPixels(x:Int, y:Int, blockWidth:Int, blockHeight:Int, colors:cs.NativeArray<Color>) : Void;
 
   @:overload(function(colors:cs.NativeArray<Color32>, miplevel:Int) : Void {})
   public function SetPixels32(colors:cs.NativeArray<Color32>) : Void;

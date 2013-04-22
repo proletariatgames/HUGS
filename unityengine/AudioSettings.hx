@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.AudioSettings") @:final
-extern class AudioSettings {
+extern class AudioSettings extends dotnet.system.Object {
   public static var driverCaps(default,never) : AudioSpeakerMode;
   public static var speakerMode : AudioSpeakerMode;
   public static var dspTime(default,never) : Float;

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.ParticleSystem.Particle") @:final
-extern class ParticleSystem_Particle {
+extern class ParticleSystem_Particle extends dotnet.system.ValueType {
   public var position : Vector3;
   public var velocity : Vector3;
   public var lifetime : Float;
@@ -36,33 +36,33 @@ extern class ParticleSystem extends Component {
   public var gravityModifier : Float;
   public var randomSeed : UInt;
 
-  @:overload(function(withChildren:Bool) : Void {})
-  public function Clear() : Void;
+  @:overload(function() : Void {})
+  public function Clear(withChildren:Bool) : Void;
 
   public function new() : Void;
 
+  @:overload(function(count:Int) : Void {})
   @:overload(function(position:Vector3, velocity:Vector3, size:Float, lifetime:Float, color:Color32) : Void {})
-  @:overload(function(particle:ParticleSystem_Particle) : Void {})
-  public function Emit(count:Int) : Void;
+  public function Emit(particle:ParticleSystem_Particle) : Void;
 
   public function GetParticles(particles:cs.NativeArray<ParticleSystem_Particle>) : Int;
 
-  @:overload(function(withChildren:Bool) : Bool {})
-  public function IsAlive() : Bool;
+  @:overload(function() : Bool {})
+  public function IsAlive(withChildren:Bool) : Bool;
 
-  @:overload(function(withChildren:Bool) : Void {})
-  public function Pause() : Void;
+  @:overload(function() : Void {})
+  public function Pause(withChildren:Bool) : Void;
 
-  @:overload(function(withChildren:Bool) : Void {})
-  public function Play() : Void;
+  @:overload(function() : Void {})
+  public function Play(withChildren:Bool) : Void;
 
   public function SetParticles(particles:cs.NativeArray<ParticleSystem_Particle>, size:Int) : Void;
 
-  @:overload(function(t:Float, withChildren:Bool, restart:Bool) : Void {})
   @:overload(function(t:Float, withChildren:Bool) : Void {})
-  public function Simulate(t:Float) : Void;
+  @:overload(function(t:Float) : Void {})
+  public function Simulate(t:Float, withChildren:Bool, restart:Bool) : Void;
 
-  @:overload(function(withChildren:Bool) : Void {})
-  public function Stop() : Void;
+  @:overload(function() : Void {})
+  public function Stop(withChildren:Bool) : Void;
 }
 

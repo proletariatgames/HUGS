@@ -17,13 +17,16 @@ extern class RegionInfo extends dotnet.system.Object {
   public var ThreeLetterWindowsRegionName(default,never) : String;
   public var TwoLetterISORegionName(default,never) : String;
 
-  @:overload(function(name:String) : Void {})
-  public function new(culture:Int) : Void;
+  @:overload(function(culture:Int) : Void {})
+  public function new(name:String) : Void;
 
-  public override function Equals(value:Dynamic) : Bool;
+  @:overload(function(value:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

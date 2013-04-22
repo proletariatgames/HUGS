@@ -12,6 +12,7 @@ extern class ConfigurationPropertyCollection extends dotnet.system.Object  imple
 
   public function Contains(name:String) : Bool;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<ConfigurationProperty>, index:Int) : Void;
 
   public function new() : Void;

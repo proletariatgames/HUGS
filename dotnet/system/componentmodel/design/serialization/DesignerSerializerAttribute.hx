@@ -4,7 +4,6 @@ package dotnet.system.componentmodel.design.serialization;
 extern class DesignerSerializerAttribute extends dotnet.system.Attribute {
   public var SerializerBaseTypeName(default,never) : String;
   public var SerializerTypeName(default,never) : String;
-  public override var TypeId(default,never) : Dynamic;
 
   @:overload(function(serializerTypeName:String, baseSerializerTypeName:String) : Void {})
   @:overload(function(serializerTypeName:String, baseSerializerType:cs.system.Type) : Void {})

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Profiler") @:final
-extern class Profiler {
+extern class Profiler extends dotnet.system.Object {
   public static var supported(default,never) : Bool;
   public static var logFile : String;
   public static var enableBinaryLog : Bool;
@@ -10,8 +10,8 @@ extern class Profiler {
 
   public static function AddFramesFromFile(file:String) : Void;
 
-  @:overload(function(name:String, targetObject:Object) : Void {})
-  public static function BeginSample(name:String) : Void;
+  @:overload(function(name:String) : Void {})
+  public static function BeginSample(name:String, targetObject:Object) : Void;
 
   public function new() : Void;
 

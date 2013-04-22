@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.HostData") @:final
-extern class HostData {
+extern class HostData extends dotnet.system.Object {
   public var useNat : Bool;
   public var gameType : String;
   public var gameName : String;

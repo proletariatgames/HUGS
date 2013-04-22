@@ -32,6 +32,7 @@ extern class FileVersionInfo extends dotnet.system.Object {
 
   public static function GetVersionInfo(fileName:String) : FileVersionInfo;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

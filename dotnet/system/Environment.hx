@@ -54,17 +54,17 @@ extern class Environment extends Object {
 
   public static function GetCommandLineArgs() : cs.NativeArray<String>;
 
-  @:overload(function(variable:String, target:EnvironmentVariableTarget) : String {})
-  public static function GetEnvironmentVariable(variable:String) : String;
+  @:overload(function(variable:String) : String {})
+  public static function GetEnvironmentVariable(variable:String, target:EnvironmentVariableTarget) : String;
 
-  @:overload(function(target:EnvironmentVariableTarget) : dotnet.system.collections.IDictionary {})
-  public static function GetEnvironmentVariables() : dotnet.system.collections.IDictionary;
+  @:overload(function() : dotnet.system.collections.IDictionary {})
+  public static function GetEnvironmentVariables(target:EnvironmentVariableTarget) : dotnet.system.collections.IDictionary;
 
   public static function GetFolderPath(folder:Environment_SpecialFolder) : String;
 
   public static function GetLogicalDrives() : cs.NativeArray<String>;
 
-  @:overload(function(variable:String, value:String, target:EnvironmentVariableTarget) : Void {})
-  public static function SetEnvironmentVariable(variable:String, value:String) : Void;
+  @:overload(function(variable:String, value:String) : Void {})
+  public static function SetEnvironmentVariable(variable:String, value:String, target:EnvironmentVariableTarget) : Void;
 }
 

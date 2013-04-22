@@ -2,55 +2,48 @@ package dotnet.system.xml;
 
 @:native("System.Xml.XmlElement")
 extern class XmlElement extends XmlLinkedNode {
-  public override var Attributes(default,never) : XmlAttributeCollection;
   public var HasAttributes(default,never) : Bool;
-  public override var InnerText : String;
-  public override var InnerXml : String;
   public var IsEmpty : Bool;
-  public override var LocalName(default,never) : String;
-  public override var Name(default,never) : String;
-  public override var NamespaceURI(default,never) : String;
-  public override var NextSibling(default,never) : XmlNode;
-  public override var NodeType(default,never) : XmlNodeType;
-  public override var OwnerDocument(default,never) : XmlDocument;
-  public override var Prefix : String;
-  public override var ParentNode(default,never) : XmlNode;
-  public override var SchemaInfo(default,never) : dotnet.system.xml.schema.IXmlSchemaInfo;
+  public var SchemaInfo(default,never) : dotnet.system.xml.schema.IXmlSchemaInfo;
 
+  @:overload(function(deep:Bool) : XmlNode {})
   public override function CloneNode(deep:Bool) : XmlNode;
 
-  @:overload(function(localName:String, namespaceURI:String) : String {})
-  public function GetAttribute(name:String) : String;
+  @:overload(function(name:String) : String {})
+  public function GetAttribute(localName:String, namespaceURI:String) : String;
 
-  @:overload(function(localName:String, namespaceURI:String) : XmlAttribute {})
-  public function GetAttributeNode(name:String) : XmlAttribute;
+  @:overload(function(name:String) : XmlAttribute {})
+  public function GetAttributeNode(localName:String, namespaceURI:String) : XmlAttribute;
 
-  @:overload(function(localName:String, namespaceURI:String) : XmlNodeList {})
-  public function GetElementsByTagName(name:String) : XmlNodeList;
+  @:overload(function(name:String) : XmlNodeList {})
+  public function GetElementsByTagName(localName:String, namespaceURI:String) : XmlNodeList;
 
-  @:overload(function(localName:String, namespaceURI:String) : Bool {})
-  public function HasAttribute(name:String) : Bool;
+  @:overload(function(name:String) : Bool {})
+  public function HasAttribute(localName:String, namespaceURI:String) : Bool;
 
+  @:overload(function() : Void {})
   public override function RemoveAll() : Void;
 
   public function RemoveAllAttributes() : Void;
 
-  @:overload(function(localName:String, namespaceURI:String) : Void {})
-  public function RemoveAttribute(name:String) : Void;
+  @:overload(function(name:String) : Void {})
+  public function RemoveAttribute(localName:String, namespaceURI:String) : Void;
 
   public function RemoveAttributeAt(i:Int) : XmlNode;
 
-  @:overload(function(localName:String, namespaceURI:String) : XmlAttribute {})
-  public function RemoveAttributeNode(oldAttr:XmlAttribute) : XmlAttribute;
+  @:overload(function(oldAttr:XmlAttribute) : XmlAttribute {})
+  public function RemoveAttributeNode(localName:String, namespaceURI:String) : XmlAttribute;
 
-  @:overload(function(localName:String, namespaceURI:String, value:String) : String {})
-  public function SetAttribute(name:String, value:String) : Void;
+  @:overload(function(name:String, value:String) : Void {})
+  public function SetAttribute(localName:String, namespaceURI:String, value:String) : String;
 
-  @:overload(function(localName:String, namespaceURI:String) : XmlAttribute {})
-  public function SetAttributeNode(newAttr:XmlAttribute) : XmlAttribute;
+  @:overload(function(newAttr:XmlAttribute) : XmlAttribute {})
+  public function SetAttributeNode(localName:String, namespaceURI:String) : XmlAttribute;
 
+  @:overload(function(w:XmlWriter) : Void {})
   public override function WriteContentTo(w:XmlWriter) : Void;
 
+  @:overload(function(w:XmlWriter) : Void {})
   public override function WriteTo(w:XmlWriter) : Void;
 }
 

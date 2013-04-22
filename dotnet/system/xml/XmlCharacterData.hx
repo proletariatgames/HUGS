@@ -3,9 +3,7 @@ package dotnet.system.xml;
 @:native("System.Xml.XmlCharacterData")
 extern class XmlCharacterData extends XmlLinkedNode {
   public var Data : String;
-  public override var InnerText : String;
   public var Length(default,never) : Int;
-  public override var Value : String;
 
   public function AppendData(strData:String) : Void;
 

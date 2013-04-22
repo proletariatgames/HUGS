@@ -5,13 +5,14 @@ extern class SoapNormalizedString extends dotnet.system.Object  implements ISoap
   public var Value : String;
   public static var XsdType(default,never) : String;
 
-  @:overload(function(value:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(value:String) : Void;
 
   public function GetXsdType() : String;
 
   public static function Parse(value:String) : SoapNormalizedString;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

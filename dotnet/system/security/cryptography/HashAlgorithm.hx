@@ -11,17 +11,15 @@ extern class HashAlgorithm extends dotnet.system.Object  implements dotnet.syste
 
   public function Clear() : Void;
 
+  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>) : cs.NativeArray<dotnet.system.Byte> {})
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : cs.NativeArray<dotnet.system.Byte> {})
-  @:overload(function(inputStream:dotnet.system.io.Stream) : cs.NativeArray<dotnet.system.Byte> {})
-  public function ComputeHash(buffer:cs.NativeArray<dotnet.system.Byte>) : cs.NativeArray<dotnet.system.Byte>;
+  public function ComputeHash(inputStream:dotnet.system.io.Stream) : cs.NativeArray<dotnet.system.Byte>;
 
-  @:overload(function(hashName:String) : HashAlgorithm {})
-  public static function Create() : HashAlgorithm;
+  @:overload(function() : HashAlgorithm {})
+  public static function Create(hashName:String) : HashAlgorithm;
 
-
-  function HashCore(array:cs.NativeArray<dotnet.system.Byte>, ibStart:Int, cbSize:Int) : Void;
-
-  function HashFinal() : cs.NativeArray<dotnet.system.Byte>;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function Initialize() : Void;
 

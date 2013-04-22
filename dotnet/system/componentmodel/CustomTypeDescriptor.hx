@@ -17,11 +17,11 @@ extern class CustomTypeDescriptor extends dotnet.system.Object  implements ICust
 
   public function GetEditor(editorBaseType:cs.system.Type) : Dynamic;
 
-  @:overload(function(attributes:cs.NativeArray<dotnet.system.Attribute>) : EventDescriptorCollection {})
-  public function GetEvents() : EventDescriptorCollection;
+  @:overload(function() : EventDescriptorCollection {})
+  public function GetEvents(attributes:cs.NativeArray<dotnet.system.Attribute>) : EventDescriptorCollection;
 
-  @:overload(function(attributes:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection {})
-  public function GetProperties() : PropertyDescriptorCollection;
+  @:overload(function() : PropertyDescriptorCollection {})
+  public function GetProperties(attributes:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection;
 
   public function GetPropertyOwner(pd:PropertyDescriptor) : Dynamic;
 }

@@ -4,7 +4,7 @@ package dotnet.system.runtime.interopservices;
 extern class CurrencyWrapper extends dotnet.system.Object {
   public var WrappedObject(default,never) : dotnet.system.Decimal;
 
-  @:overload(function(obj:Dynamic) : Void {})
-  public function new(obj:dotnet.system.Decimal) : Void;
+  @:overload(function(obj:dotnet.system.Decimal) : Void {})
+  public function new(obj:Dynamic) : Void;
 }
 

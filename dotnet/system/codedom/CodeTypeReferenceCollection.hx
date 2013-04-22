@@ -3,25 +3,32 @@ package dotnet.system.codedom;
 @:native("System.CodeDom.CodeTypeReferenceCollection")
 extern class CodeTypeReferenceCollection extends dotnet.system.collections.CollectionBase {
 
+  @:overload(function(value:CodeTypeReference) : Int {})
   @:overload(function(value:String) : Void {})
   @:overload(function(value:cs.system.Type) : Void {})
-  public function Add(value:CodeTypeReference) : Int;
+  @:overload(function(value:Dynamic) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
   @:overload(function(value:cs.NativeArray<CodeTypeReference>) : Void {})
   public function AddRange(value:CodeTypeReferenceCollection) : Void;
 
-  public function Contains(value:CodeTypeReference) : Bool;
+  @:overload(function(value:CodeTypeReference) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<CodeTypeReference>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<CodeTypeReference>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
+  @:overload(function() : Void {})
   @:overload(function(value:cs.NativeArray<CodeTypeReference>) : Void {})
-  @:overload(function(value:CodeTypeReferenceCollection) : Void {})
-  public function new() : Void;
+  public function new(value:CodeTypeReferenceCollection) : Void;
 
-  public function IndexOf(value:CodeTypeReference) : Int;
+  @:overload(function(value:CodeTypeReference) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, value:CodeTypeReference) : Void;
+  @:overload(function(index:Int, value:CodeTypeReference) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  public function Remove(value:CodeTypeReference) : Void;
+  @:overload(function(value:CodeTypeReference) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

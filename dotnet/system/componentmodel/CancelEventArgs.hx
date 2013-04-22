@@ -4,7 +4,7 @@ package dotnet.system.componentmodel;
 extern class CancelEventArgs extends dotnet.system.EventArgs {
   public var Cancel : Bool;
 
-  @:overload(function(cancel:Bool) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(cancel:Bool) : Void;
 }
 

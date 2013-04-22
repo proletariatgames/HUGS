@@ -4,9 +4,7 @@ package dotnet.system.diagnostics;
 extern class BooleanSwitch extends Switch {
   public var Enabled : Bool;
 
-  @:overload(function(displayName:String, description:String, defaultSwitchValue:String) : Void {})
-  public function new(displayName:String, description:String) : Void;
-
-  override function OnValueChanged() : Void;
+  @:overload(function(displayName:String, description:String) : Void {})
+  public function new(displayName:String, description:String, defaultSwitchValue:String) : Void;
 }
 

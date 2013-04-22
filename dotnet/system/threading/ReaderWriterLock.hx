@@ -6,19 +6,17 @@ extern class ReaderWriterLock extends dotnet.system.runtime.constrainedexecution
   public var IsWriterLockHeld(default,never) : Bool;
   public var WriterSeqNum(default,never) : Int;
 
-  @:overload(function(timeout:dotnet.system.TimeSpan) : Void {})
-  public function AcquireReaderLock(millisecondsTimeout:Int) : Void;
+  @:overload(function(millisecondsTimeout:Int) : Void {})
+  public function AcquireReaderLock(timeout:dotnet.system.TimeSpan) : Void;
 
-  @:overload(function(timeout:dotnet.system.TimeSpan) : Void {})
-  public function AcquireWriterLock(millisecondsTimeout:Int) : Void;
+  @:overload(function(millisecondsTimeout:Int) : Void {})
+  public function AcquireWriterLock(timeout:dotnet.system.TimeSpan) : Void;
 
   public function AnyWritersSince(seqNum:Int) : Bool;
 
   public function new() : Void;
 
   public function DowngradeFromWriterLock(lockCookie:LockCookie) : Void;
-
-  override function Finalize() : Void;
 
   public function ReleaseLock() : LockCookie;
 
@@ -28,7 +26,7 @@ extern class ReaderWriterLock extends dotnet.system.runtime.constrainedexecution
 
   public function RestoreLock(lockCookie:LockCookie) : Void;
 
-  @:overload(function(timeout:dotnet.system.TimeSpan) : LockCookie {})
-  public function UpgradeToWriterLock(millisecondsTimeout:Int) : LockCookie;
+  @:overload(function(millisecondsTimeout:Int) : LockCookie {})
+  public function UpgradeToWriterLock(timeout:dotnet.system.TimeSpan) : LockCookie;
 }
 

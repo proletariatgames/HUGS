@@ -26,12 +26,14 @@ extern class XmlNode extends dotnet.system.Object  implements dotnet.system.IClo
 
   public function AppendChild(newChild:XmlNode) : XmlNode;
 
+  @:overload(function() : Dynamic {})
   public function Clone() : XmlNode;
 
   public function CloneNode(deep:Bool) : XmlNode;
 
   public function CreateNavigator() : dotnet.system.xml.xpath.XPathNavigator;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
   public function GetNamespaceOfPrefix(prefix:String) : String;
@@ -52,11 +54,11 @@ extern class XmlNode extends dotnet.system.Object  implements dotnet.system.IClo
 
   public function ReplaceChild(newChild:XmlNode, oldChild:XmlNode) : XmlNode;
 
-  @:overload(function(xpath:String, nsmgr:XmlNamespaceManager) : XmlNodeList {})
-  public function SelectNodes(xpath:String) : XmlNodeList;
+  @:overload(function(xpath:String) : XmlNodeList {})
+  public function SelectNodes(xpath:String, nsmgr:XmlNamespaceManager) : XmlNodeList;
 
-  @:overload(function(xpath:String, nsmgr:XmlNamespaceManager) : XmlNode {})
-  public function SelectSingleNode(xpath:String) : XmlNode;
+  @:overload(function(xpath:String) : XmlNode {})
+  public function SelectSingleNode(xpath:String, nsmgr:XmlNamespaceManager) : XmlNode;
 
   public function Supports(feature:String, version:String) : Bool;
 

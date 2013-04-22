@@ -3,24 +3,29 @@ package dotnet.system.configuration;
 @:native("System.Configuration.CommaDelimitedStringCollection") @:final
 extern class CommaDelimitedStringCollection extends dotnet.system.collections.specialized.StringCollection {
   public var IsModified(default,never) : Bool;
-  public override var IsReadOnly(default,never) : Bool;
 
-  public function Add(value:String) : Void;
+  @:overload(function(value:String) : Void {})
+  public override function Add(value:Dynamic) : Int;
 
-  public function AddRange(range:cs.NativeArray<String>) : Void;
+  @:overload(function(range:cs.NativeArray<String>) : Void {})
+  public override function AddRange(value:cs.NativeArray<String>) : Void;
 
+  @:overload(function() : Void {})
   public override function Clear() : Void;
 
   public function Clone() : CommaDelimitedStringCollection;
 
   public function new() : Void;
 
-  public function Insert(index:Int, value:String) : Void;
+  @:overload(function(index:Int, value:String) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  public function Remove(value:String) : Void;
+  @:overload(function(value:String) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 
   public function SetReadOnly() : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

@@ -4,9 +4,7 @@ package dotnet.system.codedom;
 extern class CodeVariableReferenceExpression extends CodeExpression {
   public var VariableName : String;
 
-  override function Accept(visitor:ICodeDomVisitor) : Void;
-
-  @:overload(function(variableName:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(variableName:String) : Void;
 }
 

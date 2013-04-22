@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Quaternion") @:final
-extern class Quaternion {
+extern class Quaternion extends dotnet.system.ValueType {
   public static var kEpsilon : Float;
   public var x : Float;
   public var y : Float;
@@ -12,8 +12,10 @@ extern class Quaternion {
 
   public function new(x:Float, y:Float, z:Float, w:Float) : Void;
 
-  public override function Equals(other:Dynamic) : Bool;
+  @:overload(function(other:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function Set(new_x:Float, new_y:Float, new_z:Float, new_w:Float) : Void;
@@ -28,8 +30,8 @@ extern class Quaternion {
 
   public function SetFromToRotation(fromDirection:Vector3, toDirection:Vector3) : Void;
 
-  @:overload(function(view:Vector3, up:Vector3) : Void {})
-  public function SetLookRotation(view:Vector3) : Void;
+  @:overload(function(view:Vector3) : Void {})
+  public function SetLookRotation(view:Vector3, up:Vector3) : Void;
 
   public function ToAngleAxis(angle:Float, axis:Vector3) : Void;
 
@@ -39,6 +41,7 @@ extern class Quaternion {
 
   public function ToEulerAngles() : Vector3;
 
+  @:overload(function() : String {})
   @:overload(function(format:String) : String {})
   public override function ToString() : String;
 }

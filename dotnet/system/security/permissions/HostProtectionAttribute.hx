@@ -13,9 +13,10 @@ extern class HostProtectionAttribute extends CodeAccessSecurityAttribute {
   public var UI : Bool;
   public var Resources : HostProtectionResource;
 
+  @:overload(function() : dotnet.system.security.IPermission {})
   public override function CreatePermission() : dotnet.system.security.IPermission;
 
-  @:overload(function(action:SecurityAction) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(action:SecurityAction) : Void;
 }
 

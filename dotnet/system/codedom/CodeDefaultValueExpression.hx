@@ -4,9 +4,7 @@ package dotnet.system.codedom;
 extern class CodeDefaultValueExpression extends CodeExpression {
   public var Type : CodeTypeReference;
 
-  override function Accept(visitor:ICodeDomVisitor) : Void;
-
-  @:overload(function(type:CodeTypeReference) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(type:CodeTypeReference) : Void;
 }
 

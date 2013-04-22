@@ -11,11 +11,14 @@ extern class OpCode extends dotnet.system.ValueType {
   public var StackBehaviourPush(default,never) : StackBehaviour;
   public var Value(default,never) : Int;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   @:overload(function(obj:OpCode) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

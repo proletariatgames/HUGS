@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Vector4") @:final
-extern class Vector4 {
+extern class Vector4 extends dotnet.system.ValueType {
   public static var kEpsilon : Float;
   public var x : Float;
   public var y : Float;
@@ -17,8 +17,10 @@ extern class Vector4 {
   @:overload(function(x:Float, y:Float, z:Float) : Void {})
   public function new(x:Float, y:Float) : Void;
 
-  public override function Equals(other:Dynamic) : Bool;
+  @:overload(function(other:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function Normalize() : Void;
@@ -29,6 +31,7 @@ extern class Vector4 {
 
   public function SqrMagnitude() : Float;
 
+  @:overload(function() : String {})
   @:overload(function(format:String) : String {})
   public override function ToString() : String;
 }

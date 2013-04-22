@@ -3,23 +3,29 @@ package dotnet.system.codedom;
 @:native("System.CodeDom.CodeNamespaceCollection")
 extern class CodeNamespaceCollection extends dotnet.system.collections.CollectionBase {
 
-  public function Add(value:CodeNamespace) : Int;
+  @:overload(function(value:CodeNamespace) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
   @:overload(function(value:cs.NativeArray<CodeNamespace>) : Void {})
   public function AddRange(value:CodeNamespaceCollection) : Void;
 
-  public function Contains(value:CodeNamespace) : Bool;
+  @:overload(function(value:CodeNamespace) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<CodeNamespace>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<CodeNamespace>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
+  @:overload(function() : Void {})
   @:overload(function(value:cs.NativeArray<CodeNamespace>) : Void {})
-  @:overload(function(value:CodeNamespaceCollection) : Void {})
-  public function new() : Void;
+  public function new(value:CodeNamespaceCollection) : Void;
 
-  public function IndexOf(value:CodeNamespace) : Int;
+  @:overload(function(value:CodeNamespace) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, value:CodeNamespace) : Void;
+  @:overload(function(index:Int, value:CodeNamespace) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  public function Remove(value:CodeNamespace) : Void;
+  @:overload(function(value:CodeNamespace) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

@@ -8,18 +8,18 @@ extern class Overlapped extends dotnet.system.Object {
   public var OffsetHigh : Int;
   public var OffsetLow : Int;
 
+  @:overload(function() : Void {})
   @:overload(function(offsetLo:Int, offsetHi:Int, hEvent:Int, ar:dotnet.system.IAsyncResult) : Void {})
-  @:overload(function(offsetLo:Int, offsetHi:Int, hEvent:dotnet.system.IntPtr, ar:dotnet.system.IAsyncResult) : Void {})
-  public function new() : Void;
+  public function new(offsetLo:Int, offsetHi:Int, hEvent:dotnet.system.IntPtr, ar:dotnet.system.IAsyncResult) : Void;
 
   public static function Free(nativeOverlappedPtr:NativeOverlapped) : Void;
 
-  @:overload(function(iocb:IOCompletionCallback, userData:Dynamic) : NativeOverlapped {})
-  public function Pack(iocb:IOCompletionCallback) : NativeOverlapped;
+  @:overload(function(iocb:IOCompletionCallback) : NativeOverlapped {})
+  public function Pack(iocb:IOCompletionCallback, userData:Dynamic) : NativeOverlapped;
 
   public static function Unpack(nativeOverlappedPtr:NativeOverlapped) : Overlapped;
 
-  @:overload(function(iocb:IOCompletionCallback, userData:Dynamic) : NativeOverlapped {})
-  public function UnsafePack(iocb:IOCompletionCallback) : NativeOverlapped;
+  @:overload(function(iocb:IOCompletionCallback) : NativeOverlapped {})
+  public function UnsafePack(iocb:IOCompletionCallback, userData:Dynamic) : NativeOverlapped;
 }
 

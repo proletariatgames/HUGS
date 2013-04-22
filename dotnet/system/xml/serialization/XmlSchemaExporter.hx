@@ -8,10 +8,10 @@ extern class XmlSchemaExporter extends dotnet.system.Object {
   @:overload(function(ns:String) : String {})
   public function ExportAnyType(members:XmlMembersMapping) : String;
 
-  @:overload(function(xmlMembersMapping:XmlMembersMapping, exportEnclosingType:Bool) : Void {})
-  public function ExportMembersMapping(xmlMembersMapping:XmlMembersMapping) : Void;
+  @:overload(function(xmlMembersMapping:XmlMembersMapping) : Void {})
+  public function ExportMembersMapping(xmlMembersMapping:XmlMembersMapping, exportEnclosingType:Bool) : Void;
 
-  @:overload(function(xmlTypeMapping:XmlTypeMapping) : Void {})
-  public function ExportTypeMapping(xmlMembersMapping:XmlMembersMapping) : dotnet.system.xml.XmlQualifiedName;
+  @:overload(function(xmlMembersMapping:XmlMembersMapping) : dotnet.system.xml.XmlQualifiedName {})
+  public function ExportTypeMapping(xmlTypeMapping:XmlTypeMapping) : Void;
 }
 

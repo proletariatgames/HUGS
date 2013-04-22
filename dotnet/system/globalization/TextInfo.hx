@@ -14,22 +14,25 @@ extern class TextInfo extends dotnet.system.Object  implements dotnet.system.ICl
 
   public function Clone() : Dynamic;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   function OnDeserialization(sender:Dynamic) : Void;
 
   public static function ReadOnly(textInfo:TextInfo) : TextInfo;
 
-  @:overload(function(str:String) : String {})
-  public function ToLower(c:dotnet.system.Char) : dotnet.system.Char;
+  @:overload(function(c:dotnet.system.Char) : dotnet.system.Char {})
+  public function ToLower(str:String) : String;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 
   public function ToTitleCase(str:String) : String;
 
-  @:overload(function(str:String) : String {})
-  public function ToUpper(c:dotnet.system.Char) : dotnet.system.Char;
+  @:overload(function(c:dotnet.system.Char) : dotnet.system.Char {})
+  public function ToUpper(str:String) : String;
 }
 

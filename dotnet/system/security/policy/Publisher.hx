@@ -10,8 +10,10 @@ extern class Publisher extends dotnet.system.Object  implements IIdentityPermiss
 
   public function new(cert:dotnet.system.security.cryptography.x509certificates.X509Certificate) : Void;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   function GetRequiredSize(verbose:Bool) : Int;
@@ -20,6 +22,7 @@ extern class Publisher extends dotnet.system.Object  implements IIdentityPermiss
 
   function OutputToBuffer(buffer:cs.NativeArray<dotnet.system.Char>, position:Int, verbose:Bool) : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

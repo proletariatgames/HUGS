@@ -3,8 +3,8 @@ package dotnet.system.threading;
 @:native("System.Threading.ThreadPool") @:final
 extern class ThreadPool extends dotnet.system.Object {
 
-  @:overload(function(osHandle:dotnet.system.runtime.interopservices.SafeHandle) : Bool {})
-  public static function BindHandle(osHandle:dotnet.system.IntPtr) : Bool;
+  @:overload(function(osHandle:dotnet.system.IntPtr) : Bool {})
+  public static function BindHandle(osHandle:dotnet.system.runtime.interopservices.SafeHandle) : Bool;
 
   public static function GetAvailableThreads(workerThreads:Int, completionPortThreads:Int) : Void;
 
@@ -12,13 +12,13 @@ extern class ThreadPool extends dotnet.system.Object {
 
   public static function GetMinThreads(workerThreads:Int, completionPortThreads:Int) : Void;
 
-  @:overload(function(callBack:WaitCallback, state:Dynamic) : Bool {})
-  public static function QueueUserWorkItem(callBack:WaitCallback) : Bool;
+  @:overload(function(callBack:WaitCallback) : Bool {})
+  public static function QueueUserWorkItem(callBack:WaitCallback, state:Dynamic) : Bool;
 
-  @:overload(function(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, timeout:dotnet.system.TimeSpan, executeOnlyOnce:Bool) : RegisteredWaitHandle {})
-  @:overload(function(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, millisecondsTimeOutInterval:UInt, executeOnlyOnce:Bool) : RegisteredWaitHandle {})
   @:overload(function(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, millisecondsTimeOutInterval:Int, executeOnlyOnce:Bool) : RegisteredWaitHandle {})
-  public static function RegisterWaitForSingleObject(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, millisecondsTimeOutInterval:dotnet.system.Int64, executeOnlyOnce:Bool) : RegisteredWaitHandle;
+  @:overload(function(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, millisecondsTimeOutInterval:dotnet.system.Int64, executeOnlyOnce:Bool) : RegisteredWaitHandle {})
+  @:overload(function(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, timeout:dotnet.system.TimeSpan, executeOnlyOnce:Bool) : RegisteredWaitHandle {})
+  public static function RegisterWaitForSingleObject(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, millisecondsTimeOutInterval:UInt, executeOnlyOnce:Bool) : RegisteredWaitHandle;
 
   public static function SetMaxThreads(workerThreads:Int, completionPortThreads:Int) : Bool;
 
@@ -28,9 +28,9 @@ extern class ThreadPool extends dotnet.system.Object {
 
   public static function UnsafeQueueUserWorkItem(callBack:WaitCallback, state:Dynamic) : Bool;
 
-  @:overload(function(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, timeout:dotnet.system.TimeSpan, executeOnlyOnce:Bool) : RegisteredWaitHandle {})
-  @:overload(function(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, millisecondsTimeOutInterval:UInt, executeOnlyOnce:Bool) : RegisteredWaitHandle {})
   @:overload(function(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, millisecondsTimeOutInterval:Int, executeOnlyOnce:Bool) : RegisteredWaitHandle {})
-  public static function UnsafeRegisterWaitForSingleObject(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, millisecondsTimeOutInterval:dotnet.system.Int64, executeOnlyOnce:Bool) : RegisteredWaitHandle;
+  @:overload(function(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, millisecondsTimeOutInterval:dotnet.system.Int64, executeOnlyOnce:Bool) : RegisteredWaitHandle {})
+  @:overload(function(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, timeout:dotnet.system.TimeSpan, executeOnlyOnce:Bool) : RegisteredWaitHandle {})
+  public static function UnsafeRegisterWaitForSingleObject(waitObject:WaitHandle, callBack:WaitOrTimerCallback, state:Dynamic, millisecondsTimeOutInterval:UInt, executeOnlyOnce:Bool) : RegisteredWaitHandle;
 }
 

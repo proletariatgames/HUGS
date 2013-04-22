@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.RaycastHit") @:final
-extern class RaycastHit {
+extern class RaycastHit extends dotnet.system.ValueType {
   public var point : Vector3;
   public var normal : Vector3;
   public var barycentricCoordinate : Vector3;

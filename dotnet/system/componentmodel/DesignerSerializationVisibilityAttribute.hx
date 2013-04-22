@@ -10,10 +10,13 @@ extern class DesignerSerializationVisibilityAttribute extends dotnet.system.Attr
 
   public function new(vis:DesignerSerializationVisibility) : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : Bool {})
   public override function IsDefaultAttribute() : Bool;
 }
 

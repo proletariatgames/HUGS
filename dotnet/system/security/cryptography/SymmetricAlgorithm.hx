@@ -14,17 +14,17 @@ extern class SymmetricAlgorithm extends dotnet.system.Object  implements dotnet.
 
   public function Clear() : Void;
 
-  @:overload(function(algName:String) : SymmetricAlgorithm {})
-  public static function Create() : SymmetricAlgorithm;
+  @:overload(function() : SymmetricAlgorithm {})
+  public static function Create(algName:String) : SymmetricAlgorithm;
 
-  @:overload(function(rgbKey:cs.NativeArray<dotnet.system.Byte>, rgbIV:cs.NativeArray<dotnet.system.Byte>) : ICryptoTransform {})
-  public function CreateDecryptor() : ICryptoTransform;
+  @:overload(function() : ICryptoTransform {})
+  public function CreateDecryptor(rgbKey:cs.NativeArray<dotnet.system.Byte>, rgbIV:cs.NativeArray<dotnet.system.Byte>) : ICryptoTransform;
 
-  @:overload(function(rgbKey:cs.NativeArray<dotnet.system.Byte>, rgbIV:cs.NativeArray<dotnet.system.Byte>) : ICryptoTransform {})
-  public function CreateEncryptor() : ICryptoTransform;
+  @:overload(function() : ICryptoTransform {})
+  public function CreateEncryptor(rgbKey:cs.NativeArray<dotnet.system.Byte>, rgbIV:cs.NativeArray<dotnet.system.Byte>) : ICryptoTransform;
 
-
-  override function Finalize() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function GenerateIV() : Void;
 

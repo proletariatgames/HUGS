@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.ControllerColliderHit") @:final
-extern class ControllerColliderHit {
+extern class ControllerColliderHit extends dotnet.system.Object {
   public var controller(default,never) : CharacterController;
   public var collider(default,never) : Collider;
   public var rigidbody(default,never) : Rigidbody;

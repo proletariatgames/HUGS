@@ -2,8 +2,6 @@ package dotnet.system.collections;
 
 @:native("System.Collections.IList")
 extern interface IList extends ICollection extends IEnumerable {
-  var IsFixedSize(default,never) : Bool;
-  var IsReadOnly(default,never) : Bool;
 
   function Add(value:Dynamic) : Int;
 

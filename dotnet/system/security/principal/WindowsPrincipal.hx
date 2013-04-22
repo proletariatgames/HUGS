@@ -6,9 +6,9 @@ extern class WindowsPrincipal extends dotnet.system.Object  implements IPrincipa
 
   public function new(ntIdentity:WindowsIdentity) : Void;
 
-  @:overload(function(sid:SecurityIdentifier) : Bool {})
-  @:overload(function(role:WindowsBuiltInRole) : Bool {})
+  @:overload(function(rid:Int) : Bool {})
   @:overload(function(role:String) : Bool {})
-  public function IsInRole(rid:Int) : Bool;
+  @:overload(function(role:WindowsBuiltInRole) : Bool {})
+  public function IsInRole(sid:SecurityIdentifier) : Bool;
 }
 

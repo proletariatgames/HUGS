@@ -11,11 +11,11 @@ extern class CspParameters extends dotnet.system.Object {
   public var KeyPassword : dotnet.system.security.SecureString;
   public var ParentWindowHandle : dotnet.system.IntPtr;
 
-  @:overload(function(providerType:Int, providerName:String, keyContainerName:String, cryptoKeySecurity:dotnet.system.security.accesscontrol.CryptoKeySecurity, parentWindowHandle:dotnet.system.IntPtr) : Void {})
-  @:overload(function(providerType:Int, providerName:String, keyContainerName:String, cryptoKeySecurity:dotnet.system.security.accesscontrol.CryptoKeySecurity, keyPassword:dotnet.system.security.SecureString) : Void {})
-  @:overload(function(dwTypeIn:Int, strProviderNameIn:String, strContainerNameIn:String) : Void {})
-  @:overload(function(dwTypeIn:Int, strProviderNameIn:String) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(dwTypeIn:Int) : Void {})
-  public function new() : Void;
+  @:overload(function(dwTypeIn:Int, strProviderNameIn:String) : Void {})
+  @:overload(function(dwTypeIn:Int, strProviderNameIn:String, strContainerNameIn:String) : Void {})
+  @:overload(function(providerType:Int, providerName:String, keyContainerName:String, cryptoKeySecurity:dotnet.system.security.accesscontrol.CryptoKeySecurity, parentWindowHandle:dotnet.system.IntPtr) : Void {})
+  public function new(providerType:Int, providerName:String, keyContainerName:String, cryptoKeySecurity:dotnet.system.security.accesscontrol.CryptoKeySecurity, keyPassword:dotnet.system.security.SecureString) : Void;
 }
 

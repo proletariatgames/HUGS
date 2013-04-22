@@ -16,28 +16,20 @@ extern class XPathNavigator extends XPathItem  implements dotnet.system.ICloneab
   public var Prefix(default,never) : String;
   public var XmlLang(default,never) : String;
   public var InnerXml : String;
-  public override var IsNode(default,never) : Bool;
   public var OuterXml : String;
   public var SchemaInfo(default,never) : dotnet.system.xml.schema.IXmlSchemaInfo;
-  public override var TypedValue(default,never) : Dynamic;
   public var UnderlyingObject(default,never) : Dynamic;
-  public override var ValueAsBoolean(default,never) : Bool;
-  public override var ValueAsDateTime(default,never) : dotnet.system.DateTime;
-  public override var ValueAsDouble(default,never) : Float;
-  public override var ValueAsInt(default,never) : Int;
-  public override var ValueAsLong(default,never) : dotnet.system.Int64;
-  public override var ValueType(default,never) : cs.system.Type;
-  public override var XmlType(default,never) : dotnet.system.xml.schema.XmlSchemaType;
 
+  @:overload(function() : dotnet.system.xml.XmlWriter {})
   @:overload(function(xmlFragments:String) : Void {})
   @:overload(function(reader:dotnet.system.xml.XmlReader) : Void {})
-  @:overload(function(nav:XPathNavigator) : Void {})
-  public function AppendChild() : dotnet.system.xml.XmlWriter;
+  public function AppendChild(nav:XPathNavigator) : Void;
 
   public function AppendChildElement(prefix:String, name:String, ns:String, value:String) : Void;
 
   public function CheckValidity(schemas:dotnet.system.xml.schema.XmlSchemaSet, handler:dotnet.system.xml.schema.ValidationEventHandler) : Bool;
 
+  @:overload(function() : Dynamic {})
   public function Clone() : XPathNavigator;
 
   public function ComparePosition(nav:XPathNavigator) : dotnet.system.xml.XmlNodeOrder;
@@ -54,10 +46,10 @@ extern class XPathNavigator extends XPathItem  implements dotnet.system.ICloneab
 
   public function DeleteSelf() : Void;
 
-  @:overload(function(xpath:String, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : Dynamic {})
-  @:overload(function(expr:XPathExpression, context:XPathNodeIterator) : Dynamic {})
   @:overload(function(xpath:String) : Dynamic {})
-  public function Evaluate(expr:XPathExpression) : Dynamic;
+  @:overload(function(expr:XPathExpression) : Dynamic {})
+  @:overload(function(expr:XPathExpression, context:XPathNodeIterator) : Dynamic {})
+  public function Evaluate(xpath:String, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : Dynamic;
 
   public function GetAttribute(localName:String, namespaceURI:String) : String;
 
@@ -65,15 +57,15 @@ extern class XPathNavigator extends XPathItem  implements dotnet.system.ICloneab
 
   public function GetNamespacesInScope(scope:dotnet.system.xml.XmlNamespaceScope) : dotnet.system.collections.generic.IDictionary<String,String>;
 
+  @:overload(function() : dotnet.system.xml.XmlWriter {})
   @:overload(function(xmlFragments:String) : Void {})
   @:overload(function(reader:dotnet.system.xml.XmlReader) : Void {})
-  @:overload(function(nav:XPathNavigator) : Void {})
-  public function InsertAfter() : dotnet.system.xml.XmlWriter;
+  public function InsertAfter(nav:XPathNavigator) : Void;
 
+  @:overload(function() : dotnet.system.xml.XmlWriter {})
   @:overload(function(xmlFragments:String) : Void {})
   @:overload(function(reader:dotnet.system.xml.XmlReader) : Void {})
-  @:overload(function(nav:XPathNavigator) : Void {})
-  public function InsertBefore() : dotnet.system.xml.XmlWriter;
+  public function InsertBefore(nav:XPathNavigator) : Void;
 
   public function InsertElementAfter(prefix:String, localName:String, namespaceURI:String, value:String) : Void;
 
@@ -94,8 +86,8 @@ extern class XPathNavigator extends XPathItem  implements dotnet.system.ICloneab
 
   public function MoveToAttribute(localName:String, namespaceURI:String) : Bool;
 
-  @:overload(function(localName:String, namespaceURI:String) : Bool {})
-  public function MoveToChild(type:XPathNodeType) : Bool;
+  @:overload(function(type:XPathNodeType) : Bool {})
+  public function MoveToChild(localName:String, namespaceURI:String) : Bool;
 
   public function MoveToFirst() : Bool;
 
@@ -103,26 +95,26 @@ extern class XPathNavigator extends XPathItem  implements dotnet.system.ICloneab
 
   public function MoveToFirstChild() : Bool;
 
-  @:overload(function(namespaceScope:XPathNamespaceScope) : Bool {})
-  public function MoveToFirstNamespace() : Bool;
+  @:overload(function() : Bool {})
+  public function MoveToFirstNamespace(namespaceScope:XPathNamespaceScope) : Bool;
 
-  @:overload(function(localName:String, namespaceURI:String, end:XPathNavigator) : Bool {})
-  @:overload(function(type:XPathNodeType, end:XPathNavigator) : Bool {})
   @:overload(function(localName:String, namespaceURI:String) : Bool {})
-  public function MoveToFollowing(type:XPathNodeType) : Bool;
+  @:overload(function(localName:String, namespaceURI:String, end:XPathNavigator) : Bool {})
+  @:overload(function(type:XPathNodeType) : Bool {})
+  public function MoveToFollowing(type:XPathNodeType, end:XPathNavigator) : Bool;
 
   public function MoveToId(id:String) : Bool;
 
   public function MoveToNamespace(name:String) : Bool;
 
+  @:overload(function() : Bool {})
   @:overload(function(localName:String, namespaceURI:String) : Bool {})
-  @:overload(function(type:XPathNodeType) : Bool {})
-  public function MoveToNext() : Bool;
+  public function MoveToNext(type:XPathNodeType) : Bool;
 
   public function MoveToNextAttribute() : Bool;
 
-  @:overload(function(namespaceScope:XPathNamespaceScope) : Bool {})
-  public function MoveToNextNamespace() : Bool;
+  @:overload(function() : Bool {})
+  public function MoveToNextNamespace(namespaceScope:XPathNamespaceScope) : Bool;
 
   public function MoveToParent() : Bool;
 
@@ -130,10 +122,10 @@ extern class XPathNavigator extends XPathItem  implements dotnet.system.ICloneab
 
   public function MoveToRoot() : Void;
 
+  @:overload(function() : dotnet.system.xml.XmlWriter {})
   @:overload(function(xmlFragments:String) : Void {})
   @:overload(function(reader:dotnet.system.xml.XmlReader) : Void {})
-  @:overload(function(nav:XPathNavigator) : Void {})
-  public function PrependChild() : dotnet.system.xml.XmlWriter;
+  public function PrependChild(nav:XPathNavigator) : Void;
 
   public function PrependChildElement(prefix:String, localName:String, namespaceURI:String, value:String) : Void;
 
@@ -145,30 +137,32 @@ extern class XPathNavigator extends XPathItem  implements dotnet.system.ICloneab
   @:overload(function(reader:dotnet.system.xml.XmlReader) : Void {})
   public function ReplaceSelf(navigator:XPathNavigator) : Void;
 
-  @:overload(function(xpath:String, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : XPathNodeIterator {})
   @:overload(function(xpath:String) : XPathNodeIterator {})
-  public function Select(expr:XPathExpression) : XPathNodeIterator;
+  @:overload(function(expr:XPathExpression) : XPathNodeIterator {})
+  public function Select(xpath:String, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : XPathNodeIterator;
 
-  @:overload(function(name:String, namespaceURI:String, matchSelf:Bool) : XPathNodeIterator {})
-  public function SelectAncestors(type:XPathNodeType, matchSelf:Bool) : XPathNodeIterator;
+  @:overload(function(type:XPathNodeType, matchSelf:Bool) : XPathNodeIterator {})
+  public function SelectAncestors(name:String, namespaceURI:String, matchSelf:Bool) : XPathNodeIterator;
 
-  @:overload(function(name:String, namespaceURI:String) : XPathNodeIterator {})
-  public function SelectChildren(type:XPathNodeType) : XPathNodeIterator;
+  @:overload(function(type:XPathNodeType) : XPathNodeIterator {})
+  public function SelectChildren(name:String, namespaceURI:String) : XPathNodeIterator;
 
-  @:overload(function(name:String, namespaceURI:String, matchSelf:Bool) : XPathNodeIterator {})
-  public function SelectDescendants(type:XPathNodeType, matchSelf:Bool) : XPathNodeIterator;
+  @:overload(function(type:XPathNodeType, matchSelf:Bool) : XPathNodeIterator {})
+  public function SelectDescendants(name:String, namespaceURI:String, matchSelf:Bool) : XPathNodeIterator;
 
-  @:overload(function(xpath:String, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : XPathNavigator {})
   @:overload(function(xpath:String) : XPathNavigator {})
+  @:overload(function(xpath:String, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : XPathNavigator {})
   public function SelectSingleNode(expression:XPathExpression) : XPathNavigator;
 
   public function SetTypedValue(value:Dynamic) : Void;
 
   public function SetValue(value:String) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 
-  public override function ValueAs(type:cs.system.Type, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : Dynamic;
+  @:overload(function(type:cs.system.Type, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : Dynamic {})
+  public override function ValueAs(type:cs.system.Type) : Dynamic;
 
   public function WriteSubtree(writer:dotnet.system.xml.XmlWriter) : Void;
 }

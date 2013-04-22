@@ -29,8 +29,8 @@ extern class LinkedList<T> extends dotnet.system.Object  implements dotnet.syste
   @:overload(function(node:LinkedListNode<T>, value:T) : LinkedListNode<T> {})
   public function AddBefore(node:LinkedListNode<T>, newNode:LinkedListNode<T>) : Void;
 
-  @:overload(function(value:T) : LinkedListNode<T> {})
-  public function AddFirst(node:LinkedListNode<T>) : Void;
+  @:overload(function(node:LinkedListNode<T>) : Void {})
+  public function AddFirst(value:T) : LinkedListNode<T>;
 
   @:overload(function(value:T) : LinkedListNode<T> {})
   public function AddLast(node:LinkedListNode<T>) : Void;
@@ -39,15 +39,18 @@ extern class LinkedList<T> extends dotnet.system.Object  implements dotnet.syste
 
   public function Contains(value:T) : Bool;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<T>, index:Int) : Void;
 
-  @:overload(function(collection:IEnumerable<T>) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(collection:IEnumerable<T>) : Void;
 
   public function Find(value:T) : LinkedListNode<T>;
 
   public function FindLast(value:T) : LinkedListNode<T>;
 
+  @:overload(function() : IEnumerator<T> {})
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : LinkedList_Enumerator<T>;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;

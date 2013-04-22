@@ -6,10 +6,14 @@ extern class BitVector32_Section extends dotnet.system.ValueType {
   public var Offset(default,never) : Int;
 
   @:overload(function(obj:BitVector32_Section) : Bool {})
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  @:overload(function(obj:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 
@@ -27,10 +31,13 @@ extern class BitVector32 extends dotnet.system.ValueType {
   @:overload(function(source:BitVector32) : Void {})
   public function new(init:Int) : Void;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 
@@ -38,11 +45,11 @@ extern class BitVector32 extends dotnet.system.ValueType {
 @:native("System.Collections.Specialized.BitVector32") @:final
 extern class BitVector32_Static {
 
-  @:overload(function(prev:Int) : Int {})
-  public static function CreateMask() : Int;
+  @:overload(function() : Int {})
+  public static function CreateMask(prev:Int) : Int;
 
-  @:overload(function(maxValue:Int, previous:BitVector32_Section) : BitVector32_Section {})
-  public static function CreateSection(maxValue:Int) : BitVector32_Section;
+  @:overload(function(maxValue:Int) : BitVector32_Section {})
+  public static function CreateSection(maxValue:Int, previous:BitVector32_Section) : BitVector32_Section;
 
   public static function ToString(value:BitVector32) : String;
 }

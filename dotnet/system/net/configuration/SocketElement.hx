@@ -6,7 +6,5 @@ extern class SocketElement extends dotnet.system.configuration.ConfigurationElem
   public var AlwaysUseCompletionPortsForConnect : Bool;
 
   public function new() : Void;
-
-  override function PostDeserialize() : Void;
 }
 

@@ -6,7 +6,7 @@ extern class ConfigurationFileMap extends dotnet.system.Object  implements dotne
 
   public function Clone() : Dynamic;
 
-  @:overload(function(machineConfigFilename:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(machineConfigFilename:String) : Void;
 }
 

@@ -4,7 +4,7 @@ package dotnet.system.runtime.interopservices;
 extern class IDispatchImplAttribute extends dotnet.system.Attribute {
   public var Value(default,never) : IDispatchImplType;
 
-  @:overload(function(implType:Int) : Void {})
-  public function new(implType:IDispatchImplType) : Void;
+  @:overload(function(implType:IDispatchImplType) : Void {})
+  public function new(implType:Int) : Void;
 }
 

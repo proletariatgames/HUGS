@@ -2,11 +2,6 @@ package dotnet.system.configuration.internal;
 
 @:native("System.Configuration.Internal.IInternalConfigHost")
 extern interface IInternalConfigHost {
-  var IsRemote(default,never) : Bool;
-  var SupportsChangeNotifications(default,never) : Bool;
-  var SupportsLocation(default,never) : Bool;
-  var SupportsPath(default,never) : Bool;
-  var SupportsRefresh(default,never) : Bool;
 
   function CreateConfigurationContext(configPath:String, locationSubPath:String) : Dynamic;
 
@@ -56,11 +51,11 @@ extern interface IInternalConfigHost {
 
   function IsTrustedConfigPath(configPath:String) : Bool;
 
-  @:overload(function(streamName:String, assertPermissions:Bool) : dotnet.system.io.Stream {})
-  function OpenStreamForRead(streamName:String) : dotnet.system.io.Stream;
+  @:overload(function(streamName:String) : dotnet.system.io.Stream {})
+  function OpenStreamForRead(streamName:String, assertPermissions:Bool) : dotnet.system.io.Stream;
 
-  @:overload(function(streamName:String, templateStreamName:String, writeContext:Dynamic, assertPermissions:Bool) : dotnet.system.io.Stream {})
-  function OpenStreamForWrite(streamName:String, templateStreamName:String, writeContext:Dynamic) : dotnet.system.io.Stream;
+  @:overload(function(streamName:String, templateStreamName:String, writeContext:Dynamic) : dotnet.system.io.Stream {})
+  function OpenStreamForWrite(streamName:String, templateStreamName:String, writeContext:Dynamic, assertPermissions:Bool) : dotnet.system.io.Stream;
 
   function PrefetchAll(configPath:String, streamName:String) : Bool;
 
@@ -74,7 +69,7 @@ extern interface IInternalConfigHost {
 
   function VerifyDefinitionAllowed(configPath:String, allowDefinition:dotnet.system.configuration.ConfigurationAllowDefinition, allowExeDefinition:dotnet.system.configuration.ConfigurationAllowExeDefinition, errorInfo:IConfigErrorInfo) : Void;
 
-  @:overload(function(streamName:String, success:Bool, writeContext:Dynamic, assertPermissions:Bool) : Void {})
-  function WriteCompleted(streamName:String, success:Bool, writeContext:Dynamic) : Void;
+  @:overload(function(streamName:String, success:Bool, writeContext:Dynamic) : Void {})
+  function WriteCompleted(streamName:String, success:Bool, writeContext:Dynamic, assertPermissions:Bool) : Void;
 }
 

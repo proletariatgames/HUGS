@@ -53,10 +53,10 @@ extern class Camera extends Behaviour {
 
   public function RenderDontRestore() : Void;
 
-  @:overload(function(cubemap:RenderTexture, faceMask:Int) : Bool {})
+  @:overload(function(cubemap:Cubemap) : Bool {})
   @:overload(function(cubemap:Cubemap, faceMask:Int) : Bool {})
   @:overload(function(cubemap:RenderTexture) : Bool {})
-  public function RenderToCubemap(cubemap:Cubemap) : Bool;
+  public function RenderToCubemap(cubemap:RenderTexture, faceMask:Int) : Bool;
 
   public function RenderWithShader(shader:Shader, replacementTag:String) : Void;
 

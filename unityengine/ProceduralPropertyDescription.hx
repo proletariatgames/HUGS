@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.ProceduralPropertyDescription") @:final
-extern class ProceduralPropertyDescription {
+extern class ProceduralPropertyDescription extends dotnet.system.Object {
   public var name : String;
   public var label : String;
   public var group : String;

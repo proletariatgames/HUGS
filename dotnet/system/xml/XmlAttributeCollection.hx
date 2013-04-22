@@ -5,6 +5,7 @@ extern class XmlAttributeCollection extends XmlNamedNodeMap  implements dotnet.s
 
   public function Append(node:XmlAttribute) : XmlAttribute;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<XmlAttribute>, index:Int) : Void;
 
   public function InsertAfter(newNode:XmlAttribute, refNode:XmlAttribute) : XmlAttribute;
@@ -19,6 +20,7 @@ extern class XmlAttributeCollection extends XmlNamedNodeMap  implements dotnet.s
 
   public function RemoveAt(i:Int) : XmlAttribute;
 
+  @:overload(function(node:XmlNode) : XmlNode {})
   public override function SetNamedItem(node:XmlNode) : XmlNode;
 }
 

@@ -9,11 +9,9 @@ extern class AsnEncodedData extends dotnet.system.Object {
 
   @:overload(function(oid:String, rawData:cs.NativeArray<dotnet.system.Byte>) : Void {})
   @:overload(function(oid:Oid, rawData:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  public function new(asnEncodedData:AsnEncodedData) : Void;
+  @:overload(function(asnEncodedData:AsnEncodedData) : Void {})
+  public function new(rawData:cs.NativeArray<dotnet.system.Byte>) : Void;
 
   public function Format(multiLine:Bool) : String;
-
-  override function ToString(multiLine:Bool) : String;
 }
 

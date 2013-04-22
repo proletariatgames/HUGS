@@ -16,8 +16,8 @@ extern class ParameterInfo extends dotnet.system.Object  implements ICustomAttri
   public var MetadataToken(default,never) : Int;
   public var RawDefaultValue(default,never) : Dynamic;
 
-  @:overload(function(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
-  public function GetCustomAttributes(inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
+  @:overload(function(inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
+  public function GetCustomAttributes(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
 
   function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
 
@@ -33,6 +33,7 @@ extern class ParameterInfo extends dotnet.system.Object  implements ICustomAttri
 
   public function IsDefined(attributeType:cs.system.Type, inherit:Bool) : Bool;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

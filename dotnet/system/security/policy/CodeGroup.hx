@@ -15,17 +15,16 @@ extern class CodeGroup extends dotnet.system.Object {
 
   public function Copy() : CodeGroup;
 
-  function CreateXml(element:dotnet.system.security.SecurityElement, level:PolicyLevel) : Void;
-
+  @:overload(function(o:Dynamic) : Bool {})
   @:overload(function(cg:CodeGroup, compareChildren:Bool) : Bool {})
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(obj:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
-  @:overload(function(e:dotnet.system.security.SecurityElement, level:PolicyLevel) : Void {})
-  public function FromXml(e:dotnet.system.security.SecurityElement) : Void;
+  @:overload(function(e:dotnet.system.security.SecurityElement) : Void {})
+  public function FromXml(e:dotnet.system.security.SecurityElement, level:PolicyLevel) : Void;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
-
-  function ParseXml(e:dotnet.system.security.SecurityElement, level:PolicyLevel) : Void;
 
   public function RemoveChild(group:CodeGroup) : Void;
 
@@ -33,7 +32,7 @@ extern class CodeGroup extends dotnet.system.Object {
 
   public function ResolveMatchingCodeGroups(evidence:Evidence) : CodeGroup;
 
-  @:overload(function(level:PolicyLevel) : dotnet.system.security.SecurityElement {})
-  public function ToXml() : dotnet.system.security.SecurityElement;
+  @:overload(function() : dotnet.system.security.SecurityElement {})
+  public function ToXml(level:PolicyLevel) : dotnet.system.security.SecurityElement;
 }
 

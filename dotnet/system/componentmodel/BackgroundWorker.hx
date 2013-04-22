@@ -14,16 +14,10 @@ extern class BackgroundWorker extends Component {
 
   public function new() : Void;
 
-  function OnDoWork(e:DoWorkEventArgs) : Void;
+  @:overload(function(percentProgress:Int) : Void {})
+  public function ReportProgress(percentProgress:Int, userState:Dynamic) : Void;
 
-  function OnProgressChanged(e:ProgressChangedEventArgs) : Void;
-
-  function OnRunWorkerCompleted(e:RunWorkerCompletedEventArgs) : Void;
-
-  @:overload(function(percentProgress:Int, userState:Dynamic) : Void {})
-  public function ReportProgress(percentProgress:Int) : Void;
-
-  @:overload(function(argument:Dynamic) : Void {})
-  public function RunWorkerAsync() : Void;
+  @:overload(function() : Void {})
+  public function RunWorkerAsync(argument:Dynamic) : Void;
 }
 

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.iPhoneTouch") @:final
-extern class iPhoneTouch {
+extern class iPhoneTouch extends dotnet.system.ValueType {
   public var fingerId(default,never) : Int;
   public var position(default,never) : Vector2;
   public var deltaPosition(default,never) : Vector2;

@@ -16,8 +16,8 @@ extern class AssemblyName extends dotnet.system.Object  implements dotnet.system
 
   public function Clone() : Dynamic;
 
-  @:overload(function(assemblyName:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(assemblyName:String) : Void;
 
   public static function GetAssemblyName(assemblyFile:String) : AssemblyName;
 
@@ -43,6 +43,7 @@ extern class AssemblyName extends dotnet.system.Object  implements dotnet.system
 
   public function SetPublicKeyToken(publicKeyToken:cs.NativeArray<dotnet.system.Byte>) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

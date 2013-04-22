@@ -5,13 +5,14 @@ extern class SoapBase64Binary extends dotnet.system.Object  implements ISoapXsd 
   public var Value : cs.NativeArray<dotnet.system.Byte>;
   public static var XsdType(default,never) : String;
 
-  @:overload(function(value:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(value:cs.NativeArray<dotnet.system.Byte>) : Void;
 
   public function GetXsdType() : String;
 
   public static function Parse(value:String) : SoapBase64Binary;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

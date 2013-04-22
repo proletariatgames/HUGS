@@ -9,8 +9,8 @@ extern class PolicyLevel extends dotnet.system.Object {
   public var StoreLocation(default,never) : String;
   public var Type(default,never) : dotnet.system.security.PolicyLevelType;
 
-  @:overload(function(snMC:StrongNameMembershipCondition) : Void {})
-  public function AddFullTrustAssembly(sn:StrongName) : Void;
+  @:overload(function(sn:StrongName) : Void {})
+  public function AddFullTrustAssembly(snMC:StrongNameMembershipCondition) : Void;
 
   public function AddNamedPermissionSet(permSet:dotnet.system.security.NamedPermissionSet) : Void;
 
@@ -24,8 +24,8 @@ extern class PolicyLevel extends dotnet.system.Object {
 
   public function Recover() : Void;
 
-  @:overload(function(snMC:StrongNameMembershipCondition) : Void {})
-  public function RemoveFullTrustAssembly(sn:StrongName) : Void;
+  @:overload(function(sn:StrongName) : Void {})
+  public function RemoveFullTrustAssembly(snMC:StrongNameMembershipCondition) : Void;
 
   @:overload(function(permSet:dotnet.system.security.NamedPermissionSet) : dotnet.system.security.NamedPermissionSet {})
   public function RemoveNamedPermissionSet(name:String) : dotnet.system.security.NamedPermissionSet;

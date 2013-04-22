@@ -11,12 +11,12 @@ extern class TypeDescriptionProvider extends dotnet.system.Object {
 
   public function GetFullComponentName(component:Dynamic) : String;
 
-  @:overload(function(objectType:cs.system.Type, instance:Dynamic) : cs.system.Type {})
+  @:overload(function(instance:Dynamic) : cs.system.Type {})
   @:overload(function(objectType:cs.system.Type) : cs.system.Type {})
-  public function GetReflectionType(instance:Dynamic) : cs.system.Type;
+  public function GetReflectionType(objectType:cs.system.Type, instance:Dynamic) : cs.system.Type;
 
-  @:overload(function(objectType:cs.system.Type, instance:Dynamic) : ICustomTypeDescriptor {})
+  @:overload(function(instance:Dynamic) : ICustomTypeDescriptor {})
   @:overload(function(objectType:cs.system.Type) : ICustomTypeDescriptor {})
-  public function GetTypeDescriptor(instance:Dynamic) : ICustomTypeDescriptor;
+  public function GetTypeDescriptor(objectType:cs.system.Type, instance:Dynamic) : ICustomTypeDescriptor;
 }
 

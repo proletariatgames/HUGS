@@ -6,12 +6,16 @@ extern class UrlAttribute extends dotnet.system.runtime.remoting.contexts.Contex
 
   public function new(callsiteURL:String) : Void;
 
+  @:overload(function(o:Dynamic) : Bool {})
   public override function Equals(o:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function(ctorMsg:IConstructionCallMessage) : Void {})
   public override function GetPropertiesForNewContext(ctorMsg:IConstructionCallMessage) : Void;
 
-  public override function IsContextOK(ctx:dotnet.system.runtime.remoting.contexts.Context, msg:IConstructionCallMessage) : Bool;
+  @:overload(function(ctx:dotnet.system.runtime.remoting.contexts.Context, msg:IConstructionCallMessage) : Bool {})
+  public override function IsContextOK(ctx:dotnet.system.runtime.remoting.contexts.Context, ctorMsg:IConstructionCallMessage) : Bool;
 }
 

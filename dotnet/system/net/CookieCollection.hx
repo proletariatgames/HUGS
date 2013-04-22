@@ -7,8 +7,8 @@ extern class CookieCollection extends dotnet.system.Object  implements dotnet.sy
   public var SyncRoot(default,never) : Dynamic;
   public var IsReadOnly(default,never) : Bool;
 
-  @:overload(function(cookies:CookieCollection) : Void {})
-  public function Add(cookie:Cookie) : Void;
+  @:overload(function(cookie:Cookie) : Void {})
+  public function Add(cookies:CookieCollection) : Void;
 
   @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<Cookie>, index:Int) : Void;

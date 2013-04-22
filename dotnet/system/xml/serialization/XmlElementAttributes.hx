@@ -3,18 +3,24 @@ package dotnet.system.xml.serialization;
 @:native("System.Xml.Serialization.XmlElementAttributes")
 extern class XmlElementAttributes extends dotnet.system.collections.CollectionBase {
 
-  public function Add(attribute:XmlElementAttribute) : Int;
+  @:overload(function(attribute:XmlElementAttribute) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
-  public function Contains(attribute:XmlElementAttribute) : Bool;
+  @:overload(function(attribute:XmlElementAttribute) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<XmlElementAttribute>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<XmlElementAttribute>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
   public function new() : Void;
 
-  public function IndexOf(attribute:XmlElementAttribute) : Int;
+  @:overload(function(attribute:XmlElementAttribute) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, attribute:XmlElementAttribute) : Void;
+  @:overload(function(index:Int, attribute:XmlElementAttribute) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  public function Remove(attribute:XmlElementAttribute) : Void;
+  @:overload(function(attribute:XmlElementAttribute) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

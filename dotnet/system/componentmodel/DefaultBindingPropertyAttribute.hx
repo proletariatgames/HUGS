@@ -5,11 +5,13 @@ extern class DefaultBindingPropertyAttribute extends dotnet.system.Attribute {
   public static var Default : DefaultBindingPropertyAttribute;
   public var Name(default,never) : String;
 
-  @:overload(function(name:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(name:String) : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

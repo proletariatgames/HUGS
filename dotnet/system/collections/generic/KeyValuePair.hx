@@ -7,6 +7,7 @@ extern class KeyValuePair<TKey,TValue> extends dotnet.system.ValueType {
 
   public function new(key:TKey, value:TValue) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

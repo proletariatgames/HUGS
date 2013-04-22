@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Physics")
-extern class Physics {
+extern class Physics extends dotnet.system.Object {
   public static var kIgnoreRaycastLayer : Int;
   public static var kDefaultRaycastLayers : Int;
   public static var kAllLayers : Int;
@@ -15,12 +15,12 @@ extern class Physics {
   public static var solverIterationCount : Int;
   public static var penetrationPenaltyForce : Float;
 
-  @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, hitInfo:RaycastHit, distance:Float, layerMask:Int) : Bool {})
-  @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, hitInfo:RaycastHit, distance:Float) : Bool {})
-  @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, distance:Float, layerMask:Int) : Bool {})
-  @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, hitInfo:RaycastHit) : Bool {})
   @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, distance:Float) : Bool {})
-  public static function CapsuleCast(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3) : Bool;
+  @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3) : Bool {})
+  @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, distance:Float, layerMask:Int) : Bool {})
+  @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, hitInfo:RaycastHit, distance:Float) : Bool {})
+  @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, hitInfo:RaycastHit) : Bool {})
+  public static function CapsuleCast(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, hitInfo:RaycastHit, distance:Float, layerMask:Int) : Bool;
 
   @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, distance:Float, layermask:Int) : cs.NativeArray<RaycastHit> {})
   @:overload(function(point1:Vector3, point2:Vector3, radius:Float, direction:Vector3, distance:Float) : cs.NativeArray<RaycastHit> {})
@@ -42,49 +42,49 @@ extern class Physics {
   @:overload(function(layer1:Int, layer2:Int, ignore:Bool) : Void {})
   public static function IgnoreLayerCollision(layer1:Int, layer2:Int) : Void;
 
-  @:overload(function(start:Vector3, end:Vector3, hitInfo:RaycastHit, layerMask:Int) : Bool {})
+  @:overload(function(start:Vector3, end:Vector3) : Bool {})
   @:overload(function(start:Vector3, end:Vector3, layerMask:Int) : Bool {})
   @:overload(function(start:Vector3, end:Vector3, hitInfo:RaycastHit) : Bool {})
-  public static function Linecast(start:Vector3, end:Vector3) : Bool;
+  public static function Linecast(start:Vector3, end:Vector3, hitInfo:RaycastHit, layerMask:Int) : Bool;
 
   @:overload(function(position:Vector3, radius:Float, layerMask:Int) : cs.NativeArray<Collider> {})
   public static function OverlapSphere(position:Vector3, radius:Float) : cs.NativeArray<Collider>;
 
-  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:RaycastHit, distance:Float, layerMask:Int) : Bool {})
-  @:overload(function(ray:Ray, hitInfo:RaycastHit, distance:Float, layerMask:Int) : Bool {})
-  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:RaycastHit, distance:Float) : Bool {})
-  @:overload(function(origin:Vector3, direction:Vector3, distance:Float, layerMask:Int) : Bool {})
-  @:overload(function(ray:Ray, hitInfo:RaycastHit, distance:Float) : Bool {})
-  @:overload(function(ray:Ray, distance:Float, layerMask:Int) : Bool {})
-  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:RaycastHit) : Bool {})
   @:overload(function(origin:Vector3, direction:Vector3, distance:Float) : Bool {})
-  @:overload(function(ray:Ray, hitInfo:RaycastHit) : Bool {})
-  @:overload(function(ray:Ray, distance:Float) : Bool {})
   @:overload(function(origin:Vector3, direction:Vector3) : Bool {})
-  public static function Raycast(ray:Ray) : Bool;
+  @:overload(function(origin:Vector3, direction:Vector3, distance:Float, layerMask:Int) : Bool {})
+  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:RaycastHit, distance:Float) : Bool {})
+  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:RaycastHit) : Bool {})
+  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:RaycastHit, distance:Float, layerMask:Int) : Bool {})
+  @:overload(function(ray:Ray, distance:Float) : Bool {})
+  @:overload(function(ray:Ray) : Bool {})
+  @:overload(function(ray:Ray, distance:Float, layerMask:Int) : Bool {})
+  @:overload(function(ray:Ray, hitInfo:RaycastHit, distance:Float) : Bool {})
+  @:overload(function(ray:Ray, hitInfo:RaycastHit) : Bool {})
+  public static function Raycast(ray:Ray, hitInfo:RaycastHit, distance:Float, layerMask:Int) : Bool;
 
-  @:overload(function(origin:Vector3, direction:Vector3, distance:Float, layermask:Int) : cs.NativeArray<RaycastHit> {})
-  @:overload(function(ray:Ray, distance:Float, layerMask:Int) : cs.NativeArray<RaycastHit> {})
-  @:overload(function(origin:Vector3, direction:Vector3, distance:Float) : cs.NativeArray<RaycastHit> {})
   @:overload(function(ray:Ray, distance:Float) : cs.NativeArray<RaycastHit> {})
-  @:overload(function(origin:Vector3, direction:Vector3) : cs.NativeArray<RaycastHit> {})
-  public static function RaycastAll(ray:Ray) : cs.NativeArray<RaycastHit>;
+  @:overload(function(ray:Ray) : cs.NativeArray<RaycastHit> {})
+  @:overload(function(ray:Ray, distance:Float, layerMask:Int) : cs.NativeArray<RaycastHit> {})
+  @:overload(function(origin:Vector3, direction:Vector3, distance:Float, layermask:Int) : cs.NativeArray<RaycastHit> {})
+  @:overload(function(origin:Vector3, direction:Vector3, distance:Float) : cs.NativeArray<RaycastHit> {})
+  public static function RaycastAll(origin:Vector3, direction:Vector3) : cs.NativeArray<RaycastHit>;
 
-  @:overload(function(origin:Vector3, radius:Float, direction:Vector3, hitInfo:RaycastHit, distance:Float, layerMask:Int) : Bool {})
-  @:overload(function(ray:Ray, radius:Float, hitInfo:RaycastHit, distance:Float, layerMask:Int) : Bool {})
   @:overload(function(origin:Vector3, radius:Float, direction:Vector3, hitInfo:RaycastHit, distance:Float) : Bool {})
-  @:overload(function(ray:Ray, radius:Float, hitInfo:RaycastHit, distance:Float) : Bool {})
-  @:overload(function(ray:Ray, radius:Float, distance:Float, layerMask:Int) : Bool {})
   @:overload(function(origin:Vector3, radius:Float, direction:Vector3, hitInfo:RaycastHit) : Bool {})
-  @:overload(function(ray:Ray, radius:Float, hitInfo:RaycastHit) : Bool {})
+  @:overload(function(origin:Vector3, radius:Float, direction:Vector3, hitInfo:RaycastHit, distance:Float, layerMask:Int) : Bool {})
   @:overload(function(ray:Ray, radius:Float, distance:Float) : Bool {})
-  public static function SphereCast(ray:Ray, radius:Float) : Bool;
+  @:overload(function(ray:Ray, radius:Float) : Bool {})
+  @:overload(function(ray:Ray, radius:Float, distance:Float, layerMask:Int) : Bool {})
+  @:overload(function(ray:Ray, radius:Float, hitInfo:RaycastHit, distance:Float) : Bool {})
+  @:overload(function(ray:Ray, radius:Float, hitInfo:RaycastHit) : Bool {})
+  public static function SphereCast(ray:Ray, radius:Float, hitInfo:RaycastHit, distance:Float, layerMask:Int) : Bool;
 
-  @:overload(function(origin:Vector3, radius:Float, direction:Vector3, distance:Float, layerMask:Int) : cs.NativeArray<RaycastHit> {})
-  @:overload(function(ray:Ray, radius:Float, distance:Float, layerMask:Int) : cs.NativeArray<RaycastHit> {})
   @:overload(function(origin:Vector3, radius:Float, direction:Vector3, distance:Float) : cs.NativeArray<RaycastHit> {})
-  @:overload(function(ray:Ray, radius:Float, distance:Float) : cs.NativeArray<RaycastHit> {})
   @:overload(function(origin:Vector3, radius:Float, direction:Vector3) : cs.NativeArray<RaycastHit> {})
-  public static function SphereCastAll(ray:Ray, radius:Float) : cs.NativeArray<RaycastHit>;
+  @:overload(function(origin:Vector3, radius:Float, direction:Vector3, distance:Float, layerMask:Int) : cs.NativeArray<RaycastHit> {})
+  @:overload(function(ray:Ray, radius:Float, distance:Float) : cs.NativeArray<RaycastHit> {})
+  @:overload(function(ray:Ray, radius:Float) : cs.NativeArray<RaycastHit> {})
+  public static function SphereCastAll(ray:Ray, radius:Float, distance:Float, layerMask:Int) : cs.NativeArray<RaycastHit>;
 }
 

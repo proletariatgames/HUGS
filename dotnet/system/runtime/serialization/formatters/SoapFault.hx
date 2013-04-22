@@ -7,8 +7,8 @@ extern class SoapFault extends dotnet.system.Object  implements dotnet.system.ru
   public var FaultCode : String;
   public var FaultString : String;
 
-  @:overload(function(faultCode:String, faultString:String, faultActor:String, serverFault:ServerFault) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(faultCode:String, faultString:String, faultActor:String, serverFault:ServerFault) : Void;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.GradientColorKey") @:final
-extern class GradientColorKey {
+extern class GradientColorKey extends dotnet.system.ValueType {
   public var color : Color;
   public var time : Float;
 

@@ -7,10 +7,13 @@ extern class SortKey extends dotnet.system.Object {
 
   public static function Compare(sortkey1:SortKey, sortkey2:SortKey) : Int;
 
-  public override function Equals(value:Dynamic) : Bool;
+  @:overload(function(value:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

@@ -8,40 +8,18 @@ extern class ConfigurationElementCollection extends ConfigurationElement  implem
   public var IsSynchronized(default,never) : Bool;
   public var SyncRoot(default,never) : Dynamic;
 
-
+  @:overload(function(arr:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<ConfigurationElement>, index:Int) : Void;
 
-
+  @:overload(function(compareTo:Dynamic) : Bool {})
   public override function Equals(compareTo:Dynamic) : Bool;
-
-  function GetElementKey(element:ConfigurationElement) : Dynamic;
 
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
-  override function HasValues() : Bool;
-
-  override function InitFromProperty(propertyInfo:PropertyInformation) : Void;
-
-  function IsElementName(elementName:String) : Bool;
-
-  function IsElementRemovable(element:ConfigurationElement) : Bool;
-
-  override function IsModified() : Bool;
-
+  @:overload(function() : Bool {})
   public override function IsReadOnly() : Bool;
-
-  override function OnDeserializeUnrecognizedElement(elementName:String, reader:dotnet.system.xml.XmlReader) : Bool;
-
-  override function Reset(parentElement:ConfigurationElement) : Void;
-
-  override function ResetModified() : Void;
-
-  override function SerializeElement(writer:dotnet.system.xml.XmlWriter, serializeCollectionKey:Bool) : Bool;
-
-  override function SetReadOnly() : Void;
-
-  override function Unmerge(sourceElement:ConfigurationElement, parentElement:ConfigurationElement, updateMode:ConfigurationSaveMode) : Void;
 }
 

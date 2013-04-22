@@ -1,7 +1,7 @@
 package unityengine.socialplatforms.impl;
 
 @:native("UnityEngine.SocialPlatforms.Impl.Leaderboard")
-extern class Leaderboard implements dotnet.unityengine.socialplatforms.ILeaderboard {
+extern class Leaderboard extends dotnet.system.Object  implements dotnet.unityengine.socialplatforms.ILeaderboard {
   public var loading(default,never) : Bool;
   public var id : String;
   public var userScope : dotnet.unityengine.socialplatforms.UserScope;
@@ -28,6 +28,7 @@ extern class Leaderboard implements dotnet.unityengine.socialplatforms.ILeaderbo
 
   public function SetUserFilter(userIDs:cs.NativeArray<String>) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

@@ -13,8 +13,8 @@ extern interface IEventBindingService {
 
   function GetEventProperty(e:dotnet.system.componentmodel.EventDescriptor) : dotnet.system.componentmodel.PropertyDescriptor;
 
-  @:overload(function(component:dotnet.system.componentmodel.IComponent, e:dotnet.system.componentmodel.EventDescriptor) : Bool {})
+  @:overload(function() : Bool {})
   @:overload(function(lineNumber:Int) : Bool {})
-  function ShowCode() : Bool;
+  function ShowCode(component:dotnet.system.componentmodel.IComponent, e:dotnet.system.componentmodel.EventDescriptor) : Bool;
 }
 

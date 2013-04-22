@@ -4,7 +4,7 @@ package dotnet.system.net.configuration;
 extern class AuthenticationModuleElement extends dotnet.system.configuration.ConfigurationElement {
   public var Type : String;
 
-  @:overload(function(typeName:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(typeName:String) : Void;
 }
 

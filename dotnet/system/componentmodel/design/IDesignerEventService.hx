@@ -6,7 +6,5 @@ extern interface IDesignerEventService {
   public var DesignerCreated(default,null) : dotnet.system.NativeEvent<DesignerEventArgs>;
   public var DesignerDisposed(default,null) : dotnet.system.NativeEvent<DesignerEventArgs>;
   public var SelectionChanged(default,null) : dotnet.system.NativeEvent<dotnet.system.EventArgs>;
-  var ActiveDesigner(default,never) : IDesignerHost;
-  var Designers(default,never) : DesignerCollection;
 }
 

@@ -4,7 +4,6 @@ package dotnet.system.configuration.internal;
 extern interface IInternalConfigRoot {
   public var ConfigChanged(default,null) : dotnet.system.NativeEvent<InternalConfigEventArgs>;
   public var ConfigRemoved(default,null) : dotnet.system.NativeEvent<InternalConfigEventArgs>;
-  var IsDesignTime(default,never) : Bool;
 
   function GetConfigRecord(configPath:String) : IInternalConfigRecord;
 

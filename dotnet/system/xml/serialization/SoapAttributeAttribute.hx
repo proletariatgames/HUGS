@@ -6,7 +6,7 @@ extern class SoapAttributeAttribute extends dotnet.system.Attribute {
   public var DataType : String;
   public var Namespace : String;
 
-  @:overload(function(attrName:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(attrName:String) : Void;
 }
 

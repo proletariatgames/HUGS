@@ -10,11 +10,7 @@ extern class DesignerTransaction extends dotnet.system.Object  implements dotnet
 
   public function Commit() : Void;
 
-
-  override function Finalize() : Void;
-
-  function OnCancel() : Void;
-
-  function OnCommit() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 }
 

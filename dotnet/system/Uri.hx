@@ -35,26 +35,21 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
   public var IsAbsoluteUri(default,never) : Bool;
   public var OriginalString(default,never) : String;
 
-  function Canonicalize() : Void;
-
   public static function CheckHostName(name:String) : UriHostNameType;
 
   public static function CheckSchemeName(schemeName:String) : Bool;
 
-  function CheckSecurity() : Void;
-
   public static function Compare(uri1:Uri, uri2:Uri, partsToCompare:UriComponents, compareFormat:UriFormat, comparisonType:StringComparison) : Int;
 
-  @:overload(function(baseUri:Uri, relativeUri:String, dontEscape:Bool) : Void {})
+  @:overload(function(uriString:String) : Void {})
   @:overload(function(uriString:String, uriKind:UriKind) : Void {})
-  @:overload(function(uriString:String, dontEscape:Bool) : Void {})
   @:overload(function(baseUri:Uri, relativeUri:Uri) : Void {})
+  @:overload(function(uriString:String, dontEscape:Bool) : Void {})
   @:overload(function(baseUri:Uri, relativeUri:String) : Void {})
-  public function new(uriString:String) : Void;
+  public function new(baseUri:Uri, relativeUri:String, dontEscape:Bool) : Void;
 
-  public override function Equals(comparant:Dynamic) : Bool;
-
-  function Escape() : Void;
+  @:overload(function(comparant:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
   public static function EscapeDataString(stringToEscape:String) : String;
 
@@ -64,25 +59,23 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
 
   public function GetComponents(components:UriComponents, format:UriFormat) : String;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetLeftPart(part:UriPartial) : String;
 
+  @:overload(function(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void {})
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   public static function HexEscape(character:Char) : String;
 
   public static function HexUnescape(pattern:String, index:Int) : Char;
 
-  function IsBadFileSystemCharacter(ch:Char) : Bool;
-
   public function IsBaseOf(uri:Uri) : Bool;
 
   public static function IsHexDigit(digit:Char) : Bool;
 
   public static function IsHexEncoding(pattern:String, index:Int) : Bool;
-
-  function IsReservedCharacter(ch:Char) : Bool;
 
   public function IsWellFormedOriginalString() : Bool;
 
@@ -92,15 +85,12 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
 
   public function MakeRelativeUri(uri:Uri) : Uri;
 
-  function Parse() : Void;
-
+  @:overload(function() : String {})
   public override function ToString() : String;
 
   @:overload(function(uriString:String, uriKind:UriKind, result:Uri) : Bool {})
-  @:overload(function(baseUri:Uri, relativeUri:Uri, result:Uri) : Bool {})
-  public static function TryCreate(baseUri:Uri, relativeUri:String, result:Uri) : Bool;
-
-  function Unescape(str:String) : String;
+  @:overload(function(baseUri:Uri, relativeUri:String, result:Uri) : Bool {})
+  public static function TryCreate(baseUri:Uri, relativeUri:Uri, result:Uri) : Bool;
 
   public static function UnescapeDataString(stringToUnescape:String) : String;
 }

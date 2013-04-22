@@ -3,23 +3,29 @@ package dotnet.system.codedom;
 @:native("System.CodeDom.CodeTypeMemberCollection")
 extern class CodeTypeMemberCollection extends dotnet.system.collections.CollectionBase {
 
-  public function Add(value:CodeTypeMember) : Int;
+  @:overload(function(value:CodeTypeMember) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
   @:overload(function(value:cs.NativeArray<CodeTypeMember>) : Void {})
   public function AddRange(value:CodeTypeMemberCollection) : Void;
 
-  public function Contains(value:CodeTypeMember) : Bool;
+  @:overload(function(value:CodeTypeMember) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<CodeTypeMember>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<CodeTypeMember>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
+  @:overload(function() : Void {})
   @:overload(function(value:cs.NativeArray<CodeTypeMember>) : Void {})
-  @:overload(function(value:CodeTypeMemberCollection) : Void {})
-  public function new() : Void;
+  public function new(value:CodeTypeMemberCollection) : Void;
 
-  public function IndexOf(value:CodeTypeMember) : Int;
+  @:overload(function(value:CodeTypeMember) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, value:CodeTypeMember) : Void;
+  @:overload(function(index:Int, value:CodeTypeMember) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  public function Remove(value:CodeTypeMember) : Void;
+  @:overload(function(value:CodeTypeMember) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

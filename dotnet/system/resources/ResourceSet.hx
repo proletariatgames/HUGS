@@ -5,24 +5,24 @@ extern class ResourceSet extends dotnet.system.Object  implements dotnet.system.
 
   public function Close() : Void;
 
-  @:overload(function(stream:dotnet.system.io.Stream) : Void {})
   @:overload(function(reader:IResourceReader) : Void {})
+  @:overload(function(stream:dotnet.system.io.Stream) : Void {})
   public function new(fileName:String) : Void;
 
-  public function Dispose() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function GetDefaultReader() : cs.system.Type;
 
   public function GetDefaultWriter() : cs.system.Type;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IDictionaryEnumerator;
 
-  @:overload(function(name:String, ignoreCase:Bool) : Dynamic {})
-  public function GetObject(name:String) : Dynamic;
+  @:overload(function(name:String) : Dynamic {})
+  public function GetObject(name:String, ignoreCase:Bool) : Dynamic;
 
-  @:overload(function(name:String, ignoreCase:Bool) : String {})
-  public function GetString(name:String) : String;
-
-  function ReadResources() : Void;
+  @:overload(function(name:String) : String {})
+  public function GetString(name:String, ignoreCase:Bool) : String;
 }
 

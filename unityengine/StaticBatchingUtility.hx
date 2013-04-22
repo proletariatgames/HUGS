@@ -1,10 +1,10 @@
 package unityengine;
 
 @:native("UnityEngine.StaticBatchingUtility") @:final
-extern class StaticBatchingUtility {
+extern class StaticBatchingUtility extends dotnet.system.Object {
 
-  @:overload(function(gos:cs.NativeArray<GameObject>, staticBatchRoot:GameObject) : Void {})
-  public static function Combine(staticBatchRoot:GameObject) : Void;
+  @:overload(function(staticBatchRoot:GameObject) : Void {})
+  public static function Combine(gos:cs.NativeArray<GameObject>, staticBatchRoot:GameObject) : Void;
 
   public function new() : Void;
 }

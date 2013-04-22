@@ -18,9 +18,8 @@ extern class Stream extends dotnet.system.MarshalByRefObject  implements dotnet.
 
   public function Close() : Void;
 
-  function CreateWaitHandle() : dotnet.system.threading.WaitHandle;
-
-  public function Dispose() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function EndRead(asyncResult:dotnet.system.IAsyncResult) : Int;
 

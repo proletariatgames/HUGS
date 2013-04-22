@@ -4,7 +4,7 @@ package dotnet.system.security;
 extern class SecurityCriticalAttribute extends dotnet.system.Attribute {
   public var Scope(default,never) : SecurityCriticalScope;
 
-  @:overload(function(scope:SecurityCriticalScope) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(scope:SecurityCriticalScope) : Void;
 }
 

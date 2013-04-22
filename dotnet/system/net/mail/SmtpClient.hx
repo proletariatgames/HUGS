@@ -14,15 +14,15 @@ extern class SmtpClient extends dotnet.system.Object {
   public var Timeout : Int;
   public var UseDefaultCredentials : Bool;
 
-  @:overload(function(host:String, port:Int) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(host:String) : Void {})
-  public function new() : Void;
+  public function new(host:String, port:Int) : Void;
 
-  @:overload(function(from:String, to:String, subject:String, body:String) : Void {})
-  public function Send(message:MailMessage) : Void;
+  @:overload(function(message:MailMessage) : Void {})
+  public function Send(from:String, to:String, subject:String, body:String) : Void;
 
-  @:overload(function(from:String, to:String, subject:String, body:String, userToken:Dynamic) : Void {})
-  public function SendAsync(message:MailMessage, userToken:Dynamic) : Void;
+  @:overload(function(message:MailMessage, userToken:Dynamic) : Void {})
+  public function SendAsync(from:String, to:String, subject:String, body:String, userToken:Dynamic) : Void;
 
   public function SendAsyncCancel() : Void;
 }

@@ -9,10 +9,12 @@ extern class CompilerInfo extends dotnet.system.Object {
 
   public function CreateProvider() : CodeDomProvider;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
   public function GetExtensions() : cs.NativeArray<String>;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetLanguages() : cs.NativeArray<String>;

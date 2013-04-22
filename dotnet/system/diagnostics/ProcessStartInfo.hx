@@ -23,8 +23,8 @@ extern class ProcessStartInfo extends dotnet.system.Object {
   public var Domain : String;
   public var Password : dotnet.system.security.SecureString;
 
-  @:overload(function(filename:String, arguments:String) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(filename:String) : Void {})
-  public function new() : Void;
+  public function new(filename:String, arguments:String) : Void;
 }
 

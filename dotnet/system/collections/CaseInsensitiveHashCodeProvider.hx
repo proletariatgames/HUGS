@@ -5,9 +5,10 @@ extern class CaseInsensitiveHashCodeProvider extends dotnet.system.Object  imple
   public static var Default(default,never) : CaseInsensitiveHashCodeProvider;
   public static var DefaultInvariant(default,never) : CaseInsensitiveHashCodeProvider;
 
-  @:overload(function(culture:dotnet.system.globalization.CultureInfo) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(culture:dotnet.system.globalization.CultureInfo) : Void;
 
-  public override function GetHashCode(obj:Dynamic) : Int;
+  @:overload(function(obj:Dynamic) : Int {})
+  public override function GetHashCode() : Int;
 }
 

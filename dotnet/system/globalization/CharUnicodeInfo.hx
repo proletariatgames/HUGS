@@ -3,16 +3,16 @@ package dotnet.system.globalization;
 @:native("System.Globalization.CharUnicodeInfo") @:final
 extern class CharUnicodeInfo extends dotnet.system.Object {
 
-  @:overload(function(s:String, index:Int) : Int {})
-  public static function GetDecimalDigitValue(ch:dotnet.system.Char) : Int;
+  @:overload(function(ch:dotnet.system.Char) : Int {})
+  public static function GetDecimalDigitValue(s:String, index:Int) : Int;
 
-  @:overload(function(s:String, index:Int) : Int {})
-  public static function GetDigitValue(ch:dotnet.system.Char) : Int;
+  @:overload(function(ch:dotnet.system.Char) : Int {})
+  public static function GetDigitValue(s:String, index:Int) : Int;
 
-  @:overload(function(s:String, index:Int) : Float {})
-  public static function GetNumericValue(ch:dotnet.system.Char) : Float;
+  @:overload(function(ch:dotnet.system.Char) : Float {})
+  public static function GetNumericValue(s:String, index:Int) : Float;
 
-  @:overload(function(s:String, index:Int) : UnicodeCategory {})
-  public static function GetUnicodeCategory(ch:dotnet.system.Char) : UnicodeCategory;
+  @:overload(function(ch:dotnet.system.Char) : UnicodeCategory {})
+  public static function GetUnicodeCategory(s:String, index:Int) : UnicodeCategory;
 }
 

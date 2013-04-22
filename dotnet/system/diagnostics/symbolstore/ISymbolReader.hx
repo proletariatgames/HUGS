@@ -2,7 +2,6 @@ package dotnet.system.diagnostics.symbolstore;
 
 @:native("System.Diagnostics.SymbolStore.ISymbolReader")
 extern interface ISymbolReader {
-  var UserEntryPoint(default,never) : SymbolToken;
 
   function GetDocument(url:String, language:dotnet.system.Guid, languageVendor:dotnet.system.Guid, documentType:dotnet.system.Guid) : ISymbolDocument;
 
@@ -10,8 +9,8 @@ extern interface ISymbolReader {
 
   function GetGlobalVariables() : cs.NativeArray<ISymbolVariable>;
 
-  @:overload(function(method:SymbolToken, version:Int) : ISymbolMethod {})
-  function GetMethod(method:SymbolToken) : ISymbolMethod;
+  @:overload(function(method:SymbolToken) : ISymbolMethod {})
+  function GetMethod(method:SymbolToken, version:Int) : ISymbolMethod;
 
   function GetMethodFromDocumentPosition(document:ISymbolDocument, line:Int, column:Int) : ISymbolMethod;
 

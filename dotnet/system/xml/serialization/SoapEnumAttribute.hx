@@ -4,7 +4,7 @@ package dotnet.system.xml.serialization;
 extern class SoapEnumAttribute extends dotnet.system.Attribute {
   public var Name : String;
 
-  @:overload(function(name:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(name:String) : Void;
 }
 

@@ -5,7 +5,7 @@ extern class CodeRegionDirective extends CodeDirective {
   public var RegionMode : CodeRegionMode;
   public var RegionText : String;
 
-  @:overload(function(regionMode:CodeRegionMode, regionText:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(regionMode:CodeRegionMode, regionText:String) : Void;
 }
 

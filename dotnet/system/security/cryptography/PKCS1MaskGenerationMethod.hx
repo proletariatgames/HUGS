@@ -6,6 +6,7 @@ extern class PKCS1MaskGenerationMethod extends MaskGenerationMethod {
 
   public function new() : Void;
 
+  @:overload(function(rgbSeed:cs.NativeArray<dotnet.system.Byte>, cbReturn:Int) : cs.NativeArray<dotnet.system.Byte> {})
   public override function GenerateMask(rgbSeed:cs.NativeArray<dotnet.system.Byte>, cbReturn:Int) : cs.NativeArray<dotnet.system.Byte>;
 }
 

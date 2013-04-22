@@ -9,6 +9,7 @@ extern class ProcessModule extends dotnet.system.componentmodel.Component {
   public var ModuleMemorySize(default,never) : Int;
   public var ModuleName(default,never) : String;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

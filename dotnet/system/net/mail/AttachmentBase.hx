@@ -7,6 +7,7 @@ extern class AttachmentBase extends dotnet.system.Object  implements dotnet.syst
   public var ContentType : dotnet.system.net.mime.ContentType;
   public var TransferEncoding : dotnet.system.net.mime.TransferEncoding;
 
-  public function Dispose() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 }
 

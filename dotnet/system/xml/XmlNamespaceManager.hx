@@ -13,13 +13,13 @@ extern class XmlNamespaceManager extends dotnet.system.Object  implements dotnet
 
   public function GetNamespacesInScope(scope:XmlNamespaceScope) : dotnet.system.collections.generic.IDictionary<String,String>;
 
-  function GetNamespacesInScopeImpl(scope:XmlNamespaceScope) : dotnet.system.collections.IDictionary;
-
   public function HasNamespace(prefix:String) : Bool;
 
-  public function LookupNamespace(prefix:String) : String;
+  @:overload(function(prefix:String) : String {})
+  function LookupNamespace(prefix:String, atomizedNames:Bool) : String;
 
-  public function LookupPrefix(uri:String) : String;
+  @:overload(function(uri:String) : String {})
+  function LookupPrefix(uri:String, atomizedName:Bool) : String;
 
   public function PopScope() : Bool;
 

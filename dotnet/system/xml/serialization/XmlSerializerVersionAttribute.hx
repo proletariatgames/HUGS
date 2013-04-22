@@ -7,7 +7,7 @@ extern class XmlSerializerVersionAttribute extends dotnet.system.Attribute {
   public var Type : cs.system.Type;
   public var Version : String;
 
-  @:overload(function(type:cs.system.Type) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(type:cs.system.Type) : Void;
 }
 

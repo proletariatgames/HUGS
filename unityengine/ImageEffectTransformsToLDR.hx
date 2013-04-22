@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.ImageEffectTransformsToLDR") @:final
-extern class ImageEffectTransformsToLDR {
+extern class ImageEffectTransformsToLDR extends dotnet.system.Attribute {
 
   public function new() : Void;
 }

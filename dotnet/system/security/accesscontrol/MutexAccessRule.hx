@@ -4,7 +4,7 @@ package dotnet.system.security.accesscontrol;
 extern class MutexAccessRule extends AccessRule {
   public var MutexRights(default,never) : MutexRights;
 
-  @:overload(function(identity:String, eventRights:MutexRights, type:AccessControlType) : Void {})
-  public function new(identity:dotnet.system.security.principal.IdentityReference, eventRights:MutexRights, type:AccessControlType) : Void;
+  @:overload(function(identity:dotnet.system.security.principal.IdentityReference, eventRights:MutexRights, type:AccessControlType) : Void {})
+  public function new(identity:String, eventRights:MutexRights, type:AccessControlType) : Void;
 }
 

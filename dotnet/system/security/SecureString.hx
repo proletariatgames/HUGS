@@ -10,8 +10,8 @@ extern class SecureString extends dotnet.system.runtime.constrainedexecution.Cri
 
   public function Copy() : SecureString;
 
-  @:overload(function(value:dotnet.system.Char, length:Int) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(value:dotnet.system.Char, length:Int) : Void;
 
   public function Dispose() : Void;
 

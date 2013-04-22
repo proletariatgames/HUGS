@@ -3,8 +3,8 @@ package dotnet.system.runtime.remoting;
 @:native("System.Runtime.Remoting.RemotingServices") @:final
 extern class RemotingServices extends dotnet.system.Object {
 
-  @:overload(function(classToProxy:cs.system.Type, url:String, data:Dynamic) : Dynamic {})
-  public static function Connect(classToProxy:cs.system.Type, url:String) : Dynamic;
+  @:overload(function(classToProxy:cs.system.Type, url:String) : Dynamic {})
+  public static function Connect(classToProxy:cs.system.Type, url:String, data:Dynamic) : Dynamic;
 
   public static function Disconnect(obj:dotnet.system.MarshalByRefObject) : Bool;
 
@@ -40,13 +40,13 @@ extern class RemotingServices extends dotnet.system.Object {
 
   public static function LogRemotingStage(stage:Int) : Void;
 
-  @:overload(function(Obj:dotnet.system.MarshalByRefObject, ObjURI:String, RequestedType:cs.system.Type) : ObjRef {})
+  @:overload(function(Obj:dotnet.system.MarshalByRefObject) : ObjRef {})
   @:overload(function(Obj:dotnet.system.MarshalByRefObject, URI:String) : ObjRef {})
-  public static function Marshal(Obj:dotnet.system.MarshalByRefObject) : ObjRef;
+  public static function Marshal(Obj:dotnet.system.MarshalByRefObject, ObjURI:String, RequestedType:cs.system.Type) : ObjRef;
 
   public static function SetObjectUriForMarshal(obj:dotnet.system.MarshalByRefObject, uri:String) : Void;
 
-  @:overload(function(objectRef:ObjRef, fRefine:Bool) : Dynamic {})
-  public static function Unmarshal(objectRef:ObjRef) : Dynamic;
+  @:overload(function(objectRef:ObjRef) : Dynamic {})
+  public static function Unmarshal(objectRef:ObjRef, fRefine:Bool) : Dynamic;
 }
 

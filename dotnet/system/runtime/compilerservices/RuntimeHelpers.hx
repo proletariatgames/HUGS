@@ -49,8 +49,8 @@ extern class RuntimeHelpers_Static {
 
   public static function PrepareDelegate(d:dotnet.system.Delegate) : Void;
 
-  @:overload(function(method:dotnet.system.RuntimeMethodHandle, instantiation:cs.NativeArray<dotnet.system.RuntimeTypeHandle>) : Void {})
-  public static function PrepareMethod(method:dotnet.system.RuntimeMethodHandle) : Void;
+  @:overload(function(method:dotnet.system.RuntimeMethodHandle) : Void {})
+  public static function PrepareMethod(method:dotnet.system.RuntimeMethodHandle, instantiation:cs.NativeArray<dotnet.system.RuntimeTypeHandle>) : Void;
 
   public static function ProbeForSufficientStack() : Void;
 

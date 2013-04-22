@@ -6,10 +6,8 @@ extern class CodeMethodReferenceExpression extends CodeExpression {
   public var TargetObject : CodeExpression;
   public var TypeArguments(default,never) : CodeTypeReferenceCollection;
 
-  override function Accept(visitor:ICodeDomVisitor) : Void;
-
-  @:overload(function(targetObject:CodeExpression, methodName:String, typeParameters:cs.NativeArray<CodeTypeReference>) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(targetObject:CodeExpression, methodName:String) : Void {})
-  public function new() : Void;
+  public function new(targetObject:CodeExpression, methodName:String, typeParameters:cs.NativeArray<CodeTypeReference>) : Void;
 }
 

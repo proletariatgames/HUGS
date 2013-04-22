@@ -8,11 +8,13 @@ extern class AsnEncodedDataCollection extends dotnet.system.Object  implements d
 
   public function Add(asnEncodedData:AsnEncodedData) : Int;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<AsnEncodedData>, index:Int) : Void;
 
-  @:overload(function(asnEncodedData:AsnEncodedData) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(asnEncodedData:AsnEncodedData) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : AsnEncodedDataEnumerator;
 
   public function Remove(asnEncodedData:AsnEncodedData) : Void;

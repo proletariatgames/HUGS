@@ -3,8 +3,8 @@ package dotnet.system.runtime.serialization;
 @:native("System.Runtime.Serialization.FormatterConverter")
 extern class FormatterConverter extends dotnet.system.Object  implements IFormatterConverter {
 
-  @:overload(function(value:Dynamic, typeCode:dotnet.system.TypeCode) : Dynamic {})
-  public function Convert(value:Dynamic, type:cs.system.Type) : Dynamic;
+  @:overload(function(value:Dynamic, type:cs.system.Type) : Dynamic {})
+  public function Convert(value:Dynamic, typeCode:dotnet.system.TypeCode) : Dynamic;
 
   public function new() : Void;
 
@@ -30,7 +30,8 @@ extern class FormatterConverter extends dotnet.system.Object  implements IFormat
 
   public function ToSingle(value:Dynamic) : Float;
 
-  public override function ToString(value:Dynamic) : String;
+  @:overload(function(value:Dynamic) : String {})
+  public override function ToString() : String;
 
   public function ToUInt16(value:Dynamic) : UInt;
 

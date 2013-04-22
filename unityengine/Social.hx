@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Social") @:final
-extern class Social {
+extern class Social extends dotnet.system.Object {
   public static var Active : dotnet.unityengine.socialplatforms.ISocialPlatform;
   public static var localUser(default,never) : dotnet.unityengine.socialplatforms.ILocalUser;
 

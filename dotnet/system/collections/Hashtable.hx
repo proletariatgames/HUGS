@@ -24,29 +24,26 @@ extern class Hashtable extends dotnet.system.Object  implements dotnet.system.IC
 
   public function CopyTo(array:dotnet.system.Array, arrayIndex:Int) : Void;
 
-  @:overload(function(d:IDictionary, loadFactor:Float, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(capacity:Int, loadFactor:Float, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
-  @:overload(function(d:IDictionary, loadFactor:Float, equalityComparer:IEqualityComparer) : Void {})
-  @:overload(function(d:IDictionary, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
-  @:overload(function(capacity:Int, loadFactor:Float, equalityComparer:IEqualityComparer) : Void {})
-  @:overload(function(capacity:Int, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
-  @:overload(function(hcp:IHashCodeProvider, comparer:IComparer) : Void {})
-  @:overload(function(d:IDictionary, loadFactor:Float) : Void {})
-  @:overload(function(d:IDictionary, equalityComparer:IEqualityComparer) : Void {})
   @:overload(function(capacity:Int, loadFactor:Float) : Void {})
-  @:overload(function(capacity:Int, equalityComparer:IEqualityComparer) : Void {})
-  @:overload(function(equalityComparer:IEqualityComparer) : Void {})
-  @:overload(function(d:IDictionary) : Void {})
   @:overload(function(capacity:Int) : Void {})
-  public function new() : Void;
+  @:overload(function(capacity:Int, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
+  @:overload(function(d:IDictionary, loadFactor:Float, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
+  @:overload(function(d:IDictionary, loadFactor:Float) : Void {})
+  @:overload(function(d:IDictionary) : Void {})
+  @:overload(function(d:IDictionary, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
+  @:overload(function(hcp:IHashCodeProvider, comparer:IComparer) : Void {})
+  @:overload(function(d:IDictionary, equalityComparer:IEqualityComparer) : Void {})
+  @:overload(function(d:IDictionary, loadFactor:Float, equalityComparer:IEqualityComparer) : Void {})
+  @:overload(function(equalityComparer:IEqualityComparer) : Void {})
+  @:overload(function(capacity:Int, equalityComparer:IEqualityComparer) : Void {})
+  public function new(capacity:Int, loadFactor:Float, equalityComparer:IEqualityComparer) : Void;
 
+  @:overload(function() : IEnumerator {})
   public function GetEnumerator() : IDictionaryEnumerator;
 
-  function GetHash(key:Dynamic) : Int;
-
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
-
-  function KeyEquals(item:Dynamic, key:Dynamic) : Bool;
 
   public function OnDeserialization(sender:Dynamic) : Void;
 

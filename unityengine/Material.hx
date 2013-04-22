@@ -15,9 +15,9 @@ extern class Material extends Object {
 
   public static function Create(scriptContents:String) : Material;
 
-  @:overload(function(source:Material) : Void {})
+  @:overload(function(contents:String) : Void {})
   @:overload(function(shader:Shader) : Void {})
-  public function new(contents:String) : Void;
+  public function new(source:Material) : Void;
 
   public function GetColor(propertyName:String) : Color;
 

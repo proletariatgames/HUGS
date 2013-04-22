@@ -6,8 +6,10 @@ extern class X509ChainElementCollection extends dotnet.system.Object  implements
   public var IsSynchronized(default,never) : Bool;
   public var SyncRoot(default,never) : Dynamic;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<X509ChainElement>, index:Int) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : X509ChainElementEnumerator;
 }
 

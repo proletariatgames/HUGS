@@ -8,10 +8,13 @@ extern class SocketAddress extends dotnet.system.Object {
   @:overload(function(family:dotnet.system.net.sockets.AddressFamily, size:Int) : Void {})
   public function new(family:dotnet.system.net.sockets.AddressFamily) : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

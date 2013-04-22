@@ -14,8 +14,8 @@ extern class ReaderWriterLockSlim extends dotnet.system.Object  implements dotne
   public var WaitingWriteCount(default,never) : Int;
   public var RecursionPolicy(default,never) : LockRecursionPolicy;
 
-  @:overload(function(recursionPolicy:LockRecursionPolicy) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(recursionPolicy:LockRecursionPolicy) : Void;
 
   public function Dispose() : Void;
 
@@ -31,14 +31,14 @@ extern class ReaderWriterLockSlim extends dotnet.system.Object  implements dotne
 
   public function ExitWriteLock() : Void;
 
+  @:overload(function(millisecondsTimeout:Int) : Bool {})
   @:overload(function(millisecondsTimeout:Int, success:Bool) : Bool {})
-  @:overload(function(timeout:dotnet.system.TimeSpan) : Bool {})
-  public function TryEnterReadLock(millisecondsTimeout:Int) : Bool;
+  public function TryEnterReadLock(timeout:dotnet.system.TimeSpan) : Bool;
 
-  @:overload(function(timeout:dotnet.system.TimeSpan) : Bool {})
-  public function TryEnterUpgradeableReadLock(millisecondsTimeout:Int) : Bool;
+  @:overload(function(millisecondsTimeout:Int) : Bool {})
+  public function TryEnterUpgradeableReadLock(timeout:dotnet.system.TimeSpan) : Bool;
 
-  @:overload(function(timeout:dotnet.system.TimeSpan) : Bool {})
-  public function TryEnterWriteLock(millisecondsTimeout:Int) : Bool;
+  @:overload(function(millisecondsTimeout:Int) : Bool {})
+  public function TryEnterWriteLock(timeout:dotnet.system.TimeSpan) : Bool;
 }
 

@@ -2,8 +2,6 @@ package unityengine;
 
 @:native("UnityEngine.RenderTexture") @:final
 extern class RenderTexture extends Texture {
-  public override var width : Int;
-  public override var height : Int;
   public var depth : Int;
   public var isPowerOfTwo : Bool;
   public var sRGB(default,never) : Bool;

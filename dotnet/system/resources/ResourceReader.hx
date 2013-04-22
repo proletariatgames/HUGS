@@ -8,8 +8,10 @@ extern class ResourceReader extends dotnet.system.Object  implements dotnet.syst
   @:overload(function(stream:dotnet.system.io.Stream) : Void {})
   public function new(fileName:String) : Void;
 
-  function Dispose() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IDictionaryEnumerator;
 
   public function GetResourceData(resourceName:String, resourceType:String, resourceData:UInt) : Void;

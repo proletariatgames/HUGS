@@ -9,17 +9,19 @@ extern class SynchronizationAttribute extends ContextAttribute  implements ICont
   public var IsReEntrant(default,never) : Bool;
   public var Locked : Bool;
 
-  @:overload(function(flag:Int, reEntrant:Bool) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(reEntrant:Bool) : Void {})
   @:overload(function(flag:Int) : Void {})
-  public function new() : Void;
+  public function new(flag:Int, reEntrant:Bool) : Void;
 
   public function GetClientContextSink(nextSink:dotnet.system.runtime.remoting.messaging.IMessageSink) : dotnet.system.runtime.remoting.messaging.IMessageSink;
 
+  @:overload(function(ctorMsg:dotnet.system.runtime.remoting.activation.IConstructionCallMessage) : Void {})
   public override function GetPropertiesForNewContext(ctorMsg:dotnet.system.runtime.remoting.activation.IConstructionCallMessage) : Void;
 
   public function GetServerContextSink(nextSink:dotnet.system.runtime.remoting.messaging.IMessageSink) : dotnet.system.runtime.remoting.messaging.IMessageSink;
 
-  public override function IsContextOK(ctx:Context, msg:dotnet.system.runtime.remoting.activation.IConstructionCallMessage) : Bool;
+  @:overload(function(ctx:Context, msg:dotnet.system.runtime.remoting.activation.IConstructionCallMessage) : Bool {})
+  public override function IsContextOK(ctx:Context, ctorMsg:dotnet.system.runtime.remoting.activation.IConstructionCallMessage) : Bool;
 }
 

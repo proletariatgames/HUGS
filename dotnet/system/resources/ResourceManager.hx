@@ -10,24 +10,20 @@ extern class ResourceManager extends dotnet.system.Object {
 
   public static function CreateFileBasedResourceManager(baseName:String, resourceDir:String, usingResourceSet:cs.system.Type) : ResourceManager;
 
-  @:overload(function(baseName:String, assembly:dotnet.system.reflection.Assembly, usingResourceSet:cs.system.Type) : Void {})
+  @:overload(function(resourceSource:cs.system.Type) : Void {})
   @:overload(function(baseName:String, assembly:dotnet.system.reflection.Assembly) : Void {})
-  public function new(resourceSource:cs.system.Type) : Void;
+  public function new(baseName:String, assembly:dotnet.system.reflection.Assembly, usingResourceSet:cs.system.Type) : Void;
 
-  @:overload(function(name:String, culture:dotnet.system.globalization.CultureInfo) : Dynamic {})
-  public function GetObject(name:String) : Dynamic;
-
-  function GetResourceFileName(culture:dotnet.system.globalization.CultureInfo) : String;
+  @:overload(function(name:String) : Dynamic {})
+  public function GetObject(name:String, culture:dotnet.system.globalization.CultureInfo) : Dynamic;
 
   public function GetResourceSet(culture:dotnet.system.globalization.CultureInfo, createIfNotExists:Bool, tryParents:Bool) : ResourceSet;
 
-  @:overload(function(name:String, culture:dotnet.system.globalization.CultureInfo) : dotnet.system.io.UnmanagedMemoryStream {})
-  public function GetStream(name:String) : dotnet.system.io.UnmanagedMemoryStream;
+  @:overload(function(name:String) : dotnet.system.io.UnmanagedMemoryStream {})
+  public function GetStream(name:String, culture:dotnet.system.globalization.CultureInfo) : dotnet.system.io.UnmanagedMemoryStream;
 
-  @:overload(function(name:String, culture:dotnet.system.globalization.CultureInfo) : String {})
-  public function GetString(name:String) : String;
-
-  function InternalGetResourceSet(culture:dotnet.system.globalization.CultureInfo, createIfNotExists:Bool, tryParents:Bool) : ResourceSet;
+  @:overload(function(name:String) : String {})
+  public function GetString(name:String, culture:dotnet.system.globalization.CultureInfo) : String;
 
   public function ReleaseAllResources() : Void;
 }

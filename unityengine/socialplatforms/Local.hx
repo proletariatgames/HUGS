@@ -1,7 +1,7 @@
 package unityengine.socialplatforms;
 
 @:native("UnityEngine.SocialPlatforms.Local")
-extern class Local implements ISocialPlatform {
+extern class Local extends dotnet.system.Object  implements ISocialPlatform {
   public var localUser(default,never) : ILocalUser;
 
   function Authenticate(user:ILocalUser, _callback:dotnet.system.Action<Bool>) : Void;
@@ -20,6 +20,7 @@ extern class Local implements ISocialPlatform {
 
   function LoadFriends(user:ILocalUser, _callback:dotnet.system.Action<Bool>) : Void;
 
+  @:overload(function(board:ILeaderboard, _callback:dotnet.system.Action<Bool>) : Void {})
   public function LoadScores(leaderboardID:String, _callback:dotnet.system.Action<cs.NativeArray<IScore>>) : Void;
 
   public function LoadUsers(userIDs:cs.NativeArray<String>, _callback:dotnet.system.Action<cs.NativeArray<IUserProfile>>) : Void;

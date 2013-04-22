@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.AudioClip.PCMReaderCallback") @:final
-extern class AudioClip_PCMReaderCallback {
+extern class AudioClip_PCMReaderCallback extends dotnet.system.MulticastDelegate {
 
   public function BeginInvoke(data:cs.NativeArray<dotnet.system.Single>, _callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
 
@@ -13,7 +13,7 @@ extern class AudioClip_PCMReaderCallback {
 }
 
 @:native("UnityEngine.AudioClip.PCMSetPositionCallback") @:final
-extern class AudioClip_PCMSetPositionCallback {
+extern class AudioClip_PCMSetPositionCallback extends dotnet.system.MulticastDelegate {
 
   public function BeginInvoke(position:Int, _callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
 
@@ -32,9 +32,9 @@ extern class AudioClip extends Object {
   public var frequency(default,never) : Int;
   public var isReadyToPlay(default,never) : Bool;
 
-  @:overload(function(name:String, lengthSamples:Int, channels:Int, frequency:Int, _3D:Bool, stream:Bool, pcmreadercallback:AudioClip_PCMReaderCallback, pcmsetpositioncallback:AudioClip_PCMSetPositionCallback) : AudioClip {})
+  @:overload(function(name:String, lengthSamples:Int, channels:Int, frequency:Int, _3D:Bool, stream:Bool) : AudioClip {})
   @:overload(function(name:String, lengthSamples:Int, channels:Int, frequency:Int, _3D:Bool, stream:Bool, pcmreadercallback:AudioClip_PCMReaderCallback) : AudioClip {})
-  public static function Create(name:String, lengthSamples:Int, channels:Int, frequency:Int, _3D:Bool, stream:Bool) : AudioClip;
+  public static function Create(name:String, lengthSamples:Int, channels:Int, frequency:Int, _3D:Bool, stream:Bool, pcmreadercallback:AudioClip_PCMReaderCallback, pcmsetpositioncallback:AudioClip_PCMSetPositionCallback) : AudioClip;
 
   public function new() : Void;
 

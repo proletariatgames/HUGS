@@ -6,15 +6,15 @@ extern class Attachment extends AttachmentBase {
   public var Name : String;
   public var NameEncoding : dotnet.system.text.Encoding;
 
-  @:overload(function(content:String, name:String, contentEncoding:dotnet.system.text.Encoding, mediaType:String) : Attachment {})
+  @:overload(function(content:String, contentType:dotnet.system.net.mime.ContentType) : Attachment {})
   @:overload(function(content:String, name:String) : Attachment {})
-  public static function CreateAttachmentFromString(content:String, contentType:dotnet.system.net.mime.ContentType) : Attachment;
+  public static function CreateAttachmentFromString(content:String, name:String, contentEncoding:dotnet.system.text.Encoding, mediaType:String) : Attachment;
 
-  @:overload(function(contentStream:dotnet.system.io.Stream, name:String, mediaType:String) : Void {})
+  @:overload(function(fileName:String) : Void {})
   @:overload(function(fileName:String, mediaType:String) : Void {})
   @:overload(function(fileName:String, contentType:dotnet.system.net.mime.ContentType) : Void {})
-  @:overload(function(contentStream:dotnet.system.io.Stream, name:String) : Void {})
   @:overload(function(contentStream:dotnet.system.io.Stream, contentType:dotnet.system.net.mime.ContentType) : Void {})
-  public function new(fileName:String) : Void;
+  @:overload(function(contentStream:dotnet.system.io.Stream, name:String) : Void {})
+  public function new(contentStream:dotnet.system.io.Stream, name:String, mediaType:String) : Void;
 }
 

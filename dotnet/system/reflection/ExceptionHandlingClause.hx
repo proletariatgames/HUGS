@@ -10,6 +10,7 @@ extern class ExceptionHandlingClause extends dotnet.system.Object {
   public var TryLength(default,never) : Int;
   public var TryOffset(default,never) : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

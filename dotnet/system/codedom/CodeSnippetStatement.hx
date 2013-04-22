@@ -4,7 +4,7 @@ package dotnet.system.codedom;
 extern class CodeSnippetStatement extends CodeStatement {
   public var Value : String;
 
-  @:overload(function(value:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(value:String) : Void;
 }
 

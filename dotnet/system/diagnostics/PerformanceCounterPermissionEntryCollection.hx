@@ -3,27 +3,25 @@ package dotnet.system.diagnostics;
 @:native("System.Diagnostics.PerformanceCounterPermissionEntryCollection")
 extern class PerformanceCounterPermissionEntryCollection extends dotnet.system.collections.CollectionBase {
 
-  public function Add(value:PerformanceCounterPermissionEntry) : Int;
+  @:overload(function(value:PerformanceCounterPermissionEntry) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
-  @:overload(function(value:PerformanceCounterPermissionEntryCollection) : Void {})
-  public function AddRange(value:cs.NativeArray<PerformanceCounterPermissionEntry>) : Void;
+  @:overload(function(value:cs.NativeArray<PerformanceCounterPermissionEntry>) : Void {})
+  public function AddRange(value:PerformanceCounterPermissionEntryCollection) : Void;
 
-  public function Contains(value:PerformanceCounterPermissionEntry) : Bool;
+  @:overload(function(value:PerformanceCounterPermissionEntry) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<PerformanceCounterPermissionEntry>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<PerformanceCounterPermissionEntry>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  public function IndexOf(value:PerformanceCounterPermissionEntry) : Int;
+  @:overload(function(value:PerformanceCounterPermissionEntry) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, value:PerformanceCounterPermissionEntry) : Void;
+  @:overload(function(index:Int, value:PerformanceCounterPermissionEntry) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  override function OnClear() : Void;
-
-  override function OnInsert(index:Int, value:Dynamic) : Void;
-
-  override function OnRemove(index:Int, value:Dynamic) : Void;
-
-  override function OnSet(index:Int, oldValue:Dynamic, newValue:Dynamic) : Void;
-
-  public function Remove(value:PerformanceCounterPermissionEntry) : Void;
+  @:overload(function(value:PerformanceCounterPermissionEntry) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

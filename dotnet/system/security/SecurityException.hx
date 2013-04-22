@@ -16,16 +16,18 @@ extern class SecurityException extends dotnet.system.SystemException {
   public var GrantedSet : String;
   public var RefusedSet : String;
 
-  @:overload(function(message:String, assemblyName:dotnet.system.reflection.AssemblyName, grant:PermissionSet, refused:PermissionSet, method:dotnet.system.reflection.MethodInfo, action:dotnet.system.security.permissions.SecurityAction, demanded:Dynamic, permThatFailed:IPermission, evidence:dotnet.system.security.policy.Evidence) : Void {})
-  @:overload(function(message:String, deny:Dynamic, permitOnly:Dynamic, method:dotnet.system.reflection.MethodInfo, demanded:Dynamic, permThatFailed:IPermission) : Void {})
-  @:overload(function(message:String, type:cs.system.Type, state:String) : Void {})
-  @:overload(function(message:String, type:cs.system.Type) : Void {})
-  @:overload(function(message:String, inner:dotnet.system.Exception) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(message:String) : Void {})
-  public function new() : Void;
+  @:overload(function(message:String, inner:dotnet.system.Exception) : Void {})
+  @:overload(function(message:String, type:cs.system.Type) : Void {})
+  @:overload(function(message:String, type:cs.system.Type, state:String) : Void {})
+  @:overload(function(message:String, deny:Dynamic, permitOnly:Dynamic, method:dotnet.system.reflection.MethodInfo, demanded:Dynamic, permThatFailed:IPermission) : Void {})
+  public function new(message:String, assemblyName:dotnet.system.reflection.AssemblyName, grant:PermissionSet, refused:PermissionSet, method:dotnet.system.reflection.MethodInfo, action:dotnet.system.security.permissions.SecurityAction, demanded:Dynamic, permThatFailed:IPermission, evidence:dotnet.system.security.policy.Evidence) : Void;
 
+  @:overload(function(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void {})
   public override function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

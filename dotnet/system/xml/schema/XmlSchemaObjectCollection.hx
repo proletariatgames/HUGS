@@ -3,29 +3,28 @@ package dotnet.system.xml.schema;
 @:native("System.Xml.Schema.XmlSchemaObjectCollection")
 extern class XmlSchemaObjectCollection extends dotnet.system.collections.CollectionBase {
 
-  public function Add(item:XmlSchemaObject) : Int;
+  @:overload(function(item:XmlSchemaObject) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
-  public function Contains(item:XmlSchemaObject) : Bool;
+  @:overload(function(item:XmlSchemaObject) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<XmlSchemaObject>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<XmlSchemaObject>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  @:overload(function(parent:XmlSchemaObject) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(parent:XmlSchemaObject) : Void;
 
-  public function GetEnumerator() : XmlSchemaObjectEnumerator;
+  @:overload(function() : XmlSchemaObjectEnumerator {})
+  public override function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
-  public function IndexOf(item:XmlSchemaObject) : Int;
+  @:overload(function(item:XmlSchemaObject) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, item:XmlSchemaObject) : Void;
+  @:overload(function(index:Int, item:XmlSchemaObject) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  override function OnClear() : Void;
-
-  override function OnInsert(index:Int, item:Dynamic) : Void;
-
-  override function OnRemove(index:Int, item:Dynamic) : Void;
-
-  override function OnSet(index:Int, oldValue:Dynamic, newValue:Dynamic) : Void;
-
-  public function Remove(item:XmlSchemaObject) : Void;
+  @:overload(function(item:XmlSchemaObject) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

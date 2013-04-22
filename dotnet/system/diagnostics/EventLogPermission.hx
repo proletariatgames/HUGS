@@ -4,9 +4,9 @@ package dotnet.system.diagnostics;
 extern class EventLogPermission extends dotnet.system.security.permissions.ResourcePermissionBase {
   public var PermissionEntries(default,never) : EventLogPermissionEntryCollection;
 
-  @:overload(function(permissionAccess:EventLogPermissionAccess, machineName:String) : Void {})
-  @:overload(function(state:dotnet.system.security.permissions.PermissionState) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(permissionAccessEntries:cs.NativeArray<EventLogPermissionEntry>) : Void {})
-  public function new() : Void;
+  @:overload(function(state:dotnet.system.security.permissions.PermissionState) : Void {})
+  public function new(permissionAccess:EventLogPermissionAccess, machineName:String) : Void;
 }
 

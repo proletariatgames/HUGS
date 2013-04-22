@@ -5,10 +5,12 @@ extern class IsolatedStoragePermission extends dotnet.system.security.CodeAccess
   public var UserQuota : dotnet.system.Int64;
   public var UsageAllowed : IsolatedStorageContainment;
 
-  public override function FromXml(esd:dotnet.system.security.SecurityElement) : Void;
+  @:overload(function(esd:dotnet.system.security.SecurityElement) : Void {})
+  public override function FromXml(elem:dotnet.system.security.SecurityElement) : Void;
 
-  public override function IsUnrestricted() : Bool;
+  public function IsUnrestricted() : Bool;
 
+  @:overload(function() : dotnet.system.security.SecurityElement {})
   public override function ToXml() : dotnet.system.security.SecurityElement;
 }
 

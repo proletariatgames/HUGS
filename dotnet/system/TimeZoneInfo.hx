@@ -10,8 +10,10 @@ extern class TimeZoneInfo_AdjustmentRule extends Object  implements dotnet.syste
 
   public static function CreateAdjustmentRule(dateStart:DateTime, dateEnd:DateTime, daylightDelta:TimeSpan, daylightTransitionStart:TimeZoneInfo_TransitionTime, daylightTransitionEnd:TimeZoneInfo_TransitionTime) : TimeZoneInfo_AdjustmentRule;
 
-  public override function Equals(other:TimeZoneInfo_AdjustmentRule) : Bool;
+  @:overload(function(other:TimeZoneInfo_AdjustmentRule) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
@@ -32,9 +34,11 @@ extern class TimeZoneInfo_TransitionTime extends ValueType  implements dotnet.sy
 
   public static function CreateFloatingDateRule(timeOfDay:DateTime, month:Int, week:Int, dayOfWeek:DayOfWeek) : TimeZoneInfo_TransitionTime;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   @:overload(function(other:TimeZoneInfo_TransitionTime) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
@@ -55,24 +59,25 @@ extern class TimeZoneInfo extends Object  implements dotnet.system.runtime.seria
 
   public static function ClearCachedData() : Void;
 
+  @:overload(function(dateTime:DateTime, destinationTimeZone:TimeZoneInfo) : DateTime {})
   @:overload(function(dateTime:DateTime, sourceTimeZone:TimeZoneInfo, destinationTimeZone:TimeZoneInfo) : DateTime {})
-  @:overload(function(dateTimeOffset:DateTimeOffset, destinationTimeZone:TimeZoneInfo) : DateTimeOffset {})
-  public static function ConvertTime(dateTime:DateTime, destinationTimeZone:TimeZoneInfo) : DateTime;
+  public static function ConvertTime(dateTimeOffset:DateTimeOffset, destinationTimeZone:TimeZoneInfo) : DateTimeOffset;
 
+  @:overload(function(dateTime:DateTime, destinationTimeZoneId:String) : DateTime {})
   @:overload(function(dateTime:DateTime, sourceTimeZoneId:String, destinationTimeZoneId:String) : DateTime {})
-  @:overload(function(dateTimeOffset:DateTimeOffset, destinationTimeZoneId:String) : DateTimeOffset {})
-  public static function ConvertTimeBySystemTimeZoneId(dateTime:DateTime, destinationTimeZoneId:String) : DateTime;
+  public static function ConvertTimeBySystemTimeZoneId(dateTimeOffset:DateTimeOffset, destinationTimeZoneId:String) : DateTimeOffset;
 
   public static function ConvertTimeFromUtc(dateTime:DateTime, destinationTimeZone:TimeZoneInfo) : DateTime;
 
-  @:overload(function(dateTime:DateTime, sourceTimeZone:TimeZoneInfo) : DateTime {})
-  public static function ConvertTimeToUtc(dateTime:DateTime) : DateTime;
+  @:overload(function(dateTime:DateTime) : DateTime {})
+  public static function ConvertTimeToUtc(dateTime:DateTime, sourceTimeZone:TimeZoneInfo) : DateTime;
 
-  @:overload(function(id:String, baseUtcOffset:TimeSpan, displayName:String, standardDisplayName:String, daylightDisplayName:String, adjustmentRules:cs.NativeArray<TimeZoneInfo_AdjustmentRule>, disableDaylightSavingTime:Bool) : TimeZoneInfo {})
+  @:overload(function(id:String, baseUtcOffset:TimeSpan, displayName:String, standardDisplayName:String) : TimeZoneInfo {})
   @:overload(function(id:String, baseUtcOffset:TimeSpan, displayName:String, standardDisplayName:String, daylightDisplayName:String, adjustmentRules:cs.NativeArray<TimeZoneInfo_AdjustmentRule>) : TimeZoneInfo {})
-  public static function CreateCustomTimeZone(id:String, baseUtcOffset:TimeSpan, displayName:String, standardDisplayName:String) : TimeZoneInfo;
+  public static function CreateCustomTimeZone(id:String, baseUtcOffset:TimeSpan, displayName:String, standardDisplayName:String, daylightDisplayName:String, adjustmentRules:cs.NativeArray<TimeZoneInfo_AdjustmentRule>, disableDaylightSavingTime:Bool) : TimeZoneInfo;
 
-  public override function Equals(other:TimeZoneInfo) : Bool;
+  @:overload(function(other:TimeZoneInfo) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
   public static function FindSystemTimeZoneById(id:String) : TimeZoneInfo;
 
@@ -80,25 +85,26 @@ extern class TimeZoneInfo extends Object  implements dotnet.system.runtime.seria
 
   public function GetAdjustmentRules() : cs.NativeArray<TimeZoneInfo_AdjustmentRule>;
 
-  @:overload(function(dateTimeOffset:DateTimeOffset) : cs.NativeArray<TimeSpan> {})
-  public function GetAmbiguousTimeOffsets(dateTime:DateTime) : cs.NativeArray<TimeSpan>;
+  @:overload(function(dateTime:DateTime) : cs.NativeArray<TimeSpan> {})
+  public function GetAmbiguousTimeOffsets(dateTimeOffset:DateTimeOffset) : cs.NativeArray<TimeSpan>;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   public static function GetSystemTimeZones() : dotnet.system.collections.objectmodel.ReadOnlyCollection<TimeZoneInfo>;
 
-  @:overload(function(dateTimeOffset:DateTimeOffset) : TimeSpan {})
-  public function GetUtcOffset(dateTime:DateTime) : TimeSpan;
+  @:overload(function(dateTime:DateTime) : TimeSpan {})
+  public function GetUtcOffset(dateTimeOffset:DateTimeOffset) : TimeSpan;
 
   public function HasSameRules(other:TimeZoneInfo) : Bool;
 
-  @:overload(function(dateTimeOffset:DateTimeOffset) : Bool {})
-  public function IsAmbiguousTime(dateTime:DateTime) : Bool;
+  @:overload(function(dateTime:DateTime) : Bool {})
+  public function IsAmbiguousTime(dateTimeOffset:DateTimeOffset) : Bool;
 
-  @:overload(function(dateTimeOffset:DateTimeOffset) : Bool {})
-  public function IsDaylightSavingTime(dateTime:DateTime) : Bool;
+  @:overload(function(dateTime:DateTime) : Bool {})
+  public function IsDaylightSavingTime(dateTimeOffset:DateTimeOffset) : Bool;
 
   public function IsInvalidTime(dateTime:DateTime) : Bool;
 
@@ -106,6 +112,7 @@ extern class TimeZoneInfo extends Object  implements dotnet.system.runtime.seria
 
   public function ToSerializedString() : String;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

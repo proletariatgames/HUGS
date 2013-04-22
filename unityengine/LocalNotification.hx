@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.LocalNotification") @:final
-extern class LocalNotification {
+extern class LocalNotification extends dotnet.system.Object {
   public var fireDate : dotnet.system.DateTime;
   public var timeZone : String;
   public var repeatInterval : CalendarUnit;
@@ -16,7 +16,5 @@ extern class LocalNotification {
   public var userInfo : dotnet.system.collections.IDictionary;
 
   public function new() : Void;
-
-  override function Finalize() : Void;
 }
 

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Security") @:final
-extern class Security {
+extern class Security extends dotnet.system.Object {
 
   public function new() : Void;
 
@@ -9,7 +9,7 @@ extern class Security {
 
   public static function LoadAndVerifyAssembly(assemblyData:cs.NativeArray<dotnet.system.Byte>) : dotnet.system.reflection.Assembly;
 
-  @:overload(function(ip:String, atPort:Int, timeout:Int) : Bool {})
-  public static function PrefetchSocketPolicy(ip:String, atPort:Int) : Bool;
+  @:overload(function(ip:String, atPort:Int) : Bool {})
+  public static function PrefetchSocketPolicy(ip:String, atPort:Int, timeout:Int) : Bool;
 }
 

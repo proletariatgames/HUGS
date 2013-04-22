@@ -26,12 +26,14 @@ extern class PermissionSet extends dotnet.system.Object  implements dotnet.syste
 
   public function Deny() : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
   public function FromXml(et:SecurityElement) : Void;
 
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetPermission(permClass:cs.system.Type) : IPermission;
@@ -54,6 +56,7 @@ extern class PermissionSet extends dotnet.system.Object  implements dotnet.syste
 
   public function SetPermission(perm:IPermission) : IPermission;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 
   public function ToXml() : SecurityElement;

@@ -7,15 +7,17 @@ extern class GCHandle extends dotnet.system.ValueType {
 
   public function AddrOfPinnedObject() : dotnet.system.IntPtr;
 
-  @:overload(function(value:Dynamic, type:GCHandleType) : GCHandle {})
-  public static function Alloc(value:Dynamic) : GCHandle;
+  @:overload(function(value:Dynamic) : GCHandle {})
+  public static function Alloc(value:Dynamic, type:GCHandleType) : GCHandle;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
   public function Free() : Void;
 
   public static function FromIntPtr(value:dotnet.system.IntPtr) : GCHandle;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public static function ToIntPtr(value:GCHandle) : dotnet.system.IntPtr;

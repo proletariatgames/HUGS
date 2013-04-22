@@ -5,10 +5,7 @@ extern class SHA1Managed extends SHA1 {
 
   public function new() : Void;
 
-  override function HashCore(rgb:cs.NativeArray<dotnet.system.Byte>, ibStart:Int, cbSize:Int) : Void;
-
-  override function HashFinal() : cs.NativeArray<dotnet.system.Byte>;
-
+  @:overload(function() : Void {})
   public override function Initialize() : Void;
 }
 

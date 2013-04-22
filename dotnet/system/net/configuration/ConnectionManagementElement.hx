@@ -5,7 +5,7 @@ extern class ConnectionManagementElement extends dotnet.system.configuration.Con
   public var Address : String;
   public var MaxConnection : Int;
 
-  @:overload(function(address:String, maxConnection:Int) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(address:String, maxConnection:Int) : Void;
 }
 

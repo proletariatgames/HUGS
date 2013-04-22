@@ -2,18 +2,18 @@ package dotnet.system.net;
 
 @:native("System.Net.FileWebResponse")
 extern class FileWebResponse extends WebResponse  implements dotnet.system.IDisposable implements dotnet.system.runtime.serialization.ISerializable {
-  public override var ContentLength(default,never) : dotnet.system.Int64;
-  public override var ContentType(default,never) : String;
-  public override var Headers(default,never) : WebHeaderCollection;
-  public override var ResponseUri(default,never) : dotnet.system.Uri;
 
+  @:overload(function() : Void {})
   public override function Close() : Void;
 
+  @:overload(function() : Void {})
+  @:overload(function(disposing:Bool) : Void {})
   override function Dispose() : Void;
 
-  override function Finalize() : Void;
+  @:overload(function(serializationInfo:dotnet.system.runtime.serialization.SerializationInfo, streamingContext:dotnet.system.runtime.serialization.StreamingContext) : Void {})
+  override function GetObjectData(serializationInfo:dotnet.system.runtime.serialization.SerializationInfo, streamingContext:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
-
+  @:overload(function() : dotnet.system.io.Stream {})
   public override function GetResponseStream() : dotnet.system.io.Stream;
 }
 

@@ -6,8 +6,8 @@ extern class XmlAnyElementAttribute extends dotnet.system.Attribute {
   public var Namespace : String;
   public var Order : Int;
 
-  @:overload(function(name:String, ns:String) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(name:String) : Void {})
-  public function new() : Void;
+  public function new(name:String, ns:String) : Void;
 }
 

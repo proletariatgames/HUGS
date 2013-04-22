@@ -7,14 +7,17 @@ extern class XmlQualifiedName extends dotnet.system.Object {
   public var Name(default,never) : String;
   public var Namespace(default,never) : String;
 
-  @:overload(function(name:String, ns:String) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(name:String) : Void {})
-  public function new() : Void;
+  public function new(name:String, ns:String) : Void;
 
-  public override function Equals(other:Dynamic) : Bool;
+  @:overload(function(other:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

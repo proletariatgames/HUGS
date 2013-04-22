@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Cursor") @:final
-extern class Cursor {
+extern class Cursor extends dotnet.system.Object {
 
   public function new() : Void;
 

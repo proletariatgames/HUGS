@@ -13,6 +13,7 @@ extern class MulticastIPAddressInformationCollection extends dotnet.system.Objec
 
   public function CopyTo(array:cs.NativeArray<MulticastIPAddressInformation>, offset:Int) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.generic.IEnumerator<MulticastIPAddressInformation>;
 
   public function Remove(address:MulticastIPAddressInformation) : Bool;

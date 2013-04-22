@@ -16,14 +16,16 @@ extern class IPAddress extends dotnet.system.Object {
   public var ScopeId : dotnet.system.Int64;
   public var AddressFamily(default,never) : dotnet.system.net.sockets.AddressFamily;
 
-  @:overload(function(address:cs.NativeArray<dotnet.system.Byte>, scopeId:dotnet.system.Int64) : Void {})
+  @:overload(function(addr:dotnet.system.Int64) : Void {})
   @:overload(function(address:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  public function new(addr:dotnet.system.Int64) : Void;
+  public function new(address:cs.NativeArray<dotnet.system.Byte>, scopeId:dotnet.system.Int64) : Void;
 
-  public override function Equals(other:Dynamic) : Bool;
+  @:overload(function(other:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
   public function GetAddressBytes() : cs.NativeArray<dotnet.system.Byte>;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   @:overload(function(host:Int) : Int {})
@@ -36,6 +38,7 @@ extern class IPAddress extends dotnet.system.Object {
 
   public static function Parse(ipString:String) : IPAddress;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 
   public static function TryParse(ipString:String, address:IPAddress) : Bool;

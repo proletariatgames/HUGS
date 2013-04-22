@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Random") @:final
-extern class Random {
+extern class Random extends dotnet.system.Object {
   public static var seed : Int;
   public static var value(default,never) : Float;
   public static var insideUnitSphere(default,never) : Vector3;
@@ -12,10 +12,10 @@ extern class Random {
 
   public function new() : Void;
 
-  @:overload(function(min:Int, max:Int) : Int {})
-  public static function RandomRange(min:Float, max:Float) : Float;
+  @:overload(function(min:Float, max:Float) : Float {})
+  public static function RandomRange(min:Int, max:Int) : Int;
 
-  @:overload(function(min:Int, max:Int) : Int {})
-  public static function Range(min:Float, max:Float) : Float;
+  @:overload(function(min:Float, max:Float) : Float {})
+  public static function Range(min:Int, max:Int) : Int;
 }
 

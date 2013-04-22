@@ -9,7 +9,7 @@ extern interface IReferenceService {
 
   function GetReference(name:String) : Dynamic;
 
-  @:overload(function(baseType:cs.system.Type) : cs.NativeArray<dotnet.system.Object> {})
-  function GetReferences() : cs.NativeArray<dotnet.system.Object>;
+  @:overload(function() : cs.NativeArray<dotnet.system.Object> {})
+  function GetReferences(baseType:cs.system.Type) : cs.NativeArray<dotnet.system.Object>;
 }
 

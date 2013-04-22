@@ -42,28 +42,31 @@ extern class DateTimeOffset extends ValueType  implements IComparable implements
 
   public function AddYears(years:Int) : DateTimeOffset;
 
+  @:overload(function(obj:Dynamic) : Int {})
   public function CompareTo(other:DateTimeOffset) : Int;
 
-  @:overload(function(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, millisecond:Int, calendar:dotnet.system.globalization.Calendar, offset:TimeSpan) : Void {})
-  @:overload(function(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, millisecond:Int, offset:TimeSpan) : Void {})
-  @:overload(function(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, offset:TimeSpan) : Void {})
-  @:overload(function(ticks:Int64, offset:TimeSpan) : Void {})
+  @:overload(function(dateTime:DateTime) : Void {})
   @:overload(function(dateTime:DateTime, offset:TimeSpan) : Void {})
-  public function new(dateTime:DateTime) : Void;
+  @:overload(function(ticks:Int64, offset:TimeSpan) : Void {})
+  @:overload(function(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, offset:TimeSpan) : Void {})
+  @:overload(function(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, millisecond:Int, offset:TimeSpan) : Void {})
+  public function new(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, millisecond:Int, calendar:dotnet.system.globalization.Calendar, offset:TimeSpan) : Void;
 
   @:overload(function(other:DateTimeOffset) : Bool {})
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
   public function EqualsExact(other:DateTimeOffset) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   function OnDeserialization(sender:Dynamic) : Void;
 
-  @:overload(function(value:TimeSpan) : DateTimeOffset {})
-  public function Subtract(value:DateTimeOffset) : TimeSpan;
+  @:overload(function(value:DateTimeOffset) : TimeSpan {})
+  public function Subtract(value:TimeSpan) : DateTimeOffset;
 
   public function ToFileTime() : Int64;
 
@@ -71,9 +74,10 @@ extern class DateTimeOffset extends ValueType  implements IComparable implements
 
   public function ToOffset(offset:TimeSpan) : DateTimeOffset;
 
-  @:overload(function(format:String, formatProvider:IFormatProvider) : String {})
+  @:overload(function() : String {})
   @:overload(function(formatProvider:IFormatProvider) : String {})
   @:overload(function(format:String) : String {})
+  @:overload(function(format:String, formatProvider:IFormatProvider) : String {})
   public override function ToString() : String;
 
   public function ToUniversalTime() : DateTimeOffset;
@@ -89,18 +93,18 @@ extern class DateTimeOffset_Static {
 
   public static function FromFileTime(fileTime:Int64) : DateTimeOffset;
 
-  @:overload(function(input:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTimeOffset {})
+  @:overload(function(input:String) : DateTimeOffset {})
   @:overload(function(input:String, formatProvider:IFormatProvider) : DateTimeOffset {})
-  public static function Parse(input:String) : DateTimeOffset;
+  public static function Parse(input:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTimeOffset;
 
-  @:overload(function(input:String, formats:cs.NativeArray<String>, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTimeOffset {})
+  @:overload(function(input:String, format:String, formatProvider:IFormatProvider) : DateTimeOffset {})
   @:overload(function(input:String, format:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTimeOffset {})
-  public static function ParseExact(input:String, format:String, formatProvider:IFormatProvider) : DateTimeOffset;
+  public static function ParseExact(input:String, formats:cs.NativeArray<String>, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTimeOffset;
 
-  @:overload(function(input:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool {})
-  public static function TryParse(input:String, result:DateTimeOffset) : Bool;
+  @:overload(function(input:String, result:DateTimeOffset) : Bool {})
+  public static function TryParse(input:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool;
 
-  @:overload(function(input:String, formats:cs.NativeArray<String>, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool {})
-  public static function TryParseExact(input:String, format:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool;
+  @:overload(function(input:String, format:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool {})
+  public static function TryParseExact(input:String, formats:cs.NativeArray<String>, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool;
 }
 

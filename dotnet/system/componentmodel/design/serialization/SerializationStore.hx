@@ -6,6 +6,8 @@ extern class SerializationStore extends dotnet.system.Object  implements dotnet.
 
   public function Close() : Void;
 
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function Save(stream:dotnet.system.io.Stream) : Void;
 }

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Object")
-extern class Object {
+extern class Object extends dotnet.system.Object {
   public var name : String;
   public var hideFlags : HideFlags;
 
@@ -18,7 +18,8 @@ extern class Object {
 
   public static function DontDestroyOnLoad(target:Object) : Void;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
   public static function FindObjectOfType(type:cs.system.Type) : Object;
 
@@ -30,6 +31,7 @@ extern class Object {
 
   public static function FindSceneObjectsOfType(type:cs.system.Type) : cs.NativeArray<Object>;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetInstanceID() : Int;
@@ -37,6 +39,7 @@ extern class Object {
   @:overload(function(original:Object, position:Vector3, rotation:Quaternion) : Object {})
   public static function Instantiate(original:Object) : Object;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

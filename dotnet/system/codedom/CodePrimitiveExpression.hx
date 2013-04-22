@@ -4,9 +4,7 @@ package dotnet.system.codedom;
 extern class CodePrimitiveExpression extends CodeExpression {
   public var Value : Dynamic;
 
-  override function Accept(visitor:ICodeDomVisitor) : Void;
-
-  @:overload(function(value:Dynamic) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(value:Dynamic) : Void;
 }
 

@@ -7,6 +7,7 @@ extern class TextAsset extends Object {
 
   public function new() : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

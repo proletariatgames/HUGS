@@ -7,13 +7,16 @@ extern class Nullable1<T> extends ValueType {
 
   public function new(value:T) : Void;
 
-  public override function Equals(other:Dynamic) : Bool;
+  @:overload(function(other:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
-  @:overload(function(defaultValue:T) : T {})
-  public function GetValueOrDefault() : T;
+  @:overload(function() : T {})
+  public function GetValueOrDefault(defaultValue:T) : T;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

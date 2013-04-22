@@ -7,9 +7,9 @@ extern class EncoderFallbackException extends dotnet.system.ArgumentException {
   public var CharUnknownLow(default,never) : dotnet.system.Char;
   public var Index(default,never) : Int;
 
-  @:overload(function(message:String, innerException:dotnet.system.Exception) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(message:String) : Void {})
-  public function new() : Void;
+  public function new(message:String, innerException:dotnet.system.Exception) : Void;
 
   public function IsUnknownSurrogate() : Bool;
 }

@@ -14,15 +14,16 @@ extern class WindowsIdentity extends dotnet.system.Object  implements dotnet.sys
   public var Owner(default,never) : SecurityIdentifier;
   public var User(default,never) : SecurityIdentifier;
 
-  @:overload(function(userToken:dotnet.system.IntPtr, type:String, acctType:WindowsAccountType, isAuthenticated:Bool) : Void {})
-  @:overload(function(userToken:dotnet.system.IntPtr, type:String, acctType:WindowsAccountType) : Void {})
-  @:overload(function(userToken:dotnet.system.IntPtr, type:String) : Void {})
-  @:overload(function(sUserPrincipalName:String, type:String) : Void {})
-  @:overload(function(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void {})
   @:overload(function(userToken:dotnet.system.IntPtr) : Void {})
-  public function new(sUserPrincipalName:String) : Void;
+  @:overload(function(userToken:dotnet.system.IntPtr, type:String) : Void {})
+  @:overload(function(userToken:dotnet.system.IntPtr, type:String, acctType:WindowsAccountType) : Void {})
+  @:overload(function(userToken:dotnet.system.IntPtr, type:String, acctType:WindowsAccountType, isAuthenticated:Bool) : Void {})
+  @:overload(function(sUserPrincipalName:String) : Void {})
+  @:overload(function(sUserPrincipalName:String, type:String) : Void {})
+  public function new(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
-  public function Dispose() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
@@ -37,9 +38,9 @@ extern class WindowsIdentity_Static {
 
   public static function GetAnonymous() : WindowsIdentity;
 
+  @:overload(function() : WindowsIdentity {})
   @:overload(function(ifImpersonating:Bool) : WindowsIdentity {})
-  @:overload(function(desiredAccess:TokenAccessLevels) : WindowsIdentity {})
-  public static function GetCurrent() : WindowsIdentity;
+  public static function GetCurrent(desiredAccess:TokenAccessLevels) : WindowsIdentity;
 
   public static function Impersonate(userToken:dotnet.system.IntPtr) : WindowsImpersonationContext;
 }

@@ -1,7 +1,7 @@
 package unityengine.serialization;
 
 @:native("UnityEngine.Serialization.UnitySurrogateSelector")
-extern class UnitySurrogateSelector {
+extern class UnitySurrogateSelector extends dotnet.system.Object {
 
   public function ChainSelector(selector:dotnet.system.runtime.serialization.ISurrogateSelector) : Void;
 

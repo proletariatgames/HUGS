@@ -1,13 +1,13 @@
 package unityengine;
 
 @:native("UnityEngine.Plane") @:final
-extern class Plane {
+extern class Plane extends dotnet.system.ValueType {
   public var normal : Vector3;
   public var distance : Float;
 
-  @:overload(function(a:Vector3, b:Vector3, c:Vector3) : Void {})
   @:overload(function(inNormal:Vector3, inPoint:Vector3) : Void {})
-  public function new(inNormal:Vector3, d:Float) : Void;
+  @:overload(function(inNormal:Vector3, d:Float) : Void {})
+  public function new(a:Vector3, b:Vector3, c:Vector3) : Void;
 
   public function GetDistanceToPoint(inPt:Vector3) : Float;
 

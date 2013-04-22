@@ -8,7 +8,7 @@ extern class XmlArrayAttribute extends dotnet.system.Attribute {
   public var Namespace : String;
   public var Order : Int;
 
-  @:overload(function(elementName:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(elementName:String) : Void;
 }
 

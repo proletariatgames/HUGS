@@ -14,10 +14,10 @@ extern class Queue extends dotnet.system.Object  implements dotnet.system.IClone
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  @:overload(function(capacity:Int, growFactor:Float) : Void {})
-  @:overload(function(col:ICollection) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(capacity:Int) : Void {})
-  public function new() : Void;
+  @:overload(function(col:ICollection) : Void {})
+  public function new(capacity:Int, growFactor:Float) : Void;
 
   public function Dequeue() : Dynamic;
 

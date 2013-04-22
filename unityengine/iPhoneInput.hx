@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.iPhoneInput") @:final
-extern class iPhoneInput {
+extern class iPhoneInput extends dotnet.system.Object {
   public static var accelerationEvents(default,never) : cs.NativeArray<iPhoneAccelerationEvent>;
   public static var touches(default,never) : cs.NativeArray<iPhoneTouch>;
   public static var touchCount(default,never) : Int;

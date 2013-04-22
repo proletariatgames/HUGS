@@ -10,14 +10,14 @@ extern class CookieContainer extends dotnet.system.Object {
   public var MaxCookieSize : Int;
   public var PerDomainCapacity : Int;
 
-  @:overload(function(uri:dotnet.system.Uri, cookies:CookieCollection) : Void {})
-  @:overload(function(uri:dotnet.system.Uri, cookie:Cookie) : Void {})
+  @:overload(function(cookie:Cookie) : Void {})
   @:overload(function(cookies:CookieCollection) : Void {})
-  public function Add(cookie:Cookie) : Void;
+  @:overload(function(uri:dotnet.system.Uri, cookie:Cookie) : Void {})
+  public function Add(uri:dotnet.system.Uri, cookies:CookieCollection) : Void;
 
-  @:overload(function(capacity:Int, perDomainCapacity:Int, maxCookieSize:Int) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(capacity:Int) : Void {})
-  public function new() : Void;
+  public function new(capacity:Int, perDomainCapacity:Int, maxCookieSize:Int) : Void;
 
   public function GetCookieHeader(uri:dotnet.system.Uri) : String;
 

@@ -22,9 +22,9 @@ extern class AppDomainSetup extends Object  implements IAppDomainSetup {
   public var ApplicationTrust : dotnet.system.security.policy.ApplicationTrust;
   public var DisallowApplicationBaseProbing : Bool;
 
-  @:overload(function(activationContext:ActivationContext) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(activationArguments:dotnet.system.runtime.hosting.ActivationArguments) : Void {})
-  public function new() : Void;
+  public function new(activationContext:ActivationContext) : Void;
 
   public function GetConfigurationBytes() : cs.NativeArray<Byte>;
 

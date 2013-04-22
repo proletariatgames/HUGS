@@ -1,10 +1,12 @@
 package unityengine;
 
 @:native("UnityEngine.TrackedReference")
-extern class TrackedReference {
+extern class TrackedReference extends dotnet.system.Object {
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

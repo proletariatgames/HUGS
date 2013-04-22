@@ -11,14 +11,14 @@ extern class Monitor extends dotnet.system.Object {
 
   public static function PulseAll(obj:Dynamic) : Void;
 
-  @:overload(function(obj:Dynamic, timeout:dotnet.system.TimeSpan) : Bool {})
+  @:overload(function(obj:Dynamic) : Bool {})
   @:overload(function(obj:Dynamic, millisecondsTimeout:Int) : Bool {})
-  public static function TryEnter(obj:Dynamic) : Bool;
+  public static function TryEnter(obj:Dynamic, timeout:dotnet.system.TimeSpan) : Bool;
 
-  @:overload(function(obj:Dynamic, timeout:dotnet.system.TimeSpan, exitContext:Bool) : Bool {})
-  @:overload(function(obj:Dynamic, millisecondsTimeout:Int, exitContext:Bool) : Bool {})
-  @:overload(function(obj:Dynamic, timeout:dotnet.system.TimeSpan) : Bool {})
+  @:overload(function(obj:Dynamic) : Bool {})
   @:overload(function(obj:Dynamic, millisecondsTimeout:Int) : Bool {})
-  public static function Wait(obj:Dynamic) : Bool;
+  @:overload(function(obj:Dynamic, timeout:dotnet.system.TimeSpan) : Bool {})
+  @:overload(function(obj:Dynamic, millisecondsTimeout:Int, exitContext:Bool) : Bool {})
+  public static function Wait(obj:Dynamic, timeout:dotnet.system.TimeSpan, exitContext:Bool) : Bool;
 }
 

@@ -8,13 +8,16 @@ extern class ContentType extends dotnet.system.Object {
   public var Name : String;
   public var Parameters(default,never) : dotnet.system.collections.specialized.StringDictionary;
 
-  @:overload(function(contentType:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(contentType:String) : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

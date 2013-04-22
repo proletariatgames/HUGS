@@ -4,8 +4,6 @@ package dotnet.system.componentmodel.design.serialization;
 extern interface IDesignerSerializationManager extends dotnet.system.IServiceProvider {
   public var ResolveName(default,null) : dotnet.system.NativeEvent<ResolveNameEventArgs>;
   public var SerializationComplete(default,null) : dotnet.system.NativeEvent<dotnet.system.EventArgs>;
-  var Context(default,never) : ContextStack;
-  var Properties(default,never) : dotnet.system.componentmodel.PropertyDescriptorCollection;
 
   function AddSerializationProvider(provider:IDesignerSerializationProvider) : Void;
 

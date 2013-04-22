@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.NotificationServices") @:final
-extern class NotificationServices {
+extern class NotificationServices extends dotnet.system.Object {
   public static var localNotificationCount(default,never) : Int;
   public static var localNotifications(default,never) : cs.NativeArray<LocalNotification>;
   public static var scheduledLocalNotifications(default,never) : cs.NativeArray<LocalNotification>;

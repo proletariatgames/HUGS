@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.SystemInfo") @:final
-extern class SystemInfo {
+extern class SystemInfo extends dotnet.system.Object {
   public static var operatingSystem(default,never) : String;
   public static var processorType(default,never) : String;
   public static var processorCount(default,never) : Int;

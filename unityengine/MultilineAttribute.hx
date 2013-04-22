@@ -4,7 +4,7 @@ package unityengine;
 extern class MultilineAttribute extends PropertyAttribute {
   public var lines : Int;
 
-  @:overload(function(lines:Int) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(lines:Int) : Void;
 }
 

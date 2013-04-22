@@ -14,7 +14,7 @@ extern class CodeTypeDeclaration extends CodeTypeMember {
   public var IsPartial : Bool;
   public var TypeParameters(default,never) : CodeTypeParameterCollection;
 
-  @:overload(function(name:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(name:String) : Void;
 }
 

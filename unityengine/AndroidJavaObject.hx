@@ -9,12 +9,11 @@ extern class AndroidJavaObject extends AndroidJNIHelper {
   @:overload(function(methodName:String, args:cs.NativeArray<dotnet.system.Object>) : Void {})
   public function CallStatic(methodName:String, args:cs.NativeArray<dotnet.system.Object>) : Dynamic;
 
-  @:overload(function(className:String, args:cs.NativeArray<dotnet.system.Object>) : Void {})
-  public function new(jobject:dotnet.system.IntPtr) : Void;
+  @:overload(function(jobject:dotnet.system.IntPtr) : Void {})
+  public function new(className:String, args:cs.NativeArray<dotnet.system.Object>) : Void;
 
+  @:overload(function(disposing:Bool) : Void {})
   public function Dispose() : Void;
-
-  override function Finalize() : Void;
 
   public function Get(fieldName:String) : Dynamic;
 

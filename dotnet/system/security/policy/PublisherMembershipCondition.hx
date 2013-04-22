@@ -10,16 +10,19 @@ extern class PublisherMembershipCondition extends dotnet.system.Object  implemen
 
   public function new(certificate:dotnet.system.security.cryptography.x509certificates.X509Certificate) : Void;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
-  @:overload(function(e:dotnet.system.security.SecurityElement, level:PolicyLevel) : Void {})
-  public function FromXml(e:dotnet.system.security.SecurityElement) : Void;
+  @:overload(function(e:dotnet.system.security.SecurityElement) : Void {})
+  public function FromXml(e:dotnet.system.security.SecurityElement, level:PolicyLevel) : Void;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 
-  @:overload(function(level:PolicyLevel) : dotnet.system.security.SecurityElement {})
-  public function ToXml() : dotnet.system.security.SecurityElement;
+  @:overload(function() : dotnet.system.security.SecurityElement {})
+  public function ToXml(level:PolicyLevel) : dotnet.system.security.SecurityElement;
 }
 

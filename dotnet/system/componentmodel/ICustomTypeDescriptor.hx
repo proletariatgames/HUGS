@@ -17,11 +17,11 @@ extern interface ICustomTypeDescriptor {
 
   function GetEditor(editorBaseType:cs.system.Type) : Dynamic;
 
-  @:overload(function(arr:cs.NativeArray<dotnet.system.Attribute>) : EventDescriptorCollection {})
-  function GetEvents() : EventDescriptorCollection;
+  @:overload(function() : EventDescriptorCollection {})
+  function GetEvents(arr:cs.NativeArray<dotnet.system.Attribute>) : EventDescriptorCollection;
 
-  @:overload(function(arr:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection {})
-  function GetProperties() : PropertyDescriptorCollection;
+  @:overload(function() : PropertyDescriptorCollection {})
+  function GetProperties(arr:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection;
 
   function GetPropertyOwner(pd:PropertyDescriptor) : Dynamic;
 }

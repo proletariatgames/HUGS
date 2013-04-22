@@ -24,25 +24,29 @@ extern class TimeSpan extends ValueType  implements IComparable {
 
   public function Add(ts:TimeSpan) : TimeSpan;
 
-  @:overload(function(value:TimeSpan) : Int {})
-  public function CompareTo(value:Dynamic) : Int;
+  @:overload(function(value:Dynamic) : Int {})
+  public function CompareTo(value:TimeSpan) : Int;
 
-  @:overload(function(days:Int, hours:Int, minutes:Int, seconds:Int, milliseconds:Int) : Void {})
-  @:overload(function(days:Int, hours:Int, minutes:Int, seconds:Int) : Void {})
+  @:overload(function(ticks:Int64) : Void {})
   @:overload(function(hours:Int, minutes:Int, seconds:Int) : Void {})
-  public function new(ticks:Int64) : Void;
+  @:overload(function(days:Int, hours:Int, minutes:Int, seconds:Int) : Void {})
+  public function new(days:Int, hours:Int, minutes:Int, seconds:Int, milliseconds:Int) : Void;
 
   public function Duration() : TimeSpan;
 
+  @:overload(function(obj:TimeSpan) : Bool {})
   @:overload(function(value:Dynamic) : Bool {})
-  public override function Equals(obj:TimeSpan) : Bool;
+  @:overload(function(obj:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function Negate() : TimeSpan;
 
   public function Subtract(ts:TimeSpan) : TimeSpan;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

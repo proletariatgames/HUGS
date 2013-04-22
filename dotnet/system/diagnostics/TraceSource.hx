@@ -9,22 +9,20 @@ extern class TraceSource extends dotnet.system.Object {
 
   public function Close() : Void;
 
-  @:overload(function(name:String, sourceLevels:SourceLevels) : Void {})
-  public function new(name:String) : Void;
+  @:overload(function(name:String) : Void {})
+  public function new(name:String, sourceLevels:SourceLevels) : Void;
 
   public function Flush() : Void;
-
-  function GetSupportedAttributes() : cs.NativeArray<String>;
 
   @:overload(function(eventType:TraceEventType, id:Int, data:Dynamic) : Void {})
   public function TraceData(eventType:TraceEventType, id:Int, data:cs.NativeArray<dotnet.system.Object>) : Void;
 
-  @:overload(function(eventType:TraceEventType, id:Int, format:String, args:cs.NativeArray<dotnet.system.Object>) : Void {})
+  @:overload(function(eventType:TraceEventType, id:Int) : Void {})
   @:overload(function(eventType:TraceEventType, id:Int, message:String) : Void {})
-  public function TraceEvent(eventType:TraceEventType, id:Int) : Void;
+  public function TraceEvent(eventType:TraceEventType, id:Int, format:String, args:cs.NativeArray<dotnet.system.Object>) : Void;
 
-  @:overload(function(format:String, args:cs.NativeArray<dotnet.system.Object>) : Void {})
-  public function TraceInformation(format:String) : Void;
+  @:overload(function(format:String) : Void {})
+  public function TraceInformation(format:String, args:cs.NativeArray<dotnet.system.Object>) : Void;
 
   public function TraceTransfer(id:Int, message:String, relatedActivityId:dotnet.system.Guid) : Void;
 }

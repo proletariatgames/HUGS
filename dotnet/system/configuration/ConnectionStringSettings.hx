@@ -6,10 +6,11 @@ extern class ConnectionStringSettings extends ConfigurationElement {
   public var ProviderName : String;
   public var ConnectionString : String;
 
-  @:overload(function(name:String, connectionString:String, providerName:String) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(name:String, connectionString:String) : Void {})
-  public function new() : Void;
+  public function new(name:String, connectionString:String, providerName:String) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

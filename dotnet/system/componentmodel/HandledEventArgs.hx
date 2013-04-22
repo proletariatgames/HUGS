@@ -4,7 +4,7 @@ package dotnet.system.componentmodel;
 extern class HandledEventArgs extends dotnet.system.EventArgs {
   public var Handled : Bool;
 
-  @:overload(function(defaultHandledValue:Bool) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(defaultHandledValue:Bool) : Void;
 }
 

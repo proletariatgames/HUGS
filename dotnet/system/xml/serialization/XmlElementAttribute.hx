@@ -10,9 +10,9 @@ extern class XmlElementAttribute extends dotnet.system.Attribute {
   public var Order : Int;
   public var Type : cs.system.Type;
 
-  @:overload(function(elementName:String, type:cs.system.Type) : Void {})
-  @:overload(function(type:cs.system.Type) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(elementName:String) : Void {})
-  public function new() : Void;
+  @:overload(function(type:cs.system.Type) : Void {})
+  public function new(elementName:String, type:cs.system.Type) : Void;
 }
 

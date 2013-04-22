@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Ping") @:final
-extern class Ping {
+extern class Ping extends dotnet.system.Object {
   public var isDone(default,never) : Bool;
   public var time(default,never) : Int;
   public var ip(default,never) : String;
@@ -9,7 +9,5 @@ extern class Ping {
   public function new(address:String) : Void;
 
   public function DestroyPing() : Void;
-
-  override function Finalize() : Void;
 }
 

@@ -2,7 +2,6 @@ package dotnet.system.runtime.remoting.channels;
 
 @:native("System.Runtime.Remoting.Channels.IClientChannelSink")
 extern interface IClientChannelSink extends IChannelSinkBase {
-  var NextChannelSink(default,never) : IClientChannelSink;
 
   function AsyncProcessRequest(sinkStack:IClientChannelSinkStack, msg:dotnet.system.runtime.remoting.messaging.IMessage, headers:ITransportHeaders, stream:dotnet.system.io.Stream) : Void;
 

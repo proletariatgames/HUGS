@@ -15,34 +15,34 @@ extern class ILGenerator extends dotnet.system.Object  implements dotnet.system.
 
   public function BeginScope() : Void;
 
-  @:overload(function(localType:cs.system.Type, pinned:Bool) : LocalBuilder {})
-  public function DeclareLocal(localType:cs.system.Type) : LocalBuilder;
+  @:overload(function(localType:cs.system.Type) : LocalBuilder {})
+  public function DeclareLocal(localType:cs.system.Type, pinned:Bool) : LocalBuilder;
 
   public function DefineLabel() : Label;
 
-  @:overload(function(opcode:OpCode, str:String) : Void {})
-  @:overload(function(opcode:OpCode, signature:SignatureHelper) : Void {})
-  @:overload(function(opcode:OpCode, meth:dotnet.system.reflection.MethodInfo) : Void {})
-  @:overload(function(opcode:OpCode, local:LocalBuilder) : Void {})
-  @:overload(function(opcode:OpCode, labels:cs.NativeArray<Label>) : Void {})
-  @:overload(function(opcode:OpCode, label:Label) : Void {})
-  @:overload(function(opcode:OpCode, field:dotnet.system.reflection.FieldInfo) : Void {})
-  @:overload(function(opcode:OpCode, con:dotnet.system.reflection.ConstructorInfo) : Void {})
-  @:overload(function(opcode:OpCode, cls:cs.system.Type) : Void {})
+  @:overload(function(opcode:OpCode) : Void {})
   @:overload(function(opcode:OpCode, arg:UInt) : Void {})
-  @:overload(function(opcode:OpCode, arg:Int) : Void {})
+  @:overload(function(opcode:OpCode, con:dotnet.system.reflection.ConstructorInfo) : Void {})
   @:overload(function(opcode:OpCode, arg:Float) : Void {})
+  @:overload(function(opcode:OpCode, field:dotnet.system.reflection.FieldInfo) : Void {})
+  @:overload(function(opcode:OpCode, arg:Int) : Void {})
   @:overload(function(opcode:OpCode, arg:dotnet.system.Int64) : Void {})
-  public function Emit(opcode:OpCode) : Void;
+  @:overload(function(opcode:OpCode, label:Label) : Void {})
+  @:overload(function(opcode:OpCode, labels:cs.NativeArray<Label>) : Void {})
+  @:overload(function(opcode:OpCode, local:LocalBuilder) : Void {})
+  @:overload(function(opcode:OpCode, meth:dotnet.system.reflection.MethodInfo) : Void {})
+  @:overload(function(opcode:OpCode, signature:SignatureHelper) : Void {})
+  @:overload(function(opcode:OpCode, str:String) : Void {})
+  public function Emit(opcode:OpCode, cls:cs.system.Type) : Void;
 
   public function EmitCall(opcode:OpCode, methodInfo:dotnet.system.reflection.MethodInfo, optionalParameterTypes:cs.NativeArray<cs.system.Type>) : Void;
 
-  @:overload(function(opcode:OpCode, callingConvention:dotnet.system.reflection.CallingConventions, returnType:cs.system.Type, parameterTypes:cs.NativeArray<cs.system.Type>, optionalParameterTypes:cs.NativeArray<cs.system.Type>) : Void {})
-  public function EmitCalli(opcode:OpCode, unmanagedCallConv:dotnet.system.runtime.interopservices.CallingConvention, returnType:cs.system.Type, parameterTypes:cs.NativeArray<cs.system.Type>) : Void;
+  @:overload(function(opcode:OpCode, unmanagedCallConv:dotnet.system.runtime.interopservices.CallingConvention, returnType:cs.system.Type, parameterTypes:cs.NativeArray<cs.system.Type>) : Void {})
+  public function EmitCalli(opcode:OpCode, callingConvention:dotnet.system.reflection.CallingConventions, returnType:cs.system.Type, parameterTypes:cs.NativeArray<cs.system.Type>, optionalParameterTypes:cs.NativeArray<cs.system.Type>) : Void;
 
-  @:overload(function(value:String) : Void {})
+  @:overload(function(fld:dotnet.system.reflection.FieldInfo) : Void {})
   @:overload(function(localBuilder:LocalBuilder) : Void {})
-  public function EmitWriteLine(fld:dotnet.system.reflection.FieldInfo) : Void;
+  public function EmitWriteLine(value:String) : Void;
 
   public function EndExceptionBlock() : Void;
 

@@ -18,9 +18,10 @@ extern class ListDictionary extends dotnet.system.Object  implements dotnet.syst
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  @:overload(function(comparer:dotnet.system.collections.IComparer) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(comparer:dotnet.system.collections.IComparer) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IDictionaryEnumerator;
 
   public function Remove(key:Dynamic) : Void;

@@ -11,12 +11,11 @@ extern class ActivationContext extends Object  implements IDisposable implements
   public var Form(default,never) : ActivationContext_ContextForm;
   public var Identity(default,never) : ApplicationIdentity;
 
-  @:overload(function(identity:ApplicationIdentity, manifestPaths:cs.NativeArray<String>) : ActivationContext {})
-  public static function CreatePartialActivationContext(identity:ApplicationIdentity) : ActivationContext;
+  @:overload(function(identity:ApplicationIdentity) : ActivationContext {})
+  public static function CreatePartialActivationContext(identity:ApplicationIdentity, manifestPaths:cs.NativeArray<String>) : ActivationContext;
 
-  public function Dispose() : Void;
-
-  override function Finalize() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }

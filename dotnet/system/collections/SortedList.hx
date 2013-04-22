@@ -25,15 +25,16 @@ extern class SortedList extends dotnet.system.Object  implements dotnet.system.I
 
   public function CopyTo(array:dotnet.system.Array, arrayIndex:Int) : Void;
 
-  @:overload(function(d:IDictionary, comparer:IComparer) : Void {})
-  @:overload(function(comparer:IComparer, capacity:Int) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(initialCapacity:Int) : Void {})
-  @:overload(function(d:IDictionary) : Void {})
+  @:overload(function(comparer:IComparer, capacity:Int) : Void {})
   @:overload(function(comparer:IComparer) : Void {})
-  public function new() : Void;
+  @:overload(function(d:IDictionary) : Void {})
+  public function new(d:IDictionary, comparer:IComparer) : Void;
 
   public function GetByIndex(index:Int) : Dynamic;
 
+  @:overload(function() : IEnumerator {})
   public function GetEnumerator() : IDictionaryEnumerator;
 
   public function GetKey(index:Int) : Dynamic;

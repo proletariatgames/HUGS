@@ -6,6 +6,7 @@ extern class XPathNodeIterator extends dotnet.system.Object  implements dotnet.s
   public var Current(default,never) : XPathNavigator;
   public var CurrentPosition(default,never) : Int;
 
+  @:overload(function() : Dynamic {})
   public function Clone() : XPathNodeIterator;
 
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;

@@ -6,7 +6,7 @@ extern class SoapElementAttribute extends dotnet.system.Attribute {
   public var ElementName : String;
   public var IsNullable : Bool;
 
-  @:overload(function(elementName:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(elementName:String) : Void;
 }
 

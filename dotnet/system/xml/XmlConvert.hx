@@ -24,14 +24,14 @@ extern class XmlConvert_Static {
 
   public static function ToChar(s:String) : dotnet.system.Char;
 
+  @:overload(function(s:String) : dotnet.system.DateTime {})
   @:overload(function(value:String, mode:XmlDateTimeSerializationMode) : dotnet.system.DateTime {})
-  @:overload(function(s:String, formats:cs.NativeArray<String>) : dotnet.system.DateTime {})
   @:overload(function(s:String, format:String) : dotnet.system.DateTime {})
-  public static function ToDateTime(s:String) : dotnet.system.DateTime;
+  public static function ToDateTime(s:String, formats:cs.NativeArray<String>) : dotnet.system.DateTime;
 
-  @:overload(function(s:String, formats:cs.NativeArray<String>) : dotnet.system.DateTimeOffset {})
+  @:overload(function(s:String) : dotnet.system.DateTimeOffset {})
   @:overload(function(s:String, format:String) : dotnet.system.DateTimeOffset {})
-  public static function ToDateTimeOffset(s:String) : dotnet.system.DateTimeOffset;
+  public static function ToDateTimeOffset(s:String, formats:cs.NativeArray<String>) : dotnet.system.DateTimeOffset;
 
   public static function ToDecimal(s:String) : dotnet.system.Decimal;
 
@@ -49,21 +49,21 @@ extern class XmlConvert_Static {
 
   public static function ToSingle(s:String) : Float;
 
-  @:overload(function(value:dotnet.system.DateTimeOffset, format:String) : String {})
-  @:overload(function(value:dotnet.system.DateTime, mode:XmlDateTimeSerializationMode) : String {})
-  @:overload(function(value:dotnet.system.DateTime, format:String) : String {})
-  @:overload(function(value:UInt) : String {})
+  @:overload(function(value:dotnet.system.Guid) : String {})
   @:overload(function(value:Int) : String {})
-  @:overload(function(value:Float) : String {})
+  @:overload(function(value:UInt) : String {})
+  @:overload(function(value:dotnet.system.Int64) : String {})
+  @:overload(function(value:dotnet.system.Char) : String {})
+  @:overload(function(value:Bool) : String {})
+  @:overload(function(value:dotnet.system.Decimal) : String {})
   @:overload(function(value:dotnet.system.UInt64) : String {})
   @:overload(function(value:dotnet.system.TimeSpan) : String {})
-  @:overload(function(value:dotnet.system.Int64) : String {})
-  @:overload(function(value:dotnet.system.Guid) : String {})
-  @:overload(function(value:dotnet.system.Decimal) : String {})
-  @:overload(function(value:dotnet.system.DateTimeOffset) : String {})
+  @:overload(function(value:Float) : String {})
   @:overload(function(value:dotnet.system.DateTime) : String {})
-  @:overload(function(value:dotnet.system.Char) : String {})
-  public static function ToString(value:Bool) : String;
+  @:overload(function(value:dotnet.system.DateTime, mode:XmlDateTimeSerializationMode) : String {})
+  @:overload(function(value:dotnet.system.DateTime, format:String) : String {})
+  @:overload(function(value:dotnet.system.DateTimeOffset) : String {})
+  public static function ToString(value:dotnet.system.DateTimeOffset, format:String) : String;
 
   public static function ToTimeSpan(s:String) : dotnet.system.TimeSpan;
 

@@ -17,8 +17,6 @@ extern class RealProxy extends dotnet.system.Object {
 
   public function InitializeServerObject(ctorMsg:dotnet.system.runtime.remoting.activation.IConstructionCallMessage) : dotnet.system.runtime.remoting.activation.IConstructionReturnMessage;
 
-  function InternalGetTransparentProxy(className:String) : Dynamic;
-
   public function Invoke(msg:dotnet.system.runtime.remoting.messaging.IMessage) : dotnet.system.runtime.remoting.messaging.IMessage;
 
   public function SetCOMIUnknown(i:dotnet.system.IntPtr) : Void;

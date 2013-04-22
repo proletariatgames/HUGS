@@ -19,12 +19,15 @@ extern class Stack<T> extends dotnet.system.Object  implements dotnet.system.col
 
   public function Contains(t:T) : Bool;
 
+  @:overload(function(dest:dotnet.system.Array, idx:Int) : Void {})
   public function CopyTo(dest:cs.NativeArray<T>, idx:Int) : Void;
 
+  @:overload(function() : Void {})
   @:overload(function(count:Int) : Void {})
-  @:overload(function(collection:IEnumerable<T>) : Void {})
-  public function new() : Void;
+  public function new(collection:IEnumerable<T>) : Void;
 
+  @:overload(function() : IEnumerator<T> {})
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : Stack_Enumerator<T>;
 
   public function Peek() : T;

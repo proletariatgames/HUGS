@@ -4,41 +4,42 @@ package dotnet.system.xml.serialization;
 extern class XmlSchemas extends dotnet.system.collections.CollectionBase  implements dotnet.system.collections.IEnumerable {
   public var IsCompiled(default,never) : Bool;
 
-  @:overload(function(schema:dotnet.system.xml.schema.XmlSchema, baseUri:dotnet.system.Uri) : Int {})
+  @:overload(function(schema:dotnet.system.xml.schema.XmlSchema) : Int {})
   @:overload(function(schemas:XmlSchemas) : Void {})
-  public function Add(schema:dotnet.system.xml.schema.XmlSchema) : Int;
+  @:overload(function(schema:dotnet.system.xml.schema.XmlSchema, baseUri:dotnet.system.Uri) : Int {})
+  @:overload(function(value:Dynamic) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
   public function AddReference(schema:dotnet.system.xml.schema.XmlSchema) : Void;
 
   public function Compile(handler:dotnet.system.xml.schema.ValidationEventHandler, fullCompile:Bool) : Void;
 
+  @:overload(function(schema:dotnet.system.xml.schema.XmlSchema) : Bool {})
   @:overload(function(targetNamespace:String) : Bool {})
-  public function Contains(schema:dotnet.system.xml.schema.XmlSchema) : Bool;
+  @:overload(function(value:Dynamic) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<dotnet.system.xml.schema.XmlSchema>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<dotnet.system.xml.schema.XmlSchema>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
   public function new() : Void;
 
   public function Find(name:dotnet.system.xml.XmlQualifiedName, type:cs.system.Type) : Dynamic;
 
-  override function GetEnumerator() : dotnet.system.collections.generic.IEnumerator<dotnet.system.xml.schema.XmlSchema>;
+  @:overload(function() : dotnet.system.collections.generic.IEnumerator<dotnet.system.xml.schema.XmlSchema> {})
+  override function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
   public function GetSchemas(ns:String) : dotnet.system.collections.IList;
 
-  public function IndexOf(schema:dotnet.system.xml.schema.XmlSchema) : Int;
+  @:overload(function(schema:dotnet.system.xml.schema.XmlSchema) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, schema:dotnet.system.xml.schema.XmlSchema) : Void;
+  @:overload(function(index:Int, schema:dotnet.system.xml.schema.XmlSchema) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
   public static function IsDataSet(schema:dotnet.system.xml.schema.XmlSchema) : Bool;
 
-  override function OnClear() : Void;
-
-  override function OnInsert(index:Int, value:Dynamic) : Void;
-
-  override function OnRemove(index:Int, value:Dynamic) : Void;
-
-  override function OnSet(index:Int, oldValue:Dynamic, newValue:Dynamic) : Void;
-
-  public function Remove(schema:dotnet.system.xml.schema.XmlSchema) : Void;
+  @:overload(function(schema:dotnet.system.xml.schema.XmlSchema) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

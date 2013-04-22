@@ -21,13 +21,10 @@ extern class SocketAsyncEventArgs extends dotnet.system.EventArgs  implements do
 
   public function new() : Void;
 
+  @:overload(function(disposing:Bool) : Void {})
   public function Dispose() : Void;
 
-  override function Finalize() : Void;
-
-  function OnCompleted(e:SocketAsyncEventArgs) : Void;
-
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Void {})
-  public function SetBuffer(offset:Int, count:Int) : Void;
+  @:overload(function(offset:Int, count:Int) : Void {})
+  public function SetBuffer(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Void;
 }
 

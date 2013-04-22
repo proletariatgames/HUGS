@@ -10,6 +10,7 @@ extern class ProviderCollection extends dotnet.system.Object  implements dotnet.
 
   public function Clear() : Void;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<ProviderBase>, index:Int) : Void;
 
   public function new() : Void;

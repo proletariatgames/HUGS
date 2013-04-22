@@ -3,18 +3,25 @@ package dotnet.system.componentmodel;
 @:native("System.ComponentModel.TypeListConverter")
 extern class TypeListConverter extends TypeConverter {
 
-  public override function CanConvertFrom(context:ITypeDescriptorContext, sourceType:cs.system.Type) : Bool;
+  @:overload(function(context:ITypeDescriptorContext, sourceType:cs.system.Type) : Bool {})
+  public override function CanConvertFrom(sourceType:cs.system.Type) : Bool;
 
-  public override function CanConvertTo(context:ITypeDescriptorContext, destinationType:cs.system.Type) : Bool;
+  @:overload(function(context:ITypeDescriptorContext, destinationType:cs.system.Type) : Bool {})
+  public override function CanConvertTo(destinationType:cs.system.Type) : Bool;
 
-  public override function ConvertFrom(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic) : Dynamic;
+  @:overload(function(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic) : Dynamic {})
+  public override function ConvertFrom(o:Dynamic) : Dynamic;
 
-  public override function ConvertTo(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic, destinationType:cs.system.Type) : Dynamic;
+  @:overload(function(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic, destinationType:cs.system.Type) : Dynamic {})
+  public override function ConvertTo(value:Dynamic, destinationType:cs.system.Type) : Dynamic;
 
-  public override function GetStandardValues(context:ITypeDescriptorContext) : TypeConverter_StandardValuesCollection;
+  @:overload(function(context:ITypeDescriptorContext) : TypeConverter_StandardValuesCollection {})
+  public override function GetStandardValues() : dotnet.system.collections.ICollection;
 
-  public override function GetStandardValuesExclusive(context:ITypeDescriptorContext) : Bool;
+  @:overload(function(context:ITypeDescriptorContext) : Bool {})
+  public override function GetStandardValuesExclusive() : Bool;
 
-  public override function GetStandardValuesSupported(context:ITypeDescriptorContext) : Bool;
+  @:overload(function(context:ITypeDescriptorContext) : Bool {})
+  public override function GetStandardValuesSupported() : Bool;
 }
 

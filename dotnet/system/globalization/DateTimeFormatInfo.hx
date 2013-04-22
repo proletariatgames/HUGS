@@ -41,8 +41,8 @@ extern class DateTimeFormatInfo extends dotnet.system.Object  implements dotnet.
 
   public function GetAbbreviatedMonthName(month:Int) : String;
 
-  @:overload(function(format:dotnet.system.Char) : cs.NativeArray<String> {})
-  public function GetAllDateTimePatterns() : cs.NativeArray<String>;
+  @:overload(function() : cs.NativeArray<String> {})
+  public function GetAllDateTimePatterns(format:dotnet.system.Char) : cs.NativeArray<String>;
 
   public function GetDayName(dayofweek:dotnet.system.DayOfWeek) : String;
 

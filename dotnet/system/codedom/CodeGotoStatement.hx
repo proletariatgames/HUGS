@@ -4,9 +4,7 @@ package dotnet.system.codedom;
 extern class CodeGotoStatement extends CodeStatement {
   public var Label : String;
 
-  override function Accept(visitor:ICodeDomVisitor) : Void;
-
-  @:overload(function(label:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(label:String) : Void;
 }
 

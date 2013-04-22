@@ -6,8 +6,8 @@ extern class InstanceDescriptor extends dotnet.system.Object {
   public var IsComplete(default,never) : Bool;
   public var MemberInfo(default,never) : dotnet.system.reflection.MemberInfo;
 
-  @:overload(function(member:dotnet.system.reflection.MemberInfo, arguments:dotnet.system.collections.ICollection, isComplete:Bool) : Void {})
-  public function new(member:dotnet.system.reflection.MemberInfo, arguments:dotnet.system.collections.ICollection) : Void;
+  @:overload(function(member:dotnet.system.reflection.MemberInfo, arguments:dotnet.system.collections.ICollection) : Void {})
+  public function new(member:dotnet.system.reflection.MemberInfo, arguments:dotnet.system.collections.ICollection, isComplete:Bool) : Void;
 
   public function Invoke() : Dynamic;
 }

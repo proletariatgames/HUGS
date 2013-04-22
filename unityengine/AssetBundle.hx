@@ -12,8 +12,8 @@ extern class AssetBundle extends Object {
 
   public function new() : Void;
 
-  @:overload(function(name:String, type:cs.system.Type) : Object {})
-  public function Load(name:String) : Object;
+  @:overload(function(name:String) : Object {})
+  public function Load(name:String, type:cs.system.Type) : Object;
 
   @:overload(function(type:cs.system.Type) : cs.NativeArray<Object> {})
   public function LoadAll() : cs.NativeArray<Object>;

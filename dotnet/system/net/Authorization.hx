@@ -8,8 +8,8 @@ extern class Authorization extends dotnet.system.Object {
   public var ProtectionRealm : cs.NativeArray<String>;
   public var MutuallyAuthenticated : Bool;
 
-  @:overload(function(token:String, complete:Bool, connectionGroupId:String) : Void {})
+  @:overload(function(token:String) : Void {})
   @:overload(function(token:String, complete:Bool) : Void {})
-  public function new(token:String) : Void;
+  public function new(token:String, complete:Bool, connectionGroupId:String) : Void;
 }
 

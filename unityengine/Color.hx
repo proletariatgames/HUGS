@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Color") @:final
-extern class Color {
+extern class Color extends dotnet.system.ValueType {
   public var r : Float;
   public var g : Float;
   public var b : Float;
@@ -24,12 +24,15 @@ extern class Color {
   @:overload(function(r:Float, g:Float, b:Float, a:Float) : Void {})
   public function new(r:Float, g:Float, b:Float) : Void;
 
-  public override function Equals(other:Dynamic) : Bool;
+  @:overload(function(other:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public static function Lerp(a:Color, b:Color, t:Float) : Color;
 
+  @:overload(function() : String {})
   @:overload(function(format:String) : String {})
   public override function ToString() : String;
 }

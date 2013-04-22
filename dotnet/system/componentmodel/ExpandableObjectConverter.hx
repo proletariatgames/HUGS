@@ -5,8 +5,10 @@ extern class ExpandableObjectConverter extends TypeConverter {
 
   public function new() : Void;
 
-  public override function GetProperties(context:ITypeDescriptorContext, value:Dynamic, attributes:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection;
+  @:overload(function(context:ITypeDescriptorContext, value:Dynamic, attributes:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection {})
+  public override function GetProperties(value:Dynamic) : PropertyDescriptorCollection;
 
-  public override function GetPropertiesSupported(context:ITypeDescriptorContext) : Bool;
+  @:overload(function(context:ITypeDescriptorContext) : Bool {})
+  public override function GetPropertiesSupported() : Bool;
 }
 

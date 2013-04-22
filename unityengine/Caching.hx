@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Caching") @:final
-extern class Caching {
+extern class Caching extends dotnet.system.Object {
   public static var index(default,never) : cs.NativeArray<CacheIndex>;
   public static var spaceFree(default,never) : dotnet.system.Int64;
   public static var maximumAvailableDiskSpace : dotnet.system.Int64;
@@ -12,10 +12,10 @@ extern class Caching {
   public static var enabled : Bool;
   public static var ready(default,never) : Bool;
 
-  @:overload(function(name:String, domain:String, size:Int, expiration:Int, signature:String) : Bool {})
+  @:overload(function(name:String, domain:String, size:dotnet.system.Int64, signature:String) : Bool {})
   @:overload(function(name:String, domain:String, size:dotnet.system.Int64, expiration:Int, signature:String) : Bool {})
-  @:overload(function(name:String, domain:String, size:Int, signature:String) : Bool {})
-  public static function Authorize(name:String, domain:String, size:dotnet.system.Int64, signature:String) : Bool;
+  @:overload(function(name:String, domain:String, size:Int, expiration:Int, signature:String) : Bool {})
+  public static function Authorize(name:String, domain:String, size:Int, signature:String) : Bool;
 
   public static function CleanCache() : Bool;
 

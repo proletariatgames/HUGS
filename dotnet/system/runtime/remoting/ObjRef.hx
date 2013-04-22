@@ -7,8 +7,8 @@ extern class ObjRef extends dotnet.system.Object  implements dotnet.system.runti
   public var TypeInfo : IRemotingTypeInfo;
   public var URI : String;
 
-  @:overload(function(o:dotnet.system.MarshalByRefObject, requestedType:cs.system.Type) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(o:dotnet.system.MarshalByRefObject, requestedType:cs.system.Type) : Void;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 

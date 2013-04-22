@@ -10,7 +10,8 @@ extern class CryptoAPITransform extends dotnet.system.Object  implements dotnet.
 
   public function Clear() : Void;
 
-  function Dispose() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function Reset() : Void;
 

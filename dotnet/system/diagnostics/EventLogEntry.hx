@@ -17,7 +17,8 @@ extern class EventLogEntry extends dotnet.system.componentmodel.Component  imple
   public var TimeWritten(default,never) : dotnet.system.DateTime;
   public var UserName(default,never) : String;
 
-  public function Equals(otherEntry:EventLogEntry) : Bool;
+  @:overload(function(otherEntry:EventLogEntry) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }

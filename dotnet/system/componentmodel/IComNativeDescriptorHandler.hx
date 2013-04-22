@@ -15,14 +15,14 @@ extern interface IComNativeDescriptorHandler {
 
   function GetEditor(component:Dynamic, baseEditorType:cs.system.Type) : Dynamic;
 
-  @:overload(function(component:Dynamic, attributes:cs.NativeArray<dotnet.system.Attribute>) : EventDescriptorCollection {})
-  function GetEvents(component:Dynamic) : EventDescriptorCollection;
+  @:overload(function(component:Dynamic) : EventDescriptorCollection {})
+  function GetEvents(component:Dynamic, attributes:cs.NativeArray<dotnet.system.Attribute>) : EventDescriptorCollection;
 
   function GetName(component:Dynamic) : String;
 
   function GetProperties(component:Dynamic, attributes:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection;
 
-  @:overload(function(component:Dynamic, propertyName:String, success:Bool) : Dynamic {})
-  function GetPropertyValue(component:Dynamic, dispid:Int, success:Bool) : Dynamic;
+  @:overload(function(component:Dynamic, dispid:Int, success:Bool) : Dynamic {})
+  function GetPropertyValue(component:Dynamic, propertyName:String, success:Bool) : Dynamic;
 }
 

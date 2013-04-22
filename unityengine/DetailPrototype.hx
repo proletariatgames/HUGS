@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.DetailPrototype") @:final
-extern class DetailPrototype {
+extern class DetailPrototype extends dotnet.system.Object {
   public var prototype : GameObject;
   public var prototypeTexture : Texture2D;
   public var minWidth : Float;

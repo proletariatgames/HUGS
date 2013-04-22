@@ -15,27 +15,23 @@ extern class Module extends dotnet.system.Object  implements ICustomAttributePro
 
   public function FindTypes(filter:TypeFilter, filterCriteria:Dynamic) : cs.NativeArray<cs.system.Type>;
 
-  @:overload(function(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
-  public function GetCustomAttributes(inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
+  @:overload(function(inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
+  public function GetCustomAttributes(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
 
-  @:overload(function(name:String, bindingAttr:BindingFlags) : FieldInfo {})
-  public function GetField(name:String) : FieldInfo;
+  @:overload(function(name:String) : FieldInfo {})
+  public function GetField(name:String, bindingAttr:BindingFlags) : FieldInfo;
 
-  @:overload(function(bindingFlags:BindingFlags) : cs.NativeArray<FieldInfo> {})
-  public function GetFields() : cs.NativeArray<FieldInfo>;
+  @:overload(function() : cs.NativeArray<FieldInfo> {})
+  public function GetFields(bindingFlags:BindingFlags) : cs.NativeArray<FieldInfo>;
 
   function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
 
-  @:overload(function(name:String, bindingAttr:BindingFlags, binder:Binder, callConvention:CallingConventions, types:cs.NativeArray<cs.system.Type>, modifiers:cs.NativeArray<ParameterModifier>) : MethodInfo {})
+  @:overload(function(name:String) : MethodInfo {})
   @:overload(function(name:String, types:cs.NativeArray<cs.system.Type>) : MethodInfo {})
-  public function GetMethod(name:String) : MethodInfo;
+  public function GetMethod(name:String, bindingAttr:BindingFlags, binder:Binder, callConvention:CallingConventions, types:cs.NativeArray<cs.system.Type>, modifiers:cs.NativeArray<ParameterModifier>) : MethodInfo;
 
-  function GetMethodImpl(name:String, bindingAttr:BindingFlags, binder:Binder, callConvention:CallingConventions, types:cs.NativeArray<cs.system.Type>, modifiers:cs.NativeArray<ParameterModifier>) : MethodInfo;
-
-  @:overload(function(bindingFlags:BindingFlags) : cs.NativeArray<MethodInfo> {})
-  public function GetMethods() : cs.NativeArray<MethodInfo>;
-
-  function GetModuleVersionId() : dotnet.system.Guid;
+  @:overload(function() : cs.NativeArray<MethodInfo> {})
+  public function GetMethods(bindingFlags:BindingFlags) : cs.NativeArray<MethodInfo>;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
@@ -43,9 +39,11 @@ extern class Module extends dotnet.system.Object  implements ICustomAttributePro
 
   public function GetSignerCertificate() : dotnet.system.security.cryptography.x509certificates.X509Certificate;
 
-  @:overload(function(className:String, throwOnError:Bool, ignoreCase:Bool) : cs.system.Type {})
+  @:overload(function(className:String) : cs.system.Type {})
   @:overload(function(className:String, ignoreCase:Bool) : cs.system.Type {})
-  public override function GetType(className:String) : cs.system.Type;
+  @:overload(function(className:String, throwOnError:Bool, ignoreCase:Bool) : cs.system.Type {})
+  @:overload(function() : cs.system.Type {})
+  public override function GetType() : cs.system.Type;
 
   function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:dotnet.system.IntPtr) : Void;
 
@@ -59,22 +57,23 @@ extern class Module extends dotnet.system.Object  implements ICustomAttributePro
 
   public function IsResource() : Bool;
 
-  @:overload(function(metadataToken:Int, genericTypeArguments:cs.NativeArray<cs.system.Type>, genericMethodArguments:cs.NativeArray<cs.system.Type>) : FieldInfo {})
-  public function ResolveField(metadataToken:Int) : FieldInfo;
+  @:overload(function(metadataToken:Int) : FieldInfo {})
+  public function ResolveField(metadataToken:Int, genericTypeArguments:cs.NativeArray<cs.system.Type>, genericMethodArguments:cs.NativeArray<cs.system.Type>) : FieldInfo;
 
-  @:overload(function(metadataToken:Int, genericTypeArguments:cs.NativeArray<cs.system.Type>, genericMethodArguments:cs.NativeArray<cs.system.Type>) : MemberInfo {})
-  public function ResolveMember(metadataToken:Int) : MemberInfo;
+  @:overload(function(metadataToken:Int) : MemberInfo {})
+  public function ResolveMember(metadataToken:Int, genericTypeArguments:cs.NativeArray<cs.system.Type>, genericMethodArguments:cs.NativeArray<cs.system.Type>) : MemberInfo;
 
-  @:overload(function(metadataToken:Int, genericTypeArguments:cs.NativeArray<cs.system.Type>, genericMethodArguments:cs.NativeArray<cs.system.Type>) : MethodBase {})
-  public function ResolveMethod(metadataToken:Int) : MethodBase;
+  @:overload(function(metadataToken:Int) : MethodBase {})
+  public function ResolveMethod(metadataToken:Int, genericTypeArguments:cs.NativeArray<cs.system.Type>, genericMethodArguments:cs.NativeArray<cs.system.Type>) : MethodBase;
 
   public function ResolveSignature(metadataToken:Int) : cs.NativeArray<dotnet.system.Byte>;
 
   public function ResolveString(metadataToken:Int) : String;
 
-  @:overload(function(metadataToken:Int, genericTypeArguments:cs.NativeArray<cs.system.Type>, genericMethodArguments:cs.NativeArray<cs.system.Type>) : cs.system.Type {})
-  public function ResolveType(metadataToken:Int) : cs.system.Type;
+  @:overload(function(metadataToken:Int) : cs.system.Type {})
+  public function ResolveType(metadataToken:Int, genericTypeArguments:cs.NativeArray<cs.system.Type>, genericMethodArguments:cs.NativeArray<cs.system.Type>) : cs.system.Type;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

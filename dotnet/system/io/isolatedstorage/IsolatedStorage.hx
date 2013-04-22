@@ -9,8 +9,6 @@ extern class IsolatedStorage extends dotnet.system.MarshalByRefObject {
   public var MaximumSize(default,never) : dotnet.system.UInt64;
   public var Scope(default,never) : IsolatedStorageScope;
 
-  function GetPermission(ps:dotnet.system.security.PermissionSet) : dotnet.system.security.permissions.IsolatedStoragePermission;
-
   public function Remove() : Void;
 }
 

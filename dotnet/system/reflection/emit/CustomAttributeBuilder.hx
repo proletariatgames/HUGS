@@ -3,10 +3,10 @@ package dotnet.system.reflection.emit;
 @:native("System.Reflection.Emit.CustomAttributeBuilder")
 extern class CustomAttributeBuilder extends dotnet.system.Object  implements dotnet.system.runtime.interopservices._CustomAttributeBuilder {
 
-  @:overload(function(con:dotnet.system.reflection.ConstructorInfo, constructorArgs:cs.NativeArray<dotnet.system.Object>, namedProperties:cs.NativeArray<dotnet.system.reflection.PropertyInfo>, propertyValues:cs.NativeArray<dotnet.system.Object>, namedFields:cs.NativeArray<dotnet.system.reflection.FieldInfo>, fieldValues:cs.NativeArray<dotnet.system.Object>) : Void {})
-  @:overload(function(con:dotnet.system.reflection.ConstructorInfo, constructorArgs:cs.NativeArray<dotnet.system.Object>, namedProperties:cs.NativeArray<dotnet.system.reflection.PropertyInfo>, propertyValues:cs.NativeArray<dotnet.system.Object>) : Void {})
+  @:overload(function(con:dotnet.system.reflection.ConstructorInfo, constructorArgs:cs.NativeArray<dotnet.system.Object>) : Void {})
   @:overload(function(con:dotnet.system.reflection.ConstructorInfo, constructorArgs:cs.NativeArray<dotnet.system.Object>, namedFields:cs.NativeArray<dotnet.system.reflection.FieldInfo>, fieldValues:cs.NativeArray<dotnet.system.Object>) : Void {})
-  public function new(con:dotnet.system.reflection.ConstructorInfo, constructorArgs:cs.NativeArray<dotnet.system.Object>) : Void;
+  @:overload(function(con:dotnet.system.reflection.ConstructorInfo, constructorArgs:cs.NativeArray<dotnet.system.Object>, namedProperties:cs.NativeArray<dotnet.system.reflection.PropertyInfo>, propertyValues:cs.NativeArray<dotnet.system.Object>) : Void {})
+  public function new(con:dotnet.system.reflection.ConstructorInfo, constructorArgs:cs.NativeArray<dotnet.system.Object>, namedProperties:cs.NativeArray<dotnet.system.reflection.PropertyInfo>, propertyValues:cs.NativeArray<dotnet.system.Object>, namedFields:cs.NativeArray<dotnet.system.reflection.FieldInfo>, fieldValues:cs.NativeArray<dotnet.system.Object>) : Void;
 
   function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
 

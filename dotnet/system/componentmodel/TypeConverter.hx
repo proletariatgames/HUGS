@@ -4,67 +4,69 @@ package dotnet.system.componentmodel;
 extern class TypeConverter_StandardValuesCollection extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
   public var Count(default,never) : Int;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
   public function new(values:dotnet.system.collections.ICollection) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 }
 
 @:native("System.ComponentModel.TypeConverter")
 extern class TypeConverter extends dotnet.system.Object {
 
-  @:overload(function(context:ITypeDescriptorContext, sourceType:cs.system.Type) : Bool {})
-  public function CanConvertFrom(sourceType:cs.system.Type) : Bool;
+  @:overload(function(sourceType:cs.system.Type) : Bool {})
+  public function CanConvertFrom(context:ITypeDescriptorContext, sourceType:cs.system.Type) : Bool;
 
-  @:overload(function(context:ITypeDescriptorContext, destinationType:cs.system.Type) : Bool {})
-  public function CanConvertTo(destinationType:cs.system.Type) : Bool;
+  @:overload(function(destinationType:cs.system.Type) : Bool {})
+  public function CanConvertTo(context:ITypeDescriptorContext, destinationType:cs.system.Type) : Bool;
 
-  @:overload(function(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic) : Dynamic {})
-  public function ConvertFrom(o:Dynamic) : Dynamic;
+  @:overload(function(o:Dynamic) : Dynamic {})
+  public function ConvertFrom(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic) : Dynamic;
 
+  @:overload(function(text:String) : Dynamic {})
+  public function ConvertFromInvariantString(context:ITypeDescriptorContext, text:String) : Dynamic;
+
+  @:overload(function(text:String) : Dynamic {})
   @:overload(function(context:ITypeDescriptorContext, text:String) : Dynamic {})
-  public function ConvertFromInvariantString(text:String) : Dynamic;
+  public function ConvertFromString(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, text:String) : Dynamic;
 
-  @:overload(function(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, text:String) : Dynamic {})
-  @:overload(function(context:ITypeDescriptorContext, text:String) : Dynamic {})
-  public function ConvertFromString(text:String) : Dynamic;
+  @:overload(function(value:Dynamic, destinationType:cs.system.Type) : Dynamic {})
+  public function ConvertTo(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic, destinationType:cs.system.Type) : Dynamic;
 
-  @:overload(function(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic, destinationType:cs.system.Type) : Dynamic {})
-  public function ConvertTo(value:Dynamic, destinationType:cs.system.Type) : Dynamic;
+  @:overload(function(value:Dynamic) : String {})
+  public function ConvertToInvariantString(context:ITypeDescriptorContext, value:Dynamic) : String;
 
+  @:overload(function(value:Dynamic) : String {})
   @:overload(function(context:ITypeDescriptorContext, value:Dynamic) : String {})
-  public function ConvertToInvariantString(value:Dynamic) : String;
+  public function ConvertToString(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic) : String;
 
-  @:overload(function(context:ITypeDescriptorContext, culture:dotnet.system.globalization.CultureInfo, value:Dynamic) : String {})
-  @:overload(function(context:ITypeDescriptorContext, value:Dynamic) : String {})
-  public function ConvertToString(value:Dynamic) : String;
-
-  @:overload(function(context:ITypeDescriptorContext, propertyValues:dotnet.system.collections.IDictionary) : Dynamic {})
-  public function CreateInstance(propertyValues:dotnet.system.collections.IDictionary) : Dynamic;
+  @:overload(function(propertyValues:dotnet.system.collections.IDictionary) : Dynamic {})
+  public function CreateInstance(context:ITypeDescriptorContext, propertyValues:dotnet.system.collections.IDictionary) : Dynamic;
 
   public function new() : Void;
 
-  @:overload(function(context:ITypeDescriptorContext) : Bool {})
-  public function GetCreateInstanceSupported() : Bool;
+  @:overload(function() : Bool {})
+  public function GetCreateInstanceSupported(context:ITypeDescriptorContext) : Bool;
 
-  @:overload(function(context:ITypeDescriptorContext, value:Dynamic, attributes:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection {})
+  @:overload(function(value:Dynamic) : PropertyDescriptorCollection {})
   @:overload(function(context:ITypeDescriptorContext, value:Dynamic) : PropertyDescriptorCollection {})
-  public function GetProperties(value:Dynamic) : PropertyDescriptorCollection;
+  public function GetProperties(context:ITypeDescriptorContext, value:Dynamic, attributes:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection;
 
-  @:overload(function(context:ITypeDescriptorContext) : Bool {})
-  public function GetPropertiesSupported() : Bool;
+  @:overload(function() : Bool {})
+  public function GetPropertiesSupported(context:ITypeDescriptorContext) : Bool;
 
-  @:overload(function(context:ITypeDescriptorContext) : TypeConverter_StandardValuesCollection {})
-  public function GetStandardValues() : dotnet.system.collections.ICollection;
+  @:overload(function() : dotnet.system.collections.ICollection {})
+  public function GetStandardValues(context:ITypeDescriptorContext) : TypeConverter_StandardValuesCollection;
 
-  @:overload(function(context:ITypeDescriptorContext) : Bool {})
-  public function GetStandardValuesExclusive() : Bool;
+  @:overload(function() : Bool {})
+  public function GetStandardValuesExclusive(context:ITypeDescriptorContext) : Bool;
 
-  @:overload(function(context:ITypeDescriptorContext) : Bool {})
-  public function GetStandardValuesSupported() : Bool;
+  @:overload(function() : Bool {})
+  public function GetStandardValuesSupported(context:ITypeDescriptorContext) : Bool;
 
-  @:overload(function(context:ITypeDescriptorContext, value:Dynamic) : Bool {})
-  public function IsValid(value:Dynamic) : Bool;
+  @:overload(function(value:Dynamic) : Bool {})
+  public function IsValid(context:ITypeDescriptorContext, value:Dynamic) : Bool;
 }
 

@@ -10,6 +10,7 @@ extern class RegistryPermissionAttribute extends CodeAccessSecurityAttribute {
   public var ViewAccessControl : String;
   public var ViewAndModify : String;
 
+  @:overload(function() : dotnet.system.security.IPermission {})
   public override function CreatePermission() : dotnet.system.security.IPermission;
 
   public function new(action:SecurityAction) : Void;

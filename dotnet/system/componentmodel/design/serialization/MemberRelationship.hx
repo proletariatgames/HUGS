@@ -9,8 +9,10 @@ extern class MemberRelationship extends dotnet.system.ValueType {
 
   public function new(owner:Dynamic, member:dotnet.system.componentmodel.MemberDescriptor) : Void;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

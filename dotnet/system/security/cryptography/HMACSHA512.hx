@@ -4,7 +4,7 @@ package dotnet.system.security.cryptography;
 extern class HMACSHA512 extends HMAC {
   public var ProduceLegacyHmacValues : Bool;
 
-  @:overload(function(key:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(key:cs.NativeArray<dotnet.system.Byte>) : Void;
 }
 

@@ -1,16 +1,14 @@
 package dotnet.system.net.mail;
 
 @:native("System.Net.Mail.MailAddressCollection")
-extern class MailAddressCollection {
+extern class MailAddressCollection extends dotnet.system.collections.objectmodel.Collection<MailAddress> {
 
-  public function Add(addresses:String) : Void;
+  @:overload(function(addresses:String) : Void {})
+  public override function Add(value:Dynamic) : Int;
 
   public function new() : Void;
 
-  override function InsertItem(index:Int, item:MailAddress) : Void;
-
-  override function SetItem(index:Int, item:MailAddress) : Void;
-
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

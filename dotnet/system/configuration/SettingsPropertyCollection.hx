@@ -18,18 +18,6 @@ extern class SettingsPropertyCollection extends dotnet.system.Object  implements
 
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
-  function OnAdd(property:SettingsProperty) : Void;
-
-  function OnAddComplete(property:SettingsProperty) : Void;
-
-  function OnClear() : Void;
-
-  function OnClearComplete() : Void;
-
-  function OnRemove(property:SettingsProperty) : Void;
-
-  function OnRemoveComplete(property:SettingsProperty) : Void;
-
   public function Remove(name:String) : Void;
 
   public function SetReadOnly() : Void;

@@ -3,9 +3,9 @@ package dotnet.system;
 @:native("System.DuplicateWaitObjectException")
 extern class DuplicateWaitObjectException extends ArgumentException {
 
-  @:overload(function(parameterName:String, message:String) : Void {})
-  @:overload(function(message:String, innerException:Exception) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(parameterName:String) : Void {})
-  public function new() : Void;
+  @:overload(function(parameterName:String, message:String) : Void {})
+  public function new(message:String, innerException:Exception) : Void;
 }
 

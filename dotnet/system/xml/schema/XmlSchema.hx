@@ -22,20 +22,20 @@ extern class XmlSchema extends XmlSchemaObject {
   public var Groups(default,never) : XmlSchemaObjectTable;
   public var Notations(default,never) : XmlSchemaObjectTable;
 
-  @:overload(function(handler:ValidationEventHandler, resolver:dotnet.system.xml.XmlResolver) : Void {})
-  public function Compile(handler:ValidationEventHandler) : Void;
+  @:overload(function(handler:ValidationEventHandler) : Void {})
+  public function Compile(handler:ValidationEventHandler, resolver:dotnet.system.xml.XmlResolver) : Void;
 
   public function new() : Void;
 
-  @:overload(function(stream:dotnet.system.io.Stream, validationEventHandler:ValidationEventHandler) : XmlSchema {})
   @:overload(function(reader:dotnet.system.io.TextReader, validationEventHandler:ValidationEventHandler) : XmlSchema {})
+  @:overload(function(stream:dotnet.system.io.Stream, validationEventHandler:ValidationEventHandler) : XmlSchema {})
   public static function Read(rdr:dotnet.system.xml.XmlReader, validationEventHandler:ValidationEventHandler) : XmlSchema;
 
-  @:overload(function(writer:dotnet.system.xml.XmlWriter, namespaceManager:dotnet.system.xml.XmlNamespaceManager) : Void {})
-  @:overload(function(writer:dotnet.system.io.TextWriter, namespaceManager:dotnet.system.xml.XmlNamespaceManager) : Void {})
-  @:overload(function(stream:dotnet.system.io.Stream, namespaceManager:dotnet.system.xml.XmlNamespaceManager) : Void {})
-  @:overload(function(writer:dotnet.system.xml.XmlWriter) : Void {})
+  @:overload(function(stream:dotnet.system.io.Stream) : Void {})
   @:overload(function(writer:dotnet.system.io.TextWriter) : Void {})
-  public function Write(stream:dotnet.system.io.Stream) : Void;
+  @:overload(function(writer:dotnet.system.xml.XmlWriter) : Void {})
+  @:overload(function(stream:dotnet.system.io.Stream, namespaceManager:dotnet.system.xml.XmlNamespaceManager) : Void {})
+  @:overload(function(writer:dotnet.system.io.TextWriter, namespaceManager:dotnet.system.xml.XmlNamespaceManager) : Void {})
+  public function Write(writer:dotnet.system.xml.XmlWriter, namespaceManager:dotnet.system.xml.XmlNamespaceManager) : Void;
 }
 

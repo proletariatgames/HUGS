@@ -12,9 +12,10 @@ extern class HttpListenerPrefixCollection extends dotnet.system.Object  implemen
 
   public function Contains(uriPrefix:String) : Bool;
 
-  @:overload(function(array:dotnet.system.Array, offset:Int) : Void {})
-  public function CopyTo(array:cs.NativeArray<String>, offset:Int) : Void;
+  @:overload(function(array:cs.NativeArray<String>, offset:Int) : Void {})
+  public function CopyTo(array:dotnet.system.Array, offset:Int) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.generic.IEnumerator<String>;
 
   public function Remove(uriPrefix:String) : Bool;

@@ -3,32 +3,28 @@ package dotnet.system.componentmodel.design;
 @:native("System.ComponentModel.Design.DesignerVerbCollection")
 extern class DesignerVerbCollection extends dotnet.system.collections.CollectionBase {
 
-  public function Add(value:DesignerVerb) : Int;
-
-  @:overload(function(value:DesignerVerbCollection) : Void {})
-  public function AddRange(value:cs.NativeArray<DesignerVerb>) : Void;
-
-  public function Contains(value:DesignerVerb) : Bool;
-
-  public function CopyTo(array:cs.NativeArray<DesignerVerb>, index:Int) : Void;
+  @:overload(function(value:DesignerVerb) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
   @:overload(function(value:cs.NativeArray<DesignerVerb>) : Void {})
-  public function new() : Void;
+  public function AddRange(value:DesignerVerbCollection) : Void;
 
-  public function IndexOf(value:DesignerVerb) : Int;
+  @:overload(function(value:DesignerVerb) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function Insert(index:Int, value:DesignerVerb) : Void;
+  @:overload(function(array:cs.NativeArray<DesignerVerb>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  override function OnClear() : Void;
+  @:overload(function() : Void {})
+  public function new(value:cs.NativeArray<DesignerVerb>) : Void;
 
-  override function OnInsert(index:Int, value:Dynamic) : Void;
+  @:overload(function(value:DesignerVerb) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  override function OnRemove(index:Int, value:Dynamic) : Void;
+  @:overload(function(index:Int, value:DesignerVerb) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  override function OnSet(index:Int, oldValue:Dynamic, newValue:Dynamic) : Void;
-
-  override function OnValidate(value:Dynamic) : Void;
-
-  public function Remove(value:DesignerVerb) : Void;
+  @:overload(function(value:DesignerVerb) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.StackTraceUtility")
-extern class StackTraceUtility {
+extern class StackTraceUtility extends dotnet.system.Object {
 
   public function new() : Void;
 

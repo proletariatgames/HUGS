@@ -10,8 +10,10 @@ extern class ArraySegment<T> extends ValueType {
   public function new(array:cs.NativeArray<T>) : Void;
 
   @:overload(function(obj:Dynamic) : Bool {})
-  public function Equals(obj:ArraySegment<T>) : Bool;
+  @:overload(function(obj:ArraySegment<T>) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

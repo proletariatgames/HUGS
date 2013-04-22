@@ -6,8 +6,6 @@ extern class CodeMemberEvent extends CodeTypeMember {
   public var PrivateImplementationType : CodeTypeReference;
   public var Type : CodeTypeReference;
 
-  override function Accept(visitor:ICodeDomVisitor) : Void;
-
   public function new() : Void;
 }
 

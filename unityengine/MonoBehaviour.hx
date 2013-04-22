@@ -4,8 +4,8 @@ package unityengine;
 extern class MonoBehaviour extends Behaviour {
   public var useGUILayout : Bool;
 
-  @:overload(function(methodName:String) : Void {})
-  public function CancelInvoke() : Void;
+  @:overload(function() : Void {})
+  public function CancelInvoke(methodName:String) : Void;
 
   public function new() : Void;
 
@@ -18,8 +18,8 @@ extern class MonoBehaviour extends Behaviour {
 
   public static function print(message:Dynamic) : Void;
 
-  @:overload(function(methodName:String, value:Dynamic) : Coroutine {})
   @:overload(function(routine:dotnet.system.collections.IEnumerator) : Coroutine {})
+  @:overload(function(methodName:String, value:Dynamic) : Coroutine {})
   public function StartCoroutine(methodName:String) : Coroutine;
 
   public function StartCoroutine_Auto(routine:dotnet.system.collections.IEnumerator) : Coroutine;

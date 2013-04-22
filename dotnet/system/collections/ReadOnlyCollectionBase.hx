@@ -6,6 +6,7 @@ extern class ReadOnlyCollectionBase extends dotnet.system.Object  implements ICo
 
   function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
+  @:overload(function() : IEnumerator {})
   public function GetEnumerator() : IEnumerator;
 }
 

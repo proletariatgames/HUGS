@@ -3,23 +3,29 @@ package dotnet.system.codedom;
 @:native("System.CodeDom.CodeDirectiveCollection")
 extern class CodeDirectiveCollection extends dotnet.system.collections.CollectionBase {
 
-  public function Add(value:CodeDirective) : Int;
+  @:overload(function(value:CodeDirective) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
   @:overload(function(value:cs.NativeArray<CodeDirective>) : Void {})
   public function AddRange(value:CodeDirectiveCollection) : Void;
 
-  public function Contains(value:CodeDirective) : Bool;
+  @:overload(function(value:CodeDirective) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<CodeDirective>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<CodeDirective>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
+  @:overload(function() : Void {})
   @:overload(function(value:cs.NativeArray<CodeDirective>) : Void {})
-  @:overload(function(value:CodeDirectiveCollection) : Void {})
-  public function new() : Void;
+  public function new(value:CodeDirectiveCollection) : Void;
 
-  public function IndexOf(value:CodeDirective) : Int;
+  @:overload(function(value:CodeDirective) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, value:CodeDirective) : Void;
+  @:overload(function(index:Int, value:CodeDirective) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  public function Remove(value:CodeDirective) : Void;
+  @:overload(function(value:CodeDirective) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

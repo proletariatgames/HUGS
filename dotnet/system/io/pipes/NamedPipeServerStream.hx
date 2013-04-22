@@ -6,16 +6,16 @@ extern class NamedPipeServerStream extends PipeStream {
 
   public function BeginWaitForConnection(_callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
 
-  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode, options:PipeOptions, inBufferSize:Int, outBufferSize:Int, pipeSecurity:PipeSecurity, inheritability:dotnet.system.io.HandleInheritability, additionalAccessRights:PipeAccessRights) : Void {})
-  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode, options:PipeOptions, inBufferSize:Int, outBufferSize:Int, pipeSecurity:PipeSecurity, inheritability:dotnet.system.io.HandleInheritability) : Void {})
-  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode, options:PipeOptions, inBufferSize:Int, outBufferSize:Int, pipeSecurity:PipeSecurity) : Void {})
-  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode, options:PipeOptions, inBufferSize:Int, outBufferSize:Int) : Void {})
-  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode, options:PipeOptions) : Void {})
-  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode) : Void {})
-  @:overload(function(direction:PipeDirection, isAsync:Bool, isConnected:Bool, safePipeHandle:dotnet.microsoft.win32.safehandles.SafePipeHandle) : Void {})
-  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int) : Void {})
+  @:overload(function(pipeName:String) : Void {})
   @:overload(function(pipeName:String, direction:PipeDirection) : Void {})
-  public function new(pipeName:String) : Void;
+  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int) : Void {})
+  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode) : Void {})
+  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode, options:PipeOptions) : Void {})
+  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode, options:PipeOptions, inBufferSize:Int, outBufferSize:Int) : Void {})
+  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode, options:PipeOptions, inBufferSize:Int, outBufferSize:Int, pipeSecurity:PipeSecurity) : Void {})
+  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode, options:PipeOptions, inBufferSize:Int, outBufferSize:Int, pipeSecurity:PipeSecurity, inheritability:dotnet.system.io.HandleInheritability) : Void {})
+  @:overload(function(pipeName:String, direction:PipeDirection, maxNumberOfServerInstances:Int, transmissionMode:PipeTransmissionMode, options:PipeOptions, inBufferSize:Int, outBufferSize:Int, pipeSecurity:PipeSecurity, inheritability:dotnet.system.io.HandleInheritability, additionalAccessRights:PipeAccessRights) : Void {})
+  public function new(direction:PipeDirection, isAsync:Bool, isConnected:Bool, safePipeHandle:dotnet.microsoft.win32.safehandles.SafePipeHandle) : Void;
 
   public function Disconnect() : Void;
 

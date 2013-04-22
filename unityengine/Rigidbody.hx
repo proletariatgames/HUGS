@@ -30,28 +30,28 @@ extern class Rigidbody extends Component {
   @:overload(function(explosionForce:Float, explosionPosition:Vector3, explosionRadius:Float, upwardsModifier:Float) : Void {})
   public function AddExplosionForce(explosionForce:Float, explosionPosition:Vector3, explosionRadius:Float) : Void;
 
-  @:overload(function(x:Float, y:Float, z:Float, mode:ForceMode) : Void {})
-  @:overload(function(x:Float, y:Float, z:Float) : Void {})
   @:overload(function(force:Vector3, mode:ForceMode) : Void {})
-  public function AddForce(force:Vector3) : Void;
+  @:overload(function(force:Vector3) : Void {})
+  @:overload(function(x:Float, y:Float, z:Float) : Void {})
+  public function AddForce(x:Float, y:Float, z:Float, mode:ForceMode) : Void;
 
   @:overload(function(force:Vector3, position:Vector3, mode:ForceMode) : Void {})
   public function AddForceAtPosition(force:Vector3, position:Vector3) : Void;
 
-  @:overload(function(x:Float, y:Float, z:Float, mode:ForceMode) : Void {})
-  @:overload(function(x:Float, y:Float, z:Float) : Void {})
   @:overload(function(force:Vector3, mode:ForceMode) : Void {})
-  public function AddRelativeForce(force:Vector3) : Void;
-
-  @:overload(function(x:Float, y:Float, z:Float, mode:ForceMode) : Void {})
+  @:overload(function(force:Vector3) : Void {})
   @:overload(function(x:Float, y:Float, z:Float) : Void {})
-  @:overload(function(torque:Vector3, mode:ForceMode) : Void {})
-  public function AddRelativeTorque(torque:Vector3) : Void;
+  public function AddRelativeForce(x:Float, y:Float, z:Float, mode:ForceMode) : Void;
 
-  @:overload(function(x:Float, y:Float, z:Float, mode:ForceMode) : Void {})
-  @:overload(function(x:Float, y:Float, z:Float) : Void {})
   @:overload(function(torque:Vector3, mode:ForceMode) : Void {})
-  public function AddTorque(torque:Vector3) : Void;
+  @:overload(function(torque:Vector3) : Void {})
+  @:overload(function(x:Float, y:Float, z:Float) : Void {})
+  public function AddRelativeTorque(x:Float, y:Float, z:Float, mode:ForceMode) : Void;
+
+  @:overload(function(torque:Vector3, mode:ForceMode) : Void {})
+  @:overload(function(torque:Vector3) : Void {})
+  @:overload(function(x:Float, y:Float, z:Float) : Void {})
+  public function AddTorque(x:Float, y:Float, z:Float, mode:ForceMode) : Void;
 
   public function ClosestPointOnBounds(position:Vector3) : Vector3;
 

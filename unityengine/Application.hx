@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Application.LogCallback") @:final
-extern class Application_LogCallback {
+extern class Application_LogCallback extends dotnet.system.MulticastDelegate {
 
   public function BeginInvoke(condition:String, stackTrace:String, type:LogType, _callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
 
@@ -13,7 +13,7 @@ extern class Application_LogCallback {
 }
 
 @:native("UnityEngine.Application") @:final
-extern class Application {
+extern class Application extends dotnet.system.Object {
   public static var loadedLevel(default,never) : Int;
   public static var loadedLevelName(default,never) : String;
   public static var isLoadingLevel(default,never) : Bool;
@@ -44,8 +44,8 @@ extern class Application {
 
   public static function CancelQuit() : Void;
 
-  @:overload(function(levelName:String) : Bool {})
-  public static function CanStreamedLevelBeLoaded(levelIndex:Int) : Bool;
+  @:overload(function(levelIndex:Int) : Bool {})
+  public static function CanStreamedLevelBeLoaded(levelName:String) : Bool;
 
   @:overload(function(filename:String, superSize:Int) : Void {})
   public static function CaptureScreenshot(filename:String) : Void;
@@ -60,24 +60,24 @@ extern class Application {
 
   public static function ExternalEval(script:String) : Void;
 
-  @:overload(function(levelName:String) : Float {})
-  public static function GetStreamProgressForLevel(levelIndex:Int) : Float;
+  @:overload(function(levelIndex:Int) : Float {})
+  public static function GetStreamProgressForLevel(levelName:String) : Float;
 
   public static function HasProLicense() : Bool;
 
   public static function HasUserAuthorization(mode:UserAuthorization) : Bool;
 
-  @:overload(function(name:String) : Void {})
-  public static function LoadLevel(index:Int) : Void;
+  @:overload(function(index:Int) : Void {})
+  public static function LoadLevel(name:String) : Void;
 
-  @:overload(function(name:String) : Void {})
-  public static function LoadLevelAdditive(index:Int) : Void;
+  @:overload(function(index:Int) : Void {})
+  public static function LoadLevelAdditive(name:String) : Void;
 
-  @:overload(function(levelName:String) : AsyncOperation {})
-  public static function LoadLevelAdditiveAsync(index:Int) : AsyncOperation;
+  @:overload(function(index:Int) : AsyncOperation {})
+  public static function LoadLevelAdditiveAsync(levelName:String) : AsyncOperation;
 
-  @:overload(function(levelName:String) : AsyncOperation {})
-  public static function LoadLevelAsync(index:Int) : AsyncOperation;
+  @:overload(function(index:Int) : AsyncOperation {})
+  public static function LoadLevelAsync(levelName:String) : AsyncOperation;
 
   public static function OpenURL(url:String) : Void;
 

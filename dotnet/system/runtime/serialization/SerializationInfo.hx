@@ -7,16 +7,16 @@ extern class SerializationInfo extends dotnet.system.Object {
   public var MemberCount(default,never) : Int;
 
   @:overload(function(name:String, value:Dynamic, type:cs.system.Type) : Void {})
-  @:overload(function(name:String, value:UInt) : Void {})
   @:overload(function(name:String, value:Int) : Void {})
+  @:overload(function(name:String, value:UInt) : Void {})
+  @:overload(function(name:String, value:Bool) : Void {})
+  @:overload(function(name:String, value:dotnet.system.Char) : Void {})
   @:overload(function(name:String, value:Float) : Void {})
-  @:overload(function(name:String, value:Dynamic) : Void {})
-  @:overload(function(name:String, value:dotnet.system.UInt64) : Void {})
-  @:overload(function(name:String, value:dotnet.system.Int64) : Void {})
   @:overload(function(name:String, value:dotnet.system.Decimal) : Void {})
   @:overload(function(name:String, value:dotnet.system.DateTime) : Void {})
-  @:overload(function(name:String, value:dotnet.system.Char) : Void {})
-  public function AddValue(name:String, value:Bool) : Void;
+  @:overload(function(name:String, value:dotnet.system.Int64) : Void {})
+  @:overload(function(name:String, value:dotnet.system.UInt64) : Void {})
+  public function AddValue(name:String, value:Dynamic) : Void;
 
   public function new(type:cs.system.Type, converter:IFormatterConverter) : Void;
 

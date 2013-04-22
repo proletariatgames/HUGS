@@ -19,16 +19,14 @@ extern class PerformanceCounter extends dotnet.system.componentmodel.Component  
 
   public static function CloseSharedResources() : Void;
 
-  @:overload(function(categoryName:String, counterName:String, instanceName:String, readOnly:Bool) : Void {})
-  @:overload(function(categoryName:String, counterName:String, instanceName:String, machineName:String) : Void {})
+  @:overload(function() : Void {})
+  @:overload(function(categoryName:String, counterName:String) : Void {})
   @:overload(function(categoryName:String, counterName:String, readOnly:Bool) : Void {})
   @:overload(function(categoryName:String, counterName:String, instanceName:String) : Void {})
-  @:overload(function(categoryName:String, counterName:String) : Void {})
-  public function new() : Void;
+  @:overload(function(categoryName:String, counterName:String, instanceName:String, readOnly:Bool) : Void {})
+  public function new(categoryName:String, counterName:String, instanceName:String, machineName:String) : Void;
 
   public function Decrement() : dotnet.system.Int64;
-
-  override function Dispose(disposing:Bool) : Void;
 
   public function EndInit() : Void;
 

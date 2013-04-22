@@ -13,7 +13,7 @@ extern class SignatureDescription extends dotnet.system.Object {
 
   public function CreateFormatter(key:AsymmetricAlgorithm) : AsymmetricSignatureFormatter;
 
-  @:overload(function(el:dotnet.system.security.SecurityElement) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(el:dotnet.system.security.SecurityElement) : Void;
 }
 

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.SplatPrototype") @:final
-extern class SplatPrototype {
+extern class SplatPrototype extends dotnet.system.Object {
   public var texture : Texture2D;
   public var normalMap : Texture2D;
   public var tileSize : Vector2;

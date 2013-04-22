@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.GUISettings") @:final
-extern class GUISettings {
+extern class GUISettings extends dotnet.system.Object {
   public var doubleClickSelectsWord : Bool;
   public var tripleClickSelectsLine : Bool;
   public var cursorColor : Color;

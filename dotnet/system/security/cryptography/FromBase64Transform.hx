@@ -9,11 +9,11 @@ extern class FromBase64Transform extends dotnet.system.Object  implements dotnet
 
   public function Clear() : Void;
 
-  @:overload(function(whitespaces:FromBase64TransformMode) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(whitespaces:FromBase64TransformMode) : Void;
 
-
-  override function Finalize() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function TransformBlock(inputBuffer:cs.NativeArray<dotnet.system.Byte>, inputOffset:Int, inputCount:Int, outputBuffer:cs.NativeArray<dotnet.system.Byte>, outputOffset:Int) : Int;
 

@@ -13,6 +13,7 @@ extern class GatewayIPAddressInformationCollection extends dotnet.system.Object 
 
   public function CopyTo(array:cs.NativeArray<GatewayIPAddressInformation>, offset:Int) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.generic.IEnumerator<GatewayIPAddressInformation>;
 
   public function Remove(address:GatewayIPAddressInformation) : Bool;

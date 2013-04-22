@@ -12,10 +12,13 @@ extern class ApplicationId extends Object {
 
   public function new(publicKeyToken:cs.NativeArray<Byte>, name:String, version:Version, processorArchitecture:String, culture:String) : Void;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

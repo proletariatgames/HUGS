@@ -19,11 +19,12 @@ extern class MailMessage extends dotnet.system.Object  implements dotnet.system.
   public var SubjectEncoding : dotnet.system.text.Encoding;
   public var To(default,never) : MailAddressCollection;
 
-  @:overload(function(from:String, to:String, subject:String, body:String) : Void {})
-  @:overload(function(from:String, to:String) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(from:MailAddress, to:MailAddress) : Void {})
-  public function new() : Void;
+  @:overload(function(from:String, to:String) : Void {})
+  public function new(from:String, to:String, subject:String, body:String) : Void;
 
-  public function Dispose() : Void;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 }
 

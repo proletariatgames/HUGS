@@ -5,8 +5,8 @@ extern class ClientChannelSinkStack extends dotnet.system.Object  implements ICl
 
   public function AsyncProcessResponse(headers:ITransportHeaders, stream:dotnet.system.io.Stream) : Void;
 
-  @:overload(function(replySink:dotnet.system.runtime.remoting.messaging.IMessageSink) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(replySink:dotnet.system.runtime.remoting.messaging.IMessageSink) : Void;
 
   public function DispatchException(e:dotnet.system.Exception) : Void;
 

@@ -4,9 +4,9 @@ package dotnet.system.runtime.interopservices;
 extern class ExternalException extends dotnet.system.SystemException {
   public var ErrorCode(default,never) : Int;
 
-  @:overload(function(message:String, inner:dotnet.system.Exception) : Void {})
-  @:overload(function(message:String, errorCode:Int) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(message:String) : Void {})
-  public function new() : Void;
+  @:overload(function(message:String, inner:dotnet.system.Exception) : Void {})
+  public function new(message:String, errorCode:Int) : Void;
 }
 

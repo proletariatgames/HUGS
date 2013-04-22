@@ -10,14 +10,10 @@ extern class MemberDescriptor extends dotnet.system.Object {
   public var Name(default,never) : String;
   public var IsBrowsable(default,never) : Bool;
 
-  function CreateAttributeCollection() : AttributeCollection;
-
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
-  function FillAttributes(attributeList:dotnet.system.collections.IList) : Void;
-
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
-
-  function GetInvocationTarget(type:cs.system.Type, instance:Dynamic) : Dynamic;
 }
 

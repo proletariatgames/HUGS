@@ -1,7 +1,7 @@
 package unityengine.socialplatforms.impl;
 
 @:native("UnityEngine.SocialPlatforms.Impl.Score")
-extern class Score implements dotnet.unityengine.socialplatforms.IScore {
+extern class Score extends dotnet.system.Object  implements dotnet.unityengine.socialplatforms.IScore {
   public var leaderboardID : String;
   public var value : dotnet.system.Int64;
   public var date(default,never) : dotnet.system.DateTime;
@@ -9,9 +9,9 @@ extern class Score implements dotnet.unityengine.socialplatforms.IScore {
   public var userID(default,never) : String;
   public var rank(default,never) : Int;
 
-  @:overload(function(leaderboardID:String, value:dotnet.system.Int64, userID:String, date:dotnet.system.DateTime, formattedValue:String, rank:Int) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(leaderboardID:String, value:dotnet.system.Int64) : Void {})
-  public function new() : Void;
+  public function new(leaderboardID:String, value:dotnet.system.Int64, userID:String, date:dotnet.system.DateTime, formattedValue:String, rank:Int) : Void;
 
   public function ReportScore(_callback:dotnet.system.Action<Bool>) : Void;
 
@@ -23,6 +23,7 @@ extern class Score implements dotnet.unityengine.socialplatforms.IScore {
 
   public function SetUserID(userID:String) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

@@ -6,6 +6,7 @@ extern class StrongNameIdentityPermissionAttribute extends CodeAccessSecurityAtt
   public var PublicKey : String;
   public var Version : String;
 
+  @:overload(function() : dotnet.system.security.IPermission {})
   public override function CreatePermission() : dotnet.system.security.IPermission;
 
   public function new(action:SecurityAction) : Void;

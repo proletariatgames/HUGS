@@ -7,8 +7,6 @@ extern class Object {
 
   public function Equals(obj:Dynamic) : Bool;
 
-  function Finalize() : Void;
-
   public function GetHashCode() : Int;
 
   public function GetType() : cs.system.Type;

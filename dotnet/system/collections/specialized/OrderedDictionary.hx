@@ -17,17 +17,20 @@ extern class OrderedDictionary extends dotnet.system.Object  implements dotnet.s
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  @:overload(function(capacity:Int, equalityComparer:dotnet.system.collections.IEqualityComparer) : Void {})
-  @:overload(function(equalityComparer:dotnet.system.collections.IEqualityComparer) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(capacity:Int) : Void {})
-  public function new() : Void;
+  @:overload(function(equalityComparer:dotnet.system.collections.IEqualityComparer) : Void {})
+  public function new(capacity:Int, equalityComparer:dotnet.system.collections.IEqualityComparer) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IDictionaryEnumerator;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   public function Insert(index:Int, key:Dynamic, value:Dynamic) : Void;
 
+  @:overload(function(sender:Dynamic) : Void {})
+  function OnDeserialization(sender:Dynamic) : Void;
 
   public function Remove(key:Dynamic) : Void;
 

@@ -12,8 +12,8 @@ extern class CodeIdentifiers extends dotnet.system.Object {
 
   public function Clear() : Void;
 
-  @:overload(function(caseSensitive:Bool) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(caseSensitive:Bool) : Void;
 
   public function IsInUse(identifier:String) : Bool;
 

@@ -5,8 +5,8 @@ extern class SoapSchemaExporter extends dotnet.system.Object {
 
   public function new(schemas:XmlSchemas) : Void;
 
-  @:overload(function(xmlMembersMapping:XmlMembersMapping, exportEnclosingType:Bool) : Void {})
-  public function ExportMembersMapping(xmlMembersMapping:XmlMembersMapping) : Void;
+  @:overload(function(xmlMembersMapping:XmlMembersMapping) : Void {})
+  public function ExportMembersMapping(xmlMembersMapping:XmlMembersMapping, exportEnclosingType:Bool) : Void;
 
   public function ExportTypeMapping(xmlTypeMapping:XmlTypeMapping) : Void;
 }

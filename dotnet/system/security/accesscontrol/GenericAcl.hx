@@ -11,12 +11,12 @@ extern class GenericAcl extends dotnet.system.Object  implements dotnet.system.c
   public var Revision(default,never) : UInt;
   public var SyncRoot(default,never) : Dynamic;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<GenericAce>, index:Int) : Void;
 
   public function GetBinaryForm(binaryForm:cs.NativeArray<dotnet.system.Byte>, offset:Int) : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : AceEnumerator;
-
-  function GetSddlForm(sdFlags:ControlFlags, isDacl:Bool) : String;
 }
 

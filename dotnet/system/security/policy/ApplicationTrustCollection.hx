@@ -13,14 +13,16 @@ extern class ApplicationTrustCollection extends dotnet.system.Object  implements
 
   public function Clear() : Void;
 
+  @:overload(function(array:dotnet.system.Array, index:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<ApplicationTrust>, index:Int) : Void;
 
   public function Find(applicationIdentity:dotnet.system.ApplicationIdentity, versionMatch:ApplicationVersionMatch) : ApplicationTrustCollection;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : ApplicationTrustEnumerator;
 
-  @:overload(function(applicationIdentity:dotnet.system.ApplicationIdentity, versionMatch:ApplicationVersionMatch) : Void {})
-  public function Remove(trust:ApplicationTrust) : Void;
+  @:overload(function(trust:ApplicationTrust) : Void {})
+  public function Remove(applicationIdentity:dotnet.system.ApplicationIdentity, versionMatch:ApplicationVersionMatch) : Void;
 
   @:overload(function(trusts:cs.NativeArray<ApplicationTrust>) : Void {})
   public function RemoveRange(trusts:ApplicationTrustCollection) : Void;

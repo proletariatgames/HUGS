@@ -7,7 +7,7 @@ extern class CaseInsensitiveComparer extends dotnet.system.Object  implements IC
 
   public function Compare(a:Dynamic, b:Dynamic) : Int;
 
-  @:overload(function(culture:dotnet.system.globalization.CultureInfo) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(culture:dotnet.system.globalization.CultureInfo) : Void;
 }
 

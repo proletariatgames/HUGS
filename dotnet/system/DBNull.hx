@@ -30,6 +30,7 @@ extern class DBNull extends Object  implements IConvertible implements dotnet.sy
 
   function ToSingle(provider:IFormatProvider) : Float;
 
+  @:overload(function() : String {})
   @:overload(function(provider:IFormatProvider) : String {})
   public override function ToString() : String;
 

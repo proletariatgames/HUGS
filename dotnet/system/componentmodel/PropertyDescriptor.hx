@@ -14,24 +14,20 @@ extern class PropertyDescriptor extends MemberDescriptor {
 
   public function CanResetValue(component:Dynamic) : Bool;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
-  override function FillAttributes(attributeList:dotnet.system.collections.IList) : Void;
-
-  @:overload(function(instance:Dynamic, filter:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection {})
+  @:overload(function() : PropertyDescriptorCollection {})
   @:overload(function(instance:Dynamic) : PropertyDescriptorCollection {})
   @:overload(function(filter:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection {})
-  public function GetChildProperties() : PropertyDescriptorCollection;
+  public function GetChildProperties(instance:Dynamic, filter:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection;
 
   public function GetEditor(editorBaseType:cs.system.Type) : Dynamic;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
-  override function GetInvocationTarget(type:cs.system.Type, instance:Dynamic) : Dynamic;
-
   public function GetValue(component:Dynamic) : Dynamic;
-
-  function OnValueChanged(component:Dynamic, e:dotnet.system.EventArgs) : Void;
 
   public function RemoveValueChanged(component:Dynamic, handler:dotnet.system.EventHandler) : Void;
 

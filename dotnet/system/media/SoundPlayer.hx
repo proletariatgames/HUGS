@@ -11,21 +11,15 @@ extern class SoundPlayer extends dotnet.system.componentmodel.Component  impleme
   public var Stream : dotnet.system.io.Stream;
   public var Tag : Dynamic;
 
+  @:overload(function() : Void {})
   @:overload(function(stream:dotnet.system.io.Stream) : Void {})
-  @:overload(function(soundLocation:String) : Void {})
-  public function new() : Void;
+  public function new(soundLocation:String) : Void;
 
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   public function Load() : Void;
 
   public function LoadAsync() : Void;
-
-  function OnLoadCompleted(e:dotnet.system.componentmodel.AsyncCompletedEventArgs) : Void;
-
-  function OnSoundLocationChanged(e:dotnet.system.EventArgs) : Void;
-
-  function OnStreamChanged(e:dotnet.system.EventArgs) : Void;
 
   public function Play() : Void;
 

@@ -2,9 +2,6 @@ package dotnet.system.reflection.emit;
 
 @:native("System.Reflection.Emit.LocalBuilder") @:final
 extern class LocalBuilder extends dotnet.system.reflection.LocalVariableInfo  implements dotnet.system.runtime.interopservices._LocalBuilder {
-  public override var LocalType(default,never) : cs.system.Type;
-  public override var IsPinned(default,never) : Bool;
-  public override var LocalIndex(default,never) : Int;
 
   function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
 

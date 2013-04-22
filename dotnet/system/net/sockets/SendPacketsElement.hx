@@ -8,11 +8,11 @@ extern class SendPacketsElement extends dotnet.system.Object {
   public var FilePath(default,never) : String;
   public var Offset(default,never) : Int;
 
-  @:overload(function(filepath:String, offset:Int, count:Int, endOfPacket:Bool) : Void {})
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int, endOfPacket:Bool) : Void {})
-  @:overload(function(filepath:String, offset:Int, count:Int) : Void {})
+  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>) : Void {})
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Void {})
+  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int, endOfPacket:Bool) : Void {})
   @:overload(function(filepath:String) : Void {})
-  public function new(buffer:cs.NativeArray<dotnet.system.Byte>) : Void;
+  @:overload(function(filepath:String, offset:Int, count:Int) : Void {})
+  public function new(filepath:String, offset:Int, count:Int, endOfPacket:Bool) : Void;
 }
 

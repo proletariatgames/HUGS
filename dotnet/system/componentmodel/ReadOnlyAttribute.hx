@@ -9,10 +9,13 @@ extern class ReadOnlyAttribute extends dotnet.system.Attribute {
 
   public function new(read_only:Bool) : Void;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : Bool {})
   public override function IsDefaultAttribute() : Bool;
 }
 

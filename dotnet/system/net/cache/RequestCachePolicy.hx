@@ -4,9 +4,10 @@ package dotnet.system.net.cache;
 extern class RequestCachePolicy extends dotnet.system.Object {
   public var Level(default,never) : RequestCacheLevel;
 
-  @:overload(function(level:RequestCacheLevel) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(level:RequestCacheLevel) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

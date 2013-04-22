@@ -7,11 +7,8 @@ extern class CriticalHandle extends dotnet.system.runtime.constrainedexecution.C
 
   public function Close() : Void;
 
-  public function Dispose() : Void;
-
-  override function Finalize() : Void;
-
-  function ReleaseHandle() : Bool;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function SetHandleAsInvalid() : Void;
 }

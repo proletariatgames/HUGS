@@ -2,15 +2,11 @@ package dotnet.system.runtime.interopservices;
 
 @:native("System.Runtime.InteropServices._MemberInfo")
 extern interface _MemberInfo {
-  var DeclaringType(default,never) : cs.system.Type;
-  var MemberType(default,never) : dotnet.system.reflection.MemberTypes;
-  var Name(default,never) : String;
-  var ReflectedType(default,never) : cs.system.Type;
 
   function Equals(other:Dynamic) : Bool;
 
-  @:overload(function(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
-  function GetCustomAttributes(inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
+  @:overload(function(inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
+  function GetCustomAttributes(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
 
   function GetHashCode() : Int;
 

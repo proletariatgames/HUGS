@@ -4,7 +4,7 @@ package dotnet.system.net.configuration;
 extern class BypassElement extends dotnet.system.configuration.ConfigurationElement {
   public var Address : String;
 
-  @:overload(function(address:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(address:String) : Void;
 }
 

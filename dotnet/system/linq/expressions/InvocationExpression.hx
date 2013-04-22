@@ -4,7 +4,5 @@ package dotnet.system.linq.expressions;
 extern class InvocationExpression extends Expression {
   public var Expression(default,never) : Expression;
   public var Arguments(default,never) : dotnet.system.collections.objectmodel.ReadOnlyCollection<Expression>;
-
-  override function Emit(ec:EmitContext) : Void;
 }
 

@@ -9,15 +9,19 @@ extern class StringComparer extends Object  implements dotnet.system.collections
   public static var Ordinal(default,never) : StringComparer;
   public static var OrdinalIgnoreCase(default,never) : StringComparer;
 
-  @:overload(function(x:String, y:String) : Int {})
-  public function Compare(x:Dynamic, y:Dynamic) : Int;
+  @:overload(function(x:Dynamic, y:Dynamic) : Int {})
+  public function Compare(x:String, y:String) : Int;
 
   public static function Create(culture:dotnet.system.globalization.CultureInfo, ignoreCase:Bool) : StringComparer;
 
+  @:overload(function(x:Dynamic, y:Dynamic) : Bool {})
   @:overload(function(x:String, y:String) : Bool {})
-  public override function Equals(x:Dynamic, y:Dynamic) : Bool;
+  @:overload(function(obj:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function(obj:Dynamic) : Int {})
   @:overload(function(obj:String) : Int {})
-  public override function GetHashCode(obj:Dynamic) : Int;
+  @:overload(function() : Int {})
+  public override function GetHashCode() : Int;
 }
 

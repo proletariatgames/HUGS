@@ -5,7 +5,7 @@ extern class XmlTextAttribute extends dotnet.system.Attribute {
   public var DataType : String;
   public var Type : cs.system.Type;
 
-  @:overload(function(type:cs.system.Type) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(type:cs.system.Type) : Void;
 }
 

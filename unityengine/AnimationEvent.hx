@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.AnimationEvent") @:final
-extern class AnimationEvent {
+extern class AnimationEvent extends dotnet.system.Object {
   public var data : String;
   public var stringParameter : String;
   public var floatParameter : Float;
@@ -13,7 +13,5 @@ extern class AnimationEvent {
   public var animationState(default,never) : AnimationState;
 
   public function new() : Void;
-
-  override function Finalize() : Void;
 }
 

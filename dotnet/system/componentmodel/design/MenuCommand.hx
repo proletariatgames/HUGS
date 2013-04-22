@@ -13,11 +13,10 @@ extern class MenuCommand extends dotnet.system.Object {
 
   public function new(handler:dotnet.system.EventHandler, command:CommandID) : Void;
 
-  @:overload(function(arg:Dynamic) : Void {})
-  public function Invoke() : Void;
+  @:overload(function() : Void {})
+  public function Invoke(arg:Dynamic) : Void;
 
-  function OnCommandChanged(e:dotnet.system.EventArgs) : Void;
-
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

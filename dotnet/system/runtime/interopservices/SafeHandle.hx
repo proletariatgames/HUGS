@@ -13,11 +13,8 @@ extern class SafeHandle extends dotnet.system.runtime.constrainedexecution.Criti
 
   public function DangerousRelease() : Void;
 
-  public function Dispose() : Void;
-
-  override function Finalize() : Void;
-
-  function ReleaseHandle() : Bool;
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function SetHandleAsInvalid() : Void;
 }

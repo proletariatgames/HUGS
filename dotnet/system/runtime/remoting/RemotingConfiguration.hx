@@ -22,17 +22,17 @@ extern class RemotingConfiguration extends dotnet.system.Object {
 
   public static function IsActivationAllowed(svrType:cs.system.Type) : Bool;
 
-  @:overload(function(typeName:String, assemblyName:String) : ActivatedClientTypeEntry {})
-  public static function IsRemotelyActivatedClientType(svrType:cs.system.Type) : ActivatedClientTypeEntry;
+  @:overload(function(svrType:cs.system.Type) : ActivatedClientTypeEntry {})
+  public static function IsRemotelyActivatedClientType(typeName:String, assemblyName:String) : ActivatedClientTypeEntry;
 
-  @:overload(function(typeName:String, assemblyName:String) : WellKnownClientTypeEntry {})
-  public static function IsWellKnownClientType(svrType:cs.system.Type) : WellKnownClientTypeEntry;
+  @:overload(function(svrType:cs.system.Type) : WellKnownClientTypeEntry {})
+  public static function IsWellKnownClientType(typeName:String, assemblyName:String) : WellKnownClientTypeEntry;
 
-  @:overload(function(type:cs.system.Type, appUrl:String) : Void {})
-  public static function RegisterActivatedClientType(entry:ActivatedClientTypeEntry) : Void;
+  @:overload(function(entry:ActivatedClientTypeEntry) : Void {})
+  public static function RegisterActivatedClientType(type:cs.system.Type, appUrl:String) : Void;
 
-  @:overload(function(type:cs.system.Type) : Void {})
-  public static function RegisterActivatedServiceType(entry:ActivatedServiceTypeEntry) : Void;
+  @:overload(function(entry:ActivatedServiceTypeEntry) : Void {})
+  public static function RegisterActivatedServiceType(type:cs.system.Type) : Void;
 
   @:overload(function(type:cs.system.Type, objectUrl:String) : Void {})
   public static function RegisterWellKnownClientType(entry:WellKnownClientTypeEntry) : Void;

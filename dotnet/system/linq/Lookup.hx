@@ -8,6 +8,7 @@ extern class Lookup<TKey,TElement> extends dotnet.system.Object  implements dotn
 
   public function Contains(key:TKey) : Bool;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.generic.IEnumerator<IGrouping<TKey,TElement>>;
 }
 

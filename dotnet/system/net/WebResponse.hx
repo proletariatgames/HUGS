@@ -13,6 +13,8 @@ extern class WebResponse extends dotnet.system.MarshalByRefObject  implements do
 
   function Dispose() : Void;
 
+  @:overload(function(serializationInfo:dotnet.system.runtime.serialization.SerializationInfo, streamingContext:dotnet.system.runtime.serialization.StreamingContext) : Void {})
+  function GetObjectData(serializationInfo:dotnet.system.runtime.serialization.SerializationInfo, streamingContext:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   public function GetResponseStream() : dotnet.system.io.Stream;
 }

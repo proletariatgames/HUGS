@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Resources") @:final
-extern class Resources {
+extern class Resources extends dotnet.system.Object {
 
   public function new() : Void;
 
@@ -9,8 +9,8 @@ extern class Resources {
 
   public static function GetBuiltinResource(type:cs.system.Type, path:String) : Object;
 
-  @:overload(function(path:String, systemTypeInstance:cs.system.Type) : Object {})
-  public static function Load(path:String) : Object;
+  @:overload(function(path:String) : Object {})
+  public static function Load(path:String, systemTypeInstance:cs.system.Type) : Object;
 
   @:overload(function(path:String, systemTypeInstance:cs.system.Type) : cs.NativeArray<Object> {})
   public static function LoadAll(path:String) : cs.NativeArray<Object>;

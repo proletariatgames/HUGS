@@ -19,16 +19,19 @@ extern class Queue<T> extends dotnet.system.Object  implements dotnet.system.col
 
   public function Contains(item:T) : Bool;
 
+  @:overload(function(array:dotnet.system.Array, idx:Int) : Void {})
   public function CopyTo(array:cs.NativeArray<T>, idx:Int) : Void;
 
+  @:overload(function() : Void {})
   @:overload(function(count:Int) : Void {})
-  @:overload(function(collection:IEnumerable<T>) : Void {})
-  public function new() : Void;
+  public function new(collection:IEnumerable<T>) : Void;
 
   public function Dequeue() : T;
 
   public function Enqueue(item:T) : Void;
 
+  @:overload(function() : IEnumerator<T> {})
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : Queue_Enumerator<T>;
 
   public function Peek() : T;

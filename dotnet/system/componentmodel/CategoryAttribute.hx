@@ -18,15 +18,16 @@ extern class CategoryAttribute extends dotnet.system.Attribute {
   public static var WindowStyle(default,never) : CategoryAttribute;
   public var Category(default,never) : String;
 
-  @:overload(function(category:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(category:String) : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
-  function GetLocalizedString(value:String) : String;
-
+  @:overload(function() : Bool {})
   public override function IsDefaultAttribute() : Bool;
 }
 

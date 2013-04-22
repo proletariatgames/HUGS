@@ -6,9 +6,10 @@ extern class ActivatedClientTypeEntry extends TypeEntry {
   public var ContextAttributes : cs.NativeArray<dotnet.system.runtime.remoting.contexts.IContextAttribute>;
   public var ObjectType(default,never) : cs.system.Type;
 
-  @:overload(function(typeName:String, assemblyName:String, appUrl:String) : Void {})
-  public function new(type:cs.system.Type, appUrl:String) : Void;
+  @:overload(function(type:cs.system.Type, appUrl:String) : Void {})
+  public function new(typeName:String, assemblyName:String, appUrl:String) : Void;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

@@ -4,7 +4,7 @@ package dotnet.system.security.accesscontrol;
 extern class EventWaitHandleAccessRule extends AccessRule {
   public var EventWaitHandleRights(default,never) : EventWaitHandleRights;
 
-  @:overload(function(identity:String, eventRights:EventWaitHandleRights, type:AccessControlType) : Void {})
-  public function new(identity:dotnet.system.security.principal.IdentityReference, eventRights:EventWaitHandleRights, type:AccessControlType) : Void;
+  @:overload(function(identity:dotnet.system.security.principal.IdentityReference, eventRights:EventWaitHandleRights, type:AccessControlType) : Void {})
+  public function new(identity:String, eventRights:EventWaitHandleRights, type:AccessControlType) : Void;
 }
 

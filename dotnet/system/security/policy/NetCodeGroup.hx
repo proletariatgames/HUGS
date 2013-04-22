@@ -4,30 +4,28 @@ package dotnet.system.security.policy;
 extern class NetCodeGroup extends CodeGroup {
   public static var AbsentOriginScheme : String;
   public static var AnyOtherOriginScheme : String;
-  public override var AttributeString(default,never) : String;
-  public override var MergeLogic(default,never) : String;
-  public override var PermissionSetName(default,never) : String;
 
   public function AddConnectAccess(originScheme:String, connectAccess:CodeConnectAccess) : Void;
 
+  @:overload(function() : CodeGroup {})
   public override function Copy() : CodeGroup;
-
-  override function CreateXml(element:dotnet.system.security.SecurityElement, level:PolicyLevel) : Void;
 
   public function new(membershipCondition:IMembershipCondition) : Void;
 
+  @:overload(function(o:Dynamic) : Bool {})
   public override function Equals(o:Dynamic) : Bool;
 
   public function GetConnectAccessRules() : cs.NativeArray<dotnet.system.collections.DictionaryEntry>;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
-
-  override function ParseXml(e:dotnet.system.security.SecurityElement, level:PolicyLevel) : Void;
 
   public function ResetConnectAccess() : Void;
 
+  @:overload(function(evidence:Evidence) : PolicyStatement {})
   public override function Resolve(evidence:Evidence) : PolicyStatement;
 
+  @:overload(function(evidence:Evidence) : CodeGroup {})
   public override function ResolveMatchingCodeGroups(evidence:Evidence) : CodeGroup;
 }
 

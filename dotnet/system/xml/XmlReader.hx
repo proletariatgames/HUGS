@@ -30,37 +30,39 @@ extern class XmlReader extends dotnet.system.Object  implements dotnet.system.ID
 
   public function Close() : Void;
 
-  @:overload(function(url:String, settings:XmlReaderSettings, context:XmlParserContext) : XmlReader {})
-  @:overload(function(stream:dotnet.system.io.Stream, settings:XmlReaderSettings, context:XmlParserContext) : XmlReader {})
-  @:overload(function(stream:dotnet.system.io.Stream, settings:XmlReaderSettings, baseUri:String) : XmlReader {})
-  @:overload(function(reader:dotnet.system.io.TextReader, settings:XmlReaderSettings, context:XmlParserContext) : XmlReader {})
-  @:overload(function(reader:dotnet.system.io.TextReader, settings:XmlReaderSettings, baseUri:String) : XmlReader {})
+  @:overload(function(stream:dotnet.system.io.Stream) : XmlReader {})
+  @:overload(function(url:String) : XmlReader {})
+  @:overload(function(reader:dotnet.system.io.TextReader) : XmlReader {})
   @:overload(function(url:String, settings:XmlReaderSettings) : XmlReader {})
   @:overload(function(stream:dotnet.system.io.Stream, settings:XmlReaderSettings) : XmlReader {})
-  @:overload(function(reader:XmlReader, settings:XmlReaderSettings) : XmlReader {})
   @:overload(function(reader:dotnet.system.io.TextReader, settings:XmlReaderSettings) : XmlReader {})
-  @:overload(function(url:String) : XmlReader {})
-  @:overload(function(stream:dotnet.system.io.Stream) : XmlReader {})
-  public static function Create(reader:dotnet.system.io.TextReader) : XmlReader;
+  @:overload(function(stream:dotnet.system.io.Stream, settings:XmlReaderSettings, baseUri:String) : XmlReader {})
+  @:overload(function(reader:dotnet.system.io.TextReader, settings:XmlReaderSettings, baseUri:String) : XmlReader {})
+  @:overload(function(reader:XmlReader, settings:XmlReaderSettings) : XmlReader {})
+  @:overload(function(url:String, settings:XmlReaderSettings, context:XmlParserContext) : XmlReader {})
+  @:overload(function(stream:dotnet.system.io.Stream, settings:XmlReaderSettings, context:XmlParserContext) : XmlReader {})
+  public static function Create(reader:dotnet.system.io.TextReader, settings:XmlReaderSettings, context:XmlParserContext) : XmlReader;
 
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
-  @:overload(function(localName:String, namespaceName:String) : String {})
+  @:overload(function(i:Int) : String {})
   @:overload(function(name:String) : String {})
-  public function GetAttribute(i:Int) : String;
+  public function GetAttribute(localName:String, namespaceName:String) : String;
 
   public static function IsName(s:String) : Bool;
 
   public static function IsNameToken(s:String) : Bool;
 
-  @:overload(function(localName:String, namespaceName:String) : Bool {})
+  @:overload(function() : Bool {})
   @:overload(function(name:String) : Bool {})
-  public function IsStartElement() : Bool;
+  public function IsStartElement(localName:String, namespaceName:String) : Bool;
 
   public function LookupNamespace(prefix:String) : String;
 
-  @:overload(function(localName:String, namespaceName:String) : Bool {})
+  @:overload(function(i:Int) : Void {})
   @:overload(function(name:String) : Bool {})
-  public function MoveToAttribute(i:Int) : Void;
+  public function MoveToAttribute(localName:String, namespaceName:String) : Bool;
 
   public function MoveToContent() : XmlNodeType;
 
@@ -98,43 +100,43 @@ extern class XmlReader extends dotnet.system.Object  implements dotnet.system.ID
 
   public function ReadContentAsString() : String;
 
-  @:overload(function(type:cs.system.Type, resolver:IXmlNamespaceResolver, localName:String, namespaceURI:String) : Dynamic {})
-  public function ReadElementContentAs(type:cs.system.Type, resolver:IXmlNamespaceResolver) : Dynamic;
+  @:overload(function(type:cs.system.Type, resolver:IXmlNamespaceResolver) : Dynamic {})
+  public function ReadElementContentAs(type:cs.system.Type, resolver:IXmlNamespaceResolver, localName:String, namespaceURI:String) : Dynamic;
 
   public function ReadElementContentAsBase64(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, length:Int) : Int;
 
   public function ReadElementContentAsBinHex(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, length:Int) : Int;
 
-  @:overload(function(localName:String, namespaceURI:String) : Bool {})
-  public function ReadElementContentAsBoolean() : Bool;
+  @:overload(function() : Bool {})
+  public function ReadElementContentAsBoolean(localName:String, namespaceURI:String) : Bool;
 
-  @:overload(function(localName:String, namespaceURI:String) : dotnet.system.DateTime {})
-  public function ReadElementContentAsDateTime() : dotnet.system.DateTime;
+  @:overload(function() : dotnet.system.DateTime {})
+  public function ReadElementContentAsDateTime(localName:String, namespaceURI:String) : dotnet.system.DateTime;
 
-  @:overload(function(localName:String, namespaceURI:String) : dotnet.system.Decimal {})
-  public function ReadElementContentAsDecimal() : dotnet.system.Decimal;
+  @:overload(function() : dotnet.system.Decimal {})
+  public function ReadElementContentAsDecimal(localName:String, namespaceURI:String) : dotnet.system.Decimal;
 
-  @:overload(function(localName:String, namespaceURI:String) : Float {})
-  public function ReadElementContentAsDouble() : Float;
+  @:overload(function() : Float {})
+  public function ReadElementContentAsDouble(localName:String, namespaceURI:String) : Float;
 
-  @:overload(function(localName:String, namespaceURI:String) : Float {})
-  public function ReadElementContentAsFloat() : Float;
+  @:overload(function() : Float {})
+  public function ReadElementContentAsFloat(localName:String, namespaceURI:String) : Float;
 
-  @:overload(function(localName:String, namespaceURI:String) : Int {})
-  public function ReadElementContentAsInt() : Int;
+  @:overload(function() : Int {})
+  public function ReadElementContentAsInt(localName:String, namespaceURI:String) : Int;
 
-  @:overload(function(localName:String, namespaceURI:String) : dotnet.system.Int64 {})
-  public function ReadElementContentAsLong() : dotnet.system.Int64;
+  @:overload(function() : dotnet.system.Int64 {})
+  public function ReadElementContentAsLong(localName:String, namespaceURI:String) : dotnet.system.Int64;
 
-  @:overload(function(localName:String, namespaceURI:String) : Dynamic {})
-  public function ReadElementContentAsObject() : Dynamic;
+  @:overload(function() : Dynamic {})
+  public function ReadElementContentAsObject(localName:String, namespaceURI:String) : Dynamic;
 
-  @:overload(function(localName:String, namespaceURI:String) : String {})
-  public function ReadElementContentAsString() : String;
+  @:overload(function() : String {})
+  public function ReadElementContentAsString(localName:String, namespaceURI:String) : String;
 
-  @:overload(function(localName:String, namespaceName:String) : String {})
+  @:overload(function() : String {})
   @:overload(function(name:String) : String {})
-  public function ReadElementString() : String;
+  public function ReadElementString(localName:String, namespaceName:String) : String;
 
   public function ReadEndElement() : Void;
 
@@ -142,22 +144,22 @@ extern class XmlReader extends dotnet.system.Object  implements dotnet.system.ID
 
   public function ReadOuterXml() : String;
 
-  @:overload(function(localName:String, namespaceName:String) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(name:String) : Void {})
-  public function ReadStartElement() : Void;
+  public function ReadStartElement(localName:String, namespaceName:String) : Void;
 
   public function ReadString() : String;
 
   public function ReadSubtree() : XmlReader;
 
-  @:overload(function(localName:String, namespaceURI:String) : Bool {})
-  public function ReadToDescendant(name:String) : Bool;
+  @:overload(function(name:String) : Bool {})
+  public function ReadToDescendant(localName:String, namespaceURI:String) : Bool;
 
-  @:overload(function(localName:String, namespaceURI:String) : Bool {})
-  public function ReadToFollowing(name:String) : Bool;
+  @:overload(function(name:String) : Bool {})
+  public function ReadToFollowing(localName:String, namespaceURI:String) : Bool;
 
-  @:overload(function(localName:String, namespaceURI:String) : Bool {})
-  public function ReadToNextSibling(name:String) : Bool;
+  @:overload(function(name:String) : Bool {})
+  public function ReadToNextSibling(localName:String, namespaceURI:String) : Bool;
 
   public function ReadValueChunk(buffer:cs.NativeArray<dotnet.system.Char>, offset:Int, length:Int) : Int;
 

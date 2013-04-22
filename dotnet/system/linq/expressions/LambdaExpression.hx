@@ -6,7 +6,5 @@ extern class LambdaExpression extends Expression {
   public var Parameters(default,never) : dotnet.system.collections.objectmodel.ReadOnlyCollection<ParameterExpression>;
 
   public function Compile() : dotnet.system.Delegate;
-
-  override function Emit(ec:EmitContext) : Void;
 }
 

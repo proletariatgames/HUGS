@@ -5,19 +5,21 @@ extern class Int16 extends ValueType  implements IComparable implements IConvert
   public static var MaxValue : Int;
   public static var MinValue : Int;
 
-  @:overload(function(value:Int) : Int {})
-  public function CompareTo(value:Dynamic) : Int;
+  @:overload(function(value:Dynamic) : Int {})
+  public function CompareTo(value:Int) : Int;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   @:overload(function(obj:Int) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   public function GetTypeCode() : TypeCode;
 
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Int {})
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Int {})
   @:overload(function(s:String, provider:IFormatProvider) : Int {})
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Int {})
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Int {})
   public static function Parse(s:String) : Int;
 
   function ToBoolean(provider:IFormatProvider) : Bool;
@@ -42,9 +44,10 @@ extern class Int16 extends ValueType  implements IComparable implements IConvert
 
   function ToSingle(provider:IFormatProvider) : Float;
 
-  @:overload(function(format:String, provider:IFormatProvider) : String {})
+  @:overload(function() : String {})
   @:overload(function(provider:IFormatProvider) : String {})
   @:overload(function(format:String) : String {})
+  @:overload(function(format:String, provider:IFormatProvider) : String {})
   public override function ToString() : String;
 
   function ToType(targetType:cs.system.Type, provider:IFormatProvider) : Dynamic;
@@ -55,7 +58,7 @@ extern class Int16 extends ValueType  implements IComparable implements IConvert
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Int) : Bool {})
-  public static function TryParse(s:String, result:Int) : Bool;
+  @:overload(function(s:String, result:Int) : Bool {})
+  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Int) : Bool;
 }
 

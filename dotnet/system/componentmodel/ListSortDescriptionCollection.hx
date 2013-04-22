@@ -12,8 +12,8 @@ extern class ListSortDescriptionCollection extends dotnet.system.Object  impleme
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  @:overload(function(sorts:cs.NativeArray<ListSortDescription>) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(sorts:cs.NativeArray<ListSortDescription>) : Void;
 
   function GetEnumerator() : dotnet.system.collections.IEnumerator;
 

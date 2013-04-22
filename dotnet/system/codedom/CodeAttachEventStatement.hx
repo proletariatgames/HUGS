@@ -5,10 +5,8 @@ extern class CodeAttachEventStatement extends CodeStatement {
   public var Event : CodeEventReferenceExpression;
   public var Listener : CodeExpression;
 
-  override function Accept(visitor:ICodeDomVisitor) : Void;
-
-  @:overload(function(targetObject:CodeExpression, eventName:String, listener:CodeExpression) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(eventRef:CodeEventReferenceExpression, listener:CodeExpression) : Void {})
-  public function new() : Void;
+  public function new(targetObject:CodeExpression, eventName:String, listener:CodeExpression) : Void;
 }
 

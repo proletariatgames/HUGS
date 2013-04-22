@@ -4,7 +4,6 @@ package dotnet.system.xml.schema;
 extern class XmlSchemaComplexType extends XmlSchemaType {
   public var IsAbstract : Bool;
   public var Block : XmlSchemaDerivationMethod;
-  public override var IsMixed : Bool;
   public var ContentModel : XmlSchemaContentModel;
   public var Particle : XmlSchemaParticle;
   public var Attributes(default,never) : XmlSchemaObjectCollection;
@@ -15,12 +14,6 @@ extern class XmlSchemaComplexType extends XmlSchemaType {
   public var AttributeUses(default,never) : XmlSchemaObjectTable;
   public var AttributeWildcard(default,never) : XmlSchemaAnyAttribute;
 
-  override function Compile(h:ValidationEventHandler, schema:XmlSchema) : Int;
-
   public function new() : Void;
-
-  override function SetParent(parent:XmlSchemaObject) : Void;
-
-  override function Validate(h:ValidationEventHandler, schema:XmlSchema) : Int;
 }
 

@@ -69,23 +69,20 @@ extern class Process extends dotnet.system.componentmodel.Component {
 
   public function new() : Void;
 
-  override function Dispose(disposing:Bool) : Void;
-
-  override function Finalize() : Void;
-
   public function Kill() : Void;
 
   public function Refresh() : Void;
 
   public function Start() : Bool;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 
-  @:overload(function(milliseconds:Int) : Bool {})
-  public function WaitForExit() : Void;
+  @:overload(function() : Void {})
+  public function WaitForExit(milliseconds:Int) : Bool;
 
-  @:overload(function(milliseconds:Int) : Bool {})
-  public function WaitForInputIdle() : Bool;
+  @:overload(function() : Bool {})
+  public function WaitForInputIdle(milliseconds:Int) : Bool;
 }
 
 
@@ -96,21 +93,21 @@ extern class Process_Static {
 
   public static function GetCurrentProcess() : Process;
 
-  @:overload(function(processId:Int, machineName:String) : Process {})
-  public static function GetProcessById(processId:Int) : Process;
+  @:overload(function(processId:Int) : Process {})
+  public static function GetProcessById(processId:Int, machineName:String) : Process;
 
-  @:overload(function(machineName:String) : cs.NativeArray<Process> {})
-  public static function GetProcesses() : cs.NativeArray<Process>;
+  @:overload(function() : cs.NativeArray<Process> {})
+  public static function GetProcesses(machineName:String) : cs.NativeArray<Process>;
 
-  @:overload(function(processName:String, machineName:String) : cs.NativeArray<Process> {})
-  public static function GetProcessesByName(processName:String) : cs.NativeArray<Process>;
+  @:overload(function(processName:String) : cs.NativeArray<Process> {})
+  public static function GetProcessesByName(processName:String, machineName:String) : cs.NativeArray<Process>;
 
   public static function LeaveDebugMode() : Void;
 
-  @:overload(function(fileName:String, arguments:String, username:String, password:dotnet.system.security.SecureString, domain:String) : Process {})
-  @:overload(function(fileName:String, username:String, password:dotnet.system.security.SecureString, domain:String) : Process {})
-  @:overload(function(fileName:String, arguments:String) : Process {})
   @:overload(function(startInfo:ProcessStartInfo) : Process {})
-  public static function Start(fileName:String) : Process;
+  @:overload(function(fileName:String) : Process {})
+  @:overload(function(fileName:String, arguments:String) : Process {})
+  @:overload(function(fileName:String, username:String, password:dotnet.system.security.SecureString, domain:String) : Process {})
+  public static function Start(fileName:String, arguments:String, username:String, password:dotnet.system.security.SecureString, domain:String) : Process;
 }
 

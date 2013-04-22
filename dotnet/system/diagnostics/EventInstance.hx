@@ -6,7 +6,7 @@ extern class EventInstance extends dotnet.system.Object {
   public var EntryType : EventLogEntryType;
   public var InstanceId : dotnet.system.Int64;
 
-  @:overload(function(instanceId:dotnet.system.Int64, categoryId:Int, entryType:EventLogEntryType) : Void {})
-  public function new(instanceId:dotnet.system.Int64, categoryId:Int) : Void;
+  @:overload(function(instanceId:dotnet.system.Int64, categoryId:Int) : Void {})
+  public function new(instanceId:dotnet.system.Int64, categoryId:Int, entryType:EventLogEntryType) : Void;
 }
 

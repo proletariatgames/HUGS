@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Ray") @:final
-extern class Ray {
+extern class Ray extends dotnet.system.ValueType {
   public var origin : Vector3;
   public var direction : Vector3;
 
@@ -9,6 +9,7 @@ extern class Ray {
 
   public function GetPoint(distance:Float) : Vector3;
 
+  @:overload(function() : String {})
   @:overload(function(format:String) : String {})
   public override function ToString() : String;
 }

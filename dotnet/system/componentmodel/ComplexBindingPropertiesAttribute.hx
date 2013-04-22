@@ -10,8 +10,10 @@ extern class ComplexBindingPropertiesAttribute extends dotnet.system.Attribute {
   @:overload(function(dataSource:String) : Void {})
   public function new() : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

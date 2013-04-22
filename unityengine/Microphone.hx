@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Microphone") @:final
-extern class Microphone {
+extern class Microphone extends dotnet.system.Object {
   public static var devices(default,never) : cs.NativeArray<String>;
 
   public function new() : Void;

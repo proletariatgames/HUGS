@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.PlayerPrefs") @:final
-extern class PlayerPrefs {
+extern class PlayerPrefs extends dotnet.system.Object {
 
   public function new() : Void;
 

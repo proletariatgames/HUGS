@@ -20,19 +20,19 @@ extern class XmlSchemaValidator extends dotnet.system.Object {
 
   public function GetUnspecifiedDefaultAttributes(defaultAttributeList:dotnet.system.collections.ArrayList) : Void;
 
-  @:overload(function(partialValidationType:XmlSchemaObject) : Void {})
-  public function Initialize() : Void;
+  @:overload(function() : Void {})
+  public function Initialize(partialValidationType:XmlSchemaObject) : Void;
 
   public function SkipToEndElement(info:XmlSchemaInfo) : Void;
 
-  @:overload(function(localName:String, ns:String, attributeValue:XmlValueGetter, info:XmlSchemaInfo) : Dynamic {})
-  public function ValidateAttribute(localName:String, ns:String, attributeValue:String, info:XmlSchemaInfo) : Dynamic;
+  @:overload(function(localName:String, ns:String, attributeValue:String, info:XmlSchemaInfo) : Dynamic {})
+  public function ValidateAttribute(localName:String, ns:String, attributeValue:XmlValueGetter, info:XmlSchemaInfo) : Dynamic;
 
-  @:overload(function(localName:String, ns:String, info:XmlSchemaInfo, xsiType:String, xsiNil:String, schemaLocation:String, noNsSchemaLocation:String) : Void {})
-  public function ValidateElement(localName:String, ns:String, info:XmlSchemaInfo) : Void;
+  @:overload(function(localName:String, ns:String, info:XmlSchemaInfo) : Void {})
+  public function ValidateElement(localName:String, ns:String, info:XmlSchemaInfo, xsiType:String, xsiNil:String, schemaLocation:String, noNsSchemaLocation:String) : Void;
 
-  @:overload(function(info:XmlSchemaInfo, _var:Dynamic) : Dynamic {})
-  public function ValidateEndElement(info:XmlSchemaInfo) : Dynamic;
+  @:overload(function(info:XmlSchemaInfo) : Dynamic {})
+  public function ValidateEndElement(info:XmlSchemaInfo, _var:Dynamic) : Dynamic;
 
   public function ValidateEndOfAttributes(info:XmlSchemaInfo) : Void;
 

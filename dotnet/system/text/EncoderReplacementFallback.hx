@@ -3,15 +3,17 @@ package dotnet.system.text;
 @:native("System.Text.EncoderReplacementFallback") @:final
 extern class EncoderReplacementFallback extends EncoderFallback {
   public var DefaultString(default,never) : String;
-  public override var MaxCharCount(default,never) : Int;
 
+  @:overload(function() : EncoderFallbackBuffer {})
   public override function CreateFallbackBuffer() : EncoderFallbackBuffer;
 
-  @:overload(function(replacement:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(replacement:String) : Void;
 
-  public override function Equals(value:Dynamic) : Bool;
+  @:overload(function(value:Dynamic) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

@@ -4,14 +4,15 @@ package dotnet.system.componentmodel;
 extern class LicenseProviderAttribute extends dotnet.system.Attribute {
   public static var Default : LicenseProviderAttribute;
   public var LicenseProvider(default,never) : cs.system.Type;
-  public override var TypeId(default,never) : Dynamic;
 
+  @:overload(function() : Void {})
   @:overload(function(typeName:String) : Void {})
-  @:overload(function(type:cs.system.Type) : Void {})
-  public function new() : Void;
+  public function new(type:cs.system.Type) : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

@@ -3,25 +3,29 @@ package dotnet.system.diagnostics;
 @:native("System.Diagnostics.CounterCreationDataCollection")
 extern class CounterCreationDataCollection extends dotnet.system.collections.CollectionBase {
 
-  public function Add(value:CounterCreationData) : Int;
+  @:overload(function(value:CounterCreationData) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
   @:overload(function(value:cs.NativeArray<CounterCreationData>) : Void {})
   public function AddRange(value:CounterCreationDataCollection) : Void;
 
-  public function Contains(value:CounterCreationData) : Bool;
+  @:overload(function(value:CounterCreationData) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<CounterCreationData>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<CounterCreationData>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
+  @:overload(function() : Void {})
   @:overload(function(value:cs.NativeArray<CounterCreationData>) : Void {})
-  @:overload(function(value:CounterCreationDataCollection) : Void {})
-  public function new() : Void;
+  public function new(value:CounterCreationDataCollection) : Void;
 
-  public function IndexOf(value:CounterCreationData) : Int;
+  @:overload(function(value:CounterCreationData) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, value:CounterCreationData) : Void;
+  @:overload(function(index:Int, value:CounterCreationData) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  override function OnValidate(value:Dynamic) : Void;
-
-  public override function Remove(value:CounterCreationData) : Void;
+  @:overload(function(value:CounterCreationData) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

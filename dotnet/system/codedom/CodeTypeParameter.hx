@@ -7,7 +7,7 @@ extern class CodeTypeParameter extends CodeObject {
   public var HasConstructorConstraint : Bool;
   public var Name : String;
 
-  @:overload(function(name:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(name:String) : Void;
 }
 

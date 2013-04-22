@@ -3,18 +3,24 @@ package dotnet.system.xml.serialization;
 @:native("System.Xml.Serialization.XmlAnyElementAttributes")
 extern class XmlAnyElementAttributes extends dotnet.system.collections.CollectionBase {
 
-  public function Add(attribute:XmlAnyElementAttribute) : Int;
+  @:overload(function(attribute:XmlAnyElementAttribute) : Int {})
+  public override function Add(value:Dynamic) : Int;
 
-  public function Contains(attribute:XmlAnyElementAttribute) : Bool;
+  @:overload(function(attribute:XmlAnyElementAttribute) : Bool {})
+  public override function Contains(value:Dynamic) : Bool;
 
-  public function CopyTo(array:cs.NativeArray<XmlAnyElementAttribute>, index:Int) : Void;
+  @:overload(function(array:cs.NativeArray<XmlAnyElementAttribute>, index:Int) : Void {})
+  public override function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
   public function new() : Void;
 
-  public function IndexOf(attribute:XmlAnyElementAttribute) : Int;
+  @:overload(function(attribute:XmlAnyElementAttribute) : Int {})
+  public override function IndexOf(value:Dynamic) : Int;
 
-  public function Insert(index:Int, attribute:XmlAnyElementAttribute) : Void;
+  @:overload(function(index:Int, attribute:XmlAnyElementAttribute) : Void {})
+  public override function Insert(index:Int, value:Dynamic) : Void;
 
-  public function Remove(attribute:XmlAnyElementAttribute) : Void;
+  @:overload(function(attribute:XmlAnyElementAttribute) : Void {})
+  public override function Remove(value:Dynamic) : Void;
 }
 

@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Display") @:final
-extern class Display {
+extern class Display extends dotnet.system.Object {
   public static var displays : cs.NativeArray<Display>;
   public var renderingWidth(default,never) : Int;
   public var renderingHeight(default,never) : Int;

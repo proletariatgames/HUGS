@@ -12,16 +12,19 @@ extern class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
 
   public function new() : Void;
 
+  @:overload(function(encrypted_node:dotnet.system.xml.XmlNode) : dotnet.system.xml.XmlNode {})
   public override function Decrypt(encrypted_node:dotnet.system.xml.XmlNode) : dotnet.system.xml.XmlNode;
 
   public function DeleteKey() : Void;
 
+  @:overload(function(node:dotnet.system.xml.XmlNode) : dotnet.system.xml.XmlNode {})
   public override function Encrypt(node:dotnet.system.xml.XmlNode) : dotnet.system.xml.XmlNode;
 
   public function ExportKey(xmlFileName:String, includePrivateParameters:Bool) : Void;
 
   public function ImportKey(xmlFileName:String, exportable:Bool) : Void;
 
-  public override function Initialize(name:String, configurationValues:dotnet.system.collections.specialized.NameValueCollection) : Void;
+  @:overload(function(name:String, configurationValues:dotnet.system.collections.specialized.NameValueCollection) : Void {})
+  public override function Initialize(name:String, config:dotnet.system.collections.specialized.NameValueCollection) : Void;
 }
 

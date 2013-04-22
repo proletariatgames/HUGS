@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.ADInterstitialAd") @:final
-extern class ADInterstitialAd {
+extern class ADInterstitialAd extends dotnet.system.Object {
   public var loaded(default,never) : Bool;
   public var actionInProgress(default,never) : Bool;
   public var visible(default,never) : Bool;
@@ -10,8 +10,6 @@ extern class ADInterstitialAd {
   public function CancelAction() : Void;
 
   public function new() : Void;
-
-  override function Finalize() : Void;
 
   public function Present() : Bool;
 }

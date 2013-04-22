@@ -8,11 +8,7 @@ extern class TraceSwitch extends Switch {
   public var TraceInfo(default,never) : Bool;
   public var TraceVerbose(default,never) : Bool;
 
-  @:overload(function(displayName:String, description:String, defaultSwitchValue:String) : Void {})
-  public function new(displayName:String, description:String) : Void;
-
-  override function OnSwitchSettingChanged() : Void;
-
-  override function OnValueChanged() : Void;
+  @:overload(function(displayName:String, description:String) : Void {})
+  public function new(displayName:String, description:String, defaultSwitchValue:String) : Void;
 }
 

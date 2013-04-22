@@ -15,9 +15,9 @@ extern class CodeDomProvider extends dotnet.system.componentmodel.Component {
 
   public function CreateEscapedIdentifier(value:String) : String;
 
-  @:overload(function(output:dotnet.system.io.TextWriter) : ICodeGenerator {})
+  @:overload(function() : ICodeGenerator {})
   @:overload(function(fileName:String) : ICodeGenerator {})
-  public function CreateGenerator() : ICodeGenerator;
+  public function CreateGenerator(output:dotnet.system.io.TextWriter) : ICodeGenerator;
 
   public function CreateParser() : ICodeParser;
 

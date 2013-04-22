@@ -1,7 +1,7 @@
 package unityengine.flash;
 
 @:native("UnityEngine.Flash.ActionScript") @:final
-extern class ActionScript {
+extern class ActionScript extends dotnet.system.Object {
 
   public function new() : Void;
 

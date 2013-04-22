@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.GradientAlphaKey") @:final
-extern class GradientAlphaKey {
+extern class GradientAlphaKey extends dotnet.system.ValueType {
   public var alpha : Float;
   public var time : Float;
 

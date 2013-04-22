@@ -9,17 +9,19 @@ extern class XmlWriter extends dotnet.system.Object  implements dotnet.system.ID
 
   public function Close() : Void;
 
-  @:overload(function(writer:XmlWriter, settings:XmlWriterSettings) : XmlWriter {})
-  @:overload(function(writer:dotnet.system.io.TextWriter, settings:XmlWriterSettings) : XmlWriter {})
+  @:overload(function(stream:dotnet.system.io.Stream) : XmlWriter {})
+  @:overload(function(file:String) : XmlWriter {})
+  @:overload(function(writer:dotnet.system.io.TextWriter) : XmlWriter {})
+  @:overload(function(writer:XmlWriter) : XmlWriter {})
+  @:overload(function(builder:dotnet.system.text.StringBuilder) : XmlWriter {})
   @:overload(function(stream:dotnet.system.io.Stream, settings:XmlWriterSettings) : XmlWriter {})
   @:overload(function(file:String, settings:XmlWriterSettings) : XmlWriter {})
   @:overload(function(builder:dotnet.system.text.StringBuilder, settings:XmlWriterSettings) : XmlWriter {})
-  @:overload(function(writer:XmlWriter) : XmlWriter {})
-  @:overload(function(writer:dotnet.system.io.TextWriter) : XmlWriter {})
-  @:overload(function(stream:dotnet.system.io.Stream) : XmlWriter {})
-  @:overload(function(file:String) : XmlWriter {})
-  public static function Create(builder:dotnet.system.text.StringBuilder) : XmlWriter;
+  @:overload(function(writer:dotnet.system.io.TextWriter, settings:XmlWriterSettings) : XmlWriter {})
+  public static function Create(writer:XmlWriter, settings:XmlWriterSettings) : XmlWriter;
 
+  @:overload(function() : Void {})
+  function Dispose(disposing:Bool) : Void;
 
   public function Flush() : Void;
 
@@ -27,9 +29,9 @@ extern class XmlWriter extends dotnet.system.Object  implements dotnet.system.ID
 
   public function WriteAttributes(reader:XmlReader, defattr:Bool) : Void;
 
-  @:overload(function(prefix:String, localName:String, ns:String, value:String) : Void {})
+  @:overload(function(localName:String, value:String) : Void {})
   @:overload(function(localName:String, ns:String, value:String) : Void {})
-  public function WriteAttributeString(localName:String, value:String) : Void;
+  public function WriteAttributeString(prefix:String, localName:String, ns:String, value:String) : Void;
 
   public function WriteBase64(buffer:cs.NativeArray<dotnet.system.Byte>, index:Int, count:Int) : Void;
 
@@ -45,9 +47,9 @@ extern class XmlWriter extends dotnet.system.Object  implements dotnet.system.ID
 
   public function WriteDocType(name:String, pubid:String, sysid:String, subset:String) : Void;
 
-  @:overload(function(prefix:String, localName:String, ns:String, value:String) : Void {})
+  @:overload(function(localName:String, value:String) : Void {})
   @:overload(function(localName:String, ns:String, value:String) : Void {})
-  public function WriteElementString(localName:String, value:String) : Void;
+  public function WriteElementString(prefix:String, localName:String, ns:String, value:String) : Void;
 
   public function WriteEndAttribute() : Void;
 
@@ -63,41 +65,39 @@ extern class XmlWriter extends dotnet.system.Object  implements dotnet.system.ID
 
   public function WriteNmToken(name:String) : Void;
 
-  function WriteNmTokenInternal(name:String) : Void;
-
-  @:overload(function(reader:XmlReader, defattr:Bool) : Void {})
-  public function WriteNode(navigator:dotnet.system.xml.xpath.XPathNavigator, defattr:Bool) : Void;
+  @:overload(function(navigator:dotnet.system.xml.xpath.XPathNavigator, defattr:Bool) : Void {})
+  public function WriteNode(reader:XmlReader, defattr:Bool) : Void;
 
   public function WriteProcessingInstruction(name:String, text:String) : Void;
 
   public function WriteQualifiedName(localName:String, ns:String) : Void;
 
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Void {})
-  public function WriteRaw(data:String) : Void;
+  @:overload(function(data:String) : Void {})
+  public function WriteRaw(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Void;
 
-  @:overload(function(prefix:String, localName:String, ns:String) : Void {})
+  @:overload(function(localName:String) : Void {})
   @:overload(function(localName:String, ns:String) : Void {})
-  public function WriteStartAttribute(localName:String) : Void;
+  public function WriteStartAttribute(prefix:String, localName:String, ns:String) : Void;
 
-  @:overload(function(standalone:Bool) : Void {})
-  public function WriteStartDocument() : Void;
+  @:overload(function() : Void {})
+  public function WriteStartDocument(standalone:Bool) : Void;
 
-  @:overload(function(prefix:String, localName:String, ns:String) : Void {})
+  @:overload(function(localName:String) : Void {})
   @:overload(function(localName:String, ns:String) : Void {})
-  public function WriteStartElement(localName:String) : Void;
+  public function WriteStartElement(prefix:String, localName:String, ns:String) : Void;
 
   public function WriteString(text:String) : Void;
 
   public function WriteSurrogateCharEntity(lowChar:dotnet.system.Char, highChar:dotnet.system.Char) : Void;
 
-  @:overload(function(value:String) : Void {})
-  @:overload(function(value:Int) : Void {})
-  @:overload(function(value:Float) : Void {})
-  @:overload(function(value:Dynamic) : Void {})
-  @:overload(function(value:dotnet.system.Int64) : Void {})
-  @:overload(function(value:dotnet.system.Decimal) : Void {})
+  @:overload(function(value:Bool) : Void {})
   @:overload(function(value:dotnet.system.DateTime) : Void {})
-  public function WriteValue(value:Bool) : Void;
+  @:overload(function(value:dotnet.system.Decimal) : Void {})
+  @:overload(function(value:Float) : Void {})
+  @:overload(function(value:Int) : Void {})
+  @:overload(function(value:dotnet.system.Int64) : Void {})
+  @:overload(function(value:Dynamic) : Void {})
+  public function WriteValue(value:String) : Void;
 
   public function WriteWhitespace(ws:String) : Void;
 }

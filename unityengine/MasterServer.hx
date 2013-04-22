@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.MasterServer") @:final
-extern class MasterServer {
+extern class MasterServer extends dotnet.system.Object {
   public static var ipAddress : String;
   public static var port : Int;
   public static var updateRate : Int;

@@ -4,10 +4,12 @@ package dotnet.system.codedom;
 extern class CodeNamespaceImportCollection extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IList implements dotnet.system.collections.IEnumerable {
   public var Count(default,never) : Int;
 
+  @:overload(function(value:Dynamic) : Int {})
   public function Add(value:CodeNamespaceImport) : Void;
 
   public function AddRange(value:cs.NativeArray<CodeNamespaceImport>) : Void;
 
+  @:overload(function() : Void {})
   public function Clear() : Void;
 
   function Contains(value:Dynamic) : Bool;
@@ -16,6 +18,7 @@ extern class CodeNamespaceImportCollection extends dotnet.system.Object  impleme
 
   public function new() : Void;
 
+  @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
   function IndexOf(value:Dynamic) : Int;

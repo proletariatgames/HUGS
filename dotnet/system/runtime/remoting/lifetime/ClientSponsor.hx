@@ -6,11 +6,10 @@ extern class ClientSponsor extends dotnet.system.MarshalByRefObject  implements 
 
   public function Close() : Void;
 
-  @:overload(function(renewalTime:dotnet.system.TimeSpan) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(renewalTime:dotnet.system.TimeSpan) : Void;
 
-  override function Finalize() : Void;
-
+  @:overload(function() : Dynamic {})
   public override function InitializeLifetimeService() : Dynamic;
 
   public function Register(obj:dotnet.system.MarshalByRefObject) : Bool;

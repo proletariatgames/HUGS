@@ -8,7 +8,7 @@ extern class XmlRootAttribute extends dotnet.system.Attribute {
   public var IsNullableSpecified(default,never) : Bool;
   public var Namespace : String;
 
-  @:overload(function(elementName:String) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(elementName:String) : Void;
 }
 

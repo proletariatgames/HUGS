@@ -6,11 +6,13 @@ extern class SettingElement extends ConfigurationElement {
   public var Value : SettingValueElement;
   public var SerializeAs : SettingsSerializeAs;
 
-  @:overload(function(name:String, serializeAs:SettingsSerializeAs) : Void {})
-  public function new() : Void;
+  @:overload(function() : Void {})
+  public function new(name:String, serializeAs:SettingsSerializeAs) : Void;
 
-  public override function Equals(o:Dynamic) : Bool;
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(compareTo:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 }
 

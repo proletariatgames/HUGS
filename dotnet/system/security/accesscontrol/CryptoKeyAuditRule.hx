@@ -4,7 +4,7 @@ package dotnet.system.security.accesscontrol;
 extern class CryptoKeyAuditRule extends AuditRule {
   public var CryptoKeyRights(default,never) : CryptoKeyRights;
 
-  @:overload(function(identity:String, cryptoKeyRights:CryptoKeyRights, flags:AuditFlags) : Void {})
-  public function new(identity:dotnet.system.security.principal.IdentityReference, cryptoKeyRights:CryptoKeyRights, flags:AuditFlags) : Void;
+  @:overload(function(identity:dotnet.system.security.principal.IdentityReference, cryptoKeyRights:CryptoKeyRights, flags:AuditFlags) : Void {})
+  public function new(identity:String, cryptoKeyRights:CryptoKeyRights, flags:AuditFlags) : Void;
 }
 

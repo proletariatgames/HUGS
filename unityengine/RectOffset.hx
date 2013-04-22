@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.RectOffset") @:final
-extern class RectOffset {
+extern class RectOffset extends dotnet.system.Object {
   public var left : Int;
   public var right : Int;
   public var top : Int;
@@ -11,13 +11,12 @@ extern class RectOffset {
 
   public function Add(rect:Rect) : Rect;
 
-  @:overload(function(left:Int, right:Int, top:Int, bottom:Int) : Void {})
-  public function new() : Void;
-
-  override function Finalize() : Void;
+  @:overload(function() : Void {})
+  public function new(left:Int, right:Int, top:Int, bottom:Int) : Void;
 
   public function Remove(rect:Rect) : Rect;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

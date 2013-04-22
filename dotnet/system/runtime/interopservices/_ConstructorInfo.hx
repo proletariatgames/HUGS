@@ -2,31 +2,11 @@ package dotnet.system.runtime.interopservices;
 
 @:native("System.Runtime.InteropServices._ConstructorInfo")
 extern interface _ConstructorInfo {
-  var Attributes(default,never) : dotnet.system.reflection.MethodAttributes;
-  var CallingConvention(default,never) : dotnet.system.reflection.CallingConventions;
-  var DeclaringType(default,never) : cs.system.Type;
-  var IsAbstract(default,never) : Bool;
-  var IsAssembly(default,never) : Bool;
-  var IsConstructor(default,never) : Bool;
-  var IsFamily(default,never) : Bool;
-  var IsFamilyAndAssembly(default,never) : Bool;
-  var IsFamilyOrAssembly(default,never) : Bool;
-  var IsFinal(default,never) : Bool;
-  var IsHideBySig(default,never) : Bool;
-  var IsPrivate(default,never) : Bool;
-  var IsPublic(default,never) : Bool;
-  var IsSpecialName(default,never) : Bool;
-  var IsStatic(default,never) : Bool;
-  var IsVirtual(default,never) : Bool;
-  var MemberType(default,never) : dotnet.system.reflection.MemberTypes;
-  var MethodHandle(default,never) : dotnet.system.RuntimeMethodHandle;
-  var Name(default,never) : String;
-  var ReflectedType(default,never) : cs.system.Type;
 
   function Equals(other:Dynamic) : Bool;
 
-  @:overload(function(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
-  function GetCustomAttributes(inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
+  @:overload(function(inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
+  function GetCustomAttributes(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
 
   function GetHashCode() : Int;
 

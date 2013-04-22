@@ -17,15 +17,18 @@ extern class Cookie extends dotnet.system.Object {
   public var Value : String;
   public var Version : Int;
 
-  @:overload(function(name:String, value:String, path:String, domain:String) : Void {})
-  @:overload(function(name:String, value:String, path:String) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(name:String, value:String) : Void {})
-  public function new() : Void;
+  @:overload(function(name:String, value:String, path:String) : Void {})
+  public function new(name:String, value:String, path:String, domain:String) : Void;
 
+  @:overload(function(obj:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
+  @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

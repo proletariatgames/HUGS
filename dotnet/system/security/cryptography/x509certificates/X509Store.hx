@@ -13,13 +13,13 @@ extern class X509Store extends dotnet.system.Object {
 
   public function Close() : Void;
 
-  @:overload(function(storeName:String, storeLocation:StoreLocation) : Void {})
-  @:overload(function(storeName:StoreName, storeLocation:StoreLocation) : Void {})
+  @:overload(function() : Void {})
   @:overload(function(storeName:String) : Void {})
   @:overload(function(storeName:StoreName) : Void {})
   @:overload(function(storeLocation:StoreLocation) : Void {})
+  @:overload(function(storeName:StoreName, storeLocation:StoreLocation) : Void {})
   @:overload(function(storeHandle:dotnet.system.IntPtr) : Void {})
-  public function new() : Void;
+  public function new(storeName:String, storeLocation:StoreLocation) : Void;
 
   public function Open(flags:OpenFlags) : Void;
 

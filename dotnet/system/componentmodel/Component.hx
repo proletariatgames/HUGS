@@ -8,12 +8,10 @@ extern class Component extends dotnet.system.MarshalByRefObject  implements dotn
 
   public function new() : Void;
 
-  public function Dispose() : Void;
+  @:overload(function() : Void {})
+  function Dispose(release_all:Bool) : Void;
 
-  override function Finalize() : Void;
-
-  function GetService(service:cs.system.Type) : Dynamic;
-
+  @:overload(function() : String {})
   public override function ToString() : String;
 }
 

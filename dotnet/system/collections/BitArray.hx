@@ -14,12 +14,12 @@ extern class BitArray extends dotnet.system.Object  implements dotnet.system.ICl
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
-  @:overload(function(length:Int, defaultValue:Bool) : Void {})
-  @:overload(function(values:cs.NativeArray<Int>) : Void {})
+  @:overload(function(bits:BitArray) : Void {})
   @:overload(function(values:cs.NativeArray<Bool>) : Void {})
-  @:overload(function(length:Int) : Void {})
   @:overload(function(bytes:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  public function new(bits:BitArray) : Void;
+  @:overload(function(values:cs.NativeArray<Int>) : Void {})
+  @:overload(function(length:Int) : Void {})
+  public function new(length:Int, defaultValue:Bool) : Void;
 
   public function Get(index:Int) : Bool;
 

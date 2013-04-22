@@ -13,7 +13,7 @@ extern class XPathItem extends dotnet.system.Object {
   public var ValueType(default,never) : cs.system.Type;
   public var XmlType(default,never) : dotnet.system.xml.schema.XmlSchemaType;
 
-  @:overload(function(type:cs.system.Type, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : Dynamic {})
-  public function ValueAs(type:cs.system.Type) : Dynamic;
+  @:overload(function(type:cs.system.Type) : Dynamic {})
+  public function ValueAs(type:cs.system.Type, nsResolver:dotnet.system.xml.IXmlNamespaceResolver) : Dynamic;
 }
 
