@@ -12,5 +12,11 @@ extern class BindableAttribute extends dotnet.system.Attribute {
   @:overload(function(bindable:Bool, direction:BindingDirection) : Void {})
   @:overload(function(flags:BindableSupport) : Void {})
   public function new(bindable:Bool) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

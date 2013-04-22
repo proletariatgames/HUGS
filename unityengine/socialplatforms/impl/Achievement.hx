@@ -19,5 +19,7 @@ extern class Achievement implements dotnet.unityengine.socialplatforms.IAchievem
   public function SetHidden(value:Bool) : Void;
 
   public function SetLastReportedDate(date:dotnet.system.DateTime) : Void;
+
+  public override function ToString() : String;
 }
 

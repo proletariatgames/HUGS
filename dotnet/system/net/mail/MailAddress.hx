@@ -10,5 +10,11 @@ extern class MailAddress extends dotnet.system.Object {
   @:overload(function(address:String, displayName:String, displayNameEncoding:dotnet.system.text.Encoding) : Void {})
   @:overload(function(address:String, displayName:String) : Void {})
   public function new(address:String) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function ToString() : String;
 }
 

@@ -14,6 +14,26 @@ extern class DictionaryBase extends dotnet.system.Object  implements ICollection
 
   public function GetEnumerator() : IDictionaryEnumerator;
 
+  function OnClear() : Void;
+
+  function OnClearComplete() : Void;
+
+  function OnGet(key:Dynamic, currentValue:Dynamic) : Dynamic;
+
+  function OnInsert(key:Dynamic, value:Dynamic) : Void;
+
+  function OnInsertComplete(key:Dynamic, value:Dynamic) : Void;
+
+  function OnRemove(key:Dynamic, value:Dynamic) : Void;
+
+  function OnRemoveComplete(key:Dynamic, value:Dynamic) : Void;
+
+  function OnSet(key:Dynamic, oldValue:Dynamic, newValue:Dynamic) : Void;
+
+  function OnSetComplete(key:Dynamic, oldValue:Dynamic, newValue:Dynamic) : Void;
+
+  function OnValidate(key:Dynamic, value:Dynamic) : Void;
+
   function Remove(key:Dynamic) : Void;
 }
 

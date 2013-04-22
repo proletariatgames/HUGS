@@ -7,5 +7,7 @@ extern class COMException extends ExternalException {
   @:overload(function(message:String, errorCode:Int) : Void {})
   @:overload(function(message:String) : Void {})
   public function new() : Void;
+
+  public override function ToString() : String;
 }
 

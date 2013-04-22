@@ -30,6 +30,8 @@ extern class FormatterConverter extends dotnet.system.Object  implements IFormat
 
   public function ToSingle(value:Dynamic) : Float;
 
+  public override function ToString(value:Dynamic) : String;
+
   public function ToUInt16(value:Dynamic) : UInt;
 
   public function ToUInt32(value:Dynamic) : UInt;

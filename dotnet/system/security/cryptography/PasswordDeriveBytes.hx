@@ -16,5 +16,11 @@ extern class PasswordDeriveBytes extends DeriveBytes {
   @:overload(function(password:cs.NativeArray<dotnet.system.Byte>, salt:cs.NativeArray<dotnet.system.Byte>, cspParams:CspParameters) : Void {})
   @:overload(function(strPassword:String, rgbSalt:cs.NativeArray<dotnet.system.Byte>) : Void {})
   public function new(password:cs.NativeArray<dotnet.system.Byte>, salt:cs.NativeArray<dotnet.system.Byte>) : Void;
+
+  override function Finalize() : Void;
+
+  public override function GetBytes(cb:Int) : cs.NativeArray<dotnet.system.Byte>;
+
+  public override function Reset() : Void;
 }
 

@@ -9,5 +9,7 @@ extern class Ping {
   public function new(address:String) : Void;
 
   public function DestroyPing() : Void;
+
+  override function Finalize() : Void;
 }
 

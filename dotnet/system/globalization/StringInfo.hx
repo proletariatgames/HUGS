@@ -8,6 +8,10 @@ extern class StringInfo extends dotnet.system.Object {
   @:overload(function(value:String) : Void {})
   public function new() : Void;
 
+  public override function Equals(value:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
   @:overload(function(str:String, index:Int) : String {})
   public static function GetNextTextElement(str:String) : String;
 

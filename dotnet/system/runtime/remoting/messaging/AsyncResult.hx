@@ -7,9 +7,14 @@ extern class AsyncResult extends dotnet.system.Object  implements dotnet.system.
   public var CompletedSynchronously(default,never) : Bool;
   public var IsCompleted(default,never) : Bool;
   public var EndInvokeCalled : Bool;
+  public var AsyncDelegate(default,never) : Dynamic;
   public var NextSink(default,never) : IMessageSink;
 
   public function AsyncProcessMessage(msg:IMessage, replySink:IMessageSink) : IMessageCtrl;
+
+  public function GetReplyMessage() : IMessage;
+
+  public function SetMessageCtrl(mc:IMessageCtrl) : Void;
 
   public function SyncProcessMessage(msg:IMessage) : IMessage;
 }

@@ -4,5 +4,7 @@ package dotnet.system.linq.expressions;
 extern class ElementInit extends dotnet.system.Object {
   public var AddMethod(default,never) : dotnet.system.reflection.MethodInfo;
   public var Arguments(default,never) : dotnet.system.collections.objectmodel.ReadOnlyCollection<Expression>;
+
+  public override function ToString() : String;
 }
 

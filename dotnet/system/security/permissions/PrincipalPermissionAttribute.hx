@@ -6,6 +6,8 @@ extern class PrincipalPermissionAttribute extends CodeAccessSecurityAttribute {
   public var Name : String;
   public var Role : String;
 
+  public override function CreatePermission() : dotnet.system.security.IPermission;
+
   public function new(action:SecurityAction) : Void;
 }
 

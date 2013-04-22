@@ -17,5 +17,7 @@ extern class DriveInfo extends dotnet.system.Object  implements dotnet.system.ru
   public static function GetDrives() : cs.NativeArray<DriveInfo>;
 
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
+
+  public override function ToString() : String;
 }
 

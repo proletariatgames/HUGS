@@ -11,7 +11,11 @@ extern class CodeAccessPermission extends dotnet.system.Object  implements IPerm
 
   public function Deny() : Void;
 
+  public override function Equals(obj:Dynamic) : Bool;
+
   public function FromXml(elem:SecurityElement) : Void;
+
+  public override function GetHashCode() : Int;
 
   public function Intersect(target:IPermission) : IPermission;
 
@@ -26,6 +30,8 @@ extern class CodeAccessPermission extends dotnet.system.Object  implements IPerm
   public static function RevertDeny() : Void;
 
   public static function RevertPermitOnly() : Void;
+
+  public override function ToString() : String;
 
   public function ToXml() : SecurityElement;
 

@@ -8,6 +8,51 @@ extern class Char extends ValueType  implements IComparable implements IConverti
   @:overload(function(value:Dynamic) : Int {})
   public function CompareTo(value:Char) : Int;
 
+  @:overload(function(obj:Dynamic) : Bool {})
+  public override function Equals(obj:Char) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public function GetTypeCode() : TypeCode;
+
+  function ToBoolean(provider:IFormatProvider) : Bool;
+
+  function ToByte(provider:IFormatProvider) : UInt;
+
+  function ToChar(provider:IFormatProvider) : Char;
+
+  function ToDateTime(provider:IFormatProvider) : DateTime;
+
+  function ToDecimal(provider:IFormatProvider) : Decimal;
+
+  function ToDouble(provider:IFormatProvider) : Float;
+
+  function ToInt16(provider:IFormatProvider) : Int;
+
+  function ToInt32(provider:IFormatProvider) : Int;
+
+  function ToInt64(provider:IFormatProvider) : Int64;
+
+  function ToSByte(provider:IFormatProvider) : Int;
+
+  function ToSingle(provider:IFormatProvider) : Float;
+
+  @:overload(function(provider:IFormatProvider) : String {})
+  public override function ToString() : String;
+
+  function ToType(targetType:cs.system.Type, provider:IFormatProvider) : Dynamic;
+
+  function ToUInt16(provider:IFormatProvider) : UInt;
+
+  function ToUInt32(provider:IFormatProvider) : UInt;
+
+  function ToUInt64(provider:IFormatProvider) : UInt64;
+}
+
+
+@:native("System.Char") @:final
+extern class Char_Static {
+
   public static function ConvertFromUtf32(utf32:Int) : String;
 
   @:overload(function(s:String, index:Int) : Int {})
@@ -15,8 +60,6 @@ extern class Char extends ValueType  implements IComparable implements IConverti
 
   @:overload(function(s:String, index:Int) : Float {})
   public static function GetNumericValue(c:Char) : Float;
-
-  public function GetTypeCode() : TypeCode;
 
   @:overload(function(s:String, index:Int) : dotnet.system.globalization.UnicodeCategory {})
   public static function GetUnicodeCategory(c:Char) : dotnet.system.globalization.UnicodeCategory;
@@ -68,42 +111,12 @@ extern class Char extends ValueType  implements IComparable implements IConverti
 
   public static function Parse(s:String) : Char;
 
-  function ToBoolean(provider:IFormatProvider) : Bool;
-
-  function ToByte(provider:IFormatProvider) : UInt;
-
-  function ToChar(provider:IFormatProvider) : Char;
-
-  function ToDateTime(provider:IFormatProvider) : DateTime;
-
-  function ToDecimal(provider:IFormatProvider) : Decimal;
-
-  function ToDouble(provider:IFormatProvider) : Float;
-
-  function ToInt16(provider:IFormatProvider) : Int;
-
-  function ToInt32(provider:IFormatProvider) : Int;
-
-  function ToInt64(provider:IFormatProvider) : Int64;
-
   @:overload(function(c:Char, culture:dotnet.system.globalization.CultureInfo) : Char {})
   public static function ToLower(c:Char) : Char;
 
   public static function ToLowerInvariant(c:Char) : Char;
 
-  function ToSByte(provider:IFormatProvider) : Int;
-
-  function ToSingle(provider:IFormatProvider) : Float;
-
   public static function ToString(c:Char) : String;
-
-  function ToType(targetType:cs.system.Type, provider:IFormatProvider) : Dynamic;
-
-  function ToUInt16(provider:IFormatProvider) : UInt;
-
-  function ToUInt32(provider:IFormatProvider) : UInt;
-
-  function ToUInt64(provider:IFormatProvider) : UInt64;
 
   @:overload(function(c:Char, culture:dotnet.system.globalization.CultureInfo) : Char {})
   public static function ToUpper(c:Char) : Char;

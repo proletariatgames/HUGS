@@ -16,6 +16,8 @@ extern class EventDescriptorCollection extends dotnet.system.Object  implements 
   @:overload(function(events:cs.NativeArray<EventDescriptor>, readOnly:Bool) : Void {})
   public function new(events:cs.NativeArray<EventDescriptor>) : Void;
 
+  public function Find(name:String, ignoreCase:Bool) : EventDescriptor;
+
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
   public function IndexOf(value:EventDescriptor) : Int;
@@ -25,5 +27,10 @@ extern class EventDescriptorCollection extends dotnet.system.Object  implements 
   public function Remove(value:EventDescriptor) : Void;
 
   public function RemoveAt(index:Int) : Void;
+
+  @:overload(function(order:cs.NativeArray<String>, comparer:dotnet.system.collections.IComparer) : EventDescriptorCollection {})
+  @:overload(function(order:cs.NativeArray<String>) : EventDescriptorCollection {})
+  @:overload(function(comparer:dotnet.system.collections.IComparer) : EventDescriptorCollection {})
+  public function Sort() : EventDescriptorCollection;
 }
 

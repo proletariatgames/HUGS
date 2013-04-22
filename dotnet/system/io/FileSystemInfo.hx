@@ -2,6 +2,9 @@ package dotnet.system.io;
 
 @:native("System.IO.FileSystemInfo")
 extern class FileSystemInfo extends dotnet.system.MarshalByRefObject  implements dotnet.system.runtime.serialization.ISerializable {
+  public var Exists(default,never) : Bool;
+  public var Name(default,never) : String;
+  public var FullName(default,never) : String;
   public var Extension(default,never) : String;
   public var Attributes : FileAttributes;
   public var CreationTime : dotnet.system.DateTime;
@@ -11,7 +14,11 @@ extern class FileSystemInfo extends dotnet.system.MarshalByRefObject  implements
   public var LastWriteTime : dotnet.system.DateTime;
   public var LastWriteTimeUtc : dotnet.system.DateTime;
 
+  public function Delete() : Void;
+
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
+
+  function InternalRefresh() : Void;
 
   public function Refresh() : Void;
 }

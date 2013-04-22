@@ -8,5 +8,7 @@ extern class ActivatedClientTypeEntry extends TypeEntry {
 
   @:overload(function(typeName:String, assemblyName:String, appUrl:String) : Void {})
   public function new(type:cs.system.Type, appUrl:String) : Void;
+
+  public override function ToString() : String;
 }
 

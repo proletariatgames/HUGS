@@ -22,6 +22,8 @@ extern class RegistryKey extends dotnet.system.MarshalByRefObject  implements do
 
   function Dispose() : Void;
 
+  override function Finalize() : Void;
+
   public function Flush() : Void;
 
   @:overload(function(includeSections:dotnet.system.security.accesscontrol.AccessControlSections) : dotnet.system.security.accesscontrol.RegistrySecurity {})
@@ -48,5 +50,7 @@ extern class RegistryKey extends dotnet.system.MarshalByRefObject  implements do
 
   @:overload(function(name:String, value:Dynamic, valueKind:RegistryValueKind) : Void {})
   public function SetValue(name:String, value:Dynamic) : Void;
+
+  public override function ToString() : String;
 }
 

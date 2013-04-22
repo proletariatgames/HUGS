@@ -19,5 +19,11 @@ extern class UriBuilder extends Object {
   @:overload(function(uri:Uri) : Void {})
   @:overload(function(uri:String) : Void {})
   public function new() : Void;
+
+  public override function Equals(rparam:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function ToString() : String;
 }
 

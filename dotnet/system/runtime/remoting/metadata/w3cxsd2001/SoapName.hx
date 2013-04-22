@@ -11,5 +11,7 @@ extern class SoapName extends dotnet.system.Object  implements ISoapXsd {
   public function GetXsdType() : String;
 
   public static function Parse(value:String) : SoapName;
+
+  public override function ToString() : String;
 }
 

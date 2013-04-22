@@ -10,5 +10,8 @@ extern class Color32 {
   public function new(r:UInt, g:UInt, b:UInt, a:UInt) : Void;
 
   public static function Lerp(a:Color32, b:Color32, t:Float) : Color32;
+
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
 }
 

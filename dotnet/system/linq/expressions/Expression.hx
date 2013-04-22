@@ -53,6 +53,8 @@ extern class Expression extends dotnet.system.Object {
   @:overload(function(addMethod:dotnet.system.reflection.MethodInfo, arguments:dotnet.system.collections.generic.IEnumerable<Expression>) : ElementInit {})
   public static function ElementInit(addMethod:dotnet.system.reflection.MethodInfo, arguments:cs.NativeArray<Expression>) : ElementInit;
 
+  function Emit(ec:EmitContext) : Void;
+
   @:overload(function(left:Expression, right:Expression, liftToNull:Bool, method:dotnet.system.reflection.MethodInfo) : BinaryExpression {})
   public static function Equal(left:Expression, right:Expression) : BinaryExpression;
 
@@ -180,6 +182,8 @@ extern class Expression extends dotnet.system.Object {
 
   @:overload(function(left:Expression, right:Expression, method:dotnet.system.reflection.MethodInfo) : BinaryExpression {})
   public static function SubtractChecked(left:Expression, right:Expression) : BinaryExpression;
+
+  public override function ToString() : String;
 
   public static function TypeAs(expression:Expression, type:cs.system.Type) : UnaryExpression;
 

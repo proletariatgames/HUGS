@@ -12,6 +12,7 @@ extern class ServicePoint extends dotnet.system.Object {
   public var CurrentConnections(default,never) : Int;
   public var IdleSince(default,never) : dotnet.system.DateTime;
   public var MaxIdleTime : Int;
+  public var ProtocolVersion(default,never) : dotnet.system.Version;
   public var ReceiveBufferSize : Int;
   public var SupportsPipelining(default,never) : Bool;
   public var Expect100Continue : Bool;

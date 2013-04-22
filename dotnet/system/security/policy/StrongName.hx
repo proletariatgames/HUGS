@@ -12,10 +12,16 @@ extern class StrongName extends dotnet.system.Object  implements IIdentityPermis
 
   public function new(blob:dotnet.system.security.permissions.StrongNamePublicKeyBlob, name:String, version:dotnet.system.Version) : Void;
 
+  public override function Equals(o:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
   function GetRequiredSize(verbose:Bool) : Int;
 
   function InitFromBuffer(buffer:cs.NativeArray<dotnet.system.Char>, position:Int) : Int;
 
   function OutputToBuffer(buffer:cs.NativeArray<dotnet.system.Char>, position:Int, verbose:Bool) : Int;
+
+  public override function ToString() : String;
 }
 

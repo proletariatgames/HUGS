@@ -12,6 +12,8 @@ extern class ComputeBuffer {
 
   public function Dispose() : Void;
 
+  override function Finalize() : Void;
+
   public function GetData(data:dotnet.system.Array) : Void;
 
   public function Release() : Void;

@@ -13,5 +13,11 @@ extern class StringComparer extends Object  implements dotnet.system.collections
   public function Compare(x:Dynamic, y:Dynamic) : Int;
 
   public static function Create(culture:dotnet.system.globalization.CultureInfo, ignoreCase:Bool) : StringComparer;
+
+  @:overload(function(x:String, y:String) : Bool {})
+  public override function Equals(x:Dynamic, y:Dynamic) : Bool;
+
+  @:overload(function(obj:String) : Int {})
+  public override function GetHashCode(obj:Dynamic) : Int;
 }
 

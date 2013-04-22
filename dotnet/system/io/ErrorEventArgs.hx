@@ -4,5 +4,7 @@ package dotnet.system.io;
 extern class ErrorEventArgs extends dotnet.system.EventArgs {
 
   public function new(exception:dotnet.system.Exception) : Void;
+
+  public function GetException() : dotnet.system.Exception;
 }
 

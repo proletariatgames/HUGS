@@ -9,5 +9,9 @@ extern interface IComponentChangeService {
   public var ComponentRemoved(default,null) : dotnet.system.NativeEvent<ComponentEventArgs>;
   public var ComponentRemoving(default,null) : dotnet.system.NativeEvent<ComponentEventArgs>;
   public var ComponentRename(default,null) : dotnet.system.NativeEvent<ComponentRenameEventArgs>;
+
+  function OnComponentChanged(component:Dynamic, member:dotnet.system.componentmodel.MemberDescriptor, oldValue:Dynamic, newValue:Dynamic) : Void;
+
+  function OnComponentChanging(component:Dynamic, member:dotnet.system.componentmodel.MemberDescriptor) : Void;
 }
 

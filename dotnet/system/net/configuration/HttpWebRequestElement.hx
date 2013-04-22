@@ -8,5 +8,7 @@ extern class HttpWebRequestElement extends dotnet.system.configuration.Configura
   public var UseUnsafeHeaderParsing : Bool;
 
   public function new() : Void;
+
+  override function PostDeserialize() : Void;
 }
 

@@ -4,6 +4,7 @@ package unityengine;
 extern class GUIUtility {
   public static var hotControl : Int;
   public static var keyboardControl : Int;
+  public static var hasModalWindow(default,never) : Bool;
 
   public function new() : Void;
 

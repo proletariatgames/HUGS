@@ -6,6 +6,8 @@ extern class PerformanceCounterPermissionAttribute extends dotnet.system.securit
   public var MachineName : String;
   public var PermissionAccess : PerformanceCounterPermissionAccess;
 
+  public override function CreatePermission() : dotnet.system.security.IPermission;
+
   public function new(action:dotnet.system.security.permissions.SecurityAction) : Void;
 }
 

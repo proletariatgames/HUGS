@@ -5,5 +5,7 @@ extern class WebProxyScriptElement extends dotnet.system.configuration.Configura
   public var DownloadTimeout : dotnet.system.TimeSpan;
 
   public function new() : Void;
+
+  override function PostDeserialize() : Void;
 }
 

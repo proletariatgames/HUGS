@@ -32,6 +32,8 @@ extern class TcpClient extends dotnet.system.Object  implements dotnet.system.ID
 
   public function EndConnect(asyncResult:dotnet.system.IAsyncResult) : Void;
 
+  override function Finalize() : Void;
+
   public function GetStream() : NetworkStream;
 }
 

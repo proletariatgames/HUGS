@@ -2,6 +2,7 @@ package dotnet.system.reflection.emit;
 
 @:native("System.Reflection.Emit.ModuleBuilder")
 extern class ModuleBuilder extends dotnet.system.reflection.Module  implements dotnet.system.runtime.interopservices._ModuleBuilder {
+  public override var FullyQualifiedName(default,never) : String;
 
   public function CreateGlobalFunctions() : Void;
 
@@ -44,7 +45,11 @@ extern class ModuleBuilder extends dotnet.system.reflection.Module  implements d
 
   public function GetFieldToken(field:dotnet.system.reflection.FieldInfo) : FieldToken;
 
+  override function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
+
   public function GetMethodToken(method:dotnet.system.reflection.MethodInfo) : MethodToken;
+
+  override function GetModuleVersionId() : dotnet.system.Guid;
 
   @:overload(function(sigBytes:cs.NativeArray<dotnet.system.Byte>, sigLength:Int) : SignatureToken {})
   public function GetSignatureToken(sigHelper:SignatureHelper) : SignatureToken;
@@ -53,8 +58,20 @@ extern class ModuleBuilder extends dotnet.system.reflection.Module  implements d
 
   public function GetSymWriter() : dotnet.system.diagnostics.symbolstore.ISymbolWriter;
 
+  @:overload(function(className:String, throwOnError:Bool, ignoreCase:Bool) : cs.system.Type {})
+  @:overload(function(className:String, ignoreCase:Bool) : cs.system.Type {})
+  public override function GetType(className:String) : cs.system.Type;
+
+  override function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:dotnet.system.IntPtr) : Void;
+
+  override function GetTypeInfoCount(pcTInfo:UInt) : Void;
+
+  public override function GetTypes() : cs.NativeArray<cs.system.Type>;
+
   @:overload(function(type:cs.system.Type) : TypeToken {})
   public function GetTypeToken(name:String) : TypeToken;
+
+  override function Invoke(dispIdMember:UInt, riid:dotnet.system.Guid, lcid:UInt, wFlags:Int, pDispParams:dotnet.system.IntPtr, pVarResult:dotnet.system.IntPtr, pExcepInfo:dotnet.system.IntPtr, puArgErr:dotnet.system.IntPtr) : Void;
 
   public function IsTransient() : Bool;
 

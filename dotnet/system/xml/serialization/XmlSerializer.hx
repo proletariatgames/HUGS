@@ -7,6 +7,12 @@ extern class XmlSerializer extends dotnet.system.Object {
   public var UnknownNode(default,null) : dotnet.system.NativeEvent<XmlNodeEventArgs>;
   public var UnreferencedObject(default,null) : dotnet.system.NativeEvent<UnreferencedObjectEventArgs>;
 
+  public function CanDeserialize(xmlReader:dotnet.system.xml.XmlReader) : Bool;
+
+  function CreateReader() : XmlSerializationReader;
+
+  function CreateWriter() : XmlSerializationWriter;
+
   @:overload(function(type:cs.system.Type, overrides:XmlAttributeOverrides, extraTypes:cs.NativeArray<cs.system.Type>, root:XmlRootAttribute, defaultNamespace:String, location:String, evidence:dotnet.system.security.policy.Evidence) : Void {})
   @:overload(function(type:cs.system.Type, overrides:XmlAttributeOverrides, extraTypes:cs.NativeArray<cs.system.Type>, root:XmlRootAttribute, defaultNamespace:String) : Void {})
   @:overload(function(type:cs.system.Type, root:XmlRootAttribute) : Void {})
@@ -34,6 +40,14 @@ extern class XmlSerializer extends dotnet.system.Object {
 
   @:overload(function(type:cs.system.Type, defaultNamespace:String) : String {})
   public static function GetXmlSerializerAssemblyName(type:cs.system.Type) : String;
+
+  function OnUnknownAttribute(e:XmlAttributeEventArgs) : Void;
+
+  function OnUnknownElement(e:XmlElementEventArgs) : Void;
+
+  function OnUnknownNode(e:XmlNodeEventArgs) : Void;
+
+  function OnUnreferencedObject(e:UnreferencedObjectEventArgs) : Void;
 
   @:overload(function(xmlWriter:dotnet.system.xml.XmlWriter, o:Dynamic, namespaces:XmlSerializerNamespaces, encodingStyle:String, id:String) : Void {})
   @:overload(function(xmlWriter:dotnet.system.xml.XmlWriter, o:Dynamic, namespaces:XmlSerializerNamespaces, encodingStyle:String) : Void {})

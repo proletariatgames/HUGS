@@ -6,5 +6,7 @@ extern class GUIStyleState {
   public var textColor : Color;
 
   public function new() : Void;
+
+  override function Finalize() : Void;
 }
 

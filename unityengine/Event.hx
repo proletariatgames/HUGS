@@ -28,9 +28,17 @@ extern class Event {
   @:overload(function(other:Event) : Void {})
   public function new() : Void;
 
+  public override function Equals(obj:Dynamic) : Bool;
+
+  override function Finalize() : Void;
+
+  public override function GetHashCode() : Int;
+
   public function GetTypeForControl(controlID:Int) : EventType;
 
   public static function KeyboardEvent(key:String) : Event;
+
+  public override function ToString() : String;
 
   public function Use() : Void;
 }

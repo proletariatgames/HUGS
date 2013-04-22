@@ -8,6 +8,7 @@ extern class Exception extends Object  implements dotnet.system.runtime.interops
   public var Source : String;
   public var StackTrace(default,never) : String;
   public var TargetSite(default,never) : dotnet.system.reflection.MethodBase;
+  public var Data(default,never) : dotnet.system.collections.IDictionary;
 
   @:overload(function(message:String, innerException:Exception) : Void {})
   @:overload(function(message:String) : Void {})
@@ -16,5 +17,9 @@ extern class Exception extends Object  implements dotnet.system.runtime.interops
   public function GetBaseException() : Exception;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
+
+  public override function GetType() : cs.system.Type;
+
+  public override function ToString() : String;
 }
 

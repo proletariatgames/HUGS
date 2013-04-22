@@ -11,6 +11,8 @@ extern class CodeMemberProperty extends CodeTypeMember {
   public var SetStatements(default,never) : CodeStatementCollection;
   public var Type : CodeTypeReference;
 
+  override function Accept(visitor:ICodeDomVisitor) : Void;
+
   public function new() : Void;
 }
 

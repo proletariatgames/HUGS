@@ -15,8 +15,12 @@ extern class Bounds {
   @:overload(function(point:Vector3) : Void {})
   public function Encapsulate(bounds:Bounds) : Void;
 
+  public override function Equals(other:Dynamic) : Bool;
+
   @:overload(function(amount:Vector3) : Void {})
   public function Expand(amount:Float) : Void;
+
+  public override function GetHashCode() : Int;
 
   @:overload(function(ray:Ray, distance:Float) : Bool {})
   public function IntersectRay(ray:Ray) : Bool;
@@ -26,5 +30,8 @@ extern class Bounds {
   public function SetMinMax(min:Vector3, max:Vector3) : Void;
 
   public function SqrDistance(point:Vector3) : Float;
+
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
 }
 

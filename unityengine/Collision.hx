@@ -13,5 +13,7 @@ extern class Collision {
   public var other(default,never) : Component;
 
   public function new() : Void;
+
+  public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 }
 

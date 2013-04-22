@@ -8,5 +8,11 @@ extern class MergablePropertyAttribute extends dotnet.system.Attribute {
   public var AllowMerge(default,never) : Bool;
 
   public function new(allowMerge:Bool) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

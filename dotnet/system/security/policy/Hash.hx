@@ -20,5 +20,7 @@ extern class Hash extends dotnet.system.Object  implements dotnet.system.runtime
   function InitFromBuffer(buffer:cs.NativeArray<dotnet.system.Char>, position:Int) : Int;
 
   function OutputToBuffer(buffer:cs.NativeArray<dotnet.system.Char>, position:Int, verbose:Bool) : Int;
+
+  public override function ToString() : String;
 }
 

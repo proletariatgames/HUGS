@@ -2,6 +2,10 @@ package dotnet.system.runtime.remoting;
 
 @:native("System.Runtime.Remoting.ObjRef")
 extern class ObjRef extends dotnet.system.Object  implements dotnet.system.runtime.serialization.IObjectReference implements dotnet.system.runtime.serialization.ISerializable {
+  public var ChannelInfo : IChannelInfo;
+  public var EnvoyInfo : IEnvoyInfo;
+  public var TypeInfo : IRemotingTypeInfo;
+  public var URI : String;
 
   @:overload(function(o:dotnet.system.MarshalByRefObject, requestedType:cs.system.Type) : Void {})
   public function new() : Void;

@@ -5,6 +5,11 @@ extern class SoapDateTime extends dotnet.system.Object {
   public static var XsdType(default,never) : String;
 
   public function new() : Void;
+}
+
+
+@:native("System.Runtime.Remoting.Metadata.W3cXsd2001.SoapDateTime") @:final
+extern class SoapDateTime_Static {
 
   public static function Parse(value:String) : dotnet.system.DateTime;
 

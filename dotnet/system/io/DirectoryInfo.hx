@@ -2,6 +2,8 @@ package dotnet.system.io;
 
 @:native("System.IO.DirectoryInfo") @:final
 extern class DirectoryInfo extends FileSystemInfo {
+  public override var Exists(default,never) : Bool;
+  public override var Name(default,never) : String;
   public var Parent(default,never) : DirectoryInfo;
   public var Root(default,never) : DirectoryInfo;
 
@@ -12,6 +14,9 @@ extern class DirectoryInfo extends FileSystemInfo {
   public function CreateSubdirectory(path:String) : DirectoryInfo;
 
   public function new(path:String) : Void;
+
+  @:overload(function(recursive:Bool) : Void {})
+  public override function Delete() : Void;
 
   @:overload(function(includeSections:dotnet.system.security.accesscontrol.AccessControlSections) : dotnet.system.security.accesscontrol.DirectorySecurity {})
   public function GetAccessControl() : dotnet.system.security.accesscontrol.DirectorySecurity;
@@ -30,5 +35,7 @@ extern class DirectoryInfo extends FileSystemInfo {
   public function MoveTo(destDirName:String) : Void;
 
   public function SetAccessControl(directorySecurity:dotnet.system.security.accesscontrol.DirectorySecurity) : Void;
+
+  public override function ToString() : String;
 }
 

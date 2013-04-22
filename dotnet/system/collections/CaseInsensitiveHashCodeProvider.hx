@@ -7,5 +7,7 @@ extern class CaseInsensitiveHashCodeProvider extends dotnet.system.Object  imple
 
   @:overload(function(culture:dotnet.system.globalization.CultureInfo) : Void {})
   public function new() : Void;
+
+  public override function GetHashCode(obj:Dynamic) : Int;
 }
 

@@ -21,6 +21,24 @@ extern class XmlSchemaElement extends XmlSchemaParticle {
   public var BlockResolved(default,never) : XmlSchemaDerivationMethod;
   public var FinalResolved(default,never) : XmlSchemaDerivationMethod;
 
+  override function CheckRecursion(depth:Int, h:ValidationEventHandler, schema:XmlSchema) : Void;
+
+  override function Compile(h:ValidationEventHandler, schema:XmlSchema) : Int;
+
   public function new() : Void;
+
+  override function GetOptimizedParticle(isTop:Bool) : XmlSchemaParticle;
+
+  override function ParticleEquals(other:XmlSchemaParticle) : Bool;
+
+  override function SetParent(parent:XmlSchemaObject) : Void;
+
+  override function Validate(h:ValidationEventHandler, schema:XmlSchema) : Int;
+
+  override function ValidateDerivationByRestriction(baseParticle:XmlSchemaParticle, h:ValidationEventHandler, schema:XmlSchema, raiseError:Bool) : Bool;
+
+  override function ValidateUniqueParticleAttribution(qnames:XmlSchemaObjectTable, nsNames:dotnet.system.collections.ArrayList, h:ValidationEventHandler, schema:XmlSchema) : Void;
+
+  override function ValidateUniqueTypeAttribution(labels:XmlSchemaObjectTable, h:ValidationEventHandler, schema:XmlSchema) : Void;
 }
 

@@ -8,5 +8,11 @@ extern class BrowsableAttribute extends dotnet.system.Attribute {
   public var Browsable(default,never) : Bool;
 
   public function new(browsable:Bool) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

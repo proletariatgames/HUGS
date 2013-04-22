@@ -7,7 +7,11 @@ extern class ProviderSettingsCollection extends ConfigurationElementCollection {
 
   public function Clear() : Void;
 
+  override function CreateNewElement() : ConfigurationElement;
+
   public function new() : Void;
+
+  override function GetElementKey(element:ConfigurationElement) : Dynamic;
 
   public function Remove(key:String) : Void;
 }

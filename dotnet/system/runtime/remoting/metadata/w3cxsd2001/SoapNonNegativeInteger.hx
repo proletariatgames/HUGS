@@ -11,5 +11,7 @@ extern class SoapNonNegativeInteger extends dotnet.system.Object  implements ISo
   public function GetXsdType() : String;
 
   public static function Parse(value:String) : SoapNonNegativeInteger;
+
+  public override function ToString() : String;
 }
 

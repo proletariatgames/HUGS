@@ -11,5 +11,9 @@ extern class DataObjectFieldAttribute extends dotnet.system.Attribute {
   @:overload(function(primaryKey:Bool, isIdentity:Bool, isNullable:Bool) : Void {})
   @:overload(function(primaryKey:Bool, isIdentity:Bool) : Void {})
   public function new(primaryKey:Bool) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

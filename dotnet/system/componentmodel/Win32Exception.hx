@@ -9,5 +9,7 @@ extern class Win32Exception extends dotnet.system.runtime.interopservices.Extern
   @:overload(function(message:String) : Void {})
   @:overload(function(error:Int) : Void {})
   public function new() : Void;
+
+  public override function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }
 

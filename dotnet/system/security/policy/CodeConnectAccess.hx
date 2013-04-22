@@ -14,5 +14,9 @@ extern class CodeConnectAccess extends dotnet.system.Object {
   public static function CreateOriginSchemeAccess(allowPort:Int) : CodeConnectAccess;
 
   public function new(allowScheme:String, allowPort:Int) : Void;
+
+  public override function Equals(o:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

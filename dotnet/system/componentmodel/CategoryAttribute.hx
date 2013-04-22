@@ -20,5 +20,13 @@ extern class CategoryAttribute extends dotnet.system.Attribute {
 
   @:overload(function(category:String) : Void {})
   public function new() : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  function GetLocalizedString(value:String) : String;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

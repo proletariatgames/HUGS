@@ -7,5 +7,7 @@ extern class PrivilegeNotHeldException extends dotnet.system.UnauthorizedAccessE
   @:overload(function(privilege:String, inner:dotnet.system.Exception) : Void {})
   @:overload(function(privilege:String) : Void {})
   public function new() : Void;
+
+  public override function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }
 

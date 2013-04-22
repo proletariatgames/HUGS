@@ -2,6 +2,8 @@ package dotnet.system.io;
 
 @:native("System.IO.FileInfo") @:final
 extern class FileInfo extends FileSystemInfo {
+  public override var Exists(default,never) : Bool;
+  public override var Name(default,never) : String;
   public var IsReadOnly : Bool;
   public var Length(default,never) : dotnet.system.Int64;
   public var DirectoryName(default,never) : String;
@@ -20,10 +22,14 @@ extern class FileInfo extends FileSystemInfo {
 
   public function Decrypt() : Void;
 
+  public override function Delete() : Void;
+
   public function Encrypt() : Void;
 
   @:overload(function(includeSections:dotnet.system.security.accesscontrol.AccessControlSections) : dotnet.system.security.accesscontrol.FileSecurity {})
   public function GetAccessControl() : dotnet.system.security.accesscontrol.FileSecurity;
+
+  override function InternalRefresh() : Void;
 
   public function MoveTo(destFileName:String) : Void;
 
@@ -41,5 +47,7 @@ extern class FileInfo extends FileSystemInfo {
   public function Replace(destinationFileName:String, destinationBackupFileName:String) : FileInfo;
 
   public function SetAccessControl(fileSecurity:dotnet.system.security.accesscontrol.FileSecurity) : Void;
+
+  public override function ToString() : String;
 }
 

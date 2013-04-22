@@ -2,6 +2,9 @@ package dotnet.system;
 
 @:native("System.Attribute")
 extern class Attribute extends Object  implements dotnet.system.runtime.interopservices._Attribute {
+  public var TypeId(default,never) : Dynamic;
+
+  public override function Equals(obj:Dynamic) : Bool;
 
   @:overload(function(element:dotnet.system.reflection.ParameterInfo, attributeType:cs.system.Type, inherit:Bool) : Attribute {})
   @:overload(function(element:dotnet.system.reflection.Module, attributeType:cs.system.Type, inherit:Bool) : Attribute {})
@@ -29,6 +32,8 @@ extern class Attribute extends Object  implements dotnet.system.runtime.interops
   @:overload(function(element:dotnet.system.reflection.MemberInfo) : cs.NativeArray<Attribute> {})
   public static function GetCustomAttributes(element:dotnet.system.reflection.Assembly) : cs.NativeArray<Attribute>;
 
+  public override function GetHashCode() : Int;
+
   function GetIDsOfNames(riid:Guid, rgszNames:IntPtr, cNames:UInt, lcid:UInt, rgDispId:IntPtr) : Void;
 
   function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:IntPtr) : Void;
@@ -36,6 +41,8 @@ extern class Attribute extends Object  implements dotnet.system.runtime.interops
   function GetTypeInfoCount(pcTInfo:UInt) : Void;
 
   function Invoke(dispIdMember:UInt, riid:Guid, lcid:UInt, wFlags:Int, pDispParams:IntPtr, pVarResult:IntPtr, pExcepInfo:IntPtr, puArgErr:IntPtr) : Void;
+
+  public function IsDefaultAttribute() : Bool;
 
   @:overload(function(element:dotnet.system.reflection.ParameterInfo, attributeType:cs.system.Type, inherit:Bool) : Bool {})
   @:overload(function(element:dotnet.system.reflection.Module, attributeType:cs.system.Type, inherit:Bool) : Bool {})
@@ -45,5 +52,7 @@ extern class Attribute extends Object  implements dotnet.system.runtime.interops
   @:overload(function(element:dotnet.system.reflection.Module, attributeType:cs.system.Type) : Bool {})
   @:overload(function(element:dotnet.system.reflection.MemberInfo, attributeType:cs.system.Type) : Bool {})
   public static function IsDefined(element:dotnet.system.reflection.Assembly, attributeType:cs.system.Type) : Bool;
+
+  public function Match(obj:Dynamic) : Bool;
 }
 

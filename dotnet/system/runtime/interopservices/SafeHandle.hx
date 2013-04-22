@@ -3,6 +3,7 @@ package dotnet.system.runtime.interopservices;
 @:native("System.Runtime.InteropServices.SafeHandle")
 extern class SafeHandle extends dotnet.system.runtime.constrainedexecution.CriticalFinalizerObject  implements dotnet.system.IDisposable {
   public var IsClosed(default,never) : Bool;
+  public var IsInvalid(default,never) : Bool;
 
   public function Close() : Void;
 
@@ -13,6 +14,10 @@ extern class SafeHandle extends dotnet.system.runtime.constrainedexecution.Criti
   public function DangerousRelease() : Void;
 
   public function Dispose() : Void;
+
+  override function Finalize() : Void;
+
+  function ReleaseHandle() : Bool;
 
   public function SetHandleAsInvalid() : Void;
 }

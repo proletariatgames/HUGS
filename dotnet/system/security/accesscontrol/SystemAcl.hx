@@ -10,6 +10,8 @@ extern class SystemAcl extends CommonAcl {
   @:overload(function(isContainer:Bool, isDS:Bool, rawAcl:RawAcl) : Void {})
   public function new(isContainer:Bool, isDS:Bool, capacity:Int) : Void;
 
+  override function GetSddlForm(sdFlags:ControlFlags, isDacl:Bool) : String;
+
   @:overload(function(auditFlags:AuditFlags, sid:dotnet.system.security.principal.SecurityIdentifier, accessMask:Int, inheritanceFlags:InheritanceFlags, propagationFlags:PropagationFlags, objectFlags:ObjectAceFlags, objectType:dotnet.system.Guid, inheritedObjectType:dotnet.system.Guid) : Bool {})
   public function RemoveAudit(auditFlags:AuditFlags, sid:dotnet.system.security.principal.SecurityIdentifier, accessMask:Int, inheritanceFlags:InheritanceFlags, propagationFlags:PropagationFlags) : Bool;
 

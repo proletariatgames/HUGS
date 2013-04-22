@@ -10,5 +10,7 @@ extern class SmtpNetworkElement extends dotnet.system.configuration.Configuratio
   public var TargetName : String;
 
   public function new() : Void;
+
+  override function PostDeserialize() : Void;
 }
 

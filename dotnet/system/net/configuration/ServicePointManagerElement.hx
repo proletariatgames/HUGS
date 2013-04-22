@@ -10,5 +10,7 @@ extern class ServicePointManagerElement extends dotnet.system.configuration.Conf
   public var UseNagleAlgorithm : Bool;
 
   public function new() : Void;
+
+  override function PostDeserialize() : Void;
 }
 

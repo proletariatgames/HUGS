@@ -7,6 +7,12 @@ extern class SignatureDescription extends dotnet.system.Object {
   public var FormatterAlgorithm : String;
   public var KeyAlgorithm : String;
 
+  public function CreateDeformatter(key:AsymmetricAlgorithm) : AsymmetricSignatureDeformatter;
+
+  public function CreateDigest() : HashAlgorithm;
+
+  public function CreateFormatter(key:AsymmetricAlgorithm) : AsymmetricSignatureFormatter;
+
   @:overload(function(el:dotnet.system.security.SecurityElement) : Void {})
   public function new() : Void;
 }

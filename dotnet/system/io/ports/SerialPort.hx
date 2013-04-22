@@ -46,6 +46,8 @@ extern class SerialPort extends dotnet.system.componentmodel.Component {
 
   public function DiscardOutBuffer() : Void;
 
+  override function Dispose(disposing:Bool) : Void;
+
   public static function GetPortNames() : cs.NativeArray<String>;
 
   public function Open() : Void;

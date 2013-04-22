@@ -10,5 +10,19 @@ extern class StackFrame extends dotnet.system.Object {
   @:overload(function(skipFrames:Int) : Void {})
   @:overload(function(fNeedFileInfo:Bool) : Void {})
   public function new() : Void;
+
+  public function GetFileColumnNumber() : Int;
+
+  public function GetFileLineNumber() : Int;
+
+  public function GetFileName() : String;
+
+  public function GetILOffset() : Int;
+
+  public function GetMethod() : dotnet.system.reflection.MethodBase;
+
+  public function GetNativeOffset() : Int;
+
+  public override function ToString() : String;
 }
 

@@ -10,5 +10,9 @@ extern class LookupBindingPropertiesAttribute extends dotnet.system.Attribute {
 
   @:overload(function(dataSource:String, displayMember:String, valueMember:String, lookupMember:String) : Void {})
   public function new() : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

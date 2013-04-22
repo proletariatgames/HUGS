@@ -69,11 +69,17 @@ extern class Process extends dotnet.system.componentmodel.Component {
 
   public function new() : Void;
 
+  override function Dispose(disposing:Bool) : Void;
+
+  override function Finalize() : Void;
+
   public function Kill() : Void;
 
   public function Refresh() : Void;
 
   public function Start() : Bool;
+
+  public override function ToString() : String;
 
   @:overload(function(milliseconds:Int) : Bool {})
   public function WaitForExit() : Void;

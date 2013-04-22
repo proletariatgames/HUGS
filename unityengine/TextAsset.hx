@@ -6,5 +6,7 @@ extern class TextAsset extends Object {
   public var bytes(default,never) : cs.NativeArray<dotnet.system.Byte>;
 
   public function new() : Void;
+
+  public override function ToString() : String;
 }
 

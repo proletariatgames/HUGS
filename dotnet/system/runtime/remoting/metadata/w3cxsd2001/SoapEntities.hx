@@ -11,5 +11,7 @@ extern class SoapEntities extends dotnet.system.Object  implements ISoapXsd {
   public function GetXsdType() : String;
 
   public static function Parse(value:String) : SoapEntities;
+
+  public override function ToString() : String;
 }
 

@@ -3,7 +3,13 @@ package unityengine;
 @:native("UnityEngine.GUI.WindowFunction") @:final
 extern class GUI_WindowFunction {
 
+  public function BeginInvoke(id:Int, _callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
+
   public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
+
+  public function EndInvoke(result:dotnet.system.IAsyncResult) : Void;
+
+  public function Invoke(id:Int) : Void;
 }
 
 @:native("UnityEngine.GUI")
@@ -86,6 +92,13 @@ extern class GUI {
   @:overload(function(position:Rect, text:String) : Void {})
   @:overload(function(position:Rect, image:Texture) : Void {})
   public static function Label(position:Rect, content:GUIContent) : Void;
+
+  @:overload(function(id:Int, clientRect:Rect, func:GUI_WindowFunction, text:String, style:GUIStyle) : Rect {})
+  @:overload(function(id:Int, clientRect:Rect, func:GUI_WindowFunction, image:Texture, style:GUIStyle) : Rect {})
+  @:overload(function(id:Int, clientRect:Rect, func:GUI_WindowFunction, content:GUIContent, style:GUIStyle) : Rect {})
+  @:overload(function(id:Int, clientRect:Rect, func:GUI_WindowFunction, text:String) : Rect {})
+  @:overload(function(id:Int, clientRect:Rect, func:GUI_WindowFunction, image:Texture) : Rect {})
+  public static function ModalWindow(id:Int, clientRect:Rect, func:GUI_WindowFunction, content:GUIContent) : Rect;
 
   @:overload(function(position:Rect, password:String, maskChar:dotnet.system.Char, maxLength:Int, style:GUIStyle) : String {})
   @:overload(function(position:Rect, password:String, maskChar:dotnet.system.Char, style:GUIStyle) : String {})

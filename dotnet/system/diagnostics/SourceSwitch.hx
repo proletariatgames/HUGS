@@ -7,6 +7,8 @@ extern class SourceSwitch extends Switch {
   @:overload(function(displayName:String, defaultSwitchValue:String) : Void {})
   public function new(displayName:String) : Void;
 
+  override function OnValueChanged() : Void;
+
   public function ShouldTrace(eventType:TraceEventType) : Bool;
 }
 

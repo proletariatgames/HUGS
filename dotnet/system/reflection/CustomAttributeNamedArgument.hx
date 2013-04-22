@@ -4,5 +4,11 @@ package dotnet.system.reflection;
 extern class CustomAttributeNamedArgument extends dotnet.system.ValueType {
   public var MemberInfo(default,never) : MemberInfo;
   public var TypedValue(default,never) : CustomAttributeTypedArgument;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function ToString() : String;
 }
 

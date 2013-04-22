@@ -16,6 +16,8 @@ extern class ActivationContext extends Object  implements IDisposable implements
 
   public function Dispose() : Void;
 
+  override function Finalize() : Void;
+
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }
 

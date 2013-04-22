@@ -95,6 +95,14 @@ extern class MaskedTextProvider extends dotnet.system.Object  implements dotnet.
 
   public function ToDisplayString() : String;
 
+  @:overload(function(ignorePasswordChar:Bool, includePrompt:Bool, includeLiterals:Bool, startPosition:Int, length:Int) : String {})
+  @:overload(function(includePrompt:Bool, includeLiterals:Bool, startPosition:Int, length:Int) : String {})
+  @:overload(function(ignorePasswordChar:Bool, startPosition:Int, length:Int) : String {})
+  @:overload(function(startPosition:Int, length:Int) : String {})
+  @:overload(function(includePrompt:Bool, includeLiterals:Bool) : String {})
+  @:overload(function(ignorePasswordChar:Bool) : String {})
+  public override function ToString() : String;
+
   public function VerifyChar(input:dotnet.system.Char, position:Int, hint:MaskedTextResultHint) : Bool;
 
   public function VerifyEscapeChar(input:dotnet.system.Char, position:Int) : Bool;

@@ -8,5 +8,11 @@ extern class HelpKeywordAttribute extends dotnet.system.Attribute {
   @:overload(function(t:cs.system.Type) : Void {})
   @:overload(function(keyword:String) : Void {})
   public function new() : Void;
+
+  public override function Equals(other:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

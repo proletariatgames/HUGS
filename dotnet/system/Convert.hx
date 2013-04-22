@@ -3,6 +3,11 @@ package dotnet.system;
 @:native("System.Convert") @:final
 extern class Convert extends Object {
   public static var DBNull : Dynamic;
+}
+
+
+@:native("System.Convert") @:final
+extern class Convert_Static {
 
   @:overload(function(value:Dynamic, typeCode:TypeCode, provider:IFormatProvider) : Dynamic {})
   @:overload(function(value:Dynamic, conversionType:cs.system.Type, provider:IFormatProvider) : Dynamic {})

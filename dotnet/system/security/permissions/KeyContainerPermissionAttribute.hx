@@ -9,6 +9,8 @@ extern class KeyContainerPermissionAttribute extends CodeAccessSecurityAttribute
   public var ProviderName : String;
   public var ProviderType : Int;
 
+  public override function CreatePermission() : dotnet.system.security.IPermission;
+
   public function new(action:SecurityAction) : Void;
 }
 

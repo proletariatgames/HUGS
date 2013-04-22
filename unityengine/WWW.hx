@@ -30,6 +30,8 @@ extern class WWW {
   @:overload(function(s:String, e:dotnet.system.text.Encoding) : String {})
   public static function EscapeURL(s:String) : String;
 
+  override function Finalize() : Void;
+
   @:overload(function(threeD:Bool, stream:Bool, audioType:AudioType) : AudioClip {})
   @:overload(function(threeD:Bool, stream:Bool) : AudioClip {})
   public function GetAudioClip(threeD:Bool) : AudioClip;

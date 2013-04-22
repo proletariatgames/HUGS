@@ -4,5 +4,7 @@ package dotnet.system.linq.expressions;
 extern class ListInitExpression extends Expression {
   public var NewExpression(default,never) : NewExpression;
   public var Initializers(default,never) : dotnet.system.collections.objectmodel.ReadOnlyCollection<ElementInit>;
+
+  override function Emit(ec:EmitContext) : Void;
 }
 

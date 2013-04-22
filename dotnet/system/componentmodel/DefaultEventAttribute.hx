@@ -6,5 +6,9 @@ extern class DefaultEventAttribute extends dotnet.system.Attribute {
   public var Name(default,never) : String;
 
   public function new(name:String) : Void;
+
+  public override function Equals(o:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

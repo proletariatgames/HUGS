@@ -13,5 +13,7 @@ extern class SoapYear extends dotnet.system.Object  implements ISoapXsd {
   public function GetXsdType() : String;
 
   public static function Parse(value:String) : SoapYear;
+
+  public override function ToString() : String;
 }
 

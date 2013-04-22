@@ -37,6 +37,8 @@ extern class UdpClient extends dotnet.system.Object  implements dotnet.system.ID
 
   public function EndSend(asyncResult:dotnet.system.IAsyncResult) : Int;
 
+  override function Finalize() : Void;
+
   @:overload(function(multicastAddr:dotnet.system.net.IPAddress, timeToLive:Int) : Void {})
   @:overload(function(multicastAddr:dotnet.system.net.IPAddress, localAddress:dotnet.system.net.IPAddress) : Void {})
   @:overload(function(ifindex:Int, multicastAddr:dotnet.system.net.IPAddress) : Void {})

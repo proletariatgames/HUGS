@@ -24,7 +24,11 @@ extern class Matrix4x4 {
   public static var zero(default,never) : Matrix4x4;
   public static var identity(default,never) : Matrix4x4;
 
+  public override function Equals(other:Dynamic) : Bool;
+
   public function GetColumn(i:Int) : Vector4;
+
+  public override function GetHashCode() : Int;
 
   public function GetRow(i:Int) : Vector4;
 
@@ -47,6 +51,9 @@ extern class Matrix4x4 {
   public function SetRow(i:Int, v:Vector4) : Void;
 
   public function SetTRS(pos:Vector3, q:Quaternion, s:Vector3) : Void;
+
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
 
   public static function Transpose(m:Matrix4x4) : Matrix4x4;
 

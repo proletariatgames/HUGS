@@ -10,5 +10,10 @@ extern class PropertyTabAttribute extends dotnet.system.Attribute {
   @:overload(function(tabClassName:String) : Void {})
   @:overload(function(tabClass:cs.system.Type) : Void {})
   public function new() : Void;
+
+  @:overload(function(other:PropertyTabAttribute) : Bool {})
+  public override function Equals(other:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

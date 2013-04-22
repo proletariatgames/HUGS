@@ -90,9 +90,15 @@ extern class AppDomain extends MarshalByRefObject  implements _AppDomain impleme
 
   function GetIDsOfNames(riid:Guid, rgszNames:IntPtr, cNames:UInt, lcid:UInt, rgDispId:IntPtr) : Void;
 
+  override function GetLifetimeService() : Dynamic;
+
+  public override function GetType() : cs.system.Type;
+
   function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:IntPtr) : Void;
 
   function GetTypeInfoCount(pcTInfo:UInt) : Void;
+
+  public override function InitializeLifetimeService() : Dynamic;
 
   function Invoke(dispIdMember:UInt, riid:Guid, lcid:UInt, wFlags:Int, pDispParams:IntPtr, pVarResult:IntPtr, pExcepInfo:IntPtr, puArgErr:IntPtr) : Void;
 
@@ -126,6 +132,8 @@ extern class AppDomain extends MarshalByRefObject  implements _AppDomain impleme
   public function SetShadowCopyPath(path:String) : Void;
 
   public function SetThreadPrincipal(principal:dotnet.system.security.principal.IPrincipal) : Void;
+
+  public override function ToString() : String;
 
   public static function Unload(domain:AppDomain) : Void;
 }

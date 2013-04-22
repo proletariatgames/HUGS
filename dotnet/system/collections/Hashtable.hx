@@ -18,6 +18,10 @@ extern class Hashtable extends dotnet.system.Object  implements dotnet.system.IC
 
   public function Contains(key:Dynamic) : Bool;
 
+  public function ContainsKey(key:Dynamic) : Bool;
+
+  public function ContainsValue(value:Dynamic) : Bool;
+
   public function CopyTo(array:dotnet.system.Array, arrayIndex:Int) : Void;
 
   @:overload(function(d:IDictionary, loadFactor:Float, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
@@ -38,7 +42,11 @@ extern class Hashtable extends dotnet.system.Object  implements dotnet.system.IC
 
   public function GetEnumerator() : IDictionaryEnumerator;
 
+  function GetHash(key:Dynamic) : Int;
+
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
+
+  function KeyEquals(item:Dynamic, key:Dynamic) : Bool;
 
   public function OnDeserialization(sender:Dynamic) : Void;
 

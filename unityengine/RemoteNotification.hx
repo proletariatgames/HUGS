@@ -7,5 +7,7 @@ extern class RemoteNotification {
   public var applicationIconBadgeNumber(default,never) : Int;
   public var soundName(default,never) : String;
   public var userInfo(default,never) : dotnet.system.collections.IDictionary;
+
+  override function Finalize() : Void;
 }
 

@@ -24,6 +24,13 @@ extern class Color {
   @:overload(function(r:Float, g:Float, b:Float, a:Float) : Void {})
   public function new(r:Float, g:Float, b:Float) : Void;
 
+  public override function Equals(other:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
   public static function Lerp(a:Color, b:Color, t:Float) : Color;
+
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
 }
 

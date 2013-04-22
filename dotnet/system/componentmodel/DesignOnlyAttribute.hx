@@ -8,5 +8,11 @@ extern class DesignOnlyAttribute extends dotnet.system.Attribute {
   public var IsDesignOnly(default,never) : Bool;
 
   public function new(design_only:Bool) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

@@ -21,5 +21,7 @@ extern class UserProfile implements dotnet.unityengine.socialplatforms.IUserProf
   public function SetUserID(id:String) : Void;
 
   public function SetUserName(name:String) : Void;
+
+  public override function ToString() : String;
 }
 

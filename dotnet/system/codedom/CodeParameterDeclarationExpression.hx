@@ -7,6 +7,8 @@ extern class CodeParameterDeclarationExpression extends CodeExpression {
   public var Name : String;
   public var Type : CodeTypeReference;
 
+  override function Accept(visitor:ICodeDomVisitor) : Void;
+
   @:overload(function(type:String, name:String) : Void {})
   @:overload(function(type:cs.system.Type, name:String) : Void {})
   @:overload(function(type:CodeTypeReference, name:String) : Void {})

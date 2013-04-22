@@ -11,5 +11,11 @@ extern class ApplicationId extends Object {
   public function Copy() : ApplicationId;
 
   public function new(publicKeyToken:cs.NativeArray<Byte>, name:String, version:Version, processorArchitecture:String, culture:String) : Void;
+
+  public override function Equals(o:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function ToString() : String;
 }
 

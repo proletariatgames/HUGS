@@ -7,5 +7,9 @@ extern class SettingsBindableAttribute extends dotnet.system.Attribute {
   public var Bindable(default,never) : Bool;
 
   public function new(bindable:Bool) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

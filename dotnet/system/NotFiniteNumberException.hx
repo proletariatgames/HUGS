@@ -10,5 +10,7 @@ extern class NotFiniteNumberException extends ArithmeticException {
   @:overload(function(offendingNumber:Float) : Void {})
   @:overload(function(message:String) : Void {})
   public function new() : Void;
+
+  public override function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }
 

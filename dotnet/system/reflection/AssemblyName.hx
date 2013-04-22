@@ -42,5 +42,7 @@ extern class AssemblyName extends dotnet.system.Object  implements dotnet.system
   public function SetPublicKey(publicKey:cs.NativeArray<dotnet.system.Byte>) : Void;
 
   public function SetPublicKeyToken(publicKeyToken:cs.NativeArray<dotnet.system.Byte>) : Void;
+
+  public override function ToString() : String;
 }
 

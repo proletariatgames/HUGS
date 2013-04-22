@@ -7,6 +7,8 @@ extern class Gradient {
 
   public function Evaluate(time:Float) : Color;
 
+  override function Finalize() : Void;
+
   public function SetKeys(colorKeys:cs.NativeArray<GradientColorKey>, alphaKeys:cs.NativeArray<GradientAlphaKey>) : Void;
 }
 

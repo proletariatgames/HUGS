@@ -10,5 +10,11 @@ extern class ToolboxItemAttribute extends dotnet.system.Attribute {
   @:overload(function(toolboxItemType:cs.system.Type) : Void {})
   @:overload(function(toolboxItemName:String) : Void {})
   public function new(defaultType:Bool) : Void;
+
+  public override function Equals(o:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

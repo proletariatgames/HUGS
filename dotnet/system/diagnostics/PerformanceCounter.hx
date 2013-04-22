@@ -28,6 +28,8 @@ extern class PerformanceCounter extends dotnet.system.componentmodel.Component  
 
   public function Decrement() : dotnet.system.Int64;
 
+  override function Dispose(disposing:Bool) : Void;
+
   public function EndInit() : Void;
 
   public function Increment() : dotnet.system.Int64;

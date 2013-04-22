@@ -7,5 +7,11 @@ extern class ParenthesizePropertyNameAttribute extends dotnet.system.Attribute {
 
   @:overload(function(needParenthesis:Bool) : Void {})
   public function new() : Void;
+
+  public override function Equals(o:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

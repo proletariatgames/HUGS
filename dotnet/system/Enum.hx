@@ -5,7 +5,11 @@ extern class Enum extends ValueType  implements IComparable implements IConverti
 
   public function CompareTo(target:Dynamic) : Int;
 
+  public override function Equals(obj:Dynamic) : Bool;
+
   public static function Format(enumType:cs.system.Type, value:Dynamic, format:String) : String;
+
+  public override function GetHashCode() : Int;
 
   public static function GetName(enumType:cs.system.Type, value:Dynamic) : String;
 
@@ -49,6 +53,11 @@ extern class Enum extends ValueType  implements IComparable implements IConverti
   function ToSByte(provider:IFormatProvider) : Int;
 
   function ToSingle(provider:IFormatProvider) : Float;
+
+  @:overload(function(format:String, provider:IFormatProvider) : String {})
+  @:overload(function(provider:IFormatProvider) : String {})
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
 
   function ToType(targetType:cs.system.Type, provider:IFormatProvider) : Dynamic;
 

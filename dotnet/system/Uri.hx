@@ -35,9 +35,13 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
   public var IsAbsoluteUri(default,never) : Bool;
   public var OriginalString(default,never) : String;
 
+  function Canonicalize() : Void;
+
   public static function CheckHostName(name:String) : UriHostNameType;
 
   public static function CheckSchemeName(schemeName:String) : Bool;
+
+  function CheckSecurity() : Void;
 
   public static function Compare(uri1:Uri, uri2:Uri, partsToCompare:UriComponents, compareFormat:UriFormat, comparisonType:StringComparison) : Int;
 
@@ -48,6 +52,10 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
   @:overload(function(baseUri:Uri, relativeUri:String) : Void {})
   public function new(uriString:String) : Void;
 
+  public override function Equals(comparant:Dynamic) : Bool;
+
+  function Escape() : Void;
+
   public static function EscapeDataString(stringToEscape:String) : String;
 
   public static function EscapeUriString(stringToEscape:String) : String;
@@ -55,6 +63,8 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
   public static function FromHex(digit:Char) : Int;
 
   public function GetComponents(components:UriComponents, format:UriFormat) : String;
+
+  public override function GetHashCode() : Int;
 
   public function GetLeftPart(part:UriPartial) : String;
 
@@ -64,11 +74,15 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
 
   public static function HexUnescape(pattern:String, index:Int) : Char;
 
+  function IsBadFileSystemCharacter(ch:Char) : Bool;
+
   public function IsBaseOf(uri:Uri) : Bool;
 
   public static function IsHexDigit(digit:Char) : Bool;
 
   public static function IsHexEncoding(pattern:String, index:Int) : Bool;
+
+  function IsReservedCharacter(ch:Char) : Bool;
 
   public function IsWellFormedOriginalString() : Bool;
 
@@ -78,9 +92,15 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
 
   public function MakeRelativeUri(uri:Uri) : Uri;
 
+  function Parse() : Void;
+
+  public override function ToString() : String;
+
   @:overload(function(uriString:String, uriKind:UriKind, result:Uri) : Bool {})
   @:overload(function(baseUri:Uri, relativeUri:Uri, result:Uri) : Bool {})
   public static function TryCreate(baseUri:Uri, relativeUri:String, result:Uri) : Bool;
+
+  function Unescape(str:String) : String;
 
   public static function UnescapeDataString(stringToUnescape:String) : String;
 }

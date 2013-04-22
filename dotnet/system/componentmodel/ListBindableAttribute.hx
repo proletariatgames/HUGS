@@ -9,5 +9,11 @@ extern class ListBindableAttribute extends dotnet.system.Attribute {
 
   @:overload(function(listBindable:Bool) : Void {})
   public function new(flags:BindableSupport) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

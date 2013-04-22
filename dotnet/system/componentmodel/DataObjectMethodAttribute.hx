@@ -7,5 +7,11 @@ extern class DataObjectMethodAttribute extends dotnet.system.Attribute {
 
   @:overload(function(methodType:DataObjectMethodType, isDefault:Bool) : Void {})
   public function new(methodType:DataObjectMethodType) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function Match(obj:Dynamic) : Bool;
 }
 

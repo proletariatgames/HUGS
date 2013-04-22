@@ -5,5 +5,7 @@ extern class ConnectionStringsSection extends ConfigurationSection {
   public var ConnectionStrings(default,never) : ConnectionStringSettingsCollection;
 
   public function new() : Void;
+
+  override function GetRuntimeObject() : Dynamic;
 }
 

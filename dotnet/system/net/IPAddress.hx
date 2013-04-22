@@ -20,7 +20,11 @@ extern class IPAddress extends dotnet.system.Object {
   @:overload(function(address:cs.NativeArray<dotnet.system.Byte>) : Void {})
   public function new(addr:dotnet.system.Int64) : Void;
 
+  public override function Equals(other:Dynamic) : Bool;
+
   public function GetAddressBytes() : cs.NativeArray<dotnet.system.Byte>;
+
+  public override function GetHashCode() : Int;
 
   @:overload(function(host:Int) : Int {})
   public static function HostToNetworkOrder(host:dotnet.system.Int64) : dotnet.system.Int64;
@@ -31,6 +35,8 @@ extern class IPAddress extends dotnet.system.Object {
   public static function NetworkToHostOrder(network:dotnet.system.Int64) : dotnet.system.Int64;
 
   public static function Parse(ipString:String) : IPAddress;
+
+  public override function ToString() : String;
 
   public static function TryParse(ipString:String, address:IPAddress) : Bool;
 }

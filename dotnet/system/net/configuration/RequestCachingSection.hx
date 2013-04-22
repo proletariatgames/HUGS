@@ -10,5 +10,9 @@ extern class RequestCachingSection extends dotnet.system.configuration.Configura
   public var UnspecifiedMaximumAge : dotnet.system.TimeSpan;
 
   public function new() : Void;
+
+  override function DeserializeElement(reader:dotnet.system.xml.XmlReader, serializeCollectionKey:Bool) : Void;
+
+  override function PostDeserialize() : Void;
 }
 

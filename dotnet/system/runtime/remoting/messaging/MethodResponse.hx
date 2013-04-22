@@ -29,6 +29,8 @@ extern class MethodResponse extends dotnet.system.Object  implements IMessage im
 
   public function GetOutArgName(index:Int) : String;
 
+  public function HeaderHandler(h:cs.NativeArray<Header>) : Dynamic;
+
   public function RootSetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, ctx:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }
 

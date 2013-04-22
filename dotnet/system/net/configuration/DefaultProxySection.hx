@@ -9,5 +9,9 @@ extern class DefaultProxySection extends dotnet.system.configuration.Configurati
   public var UseDefaultCredentials : Bool;
 
   public function new() : Void;
+
+  override function PostDeserialize() : Void;
+
+  override function Reset(parentElement:dotnet.system.configuration.ConfigurationElement) : Void;
 }
 

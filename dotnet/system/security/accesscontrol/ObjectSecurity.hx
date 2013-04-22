@@ -2,10 +2,17 @@ package dotnet.system.security.accesscontrol;
 
 @:native("System.Security.AccessControl.ObjectSecurity")
 extern class ObjectSecurity extends dotnet.system.Object {
+  public var AccessRightType(default,never) : cs.system.Type;
+  public var AccessRuleType(default,never) : cs.system.Type;
+  public var AuditRuleType(default,never) : cs.system.Type;
   public var AreAccessRulesCanonical(default,never) : Bool;
   public var AreAccessRulesProtected(default,never) : Bool;
   public var AreAuditRulesCanonical(default,never) : Bool;
   public var AreAuditRulesProtected(default,never) : Bool;
+
+  public function AccessRuleFactory(identityReference:dotnet.system.security.principal.IdentityReference, accessMask:Int, isInherited:Bool, inheritanceFlags:InheritanceFlags, propagationFlags:PropagationFlags, type:AccessControlType) : AccessRule;
+
+  public function AuditRuleFactory(identityReference:dotnet.system.security.principal.IdentityReference, accessMask:Int, isInherited:Bool, inheritanceFlags:InheritanceFlags, propagationFlags:PropagationFlags, flags:AuditFlags) : AuditRule;
 
   public function GetGroup(targetType:cs.system.Type) : dotnet.system.security.principal.IdentityReference;
 
@@ -16,6 +23,19 @@ extern class ObjectSecurity extends dotnet.system.Object {
   public function GetSecurityDescriptorSddlForm(includeSections:AccessControlSections) : String;
 
   public static function IsSddlConversionSupported() : Bool;
+
+  function ModifyAccess(modification:AccessControlModification, rule:AccessRule, modified:Bool) : Bool;
+
+  public function ModifyAccessRule(modification:AccessControlModification, rule:AccessRule, modified:Bool) : Bool;
+
+  function ModifyAudit(modification:AccessControlModification, rule:AuditRule, modified:Bool) : Bool;
+
+  public function ModifyAuditRule(modification:AccessControlModification, rule:AuditRule, modified:Bool) : Bool;
+
+
+  public function PurgeAccessRules(identity:dotnet.system.security.principal.IdentityReference) : Void;
+
+  public function PurgeAuditRules(identity:dotnet.system.security.principal.IdentityReference) : Void;
 
   public function SetAccessRuleProtection(isProtected:Bool, preserveInheritance:Bool) : Void;
 

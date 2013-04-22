@@ -18,5 +18,7 @@ extern class XmlAttributeCollection extends XmlNamedNodeMap  implements dotnet.s
   public function RemoveAll() : Void;
 
   public function RemoveAt(i:Int) : XmlAttribute;
+
+  public override function SetNamedItem(node:XmlNode) : XmlNode;
 }
 

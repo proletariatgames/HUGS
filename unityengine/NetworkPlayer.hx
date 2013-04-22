@@ -9,5 +9,11 @@ extern class NetworkPlayer {
   public var externalPort(default,never) : Int;
 
   public function new(ip:String, port:Int) : Void;
+
+  public override function Equals(other:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function ToString() : String;
 }
 

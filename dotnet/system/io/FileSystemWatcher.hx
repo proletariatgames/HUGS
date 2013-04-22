@@ -13,6 +13,7 @@ extern class FileSystemWatcher extends dotnet.system.componentmodel.Component  i
   public var InternalBufferSize : Int;
   public var NotifyFilter : NotifyFilters;
   public var Path : String;
+  public override var Site : dotnet.system.componentmodel.ISite;
   public var SynchronizingObject : dotnet.system.componentmodel.ISynchronizeInvoke;
 
   public function BeginInit() : Void;
@@ -21,7 +22,11 @@ extern class FileSystemWatcher extends dotnet.system.componentmodel.Component  i
   @:overload(function(path:String) : Void {})
   public function new() : Void;
 
+  override function Dispose(disposing:Bool) : Void;
+
   public function EndInit() : Void;
+
+  override function Finalize() : Void;
 
   @:overload(function(changeType:WatcherChangeTypes, timeout:Int) : WaitForChangedResult {})
   public function WaitForChanged(changeType:WatcherChangeTypes) : WaitForChangedResult;

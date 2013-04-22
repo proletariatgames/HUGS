@@ -19,5 +19,13 @@ extern class Version extends Object  implements ICloneable implements IComparabl
   @:overload(function(major:Int, minor:Int) : Void {})
   @:overload(function(version:String) : Void {})
   public function new() : Void;
+
+  @:overload(function(obj:Version) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  @:overload(function(fieldCount:Int) : String {})
+  public override function ToString() : String;
 }
 

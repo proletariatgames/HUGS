@@ -22,5 +22,7 @@ extern class Score implements dotnet.unityengine.socialplatforms.IScore {
   public function SetRank(rank:Int) : Void;
 
   public function SetUserID(userID:String) : Void;
+
+  public override function ToString() : String;
 }
 

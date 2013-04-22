@@ -21,5 +21,11 @@ extern class Cookie extends dotnet.system.Object {
   @:overload(function(name:String, value:String, path:String) : Void {})
   @:overload(function(name:String, value:String) : Void {})
   public function new() : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function ToString() : String;
 }
 

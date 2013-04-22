@@ -10,6 +10,7 @@ extern class XmlSchemaType extends XmlSchemaAnnotated {
   public var BaseXmlSchemaType(default,never) : XmlSchemaType;
   public var DerivedBy(default,never) : XmlSchemaDerivationMethod;
   public var Datatype(default,never) : XmlSchemaDatatype;
+  public var IsMixed : Bool;
   public var TypeCode(default,never) : XmlTypeCode;
 
   public function new() : Void;

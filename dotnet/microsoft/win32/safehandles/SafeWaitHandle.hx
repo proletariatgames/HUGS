@@ -4,5 +4,7 @@ package dotnet.microsoft.win32.safehandles;
 extern class SafeWaitHandle extends SafeHandleZeroOrMinusOneIsInvalid {
 
   public function new(existingHandle:dotnet.system.IntPtr, ownsHandle:Bool) : Void;
+
+  override function ReleaseHandle() : Bool;
 }
 

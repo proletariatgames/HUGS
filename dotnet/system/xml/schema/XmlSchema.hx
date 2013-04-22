@@ -22,6 +22,9 @@ extern class XmlSchema extends XmlSchemaObject {
   public var Groups(default,never) : XmlSchemaObjectTable;
   public var Notations(default,never) : XmlSchemaObjectTable;
 
+  @:overload(function(handler:ValidationEventHandler, resolver:dotnet.system.xml.XmlResolver) : Void {})
+  public function Compile(handler:ValidationEventHandler) : Void;
+
   public function new() : Void;
 
   @:overload(function(stream:dotnet.system.io.Stream, validationEventHandler:ValidationEventHandler) : XmlSchema {})

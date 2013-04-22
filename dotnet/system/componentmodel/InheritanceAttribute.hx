@@ -10,5 +10,13 @@ extern class InheritanceAttribute extends dotnet.system.Attribute {
 
   @:overload(function(inheritanceLevel:InheritanceLevel) : Void {})
   public function new() : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
+
+  public override function ToString() : String;
 }
 

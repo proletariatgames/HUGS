@@ -8,5 +8,7 @@ extern class LicenseException extends dotnet.system.SystemException {
   @:overload(function(type:cs.system.Type, instance:Dynamic, message:String) : Void {})
   @:overload(function(type:cs.system.Type, instance:Dynamic) : Void {})
   public function new(type:cs.system.Type) : Void;
+
+  public override function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }
 

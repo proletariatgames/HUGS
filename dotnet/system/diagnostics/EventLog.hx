@@ -25,6 +25,8 @@ extern class EventLog extends dotnet.system.componentmodel.Component  implements
   @:overload(function(logName:String) : Void {})
   public function new() : Void;
 
+  override function Dispose(disposing:Bool) : Void;
+
   public function EndInit() : Void;
 
   public function ModifyOverflowPolicy(action:OverflowAction, retentionDays:Int) : Void;

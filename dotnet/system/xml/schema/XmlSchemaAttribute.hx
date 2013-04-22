@@ -14,6 +14,12 @@ extern class XmlSchemaAttribute extends XmlSchemaAnnotated {
   public var AttributeType(default,never) : Dynamic;
   public var AttributeSchemaType(default,never) : XmlSchemaSimpleType;
 
+  override function Compile(h:ValidationEventHandler, schema:XmlSchema) : Int;
+
   public function new() : Void;
+
+  override function SetParent(parent:XmlSchemaObject) : Void;
+
+  override function Validate(h:ValidationEventHandler, schema:XmlSchema) : Int;
 }
 

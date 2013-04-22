@@ -8,6 +8,10 @@ extern class ArgIterator extends ValueType {
 
   public function End() : Void;
 
+  public override function Equals(o:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
   @:overload(function(rth:RuntimeTypeHandle) : TypedReference {})
   public function GetNextArg() : TypedReference;
 

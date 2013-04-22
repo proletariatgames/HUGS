@@ -13,5 +13,7 @@ extern class AchievementDescription implements dotnet.unityengine.socialplatform
   public function new(id:String, title:String, image:unityengine.Texture2D, achievedDescription:String, unachievedDescription:String, hidden:Bool, points:Int) : Void;
 
   public function SetImage(image:unityengine.Texture2D) : Void;
+
+  public override function ToString() : String;
 }
 

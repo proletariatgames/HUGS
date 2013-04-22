@@ -39,6 +39,8 @@ extern class Regex extends dotnet.system.Object  implements dotnet.system.runtim
   @:overload(function(input:String, count:Int, startat:Int) : cs.NativeArray<String> {})
   @:overload(function(input:String, count:Int) : cs.NativeArray<String> {})
   public function Split(input:String) : cs.NativeArray<String>;
+
+  public override function ToString() : String;
 }
 
 

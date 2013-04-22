@@ -2,8 +2,22 @@ package dotnet.system.componentmodel.design;
 
 @:native("System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection.WrappedPropertyDescriptor") @:final
 extern class DesignerOptionService_DesignerOptionCollection_WrappedPropertyDescriptor extends dotnet.system.componentmodel.PropertyDescriptor {
+  public override var Attributes(default,never) : dotnet.system.componentmodel.AttributeCollection;
+  public override var IsReadOnly(default,never) : Bool;
+  public override var ComponentType(default,never) : cs.system.Type;
+  public override var PropertyType(default,never) : cs.system.Type;
+
+  public override function CanResetValue(ignored:Dynamic) : Bool;
 
   public function new(property:dotnet.system.componentmodel.PropertyDescriptor, component:Dynamic) : Void;
+
+  public override function GetValue(ignored:Dynamic) : Dynamic;
+
+  public override function ResetValue(ignored:Dynamic) : Void;
+
+  public override function SetValue(ignored:Dynamic, value:Dynamic) : Void;
+
+  public override function ShouldSerializeValue(ignored:Dynamic) : Bool;
 }
 
 @:native("System.ComponentModel.Design.DesignerOptionService.DesignerOptionCollection") @:final
@@ -40,6 +54,10 @@ extern class DesignerOptionService extends dotnet.system.Object  implements IDes
 
   function GetOptionValue(pageName:String, valueName:String) : Dynamic;
 
+  function PopulateOptionCollection(options:DesignerOptionService_DesignerOptionCollection) : Void;
+
   function SetOptionValue(pageName:String, valueName:String, value:Dynamic) : Void;
+
+  function ShowDialog(options:DesignerOptionService_DesignerOptionCollection, optionObject:Dynamic) : Bool;
 }
 

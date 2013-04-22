@@ -2,6 +2,13 @@ package dotnet.system.configuration;
 
 @:native("System.Configuration.SettingsProperty")
 extern class SettingsProperty extends dotnet.system.Object {
+  public var Attributes(default,never) : SettingsAttributeDictionary;
+  public var DefaultValue : Dynamic;
+  public var IsReadOnly : Bool;
+  public var Name : String;
+  public var PropertyType : cs.system.Type;
+  public var Provider : SettingsProvider;
+  public var SerializeAs : SettingsSerializeAs;
   public var ThrowOnErrorDeserializing : Bool;
   public var ThrowOnErrorSerializing : Bool;
 

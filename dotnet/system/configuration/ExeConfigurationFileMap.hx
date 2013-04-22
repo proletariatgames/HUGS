@@ -6,6 +6,8 @@ extern class ExeConfigurationFileMap extends ConfigurationFileMap {
   public var LocalUserConfigFilename : String;
   public var RoamingUserConfigFilename : String;
 
+  public override function Clone() : Dynamic;
+
   public function new() : Void;
 }
 

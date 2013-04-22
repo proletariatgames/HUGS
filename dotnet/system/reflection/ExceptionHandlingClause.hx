@@ -9,5 +9,7 @@ extern class ExceptionHandlingClause extends dotnet.system.Object {
   public var HandlerOffset(default,never) : Int;
   public var TryLength(default,never) : Int;
   public var TryOffset(default,never) : Int;
+
+  public override function ToString() : String;
 }
 

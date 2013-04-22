@@ -6,6 +6,8 @@ extern class Ping extends dotnet.system.componentmodel.Component  implements dot
 
   public function new() : Void;
 
+  override function Dispose() : Void;
+
   @:overload(function(hostNameOrAddress:String, timeout:Int, buffer:cs.NativeArray<dotnet.system.Byte>, options:PingOptions) : PingReply {})
   @:overload(function(address:dotnet.system.net.IPAddress, timeout:Int, buffer:cs.NativeArray<dotnet.system.Byte>, options:PingOptions) : PingReply {})
   @:overload(function(hostNameOrAddress:String, timeout:Int, buffer:cs.NativeArray<dotnet.system.Byte>) : PingReply {})

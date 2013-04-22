@@ -16,6 +16,8 @@ extern class PropertyDescriptorCollection extends dotnet.system.Object  implemen
   @:overload(function(properties:cs.NativeArray<PropertyDescriptor>, readOnly:Bool) : Void {})
   public function new(properties:cs.NativeArray<PropertyDescriptor>) : Void;
 
+  public function Find(name:String, ignoreCase:Bool) : PropertyDescriptor;
+
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
   public function IndexOf(value:PropertyDescriptor) : Int;
@@ -25,5 +27,10 @@ extern class PropertyDescriptorCollection extends dotnet.system.Object  implemen
   public function Remove(value:PropertyDescriptor) : Void;
 
   public function RemoveAt(index:Int) : Void;
+
+  @:overload(function(order:cs.NativeArray<String>, comparer:dotnet.system.collections.IComparer) : PropertyDescriptorCollection {})
+  @:overload(function(order:cs.NativeArray<String>) : PropertyDescriptorCollection {})
+  @:overload(function(comparer:dotnet.system.collections.IComparer) : PropertyDescriptorCollection {})
+  public function Sort() : PropertyDescriptorCollection;
 }
 

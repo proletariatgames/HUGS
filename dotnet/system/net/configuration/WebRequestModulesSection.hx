@@ -5,5 +5,9 @@ extern class WebRequestModulesSection extends dotnet.system.configuration.Config
   public var WebRequestModules(default,never) : WebRequestModuleElementCollection;
 
   public function new() : Void;
+
+  override function InitializeDefault() : Void;
+
+  override function PostDeserialize() : Void;
 }
 

@@ -5,9 +5,15 @@ extern class ConnectionStringSettingsCollection extends ConfigurationElementColl
 
   public function Add(settings:ConnectionStringSettings) : Void;
 
+  override function BaseAdd(index:Int, element:ConfigurationElement) : Void;
+
   public function Clear() : Void;
 
+  override function CreateNewElement() : ConfigurationElement;
+
   public function new() : Void;
+
+  override function GetElementKey(element:ConfigurationElement) : Dynamic;
 
   public function IndexOf(settings:ConnectionStringSettings) : Int;
 

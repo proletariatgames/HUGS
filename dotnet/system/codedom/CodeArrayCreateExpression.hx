@@ -7,6 +7,8 @@ extern class CodeArrayCreateExpression extends CodeExpression {
   public var SizeExpression : CodeExpression;
   public var Size : Int;
 
+  override function Accept(visitor:ICodeDomVisitor) : Void;
+
   @:overload(function(createType:String, size:Int) : Void {})
   @:overload(function(createType:String, size:CodeExpression) : Void {})
   @:overload(function(createType:String, initializers:cs.NativeArray<CodeExpression>) : Void {})

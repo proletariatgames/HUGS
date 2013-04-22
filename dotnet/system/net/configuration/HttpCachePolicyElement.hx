@@ -8,5 +8,9 @@ extern class HttpCachePolicyElement extends dotnet.system.configuration.Configur
   public var PolicyLevel : dotnet.system.net.cache.HttpRequestCacheLevel;
 
   public function new() : Void;
+
+  override function DeserializeElement(reader:dotnet.system.xml.XmlReader, serializeCollectionKey:Bool) : Void;
+
+  override function Reset(parentElement:dotnet.system.configuration.ConfigurationElement) : Void;
 }
 

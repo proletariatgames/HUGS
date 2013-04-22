@@ -7,5 +7,9 @@ extern class StreamingContext extends dotnet.system.ValueType {
 
   @:overload(function(state:StreamingContextStates, additional:Dynamic) : Void {})
   public function new(state:StreamingContextStates) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

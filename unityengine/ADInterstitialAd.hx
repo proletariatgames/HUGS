@@ -11,6 +11,8 @@ extern class ADInterstitialAd {
 
   public function new() : Void;
 
+  override function Finalize() : Void;
+
   public function Present() : Bool;
 }
 

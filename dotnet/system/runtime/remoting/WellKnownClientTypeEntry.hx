@@ -8,5 +8,7 @@ extern class WellKnownClientTypeEntry extends TypeEntry {
 
   @:overload(function(typeName:String, assemblyName:String, objectUrl:String) : Void {})
   public function new(type:cs.system.Type, objectUrl:String) : Void;
+
+  public override function ToString() : String;
 }
 

@@ -14,6 +14,8 @@ extern class AndroidJavaObject extends AndroidJNIHelper {
 
   public function Dispose() : Void;
 
+  override function Finalize() : Void;
+
   public function Get(fieldName:String) : Dynamic;
 
   public function GetRawClass() : dotnet.system.IntPtr;

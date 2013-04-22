@@ -4,6 +4,8 @@ package dotnet.system.security.permissions;
 extern class UrlIdentityPermissionAttribute extends CodeAccessSecurityAttribute {
   public var Url : String;
 
+  public override function CreatePermission() : dotnet.system.security.IPermission;
+
   public function new(action:SecurityAction) : Void;
 }
 

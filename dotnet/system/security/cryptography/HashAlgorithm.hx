@@ -4,6 +4,8 @@ package dotnet.system.security.cryptography;
 extern class HashAlgorithm extends dotnet.system.Object  implements dotnet.system.IDisposable implements ICryptoTransform {
   public var CanTransformMultipleBlocks(default,never) : Bool;
   public var CanReuseTransform(default,never) : Bool;
+  public var Hash(default,never) : cs.NativeArray<dotnet.system.Byte>;
+  public var HashSize(default,never) : Int;
   public var InputBlockSize(default,never) : Int;
   public var OutputBlockSize(default,never) : Int;
 
@@ -16,6 +18,12 @@ extern class HashAlgorithm extends dotnet.system.Object  implements dotnet.syste
   @:overload(function(hashName:String) : HashAlgorithm {})
   public static function Create() : HashAlgorithm;
 
+
+  function HashCore(array:cs.NativeArray<dotnet.system.Byte>, ibStart:Int, cbSize:Int) : Void;
+
+  function HashFinal() : cs.NativeArray<dotnet.system.Byte>;
+
+  public function Initialize() : Void;
 
   public function TransformBlock(inputBuffer:cs.NativeArray<dotnet.system.Byte>, inputOffset:Int, inputCount:Int, outputBuffer:cs.NativeArray<dotnet.system.Byte>, outputOffset:Int) : Int;
 

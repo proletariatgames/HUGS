@@ -17,6 +17,8 @@ extern class AnimationCurve {
 
   public function Evaluate(time:Float) : Float;
 
+  override function Finalize() : Void;
+
   public static function Linear(timeStart:Float, valueStart:Float, timeEnd:Float, valueEnd:Float) : AnimationCurve;
 
   public function MoveKey(index:Int, key:Keyframe) : Int;

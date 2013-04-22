@@ -24,8 +24,6 @@ extern class TimeSpan extends ValueType  implements IComparable {
 
   public function Add(ts:TimeSpan) : TimeSpan;
 
-  public static function Compare(t1:TimeSpan, t2:TimeSpan) : Int;
-
   @:overload(function(value:TimeSpan) : Int {})
   public function CompareTo(value:Dynamic) : Int;
 
@@ -35,6 +33,24 @@ extern class TimeSpan extends ValueType  implements IComparable {
   public function new(ticks:Int64) : Void;
 
   public function Duration() : TimeSpan;
+
+  @:overload(function(value:Dynamic) : Bool {})
+  public override function Equals(obj:TimeSpan) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public function Negate() : TimeSpan;
+
+  public function Subtract(ts:TimeSpan) : TimeSpan;
+
+  public override function ToString() : String;
+}
+
+
+@:native("System.TimeSpan") @:final
+extern class TimeSpan_Static {
+
+  public static function Compare(t1:TimeSpan, t2:TimeSpan) : Int;
 
   public static function Equals(t1:TimeSpan, t2:TimeSpan) : Bool;
 
@@ -50,11 +66,7 @@ extern class TimeSpan extends ValueType  implements IComparable {
 
   public static function FromTicks(value:Int64) : TimeSpan;
 
-  public function Negate() : TimeSpan;
-
   public static function Parse(s:String) : TimeSpan;
-
-  public function Subtract(ts:TimeSpan) : TimeSpan;
 
   public static function TryParse(s:String, result:TimeSpan) : Bool;
 }

@@ -5,6 +5,8 @@ extern class EventLogPermissionAttribute extends dotnet.system.security.permissi
   public var MachineName : String;
   public var PermissionAccess : EventLogPermissionAccess;
 
+  public override function CreatePermission() : dotnet.system.security.IPermission;
+
   public function new(action:dotnet.system.security.permissions.SecurityAction) : Void;
 }
 

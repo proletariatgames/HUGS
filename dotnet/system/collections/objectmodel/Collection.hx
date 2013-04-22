@@ -8,6 +8,8 @@ extern class Collection<T> extends dotnet.system.Object  implements dotnet.syste
 
   public function Clear() : Void;
 
+  function ClearItems() : Void;
+
   public function Contains(item:T) : Bool;
 
   public function CopyTo(array:cs.NativeArray<T>, index:Int) : Void;
@@ -21,8 +23,14 @@ extern class Collection<T> extends dotnet.system.Object  implements dotnet.syste
 
   public function Insert(index:Int, item:T) : Void;
 
+  function InsertItem(index:Int, item:T) : Void;
+
   public function Remove(item:T) : Bool;
 
   public function RemoveAt(index:Int) : Void;
+
+  function RemoveItem(index:Int) : Void;
+
+  function SetItem(index:Int, item:T) : Void;
 }
 

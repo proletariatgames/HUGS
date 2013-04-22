@@ -7,7 +7,11 @@ extern class WebRequestModuleElementCollection extends dotnet.system.configurati
 
   public function Clear() : Void;
 
+  override function CreateNewElement() : dotnet.system.configuration.ConfigurationElement;
+
   public function new() : Void;
+
+  override function GetElementKey(element:dotnet.system.configuration.ConfigurationElement) : Dynamic;
 
   public function IndexOf(element:WebRequestModuleElement) : Int;
 

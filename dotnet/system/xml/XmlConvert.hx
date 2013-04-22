@@ -4,6 +4,11 @@ package dotnet.system.xml;
 extern class XmlConvert extends dotnet.system.Object {
 
   public function new() : Void;
+}
+
+
+@:native("System.Xml.XmlConvert") @:final
+extern class XmlConvert_Static {
 
   public static function DecodeName(name:String) : String;
 

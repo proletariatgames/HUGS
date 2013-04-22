@@ -16,5 +16,12 @@ extern class CngAlgorithm extends dotnet.system.Object {
   public static var Sha512(default,never) : CngAlgorithm;
 
   public function new(algorithm:String) : Void;
+
+  @:overload(function(other:CngAlgorithm) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function ToString() : String;
 }
 

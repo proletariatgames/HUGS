@@ -12,6 +12,11 @@ extern class Double extends ValueType  implements IComparable implements IConver
   @:overload(function(value:Float) : Int {})
   public function CompareTo(value:Dynamic) : Int;
 
+  @:overload(function(obj:Float) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
   public function GetTypeCode() : TypeCode;
 
   public static function IsInfinity(d:Float) : Bool;
@@ -48,6 +53,11 @@ extern class Double extends ValueType  implements IComparable implements IConver
   function ToSByte(provider:IFormatProvider) : Int;
 
   function ToSingle(provider:IFormatProvider) : Float;
+
+  @:overload(function(format:String, provider:IFormatProvider) : String {})
+  @:overload(function(provider:IFormatProvider) : String {})
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
 
   function ToType(targetType:cs.system.Type, provider:IFormatProvider) : Dynamic;
 

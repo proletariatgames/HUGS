@@ -3,18 +3,35 @@ package dotnet.system.runtime.compilerservices;
 @:native("System.Runtime.CompilerServices.RuntimeHelpers.TryCode") @:final
 extern class RuntimeHelpers_TryCode extends dotnet.system.MulticastDelegate {
 
+  public function BeginInvoke(userData:Dynamic, _callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
+
   public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
+
+  public function EndInvoke(result:dotnet.system.IAsyncResult) : Void;
+
+  public function Invoke(userData:Dynamic) : Void;
 }
 
 @:native("System.Runtime.CompilerServices.RuntimeHelpers.CleanupCode") @:final
 extern class RuntimeHelpers_CleanupCode extends dotnet.system.MulticastDelegate {
 
+  public function BeginInvoke(userData:Dynamic, exceptionThrown:Bool, _callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
+
   public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
+
+  public function EndInvoke(result:dotnet.system.IAsyncResult) : Void;
+
+  public function Invoke(userData:Dynamic, exceptionThrown:Bool) : Void;
 }
 
 @:native("System.Runtime.CompilerServices.RuntimeHelpers") @:final
 extern class RuntimeHelpers extends dotnet.system.Object {
   public static var OffsetToStringData(default,never) : Int;
+}
+
+
+@:native("System.Runtime.CompilerServices.RuntimeHelpers") @:final
+extern class RuntimeHelpers_Static {
 
   public static function Equals(o1:Dynamic, o2:Dynamic) : Bool;
 

@@ -21,6 +21,12 @@ extern class SoundPlayer extends dotnet.system.componentmodel.Component  impleme
 
   public function LoadAsync() : Void;
 
+  function OnLoadCompleted(e:dotnet.system.componentmodel.AsyncCompletedEventArgs) : Void;
+
+  function OnSoundLocationChanged(e:dotnet.system.EventArgs) : Void;
+
+  function OnStreamChanged(e:dotnet.system.EventArgs) : Void;
+
   public function Play() : Void;
 
   public function PlayLooping() : Void;

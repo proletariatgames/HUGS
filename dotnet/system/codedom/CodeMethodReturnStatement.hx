@@ -4,6 +4,8 @@ package dotnet.system.codedom;
 extern class CodeMethodReturnStatement extends CodeStatement {
   public var Expression : CodeExpression;
 
+  override function Accept(visitor:ICodeDomVisitor) : Void;
+
   @:overload(function(expression:CodeExpression) : Void {})
   public function new() : Void;
 }

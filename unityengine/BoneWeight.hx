@@ -10,5 +10,9 @@ extern class BoneWeight {
   public var boneIndex1 : Int;
   public var boneIndex2 : Int;
   public var boneIndex3 : Int;
+
+  public override function Equals(other:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

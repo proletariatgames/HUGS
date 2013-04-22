@@ -4,5 +4,9 @@ package dotnet.system.net.sockets;
 extern class IPPacketInformation extends dotnet.system.ValueType {
   public var Address(default,never) : dotnet.system.net.IPAddress;
   public var Interface(default,never) : Int;
+
+  public override function Equals(comparand:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

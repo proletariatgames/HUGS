@@ -2,6 +2,7 @@ package dotnet.system.componentmodel;
 
 @:native("System.ComponentModel.DefaultValueAttribute")
 extern class DefaultValueAttribute extends dotnet.system.Attribute {
+  public var Value(default,never) : Dynamic;
 
   @:overload(function(type:cs.system.Type, value:String) : Void {})
   @:overload(function(value:UInt) : Void {})
@@ -12,5 +13,9 @@ extern class DefaultValueAttribute extends dotnet.system.Attribute {
   @:overload(function(value:dotnet.system.Int64) : Void {})
   @:overload(function(value:dotnet.system.Char) : Void {})
   public function new(value:Bool) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

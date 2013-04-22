@@ -7,5 +7,7 @@ extern class XsltCompileException extends XsltException {
   @:overload(function(message:String, innerException:dotnet.system.Exception) : Void {})
   @:overload(function(message:String) : Void {})
   public function new() : Void;
+
+  public override function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }
 

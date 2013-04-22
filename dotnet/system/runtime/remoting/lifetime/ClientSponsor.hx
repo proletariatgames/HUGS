@@ -9,6 +9,10 @@ extern class ClientSponsor extends dotnet.system.MarshalByRefObject  implements 
   @:overload(function(renewalTime:dotnet.system.TimeSpan) : Void {})
   public function new() : Void;
 
+  override function Finalize() : Void;
+
+  public override function InitializeLifetimeService() : Dynamic;
+
   public function Register(obj:dotnet.system.MarshalByRefObject) : Bool;
 
   public function Renewal(lease:ILease) : dotnet.system.TimeSpan;

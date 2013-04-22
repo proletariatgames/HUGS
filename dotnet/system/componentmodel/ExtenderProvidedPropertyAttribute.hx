@@ -7,5 +7,11 @@ extern class ExtenderProvidedPropertyAttribute extends dotnet.system.Attribute {
   public var ReceiverType(default,never) : cs.system.Type;
 
   public function new() : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

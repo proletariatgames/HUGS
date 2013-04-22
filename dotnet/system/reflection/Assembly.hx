@@ -9,7 +9,9 @@ extern class Assembly extends dotnet.system.Object  implements ICustomAttributeP
   public var EntryPoint(default,never) : MethodInfo;
   public var Evidence(default,never) : dotnet.system.security.policy.Evidence;
   public var Location(default,never) : String;
+  public var ImageRuntimeVersion(default,never) : String;
   public var HostContext(default,never) : dotnet.system.Int64;
+  public var ReflectionOnly(default,never) : Bool;
   public var ManifestModule(default,never) : Module;
   public var GlobalAssemblyCache(default,never) : Bool;
 
@@ -18,6 +20,8 @@ extern class Assembly extends dotnet.system.Object  implements ICustomAttributeP
   public function CreateInstance(typeName:String) : Dynamic;
 
   public static function CreateQualifiedName(assemblyName:String, typeName:String) : String;
+
+  public override function Equals(o:Dynamic) : Bool;
 
   public static function GetAssembly(type:cs.system.Type) : Assembly;
 
@@ -37,8 +41,12 @@ extern class Assembly extends dotnet.system.Object  implements ICustomAttributeP
   @:overload(function(getResourceModules:Bool) : cs.NativeArray<dotnet.system.io.FileStream> {})
   public function GetFiles() : cs.NativeArray<dotnet.system.io.FileStream>;
 
+  public override function GetHashCode() : Int;
+
   @:overload(function(getResourceModules:Bool) : cs.NativeArray<Module> {})
   public function GetLoadedModules() : cs.NativeArray<Module>;
+
+  function GetManifestModule() : Module;
 
   public function GetManifestResourceInfo(resourceName:String) : ManifestResourceInfo;
 
@@ -52,6 +60,8 @@ extern class Assembly extends dotnet.system.Object  implements ICustomAttributeP
   @:overload(function(getResourceModules:Bool) : cs.NativeArray<Module> {})
   public function GetModules() : cs.NativeArray<Module>;
 
+  function GetModulesInternal() : cs.NativeArray<Module>;
+
   @:overload(function(copiedName:Bool) : AssemblyName {})
   public function GetName() : AssemblyName;
 
@@ -61,6 +71,10 @@ extern class Assembly extends dotnet.system.Object  implements ICustomAttributeP
 
   @:overload(function(culture:dotnet.system.globalization.CultureInfo, version:dotnet.system.Version) : Assembly {})
   public function GetSatelliteAssembly(culture:dotnet.system.globalization.CultureInfo) : Assembly;
+
+  @:overload(function(name:String, throwOnError:Bool, ignoreCase:Bool) : cs.system.Type {})
+  @:overload(function(name:String, throwOnError:Bool) : cs.system.Type {})
+  public override function GetType(name:String) : cs.system.Type;
 
   public function GetTypes() : cs.NativeArray<cs.system.Type>;
 
@@ -91,5 +105,9 @@ extern class Assembly extends dotnet.system.Object  implements ICustomAttributeP
   public static function ReflectionOnlyLoad(assemblyString:String) : Assembly;
 
   public static function ReflectionOnlyLoadFrom(assemblyFile:String) : Assembly;
+
+  public override function ToString() : String;
+
+  function UnprotectedGetName() : AssemblyName;
 }
 

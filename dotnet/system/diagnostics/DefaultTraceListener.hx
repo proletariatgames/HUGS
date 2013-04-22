@@ -6,5 +6,12 @@ extern class DefaultTraceListener extends TraceListener {
   public var LogFileName : String;
 
   public function new() : Void;
+
+  @:overload(function(message:String, detailMessage:String) : Void {})
+  public override function Fail(message:String) : Void;
+
+  public override function Write(message:String) : Void;
+
+  public override function WriteLine(message:String) : Void;
 }
 

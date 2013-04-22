@@ -21,5 +21,7 @@ extern class RegistrationServices extends dotnet.system.Object  implements IRegi
   public function TypeRequiresRegistration(type:cs.system.Type) : Bool;
 
   public function UnregisterAssembly(assembly:dotnet.system.reflection.Assembly) : Bool;
+
+  public function UnregisterTypeForComClients(cookie:Int) : Void;
 }
 

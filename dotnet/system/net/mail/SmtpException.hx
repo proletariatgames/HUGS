@@ -9,5 +9,7 @@ extern class SmtpException extends dotnet.system.Exception  implements dotnet.sy
   @:overload(function(statusCode:SmtpStatusCode) : Void {})
   @:overload(function(message:String) : Void {})
   public function new() : Void;
+
+  public override function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }
 

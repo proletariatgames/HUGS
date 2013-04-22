@@ -55,8 +55,12 @@ extern class GUIStyle {
 
   public function DrawWithTextSelection(position:Rect, content:GUIContent, controlID:Int, firstSelectedCharacter:Int, lastSelectedCharacter:Int) : Void;
 
+  override function Finalize() : Void;
+
   public function GetCursorPixelPosition(position:Rect, content:GUIContent, cursorStringIndex:Int) : Vector2;
 
   public function GetCursorStringIndex(position:Rect, content:GUIContent, cursorPixelPosition:Vector2) : Int;
+
+  public override function ToString() : String;
 }
 

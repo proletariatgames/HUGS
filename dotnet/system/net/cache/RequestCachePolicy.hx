@@ -6,5 +6,7 @@ extern class RequestCachePolicy extends dotnet.system.Object {
 
   @:overload(function(level:RequestCacheLevel) : Void {})
   public function new() : Void;
+
+  public override function ToString() : String;
 }
 

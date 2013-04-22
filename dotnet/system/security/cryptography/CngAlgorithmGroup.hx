@@ -10,5 +10,12 @@ extern class CngAlgorithmGroup extends dotnet.system.Object {
   public static var Rsa(default,never) : CngAlgorithmGroup;
 
   public function new(algorithmGroup:String) : Void;
+
+  @:overload(function(other:CngAlgorithmGroup) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function ToString() : String;
 }
 

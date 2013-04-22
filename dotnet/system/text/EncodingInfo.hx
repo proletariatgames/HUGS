@@ -6,6 +6,10 @@ extern class EncodingInfo extends dotnet.system.Object {
   public var DisplayName(default,never) : String;
   public var Name(default,never) : String;
 
+  public override function Equals(value:Dynamic) : Bool;
+
   public function GetEncoding() : Encoding;
+
+  public override function GetHashCode() : Int;
 }
 

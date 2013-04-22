@@ -6,6 +6,8 @@ extern class PublisherIdentityPermissionAttribute extends CodeAccessSecurityAttr
   public var SignedFile : String;
   public var X509Certificate : String;
 
+  public override function CreatePermission() : dotnet.system.security.IPermission;
+
   public function new(action:SecurityAction) : Void;
 }
 

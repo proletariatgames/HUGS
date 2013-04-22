@@ -8,5 +8,8 @@ extern class Ray {
   public function new(origin:Vector3, direction:Vector3) : Void;
 
   public function GetPoint(distance:Float) : Vector3;
+
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
 }
 

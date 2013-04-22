@@ -8,6 +8,8 @@ extern class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute {
   public var RestrictedMemberAccess : Bool;
   public var TypeInformation : Bool;
 
+  public override function CreatePermission() : dotnet.system.security.IPermission;
+
   public function new(action:SecurityAction) : Void;
 }
 

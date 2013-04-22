@@ -13,5 +13,7 @@ extern class AnimationEvent {
   public var animationState(default,never) : AnimationState;
 
   public function new() : Void;
+
+  override function Finalize() : Void;
 }
 

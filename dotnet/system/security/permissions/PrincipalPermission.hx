@@ -11,7 +11,11 @@ extern class PrincipalPermission extends dotnet.system.Object  implements dotnet
 
   public function Demand() : Void;
 
+  public override function Equals(obj:Dynamic) : Bool;
+
   public function FromXml(elem:dotnet.system.security.SecurityElement) : Void;
+
+  public override function GetHashCode() : Int;
 
   function GetTokenIndex() : Int;
 
@@ -20,6 +24,8 @@ extern class PrincipalPermission extends dotnet.system.Object  implements dotnet
   public function IsSubsetOf(target:dotnet.system.security.IPermission) : Bool;
 
   public function IsUnrestricted() : Bool;
+
+  public override function ToString() : String;
 
   public function ToXml() : dotnet.system.security.SecurityElement;
 

@@ -28,6 +28,14 @@ extern class MethodCall extends dotnet.system.Object  implements IMessage implem
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
+  public function HeaderHandler(h:cs.NativeArray<Header>) : Dynamic;
+
+  public function Init() : Void;
+
+  function InitDictionary() : Void;
+
+  function InitMethodProperty(key:String, value:Dynamic) : Void;
+
   public function ResolveMethod() : Void;
 
   public function RootSetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, ctx:dotnet.system.runtime.serialization.StreamingContext) : Void;

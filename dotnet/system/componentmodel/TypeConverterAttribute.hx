@@ -8,5 +8,9 @@ extern class TypeConverterAttribute extends dotnet.system.Attribute {
   @:overload(function(typeName:String) : Void {})
   @:overload(function(type:cs.system.Type) : Void {})
   public function new() : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

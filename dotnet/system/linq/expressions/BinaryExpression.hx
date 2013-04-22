@@ -8,5 +8,7 @@ extern class BinaryExpression extends Expression {
   public var IsLifted(default,never) : Bool;
   public var IsLiftedToNull(default,never) : Bool;
   public var Conversion(default,never) : LambdaExpression;
+
+  override function Emit(ec:EmitContext) : Void;
 }
 

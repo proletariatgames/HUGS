@@ -14,6 +14,8 @@ extern class TraceSource extends dotnet.system.Object {
 
   public function Flush() : Void;
 
+  function GetSupportedAttributes() : cs.NativeArray<String>;
+
   @:overload(function(eventType:TraceEventType, id:Int, data:Dynamic) : Void {})
   public function TraceData(eventType:TraceEventType, id:Int, data:cs.NativeArray<dotnet.system.Object>) : Void;
 

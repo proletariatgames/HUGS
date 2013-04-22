@@ -6,5 +6,7 @@ extern class KeyValueConfigurationElement extends ConfigurationElement {
   public var Value : String;
 
   public function new(key:String, value:String) : Void;
+
+  override function Init() : Void;
 }
 

@@ -6,7 +6,11 @@ extern class Queue extends dotnet.system.Object  implements dotnet.system.IClone
   public var IsSynchronized(default,never) : Bool;
   public var SyncRoot(default,never) : Dynamic;
 
+  public function Clear() : Void;
+
   public function Clone() : Dynamic;
+
+  public function Contains(obj:Dynamic) : Bool;
 
   public function CopyTo(array:dotnet.system.Array, index:Int) : Void;
 
@@ -15,8 +19,18 @@ extern class Queue extends dotnet.system.Object  implements dotnet.system.IClone
   @:overload(function(capacity:Int) : Void {})
   public function new() : Void;
 
+  public function Dequeue() : Dynamic;
+
+  public function Enqueue(obj:Dynamic) : Void;
+
   public function GetEnumerator() : IEnumerator;
 
+  public function Peek() : Dynamic;
+
   public static function Synchronized(queue:Queue) : Queue;
+
+  public function ToArray() : cs.NativeArray<dotnet.system.Object>;
+
+  public function TrimToSize() : Void;
 }
 

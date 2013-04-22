@@ -7,5 +7,7 @@ extern class DesignerVerb extends MenuCommand {
 
   @:overload(function(text:String, handler:dotnet.system.EventHandler, startCommandID:CommandID) : Void {})
   public function new(text:String, handler:dotnet.system.EventHandler) : Void;
+
+  public override function ToString() : String;
 }
 

@@ -10,12 +10,18 @@ extern class Module extends dotnet.system.Object  implements ICustomAttributePro
   public var ScopeName(default,never) : String;
   public var MDStreamVersion(default,never) : Int;
   public var ModuleVersionId(default,never) : dotnet.system.Guid;
+  public var FullyQualifiedName(default,never) : String;
+  public var MetadataToken(default,never) : Int;
+
+  public function FindTypes(filter:TypeFilter, filterCriteria:Dynamic) : cs.NativeArray<cs.system.Type>;
 
   @:overload(function(attributeType:cs.system.Type, inherit:Bool) : cs.NativeArray<dotnet.system.Object> {})
   public function GetCustomAttributes(inherit:Bool) : cs.NativeArray<dotnet.system.Object>;
 
+  @:overload(function(name:String, bindingAttr:BindingFlags) : FieldInfo {})
   public function GetField(name:String) : FieldInfo;
 
+  @:overload(function(bindingFlags:BindingFlags) : cs.NativeArray<FieldInfo> {})
   public function GetFields() : cs.NativeArray<FieldInfo>;
 
   function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
@@ -24,16 +30,28 @@ extern class Module extends dotnet.system.Object  implements ICustomAttributePro
   @:overload(function(name:String, types:cs.NativeArray<cs.system.Type>) : MethodInfo {})
   public function GetMethod(name:String) : MethodInfo;
 
+  function GetMethodImpl(name:String, bindingAttr:BindingFlags, binder:Binder, callConvention:CallingConventions, types:cs.NativeArray<cs.system.Type>, modifiers:cs.NativeArray<ParameterModifier>) : MethodInfo;
+
   @:overload(function(bindingFlags:BindingFlags) : cs.NativeArray<MethodInfo> {})
   public function GetMethods() : cs.NativeArray<MethodInfo>;
 
+  function GetModuleVersionId() : dotnet.system.Guid;
+
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
+  public function GetPEKind(peKind:PortableExecutableKinds, machine:ImageFileMachine) : Void;
+
   public function GetSignerCertificate() : dotnet.system.security.cryptography.x509certificates.X509Certificate;
+
+  @:overload(function(className:String, throwOnError:Bool, ignoreCase:Bool) : cs.system.Type {})
+  @:overload(function(className:String, ignoreCase:Bool) : cs.system.Type {})
+  public override function GetType(className:String) : cs.system.Type;
 
   function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:dotnet.system.IntPtr) : Void;
 
   function GetTypeInfoCount(pcTInfo:UInt) : Void;
+
+  public function GetTypes() : cs.NativeArray<cs.system.Type>;
 
   function Invoke(dispIdMember:UInt, riid:dotnet.system.Guid, lcid:UInt, wFlags:Int, pDispParams:dotnet.system.IntPtr, pVarResult:dotnet.system.IntPtr, pExcepInfo:dotnet.system.IntPtr, puArgErr:dotnet.system.IntPtr) : Void;
 
@@ -56,5 +74,7 @@ extern class Module extends dotnet.system.Object  implements ICustomAttributePro
 
   @:overload(function(metadataToken:Int, genericTypeArguments:cs.NativeArray<cs.system.Type>, genericMethodArguments:cs.NativeArray<cs.system.Type>) : cs.system.Type {})
   public function ResolveType(metadataToken:Int) : cs.system.Type;
+
+  public override function ToString() : String;
 }
 

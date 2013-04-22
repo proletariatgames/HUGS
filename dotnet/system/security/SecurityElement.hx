@@ -35,5 +35,7 @@ extern class SecurityElement extends dotnet.system.Object {
   public function SearchForChildByTag(tag:String) : SecurityElement;
 
   public function SearchForTextOfTag(tag:String) : String;
+
+  public override function ToString() : String;
 }
 

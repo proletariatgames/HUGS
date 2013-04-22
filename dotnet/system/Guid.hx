@@ -13,8 +13,17 @@ extern class Guid extends ValueType  implements IComparable implements IFormatta
   @:overload(function(g:String) : Void {})
   public function new(b:cs.NativeArray<Byte>) : Void;
 
+  @:overload(function(o:Dynamic) : Bool {})
+  public override function Equals(g:Guid) : Bool;
+
+  public override function GetHashCode() : Int;
+
   public static function NewGuid() : Guid;
 
   public function ToByteArray() : cs.NativeArray<Byte>;
+
+  @:overload(function(format:String, provider:IFormatProvider) : String {})
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
 }
 

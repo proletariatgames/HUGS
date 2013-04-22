@@ -6,6 +6,8 @@ extern class ProviderCollection extends dotnet.system.Object  implements dotnet.
   public var IsSynchronized(default,never) : Bool;
   public var SyncRoot(default,never) : Dynamic;
 
+  public function Add(provider:ProviderBase) : Void;
+
   public function Clear() : Void;
 
   public function CopyTo(array:cs.NativeArray<ProviderBase>, index:Int) : Void;

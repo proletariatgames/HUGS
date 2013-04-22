@@ -46,6 +46,31 @@ extern class WebClient extends dotnet.system.componentmodel.Component {
   @:overload(function(address:dotnet.system.Uri, userToken:Dynamic) : Void {})
   public function DownloadStringAsync(address:dotnet.system.Uri) : Void;
 
+  function GetWebRequest(address:dotnet.system.Uri) : WebRequest;
+
+
+  function OnDownloadDataCompleted(args:DownloadDataCompletedEventArgs) : Void;
+
+  function OnDownloadFileCompleted(args:dotnet.system.componentmodel.AsyncCompletedEventArgs) : Void;
+
+  function OnDownloadProgressChanged(e:DownloadProgressChangedEventArgs) : Void;
+
+  function OnDownloadStringCompleted(args:DownloadStringCompletedEventArgs) : Void;
+
+  function OnOpenReadCompleted(args:OpenReadCompletedEventArgs) : Void;
+
+  function OnOpenWriteCompleted(args:OpenWriteCompletedEventArgs) : Void;
+
+  function OnUploadDataCompleted(args:UploadDataCompletedEventArgs) : Void;
+
+  function OnUploadFileCompleted(args:UploadFileCompletedEventArgs) : Void;
+
+  function OnUploadProgressChanged(e:UploadProgressChangedEventArgs) : Void;
+
+  function OnUploadStringCompleted(args:UploadStringCompletedEventArgs) : Void;
+
+  function OnUploadValuesCompleted(args:UploadValuesCompletedEventArgs) : Void;
+
   @:overload(function(address:String) : dotnet.system.io.Stream {})
   public function OpenRead(address:dotnet.system.Uri) : dotnet.system.io.Stream;
 

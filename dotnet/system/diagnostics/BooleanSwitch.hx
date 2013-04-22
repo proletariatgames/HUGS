@@ -6,5 +6,7 @@ extern class BooleanSwitch extends Switch {
 
   @:overload(function(displayName:String, description:String, defaultSwitchValue:String) : Void {})
   public function new(displayName:String, description:String) : Void;
+
+  override function OnValueChanged() : Void;
 }
 

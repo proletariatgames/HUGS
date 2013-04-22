@@ -9,6 +9,7 @@ extern class TimeSpanValidatorAttribute extends ConfigurationValidatorAttribute 
   public var MaxValue(default,never) : dotnet.system.TimeSpan;
   public var MinValue(default,never) : dotnet.system.TimeSpan;
   public var ExcludeRange : Bool;
+  public override var ValidatorInstance(default,never) : ConfigurationValidatorBase;
 
   public function new() : Void;
 }

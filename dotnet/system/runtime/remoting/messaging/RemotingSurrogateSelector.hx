@@ -15,5 +15,7 @@ extern class RemotingSurrogateSelector extends dotnet.system.Object  implements 
   public function GetSurrogate(type:cs.system.Type, context:dotnet.system.runtime.serialization.StreamingContext, ssout:dotnet.system.runtime.serialization.ISurrogateSelector) : dotnet.system.runtime.serialization.ISerializationSurrogate;
 
   public function SetRootObject(obj:Dynamic) : Void;
+
+  public function UseSoapFormat() : Void;
 }
 

@@ -3,13 +3,25 @@ package unityengine;
 @:native("UnityEngine.AudioClip.PCMReaderCallback") @:final
 extern class AudioClip_PCMReaderCallback {
 
+  public function BeginInvoke(data:cs.NativeArray<dotnet.system.Single>, _callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
+
   public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
+
+  public function EndInvoke(result:dotnet.system.IAsyncResult) : Void;
+
+  public function Invoke(data:cs.NativeArray<dotnet.system.Single>) : Void;
 }
 
 @:native("UnityEngine.AudioClip.PCMSetPositionCallback") @:final
 extern class AudioClip_PCMSetPositionCallback {
 
+  public function BeginInvoke(position:Int, _callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
+
   public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
+
+  public function EndInvoke(result:dotnet.system.IAsyncResult) : Void;
+
+  public function Invoke(position:Int) : Void;
 }
 
 @:native("UnityEngine.AudioClip") @:final

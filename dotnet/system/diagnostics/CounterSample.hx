@@ -17,5 +17,10 @@ extern class CounterSample extends dotnet.system.ValueType {
 
   @:overload(function(rawValue:dotnet.system.Int64, baseValue:dotnet.system.Int64, counterFrequency:dotnet.system.Int64, systemFrequency:dotnet.system.Int64, timeStamp:dotnet.system.Int64, timeStamp100nSec:dotnet.system.Int64, counterType:PerformanceCounterType, counterTimeStamp:dotnet.system.Int64) : Void {})
   public function new(rawValue:dotnet.system.Int64, baseValue:dotnet.system.Int64, counterFrequency:dotnet.system.Int64, systemFrequency:dotnet.system.Int64, timeStamp:dotnet.system.Int64, timeStamp100nSec:dotnet.system.Int64, counterType:PerformanceCounterType) : Void;
+
+  @:overload(function(other:CounterSample) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

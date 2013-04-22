@@ -22,6 +22,8 @@ extern class TcpListener extends dotnet.system.Object {
 
   public function EndAcceptTcpClient(asyncResult:dotnet.system.IAsyncResult) : TcpClient;
 
+  override function Finalize() : Void;
+
   public function Pending() : Bool;
 
   @:overload(function(backlog:Int) : Void {})

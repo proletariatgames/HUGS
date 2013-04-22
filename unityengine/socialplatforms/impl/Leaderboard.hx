@@ -27,5 +27,7 @@ extern class Leaderboard implements dotnet.unityengine.socialplatforms.ILeaderbo
   public function SetTitle(title:String) : Void;
 
   public function SetUserFilter(userIDs:cs.NativeArray<String>) : Void;
+
+  public override function ToString() : String;
 }
 

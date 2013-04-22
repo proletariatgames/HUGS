@@ -8,5 +8,13 @@ extern class ProviderSettings extends ConfigurationElement {
 
   @:overload(function(name:String, type:String) : Void {})
   public function new() : Void;
+
+  override function IsModified() : Bool;
+
+  override function OnDeserializeUnrecognizedAttribute(name:String, value:String) : Bool;
+
+  override function Reset(parentElement:ConfigurationElement) : Void;
+
+  override function Unmerge(source:ConfigurationElement, parent:ConfigurationElement, updateMode:ConfigurationSaveMode) : Void;
 }
 

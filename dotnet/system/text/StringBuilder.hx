@@ -41,6 +41,8 @@ extern class StringBuilder extends dotnet.system.Object  implements dotnet.syste
 
   public function EnsureCapacity(capacity:Int) : Int;
 
+  public function Equals(sb:StringBuilder) : Bool;
+
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   @:overload(function(index:Int, value:cs.NativeArray<dotnet.system.Char>, startIndex:Int, charCount:Int) : StringBuilder {})
@@ -63,5 +65,8 @@ extern class StringBuilder extends dotnet.system.Object  implements dotnet.syste
   @:overload(function(oldChar:dotnet.system.Char, newChar:dotnet.system.Char, startIndex:Int, count:Int) : StringBuilder {})
   @:overload(function(oldValue:String, newValue:String) : StringBuilder {})
   public function Replace(oldChar:dotnet.system.Char, newChar:dotnet.system.Char) : StringBuilder;
+
+  @:overload(function(startIndex:Int, length:Int) : String {})
+  public override function ToString() : String;
 }
 

@@ -10,6 +10,10 @@ extern class TimeZoneInfo_AdjustmentRule extends Object  implements dotnet.syste
 
   public static function CreateAdjustmentRule(dateStart:DateTime, dateEnd:DateTime, daylightDelta:TimeSpan, daylightTransitionStart:TimeZoneInfo_TransitionTime, daylightTransitionEnd:TimeZoneInfo_TransitionTime) : TimeZoneInfo_AdjustmentRule;
 
+  public override function Equals(other:TimeZoneInfo_AdjustmentRule) : Bool;
+
+  public override function GetHashCode() : Int;
+
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   public function OnDeserialization(sender:Dynamic) : Void;
@@ -27,6 +31,11 @@ extern class TimeZoneInfo_TransitionTime extends ValueType  implements dotnet.sy
   public static function CreateFixedDateRule(timeOfDay:DateTime, month:Int, day:Int) : TimeZoneInfo_TransitionTime;
 
   public static function CreateFloatingDateRule(timeOfDay:DateTime, month:Int, week:Int, dayOfWeek:DayOfWeek) : TimeZoneInfo_TransitionTime;
+
+  @:overload(function(other:TimeZoneInfo_TransitionTime) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
@@ -63,6 +72,8 @@ extern class TimeZoneInfo extends Object  implements dotnet.system.runtime.seria
   @:overload(function(id:String, baseUtcOffset:TimeSpan, displayName:String, standardDisplayName:String, daylightDisplayName:String, adjustmentRules:cs.NativeArray<TimeZoneInfo_AdjustmentRule>) : TimeZoneInfo {})
   public static function CreateCustomTimeZone(id:String, baseUtcOffset:TimeSpan, displayName:String, standardDisplayName:String) : TimeZoneInfo;
 
+  public override function Equals(other:TimeZoneInfo) : Bool;
+
   public static function FindSystemTimeZoneById(id:String) : TimeZoneInfo;
 
   public static function FromSerializedString(source:String) : TimeZoneInfo;
@@ -71,6 +82,8 @@ extern class TimeZoneInfo extends Object  implements dotnet.system.runtime.seria
 
   @:overload(function(dateTimeOffset:DateTimeOffset) : cs.NativeArray<TimeSpan> {})
   public function GetAmbiguousTimeOffsets(dateTime:DateTime) : cs.NativeArray<TimeSpan>;
+
+  public override function GetHashCode() : Int;
 
   public function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
@@ -92,5 +105,7 @@ extern class TimeZoneInfo extends Object  implements dotnet.system.runtime.seria
   public function OnDeserialization(sender:Dynamic) : Void;
 
   public function ToSerializedString() : String;
+
+  public override function ToString() : String;
 }
 

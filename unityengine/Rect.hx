@@ -22,8 +22,15 @@ extern class Rect {
   @:overload(function(left:Float, top:Float, width:Float, height:Float) : Void {})
   public function new(source:Rect) : Void;
 
+  public override function Equals(other:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
   public static function MinMaxRect(left:Float, top:Float, right:Float, bottom:Float) : Rect;
 
   public function Set(left:Float, top:Float, width:Float, height:Float) : Void;
+
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
 }
 

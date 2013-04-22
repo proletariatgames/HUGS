@@ -16,6 +16,8 @@ extern class ADBannerView {
 
   public function new() : Void;
 
+  override function Finalize() : Void;
+
   public static function GetSizeFromSizeIdentifier(identifier:ADSizeIdentifier) : Vector2;
 
   public function Hide() : Void;

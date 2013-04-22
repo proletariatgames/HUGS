@@ -6,5 +6,7 @@ extern class MemoryFailPoint extends dotnet.system.runtime.constrainedexecution.
   public function new(sizeInMegabytes:Int) : Void;
 
   public function Dispose() : Void;
+
+  override function Finalize() : Void;
 }
 

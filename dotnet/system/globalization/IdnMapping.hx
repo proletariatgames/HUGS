@@ -7,9 +7,13 @@ extern class IdnMapping extends dotnet.system.Object {
 
   public function new() : Void;
 
+  public override function Equals(obj:Dynamic) : Bool;
+
   @:overload(function(unicode:String, index:Int, count:Int) : String {})
   @:overload(function(unicode:String, index:Int) : String {})
   public function GetAscii(unicode:String) : String;
+
+  public override function GetHashCode() : Int;
 
   @:overload(function(ascii:String, index:Int, count:Int) : String {})
   @:overload(function(ascii:String, index:Int) : String {})

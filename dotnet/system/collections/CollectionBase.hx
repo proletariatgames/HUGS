@@ -19,6 +19,24 @@ extern class CollectionBase extends dotnet.system.Object  implements ICollection
 
   function Insert(index:Int, value:Dynamic) : Void;
 
+  function OnClear() : Void;
+
+  function OnClearComplete() : Void;
+
+  function OnInsert(index:Int, value:Dynamic) : Void;
+
+  function OnInsertComplete(index:Int, value:Dynamic) : Void;
+
+  function OnRemove(index:Int, value:Dynamic) : Void;
+
+  function OnRemoveComplete(index:Int, value:Dynamic) : Void;
+
+  function OnSet(index:Int, oldValue:Dynamic, newValue:Dynamic) : Void;
+
+  function OnSetComplete(index:Int, oldValue:Dynamic, newValue:Dynamic) : Void;
+
+  function OnValidate(value:Dynamic) : Void;
+
   function Remove(value:Dynamic) : Void;
 
   public function RemoveAt(index:Int) : Void;

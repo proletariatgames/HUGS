@@ -10,5 +10,9 @@ extern class Rfc2898DeriveBytes extends DeriveBytes {
   @:overload(function(password:cs.NativeArray<dotnet.system.Byte>, salt:cs.NativeArray<dotnet.system.Byte>, iterations:Int) : Void {})
   @:overload(function(password:String, saltSize:Int) : Void {})
   public function new(password:String, salt:cs.NativeArray<dotnet.system.Byte>) : Void;
+
+  public override function GetBytes(cb:Int) : cs.NativeArray<dotnet.system.Byte>;
+
+  public override function Reset() : Void;
 }
 

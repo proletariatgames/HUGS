@@ -11,5 +11,7 @@ extern class CompilerError extends dotnet.system.Object {
 
   @:overload(function(fileName:String, line:Int, column:Int, errorNumber:String, errorText:String) : Void {})
   public function new() : Void;
+
+  public override function ToString() : String;
 }
 

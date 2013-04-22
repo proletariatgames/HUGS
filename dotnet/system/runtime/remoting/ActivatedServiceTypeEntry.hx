@@ -7,5 +7,7 @@ extern class ActivatedServiceTypeEntry extends TypeEntry {
 
   @:overload(function(typeName:String, assemblyName:String) : Void {})
   public function new(type:cs.system.Type) : Void;
+
+  public override function ToString() : String;
 }
 

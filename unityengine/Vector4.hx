@@ -17,6 +17,10 @@ extern class Vector4 {
   @:overload(function(x:Float, y:Float, z:Float) : Void {})
   public function new(x:Float, y:Float) : Void;
 
+  public override function Equals(other:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
   public function Normalize() : Void;
 
   public function Scale(scale:Vector4) : Void;
@@ -24,6 +28,9 @@ extern class Vector4 {
   public function Set(new_x:Float, new_y:Float, new_z:Float, new_w:Float) : Void;
 
   public function SqrMagnitude() : Float;
+
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
 }
 
 

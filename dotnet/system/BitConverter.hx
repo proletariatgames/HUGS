@@ -3,6 +3,11 @@ package dotnet.system;
 @:native("System.BitConverter") @:final
 extern class BitConverter extends Object {
   public static var IsLittleEndian : Bool;
+}
+
+
+@:native("System.BitConverter") @:final
+extern class BitConverter_Static {
 
   public static function DoubleToInt64Bits(value:Float) : Int64;
 

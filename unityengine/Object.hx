@@ -18,6 +18,8 @@ extern class Object {
 
   public static function DontDestroyOnLoad(target:Object) : Void;
 
+  public override function Equals(o:Dynamic) : Bool;
+
   public static function FindObjectOfType(type:cs.system.Type) : Object;
 
   public static function FindObjectsOfType(type:cs.system.Type) : cs.NativeArray<Object>;
@@ -28,9 +30,13 @@ extern class Object {
 
   public static function FindSceneObjectsOfType(type:cs.system.Type) : cs.NativeArray<Object>;
 
+  public override function GetHashCode() : Int;
+
   public function GetInstanceID() : Int;
 
   @:overload(function(original:Object, position:Vector3, rotation:Quaternion) : Object {})
   public static function Instantiate(original:Object) : Object;
+
+  public override function ToString() : String;
 }
 

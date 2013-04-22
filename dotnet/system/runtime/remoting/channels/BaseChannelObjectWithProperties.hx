@@ -7,6 +7,7 @@ extern class BaseChannelObjectWithProperties extends dotnet.system.Object  imple
   public var IsReadOnly(default,never) : Bool;
   public var IsSynchronized(default,never) : Bool;
   public var Keys(default,never) : dotnet.system.collections.ICollection;
+  public var Properties(default,never) : dotnet.system.collections.IDictionary;
   public var SyncRoot(default,never) : Dynamic;
   public var Values(default,never) : dotnet.system.collections.ICollection;
 

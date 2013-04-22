@@ -7,7 +7,24 @@ extern class CultureInfo extends dotnet.system.Object  implements dotnet.system.
   public static var CurrentUICulture(default,never) : CultureInfo;
   public var CultureTypes(default,never) : CultureTypes;
   public var IetfLanguageTag(default,never) : String;
+  public var KeyboardLayoutId(default,never) : Int;
+  public var LCID(default,never) : Int;
+  public var Name(default,never) : String;
+  public var NativeName(default,never) : String;
+  public var Calendar(default,never) : Calendar;
+  public var OptionalCalendars(default,never) : cs.NativeArray<Calendar>;
+  public var Parent(default,never) : CultureInfo;
+  public var TextInfo(default,never) : TextInfo;
+  public var ThreeLetterISOLanguageName(default,never) : String;
+  public var ThreeLetterWindowsLanguageName(default,never) : String;
+  public var TwoLetterISOLanguageName(default,never) : String;
   public var UseUserOverride(default,never) : Bool;
+  public var CompareInfo(default,never) : CompareInfo;
+  public var IsNeutralCulture(default,never) : Bool;
+  public var NumberFormat : NumberFormatInfo;
+  public var DateTimeFormat : DateTimeFormatInfo;
+  public var DisplayName(default,never) : String;
+  public var EnglishName(default,never) : String;
   public static var InstalledUICulture(default,never) : CultureInfo;
   public var IsReadOnly(default,never) : Bool;
 
@@ -22,6 +39,8 @@ extern class CultureInfo extends dotnet.system.Object  implements dotnet.system.
   @:overload(function(name:String) : Void {})
   public function new(culture:Int) : Void;
 
+  public override function Equals(value:Dynamic) : Bool;
+
   public function GetConsoleFallbackUICulture() : CultureInfo;
 
   @:overload(function(name:String, altName:String) : CultureInfo {})
@@ -34,6 +53,10 @@ extern class CultureInfo extends dotnet.system.Object  implements dotnet.system.
 
   public function GetFormat(formatType:cs.system.Type) : Dynamic;
 
+  public override function GetHashCode() : Int;
+
   public static function ReadOnly(ci:CultureInfo) : CultureInfo;
+
+  public override function ToString() : String;
 }
 

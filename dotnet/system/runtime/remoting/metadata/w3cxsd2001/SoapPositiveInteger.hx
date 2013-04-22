@@ -11,5 +11,7 @@ extern class SoapPositiveInteger extends dotnet.system.Object  implements ISoapX
   public function GetXsdType() : String;
 
   public static function Parse(value:String) : SoapPositiveInteger;
+
+  public override function ToString() : String;
 }
 

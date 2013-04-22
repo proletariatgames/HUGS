@@ -21,6 +21,8 @@ extern class TempFileCollection extends dotnet.system.Object  implements dotnet.
   public function Delete() : Void;
 
 
+  override function Finalize() : Void;
+
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 }
 

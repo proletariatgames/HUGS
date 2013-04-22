@@ -11,5 +11,7 @@ extern class SoapIdref extends dotnet.system.Object  implements ISoapXsd {
   public function GetXsdType() : String;
 
   public static function Parse(value:String) : SoapIdref;
+
+  public override function ToString() : String;
 }
 

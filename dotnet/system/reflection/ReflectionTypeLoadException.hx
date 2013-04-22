@@ -7,5 +7,7 @@ extern class ReflectionTypeLoadException extends dotnet.system.SystemException {
 
   @:overload(function(classes:cs.NativeArray<cs.system.Type>, exceptions:cs.NativeArray<dotnet.system.Exception>, message:String) : Void {})
   public function new(classes:cs.NativeArray<cs.system.Type>, exceptions:cs.NativeArray<dotnet.system.Exception>) : Void;
+
+  public override function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 }
 

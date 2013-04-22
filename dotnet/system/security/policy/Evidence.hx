@@ -20,9 +20,13 @@ extern class Evidence extends dotnet.system.Object  implements dotnet.system.col
   @:overload(function(evidence:Evidence) : Void {})
   public function new() : Void;
 
+  public override function Equals(obj:Dynamic) : Bool;
+
   public function GetAssemblyEnumerator() : dotnet.system.collections.IEnumerator;
 
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
+
+  public override function GetHashCode() : Int;
 
   public function GetHostEnumerator() : dotnet.system.collections.IEnumerator;
 

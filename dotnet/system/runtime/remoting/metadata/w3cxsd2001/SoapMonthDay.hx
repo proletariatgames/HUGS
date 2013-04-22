@@ -11,5 +11,7 @@ extern class SoapMonthDay extends dotnet.system.Object  implements ISoapXsd {
   public function GetXsdType() : String;
 
   public static function Parse(value:String) : SoapMonthDay;
+
+  public override function ToString() : String;
 }
 

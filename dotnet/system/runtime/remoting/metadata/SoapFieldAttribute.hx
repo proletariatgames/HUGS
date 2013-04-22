@@ -8,5 +8,7 @@ extern class SoapFieldAttribute extends SoapAttribute {
   public function new() : Void;
 
   public function IsInteropXmlElement() : Bool;
+
+  override function SetReflectionObject(reflectionObject:Dynamic) : Void;
 }
 

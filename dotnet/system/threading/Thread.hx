@@ -49,6 +49,8 @@ extern class Thread extends dotnet.system.runtime.constrainedexecution.CriticalF
 
   public static function GetDomainID() : Int;
 
+  public override function GetHashCode() : Int;
+
   function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
 
   public static function GetNamedDataSlot(name:String) : dotnet.system.LocalDataStoreSlot;

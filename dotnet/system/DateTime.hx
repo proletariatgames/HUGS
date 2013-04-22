@@ -39,8 +39,6 @@ extern class DateTime extends ValueType  implements IComparable implements IConv
 
   public function AddYears(value:Int) : DateTime;
 
-  public static function Compare(t1:DateTime, t2:DateTime) : Int;
-
   @:overload(function(value:Dynamic) : Int {})
   public function CompareTo(value:DateTime) : Int;
 
@@ -56,40 +54,21 @@ extern class DateTime extends ValueType  implements IComparable implements IConv
   @:overload(function(ticks:Int64, kind:DateTimeKind) : Void {})
   public function new(ticks:Int64) : Void;
 
-  public static function DaysInMonth(year:Int, month:Int) : Int;
-
-  public static function Equals(t1:DateTime, t2:DateTime) : Bool;
-
-  public static function FromBinary(dateData:Int64) : DateTime;
-
-  public static function FromFileTime(fileTime:Int64) : DateTime;
-
-  public static function FromFileTimeUtc(fileTime:Int64) : DateTime;
-
-  public static function FromOADate(d:Float) : DateTime;
+  @:overload(function(value:Dynamic) : Bool {})
+  public override function Equals(value:DateTime) : Bool;
 
   @:overload(function(format:Char, provider:IFormatProvider) : cs.NativeArray<String> {})
   @:overload(function(provider:IFormatProvider) : cs.NativeArray<String> {})
   @:overload(function(format:Char) : cs.NativeArray<String> {})
   public function GetDateTimeFormats() : cs.NativeArray<String>;
 
+  public override function GetHashCode() : Int;
+
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
   public function GetTypeCode() : TypeCode;
 
   public function IsDaylightSavingTime() : Bool;
-
-  public static function IsLeapYear(year:Int) : Bool;
-
-  @:overload(function(s:String, provider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTime {})
-  @:overload(function(s:String, provider:IFormatProvider) : DateTime {})
-  public static function Parse(s:String) : DateTime;
-
-  @:overload(function(s:String, formats:cs.NativeArray<String>, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles) : DateTime {})
-  @:overload(function(s:String, format:String, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles) : DateTime {})
-  public static function ParseExact(s:String, format:String, provider:IFormatProvider) : DateTime;
-
-  public static function SpecifyKind(value:DateTime, kind:DateTimeKind) : DateTime;
 
   @:overload(function(value:TimeSpan) : DateTime {})
   public function Subtract(value:DateTime) : TimeSpan;
@@ -134,6 +113,11 @@ extern class DateTime extends ValueType  implements IComparable implements IConv
 
   function ToSingle(provider:IFormatProvider) : Float;
 
+  @:overload(function(format:String, provider:IFormatProvider) : String {})
+  @:overload(function(provider:IFormatProvider) : String {})
+  @:overload(function(format:String) : String {})
+  public override function ToString() : String;
+
   function ToType(targetType:cs.system.Type, provider:IFormatProvider) : Dynamic;
 
   function ToUInt16(provider:IFormatProvider) : UInt;
@@ -143,6 +127,37 @@ extern class DateTime extends ValueType  implements IComparable implements IConv
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
   public function ToUniversalTime() : DateTime;
+}
+
+
+@:native("System.DateTime") @:final
+extern class DateTime_Static {
+
+  public static function Compare(t1:DateTime, t2:DateTime) : Int;
+
+  public static function DaysInMonth(year:Int, month:Int) : Int;
+
+  public static function Equals(t1:DateTime, t2:DateTime) : Bool;
+
+  public static function FromBinary(dateData:Int64) : DateTime;
+
+  public static function FromFileTime(fileTime:Int64) : DateTime;
+
+  public static function FromFileTimeUtc(fileTime:Int64) : DateTime;
+
+  public static function FromOADate(d:Float) : DateTime;
+
+  public static function IsLeapYear(year:Int) : Bool;
+
+  @:overload(function(s:String, provider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTime {})
+  @:overload(function(s:String, provider:IFormatProvider) : DateTime {})
+  public static function Parse(s:String) : DateTime;
+
+  @:overload(function(s:String, formats:cs.NativeArray<String>, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles) : DateTime {})
+  @:overload(function(s:String, format:String, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles) : DateTime {})
+  public static function ParseExact(s:String, format:String, provider:IFormatProvider) : DateTime;
+
+  public static function SpecifyKind(value:DateTime, kind:DateTimeKind) : DateTime;
 
   @:overload(function(s:String, provider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTime) : Bool {})
   public static function TryParse(s:String, result:DateTime) : Bool;

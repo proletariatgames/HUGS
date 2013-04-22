@@ -11,5 +11,7 @@ extern class X500DistinguishedName extends dotnet.system.security.cryptography.A
   public function new(distinguishedName:String) : Void;
 
   public function Decode(flag:X500DistinguishedNameFlags) : String;
+
+  public override function Format(multiLine:Bool) : String;
 }
 

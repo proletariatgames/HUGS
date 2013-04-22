@@ -8,5 +8,7 @@ extern class NavMeshPath {
   public function ClearCorners() : Void;
 
   public function new() : Void;
+
+  override function Finalize() : Void;
 }
 

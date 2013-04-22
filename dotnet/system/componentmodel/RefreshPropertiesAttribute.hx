@@ -8,5 +8,11 @@ extern class RefreshPropertiesAttribute extends dotnet.system.Attribute {
   public var RefreshProperties(default,never) : RefreshProperties;
 
   public function new(refresh:RefreshProperties) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 

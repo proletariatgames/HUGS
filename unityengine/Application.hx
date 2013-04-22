@@ -3,7 +3,13 @@ package unityengine;
 @:native("UnityEngine.Application.LogCallback") @:final
 extern class Application_LogCallback {
 
+  public function BeginInvoke(condition:String, stackTrace:String, type:LogType, _callback:dotnet.system.AsyncCallback, object:Dynamic) : dotnet.system.IAsyncResult;
+
   public function new(object:Dynamic, method:dotnet.system.IntPtr) : Void;
+
+  public function EndInvoke(result:dotnet.system.IAsyncResult) : Void;
+
+  public function Invoke(condition:String, stackTrace:String, type:LogType) : Void;
 }
 
 @:native("UnityEngine.Application") @:final

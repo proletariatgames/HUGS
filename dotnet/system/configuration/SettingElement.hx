@@ -8,5 +8,9 @@ extern class SettingElement extends ConfigurationElement {
 
   @:overload(function(name:String, serializeAs:SettingsSerializeAs) : Void {})
   public function new() : Void;
+
+  public override function Equals(o:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

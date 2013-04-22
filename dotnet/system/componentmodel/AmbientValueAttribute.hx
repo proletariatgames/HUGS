@@ -13,5 +13,9 @@ extern class AmbientValueAttribute extends dotnet.system.Attribute {
   @:overload(function(value:dotnet.system.Int64) : Void {})
   @:overload(function(value:dotnet.system.Char) : Void {})
   public function new(value:Bool) : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
 }
 

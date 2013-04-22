@@ -5,6 +5,7 @@ extern class FieldInfo extends MemberInfo  implements dotnet.system.runtime.inte
   public var Attributes(default,never) : FieldAttributes;
   public var FieldHandle(default,never) : dotnet.system.RuntimeFieldHandle;
   public var FieldType(default,never) : cs.system.Type;
+  public override var MemberType(default,never) : MemberTypes;
   public var IsLiteral(default,never) : Bool;
   public var IsStatic(default,never) : Bool;
   public var IsInitOnly(default,never) : Bool;
@@ -21,9 +22,27 @@ extern class FieldInfo extends MemberInfo  implements dotnet.system.runtime.inte
   @:overload(function(handle:dotnet.system.RuntimeFieldHandle, declaringType:dotnet.system.RuntimeTypeHandle) : FieldInfo {})
   public static function GetFieldFromHandle(handle:dotnet.system.RuntimeFieldHandle) : FieldInfo;
 
+  function GetFieldOffset() : Int;
+
+  override function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
+
+  public function GetOptionalCustomModifiers() : cs.NativeArray<cs.system.Type>;
+
+  public function GetRawConstantValue() : Dynamic;
+
+  public function GetRequiredCustomModifiers() : cs.NativeArray<cs.system.Type>;
+
+  override function GetType() : cs.system.Type;
+
+  override function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:dotnet.system.IntPtr) : Void;
+
+  override function GetTypeInfoCount(pcTInfo:UInt) : Void;
+
   public function GetValue(obj:Dynamic) : Dynamic;
 
   public function GetValueDirect(obj:dotnet.system.TypedReference) : Dynamic;
+
+  override function Invoke(dispIdMember:UInt, riid:dotnet.system.Guid, lcid:UInt, wFlags:Int, pDispParams:dotnet.system.IntPtr, pVarResult:dotnet.system.IntPtr, pExcepInfo:dotnet.system.IntPtr, puArgErr:dotnet.system.IntPtr) : Void;
 
   @:overload(function(obj:Dynamic, value:Dynamic, invokeAttr:BindingFlags, binder:Binder, culture:dotnet.system.globalization.CultureInfo) : Void {})
   public function SetValue(obj:Dynamic, value:Dynamic) : Void;

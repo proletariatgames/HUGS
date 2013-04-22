@@ -15,5 +15,7 @@ extern class AlternateView extends AttachmentBase {
   @:overload(function(contentStream:dotnet.system.io.Stream, contentType:dotnet.system.net.mime.ContentType) : Void {})
   @:overload(function(fileName:String) : Void {})
   public function new(contentStream:dotnet.system.io.Stream) : Void;
+
+  override function Dispose(disposing:Bool) : Void;
 }
 

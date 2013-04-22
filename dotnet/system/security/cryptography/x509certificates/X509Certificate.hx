@@ -25,8 +25,61 @@ extern class X509Certificate extends dotnet.system.Object  implements dotnet.sys
   @:overload(function(cert:X509Certificate) : Void {})
   public function new() : Void;
 
+  @:overload(function(other:X509Certificate) : Bool {})
+  public override function Equals(obj:Dynamic) : Bool;
+
+  @:overload(function(contentType:X509ContentType, password:String) : cs.NativeArray<dotnet.system.Byte> {})
+  @:overload(function(contentType:X509ContentType, password:dotnet.system.security.SecureString) : cs.NativeArray<dotnet.system.Byte> {})
+  public function Export(contentType:X509ContentType) : cs.NativeArray<dotnet.system.Byte>;
+
+  public function GetCertHash() : cs.NativeArray<dotnet.system.Byte>;
+
+  public function GetCertHashString() : String;
+
+  public function GetEffectiveDateString() : String;
+
+  public function GetExpirationDateString() : String;
+
+  public function GetFormat() : String;
+
+  public override function GetHashCode() : Int;
+
+  public function GetIssuerName() : String;
+
+  public function GetKeyAlgorithm() : String;
+
+  public function GetKeyAlgorithmParameters() : cs.NativeArray<dotnet.system.Byte>;
+
+  public function GetKeyAlgorithmParametersString() : String;
+
+  public function GetName() : String;
+
   function GetObjectData(info:dotnet.system.runtime.serialization.SerializationInfo, context:dotnet.system.runtime.serialization.StreamingContext) : Void;
 
+  public function GetPublicKey() : cs.NativeArray<dotnet.system.Byte>;
+
+  public function GetPublicKeyString() : String;
+
+  public function GetRawCertData() : cs.NativeArray<dotnet.system.Byte>;
+
+  public function GetRawCertDataString() : String;
+
+  public function GetSerialNumber() : cs.NativeArray<dotnet.system.Byte>;
+
+  public function GetSerialNumberString() : String;
+
+  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})
+  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})
+  @:overload(function(fileName:String, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})
+  @:overload(function(fileName:String, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})
+  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>) : Void {})
+  public function Import(fileName:String) : Void;
+
   function OnDeserialization(sender:Dynamic) : Void;
+
+  public function Reset() : Void;
+
+  @:overload(function(fVerbose:Bool) : String {})
+  public override function ToString() : String;
 }
 

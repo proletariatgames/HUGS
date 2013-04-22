@@ -5,6 +5,11 @@ extern class ModuleHandle extends ValueType {
   public static var EmptyHandle : ModuleHandle;
   public var MDStreamVersion(default,never) : Int;
 
+  @:overload(function(obj:Dynamic) : Bool {})
+  public function Equals(handle:ModuleHandle) : Bool;
+
+  public override function GetHashCode() : Int;
+
   public function GetRuntimeFieldHandleFromMetadataToken(fieldToken:Int) : RuntimeFieldHandle;
 
   public function GetRuntimeMethodHandleFromMetadataToken(methodToken:Int) : RuntimeMethodHandle;

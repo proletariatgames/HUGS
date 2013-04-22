@@ -106,6 +106,8 @@ extern class Socket extends dotnet.system.Object  implements dotnet.system.IDisp
 
   public function EndSendTo(result:dotnet.system.IAsyncResult) : Int;
 
+  override function Finalize() : Void;
+
   @:overload(function(optionLevel:SocketOptionLevel, optionName:SocketOptionName, optionValue:cs.NativeArray<dotnet.system.Byte>) : Void {})
   @:overload(function(optionLevel:SocketOptionLevel, optionName:SocketOptionName, length:Int) : cs.NativeArray<dotnet.system.Byte> {})
   public function GetSocketOption(optionLevel:SocketOptionLevel, optionName:SocketOptionName) : Dynamic;

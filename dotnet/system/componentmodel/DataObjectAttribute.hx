@@ -9,5 +9,11 @@ extern class DataObjectAttribute extends dotnet.system.Attribute {
 
   @:overload(function(isDataObject:Bool) : Void {})
   public function new() : Void;
+
+  public override function Equals(obj:Dynamic) : Bool;
+
+  public override function GetHashCode() : Int;
+
+  public override function IsDefaultAttribute() : Bool;
 }
 
