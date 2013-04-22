@@ -15,7 +15,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function CallDoubleMethod(obj:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Float;
 
-  public static function CallFloatMethod(obj:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Float;
+  public static function CallFloatMethod(obj:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Single;
 
   public static function CallIntMethod(obj:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Int;
 
@@ -33,7 +33,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function CallStaticDoubleMethod(clazz:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Float;
 
-  public static function CallStaticFloatMethod(clazz:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Float;
+  public static function CallStaticFloatMethod(clazz:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Single;
 
   public static function CallStaticIntMethod(clazz:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Int;
 
@@ -79,7 +79,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function FromDoubleArray(array:dotnet.system.IntPtr) : cs.NativeArray<Float>;
 
-  public static function FromFloatArray(array:dotnet.system.IntPtr) : cs.NativeArray<dotnet.system.Single>;
+  public static function FromFloatArray(array:dotnet.system.IntPtr) : cs.NativeArray<Single>;
 
   public static function FromIntArray(array:dotnet.system.IntPtr) : cs.NativeArray<Int>;
 
@@ -113,9 +113,9 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function GetFieldID(clazz:dotnet.system.IntPtr, name:String, sig:String) : dotnet.system.IntPtr;
 
-  public static function GetFloatArrayElement(array:dotnet.system.IntPtr, index:Int) : Float;
+  public static function GetFloatArrayElement(array:dotnet.system.IntPtr, index:Int) : Single;
 
-  public static function GetFloatField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : Float;
+  public static function GetFloatField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : Single;
 
   public static function GetIntArrayElement(array:dotnet.system.IntPtr, index:Int) : Int;
 
@@ -147,7 +147,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function GetStaticFieldID(clazz:dotnet.system.IntPtr, name:String, sig:String) : dotnet.system.IntPtr;
 
-  public static function GetStaticFloatField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : Float;
+  public static function GetStaticFloatField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : Single;
 
   public static function GetStaticIntField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : dotnet.system.Int64;
 
@@ -223,9 +223,9 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function SetDoubleField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:Float) : Void;
 
-  public static function SetFloatArrayElement(array:dotnet.system.IntPtr, index:Int, val:Float) : Void;
+  public static function SetFloatArrayElement(array:dotnet.system.IntPtr, index:Int, val:Single) : Void;
 
-  public static function SetFloatField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:Float) : Void;
+  public static function SetFloatField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:Single) : Void;
 
   public static function SetIntArrayElement(array:dotnet.system.IntPtr, index:Int, val:Int) : Void;
 
@@ -251,7 +251,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function SetStaticDoubleField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:Float) : Void;
 
-  public static function SetStaticFloatField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:Float) : Void;
+  public static function SetStaticFloatField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:Single) : Void;
 
   public static function SetStaticIntField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:Int) : Void;
 
@@ -277,7 +277,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function ToDoubleArray(array:cs.NativeArray<Float>) : dotnet.system.IntPtr;
 
-  public static function ToFloatArray(array:cs.NativeArray<dotnet.system.Single>) : dotnet.system.IntPtr;
+  public static function ToFloatArray(array:cs.NativeArray<Single>) : dotnet.system.IntPtr;
 
   public static function ToIntArray(array:cs.NativeArray<Int>) : dotnet.system.IntPtr;
 

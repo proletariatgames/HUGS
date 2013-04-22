@@ -3,13 +3,13 @@ package unityengine;
 @:native("UnityEngine.AnimationState") @:final
 extern class AnimationState extends TrackedReference {
   public var enabled : Bool;
-  public var weight : Float;
+  public var weight : Single;
   public var wrapMode : WrapMode;
-  public var time : Float;
-  public var normalizedTime : Float;
-  public var speed : Float;
-  public var normalizedSpeed : Float;
-  public var length(default,never) : Float;
+  public var time : Single;
+  public var normalizedTime : Single;
+  public var speed : Single;
+  public var normalizedSpeed : Single;
+  public var length(default,never) : Single;
   public var layer : Int;
   public var clip(default,never) : AnimationClip;
   public var name : String;

@@ -4,7 +4,7 @@ package unityengine;
 extern class OffMeshLink extends Component {
   public var activated : Bool;
   public var occupied(default,never) : Bool;
-  public var costOverride : Float;
+  public var costOverride : Single;
 
   public function new() : Void;
 }

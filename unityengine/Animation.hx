@@ -15,17 +15,17 @@ extern class Animation extends Behaviour {
   @:overload(function(clip:AnimationClip, newName:String, firstFrame:Int, lastFrame:Int, addLoopFrame:Bool) : Void {})
   public function AddClip(clip:AnimationClip, newName:String, firstFrame:Int, lastFrame:Int) : Void;
 
-  @:overload(function(animation:String, targetWeight:Float, fadeLength:Float) : Void {})
-  @:overload(function(animation:String, targetWeight:Float) : Void {})
+  @:overload(function(animation:String, targetWeight:Single, fadeLength:Single) : Void {})
+  @:overload(function(animation:String, targetWeight:Single) : Void {})
   public function Blend(animation:String) : Void;
 
-  @:overload(function(animation:String, fadeLength:Float, mode:PlayMode) : Void {})
-  @:overload(function(animation:String, fadeLength:Float) : Void {})
+  @:overload(function(animation:String, fadeLength:Single, mode:PlayMode) : Void {})
+  @:overload(function(animation:String, fadeLength:Single) : Void {})
   public function CrossFade(animation:String) : Void;
 
-  @:overload(function(animation:String, fadeLength:Float, queue:QueueMode, mode:PlayMode) : AnimationState {})
-  @:overload(function(animation:String, fadeLength:Float, queue:QueueMode) : AnimationState {})
-  @:overload(function(animation:String, fadeLength:Float) : AnimationState {})
+  @:overload(function(animation:String, fadeLength:Single, queue:QueueMode, mode:PlayMode) : AnimationState {})
+  @:overload(function(animation:String, fadeLength:Single, queue:QueueMode) : AnimationState {})
+  @:overload(function(animation:String, fadeLength:Single) : AnimationState {})
   public function CrossFadeQueued(animation:String) : AnimationState;
 
   public function new() : Void;

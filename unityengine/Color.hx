@@ -2,10 +2,10 @@ package unityengine;
 
 @:native("UnityEngine.Color") @:final
 extern class Color extends dotnet.system.ValueType {
-  public var r : Float;
-  public var g : Float;
-  public var b : Float;
-  public var a : Float;
+  public var r : Single;
+  public var g : Single;
+  public var b : Single;
+  public var a : Single;
   public static var red(default,never) : Color;
   public static var green(default,never) : Color;
   public static var blue(default,never) : Color;
@@ -17,12 +17,12 @@ extern class Color extends dotnet.system.ValueType {
   public static var gray(default,never) : Color;
   public static var grey(default,never) : Color;
   public static var clear(default,never) : Color;
-  public var grayscale(default,never) : Float;
+  public var grayscale(default,never) : Single;
   public var linear(default,never) : Color;
   public var gamma(default,never) : Color;
 
-  @:overload(function(r:Float, g:Float, b:Float, a:Float) : Void {})
-  public function new(r:Float, g:Float, b:Float) : Void;
+  @:overload(function(r:Single, g:Single, b:Single, a:Single) : Void {})
+  public function new(r:Single, g:Single, b:Single) : Void;
 
   @:overload(function(other:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
@@ -30,7 +30,7 @@ extern class Color extends dotnet.system.ValueType {
   @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
-  public static function Lerp(a:Color, b:Color, t:Float) : Color;
+  public static function Lerp(a:Color, b:Color, t:Single) : Color;
 
   @:overload(function() : String {})
   @:overload(function(format:String) : String {})

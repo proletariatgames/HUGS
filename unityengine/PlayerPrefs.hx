@@ -9,8 +9,8 @@ extern class PlayerPrefs extends dotnet.system.Object {
 
   public static function DeleteKey(key:String) : Void;
 
-  @:overload(function(key:String, defaultValue:Float) : Float {})
-  public static function GetFloat(key:String) : Float;
+  @:overload(function(key:String, defaultValue:Single) : Single {})
+  public static function GetFloat(key:String) : Single;
 
   @:overload(function(key:String, defaultValue:Int) : Int {})
   public static function GetInt(key:String) : Int;
@@ -22,7 +22,7 @@ extern class PlayerPrefs extends dotnet.system.Object {
 
   public static function Save() : Void;
 
-  public static function SetFloat(key:String, value:Float) : Void;
+  public static function SetFloat(key:String, value:Single) : Void;
 
   public static function SetInt(key:String, value:Int) : Void;
 

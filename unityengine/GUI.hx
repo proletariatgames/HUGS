@@ -64,7 +64,7 @@ extern class GUI extends dotnet.system.Object {
   @:overload(function(position:Rect, image:Texture, scaleMode:ScaleMode, alphaBlend:Bool) : Void {})
   @:overload(function(position:Rect, image:Texture, scaleMode:ScaleMode) : Void {})
   @:overload(function(position:Rect, image:Texture) : Void {})
-  public static function DrawTexture(position:Rect, image:Texture, scaleMode:ScaleMode, alphaBlend:Bool, imageAspect:Float) : Void;
+  public static function DrawTexture(position:Rect, image:Texture, scaleMode:ScaleMode, alphaBlend:Bool, imageAspect:Single) : Void;
 
   @:overload(function(position:Rect, image:Texture, texCoords:Rect) : Void {})
   public static function DrawTextureWithTexCoords(position:Rect, image:Texture, texCoords:Rect, alphaBlend:Bool) : Void;
@@ -80,11 +80,11 @@ extern class GUI extends dotnet.system.Object {
 
   public static function GetNameOfFocusedControl() : String;
 
-  @:overload(function(position:Rect, value:Float, size:Float, leftValue:Float, rightValue:Float) : Float {})
-  public static function HorizontalScrollbar(position:Rect, value:Float, size:Float, leftValue:Float, rightValue:Float, style:GUIStyle) : Float;
+  @:overload(function(position:Rect, value:Single, size:Single, leftValue:Single, rightValue:Single) : Single {})
+  public static function HorizontalScrollbar(position:Rect, value:Single, size:Single, leftValue:Single, rightValue:Single, style:GUIStyle) : Single;
 
-  @:overload(function(position:Rect, value:Float, leftValue:Float, rightValue:Float) : Float {})
-  public static function HorizontalSlider(position:Rect, value:Float, leftValue:Float, rightValue:Float, slider:GUIStyle, thumb:GUIStyle) : Float;
+  @:overload(function(position:Rect, value:Single, leftValue:Single, rightValue:Single) : Single {})
+  public static function HorizontalSlider(position:Rect, value:Single, leftValue:Single, rightValue:Single, slider:GUIStyle, thumb:GUIStyle) : Single;
 
   @:overload(function(position:Rect, text:String) : Void {})
   @:overload(function(position:Rect, image:Texture) : Void {})
@@ -123,7 +123,7 @@ extern class GUI extends dotnet.system.Object {
 
   public static function SetNextControlName(name:String) : Void;
 
-  public static function Slider(position:Rect, value:Float, size:Float, start:Float, end:Float, slider:GUIStyle, thumb:GUIStyle, horiz:Bool, id:Int) : Float;
+  public static function Slider(position:Rect, value:Single, size:Single, start:Single, end:Single, slider:GUIStyle, thumb:GUIStyle, horiz:Bool, id:Int) : Single;
 
   @:overload(function(position:Rect, text:String) : String {})
   @:overload(function(position:Rect, text:String, maxLength:Int) : String {})
@@ -151,11 +151,11 @@ extern class GUI extends dotnet.system.Object {
 
   public static function UnfocusWindow() : Void;
 
-  @:overload(function(position:Rect, value:Float, size:Float, topValue:Float, bottomValue:Float) : Float {})
-  public static function VerticalScrollbar(position:Rect, value:Float, size:Float, topValue:Float, bottomValue:Float, style:GUIStyle) : Float;
+  @:overload(function(position:Rect, value:Single, size:Single, topValue:Single, bottomValue:Single) : Single {})
+  public static function VerticalScrollbar(position:Rect, value:Single, size:Single, topValue:Single, bottomValue:Single, style:GUIStyle) : Single;
 
-  @:overload(function(position:Rect, value:Float, topValue:Float, bottomValue:Float) : Float {})
-  public static function VerticalSlider(position:Rect, value:Float, topValue:Float, bottomValue:Float, slider:GUIStyle, thumb:GUIStyle) : Float;
+  @:overload(function(position:Rect, value:Single, topValue:Single, bottomValue:Single) : Single {})
+  public static function VerticalSlider(position:Rect, value:Single, topValue:Single, bottomValue:Single, slider:GUIStyle, thumb:GUIStyle) : Single;
 
   @:overload(function(id:Int, clientRect:Rect, func:GUI_WindowFunction, text:String) : Rect {})
   @:overload(function(id:Int, clientRect:Rect, func:GUI_WindowFunction, image:Texture) : Rect {})

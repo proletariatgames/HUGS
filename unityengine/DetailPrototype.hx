@@ -4,12 +4,12 @@ package unityengine;
 extern class DetailPrototype extends dotnet.system.Object {
   public var prototype : GameObject;
   public var prototypeTexture : Texture2D;
-  public var minWidth : Float;
-  public var maxWidth : Float;
-  public var minHeight : Float;
-  public var maxHeight : Float;
-  public var noiseSpread : Float;
-  public var bendFactor : Float;
+  public var minWidth : Single;
+  public var maxWidth : Single;
+  public var minHeight : Single;
+  public var maxHeight : Single;
+  public var noiseSpread : Single;
+  public var bendFactor : Single;
   public var healthyColor : Color;
   public var dryColor : Color;
   public var renderMode : DetailRenderMode;

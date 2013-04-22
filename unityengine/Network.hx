@@ -9,7 +9,7 @@ extern class Network extends dotnet.system.Object {
   public static var isClient(default,never) : Bool;
   public static var isServer(default,never) : Bool;
   public static var peerType(default,never) : NetworkPeerType;
-  public static var sendRate : Float;
+  public static var sendRate : Single;
   public static var isMessageQueueRunning : Bool;
   public static var time(default,never) : Float;
   public static var minimumAllocatableViewIDs : Int;

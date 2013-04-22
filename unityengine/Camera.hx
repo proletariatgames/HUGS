@@ -2,29 +2,29 @@ package unityengine;
 
 @:native("UnityEngine.Camera") @:final
 extern class Camera extends Behaviour {
-  public var fov : Float;
-  public var near : Float;
-  public var far : Float;
-  public var fieldOfView : Float;
-  public var nearClipPlane : Float;
-  public var farClipPlane : Float;
+  public var fov : Single;
+  public var near : Single;
+  public var far : Single;
+  public var fieldOfView : Single;
+  public var nearClipPlane : Single;
+  public var farClipPlane : Single;
   public var renderingPath : RenderingPath;
   public var actualRenderingPath(default,never) : RenderingPath;
   public var hdr : Bool;
-  public var orthographicSize : Float;
+  public var orthographicSize : Single;
   public var orthographic : Bool;
   public var transparencySortMode : TransparencySortMode;
   public var isOrthoGraphic : Bool;
-  public var depth : Float;
-  public var aspect : Float;
+  public var depth : Single;
+  public var aspect : Single;
   public var cullingMask : Int;
   public var eventMask : Int;
   public var backgroundColor : Color;
   public var rect : Rect;
   public var pixelRect : Rect;
   public var targetTexture : RenderTexture;
-  public var pixelWidth(default,never) : Float;
-  public var pixelHeight(default,never) : Float;
+  public var pixelWidth(default,never) : Single;
+  public var pixelHeight(default,never) : Single;
   public var cameraToWorldMatrix(default,never) : Matrix4x4;
   public var worldToCameraMatrix : Matrix4x4;
   public var projectionMatrix : Matrix4x4;
@@ -35,7 +35,7 @@ extern class Camera extends Behaviour {
   public static var allCameras(default,never) : cs.NativeArray<Camera>;
   public static var mainCamera(default,never) : Camera;
   public var useOcclusionCulling : Bool;
-  public var layerCullDistances : cs.NativeArray<dotnet.system.Single>;
+  public var layerCullDistances : cs.NativeArray<Single>;
   public var layerCullSpherical : Bool;
   public var depthTextureMode : DepthTextureMode;
 
@@ -45,9 +45,9 @@ extern class Camera extends Behaviour {
 
   public function DoClear() : Void;
 
-  public function GetScreenHeight() : Float;
+  public function GetScreenHeight() : Single;
 
-  public function GetScreenWidth() : Float;
+  public function GetScreenWidth() : Single;
 
   public function Render() : Void;
 

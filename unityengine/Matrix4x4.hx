@@ -2,22 +2,22 @@ package unityengine;
 
 @:native("UnityEngine.Matrix4x4") @:final
 extern class Matrix4x4 extends dotnet.system.ValueType {
-  public var m00 : Float;
-  public var m10 : Float;
-  public var m20 : Float;
-  public var m30 : Float;
-  public var m01 : Float;
-  public var m11 : Float;
-  public var m21 : Float;
-  public var m31 : Float;
-  public var m02 : Float;
-  public var m12 : Float;
-  public var m22 : Float;
-  public var m32 : Float;
-  public var m03 : Float;
-  public var m13 : Float;
-  public var m23 : Float;
-  public var m33 : Float;
+  public var m00 : Single;
+  public var m10 : Single;
+  public var m20 : Single;
+  public var m30 : Single;
+  public var m01 : Single;
+  public var m11 : Single;
+  public var m21 : Single;
+  public var m31 : Single;
+  public var m02 : Single;
+  public var m12 : Single;
+  public var m22 : Single;
+  public var m32 : Single;
+  public var m03 : Single;
+  public var m13 : Single;
+  public var m23 : Single;
+  public var m33 : Single;
   public var inverse(default,never) : Matrix4x4;
   public var transpose(default,never) : Matrix4x4;
   public var isIdentity(default,never) : Bool;
@@ -42,9 +42,9 @@ extern class Matrix4x4 extends dotnet.system.ValueType {
 
   public function MultiplyVector(v:Vector3) : Vector3;
 
-  public static function Ortho(left:Float, right:Float, bottom:Float, top:Float, zNear:Float, zFar:Float) : Matrix4x4;
+  public static function Ortho(left:Single, right:Single, bottom:Single, top:Single, zNear:Single, zFar:Single) : Matrix4x4;
 
-  public static function Perspective(fov:Float, aspect:Float, zNear:Float, zFar:Float) : Matrix4x4;
+  public static function Perspective(fov:Single, aspect:Single, zNear:Single, zFar:Single) : Matrix4x4;
 
   public static function Scale(v:Vector3) : Matrix4x4;
 

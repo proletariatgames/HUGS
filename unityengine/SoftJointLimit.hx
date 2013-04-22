@@ -2,10 +2,10 @@ package unityengine;
 
 @:native("UnityEngine.SoftJointLimit") @:final
 extern class SoftJointLimit extends dotnet.system.ValueType {
-  public var limit : Float;
-  public var spring : Float;
-  public var damper : Float;
-  public var bounciness : Float;
-  public var bouncyness : Float;
+  public var limit : Single;
+  public var spring : Single;
+  public var damper : Single;
+  public var bounciness : Single;
+  public var bouncyness : Single;
 }
 

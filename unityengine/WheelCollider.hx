@@ -3,17 +3,17 @@ package unityengine;
 @:native("UnityEngine.WheelCollider") @:final
 extern class WheelCollider extends Collider {
   public var center : Vector3;
-  public var radius : Float;
-  public var suspensionDistance : Float;
+  public var radius : Single;
+  public var suspensionDistance : Single;
   public var suspensionSpring : JointSpring;
-  public var mass : Float;
+  public var mass : Single;
   public var forwardFriction : WheelFrictionCurve;
   public var sidewaysFriction : WheelFrictionCurve;
-  public var motorTorque : Float;
-  public var brakeTorque : Float;
-  public var steerAngle : Float;
+  public var motorTorque : Single;
+  public var brakeTorque : Single;
+  public var steerAngle : Single;
   public var isGrounded(default,never) : Bool;
-  public var rpm(default,never) : Float;
+  public var rpm(default,never) : Single;
 
   public function new() : Void;
 

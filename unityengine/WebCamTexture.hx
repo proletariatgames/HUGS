@@ -4,7 +4,7 @@ package unityengine;
 extern class WebCamTexture extends Texture {
   public var isPlaying(default,never) : Bool;
   public var deviceName : String;
-  public var requestedFPS : Float;
+  public var requestedFPS : Single;
   public var requestedWidth : Int;
   public var requestedHeight : Int;
   public static var devices(default,never) : cs.NativeArray<WebCamDevice>;

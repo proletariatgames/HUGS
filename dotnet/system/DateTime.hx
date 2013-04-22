@@ -114,7 +114,7 @@ extern class DateTime extends ValueType  implements IComparable implements IConv
 
   public function ToShortTimeString() : String;
 
-  function ToSingle(provider:IFormatProvider) : Float;
+  function ToSingle(provider:IFormatProvider) : Single;
 
   @:overload(function() : String {})
   @:overload(function(provider:IFormatProvider) : String {})

@@ -8,6 +8,6 @@ extern class Gyroscope extends dotnet.system.Object {
   public var userAcceleration(default,never) : Vector3;
   public var attitude(default,never) : Quaternion;
   public var enabled : Bool;
-  public var updateInterval : Float;
+  public var updateInterval : Single;
 }
 

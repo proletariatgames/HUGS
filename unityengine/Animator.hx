@@ -3,39 +3,39 @@ package unityengine;
 @:native("UnityEngine.Animator") @:final
 extern class Animator extends Behaviour {
   public var isHuman(default,never) : Bool;
-  public var humanScale(default,never) : Float;
+  public var humanScale(default,never) : Single;
   public var deltaPosition(default,never) : Vector3;
   public var deltaRotation(default,never) : Quaternion;
   public var rootPosition : Vector3;
   public var rootRotation : Quaternion;
   public var applyRootMotion : Bool;
   public var animatePhysics : Bool;
-  public var gravityWeight(default,never) : Float;
+  public var gravityWeight(default,never) : Single;
   public var bodyPosition : Vector3;
   public var bodyRotation : Quaternion;
   public var stabilizeFeet : Bool;
   public var layerCount(default,never) : Int;
-  public var feetPivotActive : Float;
-  public var pivotWeight(default,never) : Float;
+  public var feetPivotActive : Single;
+  public var pivotWeight(default,never) : Single;
   public var pivotPosition(default,never) : Vector3;
   public var isMatchingTarget(default,never) : Bool;
-  public var speed : Float;
+  public var speed : Single;
   public var targetPosition(default,never) : Vector3;
   public var targetRotation(default,never) : Quaternion;
   public var cullingMode : AnimatorCullingMode;
-  public var playbackTime : Float;
-  public var recorderStartTime : Float;
-  public var recorderStopTime : Float;
+  public var playbackTime : Single;
+  public var recorderStartTime : Single;
+  public var recorderStopTime : Single;
   public var runtimeAnimatorController : RuntimeAnimatorController;
   public var avatar : Avatar;
   public var layersAffectMassCenter : Bool;
-  public var leftFeetBottomHeight(default,never) : Float;
-  public var rightFeetBottomHeight(default,never) : Float;
+  public var leftFeetBottomHeight(default,never) : Single;
+  public var rightFeetBottomHeight(default,never) : Single;
   public var logWarnings : Bool;
 
   public function new() : Void;
 
-  public function ForceStateNormalizedTime(normalizedTime:Float) : Void;
+  public function ForceStateNormalizedTime(normalizedTime:Single) : Void;
 
   public function GetAnimatorTransitionInfo(layerIndex:Int) : AnimatorTransitionInfo;
 
@@ -48,23 +48,23 @@ extern class Animator extends Behaviour {
 
   public function GetCurrentAnimatorStateInfo(layerIndex:Int) : AnimatorStateInfo;
 
-  @:overload(function(name:String) : Float {})
-  public function GetFloat(id:Int) : Float;
+  @:overload(function(name:String) : Single {})
+  public function GetFloat(id:Int) : Single;
 
   public function GetIKPosition(goal:AvatarIKGoal) : Vector3;
 
-  public function GetIKPositionWeight(goal:AvatarIKGoal) : Float;
+  public function GetIKPositionWeight(goal:AvatarIKGoal) : Single;
 
   public function GetIKRotation(goal:AvatarIKGoal) : Quaternion;
 
-  public function GetIKRotationWeight(goal:AvatarIKGoal) : Float;
+  public function GetIKRotationWeight(goal:AvatarIKGoal) : Single;
 
   @:overload(function(name:String) : Int {})
   public function GetInteger(id:Int) : Int;
 
   public function GetLayerName(layerIndex:Int) : String;
 
-  public function GetLayerWeight(layerIndex:Int) : Float;
+  public function GetLayerWeight(layerIndex:Int) : Single;
 
   public function GetNextAnimationClipState(layerIndex:Int) : cs.NativeArray<AnimationInfo>;
 
@@ -86,42 +86,42 @@ extern class Animator extends Behaviour {
   @:overload(function(name:String) : Bool {})
   public function IsParameterControlledByCurve(id:Int) : Bool;
 
-  @:overload(function(matchPosition:Vector3, matchRotation:Quaternion, targetBodyPart:AvatarTarget, weightMask:MatchTargetWeightMask, startNormalizedTime:Float, targetNormalizedTime:Float) : Void {})
-  public function MatchTarget(matchPosition:Vector3, matchRotation:Quaternion, targetBodyPart:AvatarTarget, weightMask:MatchTargetWeightMask, startNormalizedTime:Float) : Void;
+  @:overload(function(matchPosition:Vector3, matchRotation:Quaternion, targetBodyPart:AvatarTarget, weightMask:MatchTargetWeightMask, startNormalizedTime:Single, targetNormalizedTime:Single) : Void {})
+  public function MatchTarget(matchPosition:Vector3, matchRotation:Quaternion, targetBodyPart:AvatarTarget, weightMask:MatchTargetWeightMask, startNormalizedTime:Single) : Void;
 
   @:overload(function(name:String, value:Bool) : Void {})
   public function SetBool(id:Int, value:Bool) : Void;
 
-  @:overload(function(name:String, value:Float) : Void {})
-  @:overload(function(name:String, value:Float, dampTime:Float, deltaTime:Float) : Void {})
-  @:overload(function(id:Int, value:Float) : Void {})
-  public function SetFloat(id:Int, value:Float, dampTime:Float, deltaTime:Float) : Void;
+  @:overload(function(name:String, value:Single) : Void {})
+  @:overload(function(name:String, value:Single, dampTime:Single, deltaTime:Single) : Void {})
+  @:overload(function(id:Int, value:Single) : Void {})
+  public function SetFloat(id:Int, value:Single, dampTime:Single, deltaTime:Single) : Void;
 
   public function SetIKPosition(goal:AvatarIKGoal, goalPosition:Vector3) : Void;
 
-  public function SetIKPositionWeight(goal:AvatarIKGoal, value:Float) : Void;
+  public function SetIKPositionWeight(goal:AvatarIKGoal, value:Single) : Void;
 
   public function SetIKRotation(goal:AvatarIKGoal, goalRotation:Quaternion) : Void;
 
-  public function SetIKRotationWeight(goal:AvatarIKGoal, value:Float) : Void;
+  public function SetIKRotationWeight(goal:AvatarIKGoal, value:Single) : Void;
 
   @:overload(function(name:String, value:Int) : Void {})
   public function SetInteger(id:Int, value:Int) : Void;
 
-  public function SetLayerWeight(layerIndex:Int, weight:Float) : Void;
+  public function SetLayerWeight(layerIndex:Int, weight:Single) : Void;
 
   public function SetLookAtPosition(lookAtPosition:Vector3) : Void;
 
-  @:overload(function(weight:Float, bodyWeight:Float, headWeight:Float, eyesWeight:Float, clampWeight:Float) : Void {})
-  @:overload(function(weight:Float, bodyWeight:Float, headWeight:Float, eyesWeight:Float) : Void {})
-  @:overload(function(weight:Float, bodyWeight:Float, headWeight:Float) : Void {})
-  @:overload(function(weight:Float, bodyWeight:Float) : Void {})
-  public function SetLookAtWeight(weight:Float) : Void;
+  @:overload(function(weight:Single, bodyWeight:Single, headWeight:Single, eyesWeight:Single, clampWeight:Single) : Void {})
+  @:overload(function(weight:Single, bodyWeight:Single, headWeight:Single, eyesWeight:Single) : Void {})
+  @:overload(function(weight:Single, bodyWeight:Single, headWeight:Single) : Void {})
+  @:overload(function(weight:Single, bodyWeight:Single) : Void {})
+  public function SetLookAtWeight(weight:Single) : Void;
 
   @:overload(function(name:String, value:Quaternion) : Void {})
   public function SetQuaternion(id:Int, value:Quaternion) : Void;
 
-  public function SetTarget(targetIndex:AvatarTarget, targetNormalizedTime:Float) : Void;
+  public function SetTarget(targetIndex:AvatarTarget, targetNormalizedTime:Single) : Void;
 
   @:overload(function(name:String, value:Vector3) : Void {})
   public function SetVector(id:Int, value:Vector3) : Void;

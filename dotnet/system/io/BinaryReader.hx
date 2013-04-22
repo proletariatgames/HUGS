@@ -40,7 +40,7 @@ extern class BinaryReader extends dotnet.system.Object  implements dotnet.system
 
   public function ReadSByte() : Int;
 
-  public function ReadSingle() : Float;
+  public function ReadSingle() : Single;
 
   public function ReadString() : String;
 

@@ -11,7 +11,7 @@ extern class NavMesh extends Object {
 
   public static function FindClosestEdge(sourcePosition:Vector3, hit:NavMeshHit, passableMask:Int) : Bool;
 
-  public static function GetLayerCost(layer:Int) : Float;
+  public static function GetLayerCost(layer:Int) : Single;
 
   public static function GetNavMeshLayerFromName(layerName:String) : Int;
 
@@ -19,9 +19,9 @@ extern class NavMesh extends Object {
 
   public static function RestoreNavMesh() : Void;
 
-  public static function SamplePosition(sourcePosition:Vector3, hit:NavMeshHit, maxDistance:Float, allowedMask:Int) : Bool;
+  public static function SamplePosition(sourcePosition:Vector3, hit:NavMeshHit, maxDistance:Single, allowedMask:Int) : Bool;
 
-  public static function SetLayerCost(layer:Int, cost:Float) : Void;
+  public static function SetLayerCost(layer:Int, cost:Single) : Void;
 
   public static function Triangulate(vertices:Vector3, indices:Int) : Void;
 }

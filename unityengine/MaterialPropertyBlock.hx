@@ -6,8 +6,8 @@ extern class MaterialPropertyBlock extends dotnet.system.Object {
   @:overload(function(name:String, value:Color) : Void {})
   public function AddColor(nameID:Int, value:Color) : Void;
 
-  @:overload(function(name:String, value:Float) : Void {})
-  public function AddFloat(nameID:Int, value:Float) : Void;
+  @:overload(function(name:String, value:Single) : Void {})
+  public function AddFloat(nameID:Int, value:Single) : Void;
 
   @:overload(function(name:String, value:Matrix4x4) : Void {})
   public function AddMatrix(nameID:Int, value:Matrix4x4) : Void;

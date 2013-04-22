@@ -25,7 +25,7 @@ extern interface IConvertible {
 
   function ToSByte(provider:IFormatProvider) : Int;
 
-  function ToSingle(provider:IFormatProvider) : Float;
+  function ToSingle(provider:IFormatProvider) : Single;
 
   function ToString(provider:IFormatProvider) : String;
 

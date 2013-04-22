@@ -2,8 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.JointMotor") @:final
 extern class JointMotor extends dotnet.system.ValueType {
-  public var targetVelocity : Float;
-  public var force : Float;
+  public var targetVelocity : Single;
+  public var force : Single;
   public var freeSpin : Bool;
 }
 

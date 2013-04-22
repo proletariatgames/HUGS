@@ -7,10 +7,10 @@ extern class QualitySettings extends Object {
   public static var pixelLightCount : Int;
   public static var shadowProjection : ShadowProjection;
   public static var shadowCascades : Int;
-  public static var shadowDistance : Float;
+  public static var shadowDistance : Single;
   public static var masterTextureLimit : Int;
   public static var anisotropicFiltering : AnisotropicFiltering;
-  public static var lodBias : Float;
+  public static var lodBias : Single;
   public static var maximumLODLevel : Int;
   public static var particleRaycastBudget : Int;
   public static var softVegetation : Bool;

@@ -90,7 +90,7 @@ extern class XmlReader extends dotnet.system.Object  implements dotnet.system.ID
 
   public function ReadContentAsDouble() : Float;
 
-  public function ReadContentAsFloat() : Float;
+  public function ReadContentAsFloat() : Single;
 
   public function ReadContentAsInt() : Int;
 
@@ -119,8 +119,8 @@ extern class XmlReader extends dotnet.system.Object  implements dotnet.system.ID
   @:overload(function() : Float {})
   public function ReadElementContentAsDouble(localName:String, namespaceURI:String) : Float;
 
-  @:overload(function() : Float {})
-  public function ReadElementContentAsFloat(localName:String, namespaceURI:String) : Float;
+  @:overload(function() : Single {})
+  public function ReadElementContentAsFloat(localName:String, namespaceURI:String) : Single;
 
   @:overload(function() : Int {})
   public function ReadElementContentAsInt(localName:String, namespaceURI:String) : Int;

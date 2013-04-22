@@ -47,7 +47,7 @@ extern class XmlConvert_Static {
 
   public static function ToSByte(s:String) : Int;
 
-  public static function ToSingle(s:String) : Float;
+  public static function ToSingle(s:String) : Single;
 
   @:overload(function(value:dotnet.system.Guid) : String {})
   @:overload(function(value:Int) : String {})
@@ -59,6 +59,7 @@ extern class XmlConvert_Static {
   @:overload(function(value:dotnet.system.UInt64) : String {})
   @:overload(function(value:dotnet.system.TimeSpan) : String {})
   @:overload(function(value:Float) : String {})
+  @:overload(function(value:Single) : String {})
   @:overload(function(value:dotnet.system.DateTime) : String {})
   @:overload(function(value:dotnet.system.DateTime, mode:XmlDateTimeSerializationMode) : String {})
   @:overload(function(value:dotnet.system.DateTime, format:String) : String {})

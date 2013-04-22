@@ -28,7 +28,7 @@ extern class FormatterConverter extends dotnet.system.Object  implements IFormat
 
   public function ToSByte(value:Dynamic) : Int;
 
-  public function ToSingle(value:Dynamic) : Float;
+  public function ToSingle(value:Dynamic) : Single;
 
   @:overload(function(value:Dynamic) : String {})
   public override function ToString() : String;

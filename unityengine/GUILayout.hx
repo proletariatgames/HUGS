@@ -62,13 +62,13 @@ extern class GUILayout extends dotnet.system.Object {
 
   public static function FlexibleSpace() : Void;
 
-  public static function Height(height:Float) : GUILayoutOption;
+  public static function Height(height:Single) : GUILayoutOption;
 
-  @:overload(function(value:Float, size:Float, leftValue:Float, rightValue:Float, options:cs.NativeArray<GUILayoutOption>) : Float {})
-  public static function HorizontalScrollbar(value:Float, size:Float, leftValue:Float, rightValue:Float, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Float;
+  @:overload(function(value:Single, size:Single, leftValue:Single, rightValue:Single, options:cs.NativeArray<GUILayoutOption>) : Single {})
+  public static function HorizontalScrollbar(value:Single, size:Single, leftValue:Single, rightValue:Single, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Single;
 
-  @:overload(function(value:Float, leftValue:Float, rightValue:Float, options:cs.NativeArray<GUILayoutOption>) : Float {})
-  public static function HorizontalSlider(value:Float, leftValue:Float, rightValue:Float, slider:GUIStyle, thumb:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Float;
+  @:overload(function(value:Single, leftValue:Single, rightValue:Single, options:cs.NativeArray<GUILayoutOption>) : Single {})
+  public static function HorizontalSlider(value:Single, leftValue:Single, rightValue:Single, slider:GUIStyle, thumb:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Single;
 
   @:overload(function(image:Texture, options:cs.NativeArray<GUILayoutOption>) : Void {})
   @:overload(function(text:String, options:cs.NativeArray<GUILayoutOption>) : Void {})
@@ -77,13 +77,13 @@ extern class GUILayout extends dotnet.system.Object {
   @:overload(function(text:String, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Void {})
   public static function Label(content:GUIContent, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Void;
 
-  public static function MaxHeight(maxHeight:Float) : GUILayoutOption;
+  public static function MaxHeight(maxHeight:Single) : GUILayoutOption;
 
-  public static function MaxWidth(maxWidth:Float) : GUILayoutOption;
+  public static function MaxWidth(maxWidth:Single) : GUILayoutOption;
 
-  public static function MinHeight(minHeight:Float) : GUILayoutOption;
+  public static function MinHeight(minHeight:Single) : GUILayoutOption;
 
-  public static function MinWidth(minWidth:Float) : GUILayoutOption;
+  public static function MinWidth(minWidth:Single) : GUILayoutOption;
 
   @:overload(function(password:String, maskChar:dotnet.system.Char, options:cs.NativeArray<GUILayoutOption>) : String {})
   @:overload(function(password:String, maskChar:dotnet.system.Char, maxLength:Int, options:cs.NativeArray<GUILayoutOption>) : String {})
@@ -104,7 +104,7 @@ extern class GUILayout extends dotnet.system.Object {
   @:overload(function(selected:Int, images:cs.NativeArray<Texture>, xCount:Int, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Int {})
   public static function SelectionGrid(selected:Int, contents:cs.NativeArray<GUIContent>, xCount:Int, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Int;
 
-  public static function Space(pixels:Float) : Void;
+  public static function Space(pixels:Single) : Void;
 
   @:overload(function(text:String, options:cs.NativeArray<GUILayoutOption>) : String {})
   @:overload(function(text:String, maxLength:Int, options:cs.NativeArray<GUILayoutOption>) : String {})
@@ -130,13 +130,13 @@ extern class GUILayout extends dotnet.system.Object {
   @:overload(function(selected:Int, images:cs.NativeArray<Texture>, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Int {})
   public static function Toolbar(selected:Int, contents:cs.NativeArray<GUIContent>, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Int;
 
-  @:overload(function(value:Float, size:Float, topValue:Float, bottomValue:Float, options:cs.NativeArray<GUILayoutOption>) : Float {})
-  public static function VerticalScrollbar(value:Float, size:Float, topValue:Float, bottomValue:Float, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Float;
+  @:overload(function(value:Single, size:Single, topValue:Single, bottomValue:Single, options:cs.NativeArray<GUILayoutOption>) : Single {})
+  public static function VerticalScrollbar(value:Single, size:Single, topValue:Single, bottomValue:Single, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Single;
 
-  @:overload(function(value:Float, leftValue:Float, rightValue:Float, options:cs.NativeArray<GUILayoutOption>) : Float {})
-  public static function VerticalSlider(value:Float, leftValue:Float, rightValue:Float, slider:GUIStyle, thumb:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Float;
+  @:overload(function(value:Single, leftValue:Single, rightValue:Single, options:cs.NativeArray<GUILayoutOption>) : Single {})
+  public static function VerticalSlider(value:Single, leftValue:Single, rightValue:Single, slider:GUIStyle, thumb:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Single;
 
-  public static function Width(width:Float) : GUILayoutOption;
+  public static function Width(width:Single) : GUILayoutOption;
 
   @:overload(function(id:Int, screenRect:Rect, func:GUI_WindowFunction, text:String, options:cs.NativeArray<GUILayoutOption>) : Rect {})
   @:overload(function(id:Int, screenRect:Rect, func:GUI_WindowFunction, image:Texture, options:cs.NativeArray<GUILayoutOption>) : Rect {})

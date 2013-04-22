@@ -9,7 +9,7 @@ extern class Event extends dotnet.system.Object {
   public var mouseRay : Ray;
   public var button : Int;
   public var modifiers : EventModifiers;
-  public var pressure : Float;
+  public var pressure : Single;
   public var clickCount : Int;
   public var character : dotnet.system.Char;
   public var commandName : String;

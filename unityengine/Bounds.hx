@@ -18,20 +18,20 @@ extern class Bounds extends dotnet.system.ValueType {
   @:overload(function(other:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
-  @:overload(function(amount:Float) : Void {})
+  @:overload(function(amount:Single) : Void {})
   public function Expand(amount:Vector3) : Void;
 
   @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
   @:overload(function(ray:Ray) : Bool {})
-  public function IntersectRay(ray:Ray, distance:Float) : Bool;
+  public function IntersectRay(ray:Ray, distance:Single) : Bool;
 
   public function Intersects(bounds:Bounds) : Bool;
 
   public function SetMinMax(min:Vector3, max:Vector3) : Void;
 
-  public function SqrDistance(point:Vector3) : Float;
+  public function SqrDistance(point:Vector3) : Single;
 
   @:overload(function() : String {})
   @:overload(function(format:String) : String {})

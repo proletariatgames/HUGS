@@ -2,8 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.AnimationClip") @:final
 extern class AnimationClip extends Motion {
-  public var length(default,never) : Float;
-  public var frameRate(default,never) : Float;
+  public var length(default,never) : Single;
+  public var frameRate(default,never) : Single;
   public var wrapMode : WrapMode;
   public var localBounds : Bounds;
 

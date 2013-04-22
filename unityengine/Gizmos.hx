@@ -9,7 +9,7 @@ extern class Gizmos extends dotnet.system.Object {
 
   public static function DrawCube(center:Vector3, size:Vector3) : Void;
 
-  public static function DrawFrustum(center:Vector3, fov:Float, maxRange:Float, minRange:Float, aspect:Float) : Void;
+  public static function DrawFrustum(center:Vector3, fov:Single, maxRange:Single, minRange:Single, aspect:Single) : Void;
 
   @:overload(function(screenRect:Rect, texture:Texture) : Void {})
   @:overload(function(screenRect:Rect, texture:Texture, mat:Material) : Void {})
@@ -24,10 +24,10 @@ extern class Gizmos extends dotnet.system.Object {
   @:overload(function(r:Ray) : Void {})
   public static function DrawRay(from:Vector3, direction:Vector3) : Void;
 
-  public static function DrawSphere(center:Vector3, radius:Float) : Void;
+  public static function DrawSphere(center:Vector3, radius:Single) : Void;
 
   public static function DrawWireCube(center:Vector3, size:Vector3) : Void;
 
-  public static function DrawWireSphere(center:Vector3, radius:Float) : Void;
+  public static function DrawWireSphere(center:Vector3, radius:Single) : Void;
 }
 

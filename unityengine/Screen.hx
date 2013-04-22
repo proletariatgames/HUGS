@@ -9,7 +9,7 @@ extern class Screen extends dotnet.system.Object {
   public static var lockCursor : Bool;
   public static var width(default,never) : Int;
   public static var height(default,never) : Int;
-  public static var dpi(default,never) : Float;
+  public static var dpi(default,never) : Single;
   public static var fullScreen : Bool;
   public static var autorotateToPortrait : Bool;
   public static var autorotateToPortraitUpsideDown : Bool;

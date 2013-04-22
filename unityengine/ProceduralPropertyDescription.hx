@@ -7,9 +7,9 @@ extern class ProceduralPropertyDescription extends dotnet.system.Object {
   public var group : String;
   public var type : ProceduralPropertyType;
   public var hasRange : Bool;
-  public var minimum : Float;
-  public var maximum : Float;
-  public var step : Float;
+  public var minimum : Single;
+  public var maximum : Single;
+  public var step : Single;
   public var enumOptions : cs.NativeArray<String>;
 
   public function new() : Void;

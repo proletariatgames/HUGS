@@ -54,7 +54,7 @@ extern class Double extends ValueType  implements IComparable implements IConver
 
   function ToSByte(provider:IFormatProvider) : Int;
 
-  function ToSingle(provider:IFormatProvider) : Float;
+  function ToSingle(provider:IFormatProvider) : Single;
 
   @:overload(function() : String {})
   @:overload(function(provider:IFormatProvider) : String {})

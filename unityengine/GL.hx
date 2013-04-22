@@ -12,7 +12,7 @@ extern class GL extends dotnet.system.Object {
   public static function Begin(mode:Int) : Void;
 
   @:overload(function(clearDepth:Bool, clearColor:Bool, backgroundColor:Color) : Void {})
-  public static function Clear(clearDepth:Bool, clearColor:Bool, backgroundColor:Color, depth:Float) : Void;
+  public static function Clear(clearDepth:Bool, clearColor:Bool, backgroundColor:Color, depth:Single) : Void;
 
   public static function ClearWithSkybox(clearDepth:Bool, camera:Camera) : Void;
 
@@ -33,15 +33,15 @@ extern class GL extends dotnet.system.Object {
   public static function LoadOrtho() : Void;
 
   @:overload(function() : Void {})
-  public static function LoadPixelMatrix(left:Float, right:Float, bottom:Float, top:Float) : Void;
+  public static function LoadPixelMatrix(left:Single, right:Single, bottom:Single, top:Single) : Void;
 
   public static function LoadProjectionMatrix(mat:Matrix4x4) : Void;
 
   public static function MultiTexCoord(unit:Int, v:Vector3) : Void;
 
-  public static function MultiTexCoord2(unit:Int, x:Float, y:Float) : Void;
+  public static function MultiTexCoord2(unit:Int, x:Single, y:Single) : Void;
 
-  public static function MultiTexCoord3(unit:Int, x:Float, y:Float, z:Float) : Void;
+  public static function MultiTexCoord3(unit:Int, x:Single, y:Single, z:Single) : Void;
 
   public static function MultMatrix(mat:Matrix4x4) : Void;
 
@@ -53,13 +53,13 @@ extern class GL extends dotnet.system.Object {
 
   public static function TexCoord(v:Vector3) : Void;
 
-  public static function TexCoord2(x:Float, y:Float) : Void;
+  public static function TexCoord2(x:Single, y:Single) : Void;
 
-  public static function TexCoord3(x:Float, y:Float, z:Float) : Void;
+  public static function TexCoord3(x:Single, y:Single, z:Single) : Void;
 
   public static function Vertex(v:Vector3) : Void;
 
-  public static function Vertex3(x:Float, y:Float, z:Float) : Void;
+  public static function Vertex3(x:Single, y:Single, z:Single) : Void;
 
   public static function Viewport(pixelRect:Rect) : Void;
 }

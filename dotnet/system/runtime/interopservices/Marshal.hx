@@ -21,7 +21,7 @@ extern class Marshal extends dotnet.system.Object {
   @:overload(function(source:cs.NativeArray<dotnet.system.Int16>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
   @:overload(function(source:cs.NativeArray<Int>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
   @:overload(function(source:cs.NativeArray<dotnet.system.Int64>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
-  @:overload(function(source:cs.NativeArray<dotnet.system.Single>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
+  @:overload(function(source:cs.NativeArray<Single>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
   @:overload(function(source:cs.NativeArray<Float>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
   @:overload(function(source:cs.NativeArray<dotnet.system.IntPtr>, startIndex:Int, destination:dotnet.system.IntPtr, length:Int) : Void {})
   @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.Byte>, startIndex:Int, length:Int) : Void {})
@@ -29,7 +29,7 @@ extern class Marshal extends dotnet.system.Object {
   @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.Int16>, startIndex:Int, length:Int) : Void {})
   @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<Int>, startIndex:Int, length:Int) : Void {})
   @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.Int64>, startIndex:Int, length:Int) : Void {})
-  @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.Single>, startIndex:Int, length:Int) : Void {})
+  @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<Single>, startIndex:Int, length:Int) : Void {})
   @:overload(function(source:dotnet.system.IntPtr, destination:cs.NativeArray<Float>, startIndex:Int, length:Int) : Void {})
   public static function Copy(source:dotnet.system.IntPtr, destination:cs.NativeArray<dotnet.system.IntPtr>, startIndex:Int, length:Int) : Void;
 

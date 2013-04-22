@@ -13,8 +13,8 @@ extern class WWW extends dotnet.system.Object {
   public var audioClip(default,never) : AudioClip;
   public var movie(default,never) : MovieTexture;
   public var isDone(default,never) : Bool;
-  public var progress(default,never) : Float;
-  public var uploadProgress(default,never) : Float;
+  public var progress(default,never) : Single;
+  public var uploadProgress(default,never) : Single;
   public var oggVorbis(default,never) : AudioClip;
   public var url(default,never) : String;
   public var assetBundle(default,never) : AssetBundle;

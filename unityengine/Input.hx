@@ -28,9 +28,9 @@ extern class Input extends dotnet.system.Object {
 
   public static function GetAccelerationEvent(index:Int) : AccelerationEvent;
 
-  public static function GetAxis(axisName:String) : Float;
+  public static function GetAxis(axisName:String) : Single;
 
-  public static function GetAxisRaw(axisName:String) : Float;
+  public static function GetAxisRaw(axisName:String) : Single;
 
   public static function GetButton(buttonName:String) : Bool;
 

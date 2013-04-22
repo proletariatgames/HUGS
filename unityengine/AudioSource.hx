@@ -2,9 +2,9 @@ package unityengine;
 
 @:native("UnityEngine.AudioSource") @:final
 extern class AudioSource extends Behaviour {
-  public var volume : Float;
-  public var pitch : Float;
-  public var time : Float;
+  public var volume : Single;
+  public var pitch : Single;
+  public var time : Single;
   public var timeSamples : Int;
   public var clip : AudioClip;
   public var isPlaying(default,never) : Bool;
@@ -13,27 +13,27 @@ extern class AudioSource extends Behaviour {
   public var playOnAwake : Bool;
   public var ignoreListenerPause : Bool;
   public var velocityUpdateMode : AudioVelocityUpdateMode;
-  public var panLevel : Float;
+  public var panLevel : Single;
   public var bypassEffects : Bool;
-  public var dopplerLevel : Float;
-  public var spread : Float;
+  public var dopplerLevel : Single;
+  public var spread : Single;
   public var priority : Int;
   public var mute : Bool;
-  public var minDistance : Float;
-  public var maxDistance : Float;
-  public var pan : Float;
+  public var minDistance : Single;
+  public var maxDistance : Single;
+  public var pan : Single;
   public var rolloffMode : AudioRolloffMode;
-  public var minVolume : Float;
-  public var maxVolume : Float;
-  public var rolloffFactor : Float;
+  public var minVolume : Single;
+  public var maxVolume : Single;
+  public var rolloffFactor : Single;
 
   public function new() : Void;
 
-  @:overload(function(numSamples:Int, channel:Int) : cs.NativeArray<dotnet.system.Single> {})
-  public function GetOutputData(samples:cs.NativeArray<dotnet.system.Single>, channel:Int) : Void;
+  @:overload(function(numSamples:Int, channel:Int) : cs.NativeArray<Single> {})
+  public function GetOutputData(samples:cs.NativeArray<Single>, channel:Int) : Void;
 
-  @:overload(function(numSamples:Int, channel:Int, window:FFTWindow) : cs.NativeArray<dotnet.system.Single> {})
-  public function GetSpectrumData(samples:cs.NativeArray<dotnet.system.Single>, channel:Int, window:FFTWindow) : Void;
+  @:overload(function(numSamples:Int, channel:Int, window:FFTWindow) : cs.NativeArray<Single> {})
+  public function GetSpectrumData(samples:cs.NativeArray<Single>, channel:Int, window:FFTWindow) : Void;
 
   public function Pause() : Void;
 
@@ -41,11 +41,11 @@ extern class AudioSource extends Behaviour {
   public function Play() : Void;
 
   @:overload(function(clip:AudioClip, position:Vector3) : Void {})
-  public static function PlayClipAtPoint(clip:AudioClip, position:Vector3, volume:Float) : Void;
+  public static function PlayClipAtPoint(clip:AudioClip, position:Vector3, volume:Single) : Void;
 
-  public function PlayDelayed(delay:Float) : Void;
+  public function PlayDelayed(delay:Single) : Void;
 
-  @:overload(function(clip:AudioClip, volumeScale:Float) : Void {})
+  @:overload(function(clip:AudioClip, volumeScale:Single) : Void {})
   public function PlayOneShot(clip:AudioClip) : Void;
 
   public function PlayScheduled(time:Float) : Void;

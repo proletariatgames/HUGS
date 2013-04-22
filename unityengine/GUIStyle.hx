@@ -21,21 +21,21 @@ extern class GUIStyle extends dotnet.system.Object {
   public var clipping : TextClipping;
   public var contentOffset : Vector2;
   public var clipOffset : Vector2;
-  public var fixedWidth : Float;
-  public var fixedHeight : Float;
+  public var fixedWidth : Single;
+  public var fixedHeight : Single;
   public var stretchWidth : Bool;
   public var stretchHeight : Bool;
   public var font : Font;
   public var fontSize : Int;
   public var fontStyle : FontStyle;
   public var richText : Bool;
-  public var lineHeight(default,never) : Float;
+  public var lineHeight(default,never) : Single;
   public static var none(default,never) : GUIStyle;
   public var isHeightDependantOnWidth(default,never) : Bool;
 
-  public function CalcHeight(content:GUIContent, width:Float) : Float;
+  public function CalcHeight(content:GUIContent, width:Single) : Single;
 
-  public function CalcMinMaxWidth(content:GUIContent, minWidth:Float, maxWidth:Float) : Void;
+  public function CalcMinMaxWidth(content:GUIContent, minWidth:Single, maxWidth:Single) : Void;
 
   public function CalcScreenSize(contentSize:Vector2) : Vector2;
 

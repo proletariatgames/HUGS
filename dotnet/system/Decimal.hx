@@ -16,6 +16,7 @@ extern class Decimal extends ValueType  implements IComparable implements IConve
   @:overload(function(value:UInt) : Void {})
   @:overload(function(value:Int64) : Void {})
   @:overload(function(value:UInt64) : Void {})
+  @:overload(function(value:Single) : Void {})
   @:overload(function(value:Float) : Void {})
   public function new(bits:cs.NativeArray<Int>) : Void;
 
@@ -49,7 +50,7 @@ extern class Decimal extends ValueType  implements IComparable implements IConve
 
   function ToSByte(provider:IFormatProvider) : Int;
 
-  function ToSingle(provider:IFormatProvider) : Float;
+  function ToSingle(provider:IFormatProvider) : Single;
 
   @:overload(function(format:String, provider:IFormatProvider) : String {})
   @:overload(function() : String {})
@@ -118,7 +119,7 @@ extern class Decimal_Static {
 
   public static function ToSByte(value:Decimal) : Int;
 
-  public static function ToSingle(d:Decimal) : Float;
+  public static function ToSingle(d:Decimal) : Single;
 
   public static function ToUInt16(value:Decimal) : UInt;
 

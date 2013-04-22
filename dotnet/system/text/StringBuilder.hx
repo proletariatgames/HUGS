@@ -15,6 +15,7 @@ extern class StringBuilder extends dotnet.system.Object  implements dotnet.syste
   @:overload(function(value:Int) : StringBuilder {})
   @:overload(function(value:dotnet.system.Int64) : StringBuilder {})
   @:overload(function(value:Dynamic) : StringBuilder {})
+  @:overload(function(value:Single) : StringBuilder {})
   @:overload(function(value:dotnet.system.UInt64) : StringBuilder {})
   @:overload(function(value:dotnet.system.Char) : StringBuilder {})
   @:overload(function(value:dotnet.system.Char, repeatCount:Int) : StringBuilder {})
@@ -56,6 +57,7 @@ extern class StringBuilder extends dotnet.system.Object  implements dotnet.syste
   @:overload(function(index:Int, value:Int) : StringBuilder {})
   @:overload(function(index:Int, value:dotnet.system.Int64) : StringBuilder {})
   @:overload(function(index:Int, value:Dynamic) : StringBuilder {})
+  @:overload(function(index:Int, value:Single) : StringBuilder {})
   @:overload(function(index:Int, value:dotnet.system.UInt64) : StringBuilder {})
   @:overload(function(index:Int, value:String, count:Int) : StringBuilder {})
   public function Insert(index:Int, value:cs.NativeArray<dotnet.system.Char>, startIndex:Int, charCount:Int) : StringBuilder;

@@ -12,6 +12,6 @@ extern class LineRenderer extends Renderer {
 
   public function SetVertexCount(count:Int) : Void;
 
-  public function SetWidth(start:Float, end:Float) : Void;
+  public function SetWidth(start:Single, end:Single) : Void;
 }
 

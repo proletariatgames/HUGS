@@ -2,18 +2,18 @@ package dotnet.system;
 
 @:native("System.Single") @:final
 extern class Single extends ValueType  implements IComparable implements IConvertible implements IFormattable {
-  public static var Epsilon : Float;
-  public static var MaxValue : Float;
-  public static var MinValue : Float;
-  public static var NaN : Float;
-  public static var PositiveInfinity : Float;
-  public static var NegativeInfinity : Float;
+  public static var Epsilon : Single;
+  public static var MaxValue : Single;
+  public static var MinValue : Single;
+  public static var NaN : Single;
+  public static var PositiveInfinity : Single;
+  public static var NegativeInfinity : Single;
 
   @:overload(function(value:Dynamic) : Int {})
-  public function CompareTo(value:Float) : Int;
+  public function CompareTo(value:Single) : Int;
 
   @:overload(function(obj:Dynamic) : Bool {})
-  @:overload(function(obj:Float) : Bool {})
+  @:overload(function(obj:Single) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
   @:overload(function() : Int {})
@@ -21,18 +21,18 @@ extern class Single extends ValueType  implements IComparable implements IConver
 
   public function GetTypeCode() : TypeCode;
 
-  public static function IsInfinity(f:Float) : Bool;
+  public static function IsInfinity(f:Single) : Bool;
 
-  public static function IsNaN(f:Float) : Bool;
+  public static function IsNaN(f:Single) : Bool;
 
-  public static function IsNegativeInfinity(f:Float) : Bool;
+  public static function IsNegativeInfinity(f:Single) : Bool;
 
-  public static function IsPositiveInfinity(f:Float) : Bool;
+  public static function IsPositiveInfinity(f:Single) : Bool;
 
-  @:overload(function(s:String) : Float {})
-  @:overload(function(s:String, provider:IFormatProvider) : Float {})
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Float {})
-  public static function Parse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Float;
+  @:overload(function(s:String) : Single {})
+  @:overload(function(s:String, provider:IFormatProvider) : Single {})
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Single {})
+  public static function Parse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Single;
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
@@ -54,7 +54,7 @@ extern class Single extends ValueType  implements IComparable implements IConver
 
   function ToSByte(provider:IFormatProvider) : Int;
 
-  function ToSingle(provider:IFormatProvider) : Float;
+  function ToSingle(provider:IFormatProvider) : Single;
 
   @:overload(function() : String {})
   @:overload(function(provider:IFormatProvider) : String {})
@@ -70,7 +70,7 @@ extern class Single extends ValueType  implements IComparable implements IConver
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Float) : Bool {})
-  public static function TryParse(s:String, result:Float) : Bool;
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Single) : Bool {})
+  public static function TryParse(s:String, result:Single) : Bool;
 }
 

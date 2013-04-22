@@ -26,8 +26,8 @@ extern class ConfigurableJoint extends Joint {
   public var angularYZDrive : JointDrive;
   public var slerpDrive : JointDrive;
   public var projectionMode : JointProjectionMode;
-  public var projectionDistance : Float;
-  public var projectionAngle : Float;
+  public var projectionDistance : Single;
+  public var projectionAngle : Single;
   public var configuredInWorldSpace : Bool;
   public var swapBodies : Bool;
 

@@ -5,7 +5,7 @@ extern class RaycastHit extends dotnet.system.ValueType {
   public var point : Vector3;
   public var normal : Vector3;
   public var barycentricCoordinate : Vector3;
-  public var distance : Float;
+  public var distance : Single;
   public var triangleIndex(default,never) : Int;
   public var textureCoord(default,never) : Vector2;
   public var textureCoord2(default,never) : Vector2;

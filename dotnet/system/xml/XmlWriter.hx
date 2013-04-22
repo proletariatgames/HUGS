@@ -97,6 +97,7 @@ extern class XmlWriter extends dotnet.system.Object  implements dotnet.system.ID
   @:overload(function(value:Int) : Void {})
   @:overload(function(value:dotnet.system.Int64) : Void {})
   @:overload(function(value:Dynamic) : Void {})
+  @:overload(function(value:Single) : Void {})
   public function WriteValue(value:String) : Void;
 
   public function WriteWhitespace(ws:String) : Void;

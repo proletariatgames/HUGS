@@ -17,8 +17,8 @@ extern class iPhoneSettings extends dotnet.system.Object {
 
   public function new() : Void;
 
-  @:overload(function(desiredAccuracyInMeters:Float, updateDistanceInMeters:Float) : Void {})
-  @:overload(function(desiredAccuracyInMeters:Float) : Void {})
+  @:overload(function(desiredAccuracyInMeters:Single, updateDistanceInMeters:Single) : Void {})
+  @:overload(function(desiredAccuracyInMeters:Single) : Void {})
   public static function StartLocationServiceUpdates() : Void;
 
   public static function StopLocationServiceUpdates() : Void;

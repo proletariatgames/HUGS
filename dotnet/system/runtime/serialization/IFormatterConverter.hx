@@ -26,7 +26,7 @@ extern interface IFormatterConverter {
 
   function ToSByte(value:Dynamic) : Int;
 
-  function ToSingle(value:Dynamic) : Float;
+  function ToSingle(value:Dynamic) : Single;
 
   function ToString(value:Dynamic) : String;
 

@@ -9,7 +9,7 @@ extern class Color32 extends dotnet.system.ValueType {
 
   public function new(r:UInt, g:UInt, b:UInt, a:UInt) : Void;
 
-  public static function Lerp(a:Color32, b:Color32, t:Float) : Color32;
+  public static function Lerp(a:Color32, b:Color32, t:Single) : Color32;
 
   @:overload(function() : String {})
   @:overload(function(format:String) : String {})

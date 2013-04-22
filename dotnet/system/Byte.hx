@@ -42,7 +42,7 @@ extern class Byte extends ValueType  implements IComparable implements IConverti
 
   function ToSByte(provider:IFormatProvider) : Int;
 
-  function ToSingle(provider:IFormatProvider) : Float;
+  function ToSingle(provider:IFormatProvider) : Single;
 
   @:overload(function() : String {})
   @:overload(function(format:String) : String {})

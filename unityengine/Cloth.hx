@@ -2,10 +2,10 @@ package unityengine;
 
 @:native("UnityEngine.Cloth")
 extern class Cloth extends Component {
-  public var bendingStiffness : Float;
-  public var stretchingStiffness : Float;
-  public var damping : Float;
-  public var thickness : Float;
+  public var bendingStiffness : Single;
+  public var stretchingStiffness : Single;
+  public var damping : Single;
+  public var thickness : Single;
   public var externalAcceleration : Vector3;
   public var randomAcceleration : Vector3;
   public var useGravity : Bool;

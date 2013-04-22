@@ -25,20 +25,20 @@ extern class Hashtable extends dotnet.system.Object  implements dotnet.system.IC
   public function CopyTo(array:dotnet.system.Array, arrayIndex:Int) : Void;
 
   @:overload(function() : Void {})
-  @:overload(function(capacity:Int, loadFactor:Float, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
-  @:overload(function(capacity:Int, loadFactor:Float) : Void {})
+  @:overload(function(capacity:Int, loadFactor:Single, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
+  @:overload(function(capacity:Int, loadFactor:Single) : Void {})
   @:overload(function(capacity:Int) : Void {})
   @:overload(function(capacity:Int, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
-  @:overload(function(d:IDictionary, loadFactor:Float, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
-  @:overload(function(d:IDictionary, loadFactor:Float) : Void {})
+  @:overload(function(d:IDictionary, loadFactor:Single, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
+  @:overload(function(d:IDictionary, loadFactor:Single) : Void {})
   @:overload(function(d:IDictionary) : Void {})
   @:overload(function(d:IDictionary, hcp:IHashCodeProvider, comparer:IComparer) : Void {})
   @:overload(function(hcp:IHashCodeProvider, comparer:IComparer) : Void {})
   @:overload(function(d:IDictionary, equalityComparer:IEqualityComparer) : Void {})
-  @:overload(function(d:IDictionary, loadFactor:Float, equalityComparer:IEqualityComparer) : Void {})
+  @:overload(function(d:IDictionary, loadFactor:Single, equalityComparer:IEqualityComparer) : Void {})
   @:overload(function(equalityComparer:IEqualityComparer) : Void {})
   @:overload(function(capacity:Int, equalityComparer:IEqualityComparer) : Void {})
-  public function new(capacity:Int, loadFactor:Float, equalityComparer:IEqualityComparer) : Void;
+  public function new(capacity:Int, loadFactor:Single, equalityComparer:IEqualityComparer) : Void;
 
   @:overload(function() : IEnumerator {})
   public function GetEnumerator() : IDictionaryEnumerator;

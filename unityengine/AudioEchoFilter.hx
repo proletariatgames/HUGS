@@ -2,10 +2,10 @@ package unityengine;
 
 @:native("UnityEngine.AudioEchoFilter") @:final
 extern class AudioEchoFilter extends Behaviour {
-  public var delay : Float;
-  public var decayRatio : Float;
-  public var dryMix : Float;
-  public var wetMix : Float;
+  public var delay : Single;
+  public var decayRatio : Single;
+  public var dryMix : Single;
+  public var wetMix : Single;
 
   public function new() : Void;
 }

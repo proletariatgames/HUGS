@@ -9,7 +9,7 @@ extern class Texture extends Object {
   public var filterMode : FilterMode;
   public var anisoLevel : Int;
   public var wrapMode : TextureWrapMode;
-  public var mipMapBias : Float;
+  public var mipMapBias : Single;
   public var texelSize(default,never) : Vector2;
 
   public function new() : Void;

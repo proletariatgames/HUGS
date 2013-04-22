@@ -28,7 +28,7 @@ extern class ProceduralMaterial extends Material {
 
   public function GetProceduralEnum(inputName:String) : Int;
 
-  public function GetProceduralFloat(inputName:String) : Float;
+  public function GetProceduralFloat(inputName:String) : Single;
 
   public function GetProceduralPropertyDescriptions() : cs.NativeArray<ProceduralPropertyDescription>;
 
@@ -50,7 +50,7 @@ extern class ProceduralMaterial extends Material {
 
   public function SetProceduralEnum(inputName:String, value:Int) : Void;
 
-  public function SetProceduralFloat(inputName:String, value:Float) : Void;
+  public function SetProceduralFloat(inputName:String, value:Single) : Void;
 
   public function SetProceduralTexture(inputName:String, value:Texture2D) : Void;
 

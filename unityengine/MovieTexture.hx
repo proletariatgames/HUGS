@@ -6,7 +6,7 @@ extern class MovieTexture extends Texture {
   public var loop : Bool;
   public var isPlaying(default,never) : Bool;
   public var isReadyToPlay(default,never) : Bool;
-  public var duration(default,never) : Float;
+  public var duration(default,never) : Single;
 
   public function new() : Void;
 

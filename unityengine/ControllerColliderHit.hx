@@ -10,7 +10,7 @@ extern class ControllerColliderHit extends dotnet.system.Object {
   public var point(default,never) : Vector3;
   public var normal(default,never) : Vector3;
   public var moveDirection(default,never) : Vector3;
-  public var moveLength(default,never) : Float;
+  public var moveLength(default,never) : Single;
 
   public function new() : Void;
 }

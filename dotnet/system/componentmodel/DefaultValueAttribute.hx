@@ -11,6 +11,7 @@ extern class DefaultValueAttribute extends dotnet.system.Attribute {
   @:overload(function(value:Int) : Void {})
   @:overload(function(value:dotnet.system.Int64) : Void {})
   @:overload(function(value:Dynamic) : Void {})
+  @:overload(function(value:Single) : Void {})
   @:overload(function(value:String) : Void {})
   public function new(type:cs.system.Type, value:String) : Void;
 

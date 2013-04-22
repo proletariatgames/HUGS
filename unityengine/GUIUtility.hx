@@ -23,7 +23,7 @@ extern class GUIUtility extends dotnet.system.Object {
 
   public static function QueryStateObject(t:cs.system.Type, controlID:Int) : Dynamic;
 
-  public static function RotateAroundPivot(angle:Float, pivotPoint:Vector2) : Void;
+  public static function RotateAroundPivot(angle:Single, pivotPoint:Vector2) : Void;
 
   public static function ScaleAroundPivot(scale:Vector2, pivotPoint:Vector2) : Void;
 

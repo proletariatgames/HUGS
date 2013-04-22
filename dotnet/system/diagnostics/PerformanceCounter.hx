@@ -36,7 +36,7 @@ extern class PerformanceCounter extends dotnet.system.componentmodel.Component  
 
   public function NextSample() : CounterSample;
 
-  public function NextValue() : Float;
+  public function NextValue() : Single;
 
   public function RemoveInstance() : Void;
 }

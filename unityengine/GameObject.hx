@@ -68,7 +68,7 @@ extern class GameObject extends Object {
 
   public function PlayAnimation(animation:AnimationClip) : Void;
 
-  public function SampleAnimation(animation:AnimationClip, time:Float) : Void;
+  public function SampleAnimation(animation:AnimationClip, time:Single) : Void;
 
   @:overload(function(methodName:String, value:Dynamic, options:SendMessageOptions) : Void {})
   @:overload(function(methodName:String, value:Dynamic) : Void {})

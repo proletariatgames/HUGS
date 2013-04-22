@@ -14,6 +14,7 @@ extern class SerializationInfo extends dotnet.system.Object {
   @:overload(function(name:String, value:Float) : Void {})
   @:overload(function(name:String, value:dotnet.system.Decimal) : Void {})
   @:overload(function(name:String, value:dotnet.system.DateTime) : Void {})
+  @:overload(function(name:String, value:Single) : Void {})
   @:overload(function(name:String, value:dotnet.system.Int64) : Void {})
   @:overload(function(name:String, value:dotnet.system.UInt64) : Void {})
   public function AddValue(name:String, value:Dynamic) : Void;
@@ -42,7 +43,7 @@ extern class SerializationInfo extends dotnet.system.Object {
 
   public function GetSByte(name:String) : Int;
 
-  public function GetSingle(name:String) : Float;
+  public function GetSingle(name:String) : Single;
 
   public function GetString(name:String) : String;
 

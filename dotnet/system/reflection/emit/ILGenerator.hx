@@ -32,6 +32,7 @@ extern class ILGenerator extends dotnet.system.Object  implements dotnet.system.
   @:overload(function(opcode:OpCode, local:LocalBuilder) : Void {})
   @:overload(function(opcode:OpCode, meth:dotnet.system.reflection.MethodInfo) : Void {})
   @:overload(function(opcode:OpCode, signature:SignatureHelper) : Void {})
+  @:overload(function(opcode:OpCode, arg:Single) : Void {})
   @:overload(function(opcode:OpCode, str:String) : Void {})
   public function Emit(opcode:OpCode, cls:cs.system.Type) : Void;
 

@@ -3,7 +3,7 @@ package unityengine;
 @:native("UnityEngine.LODGroup") @:final
 extern class LODGroup extends Component {
   public var localReferencePoint : Vector3;
-  public var size : Float;
+  public var size : Single;
   public var lodCount(default,never) : Int;
   public var enabled : Bool;
 

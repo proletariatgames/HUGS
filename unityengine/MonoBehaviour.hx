@@ -9,9 +9,9 @@ extern class MonoBehaviour extends Behaviour {
 
   public function new() : Void;
 
-  public function Invoke(methodName:String, time:Float) : Void;
+  public function Invoke(methodName:String, time:Single) : Void;
 
-  public function InvokeRepeating(methodName:String, time:Float, repeatRate:Float) : Void;
+  public function InvokeRepeating(methodName:String, time:Single, repeatRate:Single) : Void;
 
   @:overload(function(methodName:String) : Bool {})
   public function IsInvoking() : Bool;

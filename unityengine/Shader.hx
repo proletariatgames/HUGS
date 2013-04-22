@@ -21,7 +21,7 @@ extern class Shader extends Object {
 
   public static function SetGlobalColor(propertyName:String, color:Color) : Void;
 
-  public static function SetGlobalFloat(propertyName:String, value:Float) : Void;
+  public static function SetGlobalFloat(propertyName:String, value:Single) : Void;
 
   public static function SetGlobalMatrix(propertyName:String, mat:Matrix4x4) : Void;
 

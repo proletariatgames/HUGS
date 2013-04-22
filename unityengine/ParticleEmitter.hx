@@ -3,20 +3,20 @@ package unityengine;
 @:native("UnityEngine.ParticleEmitter") @:final
 extern class ParticleEmitter extends Component {
   public var emit : Bool;
-  public var minSize : Float;
-  public var maxSize : Float;
-  public var minEnergy : Float;
-  public var maxEnergy : Float;
-  public var minEmission : Float;
-  public var maxEmission : Float;
-  public var emitterVelocityScale : Float;
+  public var minSize : Single;
+  public var maxSize : Single;
+  public var minEnergy : Single;
+  public var maxEnergy : Single;
+  public var minEmission : Single;
+  public var maxEmission : Single;
+  public var emitterVelocityScale : Single;
   public var worldVelocity : Vector3;
   public var localVelocity : Vector3;
   public var rndVelocity : Vector3;
   public var useWorldSpace : Bool;
   public var rndRotation : Bool;
-  public var angularVelocity : Float;
-  public var rndAngularVelocity : Float;
+  public var angularVelocity : Single;
+  public var rndAngularVelocity : Single;
   public var particles : cs.NativeArray<Particle>;
   public var particleCount(default,never) : Int;
   public var enabled : Bool;
@@ -27,9 +27,9 @@ extern class ParticleEmitter extends Component {
 
   @:overload(function() : Void {})
   @:overload(function(count:Int) : Void {})
-  @:overload(function(pos:Vector3, velocity:Vector3, size:Float, energy:Float, color:Color) : Void {})
-  public function Emit(pos:Vector3, velocity:Vector3, size:Float, energy:Float, color:Color, rotation:Float, angularVelocity:Float) : Void;
+  @:overload(function(pos:Vector3, velocity:Vector3, size:Single, energy:Single, color:Color) : Void {})
+  public function Emit(pos:Vector3, velocity:Vector3, size:Single, energy:Single, color:Color, rotation:Single, angularVelocity:Single) : Void;
 
-  public function Simulate(deltaTime:Float) : Void;
+  public function Simulate(deltaTime:Single) : Void;
 }
 

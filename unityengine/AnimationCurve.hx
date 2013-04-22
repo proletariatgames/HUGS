@@ -7,22 +7,22 @@ extern class AnimationCurve extends dotnet.system.Object {
   public var preWrapMode : WrapMode;
   public var postWrapMode : WrapMode;
 
-  @:overload(function(time:Float, value:Float) : Int {})
+  @:overload(function(time:Single, value:Single) : Int {})
   public function AddKey(key:Keyframe) : Int;
 
   @:overload(function(keys:cs.NativeArray<Keyframe>) : Void {})
   public function new() : Void;
 
-  public static function EaseInOut(timeStart:Float, valueStart:Float, timeEnd:Float, valueEnd:Float) : AnimationCurve;
+  public static function EaseInOut(timeStart:Single, valueStart:Single, timeEnd:Single, valueEnd:Single) : AnimationCurve;
 
-  public function Evaluate(time:Float) : Float;
+  public function Evaluate(time:Single) : Single;
 
-  public static function Linear(timeStart:Float, valueStart:Float, timeEnd:Float, valueEnd:Float) : AnimationCurve;
+  public static function Linear(timeStart:Single, valueStart:Single, timeEnd:Single, valueEnd:Single) : AnimationCurve;
 
   public function MoveKey(index:Int, key:Keyframe) : Int;
 
   public function RemoveKey(index:Int) : Void;
 
-  public function SmoothTangents(index:Int, weight:Float) : Void;
+  public function SmoothTangents(index:Int, weight:Single) : Void;
 }
 

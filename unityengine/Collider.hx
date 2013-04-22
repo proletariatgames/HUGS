@@ -13,6 +13,6 @@ extern class Collider extends Component {
 
   public function new() : Void;
 
-  public function Raycast(ray:Ray, hitInfo:RaycastHit, distance:Float) : Bool;
+  public function Raycast(ray:Ray, hitInfo:RaycastHit, distance:Single) : Bool;
 }
 

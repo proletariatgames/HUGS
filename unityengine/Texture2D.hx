@@ -19,7 +19,7 @@ extern class Texture2D extends Texture {
 
   public function GetPixel(x:Int, y:Int) : Color;
 
-  public function GetPixelBilinear(u:Float, v:Float) : Color;
+  public function GetPixelBilinear(u:Single, v:Single) : Color;
 
   @:overload(function() : cs.NativeArray<Color> {})
   @:overload(function(miplevel:Int) : cs.NativeArray<Color> {})

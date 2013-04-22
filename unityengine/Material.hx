@@ -21,7 +21,7 @@ extern class Material extends Object {
 
   public function GetColor(propertyName:String) : Color;
 
-  public function GetFloat(propertyName:String) : Float;
+  public function GetFloat(propertyName:String) : Single;
 
   public function GetMatrix(propertyName:String) : Matrix4x4;
 
@@ -38,13 +38,13 @@ extern class Material extends Object {
 
   public function HasProperty(propertyName:String) : Bool;
 
-  public function Lerp(start:Material, end:Material, t:Float) : Void;
+  public function Lerp(start:Material, end:Material, t:Single) : Void;
 
   public function SetBuffer(propertyName:String, buffer:ComputeBuffer) : Void;
 
   public function SetColor(propertyName:String, color:Color) : Void;
 
-  public function SetFloat(propertyName:String, value:Float) : Void;
+  public function SetFloat(propertyName:String, value:Single) : Void;
 
   public function SetMatrix(propertyName:String, matrix:Matrix4x4) : Void;
 

@@ -4,11 +4,11 @@ package unityengine;
 extern class Particle extends dotnet.system.ValueType {
   public var position : Vector3;
   public var velocity : Vector3;
-  public var energy : Float;
-  public var startEnergy : Float;
-  public var size : Float;
-  public var rotation : Float;
-  public var angularVelocity : Float;
+  public var energy : Single;
+  public var startEnergy : Single;
+  public var size : Single;
+  public var rotation : Single;
+  public var angularVelocity : Single;
   public var color : Color;
 }
 

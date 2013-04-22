@@ -60,8 +60,8 @@ extern class Application extends dotnet.system.Object {
 
   public static function ExternalEval(script:String) : Void;
 
-  @:overload(function(levelIndex:Int) : Float {})
-  public static function GetStreamProgressForLevel(levelName:String) : Float;
+  @:overload(function(levelIndex:Int) : Single {})
+  public static function GetStreamProgressForLevel(levelName:String) : Single;
 
   public static function HasProLicense() : Bool;
 

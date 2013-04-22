@@ -8,8 +8,8 @@ extern class GUIText extends GUIElement {
   public var font : Font;
   public var alignment : TextAlignment;
   public var anchor : TextAnchor;
-  public var lineSpacing : Float;
-  public var tabSize : Float;
+  public var lineSpacing : Single;
+  public var tabSize : Single;
   public var fontSize : Int;
   public var fontStyle : FontStyle;
   public var richText : Bool;

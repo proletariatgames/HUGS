@@ -4,16 +4,16 @@ package unityengine;
 extern class Terrain extends MonoBehaviour {
   public static var activeTerrain(default,never) : Terrain;
   public var terrainData : TerrainData;
-  public var treeDistance : Float;
-  public var treeBillboardDistance : Float;
-  public var treeCrossFadeLength : Float;
+  public var treeDistance : Single;
+  public var treeBillboardDistance : Single;
+  public var treeCrossFadeLength : Single;
   public var treeMaximumFullLODCount : Int;
-  public var detailObjectDistance : Float;
-  public var detailObjectDensity : Float;
-  public var heightmapPixelError : Float;
+  public var detailObjectDistance : Single;
+  public var detailObjectDensity : Single;
+  public var heightmapPixelError : Single;
   public var heightmapMaximumLOD : Int;
-  public var basemapDistance : Float;
-  public var splatmapDistance : Float;
+  public var basemapDistance : Single;
+  public var splatmapDistance : Single;
   public var lightmapIndex : Int;
   public var castShadows : Bool;
   public var materialTemplate : Material;
@@ -29,7 +29,7 @@ extern class Terrain extends MonoBehaviour {
 
   public function GetPosition() : Vector3;
 
-  public function SampleHeight(worldPosition:Vector3) : Float;
+  public function SampleHeight(worldPosition:Vector3) : Single;
 
   public function SetNeighbors(left:Terrain, top:Terrain, right:Terrain, bottom:Terrain) : Void;
 }

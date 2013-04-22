@@ -33,10 +33,10 @@ extern class Transform extends Component {
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
   @:overload(function(direction:Vector3) : Vector3 {})
-  public function InverseTransformDirection(x:Float, y:Float, z:Float) : Vector3;
+  public function InverseTransformDirection(x:Single, y:Single, z:Single) : Vector3;
 
   @:overload(function(position:Vector3) : Vector3 {})
-  public function InverseTransformPoint(x:Float, y:Float, z:Float) : Vector3;
+  public function InverseTransformPoint(x:Single, y:Single, z:Single) : Vector3;
 
   public function IsChildOf(parent:Transform) : Bool;
 
@@ -47,27 +47,27 @@ extern class Transform extends Component {
 
   @:overload(function(eulerAngles:Vector3) : Void {})
   @:overload(function(eulerAngles:Vector3, relativeTo:Space) : Void {})
-  @:overload(function(xAngle:Float, yAngle:Float, zAngle:Float) : Void {})
-  @:overload(function(xAngle:Float, yAngle:Float, zAngle:Float, relativeTo:Space) : Void {})
-  @:overload(function(axis:Vector3, angle:Float) : Void {})
-  public function Rotate(axis:Vector3, angle:Float, relativeTo:Space) : Void;
+  @:overload(function(xAngle:Single, yAngle:Single, zAngle:Single) : Void {})
+  @:overload(function(xAngle:Single, yAngle:Single, zAngle:Single, relativeTo:Space) : Void {})
+  @:overload(function(axis:Vector3, angle:Single) : Void {})
+  public function Rotate(axis:Vector3, angle:Single, relativeTo:Space) : Void;
 
-  @:overload(function(point:Vector3, axis:Vector3, angle:Float) : Void {})
-  public function RotateAround(axis:Vector3, angle:Float) : Void;
+  @:overload(function(point:Vector3, axis:Vector3, angle:Single) : Void {})
+  public function RotateAround(axis:Vector3, angle:Single) : Void;
 
-  public function RotateAroundLocal(axis:Vector3, angle:Float) : Void;
+  public function RotateAroundLocal(axis:Vector3, angle:Single) : Void;
 
   @:overload(function(direction:Vector3) : Vector3 {})
-  public function TransformDirection(x:Float, y:Float, z:Float) : Vector3;
+  public function TransformDirection(x:Single, y:Single, z:Single) : Vector3;
 
   @:overload(function(position:Vector3) : Vector3 {})
-  public function TransformPoint(x:Float, y:Float, z:Float) : Vector3;
+  public function TransformPoint(x:Single, y:Single, z:Single) : Vector3;
 
   @:overload(function(translation:Vector3) : Void {})
   @:overload(function(translation:Vector3, relativeTo:Space) : Void {})
-  @:overload(function(x:Float, y:Float, z:Float) : Void {})
-  @:overload(function(x:Float, y:Float, z:Float, relativeTo:Space) : Void {})
+  @:overload(function(x:Single, y:Single, z:Single) : Void {})
+  @:overload(function(x:Single, y:Single, z:Single, relativeTo:Space) : Void {})
   @:overload(function(translation:Vector3, relativeTo:Transform) : Void {})
-  public function Translate(x:Float, y:Float, z:Float, relativeTo:Transform) : Void;
+  public function Translate(x:Single, y:Single, z:Single, relativeTo:Transform) : Void;
 }
 

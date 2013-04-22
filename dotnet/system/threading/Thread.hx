@@ -98,6 +98,7 @@ extern class Thread extends dotnet.system.runtime.constrainedexecution.CriticalF
   @:overload(function(address:dotnet.system.Int64) : dotnet.system.Int64 {})
   @:overload(function(address:dotnet.system.IntPtr) : dotnet.system.IntPtr {})
   @:overload(function(address:Dynamic) : Dynamic {})
+  @:overload(function(address:Single) : Single {})
   @:overload(function(address:dotnet.system.UInt64) : dotnet.system.UInt64 {})
   public static function VolatileRead(address:dotnet.system.UIntPtr) : dotnet.system.UIntPtr;
 
@@ -107,6 +108,7 @@ extern class Thread extends dotnet.system.runtime.constrainedexecution.CriticalF
   @:overload(function(address:dotnet.system.Int64, value:dotnet.system.Int64) : Void {})
   @:overload(function(address:dotnet.system.IntPtr, value:dotnet.system.IntPtr) : Void {})
   @:overload(function(address:Dynamic, value:Dynamic) : Void {})
+  @:overload(function(address:Single, value:Single) : Void {})
   @:overload(function(address:dotnet.system.UInt64, value:dotnet.system.UInt64) : Void {})
   public static function VolatileWrite(address:dotnet.system.UIntPtr, value:dotnet.system.UIntPtr) : Void;
 }

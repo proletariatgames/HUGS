@@ -3,13 +3,13 @@ package unityengine;
 @:native("UnityEngine.NavMeshAgent") @:final
 extern class NavMeshAgent extends Behaviour {
   public var destination : Vector3;
-  public var stoppingDistance : Float;
+  public var stoppingDistance : Single;
   public var velocity : Vector3;
   public var nextPosition : Vector3;
   public var steeringTarget(default,never) : Vector3;
   public var desiredVelocity(default,never) : Vector3;
-  public var remainingDistance(default,never) : Float;
-  public var baseOffset : Float;
+  public var remainingDistance(default,never) : Single;
+  public var baseOffset : Single;
   public var isOnOffMeshLink(default,never) : Bool;
   public var currentOffMeshLinkData(default,never) : OffMeshLinkData;
   public var nextOffMeshLinkData(default,never) : OffMeshLinkData;
@@ -23,13 +23,13 @@ extern class NavMeshAgent extends Behaviour {
   public var pathEndPosition(default,never) : Vector3;
   public var path : NavMeshPath;
   public var walkableMask : Int;
-  public var speed : Float;
-  public var angularSpeed : Float;
-  public var acceleration : Float;
+  public var speed : Single;
+  public var angularSpeed : Single;
+  public var acceleration : Single;
   public var updatePosition : Bool;
   public var updateRotation : Bool;
-  public var radius : Float;
-  public var height : Float;
+  public var radius : Single;
+  public var height : Single;
   public var obstacleAvoidanceType : ObstacleAvoidanceType;
   public var avoidancePriority : Int;
 
@@ -43,7 +43,7 @@ extern class NavMeshAgent extends Behaviour {
 
   public function FindClosestEdge(hit:NavMeshHit) : Bool;
 
-  public function GetLayerCost(layer:Int) : Float;
+  public function GetLayerCost(layer:Int) : Single;
 
   public function Move(offset:Vector3) : Void;
 
@@ -53,11 +53,11 @@ extern class NavMeshAgent extends Behaviour {
 
   public function Resume() : Void;
 
-  public function SamplePathPosition(passableMask:Int, maxDistance:Float, hit:NavMeshHit) : Bool;
+  public function SamplePathPosition(passableMask:Int, maxDistance:Single, hit:NavMeshHit) : Bool;
 
   public function SetDestination(target:Vector3) : Bool;
 
-  public function SetLayerCost(layer:Int, cost:Float) : Void;
+  public function SetLayerCost(layer:Int, cost:Single) : Void;
 
   public function SetPath(path:NavMeshPath) : Bool;
 

@@ -28,6 +28,7 @@ extern class BinaryWriter extends dotnet.system.Object  implements dotnet.system
   @:overload(function(value:Float) : Void {})
   @:overload(function(value:Int) : Void {})
   @:overload(function(value:dotnet.system.Int64) : Void {})
+  @:overload(function(value:Single) : Void {})
   @:overload(function(value:String) : Void {})
   public function Write(value:dotnet.system.UInt64) : Void;
 }

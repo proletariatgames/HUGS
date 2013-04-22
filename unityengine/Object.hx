@@ -7,13 +7,13 @@ extern class Object extends dotnet.system.Object {
 
   public function new() : Void;
 
-  @:overload(function(obj:Object, t:Float) : Void {})
+  @:overload(function(obj:Object, t:Single) : Void {})
   public static function Destroy(obj:Object) : Void;
 
   @:overload(function(obj:Object, allowDestroyingAssets:Bool) : Void {})
   public static function DestroyImmediate(obj:Object) : Void;
 
-  @:overload(function(obj:Object, t:Float) : Void {})
+  @:overload(function(obj:Object, t:Single) : Void {})
   public static function DestroyObject(obj:Object) : Void;
 
   public static function DontDestroyOnLoad(target:Object) : Void;
