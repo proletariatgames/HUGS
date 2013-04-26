@@ -22,7 +22,7 @@ extern class SerialPort extends dotnet.system.componentmodel.Component {
   public var IsOpen(default,never) : Bool;
   public var NewLine : String;
   public var Parity : Parity;
-  public var ParityReplace : UInt;
+  public var ParityReplace : dotnet.system.Byte;
   public var PortName : String;
   public var ReadBufferSize : Int;
   public var ReadTimeout : Int;

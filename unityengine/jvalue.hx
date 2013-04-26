@@ -3,7 +3,7 @@ package unityengine;
 @:native("UnityEngine.jvalue") @:final
 extern class jvalue extends dotnet.system.ValueType {
   public var z : Bool;
-  public var b : UInt;
+  public var b : dotnet.system.Byte;
   public var c : dotnet.system.Char;
   public var s : Int;
   public var i : Int;

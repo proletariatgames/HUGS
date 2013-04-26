@@ -160,9 +160,9 @@ extern class Marshal extends dotnet.system.Object {
 
   public static function QueryInterface(pUnk:dotnet.system.IntPtr, iid:dotnet.system.Guid, ppv:dotnet.system.IntPtr) : Int;
 
-  @:overload(function(ptr:dotnet.system.IntPtr) : UInt {})
-  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int) : UInt {})
-  public static function ReadByte(ptr:Dynamic, ofs:Int) : UInt;
+  @:overload(function(ptr:dotnet.system.IntPtr) : dotnet.system.Byte {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int) : dotnet.system.Byte {})
+  public static function ReadByte(ptr:Dynamic, ofs:Int) : dotnet.system.Byte;
 
   @:overload(function(ptr:dotnet.system.IntPtr) : Int {})
   @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int) : Int {})
@@ -226,9 +226,9 @@ extern class Marshal extends dotnet.system.Object {
 
   public static function UnsafeAddrOfPinnedArrayElement(arr:dotnet.system.Array, index:Int) : dotnet.system.IntPtr;
 
-  @:overload(function(ptr:dotnet.system.IntPtr, val:UInt) : Void {})
-  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:UInt) : Void {})
-  public static function WriteByte(ptr:Dynamic, ofs:Int, val:UInt) : Void;
+  @:overload(function(ptr:dotnet.system.IntPtr, val:dotnet.system.Byte) : Void {})
+  @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:dotnet.system.Byte) : Void {})
+  public static function WriteByte(ptr:Dynamic, ofs:Int, val:dotnet.system.Byte) : Void;
 
   @:overload(function(ptr:dotnet.system.IntPtr, val:Int) : Void {})
   @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:Int) : Void {})

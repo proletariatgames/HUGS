@@ -9,7 +9,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function CallBooleanMethod(obj:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Bool;
 
-  public static function CallByteMethod(obj:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : UInt;
+  public static function CallByteMethod(obj:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : dotnet.system.Byte;
 
   public static function CallCharMethod(obj:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : dotnet.system.Char;
 
@@ -27,7 +27,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function CallStaticBooleanMethod(clazz:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Bool;
 
-  public static function CallStaticByteMethod(clazz:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : UInt;
+  public static function CallStaticByteMethod(clazz:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : dotnet.system.Byte;
 
   public static function CallStaticCharMethod(clazz:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : dotnet.system.Char;
 
@@ -99,9 +99,9 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function GetBooleanField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : Bool;
 
-  public static function GetByteArrayElement(array:dotnet.system.IntPtr, index:Int) : UInt;
+  public static function GetByteArrayElement(array:dotnet.system.IntPtr, index:Int) : dotnet.system.Byte;
 
-  public static function GetByteField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : UInt;
+  public static function GetByteField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : dotnet.system.Byte;
 
   public static function GetCharArrayElement(array:dotnet.system.IntPtr, index:Int) : dotnet.system.Char;
 
@@ -139,7 +139,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function GetStaticBooleanField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : Bool;
 
-  public static function GetStaticByteField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : UInt;
+  public static function GetStaticByteField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : dotnet.system.Byte;
 
   public static function GetStaticCharField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : dotnet.system.Char;
 
@@ -207,13 +207,13 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function PushLocalFrame(capacity:Int) : Int;
 
-  public static function SetBooleanArrayElement(array:dotnet.system.IntPtr, index:Int, val:UInt) : Void;
+  public static function SetBooleanArrayElement(array:dotnet.system.IntPtr, index:Int, val:dotnet.system.Byte) : Void;
 
   public static function SetBooleanField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:Bool) : Void;
 
   public static function SetByteArrayElement(array:dotnet.system.IntPtr, index:Int, val:Int) : Void;
 
-  public static function SetByteField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:UInt) : Void;
+  public static function SetByteField(obj:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:dotnet.system.Byte) : Void;
 
   public static function SetCharArrayElement(array:dotnet.system.IntPtr, index:Int, val:dotnet.system.Char) : Void;
 
@@ -245,7 +245,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function SetStaticBooleanField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:Bool) : Void;
 
-  public static function SetStaticByteField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:UInt) : Void;
+  public static function SetStaticByteField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:dotnet.system.Byte) : Void;
 
   public static function SetStaticCharField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr, val:dotnet.system.Char) : Void;
 

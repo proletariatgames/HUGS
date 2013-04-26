@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.Char") @:final
-extern class Char extends ValueType  implements IComparable implements IConvertible {
+extern class Char extends ValueType  implements IComparable1<Char> implements IEquatable<Char> implements IComparable implements IConvertible {
   public static var MaxValue : Char;
   public static var MinValue : Char;
 
@@ -19,7 +19,7 @@ extern class Char extends ValueType  implements IComparable implements IConverti
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 

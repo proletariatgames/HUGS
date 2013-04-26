@@ -39,6 +39,6 @@ extern class Stream extends dotnet.system.MarshalByRefObject  implements dotnet.
 
   public function Write(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Void;
 
-  public function WriteByte(value:UInt) : Void;
+  public function WriteByte(value:dotnet.system.Byte) : Void;
 }
 

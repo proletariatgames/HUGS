@@ -1,6 +1,6 @@
 package dotnet.system.security.accesscontrol;
 
-@:fakeEnum(UInt) @:native("System.Security.AccessControl.AceFlags")
+@:fakeEnum(dotnet.system.Byte) @:native("System.Security.AccessControl.AceFlags")
 extern enum AceFlags {
   None;
   ObjectInherit;

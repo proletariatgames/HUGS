@@ -87,8 +87,8 @@ extern class Socket extends dotnet.system.Object  implements dotnet.system.IDisp
   public function DuplicateAndClose(targetProcessId:Int) : SocketInformation;
 
   @:overload(function(result:dotnet.system.IAsyncResult) : Socket {})
-  @:overload(function(buffer:UInt, asyncResult:dotnet.system.IAsyncResult) : Socket {})
-  public function EndAccept(buffer:UInt, bytesTransferred:Int, asyncResult:dotnet.system.IAsyncResult) : Socket;
+  @:overload(function(buffer:dotnet.system.Byte, asyncResult:dotnet.system.IAsyncResult) : Socket {})
+  public function EndAccept(buffer:dotnet.system.Byte, bytesTransferred:Int, asyncResult:dotnet.system.IAsyncResult) : Socket;
 
   public function EndConnect(result:dotnet.system.IAsyncResult) : Void;
 

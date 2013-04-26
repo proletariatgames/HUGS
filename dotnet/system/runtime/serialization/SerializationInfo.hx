@@ -9,6 +9,7 @@ extern class SerializationInfo extends dotnet.system.Object {
   @:overload(function(name:String, value:Dynamic, type:cs.system.Type) : Void {})
   @:overload(function(name:String, value:Int) : Void {})
   @:overload(function(name:String, value:UInt) : Void {})
+  @:overload(function(name:String, value:dotnet.system.Byte) : Void {})
   @:overload(function(name:String, value:Bool) : Void {})
   @:overload(function(name:String, value:dotnet.system.Char) : Void {})
   @:overload(function(name:String, value:Float) : Void {})
@@ -23,7 +24,7 @@ extern class SerializationInfo extends dotnet.system.Object {
 
   public function GetBoolean(name:String) : Bool;
 
-  public function GetByte(name:String) : UInt;
+  public function GetByte(name:String) : dotnet.system.Byte;
 
   public function GetChar(name:String) : dotnet.system.Char;
 

@@ -3,7 +3,7 @@ package dotnet.system.security.accesscontrol;
 @:native("System.Security.AccessControl.RawSecurityDescriptor") @:final
 extern class RawSecurityDescriptor extends GenericSecurityDescriptor {
   public var DiscretionaryAcl : RawAcl;
-  public var ResourceManagerControl : UInt;
+  public var ResourceManagerControl : dotnet.system.Byte;
   public var SystemAcl : RawAcl;
 
   @:overload(function(sddlForm:String) : Void {})

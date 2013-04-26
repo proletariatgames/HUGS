@@ -42,16 +42,16 @@ extern class Encoding extends dotnet.system.Object  implements dotnet.system.ICl
   @:overload(function(s:String) : cs.NativeArray<dotnet.system.Byte> {})
   @:overload(function(chars:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : cs.NativeArray<dotnet.system.Byte> {})
   @:overload(function(chars:cs.NativeArray<dotnet.system.Char>) : cs.NativeArray<dotnet.system.Byte> {})
-  public function GetBytes(chars:dotnet.system.Char, charCount:Int, bytes:UInt, byteCount:Int) : Int;
+  public function GetBytes(chars:dotnet.system.Char, charCount:Int, bytes:dotnet.system.Byte, byteCount:Int) : Int;
 
   @:overload(function(bytes:cs.NativeArray<dotnet.system.Byte>, index:Int, count:Int) : Int {})
   @:overload(function(bytes:cs.NativeArray<dotnet.system.Byte>) : Int {})
-  public function GetCharCount(bytes:UInt, count:Int) : Int;
+  public function GetCharCount(bytes:dotnet.system.Byte, count:Int) : Int;
 
   @:overload(function(bytes:cs.NativeArray<dotnet.system.Byte>, byteIndex:Int, byteCount:Int, chars:cs.NativeArray<dotnet.system.Char>, charIndex:Int) : Int {})
   @:overload(function(bytes:cs.NativeArray<dotnet.system.Byte>, index:Int, count:Int) : cs.NativeArray<dotnet.system.Char> {})
   @:overload(function(bytes:cs.NativeArray<dotnet.system.Byte>) : cs.NativeArray<dotnet.system.Char> {})
-  public function GetChars(bytes:UInt, byteCount:Int, chars:dotnet.system.Char, charCount:Int) : Int;
+  public function GetChars(bytes:dotnet.system.Byte, byteCount:Int, chars:dotnet.system.Char, charCount:Int) : Int;
 
   public function GetDecoder() : Decoder;
 

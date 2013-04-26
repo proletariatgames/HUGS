@@ -13,12 +13,12 @@ extern class DynamicILInfo extends dotnet.system.Object {
   public function GetTokenFor(method:dotnet.system.RuntimeMethodHandle, contextType:dotnet.system.RuntimeTypeHandle) : Int;
 
   @:overload(function(code:cs.NativeArray<dotnet.system.Byte>, maxStackSize:Int) : Void {})
-  public function SetCode(code:UInt, codeSize:Int, maxStackSize:Int) : Void;
+  public function SetCode(code:dotnet.system.Byte, codeSize:Int, maxStackSize:Int) : Void;
 
   @:overload(function(exceptions:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  public function SetExceptions(exceptions:UInt, exceptionsSize:Int) : Void;
+  public function SetExceptions(exceptions:dotnet.system.Byte, exceptionsSize:Int) : Void;
 
   @:overload(function(localSignature:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  public function SetLocalSignature(localSignature:UInt, signatureSize:Int) : Void;
+  public function SetLocalSignature(localSignature:dotnet.system.Byte, signatureSize:Int) : Void;
 }
 

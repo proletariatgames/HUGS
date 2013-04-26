@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.ComputeBuffer") @:final
-extern class ComputeBuffer extends dotnet.system.Object {
+extern class ComputeBuffer extends dotnet.system.Object  implements dotnet.system.IDisposable {
   public var count(default,never) : Int;
   public var stride(default,never) : Int;
 

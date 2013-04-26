@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.UInt64") @:final
-extern class UInt64 extends ValueType  implements IComparable implements IConvertible implements IFormattable {
+extern class UInt64 extends ValueType  implements IComparable implements IConvertible implements IFormattable implements IComparable1<UInt64> implements IEquatable<UInt64> {
   public static var MaxValue : UInt64;
   public static var MinValue : UInt64;
 
@@ -24,7 +24,7 @@ extern class UInt64 extends ValueType  implements IComparable implements IConver
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 

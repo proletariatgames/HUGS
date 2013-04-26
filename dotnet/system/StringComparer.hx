@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.StringComparer")
-extern class StringComparer extends Object  implements dotnet.system.collections.IComparer implements dotnet.system.collections.IEqualityComparer {
+extern class StringComparer extends Object  implements dotnet.system.collections.generic.IComparer<String> implements dotnet.system.collections.generic.IEqualityComparer<String> implements dotnet.system.collections.IComparer implements dotnet.system.collections.IEqualityComparer {
   public static var CurrentCulture(default,never) : StringComparer;
   public static var CurrentCultureIgnoreCase(default,never) : StringComparer;
   public static var InvariantCulture(default,never) : StringComparer;

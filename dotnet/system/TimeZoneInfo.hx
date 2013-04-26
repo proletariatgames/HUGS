@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.TimeZoneInfo.AdjustmentRule") @:final
-extern class TimeZoneInfo_AdjustmentRule extends Object  implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback {
+extern class TimeZoneInfo_AdjustmentRule extends Object  implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback implements IEquatable<TimeZoneInfo_AdjustmentRule> {
   public var DateEnd(default,never) : DateTime;
   public var DateStart(default,never) : DateTime;
   public var DaylightDelta(default,never) : TimeSpan;
@@ -22,7 +22,7 @@ extern class TimeZoneInfo_AdjustmentRule extends Object  implements dotnet.syste
 }
 
 @:native("System.TimeZoneInfo.TransitionTime") @:final
-extern class TimeZoneInfo_TransitionTime extends ValueType  implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback {
+extern class TimeZoneInfo_TransitionTime extends ValueType  implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback implements IEquatable<TimeZoneInfo_TransitionTime> {
   public var TimeOfDay(default,never) : DateTime;
   public var Month(default,never) : Int;
   public var Day(default,never) : Int;
@@ -47,7 +47,7 @@ extern class TimeZoneInfo_TransitionTime extends ValueType  implements dotnet.sy
 }
 
 @:native("System.TimeZoneInfo") @:final
-extern class TimeZoneInfo extends Object  implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback {
+extern class TimeZoneInfo extends Object  implements dotnet.system.runtime.serialization.ISerializable implements dotnet.system.runtime.serialization.IDeserializationCallback implements IEquatable<TimeZoneInfo> {
   public var BaseUtcOffset(default,never) : TimeSpan;
   public var DaylightName(default,never) : String;
   public var DisplayName(default,never) : String;

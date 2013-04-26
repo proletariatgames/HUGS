@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.SByte") @:final
-extern class SByte extends ValueType  implements IComparable implements IConvertible implements IFormattable {
+extern class SByte extends ValueType  implements IComparable implements IConvertible implements IFormattable implements IComparable1<SByte> implements IEquatable<SByte> {
   public static var MinValue : Int;
   public static var MaxValue : Int;
 
@@ -24,7 +24,7 @@ extern class SByte extends ValueType  implements IComparable implements IConvert
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 

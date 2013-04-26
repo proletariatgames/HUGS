@@ -1,15 +1,15 @@
 package dotnet.system;
 
 @:native("System.Byte") @:final
-extern class Byte extends ValueType  implements IComparable implements IConvertible implements IFormattable {
-  public static var MinValue : UInt;
-  public static var MaxValue : UInt;
+extern class Byte extends ValueType  implements IComparable1<Byte> implements IEquatable<Byte> implements IComparable implements IConvertible implements IFormattable {
+  public static var MinValue : Byte;
+  public static var MaxValue : Byte;
 
   @:overload(function(value:Dynamic) : Int {})
-  public function CompareTo(value:UInt) : Int;
+  public function CompareTo(value:Byte) : Int;
 
   @:overload(function(obj:Dynamic) : Bool {})
-  @:overload(function(obj:UInt) : Bool {})
+  @:overload(function(obj:Byte) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
   @:overload(function() : Int {})
@@ -17,14 +17,14 @@ extern class Byte extends ValueType  implements IComparable implements IConverti
 
   public function GetTypeCode() : TypeCode;
 
-  @:overload(function(s:String, provider:IFormatProvider) : UInt {})
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : UInt {})
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : UInt {})
-  public static function Parse(s:String) : UInt;
+  @:overload(function(s:String, provider:IFormatProvider) : Byte {})
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles) : Byte {})
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider) : Byte {})
+  public static function Parse(s:String) : Byte;
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 
@@ -58,7 +58,7 @@ extern class Byte extends ValueType  implements IComparable implements IConverti
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
-  @:overload(function(s:String, result:UInt) : Bool {})
-  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:UInt) : Bool;
+  @:overload(function(s:String, result:Byte) : Bool {})
+  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Byte) : Bool;
 }
 

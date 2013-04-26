@@ -10,7 +10,7 @@ extern class DBNull extends Object  implements IConvertible implements dotnet.sy
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 

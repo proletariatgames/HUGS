@@ -2,13 +2,13 @@ package dotnet.system.security.accesscontrol;
 
 @:native("System.Security.AccessControl.GenericAcl")
 extern class GenericAcl extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
-  public static var AclRevision : UInt;
-  public static var AclRevisionDS : UInt;
+  public static var AclRevision : dotnet.system.Byte;
+  public static var AclRevisionDS : dotnet.system.Byte;
   public static var MaxBinaryLength : Int;
   public var BinaryLength(default,never) : Int;
   public var Count(default,never) : Int;
   public var IsSynchronized(default,never) : Bool;
-  public var Revision(default,never) : UInt;
+  public var Revision(default,never) : dotnet.system.Byte;
   public var SyncRoot(default,never) : Dynamic;
 
   @:overload(function(array:dotnet.system.Array, index:Int) : Void {})

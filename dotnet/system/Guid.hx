@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.Guid") @:final
-extern class Guid extends ValueType  implements IComparable implements IFormattable {
+extern class Guid extends ValueType  implements IComparable implements IComparable1<Guid> implements IEquatable<Guid> implements IFormattable {
   public static var Empty : Guid;
 
   @:overload(function(value:Dynamic) : Int {})
@@ -10,8 +10,8 @@ extern class Guid extends ValueType  implements IComparable implements IFormatta
   @:overload(function(b:cs.NativeArray<Byte>) : Void {})
   @:overload(function(g:String) : Void {})
   @:overload(function(a:Int, b:Int, c:Int, d:cs.NativeArray<Byte>) : Void {})
-  @:overload(function(a:Int, b:Int, c:Int, d:UInt, e:UInt, f:UInt, g:UInt, h:UInt, i:UInt, j:UInt, k:UInt) : Void {})
-  public function new(a:UInt, b:UInt, c:UInt, d:UInt, e:UInt, f:UInt, g:UInt, h:UInt, i:UInt, j:UInt, k:UInt) : Void;
+  @:overload(function(a:Int, b:Int, c:Int, d:Byte, e:Byte, f:Byte, g:Byte, h:Byte, i:Byte, j:Byte, k:Byte) : Void {})
+  public function new(a:UInt, b:UInt, c:UInt, d:Byte, e:Byte, f:Byte, g:Byte, h:Byte, i:Byte, j:Byte, k:Byte) : Void;
 
   @:overload(function(o:Dynamic) : Bool {})
   @:overload(function(g:Guid) : Bool {})

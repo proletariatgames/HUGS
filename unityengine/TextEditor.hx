@@ -1,6 +1,6 @@
 package unityengine;
 
-@:fakeEnum(UInt) @:native("UnityEngine.TextEditor.DblClickSnapping")
+@:fakeEnum(dotnet.system.Byte) @:native("UnityEngine.TextEditor.DblClickSnapping")
 extern enum TextEditor_DblClickSnapping {
   WORDS;
   PARAGRAPHS;

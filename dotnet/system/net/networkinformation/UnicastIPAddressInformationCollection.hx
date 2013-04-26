@@ -1,7 +1,7 @@
 package dotnet.system.net.networkinformation;
 
 @:native("System.Net.NetworkInformation.UnicastIPAddressInformationCollection")
-extern class UnicastIPAddressInformationCollection extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable {
+extern class UnicastIPAddressInformationCollection extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable implements dotnet.system.collections.generic.IEnumerable<UnicastIPAddressInformation> implements dotnet.system.collections.generic.ICollection<UnicastIPAddressInformation> {
   public var Count(default,never) : Int;
   public var IsReadOnly(default,never) : Bool;
 

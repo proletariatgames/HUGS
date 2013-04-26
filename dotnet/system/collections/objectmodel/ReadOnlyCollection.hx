@@ -1,7 +1,7 @@
 package dotnet.system.collections.objectmodel;
 
 @:native("System.Collections.ObjectModel.ReadOnlyCollection")
-extern class ReadOnlyCollection<T> extends dotnet.system.Object  implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.collections.IList {
+extern class ReadOnlyCollection<T> extends dotnet.system.Object  implements dotnet.system.collections.generic.ICollection<T> implements dotnet.system.collections.generic.IList<T> implements dotnet.system.collections.generic.IEnumerable<T> implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.collections.IList {
   public var Count(default,never) : Int;
 
   @:overload(function(item:T) : Void {})

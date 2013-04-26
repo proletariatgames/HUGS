@@ -1,7 +1,7 @@
 package dotnet.system.security.cryptography;
 
 @:native("System.Security.Cryptography.CngAlgorithm") @:final
-extern class CngAlgorithm extends dotnet.system.Object {
+extern class CngAlgorithm extends dotnet.system.Object  implements dotnet.system.IEquatable<CngAlgorithm> {
   public var Algorithm(default,never) : String;
   public static var ECDiffieHellmanP256(default,never) : CngAlgorithm;
   public static var ECDiffieHellmanP384(default,never) : CngAlgorithm;

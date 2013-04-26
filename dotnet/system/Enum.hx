@@ -30,7 +30,7 @@ extern class Enum extends ValueType  implements IComparable implements IConverti
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 
@@ -46,10 +46,11 @@ extern class Enum extends ValueType  implements IComparable implements IConverti
 
   function ToInt64(provider:IFormatProvider) : Int64;
 
-  @:overload(function(enumType:cs.system.Type, value:UInt) : Dynamic {})
+  @:overload(function(enumType:cs.system.Type, value:Byte) : Dynamic {})
   @:overload(function(enumType:cs.system.Type, value:Int) : Dynamic {})
   @:overload(function(enumType:cs.system.Type, value:Int64) : Dynamic {})
   @:overload(function(enumType:cs.system.Type, value:Dynamic) : Dynamic {})
+  @:overload(function(enumType:cs.system.Type, value:UInt) : Dynamic {})
   public static function ToObject(enumType:cs.system.Type, value:UInt64) : Dynamic;
 
   function ToSByte(provider:IFormatProvider) : Int;

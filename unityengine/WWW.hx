@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.WWW") @:final
-extern class WWW extends dotnet.system.Object {
+extern class WWW extends dotnet.system.Object  implements dotnet.system.IDisposable {
   public var responseHeaders(default,never) : dotnet.system.collections.generic.Dictionary<String,String>;
   public var text(default,never) : String;
   public var data(default,never) : String;

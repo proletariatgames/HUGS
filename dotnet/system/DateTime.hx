@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.DateTime") @:final
-extern class DateTime extends ValueType  implements IComparable implements IConvertible implements IFormattable implements dotnet.system.runtime.serialization.ISerializable {
+extern class DateTime extends ValueType  implements IComparable1<DateTime> implements IEquatable<DateTime> implements IComparable implements IConvertible implements IFormattable implements dotnet.system.runtime.serialization.ISerializable {
   public static var MaxValue : DateTime;
   public static var MinValue : DateTime;
   public var Date(default,never) : DateTime;
@@ -80,7 +80,7 @@ extern class DateTime extends ValueType  implements IComparable implements IConv
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 

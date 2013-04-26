@@ -92,23 +92,25 @@ extern class Thread extends dotnet.system.runtime.constrainedexecution.CriticalF
 
   public function TrySetApartmentState(state:ApartmentState) : Bool;
 
-  @:overload(function(address:UInt) : UInt {})
+  @:overload(function(address:dotnet.system.Byte) : dotnet.system.Byte {})
   @:overload(function(address:Float) : Float {})
   @:overload(function(address:Int) : Int {})
   @:overload(function(address:dotnet.system.Int64) : dotnet.system.Int64 {})
   @:overload(function(address:dotnet.system.IntPtr) : dotnet.system.IntPtr {})
   @:overload(function(address:Dynamic) : Dynamic {})
   @:overload(function(address:Single) : Single {})
+  @:overload(function(address:UInt) : UInt {})
   @:overload(function(address:dotnet.system.UInt64) : dotnet.system.UInt64 {})
   public static function VolatileRead(address:dotnet.system.UIntPtr) : dotnet.system.UIntPtr;
 
-  @:overload(function(address:UInt, value:UInt) : Void {})
+  @:overload(function(address:dotnet.system.Byte, value:dotnet.system.Byte) : Void {})
   @:overload(function(address:Float, value:Float) : Void {})
   @:overload(function(address:Int, value:Int) : Void {})
   @:overload(function(address:dotnet.system.Int64, value:dotnet.system.Int64) : Void {})
   @:overload(function(address:dotnet.system.IntPtr, value:dotnet.system.IntPtr) : Void {})
   @:overload(function(address:Dynamic, value:Dynamic) : Void {})
   @:overload(function(address:Single, value:Single) : Void {})
+  @:overload(function(address:UInt, value:UInt) : Void {})
   @:overload(function(address:dotnet.system.UInt64, value:dotnet.system.UInt64) : Void {})
   public static function VolatileWrite(address:dotnet.system.UIntPtr, value:dotnet.system.UIntPtr) : Void;
 }

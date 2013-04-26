@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Animation") @:final
-extern class Animation extends Behaviour {
+extern class Animation extends Behaviour  implements dotnet.system.collections.IEnumerable {
   public var clip : AnimationClip;
   public var playAutomatically : Bool;
   public var wrapMode : WrapMode;

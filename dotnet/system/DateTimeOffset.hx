@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.DateTimeOffset") @:final
-extern class DateTimeOffset extends ValueType  implements IComparable implements IFormattable implements dotnet.system.runtime.serialization.IDeserializationCallback implements dotnet.system.runtime.serialization.ISerializable {
+extern class DateTimeOffset extends ValueType  implements IComparable1<DateTimeOffset> implements IEquatable<DateTimeOffset> implements IComparable implements IFormattable implements dotnet.system.runtime.serialization.IDeserializationCallback implements dotnet.system.runtime.serialization.ISerializable {
   public static var MaxValue : DateTimeOffset;
   public static var MinValue : DateTimeOffset;
   public var Date(default,never) : DateTime;

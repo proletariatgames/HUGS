@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.Transform") @:final
-extern class Transform extends Component {
+extern class Transform extends Component  implements dotnet.system.collections.IEnumerable {
   public var position : Vector3;
   public var localPosition : Vector3;
   public var eulerAngles : Vector3;

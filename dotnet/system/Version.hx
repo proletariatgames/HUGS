@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.Version") @:final
-extern class Version extends Object  implements ICloneable implements IComparable {
+extern class Version extends Object  implements ICloneable implements IComparable implements IComparable1<Version> implements IEquatable<Version> {
   public var Build(default,never) : Int;
   public var Major(default,never) : Int;
   public var Minor(default,never) : Int;

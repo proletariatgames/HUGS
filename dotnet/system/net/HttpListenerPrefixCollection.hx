@@ -1,7 +1,7 @@
 package dotnet.system.net;
 
 @:native("System.Net.HttpListenerPrefixCollection")
-extern class HttpListenerPrefixCollection extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable {
+extern class HttpListenerPrefixCollection extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable implements dotnet.system.collections.generic.ICollection<String> implements dotnet.system.collections.generic.IEnumerable<String> {
   public var Count(default,never) : Int;
   public var IsReadOnly(default,never) : Bool;
   public var IsSynchronized(default,never) : Bool;

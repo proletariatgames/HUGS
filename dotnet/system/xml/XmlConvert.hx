@@ -20,7 +20,7 @@ extern class XmlConvert_Static {
 
   public static function ToBoolean(s:String) : Bool;
 
-  public static function ToByte(s:String) : UInt;
+  public static function ToByte(s:String) : dotnet.system.Byte;
 
   public static function ToChar(s:String) : dotnet.system.Char;
 
@@ -51,7 +51,7 @@ extern class XmlConvert_Static {
 
   @:overload(function(value:dotnet.system.Guid) : String {})
   @:overload(function(value:Int) : String {})
-  @:overload(function(value:UInt) : String {})
+  @:overload(function(value:dotnet.system.Byte) : String {})
   @:overload(function(value:dotnet.system.Int64) : String {})
   @:overload(function(value:dotnet.system.Char) : String {})
   @:overload(function(value:Bool) : String {})
@@ -60,6 +60,7 @@ extern class XmlConvert_Static {
   @:overload(function(value:dotnet.system.TimeSpan) : String {})
   @:overload(function(value:Float) : String {})
   @:overload(function(value:Single) : String {})
+  @:overload(function(value:UInt) : String {})
   @:overload(function(value:dotnet.system.DateTime) : String {})
   @:overload(function(value:dotnet.system.DateTime, mode:XmlDateTimeSerializationMode) : String {})
   @:overload(function(value:dotnet.system.DateTime, format:String) : String {})

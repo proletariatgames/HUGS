@@ -21,7 +21,7 @@ extern class ILGenerator extends dotnet.system.Object  implements dotnet.system.
   public function DefineLabel() : Label;
 
   @:overload(function(opcode:OpCode) : Void {})
-  @:overload(function(opcode:OpCode, arg:UInt) : Void {})
+  @:overload(function(opcode:OpCode, arg:dotnet.system.Byte) : Void {})
   @:overload(function(opcode:OpCode, con:dotnet.system.reflection.ConstructorInfo) : Void {})
   @:overload(function(opcode:OpCode, arg:Float) : Void {})
   @:overload(function(opcode:OpCode, field:dotnet.system.reflection.FieldInfo) : Void {})

@@ -34,8 +34,8 @@ extern class MemoryStream extends Stream {
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Void {})
   public override function Write(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Void;
 
-  @:overload(function(value:UInt) : Void {})
-  public override function WriteByte(value:UInt) : Void;
+  @:overload(function(value:dotnet.system.Byte) : Void {})
+  public override function WriteByte(value:dotnet.system.Byte) : Void;
 
   public function WriteTo(stream:Stream) : Void;
 }

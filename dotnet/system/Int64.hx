@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.Int64") @:final
-extern class Int64 extends ValueType  implements IComparable implements IConvertible implements IFormattable {
+extern class Int64 extends ValueType  implements IComparable implements IConvertible implements IComparable1<Int64> implements IFormattable implements IEquatable<Int64> {
   public static var MaxValue : Int64;
   public static var MinValue : Int64;
 
@@ -24,7 +24,7 @@ extern class Int64 extends ValueType  implements IComparable implements IConvert
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 

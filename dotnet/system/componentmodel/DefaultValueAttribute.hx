@@ -5,7 +5,7 @@ extern class DefaultValueAttribute extends dotnet.system.Attribute {
   public var Value(default,never) : Dynamic;
 
   @:overload(function(value:Bool) : Void {})
-  @:overload(function(value:UInt) : Void {})
+  @:overload(function(value:dotnet.system.Byte) : Void {})
   @:overload(function(value:dotnet.system.Char) : Void {})
   @:overload(function(value:Float) : Void {})
   @:overload(function(value:Int) : Void {})

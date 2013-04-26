@@ -7,8 +7,8 @@ extern class Buffer extends Object {
 
   public static function ByteLength(array:Array) : Int;
 
-  public static function GetByte(array:Array, index:Int) : UInt;
+  public static function GetByte(array:Array, index:Int) : Byte;
 
-  public static function SetByte(array:Array, index:Int, value:UInt) : Void;
+  public static function SetByte(array:Array, index:Int, value:Byte) : Void;
 }
 

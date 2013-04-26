@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.Boolean") @:final
-extern class Boolean extends ValueType  implements IComparable implements IConvertible {
+extern class Boolean extends ValueType  implements IComparable1<Bool> implements IEquatable<Bool> implements IComparable implements IConvertible {
   public static var FalseString : String;
   public static var TrueString : String;
 
@@ -21,7 +21,7 @@ extern class Boolean extends ValueType  implements IComparable implements IConve
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 

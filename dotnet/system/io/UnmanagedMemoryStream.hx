@@ -3,10 +3,10 @@ package dotnet.system.io;
 @:native("System.IO.UnmanagedMemoryStream")
 extern class UnmanagedMemoryStream extends Stream {
   public var Capacity(default,never) : dotnet.system.Int64;
-  public var PositionPointer : UInt;
+  public var PositionPointer : dotnet.system.Byte;
 
-  @:overload(function(pointer:UInt, length:dotnet.system.Int64) : Void {})
-  public function new(pointer:UInt, length:dotnet.system.Int64, capacity:dotnet.system.Int64, access:FileAccess) : Void;
+  @:overload(function(pointer:dotnet.system.Byte, length:dotnet.system.Int64) : Void {})
+  public function new(pointer:dotnet.system.Byte, length:dotnet.system.Int64, capacity:dotnet.system.Int64, access:FileAccess) : Void;
 
   @:overload(function() : Void {})
   public override function Flush() : Void;
@@ -26,7 +26,7 @@ extern class UnmanagedMemoryStream extends Stream {
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Void {})
   public override function Write(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Void;
 
-  @:overload(function(value:UInt) : Void {})
-  public override function WriteByte(value:UInt) : Void;
+  @:overload(function(value:dotnet.system.Byte) : Void {})
+  public override function WriteByte(value:dotnet.system.Byte) : Void;
 }
 

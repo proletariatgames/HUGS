@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.UInt16") @:final
-extern class UInt16 extends ValueType  implements IComparable implements IConvertible implements IFormattable {
+extern class UInt16 extends ValueType  implements IComparable implements IConvertible implements IFormattable implements IComparable1<UInt16> implements IEquatable<UInt16> {
   public static var MaxValue : UInt;
   public static var MinValue : UInt;
 
@@ -24,7 +24,7 @@ extern class UInt16 extends ValueType  implements IComparable implements IConver
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 

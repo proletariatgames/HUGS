@@ -44,21 +44,23 @@ extern class Math extends Object {
 
   public static function Log10(d:Float) : Float;
 
-  @:overload(function(val1:UInt, val2:UInt) : UInt {})
+  @:overload(function(val1:Byte, val2:Byte) : Byte {})
   @:overload(function(val1:Decimal, val2:Decimal) : Decimal {})
   @:overload(function(val1:Float, val2:Float) : Float {})
   @:overload(function(val1:Single, val2:Single) : Single {})
   @:overload(function(val1:Int, val2:Int) : Int {})
   @:overload(function(val1:Int64, val2:Int64) : Int64 {})
+  @:overload(function(val1:UInt, val2:UInt) : UInt {})
   @:overload(function(val1:UInt64, val2:UInt64) : UInt64 {})
   public static function Max(val1:UInt, val2:UInt) : UInt;
 
-  @:overload(function(val1:UInt, val2:UInt) : UInt {})
+  @:overload(function(val1:Byte, val2:Byte) : Byte {})
   @:overload(function(val1:Decimal, val2:Decimal) : Decimal {})
   @:overload(function(val1:Float, val2:Float) : Float {})
   @:overload(function(val1:Single, val2:Single) : Single {})
   @:overload(function(val1:Int, val2:Int) : Int {})
   @:overload(function(val1:Int64, val2:Int64) : Int64 {})
+  @:overload(function(val1:UInt, val2:UInt) : UInt {})
   @:overload(function(val1:UInt64, val2:UInt64) : UInt64 {})
   public static function Min(val1:UInt, val2:UInt) : UInt;
 

@@ -2,12 +2,12 @@ package unityengine;
 
 @:native("UnityEngine.Color32") @:final
 extern class Color32 extends dotnet.system.ValueType {
-  public var r : UInt;
-  public var g : UInt;
-  public var b : UInt;
-  public var a : UInt;
+  public var r : dotnet.system.Byte;
+  public var g : dotnet.system.Byte;
+  public var b : dotnet.system.Byte;
+  public var a : dotnet.system.Byte;
 
-  public function new(r:UInt, g:UInt, b:UInt, a:UInt) : Void;
+  public function new(r:dotnet.system.Byte, g:dotnet.system.Byte, b:dotnet.system.Byte, a:dotnet.system.Byte) : Void;
 
   public static function Lerp(a:Color32, b:Color32, t:Single) : Color32;
 

@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.Single") @:final
-extern class Single extends ValueType  implements IComparable implements IConvertible implements IFormattable {
+extern class Single extends ValueType  implements IComparable implements IConvertible implements IFormattable implements IComparable1<Single> implements IEquatable<Single> {
   public static var Epsilon : Single;
   public static var MaxValue : Single;
   public static var MinValue : Single;
@@ -36,7 +36,7 @@ extern class Single extends ValueType  implements IComparable implements IConver
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 

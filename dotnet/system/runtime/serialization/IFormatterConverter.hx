@@ -8,7 +8,7 @@ extern interface IFormatterConverter {
 
   function ToBoolean(value:Dynamic) : Bool;
 
-  function ToByte(value:Dynamic) : UInt;
+  function ToByte(value:Dynamic) : dotnet.system.Byte;
 
   function ToChar(value:Dynamic) : dotnet.system.Char;
 

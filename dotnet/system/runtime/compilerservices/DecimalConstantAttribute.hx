@@ -4,7 +4,7 @@ package dotnet.system.runtime.compilerservices;
 extern class DecimalConstantAttribute extends dotnet.system.Attribute {
   public var Value(default,never) : dotnet.system.Decimal;
 
-  @:overload(function(scale:UInt, sign:UInt, hi:UInt, mid:UInt, low:UInt) : Void {})
-  public function new(scale:UInt, sign:UInt, hi:Int, mid:Int, low:Int) : Void;
+  @:overload(function(scale:dotnet.system.Byte, sign:dotnet.system.Byte, hi:UInt, mid:UInt, low:UInt) : Void {})
+  public function new(scale:dotnet.system.Byte, sign:dotnet.system.Byte, hi:Int, mid:Int, low:Int) : Void;
 }
 

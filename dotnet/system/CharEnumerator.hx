@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.CharEnumerator") @:final
-extern class CharEnumerator extends Object  implements ICloneable implements IDisposable implements dotnet.system.collections.IEnumerator {
+extern class CharEnumerator extends Object  implements dotnet.system.collections.generic.IEnumerator<Char> implements ICloneable implements IDisposable implements dotnet.system.collections.IEnumerator {
   public var Current(default,never) : Char;
 
   public function Clone() : Dynamic;

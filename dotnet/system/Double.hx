@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.Double") @:final
-extern class Double extends ValueType  implements IComparable implements IConvertible implements IFormattable {
+extern class Double extends ValueType  implements IComparable1<Float> implements IEquatable<Float> implements IComparable implements IConvertible implements IFormattable {
   public static var Epsilon : Float;
   public static var MaxValue : Float;
   public static var MinValue : Float;
@@ -36,7 +36,7 @@ extern class Double extends ValueType  implements IComparable implements IConver
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 

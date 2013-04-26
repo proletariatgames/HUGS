@@ -20,7 +20,7 @@ extern class BinaryReader extends dotnet.system.Object  implements dotnet.system
 
   public function ReadBoolean() : Bool;
 
-  public function ReadByte() : UInt;
+  public function ReadByte() : dotnet.system.Byte;
 
   public function ReadBytes(count:Int) : cs.NativeArray<dotnet.system.Byte>;
 

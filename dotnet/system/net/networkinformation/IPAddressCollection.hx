@@ -1,7 +1,7 @@
 package dotnet.system.net.networkinformation;
 
 @:native("System.Net.NetworkInformation.IPAddressCollection")
-extern class IPAddressCollection extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable {
+extern class IPAddressCollection extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable implements dotnet.system.collections.generic.ICollection<dotnet.system.net.IPAddress> implements dotnet.system.collections.generic.IEnumerable<dotnet.system.net.IPAddress> {
   public var Count(default,never) : Int;
   public var IsReadOnly(default,never) : Bool;
 

@@ -1,7 +1,7 @@
 package dotnet.system.security.principal;
 
 @:native("System.Security.Principal.IdentityReferenceCollection")
-extern class IdentityReferenceCollection extends dotnet.system.Object  implements dotnet.system.collections.IEnumerable {
+extern class IdentityReferenceCollection extends dotnet.system.Object  implements dotnet.system.collections.generic.ICollection<IdentityReference> implements dotnet.system.collections.generic.IEnumerable<IdentityReference> implements dotnet.system.collections.IEnumerable {
   public var Count(default,never) : Int;
   public var IsReadOnly(default,never) : Bool;
 

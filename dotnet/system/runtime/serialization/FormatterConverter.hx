@@ -10,7 +10,7 @@ extern class FormatterConverter extends dotnet.system.Object  implements IFormat
 
   public function ToBoolean(value:Dynamic) : Bool;
 
-  public function ToByte(value:Dynamic) : UInt;
+  public function ToByte(value:Dynamic) : dotnet.system.Byte;
 
   public function ToChar(value:Dynamic) : dotnet.system.Char;
 

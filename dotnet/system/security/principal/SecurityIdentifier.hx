@@ -1,7 +1,7 @@
 package dotnet.system.security.principal;
 
 @:native("System.Security.Principal.SecurityIdentifier") @:final
-extern class SecurityIdentifier extends IdentityReference {
+extern class SecurityIdentifier extends IdentityReference  implements dotnet.system.IComparable1<SecurityIdentifier> {
   public static var MaxBinaryLength : Int;
   public static var MinBinaryLength : Int;
   public var AccountDomainSid(default,never) : SecurityIdentifier;

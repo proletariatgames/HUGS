@@ -1,7 +1,7 @@
 package dotnet.system.xml.serialization;
 
 @:native("System.Xml.Serialization.XmlSchemas")
-extern class XmlSchemas extends dotnet.system.collections.CollectionBase  implements dotnet.system.collections.IEnumerable {
+extern class XmlSchemas extends dotnet.system.collections.CollectionBase  implements dotnet.system.collections.generic.IEnumerable<dotnet.system.xml.schema.XmlSchema> implements dotnet.system.collections.IEnumerable {
   public var IsCompiled(default,never) : Bool;
 
   @:overload(function(schema:dotnet.system.xml.schema.XmlSchema) : Int {})

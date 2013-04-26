@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.Decimal") @:final
-extern class Decimal extends ValueType  implements IComparable implements IConvertible implements IFormattable {
+extern class Decimal extends ValueType  implements IComparable1<Decimal> implements IEquatable<Decimal> implements IComparable implements IConvertible implements IFormattable {
   public static var MinValue : Decimal;
   public static var MaxValue : Decimal;
   public static var MinusOne : Decimal;
@@ -11,7 +11,7 @@ extern class Decimal extends ValueType  implements IComparable implements IConve
   @:overload(function(value:Dynamic) : Int {})
   public function CompareTo(value:Decimal) : Int;
 
-  @:overload(function(lo:Int, mid:Int, hi:Int, isNegative:Bool, scale:UInt) : Void {})
+  @:overload(function(lo:Int, mid:Int, hi:Int, isNegative:Bool, scale:Byte) : Void {})
   @:overload(function(value:Int) : Void {})
   @:overload(function(value:UInt) : Void {})
   @:overload(function(value:Int64) : Void {})
@@ -32,7 +32,7 @@ extern class Decimal extends ValueType  implements IComparable implements IConve
 
   function ToBoolean(provider:IFormatProvider) : Bool;
 
-  function ToByte(provider:IFormatProvider) : UInt;
+  function ToByte(provider:IFormatProvider) : Byte;
 
   function ToChar(provider:IFormatProvider) : Char;
 
@@ -105,7 +105,7 @@ extern class Decimal_Static {
 
   public static function Subtract(d1:Decimal, d2:Decimal) : Decimal;
 
-  public static function ToByte(value:Decimal) : UInt;
+  public static function ToByte(value:Decimal) : Byte;
 
   public static function ToDouble(d:Decimal) : Float;
 

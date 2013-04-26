@@ -1,7 +1,7 @@
 package dotnet.system.collections.generic;
 
 @:native("System.Collections.Generic.SortedList")
-extern class SortedList<TKey,TValue> extends dotnet.system.Object  implements dotnet.system.collections.IDictionary implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable {
+extern class SortedList<TKey,TValue> extends dotnet.system.Object  implements dotnet.system.collections.IDictionary implements dotnet.system.collections.ICollection implements IDictionary<TKey,TValue> implements dotnet.system.collections.IEnumerable implements ICollection<KeyValuePair<TKey,TValue>> implements IEnumerable<KeyValuePair<TKey,TValue>> {
   public var Count(default,never) : Int;
   public var Capacity : Int;
   public var Keys(default,never) : IList<TKey>;

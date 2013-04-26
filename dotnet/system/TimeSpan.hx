@@ -1,7 +1,7 @@
 package dotnet.system;
 
 @:native("System.TimeSpan") @:final
-extern class TimeSpan extends ValueType  implements IComparable {
+extern class TimeSpan extends ValueType  implements IComparable implements IComparable1<TimeSpan> implements IEquatable<TimeSpan> {
   public static var TicksPerDay : Int64;
   public static var TicksPerHour : Int64;
   public static var TicksPerMillisecond : Int64;
