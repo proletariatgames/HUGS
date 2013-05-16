@@ -1,5 +1,7 @@
 package unityengine;
 
+import unityengine.GUI;
+
 @:native("UnityEngine.GUILayout") @:final
 extern class GUILayout extends dotnet.system.Object {
 
