@@ -25,7 +25,7 @@ extern class X509Certificate2Collection extends X509CertificateCollection {
   public function Find(findType:X509FindType, findValue:Dynamic, validOnly:Bool) : X509Certificate2Collection;
 
   @:overload(function() : X509Certificate2Enumerator {})
-  public override function GetEnumerator() : X509CertificateCollection_X509CertificateEnumerator;
+  public override function GetEnumerator() : dotnet.system.security.cryptography.x509certificates.X509CertificateCollection.X509CertificateCollection_X509CertificateEnumerator;
 
   @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>) : Void {})
   @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})

@@ -32,7 +32,7 @@ extern class NullableConverter extends TypeConverter {
   @:overload(function(context:ITypeDescriptorContext) : Bool {})
   public override function GetPropertiesSupported() : Bool;
 
-  @:overload(function(context:ITypeDescriptorContext) : TypeConverter_StandardValuesCollection {})
+  @:overload(function(context:ITypeDescriptorContext) : dotnet.system.componentmodel.TypeConverter.TypeConverter_StandardValuesCollection {})
   public override function GetStandardValues() : dotnet.system.collections.ICollection;
 
   @:overload(function(context:ITypeDescriptorContext) : Bool {})

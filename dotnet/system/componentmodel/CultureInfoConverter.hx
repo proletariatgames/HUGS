@@ -17,7 +17,7 @@ extern class CultureInfoConverter extends TypeConverter {
 
   public function new() : Void;
 
-  @:overload(function(context:ITypeDescriptorContext) : TypeConverter_StandardValuesCollection {})
+  @:overload(function(context:ITypeDescriptorContext) : dotnet.system.componentmodel.TypeConverter.TypeConverter_StandardValuesCollection {})
   public override function GetStandardValues() : dotnet.system.collections.ICollection;
 
   @:overload(function(context:ITypeDescriptorContext) : Bool {})

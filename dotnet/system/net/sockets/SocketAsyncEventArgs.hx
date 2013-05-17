@@ -2,6 +2,7 @@ package dotnet.system.net.sockets;
 
 @:native("System.Net.Sockets.SocketAsyncEventArgs")
 extern class SocketAsyncEventArgs extends dotnet.system.EventArgs  implements dotnet.system.IDisposable {
+  public var Completed(default,null) : dotnet.system.NativeEvent<SocketAsyncEventArgs>;
   public var AcceptSocket : Socket;
   public var Buffer(default,never) : cs.NativeArray<dotnet.system.Byte>;
   public var BufferList : dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>;

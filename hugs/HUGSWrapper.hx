@@ -10,20 +10,32 @@ import dotnet.system.collections.IEnumerator;
 
 class HUGSWrapper {
 
-  public static function getTypedComponent<T>(c:Component, type:Class<T>):T {
+  public static inline function getTypedComponent<T>(c:Component, type:Class<T>):T {
     return cast c.GetComponent(Type.getClassName(type));
   }
 
-  public static function addTypedComponent<T>(g:GameObject, type:Class<T>):T {
-    return cast g.AddComponent(Type.getClassName(type));
-  }
-  
-  public static function adaptEnumerable(enumerable:IEnumerable) : EnumeratorAdapter<Dynamic> {
+  public static inline function adaptEnumerable(enumerable:IEnumerable) : Iterator<Dynamic> {
     return new EnumeratorAdapter<Dynamic>(enumerable.GetEnumerator());
   }
 
-  public static function adaptEnumerableT<T>(enumerable:IEnumerable, type:Class<T>) : EnumeratorAdapter<T> {
+  public static inline function adaptEnumerableT<T>(enumerable:IEnumerable, type:Class<T>) : Iterator<T> {
     return new EnumeratorAdapter<T>(enumerable.GetEnumerator());
+  }
+}
+
+class GameObjectMethods
+{
+  public static inline function getTypedComponent<T>(g:GameObject, type:Class<T>):T {
+    return cast g.GetComponent(Type.getClassName(type));
+  }
+
+  public static inline function addTypedComponent<T>(g:GameObject, type:Class<T>):T {
+    return cast g.AddComponent(Type.getClassName(type));
+  }
+  
+  public static inline function getComponentsOfType<T>(g:GameObject, type:Class<T>) : Iterator<T> {
+		var t:cs.system.Type = cs.system.Type.GetType(Type.getClassName(type));
+    return cast new NativeArrayIterator<Component>(g.GetComponents(t));
   }
 }
 
@@ -71,5 +83,23 @@ class EnumeratorAdapter<T>
 
   public function hasNext() : Bool {
     return this.enumerator.MoveNext();
+  }
+}
+
+class NativeArrayIterator<T>
+{
+  public var array(default, null):cs.NativeArray<T>;
+  public var i:Int;
+  public function new(ar:cs.NativeArray<T>) {
+    this.array = ar;
+    this.i = 0;
+  }
+
+  public inline function next() : T {
+    return this.array[i++];
+  }
+
+  public inline function hasNext() : Bool {
+    return i < this.array.Length;
   }
 }

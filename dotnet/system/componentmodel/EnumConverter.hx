@@ -17,7 +17,7 @@ extern class EnumConverter extends TypeConverter {
 
   public function new(type:cs.system.Type) : Void;
 
-  @:overload(function(context:ITypeDescriptorContext) : TypeConverter_StandardValuesCollection {})
+  @:overload(function(context:ITypeDescriptorContext) : dotnet.system.componentmodel.TypeConverter.TypeConverter_StandardValuesCollection {})
   public override function GetStandardValues() : dotnet.system.collections.ICollection;
 
   @:overload(function(context:ITypeDescriptorContext) : Bool {})

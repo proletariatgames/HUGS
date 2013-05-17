@@ -1,7 +1,5 @@
 package unityengine;
 
-import unityengine.GUI;
-
 @:native("UnityEngine.GUILayout") @:final
 extern class GUILayout extends dotnet.system.Object {
 
@@ -140,11 +138,11 @@ extern class GUILayout extends dotnet.system.Object {
 
   public static function Width(width:Single) : GUILayoutOption;
 
-  @:overload(function(id:Int, screenRect:Rect, func:GUI_WindowFunction, text:String, options:cs.NativeArray<GUILayoutOption>) : Rect {})
-  @:overload(function(id:Int, screenRect:Rect, func:GUI_WindowFunction, image:Texture, options:cs.NativeArray<GUILayoutOption>) : Rect {})
-  @:overload(function(id:Int, screenRect:Rect, func:GUI_WindowFunction, content:GUIContent, options:cs.NativeArray<GUILayoutOption>) : Rect {})
-  @:overload(function(id:Int, screenRect:Rect, func:GUI_WindowFunction, text:String, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Rect {})
-  @:overload(function(id:Int, screenRect:Rect, func:GUI_WindowFunction, image:Texture, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Rect {})
-  public static function Window(id:Int, screenRect:Rect, func:GUI_WindowFunction, content:GUIContent, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Rect;
+  @:overload(function(id:Int, screenRect:Rect, func:unityengine.GUI.GUI_WindowFunction, text:String, options:cs.NativeArray<GUILayoutOption>) : Rect {})
+  @:overload(function(id:Int, screenRect:Rect, func:unityengine.GUI.GUI_WindowFunction, image:Texture, options:cs.NativeArray<GUILayoutOption>) : Rect {})
+  @:overload(function(id:Int, screenRect:Rect, func:unityengine.GUI.GUI_WindowFunction, content:GUIContent, options:cs.NativeArray<GUILayoutOption>) : Rect {})
+  @:overload(function(id:Int, screenRect:Rect, func:unityengine.GUI.GUI_WindowFunction, text:String, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Rect {})
+  @:overload(function(id:Int, screenRect:Rect, func:unityengine.GUI.GUI_WindowFunction, image:Texture, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Rect {})
+  public static function Window(id:Int, screenRect:Rect, func:unityengine.GUI.GUI_WindowFunction, content:GUIContent, style:GUIStyle, options:cs.NativeArray<GUILayoutOption>) : Rect;
 }
 
