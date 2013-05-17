@@ -24,21 +24,57 @@
  */
 
 package dotnet.system;
+import haxe.macro.Expr;
+import haxe.macro.Context;
 
-@:final
-extern class NativeEvent<T> {
+class NativeEvent<T> {
+  #if macro
+  static var seed = 0;
+  #end
 
-  public inline function addHandler( handler : Dynamic->T->Void ) : Void {
-    var d = this;
-    untyped __cs__("d += handler");
+  public macro function addHandler<T>( ethis:ExprOf<NativeEvent1<T>>, handler : ExprOf<Dynamic->T->Void> ) : Expr {
+    switch ( ethis.expr ) {
+    case EField(e, eventName):
+      var methodName = switch ( handler.expr ) {
+      case EConst(c):
+        switch ( c ) {
+        case CIdent(s): s;
+        default: Context.error("Must specify a method name for addHandler", handler.pos); null;
+        }
+      default: Context.error("Must specify a method name for addHandler", handler.pos); null;
+      }
+      var dispatcherName = "dispatcher"+seed;
+      var eventBind = '$dispatcherName.$eventName += $methodName';
+      ++seed;
+      return macro { 
+        var $dispatcherName = $e;
+        untyped __cs__($v{eventBind});
+      };
+    default: Context.error("unexpected", ethis.pos); return macro {}
+    }
   }
 
-  public inline function removeHandler( handler : Dynamic->T->Void ) : Void {
-    var d = this;
-    untyped __cs__("d -= handler");
-  }
-
-  public inline function raiseEvent( sender : Dynamic, args : T ) : Void {
-    untyped { var handler = this; if (handler != null) { handler(sender, args); } }
+  public macro function removeHandler<T>( ethis:ExprOf<NativeEvent1<T>>, handler : ExprOf<Dynamic->T->Void> ) : Expr {
+    switch ( ethis.expr ) {
+    case EField(e, eventName):
+      var methodName = switch ( handler.expr ) {
+      case EConst(c):
+        switch ( c ) {
+        case CIdent(s): s;
+        default: Context.error("Must specify a method name for removeHandler", handler.pos); null;
+        }
+      default: Context.error("Must specify a method name for removeHandler", handler.pos); null;
+      }
+      var dispatcherName = "dispatcher"+seed;
+      var eventBind = '$dispatcherName.$eventName -= $methodName';
+      ++seed;
+      return macro { 
+        var $dispatcherName = $e;
+        untyped __cs__($v{eventBind});
+      };
+    default: Context.error("unexpected", ethis.pos); return macro {}
+    }
   }
 }
+
+
