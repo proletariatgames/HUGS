@@ -32,9 +32,9 @@ class GameObjectMethods
   public static inline function addTypedComponent<T>(g:GameObject, type:Class<T>):T {
     return cast g.AddComponent(Type.getClassName(type));
   }
-  
+
   public static inline function getComponentsOfType<T>(g:GameObject, type:Class<T>) : Iterator<T> {
-		var t:cs.system.Type = cs.system.Type.GetType(Type.getClassName(type));
+    var t:cs.system.Type = cs.system.Type.GetType(Type.getClassName(type));
     return cast new NativeArrayIterator<Component>(g.GetComponents(t));
   }
 }
