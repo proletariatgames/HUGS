@@ -41,30 +41,30 @@ class GameObjectMethods
 
 class QuaternionMethods
 {
-  public static inline function mul(a:Quaternion, b:Quaternion) : Quaternion {
+  public static function mul(a:Quaternion, b:Quaternion) : Quaternion {
     return untyped __cs__("a*b");
   }
 
-  public static inline function rotatePoint(a:Quaternion, b:Vector3) : Vector3 {
+  public static function rotatePoint(a:Quaternion, b:Vector3) : Vector3 {
     return untyped __cs__("a*b");
   }
 }
 
 class Vector3Methods
 {
-  public static inline function add(a:Vector3, b:Vector3) : Vector3 {
+  public static function add(a:Vector3, b:Vector3) : Vector3 {
     return untyped __cs__("a+b");
   }
 
-  public static inline function sub(a:Vector3, b:Vector3) : Vector3 {
+  public static function sub(a:Vector3, b:Vector3) : Vector3 {
     return untyped __cs__("a-b");
   }
 
-  public static inline function mul(a:Vector3, b:Float) : Vector3 {
-    return untyped __cs__("a*b");
+  public static function mul(a:Vector3, b:Single) : Vector3 {
+    return untyped __cs__("b*a");
   }
 
-  public static inline function div(a:Vector3, b:Float) : Vector3 {
+  public static function div(a:Vector3, b:Single) : Vector3 {
     return untyped __cs__("a/b");
   }
 }
