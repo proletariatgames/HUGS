@@ -21,6 +21,11 @@ class HUGSWrapper {
   public static inline function adaptEnumerableT<T>(enumerable:IEnumerable, type:Class<T>) : Iterator<T> {
     return new EnumeratorAdapter<T>(enumerable.GetEnumerator());
   }
+
+  public static inline function getComponentsInChildrenOfType<T>(c:Component, type:Class<T>) : Iterator<T> {
+    var t:cs.system.Type = cs.Lib.toNativeType(type);
+    return cast new NativeArrayIterator<Component>(c.GetComponentsInChildren(t));
+  }
 }
 
 class GameObjectMethods
@@ -34,8 +39,13 @@ class GameObjectMethods
   }
 
   public static inline function getComponentsOfType<T>(g:GameObject, type:Class<T>) : Iterator<T> {
-    var t:cs.system.Type = cs.system.Type.GetType(Type.getClassName(type));
+    var t:cs.system.Type = cs.Lib.toNativeType(type);
     return cast new NativeArrayIterator<Component>(g.GetComponents(t));
+  }
+
+  public static inline function getComponentsInChildrenOfType<T>(g:GameObject, type:Class<T>) : Iterator<T> {
+    var t:cs.system.Type = cs.Lib.toNativeType(type);
+    return cast new NativeArrayIterator<Component>(g.GetComponentsInChildren(t));
   }
 }
 
@@ -69,6 +79,7 @@ class Vector3Methods
   }
 }
 
+@:keep
 class EnumeratorAdapter<T>
 {
   public var enumerator(default, null):IEnumerator;
@@ -86,6 +97,7 @@ class EnumeratorAdapter<T>
   }
 }
 
+@:keep
 class NativeArrayIterator<T>
 {
   public var array(default, null):cs.NativeArray<T>;
@@ -95,11 +107,11 @@ class NativeArrayIterator<T>
     this.i = 0;
   }
 
-  public inline function next() : T {
+  public function next() : T {
     return this.array[i++];
   }
 
-  public inline function hasNext() : Bool {
+  public function hasNext() : Bool {
     return i < this.array.Length;
   }
 }
