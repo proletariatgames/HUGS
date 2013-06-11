@@ -10,19 +10,19 @@ import dotnet.system.collections.IEnumerator;
 
 class HUGSWrapper {
 
-  public static inline function getTypedComponent<T>(c:Component, type:Class<T>):T {
+  public static function getTypedComponent<T>(c:Component, type:Class<T>):T {
     return cast c.GetComponent(Type.getClassName(type));
   }
 
-  public static inline function adaptEnumerable(enumerable:IEnumerable) : Iterator<Dynamic> {
+  public static function adaptEnumerable(enumerable:IEnumerable) : Iterator<Dynamic> {
     return new EnumeratorAdapter<Dynamic>(enumerable.GetEnumerator());
   }
 
-  public static inline function adaptEnumerableT<T>(enumerable:IEnumerable, type:Class<T>) : Iterator<T> {
+  public static function adaptEnumerableT<T>(enumerable:IEnumerable, type:Class<T>) : Iterator<T> {
     return new EnumeratorAdapter<T>(enumerable.GetEnumerator());
   }
 
-  public static inline function getComponentsInChildrenOfType<T>(c:Component, type:Class<T>) : Iterator<T> {
+  public static function getComponentsInChildrenOfType<T>(c:Component, type:Class<T>) : Iterator<T> {
     var t:cs.system.Type = cs.Lib.toNativeType(type);
     return cast new NativeArrayIterator<Component>(c.GetComponentsInChildren(t));
   }
@@ -30,20 +30,20 @@ class HUGSWrapper {
 
 class GameObjectMethods
 {
-  public static inline function getTypedComponent<T>(g:GameObject, type:Class<T>):T {
+  public static function getTypedComponent<T>(g:GameObject, type:Class<T>):T {
     return cast g.GetComponent(Type.getClassName(type));
   }
 
-  public static inline function addTypedComponent<T>(g:GameObject, type:Class<T>):T {
+  public static function addTypedComponent<T>(g:GameObject, type:Class<T>):T {
     return cast g.AddComponent(Type.getClassName(type));
   }
 
-  public static inline function getComponentsOfType<T>(g:GameObject, type:Class<T>) : Iterator<T> {
+  public static function getComponentsOfType<T>(g:GameObject, type:Class<T>) : Iterator<T> {
     var t:cs.system.Type = cs.Lib.toNativeType(type);
     return cast new NativeArrayIterator<Component>(g.GetComponents(t));
   }
 
-  public static inline function getComponentsInChildrenOfType<T>(g:GameObject, type:Class<T>) : Iterator<T> {
+  public static function getComponentsInChildrenOfType<T>(g:GameObject, type:Class<T>) : Iterator<T> {
     var t:cs.system.Type = cs.Lib.toNativeType(type);
     return cast new NativeArrayIterator<Component>(g.GetComponentsInChildren(t));
   }
