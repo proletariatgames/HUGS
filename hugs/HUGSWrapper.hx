@@ -58,6 +58,10 @@ class QuaternionMethods
   public static function rotatePoint(a:Quaternion, b:Vector3) : Vector3 {
     return untyped __cs__("a*b");
   }
+
+  public static function eq(a:Quaternion, b:Quaternion) : Bool {
+    return untyped __cs__("a==b");
+  }
 }
 
 class Vector3Methods
@@ -76,6 +80,10 @@ class Vector3Methods
 
   public static function div(a:Vector3, b:Single) : Vector3 {
     return untyped __cs__("a/b");
+  }
+
+  public static function eq(a:Vector3, b:Vector3) : Bool {
+    return untyped __cs__("a==b");
   }
 }
 
