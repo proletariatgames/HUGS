@@ -11,7 +11,7 @@ import dotnet.system.collections.IEnumerator;
 class HUGSWrapper {
 
   public static function getTypedComponent<T>(c:Component, type:Class<T>):T {
-    return cast c.GetComponent(Type.getClassName(type));
+    return cast c.GetComponent(cs.Lib.toNativeType(type).Name);
   }
 
   public static function adaptEnumerable(enumerable:IEnumerable) : Iterator<Dynamic> {
@@ -31,11 +31,11 @@ class HUGSWrapper {
 class GameObjectMethods
 {
   public static function getTypedComponent<T>(g:GameObject, type:Class<T>):T {
-    return cast g.GetComponent(Type.getClassName(type));
+    return cast g.GetComponent(cs.Lib.toNativeType(type).Name);
   }
 
   public static function addTypedComponent<T>(g:GameObject, type:Class<T>):T {
-    return cast g.AddComponent(Type.getClassName(type));
+    return cast g.AddComponent(cs.Lib.toNativeType(type).Name);
   }
 
   public static function getComponentsOfType<T>(g:GameObject, type:Class<T>) : Iterator<T> {
