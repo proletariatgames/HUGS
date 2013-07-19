@@ -51,6 +51,10 @@ class GameObjectMethods
 
 class QuaternionMethods
 {
+  public static function mulVector3(a:Quaternion, b:Vector3) : Vector3 {
+    return untyped __cs__("a*b");
+  }
+
   public static function mul(a:Quaternion, b:Quaternion) : Quaternion {
     return untyped __cs__("a*b");
   }
