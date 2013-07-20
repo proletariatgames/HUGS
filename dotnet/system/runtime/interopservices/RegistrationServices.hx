@@ -13,7 +13,7 @@ extern class RegistrationServices extends dotnet.system.Object  implements IRegi
 
   public function RegisterAssembly(assembly:dotnet.system.reflection.Assembly, flags:AssemblyRegistrationFlags) : Bool;
 
-  @:overload(function(type:cs.system.Type, g:dotnet.system.Guid) : Void {})
+  @:overload(function(type:cs.system.Type, g:cs.Ref<dotnet.system.Guid>) : Void {})
   public function RegisterTypeForComClients(type:cs.system.Type, classContext:RegistrationClassContext, flags:RegistrationConnectionType) : Int;
 
   public function TypeRepresentsComType(type:cs.system.Type) : Bool;

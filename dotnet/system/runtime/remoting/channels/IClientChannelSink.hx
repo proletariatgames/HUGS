@@ -9,6 +9,6 @@ extern interface IClientChannelSink extends IChannelSinkBase {
 
   function GetRequestStream(msg:dotnet.system.runtime.remoting.messaging.IMessage, headers:ITransportHeaders) : dotnet.system.io.Stream;
 
-  function ProcessMessage(msg:dotnet.system.runtime.remoting.messaging.IMessage, requestHeaders:ITransportHeaders, requestStream:dotnet.system.io.Stream, responseHeaders:ITransportHeaders, responseStream:dotnet.system.io.Stream) : Void;
+  function ProcessMessage(msg:dotnet.system.runtime.remoting.messaging.IMessage, requestHeaders:ITransportHeaders, requestStream:dotnet.system.io.Stream, responseHeaders:cs.Out<ITransportHeaders>, responseStream:cs.Out<dotnet.system.io.Stream>) : Void;
 }
 

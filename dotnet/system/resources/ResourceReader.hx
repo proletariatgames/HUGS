@@ -14,6 +14,6 @@ extern class ResourceReader extends dotnet.system.Object  implements dotnet.syst
   @:overload(function() : dotnet.system.collections.IEnumerator {})
   public function GetEnumerator() : dotnet.system.collections.IDictionaryEnumerator;
 
-  public function GetResourceData(resourceName:String, resourceType:String, resourceData:dotnet.system.Byte) : Void;
+  public function GetResourceData(resourceName:String, resourceType:cs.Out<String>, resourceData:cs.Out<dotnet.system.Byte>) : Void;
 }
 

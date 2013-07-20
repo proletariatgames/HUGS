@@ -30,8 +30,8 @@ extern class NetworkStream extends dotnet.system.io.Stream  implements dotnet.sy
   @:overload(function() : Void {})
   public override function Flush() : Void;
 
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int) : Int {})
-  public override function Read(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int;
+  @:overload(function(buffer:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, size:Int) : Int {})
+  public override function Read(buffer:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int;
 
   @:overload(function(offset:dotnet.system.Int64, origin:dotnet.system.io.SeekOrigin) : dotnet.system.Int64 {})
   public override function Seek(offset:dotnet.system.Int64, origin:dotnet.system.io.SeekOrigin) : dotnet.system.Int64;

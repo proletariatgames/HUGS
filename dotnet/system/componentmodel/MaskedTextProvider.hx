@@ -27,11 +27,11 @@ extern class MaskedTextProvider extends dotnet.system.Object  implements dotnet.
 
   @:overload(function(input:dotnet.system.Char) : Bool {})
   @:overload(function(input:String) : Bool {})
-  @:overload(function(input:dotnet.system.Char, testPosition:Int, resultHint:MaskedTextResultHint) : Bool {})
-  public function Add(input:String, testPosition:Int, resultHint:MaskedTextResultHint) : Bool;
+  @:overload(function(input:dotnet.system.Char, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool {})
+  public function Add(input:String, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool;
 
   @:overload(function() : Void {})
-  public function Clear(resultHint:MaskedTextResultHint) : Void;
+  public function Clear(resultHint:cs.Out<MaskedTextResultHint>) : Void;
 
   public function Clone() : Dynamic;
 
@@ -63,8 +63,8 @@ extern class MaskedTextProvider extends dotnet.system.Object  implements dotnet.
 
   @:overload(function(input:dotnet.system.Char, position:Int) : Bool {})
   @:overload(function(input:String, position:Int) : Bool {})
-  @:overload(function(input:dotnet.system.Char, position:Int, testPosition:Int, resultHint:MaskedTextResultHint) : Bool {})
-  public function InsertAt(input:String, position:Int, testPosition:Int, resultHint:MaskedTextResultHint) : Bool;
+  @:overload(function(input:dotnet.system.Char, position:Int, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool {})
+  public function InsertAt(input:String, position:Int, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool;
 
   public function IsAvailablePosition(position:Int) : Bool;
 
@@ -77,21 +77,21 @@ extern class MaskedTextProvider extends dotnet.system.Object  implements dotnet.
   public static function IsValidPasswordChar(c:dotnet.system.Char) : Bool;
 
   @:overload(function() : Bool {})
-  public function Remove(testPosition:Int, resultHint:MaskedTextResultHint) : Bool;
+  public function Remove(testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool;
 
   @:overload(function(position:Int) : Bool {})
   @:overload(function(startPosition:Int, endPosition:Int) : Bool {})
-  public function RemoveAt(startPosition:Int, endPosition:Int, testPosition:Int, resultHint:MaskedTextResultHint) : Bool;
+  public function RemoveAt(startPosition:Int, endPosition:Int, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool;
 
   @:overload(function(input:dotnet.system.Char, position:Int) : Bool {})
   @:overload(function(input:String, position:Int) : Bool {})
-  @:overload(function(input:dotnet.system.Char, position:Int, testPosition:Int, resultHint:MaskedTextResultHint) : Bool {})
-  @:overload(function(input:String, position:Int, testPosition:Int, resultHint:MaskedTextResultHint) : Bool {})
-  @:overload(function(input:dotnet.system.Char, startPosition:Int, endPosition:Int, testPosition:Int, resultHint:MaskedTextResultHint) : Bool {})
-  public function Replace(input:String, startPosition:Int, endPosition:Int, testPosition:Int, resultHint:MaskedTextResultHint) : Bool;
+  @:overload(function(input:dotnet.system.Char, position:Int, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool {})
+  @:overload(function(input:String, position:Int, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool {})
+  @:overload(function(input:dotnet.system.Char, startPosition:Int, endPosition:Int, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool {})
+  public function Replace(input:String, startPosition:Int, endPosition:Int, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool;
 
   @:overload(function(input:String) : Bool {})
-  public function Set(input:String, testPosition:Int, resultHint:MaskedTextResultHint) : Bool;
+  public function Set(input:String, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool;
 
   public function ToDisplayString() : String;
 
@@ -104,11 +104,11 @@ extern class MaskedTextProvider extends dotnet.system.Object  implements dotnet.
   @:overload(function(ignorePasswordChar:Bool, includePrompt:Bool, includeLiterals:Bool, startPosition:Int, length:Int) : String {})
   public override function ToString() : String;
 
-  public function VerifyChar(input:dotnet.system.Char, position:Int, hint:MaskedTextResultHint) : Bool;
+  public function VerifyChar(input:dotnet.system.Char, position:Int, hint:cs.Out<MaskedTextResultHint>) : Bool;
 
   public function VerifyEscapeChar(input:dotnet.system.Char, position:Int) : Bool;
 
   @:overload(function(input:String) : Bool {})
-  public function VerifyString(input:String, testPosition:Int, resultHint:MaskedTextResultHint) : Bool;
+  public function VerifyString(input:String, testPosition:cs.Out<Int>, resultHint:cs.Out<MaskedTextResultHint>) : Bool;
 }
 

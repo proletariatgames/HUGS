@@ -9,6 +9,6 @@ extern interface IDictionary<TKey,TValue> extends ICollection<KeyValuePair<TKey,
 
   function Remove(key:TKey) : Bool;
 
-  function TryGetValue(key:TKey, value:TValue) : Bool;
+  function TryGetValue(key:TKey, value:cs.Out<TValue>) : Bool;
 }
 

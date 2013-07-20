@@ -27,15 +27,15 @@ extern class Activator extends Object  implements dotnet.system.runtime.interops
   @:overload(function(domain:AppDomain, assemblyFile:String, typeName:String) : dotnet.system.runtime.remoting.ObjectHandle {})
   public static function CreateInstanceFrom(domain:AppDomain, assemblyFile:String, typeName:String, ignoreCase:Bool, bindingAttr:dotnet.system.reflection.BindingFlags, binder:dotnet.system.reflection.Binder, args:cs.NativeArray<Object>, culture:dotnet.system.globalization.CultureInfo, activationAttributes:cs.NativeArray<Object>, securityAttributes:dotnet.system.security.policy.Evidence) : dotnet.system.runtime.remoting.ObjectHandle;
 
-  function GetIDsOfNames(riid:Guid, rgszNames:IntPtr, cNames:UInt, lcid:UInt, rgDispId:IntPtr) : Void;
+  function GetIDsOfNames(riid:cs.Ref<Guid>, rgszNames:IntPtr, cNames:UInt, lcid:UInt, rgDispId:IntPtr) : Void;
 
   @:overload(function(type:cs.system.Type, url:String) : Dynamic {})
   public static function GetObject(type:cs.system.Type, url:String, state:Dynamic) : Dynamic;
 
   function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:IntPtr) : Void;
 
-  function GetTypeInfoCount(pcTInfo:UInt) : Void;
+  function GetTypeInfoCount(pcTInfo:cs.Out<UInt>) : Void;
 
-  function Invoke(dispIdMember:UInt, riid:Guid, lcid:UInt, wFlags:Int, pDispParams:IntPtr, pVarResult:IntPtr, pExcepInfo:IntPtr, puArgErr:IntPtr) : Void;
+  function Invoke(dispIdMember:UInt, riid:cs.Ref<Guid>, lcid:UInt, wFlags:Int, pDispParams:IntPtr, pVarResult:IntPtr, pExcepInfo:IntPtr, puArgErr:IntPtr) : Void;
 }
 

@@ -3,13 +3,13 @@ package dotnet.system.runtime.interopservices.comtypes;
 @:native("System.Runtime.InteropServices.ComTypes.IBindCtx")
 extern interface IBindCtx {
 
-  function EnumObjectParam(ppenum:IEnumString) : Void;
+  function EnumObjectParam(ppenum:cs.Out<IEnumString>) : Void;
 
-  function GetBindOptions(pbindopts:BIND_OPTS) : Void;
+  function GetBindOptions(pbindopts:cs.Ref<BIND_OPTS>) : Void;
 
-  function GetObjectParam(pszKey:String, ppunk:Dynamic) : Void;
+  function GetObjectParam(pszKey:String, ppunk:cs.Out<Dynamic>) : Void;
 
-  function GetRunningObjectTable(pprot:IRunningObjectTable) : Void;
+  function GetRunningObjectTable(pprot:cs.Out<IRunningObjectTable>) : Void;
 
   function RegisterObjectBound(punk:Dynamic) : Void;
 
@@ -21,6 +21,6 @@ extern interface IBindCtx {
 
   function RevokeObjectParam(pszKey:String) : Int;
 
-  function SetBindOptions(pbindopts:BIND_OPTS) : Void;
+  function SetBindOptions(pbindopts:cs.Ref<BIND_OPTS>) : Void;
 }
 

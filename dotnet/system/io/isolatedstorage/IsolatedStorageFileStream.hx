@@ -28,7 +28,7 @@ extern class IsolatedStorageFileStream extends dotnet.system.io.FileStream {
   public override function Flush() : Void;
 
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int {})
-  public override function Read(array:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int;
+  public override function Read(array:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int;
 
   @:overload(function() : Int {})
   public override function ReadByte() : Int;

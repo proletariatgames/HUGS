@@ -1,7 +1,7 @@
 package unityengine.socialplatforms.impl;
 
 @:native("UnityEngine.SocialPlatforms.Impl.AchievementDescription")
-extern class AchievementDescription extends dotnet.system.Object  implements dotnet.unityengine.socialplatforms.IAchievementDescription {
+extern class AchievementDescription extends dotnet.system.Object  implements unityengine.socialplatforms.IAchievementDescription {
   public var id : String;
   public var title(default,never) : String;
   public var image(default,never) : unityengine.Texture2D;

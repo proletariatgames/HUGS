@@ -70,7 +70,7 @@ extern class Double extends ValueType  implements IComparable1<Float> implements
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Float) : Bool {})
-  public static function TryParse(s:String, result:Float) : Bool;
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:cs.Out<Float>) : Bool {})
+  public static function TryParse(s:String, result:cs.Out<Float>) : Bool;
 }
 

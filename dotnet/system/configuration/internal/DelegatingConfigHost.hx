@@ -24,7 +24,7 @@ extern class DelegatingConfigHost extends dotnet.system.Object  implements IInte
 
   public function GetConfigTypeName(t:cs.system.Type) : String;
 
-  public function GetRestrictedPermissions(configRecord:IInternalConfigRecord, permissionSet:dotnet.system.security.PermissionSet, isHostReady:Bool) : Void;
+  public function GetRestrictedPermissions(configRecord:IInternalConfigRecord, permissionSet:cs.Out<dotnet.system.security.PermissionSet>, isHostReady:cs.Out<Bool>) : Void;
 
   public function GetStreamName(configPath:String) : String;
 
@@ -36,7 +36,7 @@ extern class DelegatingConfigHost extends dotnet.system.Object  implements IInte
 
   public function Init(root:IInternalConfigRoot, hostInitParams:cs.NativeArray<dotnet.system.Object>) : Void;
 
-  public function InitForConfiguration(locationSubPath:String, configPath:String, locationConfigPath:String, root:IInternalConfigRoot, hostInitConfigurationParams:cs.NativeArray<dotnet.system.Object>) : Void;
+  public function InitForConfiguration(locationSubPath:cs.Ref<String>, configPath:cs.Out<String>, locationConfigPath:cs.Out<String>, root:IInternalConfigRoot, hostInitConfigurationParams:cs.NativeArray<dotnet.system.Object>) : Void;
 
   public function IsAboveApplication(configPath:String) : Bool;
 
@@ -59,8 +59,8 @@ extern class DelegatingConfigHost extends dotnet.system.Object  implements IInte
   @:overload(function(streamName:String) : dotnet.system.io.Stream {})
   public function OpenStreamForRead(streamName:String, assertPermissions:Bool) : dotnet.system.io.Stream;
 
-  @:overload(function(streamName:String, templateStreamName:String, writeContext:Dynamic) : dotnet.system.io.Stream {})
-  public function OpenStreamForWrite(streamName:String, templateStreamName:String, writeContext:Dynamic, assertPermissions:Bool) : dotnet.system.io.Stream;
+  @:overload(function(streamName:String, templateStreamName:String, writeContext:cs.Ref<Dynamic>) : dotnet.system.io.Stream {})
+  public function OpenStreamForWrite(streamName:String, templateStreamName:String, writeContext:cs.Ref<Dynamic>, assertPermissions:Bool) : dotnet.system.io.Stream;
 
   public function PrefetchAll(configPath:String, streamName:String) : Bool;
 

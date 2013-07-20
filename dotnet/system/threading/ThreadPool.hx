@@ -6,11 +6,11 @@ extern class ThreadPool extends dotnet.system.Object {
   @:overload(function(osHandle:dotnet.system.IntPtr) : Bool {})
   public static function BindHandle(osHandle:dotnet.system.runtime.interopservices.SafeHandle) : Bool;
 
-  public static function GetAvailableThreads(workerThreads:Int, completionPortThreads:Int) : Void;
+  public static function GetAvailableThreads(workerThreads:cs.Out<Int>, completionPortThreads:cs.Out<Int>) : Void;
 
-  public static function GetMaxThreads(workerThreads:Int, completionPortThreads:Int) : Void;
+  public static function GetMaxThreads(workerThreads:cs.Out<Int>, completionPortThreads:cs.Out<Int>) : Void;
 
-  public static function GetMinThreads(workerThreads:Int, completionPortThreads:Int) : Void;
+  public static function GetMinThreads(workerThreads:cs.Out<Int>, completionPortThreads:cs.Out<Int>) : Void;
 
   @:overload(function(callBack:WaitCallback) : Bool {})
   public static function QueueUserWorkItem(callBack:WaitCallback, state:Dynamic) : Bool;

@@ -7,7 +7,7 @@ extern class SafeHandle extends dotnet.system.runtime.constrainedexecution.Criti
 
   public function Close() : Void;
 
-  public function DangerousAddRef(success:Bool) : Void;
+  public function DangerousAddRef(success:cs.Ref<Bool>) : Void;
 
   public function DangerousGetHandle() : dotnet.system.IntPtr;
 

@@ -5,7 +5,7 @@ extern class PerformanceCounterManager extends dotnet.system.Object  implements 
 
   function CloseData() : Void;
 
-  function CollectData(callIdx:Int, valueNamePtr:dotnet.system.IntPtr, dataPtr:dotnet.system.IntPtr, totalBytes:Int, res:dotnet.system.IntPtr) : Void;
+  function CollectData(callIdx:Int, valueNamePtr:dotnet.system.IntPtr, dataPtr:dotnet.system.IntPtr, totalBytes:Int, res:cs.Out<dotnet.system.IntPtr>) : Void;
 
   public function new() : Void;
 }

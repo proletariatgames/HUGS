@@ -3,22 +3,22 @@ package dotnet.system.runtime.interopservices.comtypes;
 @:native("System.Runtime.InteropServices.ComTypes.IDataObject")
 extern interface IDataObject {
 
-  function DAdvise(pFormatetc:FORMATETC, advf:ADVF, adviseSink:IAdviseSink, connection:Int) : Int;
+  function DAdvise(pFormatetc:cs.Ref<FORMATETC>, advf:ADVF, adviseSink:IAdviseSink, connection:cs.Out<Int>) : Int;
 
   function DUnadvise(connection:Int) : Void;
 
-  function EnumDAdvise(enumAdvise:IEnumSTATDATA) : Int;
+  function EnumDAdvise(enumAdvise:cs.Out<IEnumSTATDATA>) : Int;
 
   function EnumFormatEtc(direction:DATADIR) : IEnumFORMATETC;
 
-  function GetCanonicalFormatEtc(formatIn:FORMATETC, formatOut:FORMATETC) : Int;
+  function GetCanonicalFormatEtc(formatIn:cs.Ref<FORMATETC>, formatOut:cs.Out<FORMATETC>) : Int;
 
-  function GetData(format:FORMATETC, medium:STGMEDIUM) : Void;
+  function GetData(format:cs.Ref<FORMATETC>, medium:cs.Out<STGMEDIUM>) : Void;
 
-  function GetDataHere(format:FORMATETC, medium:STGMEDIUM) : Void;
+  function GetDataHere(format:cs.Ref<FORMATETC>, medium:cs.Ref<STGMEDIUM>) : Void;
 
-  function QueryGetData(format:FORMATETC) : Int;
+  function QueryGetData(format:cs.Ref<FORMATETC>) : Int;
 
-  function SetData(formatIn:FORMATETC, medium:STGMEDIUM, release:Bool) : Void;
+  function SetData(formatIn:cs.Ref<FORMATETC>, medium:cs.Ref<STGMEDIUM>, release:Bool) : Void;
 }
 

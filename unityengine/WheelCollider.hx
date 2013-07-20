@@ -17,6 +17,6 @@ extern class WheelCollider extends Collider {
 
   public function new() : Void;
 
-  public function GetGroundHit(hit:WheelHit) : Bool;
+  public function GetGroundHit(hit:cs.Out<WheelHit>) : Bool;
 }
 

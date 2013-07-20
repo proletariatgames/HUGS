@@ -11,7 +11,7 @@ extern interface IRegistrationServices {
 
   function RegisterAssembly(assembly:dotnet.system.reflection.Assembly, flags:AssemblyRegistrationFlags) : Bool;
 
-  function RegisterTypeForComClients(type:cs.system.Type, g:dotnet.system.Guid) : Void;
+  function RegisterTypeForComClients(type:cs.system.Type, g:cs.Ref<dotnet.system.Guid>) : Void;
 
   function TypeRepresentsComType(type:cs.system.Type) : Bool;
 

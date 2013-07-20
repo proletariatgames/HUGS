@@ -3,9 +3,9 @@ package dotnet.system.runtime.interopservices;
 @:native("System.Runtime.InteropServices.UCOMIEnumConnectionPoints")
 extern interface UCOMIEnumConnectionPoints {
 
-  function Clone(ppenum:UCOMIEnumConnectionPoints) : Void;
+  function Clone(ppenum:cs.Out<UCOMIEnumConnectionPoints>) : Void;
 
-  function Next(celt:Int, rgelt:cs.NativeArray<UCOMIConnectionPoint>, pceltFetched:Int) : Int;
+  function Next(celt:Int, rgelt:cs.Out<cs.NativeArray<UCOMIConnectionPoint>>, pceltFetched:cs.Out<Int>) : Int;
 
   function Reset() : Int;
 

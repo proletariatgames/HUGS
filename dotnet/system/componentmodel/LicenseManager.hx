@@ -11,7 +11,7 @@ extern class LicenseManager extends dotnet.system.Object {
   public static function IsLicensed(type:cs.system.Type) : Bool;
 
   @:overload(function(type:cs.system.Type) : Bool {})
-  public static function IsValid(type:cs.system.Type, instance:Dynamic, license:License) : Bool;
+  public static function IsValid(type:cs.system.Type, instance:Dynamic, license:cs.Out<License>) : Bool;
 
   public static function LockContext(contextUser:Dynamic) : Void;
 

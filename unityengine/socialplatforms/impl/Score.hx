@@ -1,7 +1,7 @@
 package unityengine.socialplatforms.impl;
 
 @:native("UnityEngine.SocialPlatforms.Impl.Score")
-extern class Score extends dotnet.system.Object  implements dotnet.unityengine.socialplatforms.IScore {
+extern class Score extends dotnet.system.Object  implements unityengine.socialplatforms.IScore {
   public var leaderboardID : String;
   public var value : dotnet.system.Int64;
   public var date(default,never) : dotnet.system.DateTime;

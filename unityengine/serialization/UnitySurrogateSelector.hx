@@ -9,6 +9,6 @@ extern class UnitySurrogateSelector extends dotnet.system.Object  implements dot
 
   public function GetNextSelector() : dotnet.system.runtime.serialization.ISurrogateSelector;
 
-  public function GetSurrogate(type:cs.system.Type, context:dotnet.system.runtime.serialization.StreamingContext, selector:dotnet.system.runtime.serialization.ISurrogateSelector) : dotnet.system.runtime.serialization.ISerializationSurrogate;
+  public function GetSurrogate(type:cs.system.Type, context:dotnet.system.runtime.serialization.StreamingContext, selector:cs.Out<dotnet.system.runtime.serialization.ISurrogateSelector>) : dotnet.system.runtime.serialization.ISerializationSurrogate;
 }
 

@@ -21,9 +21,9 @@ extern class Font extends Object {
 
   public function new() : Void;
 
-  @:overload(function(ch:dotnet.system.Char, info:CharacterInfo, size:Int, style:FontStyle) : Bool {})
-  @:overload(function(ch:dotnet.system.Char, info:CharacterInfo, size:Int) : Bool {})
-  public function GetCharacterInfo(ch:dotnet.system.Char, info:CharacterInfo) : Bool;
+  @:overload(function(ch:dotnet.system.Char, info:cs.Out<CharacterInfo>, size:Int, style:FontStyle) : Bool {})
+  @:overload(function(ch:dotnet.system.Char, info:cs.Out<CharacterInfo>, size:Int) : Bool {})
+  public function GetCharacterInfo(ch:dotnet.system.Char, info:cs.Out<CharacterInfo>) : Bool;
 
   public function HasCharacter(c:dotnet.system.Char) : Bool;
 

@@ -12,7 +12,7 @@ extern class StringReader extends TextReader {
   public override function Peek() : Int;
 
   @:overload(function() : Int {})
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Int {})
+  @:overload(function(buffer:cs.Out<cs.NativeArray<dotnet.system.Char>>, index:Int, count:Int) : Int {})
   public override function Read() : Int;
 
   @:overload(function() : String {})

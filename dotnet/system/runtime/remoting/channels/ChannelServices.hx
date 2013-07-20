@@ -8,7 +8,7 @@ extern class ChannelServices extends dotnet.system.Object {
 
   public static function CreateServerChannelSinkChain(provider:IServerChannelSinkProvider, channel:IChannelReceiver) : IServerChannelSink;
 
-  public static function DispatchMessage(sinkStack:IServerChannelSinkStack, msg:dotnet.system.runtime.remoting.messaging.IMessage, replyMsg:dotnet.system.runtime.remoting.messaging.IMessage) : ServerProcessing;
+  public static function DispatchMessage(sinkStack:IServerChannelSinkStack, msg:dotnet.system.runtime.remoting.messaging.IMessage, replyMsg:cs.Out<dotnet.system.runtime.remoting.messaging.IMessage>) : ServerProcessing;
 
   public static function GetChannel(name:String) : IChannel;
 

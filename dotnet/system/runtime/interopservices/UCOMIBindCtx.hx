@@ -3,13 +3,13 @@ package dotnet.system.runtime.interopservices;
 @:native("System.Runtime.InteropServices.UCOMIBindCtx")
 extern interface UCOMIBindCtx {
 
-  function EnumObjectParam(ppenum:UCOMIEnumString) : Void;
+  function EnumObjectParam(ppenum:cs.Out<UCOMIEnumString>) : Void;
 
-  function GetBindOptions(pbindopts:BIND_OPTS) : Void;
+  function GetBindOptions(pbindopts:cs.Ref<BIND_OPTS>) : Void;
 
-  function GetObjectParam(pszKey:String, ppunk:Dynamic) : Void;
+  function GetObjectParam(pszKey:String, ppunk:cs.Out<Dynamic>) : Void;
 
-  function GetRunningObjectTable(pprot:UCOMIRunningObjectTable) : Void;
+  function GetRunningObjectTable(pprot:cs.Out<UCOMIRunningObjectTable>) : Void;
 
   function RegisterObjectBound(punk:Dynamic) : Void;
 
@@ -21,6 +21,6 @@ extern interface UCOMIBindCtx {
 
   function RevokeObjectParam(pszKey:String) : Void;
 
-  function SetBindOptions(pbindopts:BIND_OPTS) : Void;
+  function SetBindOptions(pbindopts:cs.Ref<BIND_OPTS>) : Void;
 }
 

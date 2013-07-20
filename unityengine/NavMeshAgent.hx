@@ -41,19 +41,19 @@ extern class NavMeshAgent extends Behaviour {
 
   public function new() : Void;
 
-  public function FindClosestEdge(hit:NavMeshHit) : Bool;
+  public function FindClosestEdge(hit:cs.Out<NavMeshHit>) : Bool;
 
   public function GetLayerCost(layer:Int) : Single;
 
   public function Move(offset:Vector3) : Void;
 
-  public function Raycast(targetPosition:Vector3, hit:NavMeshHit) : Bool;
+  public function Raycast(targetPosition:Vector3, hit:cs.Out<NavMeshHit>) : Bool;
 
   public function ResetPath() : Void;
 
   public function Resume() : Void;
 
-  public function SamplePathPosition(passableMask:Int, maxDistance:Single, hit:NavMeshHit) : Bool;
+  public function SamplePathPosition(passableMask:Int, maxDistance:Single, hit:cs.Out<NavMeshHit>) : Bool;
 
   public function SetDestination(target:Vector3) : Bool;
 

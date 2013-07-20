@@ -163,10 +163,10 @@ extern class DateTime_Static {
 
   public static function SpecifyKind(value:DateTime, kind:DateTimeKind) : DateTime;
 
-  @:overload(function(s:String, result:DateTime) : Bool {})
-  public static function TryParse(s:String, provider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTime) : Bool;
+  @:overload(function(s:String, result:cs.Out<DateTime>) : Bool {})
+  public static function TryParse(s:String, provider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:cs.Out<DateTime>) : Bool;
 
-  @:overload(function(s:String, format:String, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles, result:DateTime) : Bool {})
-  public static function TryParseExact(s:String, formats:cs.NativeArray<String>, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles, result:DateTime) : Bool;
+  @:overload(function(s:String, format:String, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles, result:cs.Out<DateTime>) : Bool {})
+  public static function TryParseExact(s:String, formats:cs.NativeArray<String>, provider:IFormatProvider, style:dotnet.system.globalization.DateTimeStyles, result:cs.Out<DateTime>) : Bool;
 }
 

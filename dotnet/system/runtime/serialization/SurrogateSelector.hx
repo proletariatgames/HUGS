@@ -11,7 +11,7 @@ extern class SurrogateSelector extends dotnet.system.Object  implements ISurroga
 
   public function GetNextSelector() : ISurrogateSelector;
 
-  public function GetSurrogate(type:cs.system.Type, context:StreamingContext, selector:ISurrogateSelector) : ISerializationSurrogate;
+  public function GetSurrogate(type:cs.system.Type, context:StreamingContext, selector:cs.Out<ISurrogateSelector>) : ISerializationSurrogate;
 
   public function RemoveSurrogate(type:cs.system.Type, context:StreamingContext) : Void;
 }

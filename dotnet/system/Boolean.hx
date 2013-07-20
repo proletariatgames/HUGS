@@ -53,6 +53,6 @@ extern class Boolean extends ValueType  implements IComparable1<Bool> implements
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
-  public static function TryParse(value:String, result:Bool) : Bool;
+  public static function TryParse(value:String, result:cs.Out<Bool>) : Bool;
 }
 

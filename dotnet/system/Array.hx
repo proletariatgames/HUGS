@@ -125,7 +125,7 @@ extern class Array_Static {
   @:overload(function(array:dotnet.system.Array, value:Dynamic, startIndex:Int) : Int {})
   public static function LastIndexOf(array:dotnet.system.Array, value:Dynamic, startIndex:Int, count:Int) : Int;
 
-  public static function Resize(array:Dynamic, newSize:Int) : Void;
+  public static function Resize(array:cs.Ref<Dynamic>, newSize:Int) : Void;
 
   @:overload(function(array:Array) : Void {})
   public static function Reverse(array:Array, index:Int, length:Int) : Void;

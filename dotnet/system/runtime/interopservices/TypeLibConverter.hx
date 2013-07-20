@@ -10,6 +10,6 @@ extern class TypeLibConverter extends dotnet.system.Object  implements ITypeLibC
 
   public function new() : Void;
 
-  public function GetPrimaryInteropAssembly(g:dotnet.system.Guid, major:Int, minor:Int, lcid:Int, asmName:String, asmCodeBase:String) : Bool;
+  public function GetPrimaryInteropAssembly(g:dotnet.system.Guid, major:Int, minor:Int, lcid:Int, asmName:cs.Out<String>, asmCodeBase:cs.Out<String>) : Bool;
 }
 

@@ -69,8 +69,8 @@ extern class Vector3_Static {
 
   public static function Normalize(value:Vector3) : Vector3;
 
-  @:overload(function(normal:Vector3, tangent:Vector3) : Void {})
-  public static function OrthoNormalize(normal:Vector3, tangent:Vector3, binormal:Vector3) : Void;
+  @:overload(function(normal:cs.Ref<Vector3>, tangent:cs.Ref<Vector3>) : Void {})
+  public static function OrthoNormalize(normal:cs.Ref<Vector3>, tangent:cs.Ref<Vector3>, binormal:cs.Ref<Vector3>) : Void;
 
   public static function Project(vector:Vector3, onNormal:Vector3) : Vector3;
 
@@ -82,9 +82,9 @@ extern class Vector3_Static {
 
   public static function Slerp(from:Vector3, to:Vector3, t:Single) : Vector3;
 
-  @:overload(function(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Single, maxSpeed:Single) : Vector3 {})
-  @:overload(function(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Single) : Vector3 {})
-  public static function SmoothDamp(current:Vector3, target:Vector3, currentVelocity:Vector3, smoothTime:Single, maxSpeed:Single, deltaTime:Single) : Vector3;
+  @:overload(function(current:Vector3, target:Vector3, currentVelocity:cs.Ref<Vector3>, smoothTime:Single, maxSpeed:Single) : Vector3 {})
+  @:overload(function(current:Vector3, target:Vector3, currentVelocity:cs.Ref<Vector3>, smoothTime:Single) : Vector3 {})
+  public static function SmoothDamp(current:Vector3, target:Vector3, currentVelocity:cs.Ref<Vector3>, smoothTime:Single, maxSpeed:Single, deltaTime:Single) : Vector3;
 
   public static function SqrMagnitude(a:Vector3) : Single;
 }

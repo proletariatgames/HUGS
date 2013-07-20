@@ -29,8 +29,8 @@ extern class Math extends Object {
 
   public static function Cosh(value:Float) : Float;
 
-  @:overload(function(a:Int, b:Int, result:Int) : Int {})
-  public static function DivRem(a:Int64, b:Int64, result:Int64) : Int64;
+  @:overload(function(a:Int, b:Int, result:cs.Out<Int>) : Int {})
+  public static function DivRem(a:Int64, b:Int64, result:cs.Out<Int64>) : Int64;
 
   public static function Exp(d:Float) : Float;
 

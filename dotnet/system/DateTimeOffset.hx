@@ -101,10 +101,10 @@ extern class DateTimeOffset_Static {
   @:overload(function(input:String, format:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTimeOffset {})
   public static function ParseExact(input:String, formats:cs.NativeArray<String>, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles) : DateTimeOffset;
 
-  @:overload(function(input:String, result:DateTimeOffset) : Bool {})
-  public static function TryParse(input:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool;
+  @:overload(function(input:String, result:cs.Out<DateTimeOffset>) : Bool {})
+  public static function TryParse(input:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:cs.Out<DateTimeOffset>) : Bool;
 
-  @:overload(function(input:String, format:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool {})
-  public static function TryParseExact(input:String, formats:cs.NativeArray<String>, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:DateTimeOffset) : Bool;
+  @:overload(function(input:String, format:String, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:cs.Out<DateTimeOffset>) : Bool {})
+  public static function TryParseExact(input:String, formats:cs.NativeArray<String>, formatProvider:IFormatProvider, styles:dotnet.system.globalization.DateTimeStyles, result:cs.Out<DateTimeOffset>) : Bool;
 }
 

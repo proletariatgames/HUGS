@@ -35,7 +35,7 @@ extern class UdpClient extends dotnet.system.Object  implements dotnet.system.ID
   @:overload(function(multicastAddr:dotnet.system.net.IPAddress) : Void {})
   public function DropMulticastGroup(multicastAddr:dotnet.system.net.IPAddress, ifindex:Int) : Void;
 
-  public function EndReceive(asyncResult:dotnet.system.IAsyncResult, remoteEP:dotnet.system.net.IPEndPoint) : cs.NativeArray<dotnet.system.Byte>;
+  public function EndReceive(asyncResult:dotnet.system.IAsyncResult, remoteEP:cs.Ref<dotnet.system.net.IPEndPoint>) : cs.NativeArray<dotnet.system.Byte>;
 
   public function EndSend(asyncResult:dotnet.system.IAsyncResult) : Int;
 
@@ -44,7 +44,7 @@ extern class UdpClient extends dotnet.system.Object  implements dotnet.system.ID
   @:overload(function(multicastAddr:dotnet.system.net.IPAddress, timeToLive:Int) : Void {})
   public function JoinMulticastGroup(multicastAddr:dotnet.system.net.IPAddress, localAddress:dotnet.system.net.IPAddress) : Void;
 
-  public function Receive(remoteEP:dotnet.system.net.IPEndPoint) : cs.NativeArray<dotnet.system.Byte>;
+  public function Receive(remoteEP:cs.Ref<dotnet.system.net.IPEndPoint>) : cs.NativeArray<dotnet.system.Byte>;
 
   @:overload(function(dgram:cs.NativeArray<dotnet.system.Byte>, bytes:Int) : Int {})
   @:overload(function(dgram:cs.NativeArray<dotnet.system.Byte>, bytes:Int, endPoint:dotnet.system.net.IPEndPoint) : Int {})

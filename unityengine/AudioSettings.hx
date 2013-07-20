@@ -9,7 +9,7 @@ extern class AudioSettings extends dotnet.system.Object {
 
   public function new() : Void;
 
-  public static function GetDSPBufferSize(bufferLength:Int, numBuffers:Int) : Void;
+  public static function GetDSPBufferSize(bufferLength:cs.Out<Int>, numBuffers:cs.Out<Int>) : Void;
 
   public static function SetDSPBufferSize(bufferLength:Int, numBuffers:Int) : Void;
 }

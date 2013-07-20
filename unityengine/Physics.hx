@@ -18,9 +18,9 @@ extern class Physics extends dotnet.system.Object {
   @:overload(function(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3, distance:Single) : Bool {})
   @:overload(function(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3) : Bool {})
   @:overload(function(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3, distance:Single, layerMask:Int) : Bool {})
-  @:overload(function(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3, hitInfo:RaycastHit, distance:Single) : Bool {})
-  @:overload(function(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3, hitInfo:RaycastHit) : Bool {})
-  public static function CapsuleCast(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3, hitInfo:RaycastHit, distance:Single, layerMask:Int) : Bool;
+  @:overload(function(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3, hitInfo:cs.Out<RaycastHit>, distance:Single) : Bool {})
+  @:overload(function(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3, hitInfo:cs.Out<RaycastHit>) : Bool {})
+  public static function CapsuleCast(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3, hitInfo:cs.Out<RaycastHit>, distance:Single, layerMask:Int) : Bool;
 
   @:overload(function(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3, distance:Single, layermask:Int) : cs.NativeArray<RaycastHit> {})
   @:overload(function(point1:Vector3, point2:Vector3, radius:Single, direction:Vector3, distance:Single) : cs.NativeArray<RaycastHit> {})
@@ -44,8 +44,8 @@ extern class Physics extends dotnet.system.Object {
 
   @:overload(function(start:Vector3, end:Vector3) : Bool {})
   @:overload(function(start:Vector3, end:Vector3, layerMask:Int) : Bool {})
-  @:overload(function(start:Vector3, end:Vector3, hitInfo:RaycastHit) : Bool {})
-  public static function Linecast(start:Vector3, end:Vector3, hitInfo:RaycastHit, layerMask:Int) : Bool;
+  @:overload(function(start:Vector3, end:Vector3, hitInfo:cs.Out<RaycastHit>) : Bool {})
+  public static function Linecast(start:Vector3, end:Vector3, hitInfo:cs.Out<RaycastHit>, layerMask:Int) : Bool;
 
   @:overload(function(position:Vector3, radius:Single, layerMask:Int) : cs.NativeArray<Collider> {})
   public static function OverlapSphere(position:Vector3, radius:Single) : cs.NativeArray<Collider>;
@@ -53,15 +53,15 @@ extern class Physics extends dotnet.system.Object {
   @:overload(function(origin:Vector3, direction:Vector3, distance:Single) : Bool {})
   @:overload(function(origin:Vector3, direction:Vector3) : Bool {})
   @:overload(function(origin:Vector3, direction:Vector3, distance:Single, layerMask:Int) : Bool {})
-  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:RaycastHit, distance:Single) : Bool {})
-  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:RaycastHit) : Bool {})
-  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:RaycastHit, distance:Single, layerMask:Int) : Bool {})
+  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:cs.Out<RaycastHit>, distance:Single) : Bool {})
+  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:cs.Out<RaycastHit>) : Bool {})
+  @:overload(function(origin:Vector3, direction:Vector3, hitInfo:cs.Out<RaycastHit>, distance:Single, layerMask:Int) : Bool {})
   @:overload(function(ray:Ray, distance:Single) : Bool {})
   @:overload(function(ray:Ray) : Bool {})
   @:overload(function(ray:Ray, distance:Single, layerMask:Int) : Bool {})
-  @:overload(function(ray:Ray, hitInfo:RaycastHit, distance:Single) : Bool {})
-  @:overload(function(ray:Ray, hitInfo:RaycastHit) : Bool {})
-  public static function Raycast(ray:Ray, hitInfo:RaycastHit, distance:Single, layerMask:Int) : Bool;
+  @:overload(function(ray:Ray, hitInfo:cs.Out<RaycastHit>, distance:Single) : Bool {})
+  @:overload(function(ray:Ray, hitInfo:cs.Out<RaycastHit>) : Bool {})
+  public static function Raycast(ray:Ray, hitInfo:cs.Out<RaycastHit>, distance:Single, layerMask:Int) : Bool;
 
   @:overload(function(ray:Ray, distance:Single) : cs.NativeArray<RaycastHit> {})
   @:overload(function(ray:Ray) : cs.NativeArray<RaycastHit> {})
@@ -70,15 +70,15 @@ extern class Physics extends dotnet.system.Object {
   @:overload(function(origin:Vector3, direction:Vector3, distance:Single) : cs.NativeArray<RaycastHit> {})
   public static function RaycastAll(origin:Vector3, direction:Vector3) : cs.NativeArray<RaycastHit>;
 
-  @:overload(function(origin:Vector3, radius:Single, direction:Vector3, hitInfo:RaycastHit, distance:Single) : Bool {})
-  @:overload(function(origin:Vector3, radius:Single, direction:Vector3, hitInfo:RaycastHit) : Bool {})
-  @:overload(function(origin:Vector3, radius:Single, direction:Vector3, hitInfo:RaycastHit, distance:Single, layerMask:Int) : Bool {})
+  @:overload(function(origin:Vector3, radius:Single, direction:Vector3, hitInfo:cs.Out<RaycastHit>, distance:Single) : Bool {})
+  @:overload(function(origin:Vector3, radius:Single, direction:Vector3, hitInfo:cs.Out<RaycastHit>) : Bool {})
+  @:overload(function(origin:Vector3, radius:Single, direction:Vector3, hitInfo:cs.Out<RaycastHit>, distance:Single, layerMask:Int) : Bool {})
   @:overload(function(ray:Ray, radius:Single, distance:Single) : Bool {})
   @:overload(function(ray:Ray, radius:Single) : Bool {})
   @:overload(function(ray:Ray, radius:Single, distance:Single, layerMask:Int) : Bool {})
-  @:overload(function(ray:Ray, radius:Single, hitInfo:RaycastHit, distance:Single) : Bool {})
-  @:overload(function(ray:Ray, radius:Single, hitInfo:RaycastHit) : Bool {})
-  public static function SphereCast(ray:Ray, radius:Single, hitInfo:RaycastHit, distance:Single, layerMask:Int) : Bool;
+  @:overload(function(ray:Ray, radius:Single, hitInfo:cs.Out<RaycastHit>, distance:Single) : Bool {})
+  @:overload(function(ray:Ray, radius:Single, hitInfo:cs.Out<RaycastHit>) : Bool {})
+  public static function SphereCast(ray:Ray, radius:Single, hitInfo:cs.Out<RaycastHit>, distance:Single, layerMask:Int) : Bool;
 
   @:overload(function(origin:Vector3, radius:Single, direction:Vector3, distance:Single) : cs.NativeArray<RaycastHit> {})
   @:overload(function(origin:Vector3, radius:Single, direction:Vector3) : cs.NativeArray<RaycastHit> {})

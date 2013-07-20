@@ -72,6 +72,6 @@ extern class TimeSpan_Static {
 
   public static function Parse(s:String) : TimeSpan;
 
-  public static function TryParse(s:String, result:TimeSpan) : Bool;
+  public static function TryParse(s:String, result:cs.Out<TimeSpan>) : Bool;
 }
 

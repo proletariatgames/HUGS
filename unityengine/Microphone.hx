@@ -8,7 +8,7 @@ extern class Microphone extends dotnet.system.Object {
 
   public static function End(deviceName:String) : Void;
 
-  public static function GetDeviceCaps(deviceName:String, minFreq:Int, maxFreq:Int) : Void;
+  public static function GetDeviceCaps(deviceName:String, minFreq:cs.Out<Int>, maxFreq:cs.Out<Int>) : Void;
 
   public static function GetPosition(deviceName:String) : Int;
 

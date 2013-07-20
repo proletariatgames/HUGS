@@ -36,13 +36,13 @@ extern class Attribute extends Object  implements dotnet.system.runtime.interops
   @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
-  function GetIDsOfNames(riid:Guid, rgszNames:IntPtr, cNames:UInt, lcid:UInt, rgDispId:IntPtr) : Void;
+  function GetIDsOfNames(riid:cs.Ref<Guid>, rgszNames:IntPtr, cNames:UInt, lcid:UInt, rgDispId:IntPtr) : Void;
 
   function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:IntPtr) : Void;
 
-  function GetTypeInfoCount(pcTInfo:UInt) : Void;
+  function GetTypeInfoCount(pcTInfo:cs.Out<UInt>) : Void;
 
-  function Invoke(dispIdMember:UInt, riid:Guid, lcid:UInt, wFlags:Int, pDispParams:IntPtr, pVarResult:IntPtr, pExcepInfo:IntPtr, puArgErr:IntPtr) : Void;
+  function Invoke(dispIdMember:UInt, riid:cs.Ref<Guid>, lcid:UInt, wFlags:Int, pDispParams:IntPtr, pVarResult:IntPtr, pExcepInfo:IntPtr, puArgErr:IntPtr) : Void;
 
   public function IsDefaultAttribute() : Bool;
 

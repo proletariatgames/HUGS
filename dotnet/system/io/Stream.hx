@@ -27,7 +27,7 @@ extern class Stream extends dotnet.system.MarshalByRefObject  implements dotnet.
 
   public function Flush() : Void;
 
-  public function Read(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int;
+  public function Read(buffer:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int;
 
   public function ReadByte() : Int;
 

@@ -9,11 +9,11 @@ extern class SoapServices extends dotnet.system.Object {
 
   public static function CodeXmlNamespaceForClrTypeNamespace(typeNamespace:String, assemblyName:String) : String;
 
-  public static function DecodeXmlNamespaceForClrTypeNamespace(inNamespace:String, typeNamespace:String, assemblyName:String) : Bool;
+  public static function DecodeXmlNamespaceForClrTypeNamespace(inNamespace:String, typeNamespace:cs.Out<String>, assemblyName:cs.Out<String>) : Bool;
 
-  public static function GetInteropFieldTypeAndNameFromXmlAttribute(containingType:cs.system.Type, xmlAttribute:String, xmlNamespace:String, type:cs.system.Type, name:String) : Void;
+  public static function GetInteropFieldTypeAndNameFromXmlAttribute(containingType:cs.system.Type, xmlAttribute:String, xmlNamespace:String, type:cs.Out<cs.system.Type>, name:cs.Out<String>) : Void;
 
-  public static function GetInteropFieldTypeAndNameFromXmlElement(containingType:cs.system.Type, xmlElement:String, xmlNamespace:String, type:cs.system.Type, name:String) : Void;
+  public static function GetInteropFieldTypeAndNameFromXmlElement(containingType:cs.system.Type, xmlElement:String, xmlNamespace:String, type:cs.Out<cs.system.Type>, name:cs.Out<String>) : Void;
 
   public static function GetInteropTypeFromXmlElement(xmlElement:String, xmlNamespace:String) : cs.system.Type;
 
@@ -21,15 +21,15 @@ extern class SoapServices extends dotnet.system.Object {
 
   public static function GetSoapActionFromMethodBase(mb:dotnet.system.reflection.MethodBase) : String;
 
-  public static function GetTypeAndMethodNameFromSoapAction(soapAction:String, typeName:String, methodName:String) : Bool;
+  public static function GetTypeAndMethodNameFromSoapAction(soapAction:String, typeName:cs.Out<String>, methodName:cs.Out<String>) : Bool;
 
-  public static function GetXmlElementForInteropType(type:cs.system.Type, xmlElement:String, xmlNamespace:String) : Bool;
+  public static function GetXmlElementForInteropType(type:cs.system.Type, xmlElement:cs.Out<String>, xmlNamespace:cs.Out<String>) : Bool;
 
   public static function GetXmlNamespaceForMethodCall(mb:dotnet.system.reflection.MethodBase) : String;
 
   public static function GetXmlNamespaceForMethodResponse(mb:dotnet.system.reflection.MethodBase) : String;
 
-  public static function GetXmlTypeForInteropType(type:cs.system.Type, xmlType:String, xmlTypeNamespace:String) : Bool;
+  public static function GetXmlTypeForInteropType(type:cs.system.Type, xmlType:cs.Out<String>, xmlTypeNamespace:cs.Out<String>) : Bool;
 
   public static function IsClrTypeNamespace(namespaceString:String) : Bool;
 

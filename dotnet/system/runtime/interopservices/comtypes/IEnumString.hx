@@ -3,9 +3,9 @@ package dotnet.system.runtime.interopservices.comtypes;
 @:native("System.Runtime.InteropServices.ComTypes.IEnumString")
 extern interface IEnumString {
 
-  function Clone(ppenum:IEnumString) : Void;
+  function Clone(ppenum:cs.Out<IEnumString>) : Void;
 
-  function Next(celt:Int, rgelt:cs.NativeArray<String>, pceltFetched:dotnet.system.IntPtr) : Int;
+  function Next(celt:Int, rgelt:cs.Out<cs.NativeArray<String>>, pceltFetched:dotnet.system.IntPtr) : Int;
 
   function Reset() : Void;
 

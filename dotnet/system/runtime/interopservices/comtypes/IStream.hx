@@ -3,7 +3,7 @@ package dotnet.system.runtime.interopservices.comtypes;
 @:native("System.Runtime.InteropServices.ComTypes.IStream")
 extern interface IStream {
 
-  function Clone(ppstm:IStream) : Void;
+  function Clone(ppstm:cs.Out<IStream>) : Void;
 
   function Commit(grfCommitFlags:Int) : Void;
 
@@ -11,7 +11,7 @@ extern interface IStream {
 
   function LockRegion(libOffset:dotnet.system.Int64, cb:dotnet.system.Int64, dwLockType:Int) : Void;
 
-  function Read(pv:cs.NativeArray<dotnet.system.Byte>, cb:Int, pcbRead:dotnet.system.IntPtr) : Void;
+  function Read(pv:cs.Out<cs.NativeArray<dotnet.system.Byte>>, cb:Int, pcbRead:dotnet.system.IntPtr) : Void;
 
   function Revert() : Void;
 
@@ -19,7 +19,7 @@ extern interface IStream {
 
   function SetSize(libNewSize:dotnet.system.Int64) : Void;
 
-  function Stat(pstatstg:STATSTG, grfStatFlag:Int) : Void;
+  function Stat(pstatstg:cs.Out<STATSTG>, grfStatFlag:Int) : Void;
 
   function UnlockRegion(libOffset:dotnet.system.Int64, cb:dotnet.system.Int64, dwLockType:Int) : Void;
 

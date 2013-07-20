@@ -116,6 +116,6 @@ extern class SortedDictionary<TKey,TValue> extends dotnet.system.Object  impleme
   @:overload(function(key:Dynamic) : Void {})
   public function Remove(key:TKey) : Bool;
 
-  public function TryGetValue(key:TKey, value:TValue) : Bool;
+  public function TryGetValue(key:TKey, value:cs.Out<TValue>) : Bool;
 }
 

@@ -94,7 +94,7 @@ extern class Marshal extends dotnet.system.Object {
 
   public static function GetManagedThunkForUnmanagedMethodPtr(pfnMethodToWrap:dotnet.system.IntPtr, pbSignature:dotnet.system.IntPtr, cbSignature:Int) : dotnet.system.IntPtr;
 
-  public static function GetMethodInfoForComSlot(t:cs.system.Type, slot:Int, memberType:ComMemberType) : dotnet.system.reflection.MemberInfo;
+  public static function GetMethodInfoForComSlot(t:cs.system.Type, slot:Int, memberType:cs.Ref<ComMemberType>) : dotnet.system.reflection.MemberInfo;
 
   public static function GetNativeVariantForObject(obj:Dynamic, pDstNativeVariant:dotnet.system.IntPtr) : Void;
 
@@ -126,7 +126,7 @@ extern class Marshal extends dotnet.system.Object {
   @:overload(function(pTLB:UCOMITypeLib) : String {})
   public static function GetTypeLibName(typelib:dotnet.system.runtime.interopservices.comtypes.ITypeLib) : String;
 
-  public static function GetTypeLibVersionForAssembly(inputAssembly:dotnet.system.reflection.Assembly, majorVersion:Int, minorVersion:Int) : Void;
+  public static function GetTypeLibVersionForAssembly(inputAssembly:dotnet.system.reflection.Assembly, majorVersion:cs.Out<Int>, minorVersion:cs.Out<Int>) : Void;
 
   public static function GetUniqueObjectForIUnknown(unknown:dotnet.system.IntPtr) : Dynamic;
 
@@ -158,7 +158,7 @@ extern class Marshal extends dotnet.system.Object {
   @:overload(function(ptr:dotnet.system.IntPtr, structure:Dynamic) : Void {})
   public static function PtrToStructure(ptr:dotnet.system.IntPtr, structureType:cs.system.Type) : Dynamic;
 
-  public static function QueryInterface(pUnk:dotnet.system.IntPtr, iid:dotnet.system.Guid, ppv:dotnet.system.IntPtr) : Int;
+  public static function QueryInterface(pUnk:dotnet.system.IntPtr, iid:cs.Ref<dotnet.system.Guid>, ppv:cs.Out<dotnet.system.IntPtr>) : Int;
 
   @:overload(function(ptr:dotnet.system.IntPtr) : dotnet.system.Byte {})
   @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int) : dotnet.system.Byte {})
@@ -228,26 +228,26 @@ extern class Marshal extends dotnet.system.Object {
 
   @:overload(function(ptr:dotnet.system.IntPtr, val:dotnet.system.Byte) : Void {})
   @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:dotnet.system.Byte) : Void {})
-  public static function WriteByte(ptr:Dynamic, ofs:Int, val:dotnet.system.Byte) : Void;
+  public static function WriteByte(ptr:cs.Out<Dynamic>, ofs:Int, val:dotnet.system.Byte) : Void;
 
   @:overload(function(ptr:dotnet.system.IntPtr, val:Int) : Void {})
   @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:Int) : Void {})
-  @:overload(function(ptr:Dynamic, ofs:Int, val:Int) : Void {})
+  @:overload(function(ptr:cs.Out<Dynamic>, ofs:Int, val:Int) : Void {})
   @:overload(function(ptr:dotnet.system.IntPtr, val:dotnet.system.Char) : Void {})
   @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:dotnet.system.Char) : Void {})
-  public static function WriteInt16(ptr:Dynamic, ofs:Int, val:dotnet.system.Char) : Void;
+  public static function WriteInt16(ptr:cs.Out<Dynamic>, ofs:Int, val:dotnet.system.Char) : Void;
 
   @:overload(function(ptr:dotnet.system.IntPtr, val:Int) : Void {})
   @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:Int) : Void {})
-  public static function WriteInt32(ptr:Dynamic, ofs:Int, val:Int) : Void;
+  public static function WriteInt32(ptr:cs.Out<Dynamic>, ofs:Int, val:Int) : Void;
 
   @:overload(function(ptr:dotnet.system.IntPtr, val:dotnet.system.Int64) : Void {})
   @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:dotnet.system.Int64) : Void {})
-  public static function WriteInt64(ptr:Dynamic, ofs:Int, val:dotnet.system.Int64) : Void;
+  public static function WriteInt64(ptr:cs.Out<Dynamic>, ofs:Int, val:dotnet.system.Int64) : Void;
 
   @:overload(function(ptr:dotnet.system.IntPtr, val:dotnet.system.IntPtr) : Void {})
   @:overload(function(ptr:dotnet.system.IntPtr, ofs:Int, val:dotnet.system.IntPtr) : Void {})
-  public static function WriteIntPtr(ptr:Dynamic, ofs:Int, val:dotnet.system.IntPtr) : Void;
+  public static function WriteIntPtr(ptr:cs.Out<Dynamic>, ofs:Int, val:dotnet.system.IntPtr) : Void;
 
   public static function ZeroFreeBSTR(s:dotnet.system.IntPtr) : Void;
 

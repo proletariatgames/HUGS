@@ -5,7 +5,7 @@ extern interface IEnumVARIANT {
 
   function Clone() : IEnumVARIANT;
 
-  function Next(celt:Int, rgVar:cs.NativeArray<dotnet.system.Object>, pceltFetched:dotnet.system.IntPtr) : Int;
+  function Next(celt:Int, rgVar:cs.Out<cs.NativeArray<dotnet.system.Object>>, pceltFetched:dotnet.system.IntPtr) : Int;
 
   function Reset() : Int;
 

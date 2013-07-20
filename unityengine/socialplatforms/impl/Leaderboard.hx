@@ -1,15 +1,15 @@
 package unityengine.socialplatforms.impl;
 
 @:native("UnityEngine.SocialPlatforms.Impl.Leaderboard")
-extern class Leaderboard extends dotnet.system.Object  implements dotnet.unityengine.socialplatforms.ILeaderboard {
+extern class Leaderboard extends dotnet.system.Object  implements unityengine.socialplatforms.ILeaderboard {
   public var loading(default,never) : Bool;
   public var id : String;
-  public var userScope : dotnet.unityengine.socialplatforms.UserScope;
-  public var range : dotnet.unityengine.socialplatforms.Range;
-  public var timeScope : dotnet.unityengine.socialplatforms.TimeScope;
-  public var localUserScore(default,never) : dotnet.unityengine.socialplatforms.IScore;
+  public var userScope : unityengine.socialplatforms.UserScope;
+  public var range : unityengine.socialplatforms.Range;
+  public var timeScope : unityengine.socialplatforms.TimeScope;
+  public var localUserScore(default,never) : unityengine.socialplatforms.IScore;
   public var maxRange(default,never) : UInt;
-  public var scores(default,never) : cs.NativeArray<dotnet.unityengine.socialplatforms.IScore>;
+  public var scores(default,never) : cs.NativeArray<unityengine.socialplatforms.IScore>;
   public var title(default,never) : String;
 
   public function new() : Void;
@@ -18,11 +18,11 @@ extern class Leaderboard extends dotnet.system.Object  implements dotnet.unityen
 
   public function LoadScores(_callback:dotnet.system.Action<Bool>) : Void;
 
-  public function SetLocalUserScore(score:dotnet.unityengine.socialplatforms.IScore) : Void;
+  public function SetLocalUserScore(score:unityengine.socialplatforms.IScore) : Void;
 
   public function SetMaxRange(maxRange:UInt) : Void;
 
-  public function SetScores(scores:cs.NativeArray<dotnet.unityengine.socialplatforms.IScore>) : Void;
+  public function SetScores(scores:cs.NativeArray<unityengine.socialplatforms.IScore>) : Void;
 
   public function SetTitle(title:String) : Void;
 

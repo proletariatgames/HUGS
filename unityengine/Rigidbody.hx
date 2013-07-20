@@ -73,8 +73,8 @@ extern class Rigidbody extends Component {
 
   public function Sleep() : Void;
 
-  @:overload(function(direction:Vector3, hitInfo:RaycastHit, distance:Single) : Bool {})
-  public function SweepTest(direction:Vector3, hitInfo:RaycastHit) : Bool;
+  @:overload(function(direction:Vector3, hitInfo:cs.Out<RaycastHit>, distance:Single) : Bool {})
+  public function SweepTest(direction:Vector3, hitInfo:cs.Out<RaycastHit>) : Bool;
 
   @:overload(function(direction:Vector3, distance:Single) : cs.NativeArray<RaycastHit> {})
   public function SweepTestAll(direction:Vector3) : cs.NativeArray<RaycastHit>;

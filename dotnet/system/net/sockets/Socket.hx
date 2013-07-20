@@ -44,18 +44,18 @@ extern class Socket extends dotnet.system.Object  implements dotnet.system.IDisp
   public function BeginDisconnect(reuseSocket:Bool, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
 
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, socket_flags:SocketFlags, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult {})
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, flags:SocketFlags, error:SocketError, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult {})
+  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, flags:SocketFlags, error:cs.Out<SocketError>, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult {})
   @:overload(function(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult {})
-  public function BeginReceive(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags, errorCode:SocketError, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
+  public function BeginReceive(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags, errorCode:cs.Out<SocketError>, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
 
-  public function BeginReceiveFrom(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, socket_flags:SocketFlags, remote_end:dotnet.system.net.EndPoint, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
+  public function BeginReceiveFrom(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, socket_flags:SocketFlags, remote_end:cs.Ref<dotnet.system.net.EndPoint>, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
 
-  public function BeginReceiveMessageFrom(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, socketFlags:SocketFlags, remoteEP:dotnet.system.net.EndPoint, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
+  public function BeginReceiveMessageFrom(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, socketFlags:SocketFlags, remoteEP:cs.Ref<dotnet.system.net.EndPoint>, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
 
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, socket_flags:SocketFlags, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult {})
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, socketFlags:SocketFlags, errorCode:SocketError, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult {})
+  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, socketFlags:SocketFlags, errorCode:cs.Out<SocketError>, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult {})
   @:overload(function(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult {})
-  public function BeginSend(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags, errorCode:SocketError, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
+  public function BeginSend(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags, errorCode:cs.Out<SocketError>, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
 
   @:overload(function(fileName:String, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult {})
   public function BeginSendFile(fileName:String, preBuffer:cs.NativeArray<dotnet.system.Byte>, postBuffer:cs.NativeArray<dotnet.system.Byte>, flags:TransmitFileOptions, _callback:dotnet.system.AsyncCallback, state:Dynamic) : dotnet.system.IAsyncResult;
@@ -87,22 +87,22 @@ extern class Socket extends dotnet.system.Object  implements dotnet.system.IDisp
   public function DuplicateAndClose(targetProcessId:Int) : SocketInformation;
 
   @:overload(function(result:dotnet.system.IAsyncResult) : Socket {})
-  @:overload(function(buffer:dotnet.system.Byte, asyncResult:dotnet.system.IAsyncResult) : Socket {})
-  public function EndAccept(buffer:dotnet.system.Byte, bytesTransferred:Int, asyncResult:dotnet.system.IAsyncResult) : Socket;
+  @:overload(function(buffer:cs.Out<dotnet.system.Byte>, asyncResult:dotnet.system.IAsyncResult) : Socket {})
+  public function EndAccept(buffer:cs.Out<dotnet.system.Byte>, bytesTransferred:cs.Out<Int>, asyncResult:dotnet.system.IAsyncResult) : Socket;
 
   public function EndConnect(result:dotnet.system.IAsyncResult) : Void;
 
   public function EndDisconnect(asyncResult:dotnet.system.IAsyncResult) : Void;
 
   @:overload(function(result:dotnet.system.IAsyncResult) : Int {})
-  public function EndReceive(asyncResult:dotnet.system.IAsyncResult, errorCode:SocketError) : Int;
+  public function EndReceive(asyncResult:dotnet.system.IAsyncResult, errorCode:cs.Out<SocketError>) : Int;
 
-  public function EndReceiveFrom(result:dotnet.system.IAsyncResult, end_point:dotnet.system.net.EndPoint) : Int;
+  public function EndReceiveFrom(result:dotnet.system.IAsyncResult, end_point:cs.Ref<dotnet.system.net.EndPoint>) : Int;
 
-  public function EndReceiveMessageFrom(asyncResult:dotnet.system.IAsyncResult, socketFlags:SocketFlags, endPoint:dotnet.system.net.EndPoint, ipPacketInformation:IPPacketInformation) : Int;
+  public function EndReceiveMessageFrom(asyncResult:dotnet.system.IAsyncResult, socketFlags:cs.Ref<SocketFlags>, endPoint:cs.Ref<dotnet.system.net.EndPoint>, ipPacketInformation:cs.Out<IPPacketInformation>) : Int;
 
   @:overload(function(result:dotnet.system.IAsyncResult) : Int {})
-  public function EndSend(asyncResult:dotnet.system.IAsyncResult, errorCode:SocketError) : Int;
+  public function EndSend(asyncResult:dotnet.system.IAsyncResult, errorCode:cs.Out<SocketError>) : Int;
 
   public function EndSendFile(asyncResult:dotnet.system.IAsyncResult) : Void;
 
@@ -123,21 +123,21 @@ extern class Socket extends dotnet.system.Object  implements dotnet.system.IDisp
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, flags:SocketFlags) : Int {})
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, size:Int, flags:SocketFlags) : Int {})
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, flags:SocketFlags) : Int {})
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, flags:SocketFlags, error:SocketError) : Int {})
+  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, flags:SocketFlags, error:cs.Out<SocketError>) : Int {})
   @:overload(function(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>) : Int {})
   @:overload(function(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags) : Int {})
-  public function Receive(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags, errorCode:SocketError) : Int;
+  public function Receive(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags, errorCode:cs.Out<SocketError>) : Int;
 
   public function ReceiveAsync(e:SocketAsyncEventArgs) : Bool;
 
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, remoteEP:dotnet.system.net.EndPoint) : Int {})
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, flags:SocketFlags, remoteEP:dotnet.system.net.EndPoint) : Int {})
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, size:Int, flags:SocketFlags, remoteEP:dotnet.system.net.EndPoint) : Int {})
-  public function ReceiveFrom(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, flags:SocketFlags, remoteEP:dotnet.system.net.EndPoint) : Int;
+  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, remoteEP:cs.Ref<dotnet.system.net.EndPoint>) : Int {})
+  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, flags:SocketFlags, remoteEP:cs.Ref<dotnet.system.net.EndPoint>) : Int {})
+  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, size:Int, flags:SocketFlags, remoteEP:cs.Ref<dotnet.system.net.EndPoint>) : Int {})
+  public function ReceiveFrom(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, flags:SocketFlags, remoteEP:cs.Ref<dotnet.system.net.EndPoint>) : Int;
 
   public function ReceiveFromAsync(e:SocketAsyncEventArgs) : Bool;
 
-  public function ReceiveMessageFrom(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, socketFlags:SocketFlags, remoteEP:dotnet.system.net.EndPoint, ipPacketInformation:IPPacketInformation) : Int;
+  public function ReceiveMessageFrom(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, socketFlags:cs.Ref<SocketFlags>, remoteEP:cs.Ref<dotnet.system.net.EndPoint>, ipPacketInformation:cs.Out<IPPacketInformation>) : Int;
 
   public function ReceiveMessageFromAsync(e:SocketAsyncEventArgs) : Bool;
 
@@ -147,10 +147,10 @@ extern class Socket extends dotnet.system.Object  implements dotnet.system.IDisp
   @:overload(function(buf:cs.NativeArray<dotnet.system.Byte>, flags:SocketFlags) : Int {})
   @:overload(function(buf:cs.NativeArray<dotnet.system.Byte>, size:Int, flags:SocketFlags) : Int {})
   @:overload(function(buf:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, flags:SocketFlags) : Int {})
-  @:overload(function(buf:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, flags:SocketFlags, error:SocketError) : Int {})
+  @:overload(function(buf:cs.NativeArray<dotnet.system.Byte>, offset:Int, size:Int, flags:SocketFlags, error:cs.Out<SocketError>) : Int {})
   @:overload(function(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>) : Int {})
   @:overload(function(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags) : Int {})
-  public function Send(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags, errorCode:SocketError) : Int;
+  public function Send(buffers:dotnet.system.collections.generic.IList<dotnet.system.ArraySegment<dotnet.system.Byte>>, socketFlags:SocketFlags, errorCode:cs.Out<SocketError>) : Int;
 
   public function SendAsync(e:SocketAsyncEventArgs) : Bool;
 

@@ -58,7 +58,7 @@ extern class Byte extends ValueType  implements IComparable1<Byte> implements IE
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
-  @:overload(function(s:String, result:Byte) : Bool {})
-  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Byte) : Bool;
+  @:overload(function(s:String, result:cs.Out<Byte>) : Bool {})
+  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:cs.Out<Byte>) : Bool;
 }
 

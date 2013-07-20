@@ -19,7 +19,7 @@ extern interface IInternalConfigHost {
 
   function GetConfigTypeName(t:cs.system.Type) : String;
 
-  function GetRestrictedPermissions(configRecord:IInternalConfigRecord, permissionSet:dotnet.system.security.PermissionSet, isHostReady:Bool) : Void;
+  function GetRestrictedPermissions(configRecord:IInternalConfigRecord, permissionSet:cs.Out<dotnet.system.security.PermissionSet>, isHostReady:cs.Out<Bool>) : Void;
 
   function GetStreamName(configPath:String) : String;
 
@@ -31,7 +31,7 @@ extern interface IInternalConfigHost {
 
   function Init(root:IInternalConfigRoot, hostInitParams:cs.NativeArray<dotnet.system.Object>) : Void;
 
-  function InitForConfiguration(locationSubPath:String, configPath:String, locationConfigPath:String, root:IInternalConfigRoot, hostInitConfigurationParams:cs.NativeArray<dotnet.system.Object>) : Void;
+  function InitForConfiguration(locationSubPath:cs.Ref<String>, configPath:cs.Out<String>, locationConfigPath:cs.Out<String>, root:IInternalConfigRoot, hostInitConfigurationParams:cs.NativeArray<dotnet.system.Object>) : Void;
 
   function IsAboveApplication(configPath:String) : Bool;
 
@@ -54,8 +54,8 @@ extern interface IInternalConfigHost {
   @:overload(function(streamName:String) : dotnet.system.io.Stream {})
   function OpenStreamForRead(streamName:String, assertPermissions:Bool) : dotnet.system.io.Stream;
 
-  @:overload(function(streamName:String, templateStreamName:String, writeContext:Dynamic) : dotnet.system.io.Stream {})
-  function OpenStreamForWrite(streamName:String, templateStreamName:String, writeContext:Dynamic, assertPermissions:Bool) : dotnet.system.io.Stream;
+  @:overload(function(streamName:String, templateStreamName:String, writeContext:cs.Ref<Dynamic>) : dotnet.system.io.Stream {})
+  function OpenStreamForWrite(streamName:String, templateStreamName:String, writeContext:cs.Ref<Dynamic>, assertPermissions:Bool) : dotnet.system.io.Stream;
 
   function PrefetchAll(configPath:String, streamName:String) : Bool;
 

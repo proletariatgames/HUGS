@@ -9,8 +9,8 @@ extern class BufferedStream extends Stream {
   @:overload(function() : Void {})
   public override function Flush() : Void;
 
-  @:overload(function(array:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int {})
-  public override function Read(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int;
+  @:overload(function(array:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int {})
+  public override function Read(buffer:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int;
 
   @:overload(function() : Int {})
   public override function ReadByte() : Int;

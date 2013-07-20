@@ -35,7 +35,7 @@ extern class GUIStyle extends dotnet.system.Object {
 
   public function CalcHeight(content:GUIContent, width:Single) : Single;
 
-  public function CalcMinMaxWidth(content:GUIContent, minWidth:Single, maxWidth:Single) : Void;
+  public function CalcMinMaxWidth(content:GUIContent, minWidth:cs.Out<Single>, maxWidth:cs.Out<Single>) : Void;
 
   public function CalcScreenSize(contentSize:Vector2) : Vector2;
 

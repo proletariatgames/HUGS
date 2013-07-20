@@ -70,7 +70,7 @@ extern class Single extends ValueType  implements IComparable implements IConver
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
-  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Single) : Bool {})
-  public static function TryParse(s:String, result:Single) : Bool;
+  @:overload(function(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:cs.Out<Single>) : Bool {})
+  public static function TryParse(s:String, result:cs.Out<Single>) : Bool;
 }
 

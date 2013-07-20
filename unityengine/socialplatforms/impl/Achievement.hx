@@ -1,7 +1,7 @@
 package unityengine.socialplatforms.impl;
 
 @:native("UnityEngine.SocialPlatforms.Impl.Achievement")
-extern class Achievement extends dotnet.system.Object  implements dotnet.unityengine.socialplatforms.IAchievement {
+extern class Achievement extends dotnet.system.Object  implements unityengine.socialplatforms.IAchievement {
   public var id : String;
   public var percentCompleted : Float;
   public var completed(default,never) : Bool;

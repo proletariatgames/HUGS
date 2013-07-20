@@ -129,7 +129,7 @@ extern class Decimal_Static {
 
   public static function Truncate(d:Decimal) : Decimal;
 
-  @:overload(function(s:String, result:Decimal) : Bool {})
-  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Decimal) : Bool;
+  @:overload(function(s:String, result:cs.Out<Decimal>) : Bool {})
+  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:cs.Out<Decimal>) : Bool;
 }
 

@@ -52,17 +52,17 @@ extern class Thread extends dotnet.system.runtime.constrainedexecution.CriticalF
   @:overload(function() : Int {})
   public override function GetHashCode() : Int;
 
-  function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
+  function GetIDsOfNames(riid:cs.Ref<dotnet.system.Guid>, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
 
   public static function GetNamedDataSlot(name:String) : dotnet.system.LocalDataStoreSlot;
 
   function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:dotnet.system.IntPtr) : Void;
 
-  function GetTypeInfoCount(pcTInfo:UInt) : Void;
+  function GetTypeInfoCount(pcTInfo:cs.Out<UInt>) : Void;
 
   public function Interrupt() : Void;
 
-  function Invoke(dispIdMember:UInt, riid:dotnet.system.Guid, lcid:UInt, wFlags:Int, pDispParams:dotnet.system.IntPtr, pVarResult:dotnet.system.IntPtr, pExcepInfo:dotnet.system.IntPtr, puArgErr:dotnet.system.IntPtr) : Void;
+  function Invoke(dispIdMember:UInt, riid:cs.Ref<dotnet.system.Guid>, lcid:UInt, wFlags:Int, pDispParams:dotnet.system.IntPtr, pVarResult:dotnet.system.IntPtr, pExcepInfo:dotnet.system.IntPtr, puArgErr:dotnet.system.IntPtr) : Void;
 
   @:overload(function() : Void {})
   @:overload(function(millisecondsTimeout:Int) : Bool {})
@@ -92,26 +92,26 @@ extern class Thread extends dotnet.system.runtime.constrainedexecution.CriticalF
 
   public function TrySetApartmentState(state:ApartmentState) : Bool;
 
-  @:overload(function(address:dotnet.system.Byte) : dotnet.system.Byte {})
-  @:overload(function(address:Float) : Float {})
-  @:overload(function(address:Int) : Int {})
-  @:overload(function(address:dotnet.system.Int64) : dotnet.system.Int64 {})
-  @:overload(function(address:dotnet.system.IntPtr) : dotnet.system.IntPtr {})
-  @:overload(function(address:Dynamic) : Dynamic {})
-  @:overload(function(address:Single) : Single {})
-  @:overload(function(address:UInt) : UInt {})
-  @:overload(function(address:dotnet.system.UInt64) : dotnet.system.UInt64 {})
-  public static function VolatileRead(address:dotnet.system.UIntPtr) : dotnet.system.UIntPtr;
+  @:overload(function(address:cs.Ref<dotnet.system.Byte>) : dotnet.system.Byte {})
+  @:overload(function(address:cs.Ref<Float>) : Float {})
+  @:overload(function(address:cs.Ref<Int>) : Int {})
+  @:overload(function(address:cs.Ref<dotnet.system.Int64>) : dotnet.system.Int64 {})
+  @:overload(function(address:cs.Ref<dotnet.system.IntPtr>) : dotnet.system.IntPtr {})
+  @:overload(function(address:cs.Ref<Dynamic>) : Dynamic {})
+  @:overload(function(address:cs.Ref<Single>) : Single {})
+  @:overload(function(address:cs.Ref<UInt>) : UInt {})
+  @:overload(function(address:cs.Ref<dotnet.system.UInt64>) : dotnet.system.UInt64 {})
+  public static function VolatileRead(address:cs.Ref<dotnet.system.UIntPtr>) : dotnet.system.UIntPtr;
 
-  @:overload(function(address:dotnet.system.Byte, value:dotnet.system.Byte) : Void {})
-  @:overload(function(address:Float, value:Float) : Void {})
-  @:overload(function(address:Int, value:Int) : Void {})
-  @:overload(function(address:dotnet.system.Int64, value:dotnet.system.Int64) : Void {})
-  @:overload(function(address:dotnet.system.IntPtr, value:dotnet.system.IntPtr) : Void {})
-  @:overload(function(address:Dynamic, value:Dynamic) : Void {})
-  @:overload(function(address:Single, value:Single) : Void {})
-  @:overload(function(address:UInt, value:UInt) : Void {})
-  @:overload(function(address:dotnet.system.UInt64, value:dotnet.system.UInt64) : Void {})
-  public static function VolatileWrite(address:dotnet.system.UIntPtr, value:dotnet.system.UIntPtr) : Void;
+  @:overload(function(address:cs.Ref<dotnet.system.Byte>, value:dotnet.system.Byte) : Void {})
+  @:overload(function(address:cs.Ref<Float>, value:Float) : Void {})
+  @:overload(function(address:cs.Ref<Int>, value:Int) : Void {})
+  @:overload(function(address:cs.Ref<dotnet.system.Int64>, value:dotnet.system.Int64) : Void {})
+  @:overload(function(address:cs.Ref<dotnet.system.IntPtr>, value:dotnet.system.IntPtr) : Void {})
+  @:overload(function(address:cs.Ref<Dynamic>, value:Dynamic) : Void {})
+  @:overload(function(address:cs.Ref<Single>, value:Single) : Void {})
+  @:overload(function(address:cs.Ref<UInt>, value:UInt) : Void {})
+  @:overload(function(address:cs.Ref<dotnet.system.UInt64>, value:dotnet.system.UInt64) : Void {})
+  public static function VolatileWrite(address:cs.Ref<dotnet.system.UIntPtr>, value:dotnet.system.UIntPtr) : Void;
 }
 

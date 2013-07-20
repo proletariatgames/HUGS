@@ -5,7 +5,7 @@ extern class SecurityManager extends dotnet.system.Object {
   public static var CheckExecutionRights : Bool;
   public static var SecurityEnabled : Bool;
 
-  public static function GetZoneAndOrigin(zone:dotnet.system.collections.ArrayList, origin:dotnet.system.collections.ArrayList) : Void;
+  public static function GetZoneAndOrigin(zone:cs.Out<dotnet.system.collections.ArrayList>, origin:cs.Out<dotnet.system.collections.ArrayList>) : Void;
 
   public static function IsGranted(perm:IPermission) : Bool;
 
@@ -17,7 +17,7 @@ extern class SecurityManager extends dotnet.system.Object {
 
   @:overload(function(evidence:dotnet.system.security.policy.Evidence) : PermissionSet {})
   @:overload(function(evidences:cs.NativeArray<dotnet.system.security.policy.Evidence>) : PermissionSet {})
-  public static function ResolvePolicy(evidence:dotnet.system.security.policy.Evidence, reqdPset:PermissionSet, optPset:PermissionSet, denyPset:PermissionSet, denied:PermissionSet) : PermissionSet;
+  public static function ResolvePolicy(evidence:dotnet.system.security.policy.Evidence, reqdPset:PermissionSet, optPset:PermissionSet, denyPset:PermissionSet, denied:cs.Out<PermissionSet>) : PermissionSet;
 
   public static function ResolvePolicyGroups(evidence:dotnet.system.security.policy.Evidence) : dotnet.system.collections.IEnumerator;
 

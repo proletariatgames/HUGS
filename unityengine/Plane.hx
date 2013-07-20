@@ -13,7 +13,7 @@ extern class Plane extends dotnet.system.ValueType {
 
   public function GetSide(inPt:Vector3) : Bool;
 
-  public function Raycast(ray:Ray, enter:Single) : Bool;
+  public function Raycast(ray:Ray, enter:cs.Out<Single>) : Bool;
 
   public function SameSide(inPt0:Vector3, inPt1:Vector3) : Bool;
 

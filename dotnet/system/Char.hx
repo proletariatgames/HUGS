@@ -126,6 +126,6 @@ extern class Char_Static {
 
   public static function ToUpperInvariant(c:Char) : Char;
 
-  public static function TryParse(s:String, result:Char) : Bool;
+  public static function TryParse(s:String, result:cs.Out<Char>) : Bool;
 }
 

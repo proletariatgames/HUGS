@@ -1,8 +1,8 @@
 package unityengine.socialplatforms.impl;
 
 @:native("UnityEngine.SocialPlatforms.Impl.LocalUser")
-extern class LocalUser extends UserProfile  implements dotnet.unityengine.socialplatforms.ILocalUser implements dotnet.unityengine.socialplatforms.IUserProfile {
-  public var friends(default,never) : cs.NativeArray<dotnet.unityengine.socialplatforms.IUserProfile>;
+extern class LocalUser extends UserProfile  implements unityengine.socialplatforms.ILocalUser implements unityengine.socialplatforms.IUserProfile {
+  public var friends(default,never) : cs.NativeArray<unityengine.socialplatforms.IUserProfile>;
   public var authenticated(default,never) : Bool;
   public var underage(default,never) : Bool;
 
@@ -14,7 +14,7 @@ extern class LocalUser extends UserProfile  implements dotnet.unityengine.social
 
   public function SetAuthenticated(value:Bool) : Void;
 
-  public function SetFriends(friends:cs.NativeArray<dotnet.unityengine.socialplatforms.IUserProfile>) : Void;
+  public function SetFriends(friends:cs.NativeArray<unityengine.socialplatforms.IUserProfile>) : Void;
 
   public function SetUnderage(value:Bool) : Void;
 }

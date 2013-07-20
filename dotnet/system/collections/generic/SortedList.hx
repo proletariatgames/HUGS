@@ -49,6 +49,6 @@ extern class SortedList<TKey,TValue> extends dotnet.system.Object  implements do
 
   public function TrimExcess() : Void;
 
-  public function TryGetValue(key:TKey, value:TValue) : Bool;
+  public function TryGetValue(key:TKey, value:cs.Out<TValue>) : Bool;
 }
 

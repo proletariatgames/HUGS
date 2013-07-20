@@ -10,19 +10,19 @@ extern interface _FieldInfo {
 
   function GetHashCode() : Int;
 
-  function GetIDsOfNames(riid:dotnet.system.Guid, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
+  function GetIDsOfNames(riid:cs.Ref<dotnet.system.Guid>, rgszNames:dotnet.system.IntPtr, cNames:UInt, lcid:UInt, rgDispId:dotnet.system.IntPtr) : Void;
 
   function GetType() : cs.system.Type;
 
   function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:dotnet.system.IntPtr) : Void;
 
-  function GetTypeInfoCount(pcTInfo:UInt) : Void;
+  function GetTypeInfoCount(pcTInfo:cs.Out<UInt>) : Void;
 
   function GetValue(obj:Dynamic) : Dynamic;
 
   function GetValueDirect(obj:dotnet.system.TypedReference) : Dynamic;
 
-  function Invoke(dispIdMember:UInt, riid:dotnet.system.Guid, lcid:UInt, wFlags:Int, pDispParams:dotnet.system.IntPtr, pVarResult:dotnet.system.IntPtr, pExcepInfo:dotnet.system.IntPtr, puArgErr:dotnet.system.IntPtr) : Void;
+  function Invoke(dispIdMember:UInt, riid:cs.Ref<dotnet.system.Guid>, lcid:UInt, wFlags:Int, pDispParams:dotnet.system.IntPtr, pVarResult:dotnet.system.IntPtr, pExcepInfo:dotnet.system.IntPtr, puArgErr:dotnet.system.IntPtr) : Void;
 
   function IsDefined(attributeType:cs.system.Type, inherit:Bool) : Bool;
 

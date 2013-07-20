@@ -29,7 +29,7 @@ extern class PipeStream extends dotnet.system.io.Stream {
   public function GetAccessControl() : PipeSecurity;
 
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int {})
-  public override function Read(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int;
+  public override function Read(buffer:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int;
 
   @:overload(function() : Int {})
   public override function ReadByte() : Int;

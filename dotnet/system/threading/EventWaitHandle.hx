@@ -5,8 +5,8 @@ extern class EventWaitHandle extends WaitHandle {
 
   @:overload(function(initialState:Bool, mode:EventResetMode) : Void {})
   @:overload(function(initialState:Bool, mode:EventResetMode, name:String) : Void {})
-  @:overload(function(initialState:Bool, mode:EventResetMode, name:String, createdNew:Bool) : Void {})
-  public function new(initialState:Bool, mode:EventResetMode, name:String, createdNew:Bool, eventSecurity:dotnet.system.security.accesscontrol.EventWaitHandleSecurity) : Void;
+  @:overload(function(initialState:Bool, mode:EventResetMode, name:String, createdNew:cs.Out<Bool>) : Void {})
+  public function new(initialState:Bool, mode:EventResetMode, name:String, createdNew:cs.Out<Bool>, eventSecurity:dotnet.system.security.accesscontrol.EventWaitHandleSecurity) : Void;
 
   public function GetAccessControl() : dotnet.system.security.accesscontrol.EventWaitHandleSecurity;
 

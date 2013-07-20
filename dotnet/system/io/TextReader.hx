@@ -12,9 +12,9 @@ extern class TextReader extends dotnet.system.MarshalByRefObject  implements dot
   public function Peek() : Int;
 
   @:overload(function() : Int {})
-  public function Read(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Int;
+  public function Read(buffer:cs.Out<cs.NativeArray<dotnet.system.Char>>, index:Int, count:Int) : Int;
 
-  public function ReadBlock(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Int;
+  public function ReadBlock(buffer:cs.Out<cs.NativeArray<dotnet.system.Char>>, index:Int, count:Int) : Int;
 
   public function ReadLine() : String;
 

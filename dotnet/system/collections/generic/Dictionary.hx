@@ -122,6 +122,6 @@ extern class Dictionary<TKey,TValue> extends dotnet.system.Object  implements ID
   @:overload(function(keyValuePair:KeyValuePair<TKey,TValue>) : Bool {})
   public function Remove(key:TKey) : Bool;
 
-  public function TryGetValue(key:TKey, value:TValue) : Bool;
+  public function TryGetValue(key:TKey, value:cs.Out<TValue>) : Bool;
 }
 

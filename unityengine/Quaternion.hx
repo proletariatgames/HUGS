@@ -33,9 +33,9 @@ extern class Quaternion extends dotnet.system.ValueType {
   @:overload(function(view:Vector3) : Void {})
   public function SetLookRotation(view:Vector3, up:Vector3) : Void;
 
-  public function ToAngleAxis(angle:Single, axis:Vector3) : Void;
+  public function ToAngleAxis(angle:cs.Out<Single>, axis:cs.Out<Vector3>) : Void;
 
-  public function ToAxisAngle(axis:Vector3, angle:Single) : Void;
+  public function ToAxisAngle(axis:cs.Out<Vector3>, angle:cs.Out<Single>) : Void;
 
   public function ToEuler() : Vector3;
 

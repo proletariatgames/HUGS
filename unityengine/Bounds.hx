@@ -25,7 +25,7 @@ extern class Bounds extends dotnet.system.ValueType {
   public override function GetHashCode() : Int;
 
   @:overload(function(ray:Ray) : Bool {})
-  public function IntersectRay(ray:Ray, distance:Single) : Bool;
+  public function IntersectRay(ray:Ray, distance:cs.Out<Single>) : Bool;
 
   public function Intersects(bounds:Bounds) : Bool;
 

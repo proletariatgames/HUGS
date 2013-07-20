@@ -24,9 +24,9 @@ extern class ObjectSecurity extends dotnet.system.Object {
 
   public static function IsSddlConversionSupported() : Bool;
 
-  public function ModifyAccessRule(modification:AccessControlModification, rule:AccessRule, modified:Bool) : Bool;
+  public function ModifyAccessRule(modification:AccessControlModification, rule:AccessRule, modified:cs.Out<Bool>) : Bool;
 
-  public function ModifyAuditRule(modification:AccessControlModification, rule:AuditRule, modified:Bool) : Bool;
+  public function ModifyAuditRule(modification:AccessControlModification, rule:AuditRule, modified:cs.Out<Bool>) : Bool;
 
   public function PurgeAccessRules(identity:dotnet.system.security.principal.IdentityReference) : Void;
 

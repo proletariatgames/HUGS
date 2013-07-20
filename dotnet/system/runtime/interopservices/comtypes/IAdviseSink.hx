@@ -5,7 +5,7 @@ extern interface IAdviseSink {
 
   function OnClose() : Void;
 
-  function OnDataChange(format:FORMATETC, stgmedium:STGMEDIUM) : Void;
+  function OnDataChange(format:cs.Ref<FORMATETC>, stgmedium:cs.Ref<STGMEDIUM>) : Void;
 
   function OnRename(moniker:IMoniker) : Void;
 

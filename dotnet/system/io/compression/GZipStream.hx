@@ -23,7 +23,7 @@ extern class GZipStream extends dotnet.system.io.Stream {
   public override function Flush() : Void;
 
   @:overload(function(dest:cs.NativeArray<dotnet.system.Byte>, dest_offset:Int, count:Int) : Int {})
-  public override function Read(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int;
+  public override function Read(buffer:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int;
 
   @:overload(function(offset:dotnet.system.Int64, origin:dotnet.system.io.SeekOrigin) : dotnet.system.Int64 {})
   public override function Seek(offset:dotnet.system.Int64, origin:dotnet.system.io.SeekOrigin) : dotnet.system.Int64;

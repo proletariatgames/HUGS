@@ -94,13 +94,13 @@ extern class Mathf extends dotnet.system.ValueType {
 
   public static function Sin(f:Single) : Single;
 
-  @:overload(function(current:Single, target:Single, currentVelocity:Single, smoothTime:Single, maxSpeed:Single) : Single {})
-  @:overload(function(current:Single, target:Single, currentVelocity:Single, smoothTime:Single) : Single {})
-  public static function SmoothDamp(current:Single, target:Single, currentVelocity:Single, smoothTime:Single, maxSpeed:Single, deltaTime:Single) : Single;
+  @:overload(function(current:Single, target:Single, currentVelocity:cs.Ref<Single>, smoothTime:Single, maxSpeed:Single) : Single {})
+  @:overload(function(current:Single, target:Single, currentVelocity:cs.Ref<Single>, smoothTime:Single) : Single {})
+  public static function SmoothDamp(current:Single, target:Single, currentVelocity:cs.Ref<Single>, smoothTime:Single, maxSpeed:Single, deltaTime:Single) : Single;
 
-  @:overload(function(current:Single, target:Single, currentVelocity:Single, smoothTime:Single, maxSpeed:Single) : Single {})
-  @:overload(function(current:Single, target:Single, currentVelocity:Single, smoothTime:Single) : Single {})
-  public static function SmoothDampAngle(current:Single, target:Single, currentVelocity:Single, smoothTime:Single, maxSpeed:Single, deltaTime:Single) : Single;
+  @:overload(function(current:Single, target:Single, currentVelocity:cs.Ref<Single>, smoothTime:Single, maxSpeed:Single) : Single {})
+  @:overload(function(current:Single, target:Single, currentVelocity:cs.Ref<Single>, smoothTime:Single) : Single {})
+  public static function SmoothDampAngle(current:Single, target:Single, currentVelocity:cs.Ref<Single>, smoothTime:Single, maxSpeed:Single, deltaTime:Single) : Single;
 
   public static function SmoothStep(from:Single, to:Single, t:Single) : Single;
 

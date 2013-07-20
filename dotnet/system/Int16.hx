@@ -58,7 +58,7 @@ extern class Int16 extends ValueType  implements IComparable implements ICompara
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
-  @:overload(function(s:String, result:Int) : Bool {})
-  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:Int) : Bool;
+  @:overload(function(s:String, result:cs.Out<Int>) : Bool {})
+  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:cs.Out<Int>) : Bool;
 }
 

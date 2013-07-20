@@ -22,7 +22,7 @@ extern interface IComNativeDescriptorHandler {
 
   function GetProperties(component:Dynamic, attributes:cs.NativeArray<dotnet.system.Attribute>) : PropertyDescriptorCollection;
 
-  @:overload(function(component:Dynamic, dispid:Int, success:Bool) : Dynamic {})
-  function GetPropertyValue(component:Dynamic, propertyName:String, success:Bool) : Dynamic;
+  @:overload(function(component:Dynamic, dispid:Int, success:cs.Ref<Bool>) : Dynamic {})
+  function GetPropertyValue(component:Dynamic, propertyName:String, success:cs.Ref<Bool>) : Dynamic;
 }
 

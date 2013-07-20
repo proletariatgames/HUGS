@@ -32,7 +32,7 @@ extern class ReaderWriterLockSlim extends dotnet.system.Object  implements dotne
   public function ExitWriteLock() : Void;
 
   @:overload(function(millisecondsTimeout:Int) : Bool {})
-  @:overload(function(millisecondsTimeout:Int, success:Bool) : Bool {})
+  @:overload(function(millisecondsTimeout:Int, success:cs.Ref<Bool>) : Bool {})
   public function TryEnterReadLock(timeout:dotnet.system.TimeSpan) : Bool;
 
   @:overload(function(millisecondsTimeout:Int) : Bool {})

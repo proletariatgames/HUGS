@@ -7,6 +7,6 @@ extern interface ISurrogateSelector {
 
   function GetNextSelector() : ISurrogateSelector;
 
-  function GetSurrogate(type:cs.system.Type, context:StreamingContext, selector:ISurrogateSelector) : ISerializationSurrogate;
+  function GetSurrogate(type:cs.system.Type, context:StreamingContext, selector:cs.Out<ISurrogateSelector>) : ISerializationSurrogate;
 }
 

@@ -17,8 +17,8 @@ extern class MemoryStream extends Stream {
 
   public function GetBuffer() : cs.NativeArray<dotnet.system.Byte>;
 
-  @:overload(function(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int {})
-  public override function Read(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int;
+  @:overload(function(buffer:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int {})
+  public override function Read(buffer:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int;
 
   @:overload(function() : Int {})
   public override function ReadByte() : Int;

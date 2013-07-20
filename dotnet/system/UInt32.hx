@@ -58,7 +58,7 @@ extern class UInt32 extends ValueType  implements IComparable implements IConver
 
   function ToUInt64(provider:IFormatProvider) : UInt64;
 
-  @:overload(function(s:String, result:UInt) : Bool {})
-  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:UInt) : Bool;
+  @:overload(function(s:String, result:cs.Out<UInt>) : Bool {})
+  public static function TryParse(s:String, style:dotnet.system.globalization.NumberStyles, provider:IFormatProvider, result:cs.Out<UInt>) : Bool;
 }
 

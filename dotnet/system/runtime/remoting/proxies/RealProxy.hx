@@ -23,6 +23,6 @@ extern class RealProxy extends dotnet.system.Object {
 
   public static function SetStubData(rp:RealProxy, stubData:Dynamic) : Void;
 
-  public function SupportsInterface(iid:dotnet.system.Guid) : dotnet.system.IntPtr;
+  public function SupportsInterface(iid:cs.Ref<dotnet.system.Guid>) : dotnet.system.IntPtr;
 }
 

@@ -69,7 +69,7 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
 
   public static function HexEscape(character:Char) : String;
 
-  public static function HexUnescape(pattern:String, index:Int) : Char;
+  public static function HexUnescape(pattern:String, index:cs.Ref<Int>) : Char;
 
   public function IsBaseOf(uri:Uri) : Bool;
 
@@ -88,9 +88,9 @@ extern class Uri extends Object  implements dotnet.system.runtime.serialization.
   @:overload(function() : String {})
   public override function ToString() : String;
 
-  @:overload(function(uriString:String, uriKind:UriKind, result:Uri) : Bool {})
-  @:overload(function(baseUri:Uri, relativeUri:String, result:Uri) : Bool {})
-  public static function TryCreate(baseUri:Uri, relativeUri:Uri, result:Uri) : Bool;
+  @:overload(function(uriString:String, uriKind:UriKind, result:cs.Out<Uri>) : Bool {})
+  @:overload(function(baseUri:Uri, relativeUri:String, result:cs.Out<Uri>) : Bool {})
+  public static function TryCreate(baseUri:Uri, relativeUri:Uri, result:cs.Out<Uri>) : Bool;
 
   public static function UnescapeDataString(stringToUnescape:String) : String;
 }

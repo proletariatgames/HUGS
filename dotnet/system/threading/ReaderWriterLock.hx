@@ -16,7 +16,7 @@ extern class ReaderWriterLock extends dotnet.system.runtime.constrainedexecution
 
   public function new() : Void;
 
-  public function DowngradeFromWriterLock(lockCookie:LockCookie) : Void;
+  public function DowngradeFromWriterLock(lockCookie:cs.Ref<LockCookie>) : Void;
 
   public function ReleaseLock() : LockCookie;
 
@@ -24,7 +24,7 @@ extern class ReaderWriterLock extends dotnet.system.runtime.constrainedexecution
 
   public function ReleaseWriterLock() : Void;
 
-  public function RestoreLock(lockCookie:LockCookie) : Void;
+  public function RestoreLock(lockCookie:cs.Ref<LockCookie>) : Void;
 
   @:overload(function(millisecondsTimeout:Int) : LockCookie {})
   public function UpgradeToWriterLock(timeout:dotnet.system.TimeSpan) : LockCookie;

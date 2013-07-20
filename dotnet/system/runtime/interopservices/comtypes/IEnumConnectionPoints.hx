@@ -3,9 +3,9 @@ package dotnet.system.runtime.interopservices.comtypes;
 @:native("System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints")
 extern interface IEnumConnectionPoints {
 
-  function Clone(ppenum:IEnumConnectionPoints) : Void;
+  function Clone(ppenum:cs.Out<IEnumConnectionPoints>) : Void;
 
-  function Next(celt:Int, rgelt:cs.NativeArray<IConnectionPoint>, pceltFetched:dotnet.system.IntPtr) : Int;
+  function Next(celt:Int, rgelt:cs.Out<cs.NativeArray<IConnectionPoint>>, pceltFetched:dotnet.system.IntPtr) : Int;
 
   function Reset() : Void;
 

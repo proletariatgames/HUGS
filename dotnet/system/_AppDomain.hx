@@ -38,7 +38,7 @@ extern interface _AppDomain {
 
   function GetHashCode() : Int;
 
-  function GetIDsOfNames(riid:Guid, rgszNames:IntPtr, cNames:UInt, lcid:UInt, rgDispId:IntPtr) : Void;
+  function GetIDsOfNames(riid:cs.Ref<Guid>, rgszNames:IntPtr, cNames:UInt, lcid:UInt, rgDispId:IntPtr) : Void;
 
   function GetLifetimeService() : Dynamic;
 
@@ -46,11 +46,11 @@ extern interface _AppDomain {
 
   function GetTypeInfo(iTInfo:UInt, lcid:UInt, ppTInfo:IntPtr) : Void;
 
-  function GetTypeInfoCount(pcTInfo:UInt) : Void;
+  function GetTypeInfoCount(pcTInfo:cs.Out<UInt>) : Void;
 
   function InitializeLifetimeService() : Dynamic;
 
-  function Invoke(dispIdMember:UInt, riid:Guid, lcid:UInt, wFlags:Int, pDispParams:IntPtr, pVarResult:IntPtr, pExcepInfo:IntPtr, puArgErr:IntPtr) : Void;
+  function Invoke(dispIdMember:UInt, riid:cs.Ref<Guid>, lcid:UInt, wFlags:Int, pDispParams:IntPtr, pVarResult:IntPtr, pExcepInfo:IntPtr, puArgErr:IntPtr) : Void;
 
   @:overload(function(assemblyRef:dotnet.system.reflection.AssemblyName) : dotnet.system.reflection.Assembly {})
   @:overload(function(rawAssembly:cs.NativeArray<Byte>) : dotnet.system.reflection.Assembly {})

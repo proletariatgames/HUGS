@@ -41,6 +41,6 @@ extern class IPAddress extends dotnet.system.Object {
   @:overload(function() : String {})
   public override function ToString() : String;
 
-  public static function TryParse(ipString:String, address:IPAddress) : Bool;
+  public static function TryParse(ipString:String, address:cs.Out<IPAddress>) : Bool;
 }
 

@@ -7,6 +7,6 @@ extern interface IServerChannelSink extends IChannelSinkBase {
 
   function GetResponseStream(sinkStack:IServerResponseChannelSinkStack, state:Dynamic, msg:dotnet.system.runtime.remoting.messaging.IMessage, headers:ITransportHeaders) : dotnet.system.io.Stream;
 
-  function ProcessMessage(sinkStack:IServerChannelSinkStack, requestMsg:dotnet.system.runtime.remoting.messaging.IMessage, requestHeaders:ITransportHeaders, requestStream:dotnet.system.io.Stream, responseMsg:dotnet.system.runtime.remoting.messaging.IMessage, responseHeaders:ITransportHeaders, responseStream:dotnet.system.io.Stream) : ServerProcessing;
+  function ProcessMessage(sinkStack:IServerChannelSinkStack, requestMsg:dotnet.system.runtime.remoting.messaging.IMessage, requestHeaders:ITransportHeaders, requestStream:dotnet.system.io.Stream, responseMsg:cs.Out<dotnet.system.runtime.remoting.messaging.IMessage>, responseHeaders:cs.Out<ITransportHeaders>, responseStream:cs.Out<dotnet.system.io.Stream>) : ServerProcessing;
 }
 

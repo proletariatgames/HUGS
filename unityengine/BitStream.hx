@@ -7,16 +7,16 @@ extern class BitStream extends dotnet.system.Object {
 
   public function new() : Void;
 
-  @:overload(function(value:Bool) : Void {})
-  @:overload(function(value:dotnet.system.Char) : Void {})
-  @:overload(function(value:Int) : Void {})
-  @:overload(function(value:Single) : Void {})
-  @:overload(function(value:Single, maxDelta:Single) : Void {})
-  @:overload(function(value:Quaternion) : Void {})
-  @:overload(function(value:Quaternion, maxDelta:Single) : Void {})
-  @:overload(function(value:Vector3) : Void {})
-  @:overload(function(value:Vector3, maxDelta:Single) : Void {})
-  @:overload(function(value:NetworkPlayer) : Void {})
-  public function Serialize(viewID:NetworkViewID) : Void;
+  @:overload(function(value:cs.Ref<Bool>) : Void {})
+  @:overload(function(value:cs.Ref<dotnet.system.Char>) : Void {})
+  @:overload(function(value:cs.Ref<Int>) : Void {})
+  @:overload(function(value:cs.Ref<Single>) : Void {})
+  @:overload(function(value:cs.Ref<Single>, maxDelta:Single) : Void {})
+  @:overload(function(value:cs.Ref<Quaternion>) : Void {})
+  @:overload(function(value:cs.Ref<Quaternion>, maxDelta:Single) : Void {})
+  @:overload(function(value:cs.Ref<Vector3>) : Void {})
+  @:overload(function(value:cs.Ref<Vector3>, maxDelta:Single) : Void {})
+  @:overload(function(value:cs.Ref<NetworkPlayer>) : Void {})
+  public function Serialize(viewID:cs.Ref<NetworkViewID>) : Void;
 }
 
