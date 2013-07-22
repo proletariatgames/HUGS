@@ -22,6 +22,10 @@ class HUGSWrapper {
     return new EnumeratorAdapter<T>(enumerable.GetEnumerator());
   }
 
+  public static function getComponentInChildrenOfType<T>(c:Component, type:Class<T>) : T { 
+    return cast c.GetComponentInChildren(cs.Lib.toNativeType(type));
+  }
+
   public static function getComponentsInChildrenOfType<T>(c:Component, type:Class<T>) : Iterator<T> {
     var t:cs.system.Type = cs.Lib.toNativeType(type);
     return cast new NativeArrayIterator<Component>(c.GetComponentsInChildren(t));
