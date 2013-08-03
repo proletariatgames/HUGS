@@ -1,9 +1,0 @@
-<project name="HUGS" url="https://github.com/proletariatgames/HUGS.git" license="BSD">
-  <user name="jkurlancheek"/>
-  <tag v="unity" />
-  <tag v="unity3d" />
-  <tag v="cs" />
-  <tag v="csharp" />
-  <description>Haxe Unity Glue... stuff</description>
-  <version name="0.1">Take 1</version>
-</project>

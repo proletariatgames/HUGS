@@ -1,0 +1,13 @@
+{
+  "name": "HUGS",
+  "url": "https://github.com/proletariatgames/HUGS.git",
+  "license": "BSD",
+  "tags": ["unity","unity3d","cs","csharp"],
+  "description": "Haxe Unity Glue... stuff",
+  "version": "0.1.1",
+  "releasenote": "Take 1",
+  "contributors": ["jkurlancheek","dogles","joemukai","axgord"],
+  "dependencies": {
+
+  }
+}
