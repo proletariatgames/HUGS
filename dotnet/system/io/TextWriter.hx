@@ -16,7 +16,7 @@ extern class TextWriter extends dotnet.system.MarshalByRefObject  implements dot
 
   public static function Synchronized(writer:TextWriter) : TextWriter;
 
-  @:overload(function(value:Bool) : Void {})
+  @:overload(function(format:String, arg0:Dynamic, arg1:Dynamic, arg2:Dynamic) : Void {})
   @:overload(function(value:dotnet.system.Char) : Void {})
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Char>) : Void {})
   @:overload(function(value:dotnet.system.Decimal) : Void {})
@@ -32,7 +32,7 @@ extern class TextWriter extends dotnet.system.MarshalByRefObject  implements dot
   @:overload(function(format:String, arg:cs.NativeArray<dotnet.system.Object>) : Void {})
   @:overload(function(buffer:cs.NativeArray<dotnet.system.Char>, index:Int, count:Int) : Void {})
   @:overload(function(format:String, arg0:Dynamic, arg1:Dynamic) : Void {})
-  public function Write(format:String, arg0:Dynamic, arg1:Dynamic, arg2:Dynamic) : Void;
+  public function Write(value:Bool) : Void;
 
   @:overload(function() : Void {})
   @:overload(function(value:Bool) : Void {})
