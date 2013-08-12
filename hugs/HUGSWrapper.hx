@@ -8,18 +8,10 @@ import unityengine.Vector3;
 import dotnet.system.collections.IEnumerable;
 import dotnet.system.collections.IEnumerator;
 
-class HUGSWrapper {
+class ComponentMethods {
 
   public static function getTypedComponent<T>(c:Component, type:Class<T>):T {
-    return cast c.GetComponent(cs.Lib.toNativeType(type).Name);
-  }
-
-  public static function adaptEnumerable(enumerable:IEnumerable) : Iterator<Dynamic> {
-    return new EnumeratorAdapter<Dynamic>(enumerable.GetEnumerator());
-  }
-
-  public static function adaptEnumerableT<T>(enumerable:IEnumerable, type:Class<T>) : Iterator<T> {
-    return new EnumeratorAdapter<T>(enumerable.GetEnumerator());
+    return cast c.GetComponent(cs.Lib.toNativeType(type));
   }
 
   public static function getComponentInChildrenOfType<T>(c:Component, type:Class<T>) : T { 
@@ -32,14 +24,25 @@ class HUGSWrapper {
   }
 }
 
+class EnumeratorMethods
+{
+  public static inline function iterator(enumerable:IEnumerable) : Iterator<Dynamic> {
+    return new EnumeratorAdapter<Dynamic>(enumerable.GetEnumerator());
+  }
+
+  public static inline function iteratorT<T>(enumerable:IEnumerable, type:Class<T>) : Iterator<T> {
+    return new EnumeratorAdapter<T>(enumerable.GetEnumerator());
+  }
+}
+
 class GameObjectMethods
 {
   public static function getTypedComponent<T>(g:GameObject, type:Class<T>):T {
-    return cast g.GetComponent(cs.Lib.toNativeType(type).Name);
+    return cast g.GetComponent(cs.Lib.toNativeType(type));
   }
 
   public static function addTypedComponent<T>(g:GameObject, type:Class<T>):T {
-    return cast g.AddComponent(cs.Lib.toNativeType(type).Name);
+    return cast g.AddComponent(cs.Lib.toNativeType(type));
   }
 
   public static function getComponentsOfType<T>(g:GameObject, type:Class<T>) : Iterator<T> {
