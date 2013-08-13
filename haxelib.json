@@ -4,9 +4,9 @@
   "license": "BSD",
   "tags": ["unity","unity3d","cs","csharp"],
   "description": "Haxe Unity Glue... stuff",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "releasenote": "Take 1",
-  "contributors": ["jkurlancheek","dogles","joemukai","axgord"],
+  "contributors": ["HUGS_Developers"],
   "dependencies": {
 
   }
