@@ -1,5 +1,6 @@
 package hugs;
 
+#if !WITHOUTUNITY
 import unityengine.GameObject;
 import unityengine.Component;
 import unityengine.Quaternion;
@@ -9,64 +10,86 @@ import unityengine.Vector3;
 import dotnet.system.collections.IEnumerable;
 import dotnet.system.collections.IEnumerator;
 
-class HUGSWrapper {
+class ComponentMethods {
 
   inline public static function getTypedComponent<T>(c:Component, type:Class<T>):T {
-    return cast c.GetComponent(cs.Lib.toNativeType(type).Name);
-  }
-
-  inline public static function adaptEnumerable(enumerable:IEnumerable) : Iterator<Dynamic> {
-    return new EnumeratorAdapter<Dynamic>(enumerable.GetEnumerator());
-  }
-
-  inline public static function adaptEnumerableT<T>(enumerable:IEnumerable, type:Class<T>) : Iterator<T> {
-    return new EnumeratorAdapter<T>(enumerable.GetEnumerator());
+    return cast c.GetComponent(cs.Lib.toNativeType(type));
   }
 
   inline public static function getComponentInChildrenOfType<T>(c:Component, type:Class<T>) : T { 
     return cast c.GetComponentInChildren(cs.Lib.toNativeType(type));
   }
 
+
   inline public static function getComponentsInChildrenOfType<T>(c:Component, type:Class<T>) : NativeArrayIterator<T> {
-    var t:cs.system.Type = cs.Lib.toNativeType(type);
-    return cast new NativeArrayIterator<Component>(c.GetComponentsInChildren(t));
+    return cast new NativeArrayIterator<Component>(c.GetComponentsInChildren(cs.Lib.toNativeType(type)));
   }
+  
   
   inline public static function getOrAddTypedComponent<T>(c:Component, type:Class<T>):T
     return GameObjectMethods.getOrAddTypedComponent(c.gameObject, type);
 		
   inline public static function getChildGameObject(c:Component, name:String):GameObject
     return GameObjectMethods.getChildGameObject(c.gameObject, name);
+	
+  inline public static function getParentTypedComponent<T>(c:Component, type:Class<T>):T
+	return GameObjectMethods.getParentTypedComponent(c.gameObject, type);
+}
+
+class EnumeratorMethods
+{
+  public static inline function iterator(enumerable:IEnumerable) : Iterator<Dynamic> {
+    return new EnumeratorAdapter<Dynamic>(enumerable.GetEnumerator());
+  }
+
+
+  public static inline function iteratorT<T>(enumerable:IEnumerable, type:Class<T>) : Iterator<T> {
+    return new EnumeratorAdapter<T>(enumerable.GetEnumerator());
+  }
 }
 
 class GameObjectMethods
 {
   inline public static function getTypedComponent<T>(g:GameObject, type:Class<T>):T {
-    return cast g.GetComponent(cs.Lib.toNativeType(type).Name);
+    return cast g.GetComponent(cs.Lib.toNativeType(type));
   }
+
 
   inline public static function addTypedComponent<T>(g:GameObject, type:Class<T>):T {
-    return cast g.AddComponent(cs.Lib.toNativeType(type).Name);
+    return cast g.AddComponent(cs.Lib.toNativeType(type));
   }
 
-  public static function getComponentsOfType<T>(g:GameObject, type:Class<T>) : NativeArrayIterator<T> {
-    var t:cs.system.Type = cs.Lib.toNativeType(type);
-    return cast new NativeArrayIterator<Component>(g.GetComponents(t));
+
+  inline public static function getComponentsOfType<T>(g:GameObject, type:Class<T>) : NativeArrayIterator<T> {
+    return cast new NativeArrayIterator<Component>(g.GetComponents(cs.Lib.toNativeType(type)));
   }
 
-  public static function getComponentsInChildrenOfType<T>(g:GameObject, type:Class<T>) : NativeArrayIterator<T> {
-    var t:cs.system.Type = cs.Lib.toNativeType(type);
-    return cast new NativeArrayIterator<Component>(g.GetComponentsInChildren(t));
+  inline public static function getComponentsInChildrenOfType<T>(g:GameObject, type:Class<T>) : NativeArrayIterator<T> {
+    return cast new NativeArrayIterator<Component>(g.GetComponentsInChildren(cs.Lib.toNativeType(type)));
   }
   
   public static function getOrAddTypedComponent<T>(c:GameObject, type:Class<T>):T {
     var o:T = getTypedComponent(c, type);
     return o == null ? GameObjectMethods.addTypedComponent(c.gameObject, type) : o;
   }
-
+  
   public static function getChildGameObject(gameObject:GameObject, name:String):GameObject {
     for (t in getComponentsInChildrenOfType(gameObject, Transform)) if (t.gameObject.name == name) return t.gameObject;
     return null;
+  }
+  
+  public static function getParentTypedComponent<T>(gameObject:GameObject, type:Class<T>):T {
+	  var cur:GameObject = gameObject;
+	  var t:Transform = null;
+	  while ((t = cur.transform.parent) != null) {
+		  cur = t.gameObject;
+		  trace(cur);
+		  trace(type);
+		  var c:T = getTypedComponent(cur, type);
+		  trace(c);
+		  if (c != null) return c;
+	  }
+	  return null;
   }
   
 }
@@ -112,6 +135,8 @@ class Vector3Methods
     return untyped __cs__("a==b");
   }
 }
+
+#end
 
 @:keep
 class EnumeratorAdapter<T>
