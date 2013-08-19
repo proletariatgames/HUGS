@@ -44,7 +44,7 @@ class Log {
     untyped __trace(v,infos);
 #elseif cs
     var str = infos.fileName + ":" + infos.lineNumber + ": " + v;
-#if HUGS
+#if (HUGS && !WITHOUTUNITY) 
     untyped __cs__("UnityEngine.Debug.Log(str)");
 #else
     untyped __cs__("System.Console.WriteLine(str)");
