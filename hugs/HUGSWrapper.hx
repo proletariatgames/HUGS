@@ -78,10 +78,7 @@ class GameObjectMethods
 	  var t:Transform = null;
 	  while ((t = cur.transform.parent) != null) {
 		  cur = t.gameObject;
-		  trace(cur);
-		  trace(type);
 		  var c:T = getTypedComponent(cur, type);
-		  trace(c);
 		  if (c != null) return c;
 	  }
 	  return null;
