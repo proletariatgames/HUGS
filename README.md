@@ -6,6 +6,17 @@ This library includes Haxe externs for Unity and .NET frameworks, generated via 
 includes the HUGSWrapper "using" class, which includes various things to work around Haxe/C# translation issues, as
 well as make working with Unity easier.
 
+
+Documentation forthcoming... 
+------------------------
+
+
+
+
+
+
+
+
 Additional libraries
 -------------------------
 <a href="https://github.com/AxGord/Pony">Pony</a>
