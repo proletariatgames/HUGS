@@ -10,7 +10,7 @@ well as make working with Unity easier.
 Documentation forthcoming... 
 ------------------------
 
-
+But in the mean time, you can check out our <a href="http://blog.proletariat.com/post/63641237563/free-hugs">blog</a> post on it.
 
 
 
