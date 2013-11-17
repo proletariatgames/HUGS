@@ -8,7 +8,7 @@ extern class WebHeaderCollection extends dotnet.system.collections.specialized.N
   @:overload(function(header:HttpRequestHeader, value:String) : Void {})
   @:overload(function(header:HttpResponseHeader, value:String) : Void {})
   @:overload(function(c:dotnet.system.collections.specialized.NameValueCollection) : Void {})
-  public override function Add(c:dotnet.system.collections.specialized.NameValueCollection) : Void;
+  public override function Add(name:String, val:String) : Void;
 
   @:overload(function() : Void {})
   public override function Clear() : Void;
@@ -16,8 +16,7 @@ extern class WebHeaderCollection extends dotnet.system.collections.specialized.N
   public function new() : Void;
 
   @:overload(function(index:Int) : String {})
-  @:overload(function(name:String) : String {})
-  public override function Get(index:Int) : String;
+  public override function Get(name:String) : String;
 
   @:overload(function() : dotnet.system.collections.IEnumerator {})
   public override function GetEnumerator() : dotnet.system.collections.IEnumerator;
@@ -31,7 +30,7 @@ extern class WebHeaderCollection extends dotnet.system.collections.specialized.N
 
   @:overload(function(header:String) : cs.NativeArray<String> {})
   @:overload(function(index:Int) : cs.NativeArray<String> {})
-  public override function GetValues(index:Int) : cs.NativeArray<String>;
+  public override function GetValues(name:String) : cs.NativeArray<String>;
 
   @:overload(function(headerName:String) : Bool {})
   public static function IsRestricted(headerName:String, response:Bool) : Bool;
