@@ -42,8 +42,8 @@ extern class X509Certificate2 extends X509Certificate {
   @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})
   @:overload(function(fileName:String) : Void {})
   @:overload(function(fileName:String, password:String, keyStorageFlags:X509KeyStorageFlags) : Void {})
-  @:overload(function(fileName:String, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void {})
-  public override function Import(rawData:cs.NativeArray<dotnet.system.Byte>) : Void;
+  @:overload(function(rawData:cs.NativeArray<dotnet.system.Byte>) : Void {})
+  public override function Import(fileName:String, password:dotnet.system.security.SecureString, keyStorageFlags:X509KeyStorageFlags) : Void;
 
   @:overload(function() : Void {})
   public override function Reset() : Void;
