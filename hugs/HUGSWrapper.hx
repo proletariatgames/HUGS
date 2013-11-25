@@ -20,8 +20,8 @@ class ComponentMethods {
     return cast c.GetComponentInChildren(cs.Lib.toNativeType(type));
   }
 
-  public static function getComponentsInChildrenOfType<T>(c:Component, type:Class<T>) : NativeArrayIterator<T> {
-    return cast new NativeArrayIterator<Component>(c.GetComponentsInChildren(cs.Lib.toNativeType(type)));
+  public static function getComponentsInChildrenOfType<T>(c:Component, type:Class<T>, includeInactive:Bool=false) : NativeArrayIterator<T> {
+    return cast new NativeArrayIterator<Component>(c.GetComponentsInChildren(cs.Lib.toNativeType(type), includeInactive));
   }
 
   inline public static function getOrAddTypedComponent<T>(c:Component, type:Class<T>):T
