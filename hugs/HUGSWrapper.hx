@@ -59,8 +59,8 @@ class GameObjectMethods
     return cast new NativeArrayIterator<Component>(g.GetComponents(cs.Lib.toNativeType(type)));
   }
 
-  public static function getComponentsInChildrenOfType<T>(g:GameObject, type:Class<T>) : NativeArrayIterator<T> {
-    return cast new NativeArrayIterator<Component>(g.GetComponentsInChildren(cs.Lib.toNativeType(type)));
+  public static function getComponentsInChildrenOfType<T>(g:GameObject, type:Class<T>, includeInactive:Bool=false) : NativeArrayIterator<T> {
+    return cast new NativeArrayIterator<Component>(g.GetComponentsInChildren(cs.Lib.toNativeType(type), includeInactive));
   }
 
   public static function getOrAddTypedComponent<T>(c:GameObject, type:Class<T>):T {
