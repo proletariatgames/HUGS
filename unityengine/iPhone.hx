@@ -1,8 +1,8 @@
 package unityengine;
 
 @:native("UnityEngine.iPhone") @:final
-extern class iPhone extends dotnet.system.Object {
-  public static var generation(default,never) : iPhoneGeneration;
+extern class IPhone extends dotnet.system.Object {
+  public static var generation(default,never) : IPhoneGeneration;
 
   public function new() : Void;
 

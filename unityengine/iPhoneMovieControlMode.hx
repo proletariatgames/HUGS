@@ -1,7 +1,7 @@
 package unityengine;
 
 @:fakeEnum(Int) @:native("UnityEngine.iPhoneMovieControlMode")
-extern enum iPhoneMovieControlMode {
+extern enum IPhoneMovieControlMode {
   Full;
   Minimal;
   CancelOnTouch;

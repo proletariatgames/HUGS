@@ -1,7 +1,7 @@
 package unityengine;
 
 @:fakeEnum(Int) @:native("UnityEngine.iPhoneGeneration")
-extern enum iPhoneGeneration {
+extern enum IPhoneGeneration {
   Unknown;
   iPhone;
   iPhone3G;
