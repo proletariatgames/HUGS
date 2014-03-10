@@ -18,8 +18,8 @@ extern class NetworkStream extends dotnet.system.io.Stream  implements dotnet.sy
   @:overload(function(socket:Socket, access:dotnet.system.io.FileAccess) : Void {})
   public function new(socket:Socket, access:dotnet.system.io.FileAccess, owns_socket:Bool) : Void;
 
-  @:overload(function(disposing:Bool) : Void {})
-  override function Dispose() : Void;
+  @:overload(function() : Void {})
+  override function Dispose(disposing:Bool) : Void;
 
   @:overload(function(ar:dotnet.system.IAsyncResult) : Int {})
   public override function EndRead(asyncResult:dotnet.system.IAsyncResult) : Int;
