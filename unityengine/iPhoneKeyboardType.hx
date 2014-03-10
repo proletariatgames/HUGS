@@ -1,7 +1,7 @@
 package unityengine;
 
 @:fakeEnum(Int) @:native("UnityEngine.iPhoneKeyboardType")
-extern enum iPhoneKeyboardType {
+extern enum IPhoneKeyboardType {
   Default;
   ASCIICapable;
   NumbersAndPunctuation;

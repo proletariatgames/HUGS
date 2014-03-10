@@ -1,7 +1,7 @@
 package unityengine;
 
 @:fakeEnum(Int) @:native("UnityEngine.iPhoneOrientation")
-extern enum iPhoneOrientation {
+extern enum IPhoneOrientation {
   Unknown;
   Portrait;
   PortraitUpsideDown;

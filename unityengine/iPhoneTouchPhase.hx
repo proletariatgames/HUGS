@@ -1,7 +1,7 @@
 package unityengine;
 
 @:fakeEnum(Int) @:native("UnityEngine.iPhoneTouchPhase")
-extern enum iPhoneTouchPhase {
+extern enum IPhoneTouchPhase {
   Began;
   Moved;
   Stationary;
