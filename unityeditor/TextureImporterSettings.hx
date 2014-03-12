@@ -31,7 +31,7 @@ extern class TextureImporterSettings extends dotnet.system.Object {
   public var spriteMode : Int;
   public var spritePixelsToUnits : Single;
   public var spriteExtrude : UInt;
-  public var spriteMeshType : unityengine.SpriteMeshType;
+  // public var spriteMeshType : unityengine.SpriteMeshType;
   public var spriteAlignment : Int;
   public var spritePivot : unityengine.Vector2;
 
