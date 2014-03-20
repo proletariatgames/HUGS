@@ -6,10 +6,9 @@ import unityengine.Component;
 import unityengine.Quaternion;
 import unityengine.Transform;
 import unityengine.Vector3;
-import unityengine.Matrix4x4;
 
-import dotnet.system.collections.IEnumerable;
-import dotnet.system.collections.IEnumerator;
+import cs.system.collections.IEnumerable;
+import cs.system.collections.IEnumerator;
 
 class ComponentMethods {
 
@@ -126,13 +125,6 @@ class Vector3Methods
 
   public static function eq(a:Vector3, b:Vector3) : Bool {
     return untyped __cs__("a==b");
-  }
-}
-
-class Matrix4x4Methods
-{
-  public static function mul(a:Matrix4x4, b:Matrix4x4) : Matrix4x4 {
-    return untyped __cs__("a*b");
   }
 }
 

@@ -4,8 +4,8 @@
   "license": "BSD",
   "tags": ["unity","unity3d","cs","csharp","game"],
   "description": "Haxe Unity Glue... stuff",
-  "version": "0.1.4",
-  "releasenote": "add inactive flag",
+  "version": "0.2.0",
+  "releasenote": "using -net-lib",
   "contributors": ["HUGS_Developers"],
   "dependencies": {
 	  "hxcs": ""
