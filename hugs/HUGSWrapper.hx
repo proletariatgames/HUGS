@@ -7,6 +7,9 @@ import unityengine.Quaternion;
 import unityengine.Transform;
 import unityengine.Vector3;
 import unityengine.Matrix4x4;
+import unityengine.Animation;
+import unityengine.AnimationState;
+
 
 import dotnet.system.collections.IEnumerable;
 import dotnet.system.collections.IEnumerator;
@@ -180,4 +183,11 @@ class NativeArrayIterator<T>
 	return a;
   }
 
+}
+
+class AnimationMethods
+{
+  public static function getState(a:Animation, name:String):AnimationState {
+    return untyped __cs__("a[name]");
+  }
 }
