@@ -38,7 +38,7 @@ class Timer {
 	#if (neko || php || cpp)
 	#else
 		#if cs
-			private var t:dotnet.system.timers.Timer;
+			private var t:cs.system.timers.Timer;
 			private var id : Null<Int>;
 			private function runRun():Void run();
 		#end
@@ -49,7 +49,7 @@ class Timer {
 		#if cs
 			id = 1;
 			var f = runRun;
-			var tt = t = new dotnet.system.timers.Timer(time_ms);
+			var tt = t = new cs.system.timers.Timer(time_ms);
 			t.Enabled = true;
 			untyped __cs__("tt.Elapsed+=delegate(System.Object o, System.Timers.ElapsedEventArgs e){f.__hx_invoke0_o();}");
 		#elseif flash9
