@@ -4,6 +4,7 @@ package unityengine;
 extern class Component extends Object {
   public var transform(default,never) : Transform;
   public var rigidbody(default,never) : Rigidbody;
+  public var rigidbody2D(default,never) : Rigidbody2D;
   public var camera(default,never) : Camera;
   public var light(default,never) : Light;
   public var animation(default,never) : Animation;
@@ -15,6 +16,7 @@ extern class Component extends Object {
   public var guiElement(default,never) : GUIElement;
   public var guiTexture(default,never) : GUITexture;
   public var collider(default,never) : Collider;
+  public var collider2D(default,never) : Collider2D;
   public var hingeJoint(default,never) : HingeJoint;
   public var particleEmitter(default,never) : ParticleEmitter;
   public var particleSystem(default,never) : ParticleSystem;
@@ -38,6 +40,9 @@ extern class Component extends Object {
   @:overload(function(t:cs.system.Type) : Component {})
   public function GetComponentInChildren() : Dynamic;
 
+  @:overload(function(t:cs.system.Type) : Component {})
+  public function GetComponentInParent() : Dynamic;
+
   @:overload(function(type:cs.system.Type) : cs.NativeArray<Component> {})
   public function GetComponents() : dotnet.system.Array;
 
@@ -45,6 +50,11 @@ extern class Component extends Object {
   @:overload(function(t:cs.system.Type, includeInactive:Bool) : cs.NativeArray<Component> {})
   @:overload(function(includeInactive:Bool) : dotnet.system.Array {})
   public function GetComponentsInChildren() : dotnet.system.Array;
+
+  @:overload(function(t:cs.system.Type) : cs.NativeArray<Component> {})
+  @:overload(function(t:cs.system.Type, includeInactive:Bool) : cs.NativeArray<Component> {})
+  @:overload(function(includeInactive:Bool) : dotnet.system.Array {})
+  public function GetComponentsInParent() : dotnet.system.Array;
 
   @:overload(function(methodName:String, value:Dynamic, options:SendMessageOptions) : Void {})
   @:overload(function(methodName:String, value:Dynamic) : Void {})

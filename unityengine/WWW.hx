@@ -15,6 +15,7 @@ extern class WWW extends dotnet.system.Object  implements dotnet.system.IDisposa
   public var isDone(default,never) : Bool;
   public var progress(default,never) : Single;
   public var uploadProgress(default,never) : Single;
+  public var bytesDownloaded(default,never) : Int;
   public var oggVorbis(default,never) : AudioClip;
   public var url(default,never) : String;
   public var assetBundle(default,never) : AssetBundle;
@@ -23,7 +24,8 @@ extern class WWW extends dotnet.system.Object  implements dotnet.system.IDisposa
   @:overload(function(url:String) : Void {})
   @:overload(function(url:String, form:WWWForm) : Void {})
   @:overload(function(url:String, postData:cs.NativeArray<dotnet.system.Byte>) : Void {})
-  public function new(url:String, postData:cs.NativeArray<dotnet.system.Byte>, headers:dotnet.system.collections.Hashtable) : Void;
+  @:overload(function(url:String, postData:cs.NativeArray<dotnet.system.Byte>, headers:dotnet.system.collections.Hashtable) : Void {})
+  public function new(url:String, postData:cs.NativeArray<dotnet.system.Byte>, headers:dotnet.system.collections.generic.Dictionary<String,String>) : Void;
 
   public function Dispose() : Void;
 

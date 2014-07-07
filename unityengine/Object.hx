@@ -21,9 +21,11 @@ extern class Object extends dotnet.system.Object {
   @:overload(function(o:Dynamic) : Bool {})
   public override function Equals(obj:Dynamic) : Bool;
 
-  public static function FindObjectOfType(type:cs.system.Type) : Object;
+  @:overload(function(type:cs.system.Type) : Object {})
+  public static function FindObjectOfType() : Dynamic;
 
-  public static function FindObjectsOfType(type:cs.system.Type) : cs.NativeArray<Object>;
+  @:overload(function(type:cs.system.Type) : cs.NativeArray<Object> {})
+  public static function FindObjectsOfType() : dotnet.system.Array;
 
   public static function FindObjectsOfTypeAll(type:cs.system.Type) : cs.NativeArray<Object>;
 

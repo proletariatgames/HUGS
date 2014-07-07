@@ -13,5 +13,9 @@ extern class SkinnedMeshRenderer extends Renderer {
   public function BakeMesh(mesh:Mesh) : Void;
 
   public function new() : Void;
+
+  public function GetBlendShapeWeight(index:Int) : Single;
+
+  public function SetBlendShapeWeight(index:Int, value:Single) : Void;
 }
 

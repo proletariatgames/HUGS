@@ -19,19 +19,27 @@ extern class Shader extends Object {
 
   public static function SetGlobalBuffer(propertyName:String, buffer:ComputeBuffer) : Void;
 
-  public static function SetGlobalColor(propertyName:String, color:Color) : Void;
+  @:overload(function(propertyName:String, color:Color) : Void {})
+  public static function SetGlobalColor(nameID:Int, color:Color) : Void;
 
-  public static function SetGlobalFloat(propertyName:String, value:Single) : Void;
+  @:overload(function(propertyName:String, value:Single) : Void {})
+  public static function SetGlobalFloat(nameID:Int, value:Single) : Void;
 
-  public static function SetGlobalMatrix(propertyName:String, mat:Matrix4x4) : Void;
+  @:overload(function(propertyName:String, value:Int) : Void {})
+  public static function SetGlobalInt(nameID:Int, value:Int) : Void;
+
+  @:overload(function(propertyName:String, mat:Matrix4x4) : Void {})
+  public static function SetGlobalMatrix(nameID:Int, mat:Matrix4x4) : Void;
 
   public static function SetGlobalTexGenMode(propertyName:String, mode:TexGenMode) : Void;
 
-  public static function SetGlobalTexture(propertyName:String, tex:Texture) : Void;
+  @:overload(function(propertyName:String, tex:Texture) : Void {})
+  public static function SetGlobalTexture(nameID:Int, tex:Texture) : Void;
 
   public static function SetGlobalTextureMatrixName(propertyName:String, matrixName:String) : Void;
 
-  public static function SetGlobalVector(propertyName:String, vec:Vector4) : Void;
+  @:overload(function(propertyName:String, vec:Vector4) : Void {})
+  public static function SetGlobalVector(nameID:Int, vec:Vector4) : Void;
 
   public static function WarmupAllShaders() : Void;
 }

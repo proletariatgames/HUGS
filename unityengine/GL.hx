@@ -8,6 +8,7 @@ extern class GL extends dotnet.system.Object {
   public static var LINES : Int;
   public static var modelview : Matrix4x4;
   public static var wireframe : Bool;
+  public static var sRGBWrite : Bool;
 
   public static function Begin(mode:Int) : Void;
 

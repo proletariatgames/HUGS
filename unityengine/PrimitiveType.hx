@@ -7,5 +7,6 @@ extern enum PrimitiveType {
   Cylinder;
   Cube;
   Plane;
+  Quad;
 }
 

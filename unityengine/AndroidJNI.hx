@@ -51,8 +51,6 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function CallVoidMethod(obj:dotnet.system.IntPtr, methodID:dotnet.system.IntPtr, args:cs.NativeArray<jvalue>) : Void;
 
-  public function new() : Void;
-
   public static function DeleteGlobalRef(obj:dotnet.system.IntPtr) : Void;
 
   public static function DeleteLocalRef(obj:dotnet.system.IntPtr) : Void;
@@ -149,7 +147,7 @@ extern class AndroidJNI extends dotnet.system.Object {
 
   public static function GetStaticFloatField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : Single;
 
-  public static function GetStaticIntField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : dotnet.system.Int64;
+  public static function GetStaticIntField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : Int;
 
   public static function GetStaticLongField(clazz:dotnet.system.IntPtr, fieldID:dotnet.system.IntPtr) : dotnet.system.Int64;
 

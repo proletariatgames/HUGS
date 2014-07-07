@@ -38,6 +38,8 @@ extern class Event extends dotnet.system.Object {
 
   public static function KeyboardEvent(key:String) : Event;
 
+  public static function PopEvent(outEvent:Event) : Bool;
+
   @:overload(function() : String {})
   public override function ToString() : String;
 

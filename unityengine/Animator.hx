@@ -2,7 +2,9 @@ package unityengine;
 
 @:native("UnityEngine.Animator") @:final
 extern class Animator extends Behaviour {
+  public var isOptimizable(default,never) : Bool;
   public var isHuman(default,never) : Bool;
+  public var hasRootMotion(default,never) : Bool;
   public var humanScale(default,never) : Single;
   public var deltaPosition(default,never) : Vector3;
   public var deltaRotation(default,never) : Quaternion;
@@ -10,6 +12,8 @@ extern class Animator extends Behaviour {
   public var rootRotation : Quaternion;
   public var applyRootMotion : Bool;
   public var animatePhysics : Bool;
+  public var updateMode : AnimatorUpdateMode;
+  public var hasTransformHierarchy(default,never) : Bool;
   public var gravityWeight(default,never) : Single;
   public var bodyPosition : Vector3;
   public var bodyRotation : Quaternion;
@@ -32,6 +36,14 @@ extern class Animator extends Behaviour {
   public var leftFeetBottomHeight(default,never) : Single;
   public var rightFeetBottomHeight(default,never) : Single;
   public var logWarnings : Bool;
+  public var fireEvents : Bool;
+
+  @:overload(function(stateName:String, transitionDuration:Single, layer:Int) : Void {})
+  @:overload(function(stateName:String, transitionDuration:Single) : Void {})
+  @:overload(function(stateName:String, transitionDuration:Single, layer:Int, normalizedTime:Single) : Void {})
+  @:overload(function(stateNameHash:Int, transitionDuration:Single, layer:Int, normalizedTime:Single) : Void {})
+  @:overload(function(stateNameHash:Int, transitionDuration:Single, layer:Int) : Void {})
+  public function CrossFade(stateNameHash:Int, transitionDuration:Single) : Void;
 
   public function new() : Void;
 
@@ -89,6 +101,18 @@ extern class Animator extends Behaviour {
   @:overload(function(matchPosition:Vector3, matchRotation:Quaternion, targetBodyPart:AvatarTarget, weightMask:MatchTargetWeightMask, startNormalizedTime:Single, targetNormalizedTime:Single) : Void {})
   public function MatchTarget(matchPosition:Vector3, matchRotation:Quaternion, targetBodyPart:AvatarTarget, weightMask:MatchTargetWeightMask, startNormalizedTime:Single) : Void;
 
+  @:overload(function(stateName:String, layer:Int) : Void {})
+  @:overload(function(stateName:String) : Void {})
+  @:overload(function(stateName:String, layer:Int, normalizedTime:Single) : Void {})
+  @:overload(function(stateNameHash:Int, layer:Int, normalizedTime:Single) : Void {})
+  @:overload(function(stateNameHash:Int, layer:Int) : Void {})
+  public function Play(stateNameHash:Int) : Void;
+
+  public function Rebind() : Void;
+
+  @:overload(function(name:String) : Void {})
+  public function ResetTrigger(id:Int) : Void;
+
   @:overload(function(name:String, value:Bool) : Void {})
   public function SetBool(id:Int, value:Bool) : Void;
 
@@ -123,6 +147,9 @@ extern class Animator extends Behaviour {
 
   public function SetTarget(targetIndex:AvatarTarget, targetNormalizedTime:Single) : Void;
 
+  @:overload(function(name:String) : Void {})
+  public function SetTrigger(id:Int) : Void;
+
   @:overload(function(name:String, value:Vector3) : Void {})
   public function SetVector(id:Int, value:Vector3) : Void;
 
@@ -135,5 +162,7 @@ extern class Animator extends Behaviour {
   public function StopRecording() : Void;
 
   public static function StringToHash(name:String) : Int;
+
+  public function Update(deltaTime:Single) : Void;
 }
 

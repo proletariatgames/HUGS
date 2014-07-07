@@ -2,6 +2,8 @@ package unityengine;
 
 @:native("UnityEngine.ProceduralTexture") @:final
 extern class ProceduralTexture extends Texture {
+  public var hasAlpha(default,never) : Bool;
+  public var format(default,never) : TextureFormat;
 
   public function new() : Void;
 

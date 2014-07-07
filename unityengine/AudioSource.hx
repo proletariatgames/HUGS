@@ -15,6 +15,8 @@ extern class AudioSource extends Behaviour {
   public var velocityUpdateMode : AudioVelocityUpdateMode;
   public var panLevel : Single;
   public var bypassEffects : Bool;
+  public var bypassListenerEffects : Bool;
+  public var bypassReverbZones : Bool;
   public var dopplerLevel : Single;
   public var spread : Single;
   public var priority : Int;

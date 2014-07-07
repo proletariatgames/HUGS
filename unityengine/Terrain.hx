@@ -2,7 +2,7 @@ package unityengine;
 
 @:native("UnityEngine.Terrain") @:final
 extern class Terrain extends MonoBehaviour {
-  public static var activeTerrain(default,never) : Terrain;
+  public var editorRenderFlags : TerrainRenderFlags;
   public var terrainData : TerrainData;
   public var treeDistance : Single;
   public var treeBillboardDistance : Single;
@@ -17,7 +17,8 @@ extern class Terrain extends MonoBehaviour {
   public var lightmapIndex : Int;
   public var castShadows : Bool;
   public var materialTemplate : Material;
-  public var editorRenderFlags : TerrainRenderFlags;
+  public static var activeTerrain(default,never) : Terrain;
+  public static var activeTerrains(default,never) : cs.NativeArray<Terrain>;
 
   public function AddTreeInstance(instance:TreeInstance) : Void;
 

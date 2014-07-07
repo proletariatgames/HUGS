@@ -8,7 +8,6 @@ extern enum RuntimePlatform {
   OSXWebPlayer;
   OSXDashboardPlayer;
   WindowsWebPlayer;
-  WiiPlayer;
   WindowsEditor;
   IPhonePlayer;
   XBOX360;
@@ -20,5 +19,14 @@ extern enum RuntimePlatform {
   MetroPlayerX86;
   MetroPlayerX64;
   MetroPlayerARM;
+  WP8Player;
+  BB10Player;
+  BlackBerryPlayer;
+  TizenPlayer;
+  PSP2;
+  PS4;
+  PSMPlayer;
+  XboxOne;
+  SamsungTVPlayer;
 }
 

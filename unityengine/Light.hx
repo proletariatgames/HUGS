@@ -12,9 +12,11 @@ extern class Light extends Behaviour {
   public var shadowSoftnessFade : Single;
   public var range : Single;
   public var spotAngle : Single;
+  public var cookieSize : Single;
   public var cookie : Texture;
   public var flare : Flare;
   public var renderMode : LightRenderMode;
+  public var alreadyLightmapped : Bool;
   public var cullingMask : Int;
   public var areaSize : Vector2;
   public static var pixelLightCount : Int;

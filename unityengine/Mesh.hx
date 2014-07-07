@@ -17,6 +17,7 @@ extern class Mesh extends Object {
   public var subMeshCount : Int;
   public var boneWeights : cs.NativeArray<BoneWeight>;
   public var bindposes : cs.NativeArray<Matrix4x4>;
+  public var blendShapeCount(default,never) : Int;
 
   @:overload(function(keepVertexLayout:Bool) : Void {})
   public function Clear() : Void;
@@ -26,6 +27,10 @@ extern class Mesh extends Object {
   public function CombineMeshes(combine:cs.NativeArray<CombineInstance>) : Void;
 
   public function new() : Void;
+
+  public function GetBlendShapeIndex(blendShapeName:String) : Int;
+
+  public function GetBlendShapeName(index:Int) : String;
 
   public function GetIndices(submesh:Int) : cs.NativeArray<Int>;
 
@@ -48,5 +53,7 @@ extern class Mesh extends Object {
   public function SetTriangles(triangles:cs.NativeArray<Int>, submesh:Int) : Void;
 
   public function SetTriangleStrip(triangles:cs.NativeArray<Int>, submesh:Int) : Void;
+
+  public function UploadMeshData(markNoLogerReadable:Bool) : Void;
 }
 

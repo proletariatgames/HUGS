@@ -114,6 +114,8 @@ extern class GUI extends dotnet.system.Object {
 
   public static function ScrollTo(position:Rect) : Void;
 
+  public static function ScrollTowards(position:Rect, maxDelta:Single) : Bool;
+
   @:overload(function(position:Rect, selected:Int, texts:cs.NativeArray<String>, xCount:Int) : Int {})
   @:overload(function(position:Rect, selected:Int, images:cs.NativeArray<Texture>, xCount:Int) : Int {})
   @:overload(function(position:Rect, selected:Int, content:cs.NativeArray<GUIContent>, xCount:Int) : Int {})
@@ -140,7 +142,8 @@ extern class GUI extends dotnet.system.Object {
   @:overload(function(position:Rect, value:Bool, content:GUIContent) : Bool {})
   @:overload(function(position:Rect, value:Bool, text:String, style:GUIStyle) : Bool {})
   @:overload(function(position:Rect, value:Bool, image:Texture, style:GUIStyle) : Bool {})
-  public static function Toggle(position:Rect, value:Bool, content:GUIContent, style:GUIStyle) : Bool;
+  @:overload(function(position:Rect, value:Bool, content:GUIContent, style:GUIStyle) : Bool {})
+  public static function Toggle(position:Rect, id:Int, value:Bool, content:GUIContent, style:GUIStyle) : Bool;
 
   @:overload(function(position:Rect, selected:Int, texts:cs.NativeArray<String>) : Int {})
   @:overload(function(position:Rect, selected:Int, images:cs.NativeArray<Texture>) : Int {})

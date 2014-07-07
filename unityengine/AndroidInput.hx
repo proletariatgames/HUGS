@@ -7,8 +7,6 @@ extern class AndroidInput extends dotnet.system.Object {
   public static var secondaryTouchWidth(default,never) : Int;
   public static var secondaryTouchHeight(default,never) : Int;
 
-  public function new() : Void;
-
   public static function GetSecondaryTouch(index:Int) : Touch;
 }
 

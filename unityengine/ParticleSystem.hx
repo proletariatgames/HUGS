@@ -7,11 +7,20 @@ extern class ParticleSystem_Particle extends dotnet.system.ValueType {
   public var lifetime : Single;
   public var startLifetime : Single;
   public var size : Single;
+  public var axisOfRotation : Vector3;
   public var rotation : Single;
   public var angularVelocity : Single;
   public var color : Color32;
   public var randomValue : Single;
   public var randomSeed : UInt;
+}
+
+@:native("UnityEngine.ParticleSystem.CollisionEvent") @:final
+extern class ParticleSystem_CollisionEvent extends dotnet.system.ValueType {
+  public var intersection(default,never) : Vector3;
+  public var normal(default,never) : Vector3;
+  public var velocity(default,never) : Vector3;
+  public var collider(default,never) : Collider;
 }
 
 @:native("UnityEngine.ParticleSystem") @:final
@@ -26,6 +35,7 @@ extern class ParticleSystem extends Component {
   public var duration(default,never) : Single;
   public var playbackSpeed : Single;
   public var particleCount(default,never) : Int;
+  public var safeCollisionEventSize(default,never) : Int;
   public var enableEmission : Bool;
   public var emissionRate : Single;
   public var startSpeed : Single;
@@ -34,6 +44,8 @@ extern class ParticleSystem extends Component {
   public var startRotation : Single;
   public var startLifetime : Single;
   public var gravityModifier : Single;
+  public var maxParticles : Int;
+  public var simulationSpace : ParticleSystemSimulationSpace;
   public var randomSeed : UInt;
 
   @:overload(function() : Void {})
@@ -44,6 +56,8 @@ extern class ParticleSystem extends Component {
   @:overload(function(count:Int) : Void {})
   @:overload(function(position:Vector3, velocity:Vector3, size:Single, lifetime:Single, color:Color32) : Void {})
   public function Emit(particle:ParticleSystem_Particle) : Void;
+
+  public function GetCollisionEvents(go:GameObject, collisionEvents:cs.NativeArray<ParticleSystem_CollisionEvent>) : Int;
 
   public function GetParticles(particles:cs.NativeArray<ParticleSystem_Particle>) : Int;
 

@@ -19,6 +19,10 @@ extern enum IPhoneGeneration {
   iPodTouch5Gen;
   iPadMini1Gen;
   iPad4Gen;
+  iPhone5C;
+  iPhone5S;
+  iPad5Gen;
+  iPadMini2Gen;
   iPhoneUnknown;
   iPadUnknown;
   iPodTouchUnknown;

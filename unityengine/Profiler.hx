@@ -22,5 +22,11 @@ extern class Profiler extends dotnet.system.Object {
   public static function GetMonoUsedSize() : UInt;
 
   public static function GetRuntimeMemorySize(o:Object) : Int;
+
+  public static function GetTotalAllocatedMemory() : UInt;
+
+  public static function GetTotalReservedMemory() : UInt;
+
+  public static function GetTotalUnusedReservedMemory() : UInt;
 }
 

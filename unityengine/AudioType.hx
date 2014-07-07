@@ -5,7 +5,6 @@ extern enum AudioType {
   UNKNOWN;
   ACC;
   AIFF;
-  GCADPCM;
   IT;
   MOD;
   MPEG;
@@ -14,6 +13,7 @@ extern enum AudioType {
   WAV;
   XM;
   XMA;
+  VAG;
   AUDIOQUEUE;
 }
 

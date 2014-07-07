@@ -13,6 +13,7 @@ extern class TextMesh extends Component {
   public var lineSpacing : Single;
   public var tabSize : Single;
   public var richText : Bool;
+  public var color : Color;
 
   public function new() : Void;
 }

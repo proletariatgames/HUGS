@@ -4,6 +4,7 @@ package unityengine;
 extern class LensFlare extends Behaviour {
   public var flare : Flare;
   public var brightness : Single;
+  public var fadeSpeed : Single;
   public var color : Color;
 
   public function new() : Void;

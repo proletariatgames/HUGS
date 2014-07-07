@@ -5,6 +5,9 @@ extern class Physics extends dotnet.system.Object {
   public static var kIgnoreRaycastLayer : Int;
   public static var kDefaultRaycastLayers : Int;
   public static var kAllLayers : Int;
+  public static var IgnoreRaycastLayer : Int;
+  public static var DefaultRaycastLayers : Int;
+  public static var AllLayers : Int;
   public static var gravity : Vector3;
   public static var minPenetrationForPenalty : Single;
   public static var bounceThreshold : Single;

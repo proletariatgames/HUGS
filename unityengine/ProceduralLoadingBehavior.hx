@@ -7,5 +7,6 @@ extern enum ProceduralLoadingBehavior {
   BakeAndKeep;
   BakeAndDiscard;
   Cache;
+  DoNothingAndCache;
 }
 

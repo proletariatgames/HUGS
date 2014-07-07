@@ -26,6 +26,7 @@ extern class MonoBehaviour extends Behaviour {
 
   public function StopAllCoroutines() : Void;
 
-  public function StopCoroutine(methodName:String) : Void;
+  @:overload(function(methodName:String) : Void {})
+  public function StopCoroutine(routine:dotnet.system.collections.IEnumerator) : Void;
 }
 

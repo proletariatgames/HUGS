@@ -18,8 +18,13 @@ extern class Renderer extends Component {
   public var isVisible(default,never) : Bool;
   public var useLightProbes : Bool;
   public var lightProbeAnchor : Transform;
+  public var sortingLayerName : String;
+  public var sortingLayerID : Int;
+  public var sortingOrder : Int;
 
   public function new() : Void;
+
+  public function GetPropertyBlock(dest:MaterialPropertyBlock) : Void;
 
   public function Render(material:Int) : Void;
 

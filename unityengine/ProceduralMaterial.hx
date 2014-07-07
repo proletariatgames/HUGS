@@ -5,6 +5,7 @@ extern class ProceduralMaterial extends Material {
   public var cacheSize : ProceduralCacheSize;
   public var animationUpdateRate : Int;
   public var isProcessing(default,never) : Bool;
+  public var isCachedDataAvailable(default,never) : Bool;
   public var isLoadTimeGenerated : Bool;
   public var loadingBehavior(default,never) : ProceduralLoadingBehavior;
   public static var isSupported(default,never) : Bool;

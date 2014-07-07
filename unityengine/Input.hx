@@ -6,6 +6,8 @@ extern class Input extends dotnet.system.Object {
   public static var isGyroAvailable(default,never) : Bool;
   public static var gyro(default,never) : Gyroscope;
   public static var mousePosition(default,never) : Vector3;
+  public static var mousePresent(default,never) : Bool;
+  public static var simulateMouseWithTouches : Bool;
   public static var anyKey(default,never) : Bool;
   public static var anyKeyDown(default,never) : Bool;
   public static var inputString(default,never) : String;

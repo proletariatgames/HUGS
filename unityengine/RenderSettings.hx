@@ -11,6 +11,7 @@ extern class RenderSettings extends Object {
   public static var ambientLight : Color;
   public static var haloStrength : Single;
   public static var flareStrength : Single;
+  public static var flareFadeSpeed : Single;
   public static var skybox : Material;
 
   public function new() : Void;

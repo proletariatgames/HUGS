@@ -7,8 +7,10 @@ extern class WebCamTexture extends Texture {
   public var requestedFPS : Single;
   public var requestedWidth : Int;
   public var requestedHeight : Int;
+  public var isReadable(default,never) : Bool;
   public static var devices(default,never) : cs.NativeArray<WebCamDevice>;
   public var videoRotationAngle(default,never) : Int;
+  public var videoVerticallyMirrored(default,never) : Bool;
   public var didUpdateThisFrame(default,never) : Bool;
 
   @:overload(function(deviceName:String, requestedWidth:Int, requestedHeight:Int, requestedFPS:Int) : Void {})
@@ -25,6 +27,8 @@ extern class WebCamTexture extends Texture {
 
   @:overload(function(colors:cs.NativeArray<Color32>) : cs.NativeArray<Color32> {})
   public function GetPixels32() : cs.NativeArray<Color32>;
+
+  public function MarkNonReadable() : Void;
 
   public function Pause() : Void;
 

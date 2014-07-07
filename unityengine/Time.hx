@@ -6,6 +6,8 @@ extern class Time extends dotnet.system.Object {
   public static var timeSinceLevelLoad(default,never) : Single;
   public static var deltaTime(default,never) : Single;
   public static var fixedTime(default,never) : Single;
+  public static var unscaledTime(default,never) : Single;
+  public static var unscaledDeltaTime(default,never) : Single;
   public static var fixedDeltaTime : Single;
   public static var maximumDeltaTime : Single;
   public static var smoothDeltaTime(default,never) : Single;

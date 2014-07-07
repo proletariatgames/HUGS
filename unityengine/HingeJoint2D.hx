@@ -1,0 +1,22 @@
+package unityengine;
+
+@:native("UnityEngine.HingeJoint2D") @:final
+extern class HingeJoint2D extends AnchoredJoint2D {
+  public var useMotor : Bool;
+  public var useLimits : Bool;
+  public var motor : JointMotor2D;
+  public var limits : JointAngleLimits2D;
+  public var limitState(default,never) : JointLimitState2D;
+  public var referenceAngle(default,never) : Single;
+  public var jointAngle(default,never) : Single;
+  public var jointSpeed(default,never) : Single;
+
+  public function new() : Void;
+
+  public function GetMotorTorque(timeStep:Single) : Single;
+
+  public function GetReactionForce(timeStep:Single) : Vector2;
+
+  public function GetReactionTorque(timeStep:Single) : Single;
+}
+

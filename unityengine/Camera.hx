@@ -30,20 +30,29 @@ extern class Camera extends Behaviour {
   public var projectionMatrix : Matrix4x4;
   public var velocity(default,never) : Vector3;
   public var clearFlags : CameraClearFlags;
+  public var stereoEnabled(default,never) : Bool;
+  public var stereoSeparation : Single;
+  public var stereoConvergence : Single;
   public static var main(default,never) : Camera;
   public static var current(default,never) : Camera;
   public static var allCameras(default,never) : cs.NativeArray<Camera>;
+  public static var allCamerasCount(default,never) : Int;
   public static var mainCamera(default,never) : Camera;
   public var useOcclusionCulling : Bool;
   public var layerCullDistances : cs.NativeArray<Single>;
   public var layerCullSpherical : Bool;
   public var depthTextureMode : DepthTextureMode;
+  public var clearStencilAfterLightingPass : Bool;
+
+  public function CalculateObliqueMatrix(clipPlane:Vector4) : Matrix4x4;
 
   public function CopyFrom(other:Camera) : Void;
 
   public function new() : Void;
 
   public function DoClear() : Void;
+
+  public static function GetAllCameras(cameras:cs.NativeArray<Camera>) : Int;
 
   public function GetScreenHeight() : Single;
 
@@ -76,7 +85,8 @@ extern class Camera extends Behaviour {
 
   public function SetReplacementShader(shader:Shader, replacementTag:String) : Void;
 
-  public function SetTargetBuffers(colorBuffer:RenderBuffer, depthBuffer:RenderBuffer) : Void;
+  @:overload(function(colorBuffer:RenderBuffer, depthBuffer:RenderBuffer) : Void {})
+  public function SetTargetBuffers(colorBuffer:cs.NativeArray<RenderBuffer>, depthBuffer:RenderBuffer) : Void;
 
   public static function SetupCurrent(cur:Camera) : Void;
 

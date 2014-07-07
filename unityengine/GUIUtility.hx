@@ -28,5 +28,7 @@ extern class GUIUtility extends dotnet.system.Object {
   public static function ScaleAroundPivot(scale:Vector2, pivotPoint:Vector2) : Void;
 
   public static function ScreenToGUIPoint(screenPoint:Vector2) : Vector2;
+
+  public static function ScreenToGUIRect(screenRect:Rect) : Rect;
 }
 

@@ -32,6 +32,8 @@ extern class Transform extends Component  implements dotnet.system.collections.I
 
   public function GetEnumerator() : dotnet.system.collections.IEnumerator;
 
+  public function GetSiblingIndex() : Int;
+
   @:overload(function(direction:Vector3) : Vector3 {})
   public function InverseTransformDirection(x:Single, y:Single, z:Single) : Vector3;
 
@@ -56,6 +58,12 @@ extern class Transform extends Component  implements dotnet.system.collections.I
   public function RotateAround(axis:Vector3, angle:Single) : Void;
 
   public function RotateAroundLocal(axis:Vector3, angle:Single) : Void;
+
+  public function SetAsFirstSibling() : Void;
+
+  public function SetAsLastSibling() : Void;
+
+  public function SetSiblingIndex(index:Int) : Void;
 
   @:overload(function(direction:Vector3) : Vector3 {})
   public function TransformDirection(x:Single, y:Single, z:Single) : Vector3;

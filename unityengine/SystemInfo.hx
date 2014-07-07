@@ -16,11 +16,14 @@ extern class SystemInfo extends dotnet.system.Object {
   public static var graphicsPixelFillrate(default,never) : Int;
   public static var supportsShadows(default,never) : Bool;
   public static var supportsRenderTextures(default,never) : Bool;
+  public static var supportsRenderToCubemap(default,never) : Bool;
   public static var supportsImageEffects(default,never) : Bool;
   public static var supports3DTextures(default,never) : Bool;
   public static var supportsComputeShaders(default,never) : Bool;
   public static var supportsInstancing(default,never) : Bool;
+  public static var supportsSparseTextures(default,never) : Bool;
   public static var supportedRenderTargetCount(default,never) : Int;
+  public static var supportsStencil(default,never) : Int;
   public static var supportsVertexPrograms(default,never) : Bool;
   public static var npotSupport(default,never) : NPOTSupport;
   public static var deviceUniqueIdentifier(default,never) : String;

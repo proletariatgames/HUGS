@@ -7,6 +7,8 @@ extern class NavMesh extends Object {
 
   public static function CalculatePath(sourcePosition:Vector3, targetPosition:Vector3, passableMask:Int, path:NavMeshPath) : Bool;
 
+  public static function CalculateTriangulation() : NavMeshTriangulation;
+
   public function new() : Void;
 
   public static function FindClosestEdge(sourcePosition:Vector3, hit:cs.Out<NavMeshHit>, passableMask:Int) : Bool;

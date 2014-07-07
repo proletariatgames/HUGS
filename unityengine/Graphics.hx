@@ -60,6 +60,8 @@ extern class Graphics extends dotnet.system.Object {
   public static function SetRandomWriteTarget(index:Int, uav:ComputeBuffer) : Void;
 
   @:overload(function(rt:RenderTexture) : Void {})
+  @:overload(function(rt:RenderTexture, mipLevel:Int) : Void {})
+  @:overload(function(rt:RenderTexture, mipLevel:Int, face:CubemapFace) : Void {})
   @:overload(function(colorBuffer:RenderBuffer, depthBuffer:RenderBuffer) : Void {})
   public static function SetRenderTarget(colorBuffers:cs.NativeArray<RenderBuffer>, depthBuffer:RenderBuffer) : Void;
 }

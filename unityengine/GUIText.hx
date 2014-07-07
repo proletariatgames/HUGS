@@ -13,6 +13,7 @@ extern class GUIText extends GUIElement {
   public var fontSize : Int;
   public var fontStyle : FontStyle;
   public var richText : Bool;
+  public var color : Color;
 
   public function new() : Void;
 }

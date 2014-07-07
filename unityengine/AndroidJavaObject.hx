@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.AndroidJavaObject")
-extern class AndroidJavaObject extends AndroidJNIHelper  implements dotnet.system.IDisposable {
+extern class AndroidJavaObject extends dotnet.system.Object  implements dotnet.system.IDisposable {
 
   @:overload(function(methodName:String, args:cs.NativeArray<dotnet.system.Object>) : Void {})
   public function Call(methodName:String, args:cs.NativeArray<dotnet.system.Object>) : Dynamic;
@@ -9,7 +9,6 @@ extern class AndroidJavaObject extends AndroidJNIHelper  implements dotnet.syste
   @:overload(function(methodName:String, args:cs.NativeArray<dotnet.system.Object>) : Void {})
   public function CallStatic(methodName:String, args:cs.NativeArray<dotnet.system.Object>) : Dynamic;
 
-  @:overload(function(jobject:dotnet.system.IntPtr) : Void {})
   public function new(className:String, args:cs.NativeArray<dotnet.system.Object>) : Void;
 
   @:overload(function(disposing:Bool) : Void {})

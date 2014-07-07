@@ -11,6 +11,7 @@ extern class ProceduralPropertyDescription extends dotnet.system.Object {
   public var maximum : Single;
   public var step : Single;
   public var enumOptions : cs.NativeArray<String>;
+  public var componentLabels : cs.NativeArray<String>;
 
   public function new() : Void;
 }
