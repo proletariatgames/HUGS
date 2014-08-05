@@ -16,8 +16,8 @@ extern class HashSet<T> extends dotnet.system.Object  implements IEnumerable<T> 
   public var Count(default,never) : Int;
   public var Comparer(default,never) : IEqualityComparer<T>;
 
-  @:overload(function(item:T) : Void {})
-  public function Add(item:T) : Bool;
+  @:overload(function(item:T) : Bool {} )
+  public function Add(item:T) : Void;
 
   public function Clear() : Void;
 
