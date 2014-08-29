@@ -48,9 +48,9 @@ extern class Regex extends dotnet.system.Object  implements dotnet.system.runtim
 @:native("System.Text.RegularExpressions.Regex") @:final
 extern class Regex_Static {
 
-  @:overload(function(regexes:cs.NativeArray<RegexCompilationInfo>, aname:dotnet.system.reflection.AssemblyName) : Void {})
-  @:overload(function(regexes:cs.NativeArray<RegexCompilationInfo>, aname:dotnet.system.reflection.AssemblyName, attribs:cs.NativeArray<dotnet.system.reflection.emit.CustomAttributeBuilder>) : Void {})
-  public static function CompileToAssembly(regexes:cs.NativeArray<RegexCompilationInfo>, aname:dotnet.system.reflection.AssemblyName, attribs:cs.NativeArray<dotnet.system.reflection.emit.CustomAttributeBuilder>, resourceFile:String) : Void;
+  // @:overload(function(regexes:cs.NativeArray<RegexCompilationInfo>, aname:dotnet.system.reflection.AssemblyName) : Void {})
+  // @:overload(function(regexes:cs.NativeArray<RegexCompilationInfo>, aname:dotnet.system.reflection.AssemblyName, attribs:cs.NativeArray<dotnet.system.reflection.emit.CustomAttributeBuilder>) : Void {})
+  // public static function CompileToAssembly(regexes:cs.NativeArray<RegexCompilationInfo>, aname:dotnet.system.reflection.AssemblyName, attribs:cs.NativeArray<dotnet.system.reflection.emit.CustomAttributeBuilder>, resourceFile:String) : Void;
 
   public static function Escape(str:String) : String;
 
