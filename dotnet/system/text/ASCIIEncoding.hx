@@ -35,6 +35,7 @@ extern class ASCIIEncoding extends Encoding {
   @:overload(function(byteCount:Int) : Int {})
   public override function GetMaxCharCount(byteCount:Int) : Int;
 
+  @:overload(function(bytes:cs.NativeArray<dotnet.system.Byte>) : String {})
   @:overload(function(bytes:cs.NativeArray<dotnet.system.Byte>, byteIndex:Int, byteCount:Int) : String {})
   public override function GetString(bytes:cs.NativeArray<dotnet.system.Byte>, index:Int, count:Int) : String;
 }

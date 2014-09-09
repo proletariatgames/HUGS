@@ -42,8 +42,8 @@ extern class FileStream extends Stream {
 
   public function Lock(position:dotnet.system.Int64, length:dotnet.system.Int64) : Void;
 
-  @:overload(function(array:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int {})
-  public override function Read(buffer:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int;
+  // @:overload(function(array:cs.Out<cs.NativeArray<dotnet.system.Byte>>, offset:Int, count:Int) : Int {})
+  public override function Read(buffer:cs.NativeArray<dotnet.system.Byte>, offset:Int, count:Int) : Int;
 
   @:overload(function() : Int {})
   public override function ReadByte() : Int;
