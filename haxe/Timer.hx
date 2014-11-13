@@ -34,7 +34,7 @@ import dotnet.system.TimeSpan;
 	The Timer class allows you to create asynchronous timers on platforms that support events.
 **/
 class Timer {
-	
+
 	#if (neko || php || cpp)
 	#else
 		#if cs
@@ -120,8 +120,7 @@ class Timer {
 	**/
 	public static function stamp() : Float {
 		#if cs
-			var ts:TimeSpan = null;
-			ts = untyped __cs__('System.DateTime.UtcNow - new System.DateTime(1970, 1, 1)');
+			var ts:TimeSpan = untyped __cs__('System.DateTime.UtcNow - new System.DateTime(1970, 1, 1)');
 			return ts.TotalMilliseconds;
 		#elseif flash
 			return flash.Lib.getTimer() / 1000;
