@@ -13,7 +13,6 @@ extern class Component extends Object {
   public var audio(default,never) : AudioSource;
   public var guiText(default,never) : GUIText;
   public var networkView(default,never) : NetworkView;
-  public var guiElement(default,never) : GUIElement;
   public var guiTexture(default,never) : GUITexture;
   public var collider(default,never) : Collider;
   public var collider2D(default,never) : Collider2D;
@@ -21,7 +20,6 @@ extern class Component extends Object {
   public var particleEmitter(default,never) : ParticleEmitter;
   public var particleSystem(default,never) : ParticleSystem;
   public var gameObject(default,never) : GameObject;
-  public var active : Bool;
   public var tag : String;
 
   @:overload(function(methodName:String, parameter:Dynamic, options:SendMessageOptions) : Void {})
