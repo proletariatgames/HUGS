@@ -1,16 +1,5 @@
 package dotnet.system.collections.generic;
 
-@:native("System.Collections.Generic.List.Enumerator") @:final
-extern class List_Enumerator<T> extends dotnet.system.ValueType  implements IEnumerator<T> implements dotnet.system.IDisposable implements dotnet.system.collections.IEnumerator {
-  public var Current(default,never) : T;
-
-  public function Dispose() : Void;
-
-  public function MoveNext() : Bool;
-
-  function Reset() : Void;
-}
-
 @:native("System.Collections.Generic.List")
 extern class List<T> extends dotnet.system.Object  implements IEnumerable<T> implements ICollection<T> implements IList<T> implements dotnet.system.collections.ICollection implements dotnet.system.collections.IEnumerable implements dotnet.system.collections.IList {
   public var Capacity : Int;
@@ -63,7 +52,7 @@ extern class List<T> extends dotnet.system.Object  implements IEnumerable<T> imp
 
   @:overload(function() : IEnumerator<T> {})
   @:overload(function() : dotnet.system.collections.IEnumerator {})
-  public function GetEnumerator() : List_Enumerator<T>;
+  public function GetEnumerator() : dotnet.system.collections.generic.IEnumerator<T>;
 
   public function GetRange(index:Int, count:Int) : List<T>;
 
