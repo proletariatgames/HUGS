@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.iPhoneKeyboard") @:final
-extern class IPhoneKeyboard extends dotnet.system.Object {
+extern class IPhoneKeyboard extends cs.system.Object {
   public var text : String;
   public static var hideInput : Bool;
   public var active : Bool;
