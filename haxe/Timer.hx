@@ -24,21 +24,21 @@
  */
 package haxe;
 #if cs
-import dotnet.system.DateTime;
-import dotnet.system.Object;
-import dotnet.system.timers.ElapsedEventArgs;
-import dotnet.system.timers.ElapsedEventHandler;
-import dotnet.system.TimeSpan;
+import cs.system.DateTime;
+import cs.system.Object;
+import cs.system.timers.ElapsedEventArgs;
+import cs.system.timers.ElapsedEventHandler;
+import cs.system.TimeSpan;
 #end
 /**
 	The Timer class allows you to create asynchronous timers on platforms that support events.
 **/
 class Timer {
-	
+
 	#if (neko || php || cpp)
 	#else
 		#if cs
-			private var t:dotnet.system.timers.Timer;
+			private var t:cs.system.timers.Timer;
 			private var id : Null<Int>;
 			private function runRun():Void run();
 		#end
@@ -49,7 +49,7 @@ class Timer {
 		#if cs
 			id = 1;
 			var f = runRun;
-			var tt = t = new dotnet.system.timers.Timer(time_ms);
+			var tt = t = new cs.system.timers.Timer(time_ms);
 			t.Enabled = true;
 			untyped __cs__("tt.Elapsed+=delegate(System.Object o, System.Timers.ElapsedEventArgs e){f.__hx_invoke0_o();}");
 		#elseif flash9

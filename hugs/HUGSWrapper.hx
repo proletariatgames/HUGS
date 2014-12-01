@@ -11,8 +11,8 @@ import unityengine.Animation;
 import unityengine.AnimationState;
 
 
-import dotnet.system.collections.IEnumerable;
-import dotnet.system.collections.IEnumerator;
+import cs.system.collections.IEnumerable;
+import cs.system.collections.IEnumerator;
 
 class ComponentMethods {
 

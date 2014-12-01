@@ -1,7 +1,7 @@
 package unityengine;
 
 @:native("UnityEngine.iPhoneUtils") @:final
-extern class IPhoneUtils extends dotnet.system.Object {
+extern class IPhoneUtils extends cs.system.Object {
   public static var isApplicationGenuine(default,never) : Bool;
   public static var isApplicationGenuineAvailable(default,never) : Bool;
 
