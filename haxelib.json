@@ -4,8 +4,8 @@
   "license": "BSD",
   "tags": ["unity","unity3d","cs","csharp","game"],
   "description": "Haxe Unity Glue... stuff",
-  "version": "0.2.0",
-  "releasenote": "Update for Unity 4.5",
+  "version": "0.3.0",
+  "releasenote": "Migration for Haxe 3.1",
   "contributors": ["HUGS_Developers"],
   "dependencies": {
 	  "hxcs": ""
