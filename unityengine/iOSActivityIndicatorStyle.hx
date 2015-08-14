@@ -1,7 +1,7 @@
 package unityengine;
 
 @:fakeEnum(Int) @:native("UnityEngine.iOSActivityIndicatorStyle")
-extern enum iOSActivityIndicatorStyle {
+extern enum IOSActivityIndicatorStyle {
   DontShow;
   WhiteLarge;
   White;
